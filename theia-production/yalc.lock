@@ -1,0 +1,10 @@
+{
+  "version": "v1",
+  "packages": {
+    "itrmext": {
+      "signature": "e13957720ef5b21e86d048bca5efe60d",
+      "file": true,
+      "replaced": "0.0.0"
+    }
+  }
+}
