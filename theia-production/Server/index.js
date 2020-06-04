@@ -1,3 +1,4 @@
+const eventEmitterServer = require('./tradingview-chart-test/server.js').getEventEmitterServer();
 const app = require('express')();
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
@@ -11,9 +12,13 @@ app.get('/', (req, res) => {
 });
 
 io.on('connection', (socket) => {
-  console.log("Connection detected on server socket", socket);
+  //console.log("Connection detected on server socket", socket);
+  //console.log(eventEmitterServer);
   socket.emit('theiaAnswer', { hello: 'world' });
   socket.on('my other event', (data) => {
     console.log(data);
   });
+  socket.on('message', function(obj){
+    eventEmitterServer.emit('message', obj)
+  })
 });

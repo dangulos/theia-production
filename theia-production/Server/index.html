@@ -1,8 +1,15 @@
 <script src="/socket.io/socket.io.js"></script>
 <script>
-  const socket = io.connect('http://localhost');
+  const socket = io.connect('http://localhost:4200');
   socket.on('news', (data) => {
     console.log(data);
     socket.emit('my other event', { my: 'data' });
   });
+  function test(){
+    socket.emit('message', { hello: 'world' })
+  }
 </script>
+<body>
+  <div>Hello, world!</div>
+  <button onclick="test()">my button</button>
+</body>
