@@ -47,21 +47,130 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+var __spread = (this && this.__spread) || function () {
+    for (var ar = [], i = 0; i < arguments.length; i++) ar = ar.concat(__read(arguments[i]));
+    return ar;
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ItrmextMenuContribution = exports.ItrmextCommandContribution = exports.ItrmextCommand = void 0;
+exports.ItrmextMenuContribution = exports.ItrmextCommandContribution = exports.ItrmextTradingView = exports.ItrmextCommand = exports.ITRMCommonMenus = void 0;
 var inversify_1 = require("inversify");
 var common_1 = require("@theia/core/lib/common");
 var browser_1 = require("@theia/core/lib/browser");
+var menu_1 = require("@theia/core/lib/common/menu");
+var ITRMCommonMenus;
+(function (ITRMCommonMenus) {
+    ITRMCommonMenus.SIMULATOR = __spread(menu_1.MAIN_MENU_BAR, ['8_simulator']);
+})(ITRMCommonMenus = exports.ITRMCommonMenus || (exports.ITRMCommonMenus = {}));
+;
 var common_2 = require("../common");
+var frontend_application_state_1 = require("@theia/core/lib/browser/frontend-application-state");
+var browser_2 = require("@theia/workspace/lib/browser");
+var terminal_service_1 = require("@theia/terminal/lib/browser/base/terminal-service");
+//import { /*TerminalProcessFactory, TerminalProcess,*/ ProcessManager  } from '@theia/process/lib/node';
+var mini_browser_open_handler_1 = require("@theia/mini-browser/lib/browser/mini-browser-open-handler");
 exports.ItrmextCommand = {
     id: 'Itrmext.command',
     label: "Get Environment Variables"
 };
+exports.ItrmextTradingView = {
+    id: 'Itrmext.tradingview',
+    label: "Preview in Trading View"
+};
 var ItrmextCommandContribution = /** @class */ (function () {
+    /*
+    @inject(TerminalProcessFactory)
+    protected readonly terminalProcessFactory: TerminalProcessFactory;
+    @inject(TerminalProcess)
+    protected readonly terminalProcess: TerminalProcess;
+    @inject(ProcessManager)
+    protected readonly processManager: ProcessManager;
+    */
     function ItrmextCommandContribution(messageService, myService) {
         this.messageService = messageService;
         this.myService = myService;
     }
+    ItrmextCommandContribution.prototype.executeTerminalPromise = function () {
+        var _this = this;
+        return new Promise(function (res, rej) {
+            _this.executeTerminal().then(function () {
+                res("OK");
+            }).catch(function () {
+                rej("error");
+            });
+        });
+    };
+    ItrmextCommandContribution.prototype.executeTerminal = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var terminalWidget, terminalId, comm, processId;
+            var _this = this;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        this.messageService.info("Executing terminal");
+                        return [4 /*yield*/, this.terminalService.newTerminal({})];
+                    case 1:
+                        terminalWidget = _a.sent();
+                        return [4 /*yield*/, terminalWidget.start()];
+                    case 2:
+                        terminalId = _a.sent();
+                        return [4 /*yield*/, this.terminalService.activateTerminal(terminalWidget)];
+                    case 3:
+                        _a.sent();
+                        comm = "cd c:/Users/dangu/OneDrive/Documentos/ITRM/INNPULSA/temp/theia-production/Server/tradingview-chart-test\r\n";
+                        comm += "npx serve\r\n";
+                        return [4 /*yield*/, terminalWidget.sendText(comm)];
+                    case 4:
+                        _a.sent();
+                        return [4 /*yield*/, terminalWidget.processId];
+                    case 5:
+                        processId = _a.sent();
+                        this.messageService.info("Node (temptative) Started with " + processId);
+                        /*
+                        let process = this.processManager.get(processId);
+                        process?.outputStream.on('data', (data)=>{
+                            this.messageService.info(data + " | type: "+ typeof data);
+                        });
+                        */
+                        //contact the process
+                        this.createMiniBrowserPreview().then(function (a) {
+                            _this.messageService.info(a + "Started on " + terminalId);
+                        }).catch(function (b) {
+                            _this.messageService.info(b + "Failed on " + terminalId);
+                        });
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    ItrmextCommandContribution.prototype.createMiniBrowserPreview = function () {
+        var _this = this;
+        return new Promise(function (res, rej) {
+            //let uri = new URI("http://localhost:3001");
+            _this.miniBrowserOpenHandler.openPreview("http://localhost:5000").then(function (a) {
+                _this.messageService.info("TradingView Opened at port 5000" + JSON.stringify(a));
+                res("OK");
+            }).catch(function (b) {
+                _this.messageService.info("There was a mistake " + JSON.stringify(b));
+                rej("rejected");
+            });
+        });
+    };
     ItrmextCommandContribution.prototype.registerCommands = function (registry) {
         var _this = this;
         /*
@@ -88,7 +197,50 @@ var ItrmextCommandContribution = /** @class */ (function () {
                 });
             }); }
         });
+        registry.registerCommand(exports.ItrmextTradingView, {
+            execute: function () { return __awaiter(_this, void 0, void 0, function () {
+                var connected;
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0: return [4 /*yield*/, this.executeTerminalPromise()];
+                        case 1:
+                            connected = _a.sent();
+                            console.log(connected);
+                            if (connected)
+                                this.messageService.info('TradingView is running');
+                            else
+                                this.messageService.info('There was a problem');
+                            return [2 /*return*/];
+                    }
+                });
+            }); }
+        });
     };
+    __decorate([
+        inversify_1.inject(frontend_application_state_1.FrontendApplicationStateService),
+        __metadata("design:type", frontend_application_state_1.FrontendApplicationStateService)
+    ], ItrmextCommandContribution.prototype, "stateService", void 0);
+    __decorate([
+        inversify_1.inject(browser_2.WorkspaceService),
+        __metadata("design:type", browser_2.WorkspaceService)
+    ], ItrmextCommandContribution.prototype, "workspaceService", void 0);
+    __decorate([
+        inversify_1.inject(terminal_service_1.TerminalService),
+        __metadata("design:type", Object)
+    ], ItrmextCommandContribution.prototype, "terminalService", void 0);
+    __decorate([
+        inversify_1.inject(mini_browser_open_handler_1.MiniBrowserOpenHandler),
+        __metadata("design:type", mini_browser_open_handler_1.MiniBrowserOpenHandler
+        /*
+        @inject(TerminalProcessFactory)
+        protected readonly terminalProcessFactory: TerminalProcessFactory;
+        @inject(TerminalProcess)
+        protected readonly terminalProcess: TerminalProcess;
+        @inject(ProcessManager)
+        protected readonly processManager: ProcessManager;
+        */
+        )
+    ], ItrmextCommandContribution.prototype, "miniBrowserOpenHandler", void 0);
     ItrmextCommandContribution = __decorate([
         inversify_1.injectable(),
         __param(0, inversify_1.inject(common_1.MessageService)),
@@ -102,9 +254,15 @@ var ItrmextMenuContribution = /** @class */ (function () {
     function ItrmextMenuContribution() {
     }
     ItrmextMenuContribution.prototype.registerMenus = function (menus) {
-        menus.registerMenuAction(browser_1.CommonMenus.HELP, {
+        console.log('CommonMenus==>>', browser_1.CommonMenus);
+        menus.registerSubmenu(ITRMCommonMenus.SIMULATOR, 'Simulator');
+        menus.registerMenuAction(ITRMCommonMenus.SIMULATOR, {
             commandId: exports.ItrmextCommand.id,
             label: exports.ItrmextCommand.label
+        });
+        menus.registerMenuAction(ITRMCommonMenus.SIMULATOR, {
+            commandId: exports.ItrmextTradingView.id,
+            label: exports.ItrmextTradingView.label
         });
     };
     ItrmextMenuContribution = __decorate([

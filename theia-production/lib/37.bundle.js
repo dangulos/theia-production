@@ -1,137 +1,16 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[37],{
 
-/***/ "./node_modules/@theia/monaco/data/monaco-themes/vscode/dark_defaults.json":
-/*!*********************************************************************************!*\
-  !*** ./node_modules/@theia/monaco/data/monaco-themes/vscode/dark_defaults.json ***!
-  \*********************************************************************************/
-/*! exports provided: $schema, name, colors, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"$schema\":\"vscode://schemas/color-theme\",\"name\":\"Dark Default Colors\",\"colors\":{\"editor.background\":\"#1E1E1E\",\"editor.foreground\":\"#D4D4D4\",\"editor.inactiveSelectionBackground\":\"#3A3D41\",\"editorIndentGuide.background\":\"#404040\",\"editorIndentGuide.activeBackground\":\"#707070\",\"editor.selectionHighlightBackground\":\"#ADD6FF26\",\"list.dropBackground\":\"#383B3D\",\"activityBarBadge.background\":\"#007ACC\",\"sideBarTitle.foreground\":\"#BBBBBB\",\"input.placeholderForeground\":\"#A6A6A6\",\"settings.textInputBackground\":\"#292929\",\"settings.numberInputBackground\":\"#292929\",\"menu.background\":\"#252526\",\"menu.foreground\":\"#CCCCCC\",\"statusBarItem.remoteForeground\":\"#FFF\",\"statusBarItem.remoteBackground\":\"#16825D\"}}");
-
-/***/ }),
-
-/***/ "./node_modules/@theia/monaco/data/monaco-themes/vscode/dark_plus.json":
-/*!*****************************************************************************!*\
-  !*** ./node_modules/@theia/monaco/data/monaco-themes/vscode/dark_plus.json ***!
-  \*****************************************************************************/
-/*! exports provided: $schema, name, include, tokenColors, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"$schema\":\"vscode://schemas/color-theme\",\"name\":\"Dark+ (default dark)\",\"include\":\"./dark_vs.json\",\"tokenColors\":[{\"name\":\"Function declarations\",\"scope\":[\"entity.name.function\",\"support.function\",\"support.constant.handlebars\",\"source.powershell variable.other.member\",\"entity.name.operator.custom-literal\"],\"settings\":{\"foreground\":\"#DCDCAA\"}},{\"name\":\"Types declaration and references\",\"scope\":[\"meta.return-type\",\"support.class\",\"support.type\",\"entity.name.type\",\"entity.name.namespace\",\"entity.other.attribute\",\"entity.name.scope-resolution\",\"entity.name.class\",\"storage.type.numeric.go\",\"storage.type.byte.go\",\"storage.type.boolean.go\",\"storage.type.string.go\",\"storage.type.uintptr.go\",\"storage.type.error.go\",\"storage.type.rune.go\",\"storage.type.cs\",\"storage.type.generic.cs\",\"storage.type.modifier.cs\",\"storage.type.variable.cs\",\"storage.type.annotation.java\",\"storage.type.generic.java\",\"storage.type.java\",\"storage.type.object.array.java\",\"storage.type.primitive.array.java\",\"storage.type.primitive.java\",\"storage.type.token.java\",\"storage.type.groovy\",\"storage.type.annotation.groovy\",\"storage.type.parameters.groovy\",\"storage.type.generic.groovy\",\"storage.type.object.array.groovy\",\"storage.type.primitive.array.groovy\",\"storage.type.primitive.groovy\"],\"settings\":{\"foreground\":\"#4EC9B0\"}},{\"name\":\"Types declaration and references, TS grammar specific\",\"scope\":[\"meta.type.cast.expr\",\"meta.type.new.expr\",\"support.constant.math\",\"support.constant.dom\",\"support.constant.json\",\"entity.other.inherited-class\"],\"settings\":{\"foreground\":\"#4EC9B0\"}},{\"name\":\"Control flow / Special keywords\",\"scope\":[\"keyword.control\",\"source.cpp keyword.operator.new\",\"keyword.operator.delete\",\"keyword.other.using\",\"keyword.other.operator\",\"entity.name.operator\"],\"settings\":{\"foreground\":\"#C586C0\"}},{\"name\":\"Variable and parameter name\",\"scope\":[\"variable\",\"meta.definition.variable.name\",\"support.variable\",\"entity.name.variable\"],\"settings\":{\"foreground\":\"#9CDCFE\"}},{\"name\":\"Object keys, TS grammar specific\",\"scope\":[\"meta.object-literal.key\"],\"settings\":{\"foreground\":\"#9CDCFE\"}},{\"name\":\"CSS property value\",\"scope\":[\"support.constant.property-value\",\"support.constant.font-name\",\"support.constant.media-type\",\"support.constant.media\",\"constant.other.color.rgb-value\",\"constant.other.rgb-value\",\"support.constant.color\"],\"settings\":{\"foreground\":\"#CE9178\"}},{\"name\":\"Regular expression groups\",\"scope\":[\"punctuation.definition.group.regexp\",\"punctuation.definition.group.assertion.regexp\",\"punctuation.definition.character-class.regexp\",\"punctuation.character.set.begin.regexp\",\"punctuation.character.set.end.regexp\",\"keyword.operator.negation.regexp\",\"support.other.parenthesis.regexp\"],\"settings\":{\"foreground\":\"#CE9178\"}},{\"scope\":[\"constant.character.character-class.regexp\",\"constant.other.character-class.set.regexp\",\"constant.other.character-class.regexp\",\"constant.character.set.regexp\"],\"settings\":{\"foreground\":\"#d16969\"}},{\"scope\":[\"keyword.operator.or.regexp\",\"keyword.control.anchor.regexp\"],\"settings\":{\"foreground\":\"#DCDCAA\"}},{\"scope\":\"keyword.operator.quantifier.regexp\",\"settings\":{\"foreground\":\"#d7ba7d\"}},{\"scope\":\"constant.character\",\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":\"constant.character.escape\",\"settings\":{\"foreground\":\"#d7ba7d\"}},{\"scope\":\"entity.name.label\",\"settings\":{\"foreground\":\"#C8C8C8\"}}]}");
-
-/***/ }),
-
-/***/ "./node_modules/@theia/monaco/data/monaco-themes/vscode/dark_theia.json":
-/*!******************************************************************************!*\
-  !*** ./node_modules/@theia/monaco/data/monaco-themes/vscode/dark_theia.json ***!
-  \******************************************************************************/
-/*! exports provided: $schema, name, include, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"$schema\":\"vscode://schemas/color-theme\",\"name\":\"Dark (Theia)\",\"include\":\"./dark_plus.json\"}");
-
-/***/ }),
-
-/***/ "./node_modules/@theia/monaco/data/monaco-themes/vscode/dark_vs.json":
-/*!***************************************************************************!*\
-  !*** ./node_modules/@theia/monaco/data/monaco-themes/vscode/dark_vs.json ***!
-  \***************************************************************************/
-/*! exports provided: $schema, name, include, tokenColors, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"$schema\":\"vscode://schemas/color-theme\",\"name\":\"Dark (Visual Studio)\",\"include\":\"./dark_defaults.json\",\"tokenColors\":[{\"scope\":[\"meta.embedded\",\"source.groovy.embedded\"],\"settings\":{\"foreground\":\"#D4D4D4\"}},{\"scope\":\"emphasis\",\"settings\":{\"fontStyle\":\"italic\"}},{\"scope\":\"strong\",\"settings\":{\"fontStyle\":\"bold\"}},{\"scope\":\"header\",\"settings\":{\"foreground\":\"#000080\"}},{\"scope\":\"comment\",\"settings\":{\"foreground\":\"#6A9955\"}},{\"scope\":\"constant.language\",\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":[\"constant.numeric\",\"entity.name.operator.custom-literal.number\",\"variable.other.enummember\",\"keyword.operator.plus.exponent\",\"keyword.operator.minus.exponent\"],\"settings\":{\"foreground\":\"#b5cea8\"}},{\"scope\":\"constant.regexp\",\"settings\":{\"foreground\":\"#646695\"}},{\"scope\":\"entity.name.tag\",\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":\"entity.name.tag.css\",\"settings\":{\"foreground\":\"#d7ba7d\"}},{\"scope\":\"entity.other.attribute-name\",\"settings\":{\"foreground\":\"#9cdcfe\"}},{\"scope\":[\"entity.other.attribute-name.class.css\",\"entity.other.attribute-name.class.mixin.css\",\"entity.other.attribute-name.id.css\",\"entity.other.attribute-name.parent-selector.css\",\"entity.other.attribute-name.pseudo-class.css\",\"entity.other.attribute-name.pseudo-element.css\",\"source.css.less entity.other.attribute-name.id\",\"entity.other.attribute-name.attribute.scss\",\"entity.other.attribute-name.scss\"],\"settings\":{\"foreground\":\"#d7ba7d\"}},{\"scope\":\"invalid\",\"settings\":{\"foreground\":\"#f44747\"}},{\"scope\":\"markup.underline\",\"settings\":{\"fontStyle\":\"underline\"}},{\"scope\":\"markup.bold\",\"settings\":{\"fontStyle\":\"bold\",\"foreground\":\"#569cd6\"}},{\"scope\":\"markup.heading\",\"settings\":{\"fontStyle\":\"bold\",\"foreground\":\"#569cd6\"}},{\"scope\":\"markup.italic\",\"settings\":{\"fontStyle\":\"italic\"}},{\"scope\":\"markup.inserted\",\"settings\":{\"foreground\":\"#b5cea8\"}},{\"scope\":\"markup.deleted\",\"settings\":{\"foreground\":\"#ce9178\"}},{\"scope\":\"markup.changed\",\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":\"punctuation.definition.quote.begin.markdown\",\"settings\":{\"foreground\":\"#6A9955\"}},{\"scope\":\"punctuation.definition.list.begin.markdown\",\"settings\":{\"foreground\":\"#6796e6\"}},{\"scope\":\"markup.inline.raw\",\"settings\":{\"foreground\":\"#ce9178\"}},{\"name\":\"brackets of XML/HTML tags\",\"scope\":\"punctuation.definition.tag\",\"settings\":{\"foreground\":\"#808080\"}},{\"scope\":[\"meta.preprocessor\",\"entity.name.function.preprocessor\"],\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":\"meta.preprocessor.string\",\"settings\":{\"foreground\":\"#ce9178\"}},{\"scope\":\"meta.preprocessor.numeric\",\"settings\":{\"foreground\":\"#b5cea8\"}},{\"scope\":\"meta.structure.dictionary.key.python\",\"settings\":{\"foreground\":\"#9cdcfe\"}},{\"scope\":\"meta.diff.header\",\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":\"storage\",\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":\"storage.type\",\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":[\"storage.modifier\",\"keyword.operator.noexcept\"],\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":[\"string\",\"entity.name.operator.custom-literal.string\",\"meta.embedded.assembly\"],\"settings\":{\"foreground\":\"#ce9178\"}},{\"scope\":\"string.tag\",\"settings\":{\"foreground\":\"#ce9178\"}},{\"scope\":\"string.value\",\"settings\":{\"foreground\":\"#ce9178\"}},{\"scope\":\"string.regexp\",\"settings\":{\"foreground\":\"#d16969\"}},{\"name\":\"String interpolation\",\"scope\":[\"punctuation.definition.template-expression.begin\",\"punctuation.definition.template-expression.end\",\"punctuation.section.embedded\"],\"settings\":{\"foreground\":\"#569cd6\"}},{\"name\":\"Reset JavaScript string interpolation expression\",\"scope\":[\"meta.template.expression\"],\"settings\":{\"foreground\":\"#d4d4d4\"}},{\"scope\":[\"support.type.vendored.property-name\",\"support.type.property-name\",\"variable.css\",\"variable.scss\",\"variable.other.less\",\"source.coffee.embedded\"],\"settings\":{\"foreground\":\"#9cdcfe\"}},{\"scope\":\"keyword\",\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":\"keyword.control\",\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":\"keyword.operator\",\"settings\":{\"foreground\":\"#d4d4d4\"}},{\"scope\":[\"keyword.operator.new\",\"keyword.operator.expression\",\"keyword.operator.cast\",\"keyword.operator.sizeof\",\"keyword.operator.alignof\",\"keyword.operator.typeid\",\"keyword.operator.alignas\",\"keyword.operator.instanceof\",\"keyword.operator.logical.python\",\"keyword.operator.wordlike\"],\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":\"keyword.other.unit\",\"settings\":{\"foreground\":\"#b5cea8\"}},{\"scope\":[\"punctuation.section.embedded.begin.php\",\"punctuation.section.embedded.end.php\"],\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":\"support.function.git-rebase\",\"settings\":{\"foreground\":\"#9cdcfe\"}},{\"scope\":\"constant.sha.git-rebase\",\"settings\":{\"foreground\":\"#b5cea8\"}},{\"name\":\"coloring of the Java import and package identifiers\",\"scope\":[\"storage.modifier.import.java\",\"variable.language.wildcard.java\",\"storage.modifier.package.java\"],\"settings\":{\"foreground\":\"#d4d4d4\"}},{\"name\":\"this.self\",\"scope\":\"variable.language\",\"settings\":{\"foreground\":\"#569cd6\"}}]}");
-
-/***/ }),
-
-/***/ "./node_modules/@theia/monaco/data/monaco-themes/vscode/hc_black.json":
-/*!****************************************************************************!*\
-  !*** ./node_modules/@theia/monaco/data/monaco-themes/vscode/hc_black.json ***!
-  \****************************************************************************/
-/*! exports provided: $schema, name, include, colors, tokenColors, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"$schema\":\"vscode://schemas/color-theme\",\"name\":\"Dark High Contrast\",\"include\":\"./hc_black_defaults.json\",\"colors\":{\"selection.background\":\"#008000\",\"editor.selectionBackground\":\"#FFFFFF\",\"statusBarItem.remoteBackground\":\"#00000000\"},\"tokenColors\":[{\"name\":\"Function declarations\",\"scope\":[\"entity.name.function\",\"support.function\",\"support.constant.handlebars\",\"source.powershell variable.other.member\"],\"settings\":{\"foreground\":\"#DCDCAA\"}},{\"name\":\"Types declaration and references\",\"scope\":[\"meta.return-type\",\"support.class\",\"support.type\",\"entity.name.type\",\"entity.name.namespace\",\"entity.name.scope-resolution\",\"entity.name.class\",\"storage.type.cs\",\"storage.type.generic.cs\",\"storage.type.modifier.cs\",\"storage.type.variable.cs\",\"storage.type.annotation.java\",\"storage.type.generic.java\",\"storage.type.java\",\"storage.type.object.array.java\",\"storage.type.primitive.array.java\",\"storage.type.primitive.java\",\"storage.type.token.java\",\"storage.type.groovy\",\"storage.type.annotation.groovy\",\"storage.type.parameters.groovy\",\"storage.type.generic.groovy\",\"storage.type.object.array.groovy\",\"storage.type.primitive.array.groovy\",\"storage.type.primitive.groovy\"],\"settings\":{\"foreground\":\"#4EC9B0\"}},{\"name\":\"Types declaration and references, TS grammar specific\",\"scope\":[\"meta.type.cast.expr\",\"meta.type.new.expr\",\"support.constant.math\",\"support.constant.dom\",\"support.constant.json\",\"entity.other.inherited-class\"],\"settings\":{\"foreground\":\"#4EC9B0\"}},{\"name\":\"Control flow / Special keywords\",\"scope\":[\"keyword.control\",\"source.cpp keyword.operator.new\",\"source.cpp keyword.operator.delete\",\"keyword.other.using\",\"keyword.other.operator\"],\"settings\":{\"foreground\":\"#C586C0\"}},{\"name\":\"Variable and parameter name\",\"scope\":[\"variable\",\"meta.definition.variable.name\",\"support.variable\"],\"settings\":{\"foreground\":\"#9CDCFE\"}},{\"name\":\"Object keys, TS grammar specific\",\"scope\":[\"meta.object-literal.key\"],\"settings\":{\"foreground\":\"#9CDCFE\"}},{\"name\":\"CSS property value\",\"scope\":[\"support.constant.property-value\",\"support.constant.font-name\",\"support.constant.media-type\",\"support.constant.media\",\"constant.other.color.rgb-value\",\"constant.other.rgb-value\",\"support.constant.color\"],\"settings\":{\"foreground\":\"#CE9178\"}},{\"name\":\"HC Search Editor context line override\",\"scope\":\"meta.resultLinePrefix.contextLinePrefix.search\",\"settings\":{\"foreground\":\"#CBEDCB\"}}]}");
-
-/***/ }),
-
-/***/ "./node_modules/@theia/monaco/data/monaco-themes/vscode/hc_black_defaults.json":
-/*!*************************************************************************************!*\
-  !*** ./node_modules/@theia/monaco/data/monaco-themes/vscode/hc_black_defaults.json ***!
-  \*************************************************************************************/
-/*! exports provided: $schema, name, colors, settings, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"$schema\":\"vscode://schemas/color-theme\",\"name\":\"High Contrast Default Colors\",\"colors\":{\"editor.background\":\"#000000\",\"editor.foreground\":\"#FFFFFF\",\"editorIndentGuide.background\":\"#FFFFFF\",\"editorIndentGuide.activeBackground\":\"#FFFFFF\",\"statusBarItem.remoteBackground\":\"#00000000\",\"sideBarTitle.foreground\":\"#FFFFFF\"},\"settings\":[{\"settings\":{\"foreground\":\"#FFFFFF\",\"background\":\"#000000\"}},{\"scope\":[\"meta.embedded\",\"source.groovy.embedded\"],\"settings\":{\"foreground\":\"#FFFFFF\",\"background\":\"#000000\"}},{\"scope\":\"emphasis\",\"settings\":{\"fontStyle\":\"italic\"}},{\"scope\":\"strong\",\"settings\":{\"fontStyle\":\"bold\"}},{\"scope\":\"meta.diff.header\",\"settings\":{\"foreground\":\"#000080\"}},{\"scope\":\"comment\",\"settings\":{\"foreground\":\"#7ca668\"}},{\"scope\":\"constant.language\",\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":[\"constant.numeric\",\"constant.other.color.rgb-value\",\"constant.other.rgb-value\",\"support.constant.color\"],\"settings\":{\"foreground\":\"#b5cea8\"}},{\"scope\":\"constant.regexp\",\"settings\":{\"foreground\":\"#b46695\"}},{\"scope\":\"constant.character\",\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":\"entity.name.tag\",\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":\"entity.name.tag.css\",\"settings\":{\"foreground\":\"#d7ba7d\"}},{\"scope\":\"entity.other.attribute-name\",\"settings\":{\"foreground\":\"#9cdcfe\"}},{\"scope\":[\"entity.other.attribute-name.class.css\",\"entity.other.attribute-name.class.mixin.css\",\"entity.other.attribute-name.id.css\",\"entity.other.attribute-name.parent-selector.css\",\"entity.other.attribute-name.pseudo-class.css\",\"entity.other.attribute-name.pseudo-element.css\",\"source.css.less entity.other.attribute-name.id\",\"entity.other.attribute-name.attribute.scss\",\"entity.other.attribute-name.scss\"],\"settings\":{\"foreground\":\"#d7ba7d\"}},{\"scope\":\"invalid\",\"settings\":{\"foreground\":\"#f44747\"}},{\"scope\":\"markup.underline\",\"settings\":{\"fontStyle\":\"underline\"}},{\"scope\":\"markup.bold\",\"settings\":{\"fontStyle\":\"bold\"}},{\"scope\":\"markup.heading\",\"settings\":{\"foreground\":\"#6796e6\"}},{\"scope\":\"markup.italic\",\"settings\":{\"fontStyle\":\"italic\"}},{\"scope\":\"markup.inserted\",\"settings\":{\"foreground\":\"#b5cea8\"}},{\"scope\":\"markup.deleted\",\"settings\":{\"foreground\":\"#ce9178\"}},{\"scope\":\"markup.changed\",\"settings\":{\"foreground\":\"#569cd6\"}},{\"name\":\"brackets of XML/HTML tags\",\"scope\":[\"punctuation.definition.tag\"],\"settings\":{\"foreground\":\"#808080\"}},{\"scope\":\"meta.preprocessor\",\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":\"meta.preprocessor.string\",\"settings\":{\"foreground\":\"#ce9178\"}},{\"scope\":\"meta.preprocessor.numeric\",\"settings\":{\"foreground\":\"#b5cea8\"}},{\"scope\":\"meta.structure.dictionary.key.python\",\"settings\":{\"foreground\":\"#9cdcfe\"}},{\"scope\":\"storage\",\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":\"storage.type\",\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":\"storage.modifier\",\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":\"string\",\"settings\":{\"foreground\":\"#ce9178\"}},{\"scope\":\"string.tag\",\"settings\":{\"foreground\":\"#ce9178\"}},{\"scope\":\"string.value\",\"settings\":{\"foreground\":\"#ce9178\"}},{\"scope\":\"string.regexp\",\"settings\":{\"foreground\":\"#d16969\"}},{\"name\":\"String interpolation\",\"scope\":[\"punctuation.definition.template-expression.begin\",\"punctuation.definition.template-expression.end\",\"punctuation.section.embedded\"],\"settings\":{\"foreground\":\"#569cd6\"}},{\"name\":\"Reset JavaScript string interpolation expression\",\"scope\":[\"meta.template.expression\"],\"settings\":{\"foreground\":\"#ffffff\"}},{\"scope\":[\"support.type.vendored.property-name\",\"support.type.property-name\",\"variable.css\",\"variable.scss\",\"variable.other.less\",\"source.coffee.embedded\"],\"settings\":{\"foreground\":\"#d4d4d4\"}},{\"scope\":\"keyword\",\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":\"keyword.control\",\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":\"keyword.operator\",\"settings\":{\"foreground\":\"#d4d4d4\"}},{\"scope\":[\"keyword.operator.new\",\"keyword.operator.expression\",\"keyword.operator.cast\",\"keyword.operator.sizeof\",\"keyword.operator.logical.python\"],\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":\"keyword.other.unit\",\"settings\":{\"foreground\":\"#b5cea8\"}},{\"scope\":\"support.function.git-rebase\",\"settings\":{\"foreground\":\"#d4d4d4\"}},{\"scope\":\"constant.sha.git-rebase\",\"settings\":{\"foreground\":\"#b5cea8\"}},{\"name\":\"coloring of the Java import and package identifiers\",\"scope\":[\"storage.modifier.import.java\",\"variable.language.wildcard.java\",\"storage.modifier.package.java\"],\"settings\":{\"foreground\":\"#d4d4d4\"}},{\"name\":\"coloring of the TS this\",\"scope\":\"variable.language.this\",\"settings\":{\"foreground\":\"#569cd6\"}}]}");
-
-/***/ }),
-
-/***/ "./node_modules/@theia/monaco/data/monaco-themes/vscode/hc_theia.json":
-/*!****************************************************************************!*\
-  !*** ./node_modules/@theia/monaco/data/monaco-themes/vscode/hc_theia.json ***!
-  \****************************************************************************/
-/*! exports provided: $schema, name, include, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"$schema\":\"vscode://schemas/color-theme\",\"name\":\"Dark High Contrast (Theia)\",\"include\":\"./hc_black.json\"}");
-
-/***/ }),
-
-/***/ "./node_modules/@theia/monaco/data/monaco-themes/vscode/light_defaults.json":
-/*!**********************************************************************************!*\
-  !*** ./node_modules/@theia/monaco/data/monaco-themes/vscode/light_defaults.json ***!
-  \**********************************************************************************/
-/*! exports provided: $schema, name, colors, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"$schema\":\"vscode://schemas/color-theme\",\"name\":\"Light Default Colors\",\"colors\":{\"editor.background\":\"#FFFFFF\",\"editor.foreground\":\"#000000\",\"editor.inactiveSelectionBackground\":\"#E5EBF1\",\"editorIndentGuide.background\":\"#D3D3D3\",\"editorIndentGuide.activeBackground\":\"#939393\",\"editor.selectionHighlightBackground\":\"#ADD6FF80\",\"editorSuggestWidget.background\":\"#F3F3F3\",\"activityBarBadge.background\":\"#007ACC\",\"sideBarTitle.foreground\":\"#6F6F6F\",\"list.hoverBackground\":\"#E8E8E8\",\"input.placeholderForeground\":\"#767676\",\"settings.textInputBorder\":\"#CECECE\",\"settings.numberInputBorder\":\"#CECECE\",\"statusBarItem.remoteForeground\":\"#FFF\",\"statusBarItem.remoteBackground\":\"#16825D\"}}");
-
-/***/ }),
-
-/***/ "./node_modules/@theia/monaco/data/monaco-themes/vscode/light_plus.json":
-/*!******************************************************************************!*\
-  !*** ./node_modules/@theia/monaco/data/monaco-themes/vscode/light_plus.json ***!
-  \******************************************************************************/
-/*! exports provided: $schema, name, include, tokenColors, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"$schema\":\"vscode://schemas/color-theme\",\"name\":\"Light+ (default light)\",\"include\":\"./light_vs.json\",\"tokenColors\":[{\"name\":\"Function declarations\",\"scope\":[\"entity.name.function\",\"support.function\",\"support.constant.handlebars\",\"source.powershell variable.other.member\",\"entity.name.operator.custom-literal\"],\"settings\":{\"foreground\":\"#795E26\"}},{\"name\":\"Types declaration and references\",\"scope\":[\"meta.return-type\",\"support.class\",\"support.type\",\"entity.name.type\",\"entity.name.namespace\",\"entity.other.attribute\",\"entity.name.scope-resolution\",\"entity.name.class\",\"storage.type.numeric.go\",\"storage.type.byte.go\",\"storage.type.boolean.go\",\"storage.type.string.go\",\"storage.type.uintptr.go\",\"storage.type.error.go\",\"storage.type.rune.go\",\"storage.type.cs\",\"storage.type.generic.cs\",\"storage.type.modifier.cs\",\"storage.type.variable.cs\",\"storage.type.annotation.java\",\"storage.type.generic.java\",\"storage.type.java\",\"storage.type.object.array.java\",\"storage.type.primitive.array.java\",\"storage.type.primitive.java\",\"storage.type.token.java\",\"storage.type.groovy\",\"storage.type.annotation.groovy\",\"storage.type.parameters.groovy\",\"storage.type.generic.groovy\",\"storage.type.object.array.groovy\",\"storage.type.primitive.array.groovy\",\"storage.type.primitive.groovy\"],\"settings\":{\"foreground\":\"#267f99\"}},{\"name\":\"Types declaration and references, TS grammar specific\",\"scope\":[\"meta.type.cast.expr\",\"meta.type.new.expr\",\"support.constant.math\",\"support.constant.dom\",\"support.constant.json\",\"entity.other.inherited-class\"],\"settings\":{\"foreground\":\"#267f99\"}},{\"name\":\"Control flow / Special keywords\",\"scope\":[\"keyword.control\",\"source.cpp keyword.operator.new\",\"source.cpp keyword.operator.delete\",\"keyword.other.using\",\"keyword.other.operator\",\"entity.name.operator\"],\"settings\":{\"foreground\":\"#AF00DB\"}},{\"name\":\"Variable and parameter name\",\"scope\":[\"variable\",\"meta.definition.variable.name\",\"support.variable\",\"entity.name.variable\"],\"settings\":{\"foreground\":\"#001080\"}},{\"name\":\"Object keys, TS grammar specific\",\"scope\":[\"meta.object-literal.key\"],\"settings\":{\"foreground\":\"#001080\"}},{\"name\":\"CSS property value\",\"scope\":[\"support.constant.property-value\",\"support.constant.font-name\",\"support.constant.media-type\",\"support.constant.media\",\"constant.other.color.rgb-value\",\"constant.other.rgb-value\",\"support.constant.color\"],\"settings\":{\"foreground\":\"#0451a5\"}},{\"name\":\"Regular expression groups\",\"scope\":[\"punctuation.definition.group.regexp\",\"punctuation.definition.group.assertion.regexp\",\"punctuation.definition.character-class.regexp\",\"punctuation.character.set.begin.regexp\",\"punctuation.character.set.end.regexp\",\"keyword.operator.negation.regexp\",\"support.other.parenthesis.regexp\"],\"settings\":{\"foreground\":\"#d16969\"}},{\"scope\":[\"constant.character.character-class.regexp\",\"constant.other.character-class.set.regexp\",\"constant.other.character-class.regexp\",\"constant.character.set.regexp\"],\"settings\":{\"foreground\":\"#811f3f\"}},{\"scope\":\"keyword.operator.quantifier.regexp\",\"settings\":{\"foreground\":\"#000000\"}},{\"scope\":[\"keyword.operator.or.regexp\",\"keyword.control.anchor.regexp\"],\"settings\":{\"foreground\":\"#ff0000\"}},{\"scope\":\"constant.character\",\"settings\":{\"foreground\":\"#0000ff\"}},{\"scope\":\"constant.character.escape\",\"settings\":{\"foreground\":\"#ff0000\"}},{\"scope\":\"entity.name.label\",\"settings\":{\"foreground\":\"#000000\"}}]}");
-
-/***/ }),
-
-/***/ "./node_modules/@theia/monaco/data/monaco-themes/vscode/light_theia.json":
-/*!*******************************************************************************!*\
-  !*** ./node_modules/@theia/monaco/data/monaco-themes/vscode/light_theia.json ***!
-  \*******************************************************************************/
-/*! exports provided: $schema, name, include, colors, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"$schema\":\"vscode://schemas/color-theme\",\"name\":\"Light (Theia)\",\"include\":\"./light_plus.json\",\"colors\":{\"activityBar.background\":\"#ececec\",\"activityBar.activeBorder\":\"#000000\",\"activityBar.foreground\":\"#000000\"}}");
-
-/***/ }),
-
-/***/ "./node_modules/@theia/monaco/data/monaco-themes/vscode/light_vs.json":
-/*!****************************************************************************!*\
-  !*** ./node_modules/@theia/monaco/data/monaco-themes/vscode/light_vs.json ***!
-  \****************************************************************************/
-/*! exports provided: $schema, name, include, tokenColors, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"$schema\":\"vscode://schemas/color-theme\",\"name\":\"Light (Visual Studio)\",\"include\":\"./light_defaults.json\",\"tokenColors\":[{\"scope\":[\"meta.embedded\",\"source.groovy.embedded\"],\"settings\":{\"foreground\":\"#000000ff\"}},{\"scope\":\"emphasis\",\"settings\":{\"fontStyle\":\"italic\"}},{\"scope\":\"strong\",\"settings\":{\"fontStyle\":\"bold\"}},{\"scope\":\"meta.diff.header\",\"settings\":{\"foreground\":\"#000080\"}},{\"scope\":\"comment\",\"settings\":{\"foreground\":\"#008000\"}},{\"scope\":\"constant.language\",\"settings\":{\"foreground\":\"#0000ff\"}},{\"scope\":[\"constant.numeric\",\"entity.name.operator.custom-literal.number\",\"variable.other.enummember\",\"keyword.operator.plus.exponent\",\"keyword.operator.minus.exponent\"],\"settings\":{\"foreground\":\"#09885a\"}},{\"scope\":\"constant.regexp\",\"settings\":{\"foreground\":\"#811f3f\"}},{\"name\":\"css tags in selectors, xml tags\",\"scope\":\"entity.name.tag\",\"settings\":{\"foreground\":\"#800000\"}},{\"scope\":\"entity.name.selector\",\"settings\":{\"foreground\":\"#800000\"}},{\"scope\":\"entity.other.attribute-name\",\"settings\":{\"foreground\":\"#ff0000\"}},{\"scope\":[\"entity.other.attribute-name.class.css\",\"entity.other.attribute-name.class.mixin.css\",\"entity.other.attribute-name.id.css\",\"entity.other.attribute-name.parent-selector.css\",\"entity.other.attribute-name.pseudo-class.css\",\"entity.other.attribute-name.pseudo-element.css\",\"source.css.less entity.other.attribute-name.id\",\"entity.other.attribute-name.attribute.scss\",\"entity.other.attribute-name.scss\"],\"settings\":{\"foreground\":\"#800000\"}},{\"scope\":\"invalid\",\"settings\":{\"foreground\":\"#cd3131\"}},{\"scope\":\"markup.underline\",\"settings\":{\"fontStyle\":\"underline\"}},{\"scope\":\"markup.bold\",\"settings\":{\"fontStyle\":\"bold\",\"foreground\":\"#000080\"}},{\"scope\":\"markup.heading\",\"settings\":{\"fontStyle\":\"bold\",\"foreground\":\"#800000\"}},{\"scope\":\"markup.italic\",\"settings\":{\"fontStyle\":\"italic\"}},{\"scope\":\"markup.inserted\",\"settings\":{\"foreground\":\"#09885a\"}},{\"scope\":\"markup.deleted\",\"settings\":{\"foreground\":\"#a31515\"}},{\"scope\":\"markup.changed\",\"settings\":{\"foreground\":\"#0451a5\"}},{\"scope\":[\"punctuation.definition.quote.begin.markdown\",\"punctuation.definition.list.begin.markdown\"],\"settings\":{\"foreground\":\"#0451a5\"}},{\"scope\":\"markup.inline.raw\",\"settings\":{\"foreground\":\"#800000\"}},{\"name\":\"brackets of XML/HTML tags\",\"scope\":\"punctuation.definition.tag\",\"settings\":{\"foreground\":\"#800000\"}},{\"scope\":[\"meta.preprocessor\",\"entity.name.function.preprocessor\"],\"settings\":{\"foreground\":\"#0000ff\"}},{\"scope\":\"meta.preprocessor.string\",\"settings\":{\"foreground\":\"#a31515\"}},{\"scope\":\"meta.preprocessor.numeric\",\"settings\":{\"foreground\":\"#09885a\"}},{\"scope\":\"meta.structure.dictionary.key.python\",\"settings\":{\"foreground\":\"#0451a5\"}},{\"scope\":\"storage\",\"settings\":{\"foreground\":\"#0000ff\"}},{\"scope\":\"storage.type\",\"settings\":{\"foreground\":\"#0000ff\"}},{\"scope\":[\"storage.modifier\",\"keyword.operator.noexcept\"],\"settings\":{\"foreground\":\"#0000ff\"}},{\"scope\":[\"string\",\"entity.name.operator.custom-literal.string\",\"meta.embedded.assembly\"],\"settings\":{\"foreground\":\"#a31515\"}},{\"scope\":[\"string.comment.buffered.block.pug\",\"string.quoted.pug\",\"string.interpolated.pug\",\"string.unquoted.plain.in.yaml\",\"string.unquoted.plain.out.yaml\",\"string.unquoted.block.yaml\",\"string.quoted.single.yaml\",\"string.quoted.double.xml\",\"string.quoted.single.xml\",\"string.unquoted.cdata.xml\",\"string.quoted.double.html\",\"string.quoted.single.html\",\"string.unquoted.html\",\"string.quoted.single.handlebars\",\"string.quoted.double.handlebars\"],\"settings\":{\"foreground\":\"#0000ff\"}},{\"scope\":\"string.regexp\",\"settings\":{\"foreground\":\"#811f3f\"}},{\"name\":\"String interpolation\",\"scope\":[\"punctuation.definition.template-expression.begin\",\"punctuation.definition.template-expression.end\",\"punctuation.section.embedded\"],\"settings\":{\"foreground\":\"#0000ff\"}},{\"name\":\"Reset JavaScript string interpolation expression\",\"scope\":[\"meta.template.expression\"],\"settings\":{\"foreground\":\"#000000\"}},{\"scope\":[\"support.constant.property-value\",\"support.constant.font-name\",\"support.constant.media-type\",\"support.constant.media\",\"constant.other.color.rgb-value\",\"constant.other.rgb-value\",\"support.constant.color\"],\"settings\":{\"foreground\":\"#0451a5\"}},{\"scope\":[\"support.type.vendored.property-name\",\"support.type.property-name\",\"variable.css\",\"variable.scss\",\"variable.other.less\",\"source.coffee.embedded\"],\"settings\":{\"foreground\":\"#ff0000\"}},{\"scope\":[\"support.type.property-name.json\"],\"settings\":{\"foreground\":\"#0451a5\"}},{\"scope\":\"keyword\",\"settings\":{\"foreground\":\"#0000ff\"}},{\"scope\":\"keyword.control\",\"settings\":{\"foreground\":\"#0000ff\"}},{\"scope\":\"keyword.operator\",\"settings\":{\"foreground\":\"#000000\"}},{\"scope\":[\"keyword.operator.new\",\"keyword.operator.expression\",\"keyword.operator.cast\",\"keyword.operator.sizeof\",\"keyword.operator.alignof\",\"keyword.operator.typeid\",\"keyword.operator.alignas\",\"keyword.operator.instanceof\",\"keyword.operator.logical.python\",\"keyword.operator.wordlike\"],\"settings\":{\"foreground\":\"#0000ff\"}},{\"scope\":\"keyword.other.unit\",\"settings\":{\"foreground\":\"#09885a\"}},{\"scope\":[\"punctuation.section.embedded.begin.php\",\"punctuation.section.embedded.end.php\"],\"settings\":{\"foreground\":\"#800000\"}},{\"scope\":\"support.function.git-rebase\",\"settings\":{\"foreground\":\"#0451a5\"}},{\"scope\":\"constant.sha.git-rebase\",\"settings\":{\"foreground\":\"#09885a\"}},{\"name\":\"coloring of the Java import and package identifiers\",\"scope\":[\"storage.modifier.import.java\",\"variable.language.wildcard.java\",\"storage.modifier.package.java\"],\"settings\":{\"foreground\":\"#000000\"}},{\"name\":\"this.self\",\"scope\":\"variable.language\",\"settings\":{\"foreground\":\"#0000ff\"}}]}");
-
-/***/ }),
-
-/***/ "./node_modules/@theia/monaco/lib/browser/monaco-indexed-db.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/@theia/monaco/lib/browser/monaco-indexed-db.js ***!
-  \*********************************************************************/
+/***/ "./node_modules/@theia/console/lib/browser/ansi-console-item.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@theia/console/lib/browser/ansi-console-item.js ***!
+  \**********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 /********************************************************************************
- * Copyright (C) 2020 TypeFox and others.
+ * Copyright (C) 2018 TypeFox and others.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0 which is available at
@@ -145,6 +24,95 @@ module.exports = JSON.parse("{\"$schema\":\"vscode://schemas/color-theme\",\"nam
  *
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AnsiConsoleItem = void 0;
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+// TODO: Remove this workaround once issue is fixed by anser.
+// REF: https://github.com/IonicaBizau/anser/issues/52
+var ansiToHtml = __webpack_require__(/*! anser */ "./node_modules/anser/lib/index.js").ansiToHtml;
+var AnsiConsoleItem = /** @class */ (function () {
+    function AnsiConsoleItem(content, severity) {
+        this.content = content;
+        this.severity = severity;
+        this.htmlContent = ansiToHtml(this.content, {
+            use_classes: true,
+            remove_empty: true
+        });
+    }
+    Object.defineProperty(AnsiConsoleItem.prototype, "visible", {
+        get: function () {
+            return !!this.htmlContent;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    AnsiConsoleItem.prototype.render = function () {
+        return React.createElement("div", { className: 'theia-console-ansi-console-item', dangerouslySetInnerHTML: { __html: this.htmlContent } });
+    };
+    return AnsiConsoleItem;
+}());
+exports.AnsiConsoleItem = AnsiConsoleItem;
+
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/lib/browser/console/debug-console-contribution.js":
+/*!*************************************************************************************!*\
+  !*** ./node_modules/@theia/debug/lib/browser/console/debug-console-contribution.js ***!
+  \*************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/********************************************************************************
+ * Copyright (C) 2018 TypeFox and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -182,121 +150,174 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.deleteTheme = exports.putTheme = exports.getThemes = exports.MonacoThemeState = exports.monacoDB = void 0;
-var idb = __webpack_require__(/*! idb */ "./node_modules/idb/build/esm/index.js");
-var disposable_1 = __webpack_require__(/*! @theia/core/lib/common/disposable */ "./node_modules/@theia/core/lib/common/disposable.js");
-var _monacoDB;
-if ('indexedDB' in window) {
-    _monacoDB = idb.openDB('theia-monaco', 1, {
-        upgrade: function (db) {
-            if (!db.objectStoreNames.contains('themes')) {
-                db.createObjectStore('themes', { keyPath: 'id' });
+exports.DebugConsoleContribution = exports.DebugConsoleCommands = exports.InDebugReplContextKey = void 0;
+var console_widget_1 = __webpack_require__(/*! @theia/console/lib/browser/console-widget */ "./node_modules/@theia/console/lib/browser/console-widget.js");
+var browser_1 = __webpack_require__(/*! @theia/core/lib/browser */ "./node_modules/@theia/core/lib/browser/index.js");
+var context_key_service_1 = __webpack_require__(/*! @theia/core/lib/browser/context-key-service */ "./node_modules/@theia/core/lib/browser/context-key-service.js");
+var tab_bar_toolbar_1 = __webpack_require__(/*! @theia/core/lib/browser/shell/tab-bar-toolbar */ "./node_modules/@theia/core/lib/browser/shell/tab-bar-toolbar.js");
+var severity_1 = __webpack_require__(/*! @theia/core/lib/common/severity */ "./node_modules/@theia/core/lib/common/severity.js");
+var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var debug_console_session_1 = __webpack_require__(/*! ./debug-console-session */ "./node_modules/@theia/debug/lib/browser/console/debug-console-session.js");
+exports.InDebugReplContextKey = Symbol('inDebugReplContextKey');
+var DebugConsoleCommands;
+(function (DebugConsoleCommands) {
+    var DEBUG_CONSOLE_CATEGORY = 'Debug';
+    DebugConsoleCommands.CLEAR = {
+        id: 'debug.console.clear',
+        category: DEBUG_CONSOLE_CATEGORY,
+        label: 'Clear Console',
+        iconClass: 'clear-all'
+    };
+})(DebugConsoleCommands = exports.DebugConsoleCommands || (exports.DebugConsoleCommands = {}));
+var DebugConsoleContribution = /** @class */ (function (_super) {
+    __extends(DebugConsoleContribution, _super);
+    function DebugConsoleContribution() {
+        var _this = _super.call(this, {
+            widgetId: DebugConsoleContribution_1.options.id,
+            widgetName: DebugConsoleContribution_1.options.title.label,
+            defaultWidgetOptions: {
+                area: 'bottom'
+            },
+            toggleCommandId: 'debug:console:toggle',
+            toggleKeybinding: 'ctrlcmd+shift+y'
+        }) || this;
+        _this.changeSeverity = function (event) {
+            _this.debugConsoleSession.severity = severity_1.Severity.fromValue(event.target.value);
+        };
+        return _this;
+    }
+    DebugConsoleContribution_1 = DebugConsoleContribution;
+    DebugConsoleContribution.prototype.registerCommands = function (commands) {
+        var _this = this;
+        _super.prototype.registerCommands.call(this, commands);
+        commands.registerCommand(DebugConsoleCommands.CLEAR, {
+            isEnabled: function (widget) { return _this.withWidget(widget, function () { return true; }); },
+            isVisible: function (widget) { return _this.withWidget(widget, function () { return true; }); },
+            execute: function (widget) { return _this.withWidget(widget, function () {
+                _this.clearConsole();
+            }); },
+        });
+    };
+    DebugConsoleContribution.prototype.registerToolbarItems = function (toolbarRegistry) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                toolbarRegistry.registerItem({
+                    id: 'debug-console-severity',
+                    render: function (widget) { return _this.renderSeveritySelector(widget); },
+                    isVisible: function (widget) { return _this.withWidget(widget, function () { return true; }); },
+                    onDidChange: this.debugConsoleSession.onSelectionChange
+                });
+                toolbarRegistry.registerItem({
+                    id: DebugConsoleCommands.CLEAR.id,
+                    command: DebugConsoleCommands.CLEAR.id,
+                    tooltip: 'Clear Console',
+                    priority: 0,
+                });
+                return [2 /*return*/];
+            });
+        });
+    };
+    DebugConsoleContribution.create = function (parent) {
+        var inputFocusContextKey = parent.get(exports.InDebugReplContextKey);
+        var child = console_widget_1.ConsoleWidget.createContainer(parent, __assign(__assign({}, DebugConsoleContribution_1.options), { inputFocusContextKey: inputFocusContextKey }));
+        var widget = child.get(console_widget_1.ConsoleWidget);
+        widget.session = child.get(debug_console_session_1.DebugConsoleSession);
+        return widget;
+    };
+    DebugConsoleContribution.bindContribution = function (bind) {
+        bind(exports.InDebugReplContextKey).toDynamicValue(function (_a) {
+            var container = _a.container;
+            return container.get(context_key_service_1.ContextKeyService).createKey('inDebugRepl', false);
+        }).inSingletonScope();
+        bind(debug_console_session_1.DebugConsoleSession).toSelf().inSingletonScope();
+        browser_1.bindViewContribution(bind, DebugConsoleContribution_1).onActivation(function (context, _) {
+            // eagerly initialize the debug console session
+            context.container.get(debug_console_session_1.DebugConsoleSession);
+            return _;
+        });
+        bind(tab_bar_toolbar_1.TabBarToolbarContribution).toService(DebugConsoleContribution_1);
+        bind(browser_1.WidgetFactory).toDynamicValue(function (_a) {
+            var container = _a.container;
+            return ({
+                id: DebugConsoleContribution_1.options.id,
+                createWidget: function () { return DebugConsoleContribution_1.create(container); }
+            });
+        });
+    };
+    DebugConsoleContribution.prototype.renderSeveritySelector = function (widget) {
+        var severityElements = [];
+        severity_1.Severity.toArray().forEach(function (s) { return severityElements.push(React.createElement("option", { value: s, key: s }, s)); });
+        var selectedValue = severity_1.Severity.toString(this.debugConsoleSession.severity || severity_1.Severity.Ignore);
+        return React.createElement("select", { className: 'theia-select', id: 'debugConsoleSeverity', key: 'debugConsoleSeverity', value: selectedValue, onChange: this.changeSeverity }, severityElements);
+    };
+    DebugConsoleContribution.prototype.withWidget = function (widget, fn) {
+        if (widget === void 0) { widget = this.tryGetWidget(); }
+        if (widget instanceof console_widget_1.ConsoleWidget && widget.id === DebugConsoleContribution_1.options.id) {
+            return fn(widget);
+        }
+        return false;
+    };
+    /**
+     * Clear the console widget.
+     */
+    DebugConsoleContribution.prototype.clearConsole = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var widget;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.widget];
+                    case 1:
+                        widget = _a.sent();
+                        widget.clear();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    var DebugConsoleContribution_1;
+    DebugConsoleContribution.options = {
+        id: 'debug-console',
+        title: {
+            label: 'Debug Console',
+            iconClass: 'theia-debug-console-icon'
+        },
+        input: {
+            uri: debug_console_session_1.DebugConsoleSession.uri,
+            options: {
+                autoSizing: true,
+                minHeight: 1,
+                maxHeight: 10
             }
         }
-    });
-}
-exports.monacoDB = _monacoDB;
-var MonacoThemeState;
-(function (MonacoThemeState) {
-    function is(state) {
-        return !!state && typeof state === 'object' && 'id' in state && 'label' in state && 'uiTheme' in state && 'data' in state;
-    }
-    MonacoThemeState.is = is;
-})(MonacoThemeState = exports.MonacoThemeState || (exports.MonacoThemeState = {}));
-function getThemes() {
-    return __awaiter(this, void 0, void 0, function () {
-        var db, result;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    if (!exports.monacoDB) {
-                        return [2 /*return*/, []];
-                    }
-                    return [4 /*yield*/, exports.monacoDB];
-                case 1:
-                    db = _a.sent();
-                    return [4 /*yield*/, db.transaction('themes', 'readonly').objectStore('themes').getAll()];
-                case 2:
-                    result = _a.sent();
-                    return [2 /*return*/, result.filter(MonacoThemeState.is)];
-            }
-        });
-    });
-}
-exports.getThemes = getThemes;
-function putTheme(state) {
-    var toDispose = new disposable_1.DisposableCollection(disposable_1.Disposable.create(function () { }));
-    doPutTheme(state, toDispose);
-    return toDispose;
-}
-exports.putTheme = putTheme;
-function doPutTheme(state, toDispose) {
-    return __awaiter(this, void 0, void 0, function () {
-        var db, id;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    if (!exports.monacoDB) {
-                        return [2 /*return*/];
-                    }
-                    return [4 /*yield*/, exports.monacoDB];
-                case 1:
-                    db = _a.sent();
-                    if (toDispose.disposed) {
-                        return [2 /*return*/];
-                    }
-                    id = state.id;
-                    return [4 /*yield*/, db.transaction('themes', 'readwrite').objectStore('themes').put(state)];
-                case 2:
-                    _a.sent();
-                    if (!toDispose.disposed) return [3 /*break*/, 4];
-                    return [4 /*yield*/, deleteTheme(id)];
-                case 3:
-                    _a.sent();
-                    return [2 /*return*/];
-                case 4:
-                    toDispose.push(disposable_1.Disposable.create(function () { return deleteTheme(id); }));
-                    return [2 /*return*/];
-            }
-        });
-    });
-}
-function deleteTheme(id) {
-    return __awaiter(this, void 0, void 0, function () {
-        var db;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    if (!exports.monacoDB) {
-                        return [2 /*return*/];
-                    }
-                    return [4 /*yield*/, exports.monacoDB];
-                case 1:
-                    db = _a.sent();
-                    return [4 /*yield*/, db.transaction('themes', 'readwrite').objectStore('themes').delete(id)];
-                case 2:
-                    _a.sent();
-                    return [2 /*return*/];
-            }
-        });
-    });
-}
-exports.deleteTheme = deleteTheme;
+    };
+    __decorate([
+        inversify_1.inject(debug_console_session_1.DebugConsoleSession),
+        __metadata("design:type", debug_console_session_1.DebugConsoleSession)
+    ], DebugConsoleContribution.prototype, "debugConsoleSession", void 0);
+    DebugConsoleContribution = DebugConsoleContribution_1 = __decorate([
+        inversify_1.injectable(),
+        __metadata("design:paramtypes", [])
+    ], DebugConsoleContribution);
+    return DebugConsoleContribution;
+}(browser_1.AbstractViewContribution));
+exports.DebugConsoleContribution = DebugConsoleContribution;
 
 
 /***/ }),
 
-/***/ "./node_modules/@theia/monaco/lib/browser/monaco-languages.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/@theia/monaco/lib/browser/monaco-languages.js ***!
-  \********************************************************************/
+/***/ "./node_modules/@theia/debug/lib/browser/console/debug-console-session.js":
+/*!********************************************************************************!*\
+  !*** ./node_modules/@theia/debug/lib/browser/console/debug-console-session.js ***!
+  \********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 /********************************************************************************
- * Copyright (C) 2017 TypeFox and others.
+ * Copyright (C) 2018 TypeFox and others.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0 which is available at
@@ -332,9 +353,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var __param = (this && this.__param) || function (paramIndex, decorator) {
-    return function (target, key) { decorator(target, key, paramIndex); }
-};
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -371,17 +389,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-var __values = (this && this.__values) || function(o) {
-    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
-    if (m) return m.call(o);
-    if (o && typeof o.length === "number") return {
-        next: function () {
-            if (o && i >= o.length) o = void 0;
-            return { value: o && o[i++], done: !o };
-        }
-    };
-    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
-};
 var __read = (this && this.__read) || function (o, n) {
     var m = typeof Symbol === "function" && o[Symbol.iterator];
     if (!m) return o;
@@ -402,341 +409,241 @@ var __spread = (this && this.__spread) || function () {
     for (var ar = [], i = 0; i < arguments.length; i++) ar = ar.concat(__read(arguments[i]));
     return ar;
 };
+var __values = (this && this.__values) || function(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+    if (m) return m.call(o);
+    if (o && typeof o.length === "number") return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.MonacoLanguages = void 0;
+exports.DebugConsoleSession = void 0;
+var throttle = __webpack_require__(/*! lodash.throttle */ "./node_modules/lodash.throttle/index.js");
 var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
-var monaco_languageclient_1 = __webpack_require__(/*! monaco-languageclient */ "./node_modules/monaco-languageclient/lib/index.js");
-var problem_manager_1 = __webpack_require__(/*! @theia/markers/lib/browser/problem/problem-manager */ "./node_modules/@theia/markers/lib/browser/problem/problem-manager.js");
+var console_session_1 = __webpack_require__(/*! @theia/console/lib/browser/console-session */ "./node_modules/@theia/console/lib/browser/console-session.js");
+var ansi_console_item_1 = __webpack_require__(/*! @theia/console/lib/browser/ansi-console-item */ "./node_modules/@theia/console/lib/browser/ansi-console-item.js");
+var debug_session_manager_1 = __webpack_require__(/*! ../debug-session-manager */ "./node_modules/@theia/debug/lib/browser/debug-session-manager.js");
+var browser_1 = __webpack_require__(/*! @theia/languages/lib/browser */ "./node_modules/@theia/languages/lib/browser/index.js");
 var uri_1 = __webpack_require__(/*! @theia/core/lib/common/uri */ "./node_modules/@theia/core/lib/common/uri.js");
-var disposable_1 = __webpack_require__(/*! @theia/core/lib/common/disposable */ "./node_modules/@theia/core/lib/common/disposable.js");
-var monaco_diagnostic_collection_1 = __webpack_require__(/*! monaco-languageclient/lib/monaco-diagnostic-collection */ "./node_modules/monaco-languageclient/lib/monaco-diagnostic-collection.js");
-inversify_1.decorate(inversify_1.injectable(), monaco_languageclient_1.MonacoLanguages);
-inversify_1.decorate(inversify_1.inject(monaco_languageclient_1.ProtocolToMonacoConverter), monaco_languageclient_1.MonacoLanguages, 0);
-inversify_1.decorate(inversify_1.inject(monaco_languageclient_1.MonacoToProtocolConverter), monaco_languageclient_1.MonacoLanguages, 1);
-var MonacoLanguages = /** @class */ (function (_super) {
-    __extends(MonacoLanguages, _super);
-    function MonacoLanguages(// eslint-disable-next-line @typescript-eslint/indent
-    p2m, m2p, problemManager) {
-        var e_1, _a;
-        var _this = _super.call(this, p2m, m2p) || this;
-        _this.problemManager = problemManager;
-        _this.workspaceSymbolProviders = [];
-        _this.makers = new Map();
-        try {
-            for (var _b = __values(_this.problemManager.getUris()), _c = _b.next(); !_c.done; _c = _b.next()) {
-                var uri = _c.value;
-                _this.updateMarkers(new uri_1.default(uri));
-            }
-        }
-        catch (e_1_1) { e_1 = { error: e_1_1 }; }
-        finally {
-            try {
-                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
-            }
-            finally { if (e_1) throw e_1.error; }
-        }
-        _this.problemManager.onDidChangeMarkers(function (uri) { return _this.updateMarkers(uri); });
+var debug_console_items_1 = __webpack_require__(/*! ./debug-console-items */ "./node_modules/@theia/debug/lib/browser/console/debug-console-items.js");
+var severity_1 = __webpack_require__(/*! @theia/core/lib/common/severity */ "./node_modules/@theia/core/lib/common/severity.js");
+var DebugConsoleSession = /** @class */ (function (_super) {
+    __extends(DebugConsoleSession, _super);
+    function DebugConsoleSession() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.id = 'debug';
+        _this.items = [];
+        _this.completionKinds = new Map();
+        _this.fireDidChange = throttle(function () { return _super.prototype.fireDidChange.call(_this); }, 50);
         return _this;
     }
-    MonacoLanguages.prototype.updateMarkers = function (uri) {
-        var e_2, _a, e_3, _b, e_4, _c;
-        var uriString = uri.toString();
-        var owners = new Map();
-        try {
-            for (var _d = __values(this.problemManager.findMarkers({ uri: uri })), _e = _d.next(); !_e.done; _e = _d.next()) {
-                var marker = _e.value;
-                var diagnostics = owners.get(marker.owner) || [];
-                diagnostics.push(marker.data);
-                owners.set(marker.owner, diagnostics);
+    DebugConsoleSession_1 = DebugConsoleSession;
+    DebugConsoleSession.prototype.init = function () {
+        var _this = this;
+        this.toDispose.push(this.manager.onDidCreateDebugSession(function (session) {
+            if (_this.manager.sessions.length === 1) {
+                _this.clear();
             }
-        }
-        catch (e_2_1) { e_2 = { error: e_2_1 }; }
-        finally {
-            try {
-                if (_e && !_e.done && (_a = _d.return)) _a.call(_d);
-            }
-            finally { if (e_2) throw e_2.error; }
-        }
-        var toClean = new Set(this.makers.keys());
-        try {
-            for (var owners_1 = __values(owners), owners_1_1 = owners_1.next(); !owners_1_1.done; owners_1_1 = owners_1.next()) {
-                var _f = __read(owners_1_1.value, 2), owner = _f[0], diagnostics = _f[1];
-                toClean.delete(owner);
-                var collection = this.makers.get(owner) || new monaco_diagnostic_collection_1.MonacoDiagnosticCollection(owner, this.p2m);
-                collection.set(uriString, diagnostics);
-                this.makers.set(owner, collection);
-            }
-        }
-        catch (e_3_1) { e_3 = { error: e_3_1 }; }
-        finally {
-            try {
-                if (owners_1_1 && !owners_1_1.done && (_b = owners_1.return)) _b.call(owners_1);
-            }
-            finally { if (e_3) throw e_3.error; }
-        }
-        try {
-            for (var toClean_1 = __values(toClean), toClean_1_1 = toClean_1.next(); !toClean_1_1.done; toClean_1_1 = toClean_1.next()) {
-                var owner = toClean_1_1.value;
-                var collection = this.makers.get(owner);
-                if (collection) {
-                    collection.set(uriString, []);
-                }
-            }
-        }
-        catch (e_4_1) { e_4 = { error: e_4_1 }; }
-        finally {
-            try {
-                if (toClean_1_1 && !toClean_1_1.done && (_c = toClean_1.return)) _c.call(toClean_1);
-            }
-            finally { if (e_4) throw e_4.error; }
+            session.on('output', function (event) { return _this.logOutput(session, event); });
+        }));
+        this.completionKinds.set('method', browser_1.CompletionItemKind.Method);
+        this.completionKinds.set('function', browser_1.CompletionItemKind.Function);
+        this.completionKinds.set('constructor', browser_1.CompletionItemKind.Constructor);
+        this.completionKinds.set('field', browser_1.CompletionItemKind.Field);
+        this.completionKinds.set('variable', browser_1.CompletionItemKind.Variable);
+        this.completionKinds.set('class', browser_1.CompletionItemKind.Class);
+        this.completionKinds.set('interface', browser_1.CompletionItemKind.Interface);
+        this.completionKinds.set('module', browser_1.CompletionItemKind.Module);
+        this.completionKinds.set('property', browser_1.CompletionItemKind.Property);
+        this.completionKinds.set('unit', browser_1.CompletionItemKind.Unit);
+        this.completionKinds.set('value', browser_1.CompletionItemKind.Value);
+        this.completionKinds.set('enum', browser_1.CompletionItemKind.Enum);
+        this.completionKinds.set('keyword', browser_1.CompletionItemKind.Keyword);
+        this.completionKinds.set('snippet', browser_1.CompletionItemKind.Snippet);
+        this.completionKinds.set('text', browser_1.CompletionItemKind.Text);
+        this.completionKinds.set('color', browser_1.CompletionItemKind.Color);
+        this.completionKinds.set('file', browser_1.CompletionItemKind.File);
+        this.completionKinds.set('reference', browser_1.CompletionItemKind.Reference);
+        this.completionKinds.set('customcolor', browser_1.CompletionItemKind.Color);
+        if (this.languages.registerCompletionItemProvider) {
+            this.toDispose.push(this.languages.registerCompletionItemProvider([DebugConsoleSession_1.uri], {
+                provideCompletionItems: function (params) { return _this.completions(params); }
+            }, '.'));
         }
     };
-    MonacoLanguages.prototype.createDiagnosticCollection = function (name) {
+    DebugConsoleSession.prototype.getElements = function () {
         var _this = this;
-        var owner = name || 'default';
-        var uris = [];
-        return {
-            set: function (uri, diagnostics) {
-                _this.problemManager.setMarkers(new uri_1.default(uri), owner, diagnostics);
-                uris.push(uri);
-            },
-            dispose: function () {
-                var e_5, _a;
-                try {
-                    for (var uris_1 = __values(uris), uris_1_1 = uris_1.next(); !uris_1_1.done; uris_1_1 = uris_1.next()) {
-                        var uri = uris_1_1.value;
-                        _this.problemManager.setMarkers(new uri_1.default(uri), owner, []);
-                    }
-                }
-                catch (e_5_1) { e_5 = { error: e_5_1 }; }
-                finally {
-                    try {
-                        if (uris_1_1 && !uris_1_1.done && (_a = uris_1.return)) _a.call(uris_1);
-                    }
-                    finally { if (e_5) throw e_5.error; }
-                }
-            }
-        };
+        return this.items.filter(function (e) { return !_this.severity || e.severity === _this.severity; })[Symbol.iterator]();
     };
-    MonacoLanguages.prototype.registerWorkspaceSymbolProvider = function (provider) {
-        var _this = this;
-        this.workspaceSymbolProviders.push(provider);
-        return disposable_1.Disposable.create(function () {
-            var index = _this.workspaceSymbolProviders.indexOf(provider);
-            if (index !== -1) {
-                _this.workspaceSymbolProviders.splice(index, 1);
-            }
+    DebugConsoleSession.prototype.completions = function (_a) {
+        var uri = _a.textDocument.uri, position = _a.position;
+        return __awaiter(this, void 0, void 0, function () {
+            var session, model, column, lineNumber, word, prefixLength_1, text, document_1, items;
+            var _this = this;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        session = this.manager.currentSession;
+                        if (!(session && session.capabilities.supportsCompletionsRequest)) return [3 /*break*/, 2];
+                        model = monaco.editor.getModel(monaco.Uri.parse(uri));
+                        if (!model) return [3 /*break*/, 2];
+                        column = position.character + 1;
+                        lineNumber = position.line + 1;
+                        word = model.getWordAtPosition({ column: column, lineNumber: lineNumber });
+                        prefixLength_1 = word ? word.word.length : 0;
+                        text = model.getValue();
+                        document_1 = browser_1.TextDocument.create(uri, model.getModeId(), model.getVersionId(), text);
+                        return [4 /*yield*/, session.completions(text, column, lineNumber)];
+                    case 1:
+                        items = _b.sent();
+                        return [2 /*return*/, items.map(function (item) { return _this.asCompletionItem(document_1, position, prefixLength_1, item); })];
+                    case 2: return [2 /*return*/, []];
+                }
+            });
         });
     };
-    Object.defineProperty(MonacoLanguages.prototype, "languages", {
-        get: function () {
-            return __spread(this.mergeLanguages(monaco.languages.getLanguages()).values());
-        },
-        enumerable: false,
-        configurable: true
-    });
-    MonacoLanguages.prototype.getLanguage = function (languageId) {
-        return this.mergeLanguages(monaco.languages.getLanguages().filter(function (language) { return language.id === languageId; })).get(languageId);
-    };
-    MonacoLanguages.prototype.mergeLanguages = function (registered) {
-        var e_6, _a, e_7, _b, e_8, _c, e_9, _d;
-        var languages = new Map();
-        try {
-            for (var registered_1 = __values(registered), registered_1_1 = registered_1.next(); !registered_1_1.done; registered_1_1 = registered_1.next()) {
-                var _e = registered_1_1.value, id = _e.id, aliases = _e.aliases, extensions = _e.extensions, filenames = _e.filenames;
-                var merged = languages.get(id) || {
-                    id: id,
-                    name: '',
-                    extensions: new Set(),
-                    filenames: new Set()
-                };
-                if (!merged.name && aliases && aliases.length) {
-                    merged.name = aliases[0];
-                }
-                if (extensions && extensions.length) {
-                    try {
-                        for (var extensions_1 = (e_7 = void 0, __values(extensions)), extensions_1_1 = extensions_1.next(); !extensions_1_1.done; extensions_1_1 = extensions_1.next()) {
-                            var extension = extensions_1_1.value;
-                            merged.extensions.add(extension);
-                        }
-                    }
-                    catch (e_7_1) { e_7 = { error: e_7_1 }; }
-                    finally {
-                        try {
-                            if (extensions_1_1 && !extensions_1_1.done && (_b = extensions_1.return)) _b.call(extensions_1);
-                        }
-                        finally { if (e_7) throw e_7.error; }
-                    }
-                }
-                if (filenames && filenames.length) {
-                    try {
-                        for (var filenames_1 = (e_8 = void 0, __values(filenames)), filenames_1_1 = filenames_1.next(); !filenames_1_1.done; filenames_1_1 = filenames_1.next()) {
-                            var filename = filenames_1_1.value;
-                            merged.filenames.add(filename);
-                        }
-                    }
-                    catch (e_8_1) { e_8 = { error: e_8_1 }; }
-                    finally {
-                        try {
-                            if (filenames_1_1 && !filenames_1_1.done && (_c = filenames_1.return)) _c.call(filenames_1);
-                        }
-                        finally { if (e_8) throw e_8.error; }
-                    }
-                }
-                languages.set(id, merged);
-            }
-        }
-        catch (e_6_1) { e_6 = { error: e_6_1 }; }
-        finally {
-            try {
-                if (registered_1_1 && !registered_1_1.done && (_a = registered_1.return)) _a.call(registered_1);
-            }
-            finally { if (e_6) throw e_6.error; }
-        }
-        try {
-            for (var languages_1 = __values(languages), languages_1_1 = languages_1.next(); !languages_1_1.done; languages_1_1 = languages_1.next()) {
-                var _f = __read(languages_1_1.value, 2), id = _f[0], language = _f[1];
-                if (!language.name) {
-                    language.name = id;
-                }
-            }
-        }
-        catch (e_9_1) { e_9 = { error: e_9_1 }; }
-        finally {
-            try {
-                if (languages_1_1 && !languages_1_1.done && (_d = languages_1.return)) _d.call(languages_1);
-            }
-            finally { if (e_9) throw e_9.error; }
-        }
-        return languages;
-    };
-    MonacoLanguages.prototype.createSignatureHelpProvider = function (selector, provider) {
-        var _this = this;
-        var triggerCharacters = [];
-        for (var _i = 2; _i < arguments.length; _i++) {
-            triggerCharacters[_i - 2] = arguments[_i];
-        }
-        var signatureHelpTriggerCharacters = __spread((provider.triggerCharacters || triggerCharacters || []));
-        var signatureHelpRetriggerCharacters = __spread((provider.retriggerCharacters || []));
+    DebugConsoleSession.prototype.asCompletionItem = function (document, position, prefixLength, item) {
+        var label = item.label, text = item.text, type = item.type, length = item.length;
+        var newText = text || label;
+        var start = document.positionAt(document.offsetAt(position) - (length || prefixLength));
+        var replaceRange = browser_1.Range.create(start, position);
+        var textEdit = browser_1.TextEdit.replace(replaceRange, newText);
         return {
-            signatureHelpTriggerCharacters: signatureHelpTriggerCharacters,
-            signatureHelpRetriggerCharacters: signatureHelpRetriggerCharacters,
-            provideSignatureHelp: function (model, position, token) { return __awaiter(_this, void 0, void 0, function () {
-                var params, help;
-                return __generator(this, function (_a) {
-                    switch (_a.label) {
-                        case 0:
-                            if (!this.matchModel(selector, monaco_languageclient_1.MonacoModelIdentifier.fromModel(model))) {
-                                return [2 /*return*/, undefined];
-                            }
-                            params = this.m2p.asTextDocumentPositionParams(model, position);
-                            return [4 /*yield*/, provider.provideSignatureHelp(params, token, undefined /* not used by LC */)];
-                        case 1:
-                            help = _a.sent();
-                            if (!help) {
-                                return [2 /*return*/, undefined];
-                            }
-                            return [2 /*return*/, this.p2m.asSignatureHelpResult(help)];
-                    }
-                });
-            }); }
+            label: label,
+            textEdit: textEdit,
+            kind: this.completionKinds.get(type)
         };
     };
-    MonacoLanguages.prototype.createCodeActionProvider = function (selector, provider) {
-        var _this = this;
-        return {
-            provideCodeActions: function (model, range, context, token) { return __awaiter(_this, void 0, void 0, function () {
-                var params, actions;
-                return __generator(this, function (_a) {
-                    switch (_a.label) {
-                        case 0:
-                            if (!this.matchModel(selector, monaco_languageclient_1.MonacoModelIdentifier.fromModel(model))) {
-                                return [2 /*return*/, undefined];
-                            }
-                            params = this.m2p.asCodeActionParams(model, range, context);
-                            return [4 /*yield*/, provider.provideCodeActions(params, token)];
-                        case 1:
-                            actions = _a.sent();
-                            if (!actions) {
-                                return [2 /*return*/, undefined];
-                            }
-                            return [2 /*return*/, this.p2m.asCodeActionList(actions)];
-                    }
-                });
-            }); }
-        };
+    DebugConsoleSession.prototype.execute = function (value) {
+        return __awaiter(this, void 0, void 0, function () {
+            var expression;
+            var _this = this;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        expression = new debug_console_items_1.ExpressionItem(value, function () { return _this.manager.currentSession; });
+                        this.items.push(expression);
+                        return [4 /*yield*/, expression.evaluate()];
+                    case 1:
+                        _a.sent();
+                        this.fireDidChange();
+                        return [2 /*return*/];
+                }
+            });
+        });
     };
-    MonacoLanguages.prototype.createCodeLensProvider = function (selector, provider) {
-        var _this = this;
-        return {
-            provideCodeLenses: function (model, token) { return __awaiter(_this, void 0, void 0, function () {
-                var params, lenses;
-                return __generator(this, function (_a) {
-                    switch (_a.label) {
-                        case 0:
-                            if (!this.matchModel(selector, monaco_languageclient_1.MonacoModelIdentifier.fromModel(model))) {
-                                return [2 /*return*/, undefined];
-                            }
-                            params = this.m2p.asCodeLensParams(model);
-                            return [4 /*yield*/, provider.provideCodeLenses(params, token)];
-                        case 1:
-                            lenses = _a.sent();
-                            if (!lenses) {
-                                return [2 /*return*/, undefined];
-                            }
-                            return [2 /*return*/, this.p2m.asCodeLensList(lenses)];
-                    }
-                });
-            }); },
-            resolveCodeLens: provider.resolveCodeLens ? function (model, codeLens, token) { return __awaiter(_this, void 0, void 0, function () {
-                var protocolCodeLens, result, resolvedCodeLens;
-                return __generator(this, function (_a) {
-                    switch (_a.label) {
-                        case 0:
-                            if (!this.matchModel(selector, monaco_languageclient_1.MonacoModelIdentifier.fromModel(model))) {
-                                return [2 /*return*/, codeLens];
-                            }
-                            protocolCodeLens = this.m2p.asCodeLens(codeLens);
-                            return [4 /*yield*/, provider.resolveCodeLens(protocolCodeLens, token)];
-                        case 1:
-                            result = _a.sent();
-                            if (result) {
-                                resolvedCodeLens = this.p2m.asCodeLens(result);
-                                Object.assign(codeLens, resolvedCodeLens);
-                            }
-                            return [2 /*return*/, codeLens];
-                    }
-                });
-            }); } : (function (_, codeLens, __) { return codeLens; })
-        };
+    DebugConsoleSession.prototype.clear = function () {
+        this.items = [];
+        this.fireDidChange();
     };
-    MonacoLanguages = __decorate([
-        inversify_1.injectable(),
-        __param(0, inversify_1.inject(monaco_languageclient_1.ProtocolToMonacoConverter)),
-        __param(1, inversify_1.inject(monaco_languageclient_1.MonacoToProtocolConverter)),
-        __param(2, inversify_1.inject(problem_manager_1.ProblemManager)),
-        __metadata("design:paramtypes", [monaco_languageclient_1.ProtocolToMonacoConverter,
-            monaco_languageclient_1.MonacoToProtocolConverter,
-            problem_manager_1.ProblemManager])
-    ], MonacoLanguages);
-    return MonacoLanguages;
-}(monaco_languageclient_1.MonacoLanguages));
-exports.MonacoLanguages = MonacoLanguages;
+    DebugConsoleSession.prototype.append = function (value) {
+        if (!value) {
+            return;
+        }
+        var lastItem = this.items.slice(-1)[0];
+        if (lastItem instanceof ansi_console_item_1.AnsiConsoleItem && lastItem.content === this.uncompletedItemContent) {
+            this.items.pop();
+            this.uncompletedItemContent += value;
+        }
+        else {
+            this.uncompletedItemContent = value;
+        }
+        this.items.push(new ansi_console_item_1.AnsiConsoleItem(this.uncompletedItemContent, severity_1.Severity.Info));
+        this.fireDidChange();
+    };
+    DebugConsoleSession.prototype.appendLine = function (value) {
+        this.items.push(new ansi_console_item_1.AnsiConsoleItem(value, severity_1.Severity.Info));
+        this.fireDidChange();
+    };
+    DebugConsoleSession.prototype.logOutput = function (session, event) {
+        return __awaiter(this, void 0, void 0, function () {
+            var body, category, variablesReference, severity, items, _a, _b, line;
+            var _c, e_1, _d;
+            return __generator(this, function (_e) {
+                switch (_e.label) {
+                    case 0:
+                        body = event.body;
+                        category = body.category, variablesReference = body.variablesReference;
+                        if (category === 'telemetry') {
+                            console.debug("telemetry/" + event.body.output, event.body.data);
+                            return [2 /*return*/];
+                        }
+                        severity = category === 'stderr' ? severity_1.Severity.Error : event.body.category === 'console' ? severity_1.Severity.Warning : severity_1.Severity.Info;
+                        if (!variablesReference) return [3 /*break*/, 2];
+                        return [4 /*yield*/, new debug_console_items_1.ExpressionContainer({ session: function () { return session; }, variablesReference: variablesReference }).getElements()];
+                    case 1:
+                        items = _e.sent();
+                        (_c = this.items).push.apply(_c, __spread(items));
+                        return [3 /*break*/, 3];
+                    case 2:
+                        if (typeof body.output === 'string') {
+                            try {
+                                for (_a = __values(body.output.split('\n')), _b = _a.next(); !_b.done; _b = _a.next()) {
+                                    line = _b.value;
+                                    this.items.push(new ansi_console_item_1.AnsiConsoleItem(line, severity));
+                                }
+                            }
+                            catch (e_1_1) { e_1 = { error: e_1_1 }; }
+                            finally {
+                                try {
+                                    if (_b && !_b.done && (_d = _a.return)) _d.call(_a);
+                                }
+                                finally { if (e_1) throw e_1.error; }
+                            }
+                        }
+                        _e.label = 3;
+                    case 3:
+                        this.fireDidChange();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    var DebugConsoleSession_1;
+    DebugConsoleSession.uri = new uri_1.default().withScheme('debugconsole');
+    __decorate([
+        inversify_1.inject(debug_session_manager_1.DebugSessionManager),
+        __metadata("design:type", debug_session_manager_1.DebugSessionManager)
+    ], DebugConsoleSession.prototype, "manager", void 0);
+    __decorate([
+        inversify_1.inject(browser_1.Languages),
+        __metadata("design:type", Object)
+    ], DebugConsoleSession.prototype, "languages", void 0);
+    __decorate([
+        inversify_1.inject(browser_1.Workspace),
+        __metadata("design:type", Object)
+    ], DebugConsoleSession.prototype, "workspace", void 0);
+    __decorate([
+        inversify_1.postConstruct(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", void 0)
+    ], DebugConsoleSession.prototype, "init", null);
+    DebugConsoleSession = DebugConsoleSession_1 = __decorate([
+        inversify_1.injectable()
+    ], DebugConsoleSession);
+    return DebugConsoleSession;
+}(console_session_1.ConsoleSession));
+exports.DebugConsoleSession = DebugConsoleSession;
 
 
 /***/ }),
 
-/***/ "./node_modules/@theia/monaco/lib/browser/monaco-snippet-suggest-provider.js":
-/*!***********************************************************************************!*\
-  !*** ./node_modules/@theia/monaco/lib/browser/monaco-snippet-suggest-provider.js ***!
-  \***********************************************************************************/
+/***/ "./node_modules/@theia/debug/lib/browser/debug-frontend-application-contribution.js":
+/*!******************************************************************************************!*\
+  !*** ./node_modules/@theia/debug/lib/browser/debug-frontend-application-contribution.js ***!
+  \******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 /********************************************************************************
- * Copyright (C) 2019 TypeFox and others.
+ * Copyright (C) 2018 TypeFox and others.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0 which is available at
@@ -750,10 +657,30 @@ exports.MonacoLanguages = MonacoLanguages;
  *
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -799,17 +726,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-var __values = (this && this.__values) || function(o) {
-    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
-    if (m) return m.call(o);
-    if (o && typeof o.length === "number") return {
-        next: function () {
-            if (o && i >= o.length) o = void 0;
-            return { value: o && o[i++], done: !o };
-        }
-    };
-    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
-};
 var __read = (this && this.__read) || function (o, n) {
     var m = typeof Symbol === "function" && o[Symbol.iterator];
     if (!m) return o;
@@ -830,1098 +746,1459 @@ var __spread = (this && this.__spread) || function () {
     for (var ar = [], i = 0; i < arguments.length; i++) ar = ar.concat(__read(arguments[i]));
     return ar;
 };
+var __values = (this && this.__values) || function(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+    if (m) return m.call(o);
+    if (o && typeof o.length === "number") return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.MonacoSnippetSuggestion = exports.JsonSerializedSnippet = exports.MonacoSnippetSuggestProvider = void 0;
-var jsoncparser = __webpack_require__(/*! jsonc-parser */ "./node_modules/jsonc-parser/lib/esm/main.js");
+exports.DebugFrontendApplicationContribution = exports.DebugBreakpointWidgetCommands = exports.DebugEditorContextCommands = exports.DebugSessionContextCommands = exports.DebugThreadContextCommands = exports.DebugCommands = exports.DebugMenus = void 0;
+var browser_1 = __webpack_require__(/*! @theia/core/lib/browser */ "./node_modules/@theia/core/lib/browser/index.js");
 var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
-var disposable_1 = __webpack_require__(/*! @theia/core/lib/common/disposable */ "./node_modules/@theia/core/lib/common/disposable.js");
-var common_1 = __webpack_require__(/*! @theia/filesystem/lib/common */ "./node_modules/@theia/filesystem/lib/common/index.js");
-var browser_1 = __webpack_require__(/*! @theia/languages/lib/browser */ "./node_modules/@theia/languages/lib/browser/index.js");
-var MonacoSnippetSuggestProvider = /** @class */ (function () {
-    function MonacoSnippetSuggestProvider() {
-        this.snippets = new Map();
-        this.pendingSnippets = new Map();
+var theming_1 = __webpack_require__(/*! @theia/core/lib/browser/theming */ "./node_modules/@theia/core/lib/browser/theming.js");
+var common_1 = __webpack_require__(/*! @theia/core/lib/common */ "./node_modules/@theia/core/lib/common/index.js");
+var browser_2 = __webpack_require__(/*! @theia/editor/lib/browser */ "./node_modules/@theia/editor/lib/browser/index.js");
+var debug_session_manager_1 = __webpack_require__(/*! ./debug-session-manager */ "./node_modules/@theia/debug/lib/browser/debug-session-manager.js");
+var debug_widget_1 = __webpack_require__(/*! ./view/debug-widget */ "./node_modules/@theia/debug/lib/browser/view/debug-widget.js");
+var breakpoint_marker_1 = __webpack_require__(/*! ./breakpoint/breakpoint-marker */ "./node_modules/@theia/debug/lib/browser/breakpoint/breakpoint-marker.js");
+var breakpoint_manager_1 = __webpack_require__(/*! ./breakpoint/breakpoint-manager */ "./node_modules/@theia/debug/lib/browser/breakpoint/breakpoint-manager.js");
+var debug_configuration_manager_1 = __webpack_require__(/*! ./debug-configuration-manager */ "./node_modules/@theia/debug/lib/browser/debug-configuration-manager.js");
+var debug_session_1 = __webpack_require__(/*! ./debug-session */ "./node_modules/@theia/debug/lib/browser/debug-session.js");
+var debug_breakpoints_widget_1 = __webpack_require__(/*! ./view/debug-breakpoints-widget */ "./node_modules/@theia/debug/lib/browser/view/debug-breakpoints-widget.js");
+var debug_source_breakpoint_1 = __webpack_require__(/*! ./model/debug-source-breakpoint */ "./node_modules/@theia/debug/lib/browser/model/debug-source-breakpoint.js");
+var debug_threads_widget_1 = __webpack_require__(/*! ./view/debug-threads-widget */ "./node_modules/@theia/debug/lib/browser/view/debug-threads-widget.js");
+var debug_thread_1 = __webpack_require__(/*! ./model/debug-thread */ "./node_modules/@theia/debug/lib/browser/model/debug-thread.js");
+var debug_stack_frames_widget_1 = __webpack_require__(/*! ./view/debug-stack-frames-widget */ "./node_modules/@theia/debug/lib/browser/view/debug-stack-frames-widget.js");
+var debug_stack_frame_1 = __webpack_require__(/*! ./model/debug-stack-frame */ "./node_modules/@theia/debug/lib/browser/model/debug-stack-frame.js");
+var debug_variables_widget_1 = __webpack_require__(/*! ./view/debug-variables-widget */ "./node_modules/@theia/debug/lib/browser/view/debug-variables-widget.js");
+var debug_console_items_1 = __webpack_require__(/*! ./console/debug-console-items */ "./node_modules/@theia/debug/lib/browser/console/debug-console-items.js");
+var debug_session_widget_1 = __webpack_require__(/*! ./view/debug-session-widget */ "./node_modules/@theia/debug/lib/browser/view/debug-session-widget.js");
+var debug_keybinding_contexts_1 = __webpack_require__(/*! ./debug-keybinding-contexts */ "./node_modules/@theia/debug/lib/browser/debug-keybinding-contexts.js");
+var debug_editor_model_1 = __webpack_require__(/*! ./editor/debug-editor-model */ "./node_modules/@theia/debug/lib/browser/editor/debug-editor-model.js");
+var debug_editor_service_1 = __webpack_require__(/*! ./editor/debug-editor-service */ "./node_modules/@theia/debug/lib/browser/editor/debug-editor-service.js");
+var debug_console_contribution_1 = __webpack_require__(/*! ./console/debug-console-contribution */ "./node_modules/@theia/debug/lib/browser/console/debug-console-contribution.js");
+var debug_service_1 = __webpack_require__(/*! ../common/debug-service */ "./node_modules/@theia/debug/lib/common/debug-service.js");
+var debug_schema_updater_1 = __webpack_require__(/*! ./debug-schema-updater */ "./node_modules/@theia/debug/lib/browser/debug-schema-updater.js");
+var debug_preferences_1 = __webpack_require__(/*! ./debug-preferences */ "./node_modules/@theia/debug/lib/browser/debug-preferences.js");
+var debug_watch_widget_1 = __webpack_require__(/*! ./view/debug-watch-widget */ "./node_modules/@theia/debug/lib/browser/view/debug-watch-widget.js");
+var debug_watch_expression_1 = __webpack_require__(/*! ./view/debug-watch-expression */ "./node_modules/@theia/debug/lib/browser/view/debug-watch-expression.js");
+var debug_watch_manager_1 = __webpack_require__(/*! ./debug-watch-manager */ "./node_modules/@theia/debug/lib/browser/debug-watch-manager.js");
+var debug_function_breakpoint_1 = __webpack_require__(/*! ./model/debug-function-breakpoint */ "./node_modules/@theia/debug/lib/browser/model/debug-function-breakpoint.js");
+var debug_breakpoint_1 = __webpack_require__(/*! ./model/debug-breakpoint */ "./node_modules/@theia/debug/lib/browser/model/debug-breakpoint.js");
+var DebugMenus;
+(function (DebugMenus) {
+    DebugMenus.DEBUG = __spread(common_1.MAIN_MENU_BAR, ['6_debug']);
+    DebugMenus.DEBUG_CONTROLS = __spread(DebugMenus.DEBUG, ['a_controls']);
+    DebugMenus.DEBUG_CONFIGURATION = __spread(DebugMenus.DEBUG, ['b_configuration']);
+    DebugMenus.DEBUG_THREADS = __spread(DebugMenus.DEBUG, ['c_threads']);
+    DebugMenus.DEBUG_SESSIONS = __spread(DebugMenus.DEBUG, ['d_sessions']);
+    DebugMenus.DEBUG_BREAKPOINT = __spread(DebugMenus.DEBUG, ['e_breakpoint']);
+    DebugMenus.DEBUG_NEW_BREAKPOINT = __spread(DebugMenus.DEBUG_BREAKPOINT, ['a_new_breakpoint']);
+    DebugMenus.DEBUG_BREAKPOINTS = __spread(DebugMenus.DEBUG, ['f_breakpoints']);
+})(DebugMenus = exports.DebugMenus || (exports.DebugMenus = {}));
+var DebugCommands;
+(function (DebugCommands) {
+    var DEBUG_CATEGORY = 'Debug';
+    DebugCommands.START = {
+        id: 'workbench.action.debug.start',
+        category: DEBUG_CATEGORY,
+        label: 'Start Debugging',
+        iconClass: 'fa fa-play'
+    };
+    DebugCommands.START_NO_DEBUG = {
+        id: 'workbench.action.debug.run',
+        label: 'Debug: Start Without Debugging'
+    };
+    DebugCommands.STOP = {
+        id: 'workbench.action.debug.stop',
+        category: DEBUG_CATEGORY,
+        label: 'Stop Debugging',
+        iconClass: 'fa fa-stop'
+    };
+    DebugCommands.RESTART = {
+        id: 'workbench.action.debug.restart',
+        category: DEBUG_CATEGORY,
+        label: 'Restart Debugging',
+    };
+    DebugCommands.OPEN_CONFIGURATIONS = {
+        id: 'debug.configurations.open',
+        label: 'Debug: Open Configurations'
+    };
+    DebugCommands.ADD_CONFIGURATION = {
+        id: 'debug.configurations.add',
+        label: 'Debug: Add Configuration...'
+    };
+    DebugCommands.STEP_OVER = {
+        id: 'workbench.action.debug.stepOver',
+        category: DEBUG_CATEGORY,
+        label: 'Step Over',
+        iconClass: 'fa fa-arrow-right'
+    };
+    DebugCommands.STEP_INTO = {
+        id: 'workbench.action.debug.stepInto',
+        category: DEBUG_CATEGORY,
+        label: 'Step Into',
+        iconClass: 'fa fa-arrow-down'
+    };
+    DebugCommands.STEP_OUT = {
+        id: 'workbench.action.debug.stepOut',
+        category: DEBUG_CATEGORY,
+        label: 'Step Out',
+        iconClass: 'fa fa-arrow-up'
+    };
+    DebugCommands.CONTINUE = {
+        id: 'workbench.action.debug.continue',
+        category: DEBUG_CATEGORY,
+        label: 'Continue',
+        iconClass: 'fa fa-play-circle'
+    };
+    DebugCommands.PAUSE = {
+        id: 'workbench.action.debug.pause',
+        category: DEBUG_CATEGORY,
+        label: 'Pause',
+        iconClass: 'fa fa-pause'
+    };
+    DebugCommands.CONTINUE_ALL = {
+        id: 'debug.thread.continue.all',
+        category: DEBUG_CATEGORY,
+        label: 'Continue All',
+        iconClass: 'fa fa-play-circle'
+    };
+    DebugCommands.PAUSE_ALL = {
+        id: 'debug.thread.pause.all',
+        category: DEBUG_CATEGORY,
+        label: 'Pause All',
+        iconClass: 'fa fa-pause'
+    };
+    DebugCommands.TOGGLE_BREAKPOINT = {
+        id: 'editor.debug.action.toggleBreakpoint',
+        category: DEBUG_CATEGORY,
+        label: 'Toggle Breakpoint',
+    };
+    DebugCommands.INLINE_BREAKPOINT = {
+        id: 'editor.debug.action.inlineBreakpoint',
+        category: DEBUG_CATEGORY,
+        label: 'Inline Breakpoint',
+    };
+    DebugCommands.ADD_CONDITIONAL_BREAKPOINT = {
+        id: 'debug.breakpoint.add.conditional',
+        category: DEBUG_CATEGORY,
+        label: 'Add Conditional Breakpoint...',
+    };
+    DebugCommands.ADD_LOGPOINT = {
+        id: 'debug.breakpoint.add.logpoint',
+        category: DEBUG_CATEGORY,
+        label: 'Add Logpoint...',
+    };
+    DebugCommands.ADD_FUNCTION_BREAKPOINT = {
+        id: 'debug.breakpoint.add.function',
+        category: DEBUG_CATEGORY,
+        label: 'Add Function Breakpoint...',
+    };
+    DebugCommands.ENABLE_ALL_BREAKPOINTS = {
+        id: 'debug.breakpoint.enableAll',
+        category: DEBUG_CATEGORY,
+        label: 'Enable All Breakpoints',
+    };
+    DebugCommands.DISABLE_ALL_BREAKPOINTS = {
+        id: 'debug.breakpoint.disableAll',
+        category: DEBUG_CATEGORY,
+        label: 'Disable All Breakpoints',
+    };
+    DebugCommands.EDIT_BREAKPOINT = {
+        id: 'debug.breakpoint.edit',
+        category: DEBUG_CATEGORY,
+        label: 'Edit Breakpoint...',
+    };
+    DebugCommands.EDIT_LOGPOINT = {
+        id: 'debug.logpoint.edit',
+        category: DEBUG_CATEGORY,
+        label: 'Edit Logpoint...',
+    };
+    DebugCommands.REMOVE_BREAKPOINT = {
+        id: 'debug.breakpoint.remove',
+        category: DEBUG_CATEGORY,
+        label: 'Remove Breakpoint',
+    };
+    DebugCommands.REMOVE_LOGPOINT = {
+        id: 'debug.logpoint.remove',
+        category: DEBUG_CATEGORY,
+        label: 'Remove Logpoint',
+    };
+    DebugCommands.REMOVE_ALL_BREAKPOINTS = {
+        id: 'debug.breakpoint.removeAll',
+        category: DEBUG_CATEGORY,
+        label: 'Remove All Breakpoints',
+    };
+    DebugCommands.TOGGLE_BREAKPOINTS_ENABLED = {
+        id: 'debug.breakpoint.toggleEnabled'
+    };
+    DebugCommands.SHOW_HOVER = {
+        id: 'editor.debug.action.showDebugHover',
+        label: 'Debug: Show Hover'
+    };
+    DebugCommands.RESTART_FRAME = {
+        id: 'debug.frame.restart',
+        category: DEBUG_CATEGORY,
+        label: 'Restart Frame',
+    };
+    DebugCommands.COPY_CALL_STACK = {
+        id: 'debug.callStack.copy',
+        category: DEBUG_CATEGORY,
+        label: 'Copy Call Stack',
+    };
+    DebugCommands.SET_VARIABLE_VALUE = {
+        id: 'debug.variable.setValue',
+        category: DEBUG_CATEGORY,
+        label: 'Set Value',
+    };
+    DebugCommands.COPY_VARIABLE_VALUE = {
+        id: 'debug.variable.copyValue',
+        category: DEBUG_CATEGORY,
+        label: 'Copy Value',
+    };
+    DebugCommands.COPY_VARIABLE_AS_EXPRESSION = {
+        id: 'debug.variable.copyAsExpression',
+        category: DEBUG_CATEGORY,
+        label: 'Copy As Expression',
+    };
+    DebugCommands.WATCH_VARIABLE = {
+        id: 'debug.variable.watch',
+        category: DEBUG_CATEGORY,
+        label: 'Add to Watch',
+    };
+    DebugCommands.ADD_WATCH_EXPRESSION = {
+        id: 'debug.watch.addExpression',
+        category: DEBUG_CATEGORY,
+        label: 'Add Watch Expression'
+    };
+    DebugCommands.EDIT_WATCH_EXPRESSION = {
+        id: 'debug.watch.editExpression',
+        category: DEBUG_CATEGORY,
+        label: 'Edit Watch Expression'
+    };
+    DebugCommands.COPY_WATCH_EXPRESSION_VALUE = {
+        id: 'debug.watch.copyExpressionValue',
+        category: DEBUG_CATEGORY,
+        label: 'Copy Watch Expression Value'
+    };
+    DebugCommands.REMOVE_WATCH_EXPRESSION = {
+        id: 'debug.watch.removeExpression',
+        category: DEBUG_CATEGORY,
+        label: 'Remove Watch Expression'
+    };
+    DebugCommands.COLLAPSE_ALL_WATCH_EXPRESSIONS = {
+        id: 'debug.watch.collapseAllExpressions',
+        category: DEBUG_CATEGORY,
+        label: 'Collapse All Watch Expressions'
+    };
+    DebugCommands.REMOVE_ALL_WATCH_EXPRESSIONS = {
+        id: 'debug.watch.removeAllExpressions',
+        category: DEBUG_CATEGORY,
+        label: 'Remove All Watch Expressions'
+    };
+})(DebugCommands = exports.DebugCommands || (exports.DebugCommands = {}));
+var DebugThreadContextCommands;
+(function (DebugThreadContextCommands) {
+    DebugThreadContextCommands.STEP_OVER = {
+        id: 'debug.thread.context.context.next'
+    };
+    DebugThreadContextCommands.STEP_INTO = {
+        id: 'debug.thread.context.stepin'
+    };
+    DebugThreadContextCommands.STEP_OUT = {
+        id: 'debug.thread.context.stepout'
+    };
+    DebugThreadContextCommands.CONTINUE = {
+        id: 'debug.thread.context.continue'
+    };
+    DebugThreadContextCommands.PAUSE = {
+        id: 'debug.thread.context.pause'
+    };
+    DebugThreadContextCommands.TERMINATE = {
+        id: 'debug.thread.context.terminate'
+    };
+})(DebugThreadContextCommands = exports.DebugThreadContextCommands || (exports.DebugThreadContextCommands = {}));
+var DebugSessionContextCommands;
+(function (DebugSessionContextCommands) {
+    DebugSessionContextCommands.STOP = {
+        id: 'debug.session.context.stop'
+    };
+    DebugSessionContextCommands.RESTART = {
+        id: 'debug.session.context.restart'
+    };
+    DebugSessionContextCommands.PAUSE_ALL = {
+        id: 'debug.session.context.pauseAll'
+    };
+    DebugSessionContextCommands.CONTINUE_ALL = {
+        id: 'debug.session.context.continueAll'
+    };
+    DebugSessionContextCommands.REVEAL = {
+        id: 'debug.session.context.reveal'
+    };
+    DebugSessionContextCommands.OPEN_LEFT = {
+        id: 'debug.session.context.openLeft'
+    };
+    DebugSessionContextCommands.OPEN_RIGHT = {
+        id: 'debug.session.context.openRight'
+    };
+    DebugSessionContextCommands.OPEN_BOTTOM = {
+        id: 'debug.session.context.openBottom'
+    };
+})(DebugSessionContextCommands = exports.DebugSessionContextCommands || (exports.DebugSessionContextCommands = {}));
+var DebugEditorContextCommands;
+(function (DebugEditorContextCommands) {
+    DebugEditorContextCommands.ADD_BREAKPOINT = {
+        id: 'debug.editor.context.addBreakpoint'
+    };
+    DebugEditorContextCommands.ADD_CONDITIONAL_BREAKPOINT = {
+        id: 'debug.editor.context.addBreakpoint.conditional'
+    };
+    DebugEditorContextCommands.ADD_LOGPOINT = {
+        id: 'debug.editor.context.add.logpoint'
+    };
+    DebugEditorContextCommands.REMOVE_BREAKPOINT = {
+        id: 'debug.editor.context.removeBreakpoint'
+    };
+    DebugEditorContextCommands.EDIT_BREAKPOINT = {
+        id: 'debug.editor.context.edit.breakpoint'
+    };
+    DebugEditorContextCommands.ENABLE_BREAKPOINT = {
+        id: 'debug.editor.context.enableBreakpoint'
+    };
+    DebugEditorContextCommands.DISABLE_BREAKPOINT = {
+        id: 'debug.editor.context.disableBreakpoint'
+    };
+    DebugEditorContextCommands.REMOVE_LOGPOINT = {
+        id: 'debug.editor.context.logpoint.remove'
+    };
+    DebugEditorContextCommands.EDIT_LOGPOINT = {
+        id: 'debug.editor.context.logpoint.edit'
+    };
+    DebugEditorContextCommands.ENABLE_LOGPOINT = {
+        id: 'debug.editor.context.logpoint.enable'
+    };
+    DebugEditorContextCommands.DISABLE_LOGPOINT = {
+        id: 'debug.editor.context.logpoint.disable'
+    };
+})(DebugEditorContextCommands = exports.DebugEditorContextCommands || (exports.DebugEditorContextCommands = {}));
+var DebugBreakpointWidgetCommands;
+(function (DebugBreakpointWidgetCommands) {
+    DebugBreakpointWidgetCommands.ACCEPT = {
+        id: 'debug.breakpointWidget.accept'
+    };
+    DebugBreakpointWidgetCommands.CLOSE = {
+        id: 'debug.breakpointWidget.close'
+    };
+})(DebugBreakpointWidgetCommands = exports.DebugBreakpointWidgetCommands || (exports.DebugBreakpointWidgetCommands = {}));
+var darkCss = __webpack_require__(/*! ../../src/browser/style/debug-dark.useable.css */ "./node_modules/@theia/debug/src/browser/style/debug-dark.useable.css");
+var lightCss = __webpack_require__(/*! ../../src/browser/style/debug-bright.useable.css */ "./node_modules/@theia/debug/src/browser/style/debug-bright.useable.css");
+function updateTheme() {
+    var themeType = theming_1.ThemeService.get().getCurrentTheme().type;
+    if (themeType === 'dark' || themeType === 'hc') {
+        lightCss.unuse();
+        darkCss.use();
     }
-    MonacoSnippetSuggestProvider_1 = MonacoSnippetSuggestProvider;
-    MonacoSnippetSuggestProvider.prototype.provideCompletionItems = function (model, position, context) {
+    else if (themeType === 'light') {
+        darkCss.unuse();
+        lightCss.use();
+    }
+}
+updateTheme();
+theming_1.ThemeService.get().onThemeChange(function () { return updateTheme(); });
+var DebugFrontendApplicationContribution = /** @class */ (function (_super) {
+    __extends(DebugFrontendApplicationContribution, _super);
+    function DebugFrontendApplicationContribution() {
+        var _this = _super.call(this, {
+            widgetId: debug_widget_1.DebugWidget.ID,
+            widgetName: debug_widget_1.DebugWidget.LABEL,
+            defaultWidgetOptions: {
+                area: 'left',
+                rank: 400
+            },
+            toggleCommandId: 'debug:toggle',
+            toggleKeybinding: 'ctrlcmd+shift+d'
+        }) || this;
+        _this.firstSessionStart = true;
+        _this.sessionWidgets = new Map();
+        return _this;
+    }
+    DebugFrontendApplicationContribution.prototype.initializeLayout = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var languageId, snippetsForLanguage, pos, lineOffsets, linePrefixLow, endsInWhitespace, word, availableSnippets, suggestions, _loop_1, lineOffsets_1, lineOffsets_1_1, start;
-            var e_1, _a;
-            var _this = this;
-            return __generator(this, function (_b) {
-                switch (_b.label) {
-                    case 0:
-                        // copied and modified from https://github.com/microsoft/vscode/blob/master/src/vs/workbench/contrib/snippets/browser/snippetCompletionProvider.ts
-                        if (position.column >= MonacoSnippetSuggestProvider_1._maxPrefix) {
-                            return [2 /*return*/, undefined];
-                        }
-                        if (context.triggerKind === browser_1.CompletionTriggerKind.TriggerCharacter && context.triggerCharacter === ' ') {
-                            // no snippets when suggestions have been triggered by space
-                            return [2 /*return*/, undefined];
-                        }
-                        languageId = model.getModeId();
-                        return [4 /*yield*/, this.loadSnippets(languageId)];
-                    case 1:
-                        _b.sent();
-                        snippetsForLanguage = this.snippets.get(languageId) || [];
-                        pos = { lineNumber: position.lineNumber, column: 1 };
-                        lineOffsets = [];
-                        linePrefixLow = model.getLineContent(position.lineNumber).substr(0, position.column - 1).toLowerCase();
-                        endsInWhitespace = linePrefixLow.match(/\s$/);
-                        while (pos.column < position.column) {
-                            word = model.getWordAtPosition(pos);
-                            if (word) {
-                                // at a word
-                                lineOffsets.push(word.startColumn - 1);
-                                pos.column = word.endColumn + 1;
-                                if (word.endColumn - 1 < linePrefixLow.length && !/\s/.test(linePrefixLow[word.endColumn - 1])) {
-                                    lineOffsets.push(word.endColumn - 1);
-                                }
-                            }
-                            else if (!/\s/.test(linePrefixLow[pos.column - 1])) {
-                                // at a none-whitespace character
-                                lineOffsets.push(pos.column - 1);
-                                pos.column += 1;
-                            }
-                            else {
-                                // always advance!
-                                pos.column += 1;
-                            }
-                        }
-                        availableSnippets = new Set();
-                        snippetsForLanguage.forEach(availableSnippets.add, availableSnippets);
-                        suggestions = [];
-                        _loop_1 = function (start) {
-                            availableSnippets.forEach(function (snippet) {
-                                if (_this.isPatternInWord(linePrefixLow, start, linePrefixLow.length, snippet.prefix.toLowerCase(), 0, snippet.prefix.length)) {
-                                    suggestions.push(new MonacoSnippetSuggestion(snippet, monaco.Range.fromPositions(position.delta(0, -(linePrefixLow.length - start)), position)));
-                                    availableSnippets.delete(snippet);
-                                }
-                            });
-                        };
-                        try {
-                            for (lineOffsets_1 = __values(lineOffsets), lineOffsets_1_1 = lineOffsets_1.next(); !lineOffsets_1_1.done; lineOffsets_1_1 = lineOffsets_1.next()) {
-                                start = lineOffsets_1_1.value;
-                                _loop_1(start);
-                            }
-                        }
-                        catch (e_1_1) { e_1 = { error: e_1_1 }; }
-                        finally {
-                            try {
-                                if (lineOffsets_1_1 && !lineOffsets_1_1.done && (_a = lineOffsets_1.return)) _a.call(lineOffsets_1);
-                            }
-                            finally { if (e_1) throw e_1.error; }
-                        }
-                        if (endsInWhitespace || lineOffsets.length === 0) {
-                            // add remaining snippets when the current prefix ends in whitespace or when no
-                            // interesting positions have been found
-                            availableSnippets.forEach(function (snippet) {
-                                suggestions.push(new MonacoSnippetSuggestion(snippet, monaco.Range.fromPositions(position)));
-                            });
-                        }
-                        // disambiguate suggestions with same labels
-                        suggestions.sort(MonacoSnippetSuggestion.compareByLabel);
-                        return [2 /*return*/, { suggestions: suggestions }];
-                }
-            });
-        });
-    };
-    MonacoSnippetSuggestProvider.prototype.resolveCompletionItem = function (textModel, position, item) {
-        return item instanceof MonacoSnippetSuggestion ? item.resolve() : item;
-    };
-    MonacoSnippetSuggestProvider.prototype.loadSnippets = function (scope) {
-        return __awaiter(this, void 0, void 0, function () {
-            var pending;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0:
-                        pending = [];
-                        pending.push.apply(pending, __spread((this.pendingSnippets.get(scope) || [])));
-                        pending.push.apply(pending, __spread((this.pendingSnippets.get('*') || [])));
-                        if (!pending.length) return [3 /*break*/, 2];
-                        return [4 /*yield*/, Promise.all(pending)];
+                    case 0: return [4 /*yield*/, this.openView()];
                     case 1:
                         _a.sent();
-                        _a.label = 2;
-                    case 2: return [2 /*return*/];
+                        return [2 /*return*/];
                 }
             });
         });
     };
-    MonacoSnippetSuggestProvider.prototype.fromURI = function (uri, options) {
-        var e_2, _a;
-        var toDispose = new disposable_1.DisposableCollection(disposable_1.Disposable.create(function () { }));
-        var pending = this.loadURI(uri, options, toDispose);
-        var language = options.language;
-        var scopes = Array.isArray(language) ? language : !!language ? [language] : ['*'];
-        var _loop_2 = function (scope) {
-            var pendingSnippets = this_1.pendingSnippets.get(scope) || [];
-            pendingSnippets.push(pending);
-            this_1.pendingSnippets.set(scope, pendingSnippets);
-            toDispose.push(disposable_1.Disposable.create(function () {
-                var index = pendingSnippets.indexOf(pending);
-                if (index !== -1) {
-                    pendingSnippets.splice(index, 1);
-                }
-            }));
-        };
-        var this_1 = this;
-        try {
-            for (var scopes_1 = __values(scopes), scopes_1_1 = scopes_1.next(); !scopes_1_1.done; scopes_1_1 = scopes_1.next()) {
-                var scope = scopes_1_1.value;
-                _loop_2(scope);
-            }
-        }
-        catch (e_2_1) { e_2 = { error: e_2_1 }; }
-        finally {
-            try {
-                if (scopes_1_1 && !scopes_1_1.done && (_a = scopes_1.return)) _a.call(scopes_1);
-            }
-            finally { if (e_2) throw e_2.error; }
-        }
-        return toDispose;
-    };
-    /**
-     * should NOT throw to prevent load errors on suggest
-     */
-    MonacoSnippetSuggestProvider.prototype.loadURI = function (uri, options, toDispose) {
+    DebugFrontendApplicationContribution.prototype.onStart = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var content, snippets, e_3;
+            var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        _a.trys.push([0, 2, , 3]);
-                        return [4 /*yield*/, this.filesystem.resolveContent(uri.toString(), { encoding: 'utf-8' })];
+                        this.manager.onDidCreateDebugSession(function (session) { return _this.openSession(session, { reveal: false }); });
+                        this.manager.onDidStartDebugSession(function (session) {
+                            var noDebug = session.configuration.noDebug;
+                            var openDebug = session.configuration.openDebug || _this.preference['debug.openDebug'];
+                            var internalConsoleOptions = session.configuration.internalConsoleOptions || _this.preference['debug.internalConsoleOptions'];
+                            if (internalConsoleOptions === 'openOnSessionStart' ||
+                                (internalConsoleOptions === 'openOnFirstSessionStart' && _this.firstSessionStart)) {
+                                _this.console.openView({
+                                    reveal: true
+                                });
+                            }
+                            if (!noDebug && (openDebug === 'openOnSessionStart' || (openDebug === 'openOnFirstSessionStart' && _this.firstSessionStart))) {
+                                _this.openSession(session);
+                            }
+                            _this.firstSessionStart = false;
+                        });
+                        this.manager.onDidStopDebugSession(function (session) {
+                            var openDebug = session.configuration.openDebug;
+                            if (openDebug === 'openOnDebugBreak') {
+                                _this.openSession(session);
+                            }
+                        });
+                        this.updateStatusBar();
+                        this.manager.onDidChange(function () { return _this.updateStatusBar(); });
+                        this.schemaUpdater.update();
+                        this.configurations.load();
+                        return [4 /*yield*/, this.breakpointManager.load()];
                     case 1:
-                        content = (_a.sent()).content;
-                        if (toDispose.disposed) {
-                            return [2 /*return*/];
-                        }
-                        snippets = content && jsoncparser.parse(content, undefined, { disallowComments: false });
-                        toDispose.push(this.fromJSON(snippets, options));
-                        return [3 /*break*/, 3];
+                        _a.sent();
+                        return [4 /*yield*/, this.watchManager.load()];
                     case 2:
-                        e_3 = _a.sent();
-                        if (!common_1.FileSystemError.FileNotFound.is(e_3) && !common_1.FileSystemError.FileIsDirectory.is(e_3)) {
-                            console.error(e_3);
-                        }
-                        return [3 /*break*/, 3];
-                    case 3: return [2 /*return*/];
+                        _a.sent();
+                        return [2 /*return*/];
                 }
             });
         });
     };
-    MonacoSnippetSuggestProvider.prototype.fromJSON = function (snippets, _a) {
-        var _this = this;
-        var language = _a.language, source = _a.source;
-        var toDispose = new disposable_1.DisposableCollection();
-        this.parseSnippets(snippets, function (name, snippet) {
-            var e_4, _a;
-            var prefix = snippet.prefix, body = snippet.body, description = snippet.description;
-            var parsedBody = Array.isArray(body) ? body.join('\n') : body;
-            var parsedPrefixes = Array.isArray(prefix) ? prefix : [prefix];
-            if (typeof parsedBody !== 'string') {
-                return;
-            }
-            var scopes = [];
-            if (language) {
-                if (Array.isArray(language)) {
-                    scopes.push.apply(scopes, __spread(language));
-                }
-                else {
-                    scopes.push(language);
-                }
-            }
-            else if (typeof snippet.scope === 'string') {
-                try {
-                    for (var _b = __values(snippet.scope.split(',')), _c = _b.next(); !_c.done; _c = _b.next()) {
-                        var rawScope = _c.value;
-                        var scope = rawScope.trim();
-                        if (scope) {
-                            scopes.push(scope);
-                        }
-                    }
-                }
-                catch (e_4_1) { e_4 = { error: e_4_1 }; }
-                finally {
-                    try {
-                        if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
-                    }
-                    finally { if (e_4) throw e_4.error; }
-                }
-            }
-            parsedPrefixes.forEach(function (parsedPrefix) { return toDispose.push(_this.push({
-                scopes: scopes,
-                name: name,
-                prefix: parsedPrefix,
-                description: description,
-                body: parsedBody,
-                source: source
-            })); });
-        });
-        return toDispose;
+    DebugFrontendApplicationContribution.prototype.onStop = function () {
+        this.configurations.save();
+        this.breakpointManager.save();
+        this.watchManager.save();
     };
-    MonacoSnippetSuggestProvider.prototype.parseSnippets = function (snippets, accept) {
-        if (typeof snippets === 'object') {
-            // eslint-disable-next-line guard-for-in
-            for (var name_1 in snippets) {
-                var scopeOrTemplate = snippets[name_1];
-                if (JsonSerializedSnippet.is(scopeOrTemplate)) {
-                    accept(name_1, scopeOrTemplate);
-                }
-                else {
-                    this.parseSnippets(scopeOrTemplate, accept);
-                }
+    DebugFrontendApplicationContribution.prototype.registerMenus = function (menus) {
+        _super.prototype.registerMenus.call(this, menus);
+        var registerMenuActions = function (menuPath) {
+            var e_1, _a;
+            var commands = [];
+            for (var _i = 1; _i < arguments.length; _i++) {
+                commands[_i - 1] = arguments[_i];
             }
-        }
-    };
-    MonacoSnippetSuggestProvider.prototype.push = function () {
-        var e_5, _a;
-        var snippets = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            snippets[_i] = arguments[_i];
-        }
-        var toDispose = new disposable_1.DisposableCollection();
-        var _loop_3 = function (snippet) {
-            var e_6, _a;
-            var _loop_4 = function (scope) {
-                var languageSnippets = this_2.snippets.get(scope) || [];
-                languageSnippets.push(snippet);
-                this_2.snippets.set(scope, languageSnippets);
-                toDispose.push(disposable_1.Disposable.create(function () {
-                    var index = languageSnippets.indexOf(snippet);
-                    if (index !== -1) {
-                        languageSnippets.splice(index, 1);
-                    }
-                }));
-            };
             try {
-                for (var _b = (e_6 = void 0, __values(snippet.scopes)), _c = _b.next(); !_c.done; _c = _b.next()) {
-                    var scope = _c.value;
-                    _loop_4(scope);
+                for (var _b = __values(commands.entries()), _c = _b.next(); !_c.done; _c = _b.next()) {
+                    var _d = __read(_c.value, 2), index = _d[0], command = _d[1];
+                    menus.registerMenuAction(menuPath, {
+                        commandId: command.id,
+                        label: command.label && command.label.startsWith('Debug: ') && command.label.slice('Debug: '.length) || command.label,
+                        icon: command.iconClass,
+                        order: String.fromCharCode('a'.charCodeAt(0) + index)
+                    });
                 }
             }
-            catch (e_6_1) { e_6 = { error: e_6_1 }; }
+            catch (e_1_1) { e_1 = { error: e_1_1 }; }
             finally {
                 try {
                     if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
                 }
-                finally { if (e_6) throw e_6.error; }
+                finally { if (e_1) throw e_1.error; }
             }
         };
-        var this_2 = this;
-        try {
-            for (var snippets_1 = __values(snippets), snippets_1_1 = snippets_1.next(); !snippets_1_1.done; snippets_1_1 = snippets_1.next()) {
-                var snippet = snippets_1_1.value;
-                _loop_3(snippet);
-            }
-        }
-        catch (e_5_1) { e_5 = { error: e_5_1 }; }
-        finally {
-            try {
-                if (snippets_1_1 && !snippets_1_1.done && (_a = snippets_1.return)) _a.call(snippets_1);
-            }
-            finally { if (e_5) throw e_5.error; }
-        }
-        return toDispose;
+        menus.registerSubmenu(DebugMenus.DEBUG, 'Debug');
+        registerMenuActions(DebugMenus.DEBUG_CONTROLS, DebugCommands.START, DebugCommands.START_NO_DEBUG, DebugCommands.STOP, DebugCommands.RESTART);
+        registerMenuActions(DebugMenus.DEBUG_CONFIGURATION, DebugCommands.OPEN_CONFIGURATIONS, DebugCommands.ADD_CONFIGURATION);
+        registerMenuActions(DebugMenus.DEBUG_THREADS, DebugCommands.CONTINUE, DebugCommands.STEP_OVER, DebugCommands.STEP_INTO, DebugCommands.STEP_OUT, DebugCommands.PAUSE);
+        registerMenuActions(DebugMenus.DEBUG_SESSIONS, DebugCommands.CONTINUE_ALL, DebugCommands.PAUSE_ALL);
+        registerMenuActions(DebugMenus.DEBUG_BREAKPOINT, DebugCommands.TOGGLE_BREAKPOINT);
+        menus.registerSubmenu(DebugMenus.DEBUG_NEW_BREAKPOINT, 'New Breakpoint');
+        registerMenuActions(DebugMenus.DEBUG_NEW_BREAKPOINT, DebugCommands.ADD_CONDITIONAL_BREAKPOINT, DebugCommands.INLINE_BREAKPOINT, DebugCommands.ADD_FUNCTION_BREAKPOINT, DebugCommands.ADD_LOGPOINT);
+        registerMenuActions(DebugMenus.DEBUG_BREAKPOINTS, DebugCommands.ENABLE_ALL_BREAKPOINTS, DebugCommands.DISABLE_ALL_BREAKPOINTS, DebugCommands.REMOVE_ALL_BREAKPOINTS);
+        registerMenuActions(debug_threads_widget_1.DebugThreadsWidget.CONTROL_MENU, __assign(__assign({}, DebugCommands.PAUSE), DebugThreadContextCommands.PAUSE), __assign(__assign({}, DebugCommands.CONTINUE), DebugThreadContextCommands.CONTINUE), __assign(__assign({}, DebugCommands.STEP_OVER), DebugThreadContextCommands.STEP_OVER), __assign(__assign({}, DebugCommands.STEP_INTO), DebugThreadContextCommands.STEP_INTO), __assign(__assign({}, DebugCommands.STEP_OUT), DebugThreadContextCommands.STEP_OUT), __assign(__assign({}, DebugCommands.PAUSE_ALL), DebugSessionContextCommands.PAUSE_ALL), __assign(__assign({}, DebugCommands.CONTINUE_ALL), DebugSessionContextCommands.CONTINUE_ALL));
+        registerMenuActions(debug_threads_widget_1.DebugThreadsWidget.TERMINATE_MENU, __assign(__assign(__assign({}, DebugCommands.RESTART), DebugSessionContextCommands.RESTART), { label: 'Restart' }), __assign(__assign(__assign({}, DebugCommands.STOP), DebugSessionContextCommands.STOP), { label: 'Stop' }), __assign(__assign({}, DebugThreadContextCommands.TERMINATE), { label: 'Terminate Thread' }));
+        registerMenuActions(debug_threads_widget_1.DebugThreadsWidget.OPEN_MENU, __assign(__assign({}, DebugSessionContextCommands.REVEAL), { label: 'Reveal' }), __assign(__assign({}, DebugSessionContextCommands.OPEN_LEFT), { label: 'Open Left' }), __assign(__assign({}, DebugSessionContextCommands.OPEN_RIGHT), { label: 'Open Right' }), __assign(__assign({}, DebugSessionContextCommands.OPEN_BOTTOM), { label: 'Open Bottom' }));
+        registerMenuActions(debug_stack_frames_widget_1.DebugStackFramesWidget.CONTEXT_MENU, DebugCommands.RESTART_FRAME, DebugCommands.COPY_CALL_STACK);
+        registerMenuActions(debug_variables_widget_1.DebugVariablesWidget.EDIT_MENU, DebugCommands.SET_VARIABLE_VALUE, DebugCommands.COPY_VARIABLE_VALUE, DebugCommands.COPY_VARIABLE_AS_EXPRESSION);
+        registerMenuActions(debug_variables_widget_1.DebugVariablesWidget.WATCH_MENU, DebugCommands.WATCH_VARIABLE);
+        registerMenuActions(debug_watch_widget_1.DebugWatchWidget.EDIT_MENU, __assign(__assign({}, DebugCommands.EDIT_WATCH_EXPRESSION), { label: 'Edit Expression' }), __assign(__assign({}, DebugCommands.COPY_WATCH_EXPRESSION_VALUE), { label: 'Copy Value' }));
+        registerMenuActions(debug_watch_widget_1.DebugWatchWidget.REMOVE_MENU, __assign(__assign({}, DebugCommands.REMOVE_WATCH_EXPRESSION), { label: 'Remove Expression' }), __assign(__assign({}, DebugCommands.REMOVE_ALL_WATCH_EXPRESSIONS), { label: 'Remove All Expressions' }));
+        registerMenuActions(debug_breakpoints_widget_1.DebugBreakpointsWidget.EDIT_MENU, DebugCommands.EDIT_BREAKPOINT, DebugCommands.EDIT_LOGPOINT);
+        registerMenuActions(debug_breakpoints_widget_1.DebugBreakpointsWidget.REMOVE_MENU, DebugCommands.REMOVE_BREAKPOINT, DebugCommands.REMOVE_LOGPOINT, DebugCommands.REMOVE_ALL_BREAKPOINTS);
+        registerMenuActions(debug_breakpoints_widget_1.DebugBreakpointsWidget.ENABLE_MENU, DebugCommands.ENABLE_ALL_BREAKPOINTS, DebugCommands.DISABLE_ALL_BREAKPOINTS);
+        registerMenuActions(debug_editor_model_1.DebugEditorModel.CONTEXT_MENU, __assign(__assign({}, DebugEditorContextCommands.ADD_BREAKPOINT), { label: 'Add Breakpoint' }), __assign(__assign({}, DebugEditorContextCommands.ADD_CONDITIONAL_BREAKPOINT), { label: DebugCommands.ADD_CONDITIONAL_BREAKPOINT.label }), __assign(__assign({}, DebugEditorContextCommands.ADD_LOGPOINT), { label: DebugCommands.ADD_LOGPOINT.label }), __assign(__assign({}, DebugEditorContextCommands.REMOVE_BREAKPOINT), { label: DebugCommands.REMOVE_BREAKPOINT.label }), __assign(__assign({}, DebugEditorContextCommands.EDIT_BREAKPOINT), { label: DebugCommands.EDIT_BREAKPOINT.label }), __assign(__assign({}, DebugEditorContextCommands.ENABLE_BREAKPOINT), { label: 'Enable Breakpoint' }), __assign(__assign({}, DebugEditorContextCommands.DISABLE_BREAKPOINT), { label: 'Disable Breakpoint' }), __assign(__assign({}, DebugEditorContextCommands.REMOVE_LOGPOINT), { label: DebugCommands.REMOVE_LOGPOINT.label }), __assign(__assign({}, DebugEditorContextCommands.EDIT_LOGPOINT), { label: DebugCommands.EDIT_LOGPOINT.label }), __assign(__assign({}, DebugEditorContextCommands.ENABLE_LOGPOINT), { label: 'Enable Logpoint' }), __assign(__assign({}, DebugEditorContextCommands.DISABLE_LOGPOINT), { label: 'Disable Logpoint' }));
     };
-    MonacoSnippetSuggestProvider.prototype.isPatternInWord = function (patternLow, patternPos, patternLen, wordLow, wordPos, wordLen) {
-        while (patternPos < patternLen && wordPos < wordLen) {
-            if (patternLow[patternPos] === wordLow[wordPos]) {
-                patternPos += 1;
-            }
-            wordPos += 1;
-        }
-        return patternPos === patternLen; // pattern must be exhausted
-    };
-    var MonacoSnippetSuggestProvider_1;
-    MonacoSnippetSuggestProvider._maxPrefix = 10000;
-    __decorate([
-        inversify_1.inject(common_1.FileSystem),
-        __metadata("design:type", Object)
-    ], MonacoSnippetSuggestProvider.prototype, "filesystem", void 0);
-    MonacoSnippetSuggestProvider = MonacoSnippetSuggestProvider_1 = __decorate([
-        inversify_1.injectable()
-    ], MonacoSnippetSuggestProvider);
-    return MonacoSnippetSuggestProvider;
-}());
-exports.MonacoSnippetSuggestProvider = MonacoSnippetSuggestProvider;
-var JsonSerializedSnippet;
-(function (JsonSerializedSnippet) {
-    function is(obj) {
-        return typeof obj === 'object' && 'body' in obj && 'prefix' in obj;
-    }
-    JsonSerializedSnippet.is = is;
-})(JsonSerializedSnippet = exports.JsonSerializedSnippet || (exports.JsonSerializedSnippet = {}));
-var MonacoSnippetSuggestion = /** @class */ (function () {
-    function MonacoSnippetSuggestion(snippet, range) {
-        this.snippet = snippet;
-        this.range = range;
-        this.noAutoAccept = true;
-        this.kind = monaco.languages.CompletionItemKind.Snippet;
-        this.insertTextRules = monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet;
-        this.resolved = false;
-        this.label = snippet.prefix;
-        this.detail = (snippet.description || snippet.name) + " (" + snippet.source + ")";
-        this.insertText = snippet.body;
-        this.sortText = "z-" + snippet.prefix;
-        this.range = range;
-    }
-    MonacoSnippetSuggestion.prototype.resolve = function () {
-        if (!this.resolved) {
-            var codeSnippet = new monaco.snippetParser.SnippetParser().parse(this.snippet.body).toString();
-            this.documentation = { value: '```\n' + codeSnippet + '```' };
-            this.resolved = true;
-        }
-        return this;
-    };
-    MonacoSnippetSuggestion.compareByLabel = function (a, b) {
-        return a.label > b.label ? 1 : a.label < b.label ? -1 : 0;
-    };
-    return MonacoSnippetSuggestion;
-}());
-exports.MonacoSnippetSuggestion = MonacoSnippetSuggestion;
-
-
-/***/ }),
-
-/***/ "./node_modules/@theia/monaco/lib/browser/monaco-theming-service.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/@theia/monaco/lib/browser/monaco-theming-service.js ***!
-  \**************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/********************************************************************************
- * Copyright (C) 2019 TypeFox and others.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Eclipse Public License v. 2.0 which is available at
- * http://www.eclipse.org/legal/epl-2.0.
- *
- * This Source Code may also be made available under the following Secondary
- * Licenses when the conditions for such availability set forth in the Eclipse
- * Public License v. 2.0 are satisfied: GNU General Public License, version 2
- * with the GNU Classpath Exception which is available at
- * https://www.gnu.org/software/classpath/license.html.
- *
- * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
- ********************************************************************************/
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-var __values = (this && this.__values) || function(o) {
-    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
-    if (m) return m.call(o);
-    if (o && typeof o.length === "number") return {
-        next: function () {
-            if (o && i >= o.length) o = void 0;
-            return { value: o && o[i++], done: !o };
-        }
-    };
-    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.MonacoThemingService = void 0;
-/* eslint-disable @typescript-eslint/no-explicit-any */
-var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
-var jsoncparser = __webpack_require__(/*! jsonc-parser */ "./node_modules/jsonc-parser/lib/esm/main.js");
-var plistparser = __webpack_require__(/*! fast-plist */ "./node_modules/fast-plist/release/src/main.js");
-var theming_1 = __webpack_require__(/*! @theia/core/lib/browser/theming */ "./node_modules/@theia/core/lib/browser/theming.js");
-var uri_1 = __webpack_require__(/*! @theia/core/lib/common/uri */ "./node_modules/@theia/core/lib/common/uri.js");
-var disposable_1 = __webpack_require__(/*! @theia/core/lib/common/disposable */ "./node_modules/@theia/core/lib/common/disposable.js");
-var filesystem_1 = __webpack_require__(/*! @theia/filesystem/lib/common/filesystem */ "./node_modules/@theia/filesystem/lib/common/filesystem.js");
-var monaco_theme_registry_1 = __webpack_require__(/*! ./textmate/monaco-theme-registry */ "./node_modules/@theia/monaco/lib/browser/textmate/monaco-theme-registry.js");
-var monaco_indexed_db_1 = __webpack_require__(/*! ./monaco-indexed-db */ "./node_modules/@theia/monaco/lib/browser/monaco-indexed-db.js");
-var MonacoThemingService = /** @class */ (function () {
-    function MonacoThemingService() {
-    }
-    MonacoThemingService_1 = MonacoThemingService;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    MonacoThemingService.prototype.register = function (theme, pending) {
-        if (pending === void 0) { pending = {}; }
-        var toDispose = new disposable_1.DisposableCollection(disposable_1.Disposable.create(function () { }));
-        this.doRegister(theme, pending, toDispose);
-        return toDispose;
-    };
-    MonacoThemingService.prototype.doRegister = function (theme, pending, toDispose) {
-        return __awaiter(this, void 0, void 0, function () {
-            var includes, json, label, id, description, uiTheme, e_1;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        _a.trys.push([0, 2, , 3]);
-                        includes = {};
-                        return [4 /*yield*/, this.loadTheme(theme.uri, includes, pending, toDispose)];
-                    case 1:
-                        json = _a.sent();
-                        if (toDispose.disposed) {
-                            return [2 /*return*/];
-                        }
-                        label = theme.label || new uri_1.default(theme.uri).path.base;
-                        id = theme.id, description = theme.description, uiTheme = theme.uiTheme;
-                        toDispose.push(MonacoThemingService_1.register({ id: id, label: label, description: description, uiTheme: uiTheme, json: json, includes: includes }));
-                        return [3 /*break*/, 3];
-                    case 2:
-                        e_1 = _a.sent();
-                        console.error('Failed to load theme from ' + theme.uri, e_1);
-                        return [3 /*break*/, 3];
-                    case 3: return [2 /*return*/];
-                }
-            });
-        });
-    };
-    MonacoThemingService.prototype.loadTheme = function (uri, includes, pending, toDispose) {
-        return __awaiter(this, void 0, void 0, function () {
-            var content, themeUri, value, json, value, _a, _b;
-            return __generator(this, function (_c) {
-                switch (_c.label) {
-                    case 0: return [4 /*yield*/, this.fileSystem.resolveContent(uri)];
-                    case 1:
-                        content = (_c.sent()).content;
-                        if (toDispose.disposed) {
-                            return [2 /*return*/];
-                        }
-                        themeUri = new uri_1.default(uri);
-                        if (themeUri.path.ext !== '.json') {
-                            value = plistparser.parse(content);
-                            if (value && 'settings' in value && Array.isArray(value.settings)) {
-                                return [2 /*return*/, { tokenColors: value.settings }];
-                            }
-                            throw new Error("Problem parsing tmTheme file: " + uri + ". 'settings' is not array.");
-                        }
-                        json = jsoncparser.parse(content, undefined, { disallowComments: false });
-                        if (!('tokenColors' in json && typeof json.tokenColors === 'string')) return [3 /*break*/, 3];
-                        return [4 /*yield*/, this.doLoadTheme(themeUri, json.tokenColors, includes, pending, toDispose)];
-                    case 2:
-                        value = _c.sent();
-                        if (toDispose.disposed) {
-                            return [2 /*return*/];
-                        }
-                        json.tokenColors = value.tokenColors;
-                        _c.label = 3;
-                    case 3:
-                        if (!json.include) return [3 /*break*/, 5];
-                        _a = includes;
-                        _b = json.include;
-                        return [4 /*yield*/, this.doLoadTheme(themeUri, json.include, includes, pending, toDispose)];
-                    case 4:
-                        _a[_b] = _c.sent();
-                        if (toDispose.disposed) {
-                            return [2 /*return*/];
-                        }
-                        _c.label = 5;
-                    case 5: return [2 /*return*/, json];
-                }
-            });
-        });
-    };
-    /* eslint-disable @typescript-eslint/no-explicit-any */
-    MonacoThemingService.prototype.doLoadTheme = function (themeUri, referencedPath, includes, pending, toDispose) {
-        var referencedUri = themeUri.parent.resolve(referencedPath).toString();
-        if (!pending[referencedUri]) {
-            pending[referencedUri] = this.loadTheme(referencedUri, includes, pending, toDispose);
-        }
-        return pending[referencedUri];
-    };
-    /* eslint-enable @typescript-eslint/no-explicit-any */
-    MonacoThemingService.init = function () {
+    DebugFrontendApplicationContribution.prototype.registerCommands = function (registry) {
         var _this = this;
-        this.updateBodyUiTheme();
-        theming_1.ThemeService.get().onThemeChange(function () { return _this.updateBodyUiTheme(); });
-        this.restore();
-    };
-    MonacoThemingService.register = function (theme) {
-        var uiTheme = theme.uiTheme || 'vs-dark';
-        var label = theme.label, description = theme.description, json = theme.json, includes = theme.includes;
-        var id = theme.id || label;
-        var cssSelector = MonacoThemingService_1.toCssSelector(id);
-        var data = monaco_theme_registry_1.MonacoThemeRegistry.SINGLETON.register(json, includes, cssSelector, uiTheme);
-        return MonacoThemingService_1.doRegister({ id: id, label: label, description: description, uiTheme: uiTheme, data: data });
-    };
-    MonacoThemingService.updateBodyUiTheme = function () {
-        this.toUpdateUiTheme.dispose();
-        var type = theming_1.ThemeService.get().getCurrentTheme().type;
-        var uiTheme = type === 'hc' ? 'hc-black' : type === 'light' ? 'vs' : 'vs-dark';
-        document.body.classList.add(uiTheme);
-        this.toUpdateUiTheme.push(disposable_1.Disposable.create(function () { return document.body.classList.remove(uiTheme); }));
-    };
-    MonacoThemingService.doRegister = function (state) {
-        var id = state.id, label = state.label, description = state.description, uiTheme = state.uiTheme, data = state.data;
-        var type = uiTheme === 'vs' ? 'light' : uiTheme === 'vs-dark' ? 'dark' : 'hc';
-        var builtInTheme = uiTheme === 'vs' ? theming_1.BuiltinThemeProvider.lightCss : theming_1.BuiltinThemeProvider.darkCss;
-        return new disposable_1.DisposableCollection(theming_1.ThemeService.get().register({
-            type: type,
-            id: id,
-            label: label,
-            description: description,
-            editorTheme: data.name,
-            activate: function () {
-                builtInTheme.use();
-            },
-            deactivate: function () {
-                builtInTheme.unuse();
-            }
-        }), monaco_indexed_db_1.putTheme(state));
-    };
-    MonacoThemingService.restore = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            var themes, themes_1, themes_1_1, state, e_2;
-            var e_3, _a;
-            return __generator(this, function (_b) {
-                switch (_b.label) {
-                    case 0:
-                        _b.trys.push([0, 2, , 3]);
-                        return [4 /*yield*/, monaco_indexed_db_1.getThemes()];
-                    case 1:
-                        themes = _b.sent();
-                        try {
-                            for (themes_1 = __values(themes), themes_1_1 = themes_1.next(); !themes_1_1.done; themes_1_1 = themes_1.next()) {
-                                state = themes_1_1.value;
-                                monaco_theme_registry_1.MonacoThemeRegistry.SINGLETON.setTheme(state.data.name, state.data);
-                                MonacoThemingService_1.doRegister(state);
-                            }
-                        }
-                        catch (e_3_1) { e_3 = { error: e_3_1 }; }
-                        finally {
-                            try {
-                                if (themes_1_1 && !themes_1_1.done && (_a = themes_1.return)) _a.call(themes_1);
-                            }
-                            finally { if (e_3) throw e_3.error; }
-                        }
-                        return [3 /*break*/, 3];
-                    case 2:
-                        e_2 = _b.sent();
-                        console.error('Failed to restore monaco themes', e_2);
-                        return [3 /*break*/, 3];
-                    case 3: return [2 /*return*/];
-                }
-            });
+        _super.prototype.registerCommands.call(this, registry);
+        registry.registerCommand(DebugCommands.START, {
+            execute: function (config) { return _this.start(false, config); }
         });
-    };
-    /* remove all characters that are not allowed in css */
-    MonacoThemingService.toCssSelector = function (str) {
-        str = str.replace(/[^\-a-zA-Z0-9]/g, '-');
-        if (str.charAt(0).match(/[0-9\-]/)) {
-            str = '-' + str;
-        }
-        return str;
-    };
-    var MonacoThemingService_1;
-    MonacoThemingService.toUpdateUiTheme = new disposable_1.DisposableCollection();
-    __decorate([
-        inversify_1.inject(filesystem_1.FileSystem),
-        __metadata("design:type", Object)
-    ], MonacoThemingService.prototype, "fileSystem", void 0);
-    MonacoThemingService = MonacoThemingService_1 = __decorate([
-        inversify_1.injectable()
-    ], MonacoThemingService);
-    return MonacoThemingService;
-}());
-exports.MonacoThemingService = MonacoThemingService;
-
-
-/***/ }),
-
-/***/ "./node_modules/@theia/monaco/lib/browser/textmate/monaco-textmate-frontend-bindings.js":
-/*!**********************************************************************************************!*\
-  !*** ./node_modules/@theia/monaco/lib/browser/textmate/monaco-textmate-frontend-bindings.js ***!
-  \**********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/********************************************************************************
- * Copyright (C) 2018 Ericsson and others.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Eclipse Public License v. 2.0 which is available at
- * http://www.eclipse.org/legal/epl-2.0.
- *
- * This Source Code may also be made available under the following Secondary
- * Licenses when the conditions for such availability set forth in the Eclipse
- * Public License v. 2.0 are satisfied: GNU General Public License, version 2
- * with the GNU Classpath Exception which is available at
- * https://www.gnu.org/software/classpath/license.html.
- *
- * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
- ********************************************************************************/
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.OnigasmLib = exports.fetchOnigasm = void 0;
-var browser_1 = __webpack_require__(/*! @theia/core/lib/browser */ "./node_modules/@theia/core/lib/browser/index.js");
-var core_1 = __webpack_require__(/*! @theia/core */ "./node_modules/@theia/core/lib/common/index.js");
-var textmate_registry_1 = __webpack_require__(/*! ./textmate-registry */ "./node_modules/@theia/monaco/lib/browser/textmate/textmate-registry.js");
-var textmate_contribution_1 = __webpack_require__(/*! ./textmate-contribution */ "./node_modules/@theia/monaco/lib/browser/textmate/textmate-contribution.js");
-var monaco_textmate_service_1 = __webpack_require__(/*! ./monaco-textmate-service */ "./node_modules/@theia/monaco/lib/browser/textmate/monaco-textmate-service.js");
-var monaco_theme_registry_1 = __webpack_require__(/*! ./monaco-theme-registry */ "./node_modules/@theia/monaco/lib/browser/textmate/monaco-theme-registry.js");
-var onigasm_1 = __webpack_require__(/*! onigasm */ "./node_modules/onigasm/lib/index.js");
-function fetchOnigasm() {
-    return new Promise(function (resolve, reject) {
-        var onigasmPath = __webpack_require__(/*! onigasm/lib/onigasm.wasm */ "./node_modules/onigasm/lib/onigasm.wasm"); // webpack doing its magic here
-        var request = new XMLHttpRequest();
-        request.onreadystatechange = function () {
-            if (this.readyState === XMLHttpRequest.DONE) {
-                if (this.status === 200) {
-                    resolve(this.response);
-                }
-                else {
-                    reject(new Error('Could not fetch onigasm'));
-                }
-            }
-        };
-        request.open('GET', onigasmPath, true);
-        request.responseType = 'arraybuffer';
-        request.send();
-    });
-}
-exports.fetchOnigasm = fetchOnigasm;
-var OnigasmLib = /** @class */ (function () {
-    function OnigasmLib() {
-    }
-    OnigasmLib.prototype.createOnigScanner = function (sources) {
-        return new onigasm_1.OnigScanner(sources);
-    };
-    OnigasmLib.prototype.createOnigString = function (sources) {
-        return new onigasm_1.OnigString(sources);
-    };
-    return OnigasmLib;
-}());
-exports.OnigasmLib = OnigasmLib;
-exports.default = (function (bind, unbind, isBound, rebind) {
-    var onigasmPromise = browser_1.isBasicWasmSupported ? fetchOnigasm().then(function (buffer) { return __awaiter(void 0, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0: return [4 /*yield*/, onigasm_1.loadWASM(buffer)];
-                case 1:
-                    _a.sent();
-                    return [2 /*return*/, new OnigasmLib()];
-            }
+        registry.registerCommand(DebugCommands.START_NO_DEBUG, {
+            execute: function (config) { return _this.start(true, config); }
         });
-    }); }) : Promise.reject(new Error('wasm not supported'));
-    bind(monaco_textmate_service_1.OnigasmPromise).toConstantValue(onigasmPromise);
-    bind(monaco_textmate_service_1.MonacoTextmateService).toSelf().inSingletonScope();
-    bind(browser_1.FrontendApplicationContribution).toService(monaco_textmate_service_1.MonacoTextmateService);
-    core_1.bindContributionProvider(bind, textmate_contribution_1.LanguageGrammarDefinitionContribution);
-    bind(textmate_registry_1.TextmateRegistry).toSelf().inSingletonScope();
-    bind(monaco_theme_registry_1.MonacoThemeRegistry).toDynamicValue(function () { return monaco_theme_registry_1.MonacoThemeRegistry.SINGLETON; }).inSingletonScope();
-});
-
-
-/***/ }),
-
-/***/ "./node_modules/@theia/monaco/lib/browser/textmate/monaco-textmate-service.js":
-/*!************************************************************************************!*\
-  !*** ./node_modules/@theia/monaco/lib/browser/textmate/monaco-textmate-service.js ***!
-  \************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/********************************************************************************
- * Copyright (C) 2018 Redhat, Ericsson and others.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Eclipse Public License v. 2.0 which is available at
- * http://www.eclipse.org/legal/epl-2.0.
- *
- * This Source Code may also be made available under the following Secondary
- * Licenses when the conditions for such availability set forth in the Eclipse
- * Public License v. 2.0 are satisfied: GNU General Public License, version 2
- * with the GNU Classpath Exception which is available at
- * https://www.gnu.org/software/classpath/license.html.
- *
- * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
- ********************************************************************************/
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-var __values = (this && this.__values) || function(o) {
-    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
-    if (m) return m.call(o);
-    if (o && typeof o.length === "number") return {
-        next: function () {
-            if (o && i >= o.length) o = void 0;
-            return { value: o && o[i++], done: !o };
-        }
-    };
-    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.MonacoTextmateService = exports.OnigasmPromise = void 0;
-var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
-var vscode_textmate_1 = __webpack_require__(/*! vscode-textmate */ "./node_modules/vscode-textmate/release/main.js");
-var core_1 = __webpack_require__(/*! @theia/core */ "./node_modules/@theia/core/lib/common/index.js");
-var browser_1 = __webpack_require__(/*! @theia/core/lib/browser */ "./node_modules/@theia/core/lib/browser/index.js");
-var theming_1 = __webpack_require__(/*! @theia/core/lib/browser/theming */ "./node_modules/@theia/core/lib/browser/theming.js");
-var textmate_contribution_1 = __webpack_require__(/*! ./textmate-contribution */ "./node_modules/@theia/monaco/lib/browser/textmate/textmate-contribution.js");
-var textmate_tokenizer_1 = __webpack_require__(/*! ./textmate-tokenizer */ "./node_modules/@theia/monaco/lib/browser/textmate/textmate-tokenizer.js");
-var textmate_registry_1 = __webpack_require__(/*! ./textmate-registry */ "./node_modules/@theia/monaco/lib/browser/textmate/textmate-registry.js");
-var monaco_theme_registry_1 = __webpack_require__(/*! ./monaco-theme-registry */ "./node_modules/@theia/monaco/lib/browser/textmate/monaco-theme-registry.js");
-var editor_preferences_1 = __webpack_require__(/*! @theia/editor/lib/browser/editor-preferences */ "./node_modules/@theia/editor/lib/browser/editor-preferences.js");
-exports.OnigasmPromise = Symbol('OnigasmPromise');
-var MonacoTextmateService = /** @class */ (function () {
-    function MonacoTextmateService() {
-        this.tokenizerOption = {
-            lineLimit: 400
-        };
-        this._activatedLanguages = new Set();
-        this.toDisposeOnUpdateTheme = new core_1.DisposableCollection();
-    }
-    MonacoTextmateService.prototype.initialize = function () {
-        var e_1, _a, e_2, _b;
-        var _this = this;
-        if (!browser_1.isBasicWasmSupported) {
-            console.log('Textmate support deactivated because WebAssembly is not detected.');
-            return;
-        }
-        try {
-            for (var _c = __values(this.grammarProviders.getContributions()), _d = _c.next(); !_d.done; _d = _c.next()) {
-                var grammarProvider = _d.value;
-                try {
-                    grammarProvider.registerTextmateLanguage(this.textmateRegistry);
-                }
-                catch (err) {
-                    console.error(err);
-                }
-            }
-        }
-        catch (e_1_1) { e_1 = { error: e_1_1 }; }
-        finally {
-            try {
-                if (_d && !_d.done && (_a = _c.return)) _a.call(_c);
-            }
-            finally { if (e_1) throw e_1.error; }
-        }
-        this.grammarRegistry = new vscode_textmate_1.Registry({
-            getOnigLib: function () { return _this.onigasmPromise; },
-            theme: this.monacoThemeRegistry.getThemeData(this.currentEditorTheme),
-            loadGrammar: function (scopeName) { return __awaiter(_this, void 0, void 0, function () {
-                var provider, definition, rawGrammar;
-                return __generator(this, function (_a) {
-                    switch (_a.label) {
+        registry.registerCommand(DebugCommands.STOP, {
+            execute: function () { return _this.manager.currentSession && _this.manager.currentSession.terminate(); },
+            isEnabled: function () { return _this.manager.state !== debug_session_1.DebugState.Inactive; }
+        });
+        registry.registerCommand(DebugCommands.RESTART, {
+            execute: function () { return _this.manager.restart(); },
+            isEnabled: function () { return _this.manager.state !== debug_session_1.DebugState.Inactive; }
+        });
+        registry.registerCommand(DebugCommands.OPEN_CONFIGURATIONS, {
+            execute: function () { return _this.configurations.openConfiguration(); }
+        });
+        registry.registerCommand(DebugCommands.ADD_CONFIGURATION, {
+            execute: function () { return _this.configurations.addConfiguration(); }
+        });
+        registry.registerCommand(DebugCommands.STEP_OVER, {
+            execute: function () { return _this.manager.currentThread && _this.manager.currentThread.stepOver(); },
+            isEnabled: function () { return _this.manager.state === debug_session_1.DebugState.Stopped; }
+        });
+        registry.registerCommand(DebugCommands.STEP_INTO, {
+            execute: function () { return _this.manager.currentThread && _this.manager.currentThread.stepIn(); },
+            isEnabled: function () { return _this.manager.state === debug_session_1.DebugState.Stopped; }
+        });
+        registry.registerCommand(DebugCommands.STEP_OUT, {
+            execute: function () { return _this.manager.currentThread && _this.manager.currentThread.stepOut(); },
+            isEnabled: function () { return _this.manager.state === debug_session_1.DebugState.Stopped; }
+        });
+        registry.registerCommand(DebugCommands.CONTINUE, {
+            execute: function () { return _this.manager.currentThread && _this.manager.currentThread.continue(); },
+            isEnabled: function () { return _this.manager.state === debug_session_1.DebugState.Stopped; }
+        });
+        registry.registerCommand(DebugCommands.PAUSE, {
+            execute: function () { return _this.manager.currentThread && _this.manager.currentThread.pause(); },
+            isEnabled: function () { return _this.manager.state === debug_session_1.DebugState.Running; }
+        });
+        registry.registerCommand(DebugCommands.PAUSE_ALL, {
+            execute: function () { return _this.manager.currentSession && _this.manager.currentSession.pauseAll(); },
+            isEnabled: function () { return !!_this.manager.currentSession && !!_this.manager.currentSession.runningThreads.next().value; }
+        });
+        registry.registerCommand(DebugCommands.CONTINUE_ALL, {
+            execute: function () { return _this.manager.currentSession && _this.manager.currentSession.continueAll(); },
+            isEnabled: function () { return !!_this.manager.currentSession && !!_this.manager.currentSession.stoppedThreads.next().value; }
+        });
+        registry.registerCommand(DebugThreadContextCommands.STEP_OVER, {
+            execute: function () { return _this.selectedThread && _this.selectedThread.stepOver(); },
+            isEnabled: function () { return !!_this.selectedThread && _this.selectedThread.stopped; },
+            isVisible: function () { return !!_this.selectedThread; }
+        });
+        registry.registerCommand(DebugThreadContextCommands.STEP_INTO, {
+            execute: function () { return _this.selectedThread && _this.selectedThread.stepIn(); },
+            isEnabled: function () { return !!_this.selectedThread && _this.selectedThread.stopped; },
+            isVisible: function () { return !!_this.selectedThread; }
+        });
+        registry.registerCommand(DebugThreadContextCommands.STEP_OUT, {
+            execute: function () { return _this.selectedThread && _this.selectedThread.stepOut(); },
+            isEnabled: function () { return !!_this.selectedThread && _this.selectedThread.stopped; },
+            isVisible: function () { return !!_this.selectedThread; }
+        });
+        registry.registerCommand(DebugThreadContextCommands.CONTINUE, {
+            execute: function () { return _this.selectedThread && _this.selectedThread.continue(); },
+            isEnabled: function () { return !!_this.selectedThread && _this.selectedThread.stopped; },
+            isVisible: function () { return !!_this.selectedThread && _this.selectedThread.stopped; },
+        });
+        registry.registerCommand(DebugThreadContextCommands.PAUSE, {
+            execute: function () { return _this.selectedThread && _this.selectedThread.pause(); },
+            isEnabled: function () { return !!_this.selectedThread && !_this.selectedThread.stopped; },
+            isVisible: function () { return !!_this.selectedThread && !_this.selectedThread.stopped; },
+        });
+        registry.registerCommand(DebugThreadContextCommands.TERMINATE, {
+            execute: function () { return _this.selectedThread && _this.selectedThread.terminate(); },
+            isEnabled: function () { return !!_this.selectedThread && _this.selectedThread.supportsTerminate; },
+            isVisible: function () { return !!_this.selectedThread && _this.selectedThread.supportsTerminate; }
+        });
+        registry.registerCommand(DebugSessionContextCommands.STOP, {
+            execute: function () { return _this.selectedSession && _this.selectedSession.terminate(); },
+            isEnabled: function () { return !!_this.selectedSession && _this.selectedSession.state !== debug_session_1.DebugState.Inactive; },
+            isVisible: function () { return !_this.selectedThread; }
+        });
+        registry.registerCommand(DebugSessionContextCommands.RESTART, {
+            execute: function () { return _this.selectedSession && _this.manager.restart(_this.selectedSession); },
+            isEnabled: function () { return !!_this.selectedSession && _this.selectedSession.state !== debug_session_1.DebugState.Inactive; },
+            isVisible: function () { return !_this.selectedThread; }
+        });
+        registry.registerCommand(DebugSessionContextCommands.CONTINUE_ALL, {
+            execute: function () { return _this.selectedSession && _this.selectedSession.continueAll(); },
+            isEnabled: function () { return !!_this.selectedSession && !!_this.selectedSession.stoppedThreads.next().value; },
+            isVisible: function () { return !_this.selectedThread; }
+        });
+        registry.registerCommand(DebugSessionContextCommands.PAUSE_ALL, {
+            execute: function () { return _this.selectedSession && _this.selectedSession.pauseAll(); },
+            isEnabled: function () { return !!_this.selectedSession && !!_this.selectedSession.runningThreads.next().value; },
+            isVisible: function () { return !_this.selectedThread; }
+        });
+        registry.registerCommand(DebugSessionContextCommands.REVEAL, {
+            execute: function () { return _this.selectedSession && _this.revealSession(_this.selectedSession); },
+            isEnabled: function () { return _this.hasSessionWidget; },
+            isVisible: function () { return !_this.selectedThread && _this.hasSessionWidget; }
+        });
+        registry.registerCommand(DebugSessionContextCommands.OPEN_LEFT, {
+            execute: function () { return _this.selectedSession && _this.openSession(_this.selectedSession, {
+                debugViewLocation: 'left'
+            }); },
+            isEnabled: function () { return !_this.hasSessionWidget; },
+            isVisible: function () { return !_this.selectedThread && !_this.hasSessionWidget; }
+        });
+        registry.registerCommand(DebugSessionContextCommands.OPEN_RIGHT, {
+            execute: function () { return _this.selectedSession && _this.openSession(_this.selectedSession, {
+                debugViewLocation: 'right'
+            }); },
+            isEnabled: function () { return !_this.hasSessionWidget; },
+            isVisible: function () { return !_this.selectedThread && !_this.hasSessionWidget; }
+        });
+        registry.registerCommand(DebugSessionContextCommands.OPEN_BOTTOM, {
+            execute: function () { return _this.selectedSession && _this.openSession(_this.selectedSession, {
+                debugViewLocation: 'bottom'
+            }); },
+            isEnabled: function () { return !_this.hasSessionWidget; },
+            isVisible: function () { return !_this.selectedThread && !_this.hasSessionWidget; }
+        });
+        registry.registerCommand(DebugCommands.TOGGLE_BREAKPOINT, {
+            execute: function () { return _this.editors.toggleBreakpoint(); },
+            isEnabled: function () { return !!_this.editors.model; }
+        });
+        registry.registerCommand(DebugCommands.INLINE_BREAKPOINT, {
+            execute: function () { return _this.editors.addInlineBreakpoint(); },
+            isEnabled: function () { return !!_this.editors.model && !_this.editors.getInlineBreakpoint(); }
+        });
+        registry.registerCommand(DebugCommands.ADD_CONDITIONAL_BREAKPOINT, {
+            execute: function () { return _this.editors.addBreakpoint('condition'); },
+            isEnabled: function () { return !!_this.editors.model && !_this.editors.anyBreakpoint(); }
+        });
+        registry.registerCommand(DebugCommands.ADD_LOGPOINT, {
+            execute: function () { return _this.editors.addBreakpoint('logMessage'); },
+            isEnabled: function () { return !!_this.editors.model && !_this.editors.anyBreakpoint(); }
+        });
+        registry.registerCommand(DebugCommands.ADD_FUNCTION_BREAKPOINT, {
+            execute: function () { return __awaiter(_this, void 0, void 0, function () {
+                var _a, labelProvider, breakpointManager, editorManager, options;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
                         case 0:
-                            provider = this.textmateRegistry.getProvider(scopeName);
-                            if (!provider) return [3 /*break*/, 2];
-                            return [4 /*yield*/, provider.getGrammarDefinition()];
+                            _a = this, labelProvider = _a.labelProvider, breakpointManager = _a.breakpointManager, editorManager = _a.editorManager;
+                            options = { labelProvider: labelProvider, breakpoints: breakpointManager, editorManager: editorManager };
+                            return [4 /*yield*/, new debug_function_breakpoint_1.DebugFunctionBreakpoint(breakpoint_marker_1.FunctionBreakpoint.create({ name: '' }), options).open()];
                         case 1:
-                            definition = _a.sent();
-                            rawGrammar = void 0;
-                            if (typeof definition.content === 'string') {
-                                rawGrammar = vscode_textmate_1.parseRawGrammar(definition.content, definition.format === 'json' ? 'grammar.json' : 'grammar.plist');
-                            }
-                            else {
-                                rawGrammar = definition.content;
-                            }
-                            return [2 /*return*/, rawGrammar];
-                        case 2: return [2 /*return*/, undefined];
+                            _b.sent();
+                            return [2 /*return*/];
                     }
                 });
             }); },
-            getInjections: function (scopeName) {
-                var provider = _this.textmateRegistry.getProvider(scopeName);
-                if (provider && provider.getInjections) {
-                    return provider.getInjections(scopeName);
+            isEnabled: function (widget) { return !(widget instanceof browser_1.Widget) || widget instanceof debug_breakpoints_widget_1.DebugBreakpointsWidget; },
+            isVisible: function (widget) { return !(widget instanceof browser_1.Widget) || widget instanceof debug_breakpoints_widget_1.DebugBreakpointsWidget; }
+        });
+        registry.registerCommand(DebugCommands.ENABLE_ALL_BREAKPOINTS, {
+            execute: function () { return _this.breakpointManager.enableAllBreakpoints(true); },
+            isEnabled: function () { return _this.breakpointManager.hasBreakpoints(); }
+        });
+        registry.registerCommand(DebugCommands.DISABLE_ALL_BREAKPOINTS, {
+            execute: function () { return _this.breakpointManager.enableAllBreakpoints(false); },
+            isEnabled: function () { return _this.breakpointManager.hasBreakpoints(); }
+        });
+        registry.registerCommand(DebugCommands.EDIT_BREAKPOINT, {
+            execute: function () { return __awaiter(_this, void 0, void 0, function () {
+                var _a, selectedBreakpoint, selectedFunctionBreakpoint;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            _a = this, selectedBreakpoint = _a.selectedBreakpoint, selectedFunctionBreakpoint = _a.selectedFunctionBreakpoint;
+                            if (!selectedBreakpoint) return [3 /*break*/, 2];
+                            return [4 /*yield*/, this.editors.editBreakpoint(selectedBreakpoint)];
+                        case 1:
+                            _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2:
+                            if (!selectedFunctionBreakpoint) return [3 /*break*/, 4];
+                            return [4 /*yield*/, selectedFunctionBreakpoint.open()];
+                        case 3:
+                            _b.sent();
+                            _b.label = 4;
+                        case 4: return [2 /*return*/];
+                    }
+                });
+            }); },
+            isEnabled: function () { return !!_this.selectedBreakpoint || !!_this.selectedFunctionBreakpoint; },
+            isVisible: function () { return !!_this.selectedBreakpoint || !!_this.selectedFunctionBreakpoint; }
+        });
+        registry.registerCommand(DebugCommands.EDIT_LOGPOINT, {
+            execute: function () { return __awaiter(_this, void 0, void 0, function () {
+                var selectedLogpoint;
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0:
+                            selectedLogpoint = this.selectedLogpoint;
+                            if (!selectedLogpoint) return [3 /*break*/, 2];
+                            return [4 /*yield*/, this.editors.editBreakpoint(selectedLogpoint)];
+                        case 1:
+                            _a.sent();
+                            _a.label = 2;
+                        case 2: return [2 /*return*/];
+                    }
+                });
+            }); },
+            isEnabled: function () { return !!_this.selectedLogpoint; },
+            isVisible: function () { return !!_this.selectedLogpoint; }
+        });
+        registry.registerCommand(DebugCommands.REMOVE_BREAKPOINT, {
+            execute: function () {
+                var selectedBreakpoint = _this.selectedBreakpoint || _this.selectedFunctionBreakpoint;
+                if (selectedBreakpoint) {
+                    selectedBreakpoint.remove();
                 }
-                return [];
-            }
+            },
+            isEnabled: function () { return !!_this.selectedBreakpoint || !!_this.selectedFunctionBreakpoint; },
+            isVisible: function () { return !!_this.selectedBreakpoint || !!_this.selectedFunctionBreakpoint; },
         });
-        this.tokenizerOption.lineLimit = this.preferences['editor.maxTokenizationLineLength'];
-        this.preferences.onPreferenceChanged(function (e) {
-            if (e.preferenceName === 'editor.maxTokenizationLineLength') {
-                _this.tokenizerOption.lineLimit = _this.preferences['editor.maxTokenizationLineLength'];
-            }
+        registry.registerCommand(DebugCommands.REMOVE_LOGPOINT, {
+            execute: function () {
+                var selectedLogpoint = _this.selectedLogpoint;
+                if (selectedLogpoint) {
+                    selectedLogpoint.remove();
+                }
+            },
+            isEnabled: function () { return !!_this.selectedLogpoint; },
+            isVisible: function () { return !!_this.selectedLogpoint; }
         });
-        this.updateTheme();
-        this.themeService.onThemeChange(function () { return _this.updateTheme(); });
-        try {
-            for (var _e = __values(this.textmateRegistry.languages), _f = _e.next(); !_f.done; _f = _e.next()) {
-                var id = _f.value;
-                this.activateLanguage(id);
-            }
-        }
-        catch (e_2_1) { e_2 = { error: e_2_1 }; }
-        finally {
-            try {
-                if (_f && !_f.done && (_b = _e.return)) _b.call(_e);
-            }
-            finally { if (e_2) throw e_2.error; }
-        }
+        registry.registerCommand(DebugCommands.REMOVE_ALL_BREAKPOINTS, {
+            execute: function () { return _this.breakpointManager.removeBreakpoints(); },
+            isEnabled: function () { return _this.breakpointManager.hasBreakpoints(); },
+            isVisible: function (widget) { return !(widget instanceof browser_1.Widget) || (widget instanceof debug_breakpoints_widget_1.DebugBreakpointsWidget); }
+        });
+        registry.registerCommand(DebugCommands.TOGGLE_BREAKPOINTS_ENABLED, {
+            execute: function () { return _this.breakpointManager.breakpointsEnabled = !_this.breakpointManager.breakpointsEnabled; },
+            isVisible: function (arg) { return arg instanceof debug_breakpoints_widget_1.DebugBreakpointsWidget; }
+        });
+        registry.registerCommand(DebugCommands.SHOW_HOVER, {
+            execute: function () { return _this.editors.showHover(); },
+            isEnabled: function () { return _this.editors.canShowHover(); }
+        });
+        registry.registerCommand(DebugCommands.RESTART_FRAME, {
+            execute: function () { return _this.selectedFrame && _this.selectedFrame.restart(); },
+            isEnabled: function () { return !!_this.selectedFrame; }
+        });
+        registry.registerCommand(DebugCommands.COPY_CALL_STACK, {
+            execute: function () {
+                var frames = _this.frames;
+                var selection = document.getSelection();
+                if (frames && selection) {
+                    selection.selectAllChildren(frames.node);
+                    document.execCommand('copy');
+                }
+            },
+            isEnabled: function () { return document.queryCommandSupported('copy'); },
+            isVisible: function () { return document.queryCommandSupported('copy'); }
+        });
+        registry.registerCommand(DebugCommands.SET_VARIABLE_VALUE, {
+            execute: function () { return _this.selectedVariable && _this.selectedVariable.open(); },
+            isEnabled: function () { return !!_this.selectedVariable && _this.selectedVariable.supportSetVariable; },
+            isVisible: function () { return !!_this.selectedVariable && _this.selectedVariable.supportSetVariable; }
+        });
+        registry.registerCommand(DebugCommands.COPY_VARIABLE_VALUE, {
+            execute: function () { return _this.selectedVariable && _this.selectedVariable.copyValue(); },
+            isEnabled: function () { return !!_this.selectedVariable && _this.selectedVariable.supportCopyValue; },
+            isVisible: function () { return !!_this.selectedVariable && _this.selectedVariable.supportCopyValue; }
+        });
+        registry.registerCommand(DebugCommands.COPY_VARIABLE_AS_EXPRESSION, {
+            execute: function () { return _this.selectedVariable && _this.selectedVariable.copyAsExpression(); },
+            isEnabled: function () { return !!_this.selectedVariable && _this.selectedVariable.supportCopyAsExpression; },
+            isVisible: function () { return !!_this.selectedVariable && _this.selectedVariable.supportCopyAsExpression; }
+        });
+        registry.registerCommand(DebugCommands.WATCH_VARIABLE, {
+            execute: function () {
+                var _a = _this, selectedVariable = _a.selectedVariable, watch = _a.watch;
+                if (selectedVariable && watch) {
+                    watch.viewModel.addWatchExpression(selectedVariable.name);
+                }
+            },
+            isEnabled: function () { return !!_this.selectedVariable && !!_this.watch; },
+            isVisible: function () { return !!_this.selectedVariable && !!_this.watch; },
+        });
+        // Debug context menu commands
+        registry.registerCommand(DebugEditorContextCommands.ADD_BREAKPOINT, {
+            execute: function (position) { return _this.isPosition(position) && _this.editors.toggleBreakpoint(position); },
+            isEnabled: function (position) { return _this.isPosition(position) && !_this.editors.anyBreakpoint(position); },
+            isVisible: function (position) { return _this.isPosition(position) && !_this.editors.anyBreakpoint(position); }
+        });
+        registry.registerCommand(DebugEditorContextCommands.ADD_CONDITIONAL_BREAKPOINT, {
+            execute: function (position) { return _this.isPosition(position) && _this.editors.addBreakpoint('condition', position); },
+            isEnabled: function (position) { return _this.isPosition(position) && !_this.editors.anyBreakpoint(position); },
+            isVisible: function (position) { return _this.isPosition(position) && !_this.editors.anyBreakpoint(position); }
+        });
+        registry.registerCommand(DebugEditorContextCommands.ADD_LOGPOINT, {
+            execute: function (position) { return _this.isPosition(position) && _this.editors.addBreakpoint('logMessage', position); },
+            isEnabled: function (position) { return _this.isPosition(position) && !_this.editors.anyBreakpoint(position); },
+            isVisible: function (position) { return _this.isPosition(position) && !_this.editors.anyBreakpoint(position); }
+        });
+        registry.registerCommand(DebugEditorContextCommands.REMOVE_BREAKPOINT, {
+            execute: function (position) { return _this.isPosition(position) && _this.editors.toggleBreakpoint(position); },
+            isEnabled: function (position) { return _this.isPosition(position) && !!_this.editors.getBreakpoint(position); },
+            isVisible: function (position) { return _this.isPosition(position) && !!_this.editors.getBreakpoint(position); }
+        });
+        registry.registerCommand(DebugEditorContextCommands.EDIT_BREAKPOINT, {
+            execute: function (position) { return _this.isPosition(position) && _this.editors.editBreakpoint(position); },
+            isEnabled: function (position) { return _this.isPosition(position) && !!_this.editors.getBreakpoint(position); },
+            isVisible: function (position) { return _this.isPosition(position) && !!_this.editors.getBreakpoint(position); }
+        });
+        registry.registerCommand(DebugEditorContextCommands.ENABLE_BREAKPOINT, {
+            execute: function (position) { return _this.isPosition(position) && _this.editors.setBreakpointEnabled(position, true); },
+            isEnabled: function (position) { return _this.isPosition(position) && _this.editors.getBreakpointEnabled(position) === false; },
+            isVisible: function (position) { return _this.isPosition(position) && _this.editors.getBreakpointEnabled(position) === false; }
+        });
+        registry.registerCommand(DebugEditorContextCommands.DISABLE_BREAKPOINT, {
+            execute: function (position) { return _this.isPosition(position) && _this.editors.setBreakpointEnabled(position, false); },
+            isEnabled: function (position) { return _this.isPosition(position) && !!_this.editors.getBreakpointEnabled(position); },
+            isVisible: function (position) { return _this.isPosition(position) && !!_this.editors.getBreakpointEnabled(position); }
+        });
+        registry.registerCommand(DebugEditorContextCommands.REMOVE_LOGPOINT, {
+            execute: function (position) { return _this.isPosition(position) && _this.editors.toggleBreakpoint(position); },
+            isEnabled: function (position) { return _this.isPosition(position) && !!_this.editors.getLogpoint(position); },
+            isVisible: function (position) { return _this.isPosition(position) && !!_this.editors.getLogpoint(position); }
+        });
+        registry.registerCommand(DebugEditorContextCommands.EDIT_LOGPOINT, {
+            execute: function (position) { return _this.isPosition(position) && _this.editors.editBreakpoint(position); },
+            isEnabled: function (position) { return _this.isPosition(position) && !!_this.editors.getLogpoint(position); },
+            isVisible: function (position) { return _this.isPosition(position) && !!_this.editors.getLogpoint(position); }
+        });
+        registry.registerCommand(DebugEditorContextCommands.ENABLE_LOGPOINT, {
+            execute: function (position) { return _this.isPosition(position) && _this.editors.setBreakpointEnabled(position, true); },
+            isEnabled: function (position) { return _this.isPosition(position) && _this.editors.getLogpointEnabled(position) === false; },
+            isVisible: function (position) { return _this.isPosition(position) && _this.editors.getLogpointEnabled(position) === false; }
+        });
+        registry.registerCommand(DebugEditorContextCommands.DISABLE_LOGPOINT, {
+            execute: function (position) { return _this.isPosition(position) && _this.editors.setBreakpointEnabled(position, false); },
+            isEnabled: function (position) { return _this.isPosition(position) && !!_this.editors.getLogpointEnabled(position); },
+            isVisible: function (position) { return _this.isPosition(position) && !!_this.editors.getLogpointEnabled(position); }
+        });
+        registry.registerCommand(DebugBreakpointWidgetCommands.ACCEPT, {
+            execute: function () { return _this.editors.acceptBreakpoint(); }
+        });
+        registry.registerCommand(DebugBreakpointWidgetCommands.CLOSE, {
+            execute: function () { return _this.editors.closeBreakpoint(); }
+        });
+        registry.registerCommand(DebugCommands.ADD_WATCH_EXPRESSION, {
+            execute: function (widget) {
+                if (widget instanceof browser_1.Widget) {
+                    if (widget instanceof debug_watch_widget_1.DebugWatchWidget) {
+                        widget.viewModel.addWatchExpression();
+                    }
+                }
+                else if (_this.watch) {
+                    _this.watch.viewModel.addWatchExpression();
+                }
+            },
+            isEnabled: function (widget) { return widget instanceof browser_1.Widget ? widget instanceof debug_watch_widget_1.DebugWatchWidget : !!_this.watch; },
+            isVisible: function (widget) { return widget instanceof browser_1.Widget ? widget instanceof debug_watch_widget_1.DebugWatchWidget : !!_this.watch; }
+        });
+        registry.registerCommand(DebugCommands.EDIT_WATCH_EXPRESSION, {
+            execute: function () {
+                var watchExpression = _this.watchExpression;
+                if (watchExpression) {
+                    watchExpression.open();
+                }
+            },
+            isEnabled: function () { return !!_this.watchExpression; },
+            isVisible: function () { return !!_this.watchExpression; }
+        });
+        registry.registerCommand(DebugCommands.COPY_WATCH_EXPRESSION_VALUE, {
+            execute: function () { return _this.watchExpression && _this.watchExpression.copyValue(); },
+            isEnabled: function () { return !!_this.watchExpression && _this.watchExpression.supportCopyValue; },
+            isVisible: function () { return !!_this.watchExpression && _this.watchExpression.supportCopyValue; }
+        });
+        registry.registerCommand(DebugCommands.COLLAPSE_ALL_WATCH_EXPRESSIONS, {
+            execute: function (widget) {
+                if (widget instanceof debug_watch_widget_1.DebugWatchWidget) {
+                    var root = widget.model.root;
+                    widget.model.collapseAll(browser_1.CompositeTreeNode.is(root) ? root : undefined);
+                }
+            },
+            isEnabled: function (widget) { return widget instanceof debug_watch_widget_1.DebugWatchWidget; },
+            isVisible: function (widget) { return widget instanceof debug_watch_widget_1.DebugWatchWidget; }
+        });
+        registry.registerCommand(DebugCommands.REMOVE_WATCH_EXPRESSION, {
+            execute: function () {
+                var _a = _this, watch = _a.watch, watchExpression = _a.watchExpression;
+                if (watch && watchExpression) {
+                    watch.viewModel.removeWatchExpression(watchExpression);
+                }
+            },
+            isEnabled: function () { return !!_this.watchExpression; },
+            isVisible: function () { return !!_this.watchExpression; }
+        });
+        registry.registerCommand(DebugCommands.REMOVE_ALL_WATCH_EXPRESSIONS, {
+            execute: function (widget) {
+                if (widget instanceof browser_1.Widget) {
+                    if (widget instanceof debug_watch_widget_1.DebugWatchWidget) {
+                        widget.viewModel.removeWatchExpressions();
+                    }
+                }
+                else if (_this.watch) {
+                    _this.watch.viewModel.removeWatchExpressions();
+                }
+            },
+            isEnabled: function (widget) { return widget instanceof browser_1.Widget ? widget instanceof debug_watch_widget_1.DebugWatchWidget : !!_this.watch; },
+            isVisible: function (widget) { return widget instanceof browser_1.Widget ? widget instanceof debug_watch_widget_1.DebugWatchWidget : !!_this.watch; }
+        });
     };
-    MonacoTextmateService.prototype.updateTheme = function () {
-        this.toDisposeOnUpdateTheme.dispose();
-        var currentEditorTheme = this.currentEditorTheme;
-        document.body.classList.add(currentEditorTheme);
-        this.toDisposeOnUpdateTheme.push(core_1.Disposable.create(function () { return document.body.classList.remove(currentEditorTheme); }));
-        // first update registry to run tokenization with the proper theme
-        var theme = this.monacoThemeRegistry.getThemeData(currentEditorTheme);
-        if (theme) {
-            this.grammarRegistry.setTheme(theme);
-        }
-        // then trigger tokenization by setting monaco theme
-        monaco.editor.setTheme(currentEditorTheme);
+    DebugFrontendApplicationContribution.prototype.registerKeybindings = function (keybindings) {
+        _super.prototype.registerKeybindings.call(this, keybindings);
+        keybindings.registerKeybinding({
+            command: DebugCommands.START.id,
+            keybinding: 'f5'
+        });
+        keybindings.registerKeybinding({
+            command: DebugCommands.START_NO_DEBUG.id,
+            keybinding: 'ctrl+f5'
+        });
+        keybindings.registerKeybinding({
+            command: DebugCommands.STOP.id,
+            keybinding: 'shift+f5',
+            context: debug_keybinding_contexts_1.DebugKeybindingContexts.inDebugMode
+        });
+        keybindings.registerKeybinding({
+            command: DebugCommands.RESTART.id,
+            keybinding: 'shift+ctrlcmd+f5',
+            context: debug_keybinding_contexts_1.DebugKeybindingContexts.inDebugMode
+        });
+        keybindings.registerKeybinding({
+            command: DebugCommands.STEP_OVER.id,
+            keybinding: 'f10',
+            context: debug_keybinding_contexts_1.DebugKeybindingContexts.inDebugMode
+        });
+        keybindings.registerKeybinding({
+            command: DebugCommands.STEP_INTO.id,
+            keybinding: 'f11',
+            context: debug_keybinding_contexts_1.DebugKeybindingContexts.inDebugMode
+        });
+        keybindings.registerKeybinding({
+            command: DebugCommands.STEP_OUT.id,
+            keybinding: 'shift+f11',
+            context: debug_keybinding_contexts_1.DebugKeybindingContexts.inDebugMode
+        });
+        keybindings.registerKeybinding({
+            command: DebugCommands.CONTINUE.id,
+            keybinding: 'f5',
+            context: debug_keybinding_contexts_1.DebugKeybindingContexts.inDebugMode
+        });
+        keybindings.registerKeybinding({
+            command: DebugCommands.PAUSE.id,
+            keybinding: 'f6',
+            context: debug_keybinding_contexts_1.DebugKeybindingContexts.inDebugMode
+        });
+        keybindings.registerKeybinding({
+            command: DebugCommands.TOGGLE_BREAKPOINT.id,
+            keybinding: 'f9',
+            context: browser_2.EditorKeybindingContexts.editorTextFocus
+        });
+        keybindings.registerKeybinding({
+            command: DebugCommands.INLINE_BREAKPOINT.id,
+            keybinding: 'shift+f9',
+            context: browser_2.EditorKeybindingContexts.editorTextFocus
+        });
+        keybindings.registerKeybinding({
+            command: DebugBreakpointWidgetCommands.ACCEPT.id,
+            keybinding: 'enter',
+            context: debug_keybinding_contexts_1.DebugKeybindingContexts.breakpointWidgetInputFocus
+        });
+        keybindings.registerKeybinding({
+            command: DebugBreakpointWidgetCommands.CLOSE.id,
+            keybinding: 'esc',
+            context: debug_keybinding_contexts_1.DebugKeybindingContexts.breakpointWidgetInputStrictFocus
+        });
     };
-    Object.defineProperty(MonacoTextmateService.prototype, "currentEditorTheme", {
+    DebugFrontendApplicationContribution.prototype.registerToolbarItems = function (toolbar) {
+        var _this = this;
+        var onDidChangeToggleBreakpointsEnabled = new common_1.Emitter();
+        var toggleBreakpointsEnabled = {
+            id: DebugCommands.TOGGLE_BREAKPOINTS_ENABLED.id,
+            command: DebugCommands.TOGGLE_BREAKPOINTS_ENABLED.id,
+            icon: 'fa breakpoints-activate',
+            onDidChange: onDidChangeToggleBreakpointsEnabled.event,
+            priority: 1
+        };
+        var updateToggleBreakpointsEnabled = function () {
+            var tooltip = _this.breakpointManager.breakpointsEnabled ? 'Deactivate Breakpoints' : 'Activate Breakpoints';
+            if (toggleBreakpointsEnabled.tooltip !== tooltip) {
+                toggleBreakpointsEnabled.tooltip = tooltip;
+                onDidChangeToggleBreakpointsEnabled.fire(undefined);
+            }
+        };
+        toolbar.registerItem({
+            id: DebugCommands.ADD_FUNCTION_BREAKPOINT.id,
+            command: DebugCommands.ADD_FUNCTION_BREAKPOINT.id,
+            icon: 'theia-add-icon',
+            tooltip: 'Add Function Breakpoint'
+        });
+        updateToggleBreakpointsEnabled();
+        this.breakpointManager.onDidChangeBreakpoints(updateToggleBreakpointsEnabled);
+        toolbar.registerItem(toggleBreakpointsEnabled);
+        toolbar.registerItem({
+            id: DebugCommands.REMOVE_ALL_BREAKPOINTS.id,
+            command: DebugCommands.REMOVE_ALL_BREAKPOINTS.id,
+            icon: 'theia-remove-all-icon',
+            priority: 2
+        });
+        toolbar.registerItem({
+            id: DebugCommands.ADD_WATCH_EXPRESSION.id,
+            command: DebugCommands.ADD_WATCH_EXPRESSION.id,
+            icon: 'theia-add-icon',
+            tooltip: 'Add Expression'
+        });
+        toolbar.registerItem({
+            id: DebugCommands.COLLAPSE_ALL_WATCH_EXPRESSIONS.id,
+            command: DebugCommands.COLLAPSE_ALL_WATCH_EXPRESSIONS.id,
+            icon: 'theia-collapse-all-icon',
+            tooltip: 'Collapse All',
+            priority: 1
+        });
+        toolbar.registerItem({
+            id: DebugCommands.REMOVE_ALL_WATCH_EXPRESSIONS.id,
+            command: DebugCommands.REMOVE_ALL_WATCH_EXPRESSIONS.id,
+            icon: 'theia-remove-all-icon',
+            tooltip: 'Remove All Expressions',
+            priority: 2
+        });
+    };
+    Object.defineProperty(DebugFrontendApplicationContribution.prototype, "hasSessionWidget", {
         get: function () {
-            return this.themeService.getCurrentTheme().editorTheme || monaco_theme_registry_1.MonacoThemeRegistry.DARK_DEFAULT_THEME;
+            return !!this.selectedSession && this.sessionWidgets.has(this.selectedSession.label);
         },
         enumerable: false,
         configurable: true
     });
-    MonacoTextmateService.prototype.activateLanguage = function (language) {
-        var _this = this;
-        var toDispose = new core_1.DisposableCollection(core_1.Disposable.create(function () { }));
-        toDispose.push(this.waitForLanguage(language, function () {
-            return _this.doActivateLanguage(language, toDispose);
-        }));
-        return toDispose;
-    };
-    MonacoTextmateService.prototype.doActivateLanguage = function (languageId, toDispose) {
+    DebugFrontendApplicationContribution.prototype.openSession = function (session, options) {
         return __awaiter(this, void 0, void 0, function () {
-            var scopeName, provider, configuration, initialLanguage, grammar, options, tokenizer, support, themeService, languageIdentifier, adapter, error_1;
+            var _a, debugViewLocation, reveal, sessionWidget, area, newSessionWidget;
             var _this = this;
+            return __generator(this, function (_b) {
+                _a = __assign({ debugViewLocation: session.configuration.debugViewLocation || this.preference['debug.debugViewLocation'], reveal: true }, options), debugViewLocation = _a.debugViewLocation, reveal = _a.reveal;
+                sessionWidget = this.revealSession(session);
+                if (sessionWidget) {
+                    return [2 /*return*/, sessionWidget];
+                }
+                area = browser_1.ApplicationShell.isSideArea(debugViewLocation) ? debugViewLocation : 'debug';
+                if (area === 'debug') {
+                    return [2 /*return*/, this.openView({ reveal: reveal })];
+                }
+                newSessionWidget = this.sessionWidgetFactory({ session: session });
+                this.sessionWidgets.set(session.label, newSessionWidget);
+                newSessionWidget.disposed.connect(function () {
+                    return _this.sessionWidgets.delete(session.label);
+                });
+                this.shell.addWidget(newSessionWidget, { area: area });
+                if (reveal) {
+                    this.shell.revealWidget(newSessionWidget.id);
+                }
+                return [2 /*return*/, newSessionWidget];
+            });
+        });
+    };
+    DebugFrontendApplicationContribution.prototype.revealSession = function (session) {
+        var widget = this.sessionWidgets.get(session.label);
+        if (widget) {
+            this.shell.revealWidget(widget.id);
+        }
+        return widget;
+    };
+    DebugFrontendApplicationContribution.prototype.start = function (noDebug, debugSessionOptions) {
+        return __awaiter(this, void 0, void 0, function () {
+            var current;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        if (this._activatedLanguages.has(languageId)) {
-                            return [2 /*return*/];
-                        }
-                        this._activatedLanguages.add(languageId);
-                        toDispose.push(core_1.Disposable.create(function () { return _this._activatedLanguages.delete(languageId); }));
-                        scopeName = this.textmateRegistry.getScope(languageId);
-                        if (!scopeName) {
-                            return [2 /*return*/];
-                        }
-                        provider = this.textmateRegistry.getProvider(scopeName);
-                        if (!provider) {
-                            return [2 /*return*/];
-                        }
-                        configuration = this.textmateRegistry.getGrammarConfiguration(languageId);
-                        initialLanguage = textmate_contribution_1.getEncodedLanguageId(languageId);
-                        return [4 /*yield*/, this.onigasmPromise];
+                        current = debugSessionOptions ? debugSessionOptions : this.configurations.current;
+                        if (!!current) return [3 /*break*/, 2];
+                        return [4 /*yield*/, this.configurations.addConfiguration()];
                     case 1:
                         _a.sent();
-                        if (toDispose.disposed) {
-                            return [2 /*return*/];
-                        }
-                        _a.label = 2;
+                        return [2 /*return*/];
                     case 2:
-                        _a.trys.push([2, 4, , 5]);
-                        return [4 /*yield*/, this.grammarRegistry.loadGrammarWithConfiguration(scopeName, initialLanguage, configuration)];
+                        if (!current) return [3 /*break*/, 4];
+                        if (noDebug !== undefined) {
+                            current = __assign(__assign({}, current), { configuration: __assign(__assign({}, current.configuration), { noDebug: noDebug }) });
+                        }
+                        return [4 /*yield*/, this.manager.start(current)];
                     case 3:
-                        grammar = _a.sent();
-                        if (toDispose.disposed) {
-                            return [2 /*return*/];
-                        }
-                        if (!grammar) {
-                            throw new Error("no grammar for " + scopeName + ", " + initialLanguage + ", " + JSON.stringify(configuration));
-                        }
-                        options = configuration.tokenizerOption ? configuration.tokenizerOption : this.tokenizerOption;
-                        tokenizer = textmate_tokenizer_1.createTextmateTokenizer(grammar, options);
-                        toDispose.push(monaco.languages.setTokensProvider(languageId, tokenizer));
-                        support = monaco.modes.TokenizationRegistry.get(languageId);
-                        themeService = monaco.services.StaticServices.standaloneThemeService.get();
-                        languageIdentifier = monaco.services.StaticServices.modeService.get().getLanguageIdentifier(languageId);
-                        adapter = new monaco.services.TokenizationSupport2Adapter(themeService, languageIdentifier, tokenizer);
-                        support.tokenize = adapter.tokenize.bind(adapter);
-                        return [3 /*break*/, 5];
-                    case 4:
-                        error_1 = _a.sent();
-                        this.logger.warn('No grammar for this language id', languageId, error_1);
-                        return [3 /*break*/, 5];
-                    case 5: return [2 /*return*/];
+                        _a.sent();
+                        _a.label = 4;
+                    case 4: return [2 /*return*/];
                 }
             });
         });
     };
-    MonacoTextmateService.prototype.waitForLanguage = function (language, cb) {
-        var e_3, _a;
-        var modeService = monaco.services.StaticServices.modeService.get();
-        try {
-            for (var _b = __values(Object.keys(modeService['_instantiatedModes'])), _c = _b.next(); !_c.done; _c = _b.next()) {
-                var modeId = _c.value;
-                var mode = modeService['_instantiatedModes'][modeId];
-                if (mode.getId() === language) {
-                    cb();
-                    return core_1.Disposable.NULL;
-                }
-            }
-        }
-        catch (e_3_1) { e_3 = { error: e_3_1 }; }
-        finally {
-            try {
-                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
-            }
-            finally { if (e_3) throw e_3.error; }
-        }
-        return monaco.languages.onLanguage(language, cb);
+    Object.defineProperty(DebugFrontendApplicationContribution.prototype, "threads", {
+        get: function () {
+            var currentWidget = this.shell.currentWidget;
+            return currentWidget instanceof debug_threads_widget_1.DebugThreadsWidget && currentWidget || undefined;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(DebugFrontendApplicationContribution.prototype, "selectedSession", {
+        get: function () {
+            var threads = this.threads;
+            return threads && threads.selectedElement instanceof debug_session_1.DebugSession && threads.selectedElement || undefined;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(DebugFrontendApplicationContribution.prototype, "selectedThread", {
+        get: function () {
+            var threads = this.threads;
+            return threads && threads.selectedElement instanceof debug_thread_1.DebugThread && threads.selectedElement || undefined;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(DebugFrontendApplicationContribution.prototype, "frames", {
+        get: function () {
+            var currentWidget = this.shell.currentWidget;
+            return currentWidget instanceof debug_stack_frames_widget_1.DebugStackFramesWidget && currentWidget || undefined;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(DebugFrontendApplicationContribution.prototype, "selectedFrame", {
+        get: function () {
+            var frames = this.frames;
+            return frames && frames.selectedElement instanceof debug_stack_frame_1.DebugStackFrame && frames.selectedElement || undefined;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(DebugFrontendApplicationContribution.prototype, "breakpoints", {
+        get: function () {
+            var currentWidget = this.shell.currentWidget;
+            return currentWidget instanceof debug_breakpoints_widget_1.DebugBreakpointsWidget && currentWidget || undefined;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(DebugFrontendApplicationContribution.prototype, "selectedAnyBreakpoint", {
+        get: function () {
+            var breakpoints = this.breakpoints;
+            var selectedElement = breakpoints && breakpoints.selectedElement;
+            return selectedElement instanceof debug_breakpoint_1.DebugBreakpoint ? selectedElement : undefined;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(DebugFrontendApplicationContribution.prototype, "selectedBreakpoint", {
+        get: function () {
+            var breakpoint = this.selectedAnyBreakpoint;
+            return breakpoint && breakpoint instanceof debug_source_breakpoint_1.DebugSourceBreakpoint && !breakpoint.logMessage ? breakpoint : undefined;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(DebugFrontendApplicationContribution.prototype, "selectedLogpoint", {
+        get: function () {
+            var breakpoint = this.selectedAnyBreakpoint;
+            return breakpoint && breakpoint instanceof debug_source_breakpoint_1.DebugSourceBreakpoint && !!breakpoint.logMessage ? breakpoint : undefined;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(DebugFrontendApplicationContribution.prototype, "selectedFunctionBreakpoint", {
+        get: function () {
+            var breakpoint = this.selectedAnyBreakpoint;
+            return breakpoint && breakpoint instanceof debug_function_breakpoint_1.DebugFunctionBreakpoint ? breakpoint : undefined;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(DebugFrontendApplicationContribution.prototype, "variables", {
+        get: function () {
+            var currentWidget = this.shell.currentWidget;
+            return currentWidget instanceof debug_variables_widget_1.DebugVariablesWidget && currentWidget || undefined;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(DebugFrontendApplicationContribution.prototype, "selectedVariable", {
+        get: function () {
+            var variables = this.variables;
+            return variables && variables.selectedElement instanceof debug_console_items_1.DebugVariable && variables.selectedElement || undefined;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(DebugFrontendApplicationContribution.prototype, "watch", {
+        get: function () {
+            var currentWidget = this.shell.currentWidget;
+            return currentWidget instanceof debug_watch_widget_1.DebugWatchWidget && currentWidget || undefined;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(DebugFrontendApplicationContribution.prototype, "watchExpression", {
+        get: function () {
+            var watch = this.watch;
+            return watch && watch.selectedElement instanceof debug_watch_expression_1.DebugWatchExpression && watch.selectedElement || undefined;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    DebugFrontendApplicationContribution.prototype.isPosition = function (position) {
+        return (position instanceof monaco.Position);
     };
+    DebugFrontendApplicationContribution.prototype.registerColors = function (colors) {
+        colors.register(
+        // Debug colors should be aligned with https://code.visualstudio.com/api/references/theme-color#debug
+        {
+            id: 'editor.stackFrameHighlightBackground',
+            defaults: { dark: '#ffff0033', light: '#ffff6673', hc: '#fff600' },
+            description: 'Background color for the highlight of line at the top stack frame position.'
+        }, {
+            id: 'editor.focusedStackFrameHighlightBackground',
+            defaults: { dark: '#7abd7a4d', light: '#cee7ce73', hc: '#cee7ce' },
+            description: 'Background color for the highlight of line at focused stack frame position.'
+        }, 
+        // Status bar colors should be aligned with debugging colors from https://code.visualstudio.com/api/references/theme-color#status-bar-colors
+        {
+            id: 'statusBar.debuggingBackground', defaults: {
+                dark: '#CC6633',
+                light: '#CC6633',
+                hc: '#CC6633'
+            }, description: 'Status bar background color when a program is being debugged. The status bar is shown in the bottom of the window'
+        }, {
+            id: 'statusBar.debuggingForeground', defaults: {
+                dark: 'statusBar.foreground',
+                light: 'statusBar.foreground',
+                hc: 'statusBar.foreground'
+            }, description: 'Status bar foreground color when a program is being debugged. The status bar is shown in the bottom of the window'
+        }, {
+            id: 'statusBar.debuggingBorder', defaults: {
+                dark: 'statusBar.border',
+                light: 'statusBar.border',
+                hc: 'statusBar.border'
+            }, description: 'Status bar border color separating to the sidebar and editor when a program is being debugged. The status bar is shown in the bottom of the window'
+        }, 
+        // Debug Exception Widget colors should be aligned with
+        // https://github.com/microsoft/vscode/blob/ff5f581425da6230b6f9216ecf19abf6c9d285a6/src/vs/workbench/contrib/debug/browser/exceptionWidget.ts#L23
+        {
+            id: 'debugExceptionWidget.border', defaults: {
+                dark: '#a31515', light: '#a31515', hc: '#a31515'
+            }, description: 'Exception widget border color.',
+        }, {
+            id: 'debugExceptionWidget.background', defaults: {
+                dark: '#420b0d', light: '#f1dfde', hc: '#420b0d'
+            }, description: 'Exception widget background color.'
+        });
+    };
+    DebugFrontendApplicationContribution.prototype.updateStatusBar = function () {
+        if (this.debuggingStatusBar === document.body.classList.contains('theia-mod-debugging')) {
+            return;
+        }
+        document.body.classList.toggle('theia-mod-debugging');
+    };
+    Object.defineProperty(DebugFrontendApplicationContribution.prototype, "debuggingStatusBar", {
+        get: function () {
+            if (this.manager.state < debug_session_1.DebugState.Running) {
+                return false;
+            }
+            var session = this.manager.currentSession;
+            if (session && session.configuration.noDebug) {
+                return false;
+            }
+            return true;
+        },
+        enumerable: false,
+        configurable: true
+    });
     __decorate([
-        inversify_1.inject(core_1.ContributionProvider),
-        inversify_1.named(textmate_contribution_1.LanguageGrammarDefinitionContribution),
+        inversify_1.inject(debug_service_1.DebugService),
         __metadata("design:type", Object)
-    ], MonacoTextmateService.prototype, "grammarProviders", void 0);
+    ], DebugFrontendApplicationContribution.prototype, "debug", void 0);
     __decorate([
-        inversify_1.inject(textmate_registry_1.TextmateRegistry),
-        __metadata("design:type", textmate_registry_1.TextmateRegistry)
-    ], MonacoTextmateService.prototype, "textmateRegistry", void 0);
+        inversify_1.inject(debug_session_manager_1.DebugSessionManager),
+        __metadata("design:type", debug_session_manager_1.DebugSessionManager)
+    ], DebugFrontendApplicationContribution.prototype, "manager", void 0);
     __decorate([
-        inversify_1.inject(core_1.ILogger),
+        inversify_1.inject(debug_configuration_manager_1.DebugConfigurationManager),
+        __metadata("design:type", debug_configuration_manager_1.DebugConfigurationManager)
+    ], DebugFrontendApplicationContribution.prototype, "configurations", void 0);
+    __decorate([
+        inversify_1.inject(breakpoint_manager_1.BreakpointManager),
+        __metadata("design:type", breakpoint_manager_1.BreakpointManager)
+    ], DebugFrontendApplicationContribution.prototype, "breakpointManager", void 0);
+    __decorate([
+        inversify_1.inject(browser_1.ApplicationShell),
+        __metadata("design:type", browser_1.ApplicationShell)
+    ], DebugFrontendApplicationContribution.prototype, "shell", void 0);
+    __decorate([
+        inversify_1.inject(debug_session_widget_1.DebugSessionWidgetFactory),
+        __metadata("design:type", Function)
+    ], DebugFrontendApplicationContribution.prototype, "sessionWidgetFactory", void 0);
+    __decorate([
+        inversify_1.inject(debug_editor_service_1.DebugEditorService),
+        __metadata("design:type", debug_editor_service_1.DebugEditorService)
+    ], DebugFrontendApplicationContribution.prototype, "editors", void 0);
+    __decorate([
+        inversify_1.inject(debug_console_contribution_1.DebugConsoleContribution),
+        __metadata("design:type", debug_console_contribution_1.DebugConsoleContribution)
+    ], DebugFrontendApplicationContribution.prototype, "console", void 0);
+    __decorate([
+        inversify_1.inject(debug_schema_updater_1.DebugSchemaUpdater),
+        __metadata("design:type", debug_schema_updater_1.DebugSchemaUpdater)
+    ], DebugFrontendApplicationContribution.prototype, "schemaUpdater", void 0);
+    __decorate([
+        inversify_1.inject(debug_preferences_1.DebugPreferences),
         __metadata("design:type", Object)
-    ], MonacoTextmateService.prototype, "logger", void 0);
+    ], DebugFrontendApplicationContribution.prototype, "preference", void 0);
     __decorate([
-        inversify_1.inject(exports.OnigasmPromise),
-        __metadata("design:type", Object)
-    ], MonacoTextmateService.prototype, "onigasmPromise", void 0);
+        inversify_1.inject(debug_watch_manager_1.DebugWatchManager),
+        __metadata("design:type", debug_watch_manager_1.DebugWatchManager)
+    ], DebugFrontendApplicationContribution.prototype, "watchManager", void 0);
     __decorate([
-        inversify_1.inject(theming_1.ThemeService),
-        __metadata("design:type", theming_1.ThemeService)
-    ], MonacoTextmateService.prototype, "themeService", void 0);
+        inversify_1.inject(browser_1.LabelProvider),
+        __metadata("design:type", browser_1.LabelProvider)
+    ], DebugFrontendApplicationContribution.prototype, "labelProvider", void 0);
     __decorate([
-        inversify_1.inject(monaco_theme_registry_1.MonacoThemeRegistry),
-        __metadata("design:type", monaco_theme_registry_1.MonacoThemeRegistry)
-    ], MonacoTextmateService.prototype, "monacoThemeRegistry", void 0);
-    __decorate([
-        inversify_1.inject(editor_preferences_1.EditorPreferences),
-        __metadata("design:type", Object)
-    ], MonacoTextmateService.prototype, "preferences", void 0);
-    MonacoTextmateService = __decorate([
-        inversify_1.injectable()
-    ], MonacoTextmateService);
-    return MonacoTextmateService;
-}());
-exports.MonacoTextmateService = MonacoTextmateService;
+        inversify_1.inject(browser_2.EditorManager),
+        __metadata("design:type", browser_2.EditorManager)
+    ], DebugFrontendApplicationContribution.prototype, "editorManager", void 0);
+    DebugFrontendApplicationContribution = __decorate([
+        inversify_1.injectable(),
+        __metadata("design:paramtypes", [])
+    ], DebugFrontendApplicationContribution);
+    return DebugFrontendApplicationContribution;
+}(browser_1.AbstractViewContribution));
+exports.DebugFrontendApplicationContribution = DebugFrontendApplicationContribution;
 
 
 /***/ }),
 
-/***/ "./node_modules/@theia/monaco/lib/browser/textmate/monaco-theme-registry.js":
-/*!**********************************************************************************!*\
-  !*** ./node_modules/@theia/monaco/lib/browser/textmate/monaco-theme-registry.js ***!
-  \**********************************************************************************/
+/***/ "./node_modules/@theia/debug/lib/browser/debug-keybinding-contexts.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/@theia/debug/lib/browser/debug-keybinding-contexts.js ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/********************************************************************************
+ * Copyright (C) 2018 TypeFox and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BreakpointWidgetInputStrictFocusContext = exports.BreakpointWidgetInputFocusContext = exports.InDebugModeContext = exports.DebugKeybindingContexts = void 0;
+var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
+var debug_session_manager_1 = __webpack_require__(/*! ./debug-session-manager */ "./node_modules/@theia/debug/lib/browser/debug-session-manager.js");
+var debug_editor_service_1 = __webpack_require__(/*! ./editor/debug-editor-service */ "./node_modules/@theia/debug/lib/browser/editor/debug-editor-service.js");
+var DebugKeybindingContexts;
+(function (DebugKeybindingContexts) {
+    DebugKeybindingContexts.inDebugMode = 'inDebugMode';
+    DebugKeybindingContexts.breakpointWidgetInputFocus = 'breakpointWidgetInputFocus';
+    DebugKeybindingContexts.breakpointWidgetInputStrictFocus = 'breakpointWidgetInputStrictFocus';
+})(DebugKeybindingContexts = exports.DebugKeybindingContexts || (exports.DebugKeybindingContexts = {}));
+var InDebugModeContext = /** @class */ (function () {
+    function InDebugModeContext() {
+        this.id = DebugKeybindingContexts.inDebugMode;
+    }
+    InDebugModeContext.prototype.isEnabled = function () {
+        return this.manager.inDebugMode;
+    };
+    __decorate([
+        inversify_1.inject(debug_session_manager_1.DebugSessionManager),
+        __metadata("design:type", debug_session_manager_1.DebugSessionManager)
+    ], InDebugModeContext.prototype, "manager", void 0);
+    InDebugModeContext = __decorate([
+        inversify_1.injectable()
+    ], InDebugModeContext);
+    return InDebugModeContext;
+}());
+exports.InDebugModeContext = InDebugModeContext;
+var BreakpointWidgetInputFocusContext = /** @class */ (function () {
+    function BreakpointWidgetInputFocusContext() {
+        this.id = DebugKeybindingContexts.breakpointWidgetInputFocus;
+    }
+    BreakpointWidgetInputFocusContext.prototype.isEnabled = function () {
+        var model = this.editors.model;
+        return !!model && !!model.breakpointWidget.position && this.isFocused(model);
+    };
+    BreakpointWidgetInputFocusContext.prototype.isFocused = function (model) {
+        return !!model.breakpointWidget.input && model.breakpointWidget.input.isFocused({ strict: true });
+    };
+    __decorate([
+        inversify_1.inject(debug_editor_service_1.DebugEditorService),
+        __metadata("design:type", debug_editor_service_1.DebugEditorService)
+    ], BreakpointWidgetInputFocusContext.prototype, "editors", void 0);
+    BreakpointWidgetInputFocusContext = __decorate([
+        inversify_1.injectable()
+    ], BreakpointWidgetInputFocusContext);
+    return BreakpointWidgetInputFocusContext;
+}());
+exports.BreakpointWidgetInputFocusContext = BreakpointWidgetInputFocusContext;
+var BreakpointWidgetInputStrictFocusContext = /** @class */ (function (_super) {
+    __extends(BreakpointWidgetInputStrictFocusContext, _super);
+    function BreakpointWidgetInputStrictFocusContext() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.id = DebugKeybindingContexts.breakpointWidgetInputStrictFocus;
+        return _this;
+    }
+    BreakpointWidgetInputStrictFocusContext.prototype.isFocused = function (model) {
+        return _super.prototype.isFocused.call(this, model) || model.editor.isFocused({ strict: true });
+    };
+    BreakpointWidgetInputStrictFocusContext = __decorate([
+        inversify_1.injectable()
+    ], BreakpointWidgetInputStrictFocusContext);
+    return BreakpointWidgetInputStrictFocusContext;
+}(BreakpointWidgetInputFocusContext));
+exports.BreakpointWidgetInputStrictFocusContext = BreakpointWidgetInputStrictFocusContext;
+
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/lib/browser/debug-schema-updater.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@theia/debug/lib/browser/debug-schema-updater.js ***!
+  \***********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1959,6 +2236,1802 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+var __values = (this && this.__values) || function(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+    if (m) return m.call(o);
+    if (o && typeof o.length === "number") return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+};
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+var __spread = (this && this.__spread) || function () {
+    for (var ar = [], i = 0; i < arguments.length; i++) ar = ar.concat(__read(arguments[i]));
+    return ar;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.launchSchemaId = exports.DebugSchemaUpdater = void 0;
+var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
+var json_schema_store_1 = __webpack_require__(/*! @theia/core/lib/browser/json-schema-store */ "./node_modules/@theia/core/lib/browser/json-schema-store.js");
+var common_1 = __webpack_require__(/*! @theia/core/lib/common */ "./node_modules/@theia/core/lib/common/index.js");
+var uri_1 = __webpack_require__(/*! @theia/core/lib/common/uri */ "./node_modules/@theia/core/lib/common/uri.js");
+var debug_service_1 = __webpack_require__(/*! ../common/debug-service */ "./node_modules/@theia/debug/lib/common/debug-service.js");
+var debug_preferences_1 = __webpack_require__(/*! ./debug-preferences */ "./node_modules/@theia/debug/lib/browser/debug-preferences.js");
+var variable_input_schema_1 = __webpack_require__(/*! @theia/variable-resolver/lib/browser/variable-input-schema */ "./node_modules/@theia/variable-resolver/lib/browser/variable-input-schema.js");
+var DebugSchemaUpdater = /** @class */ (function () {
+    function DebugSchemaUpdater() {
+    }
+    DebugSchemaUpdater.prototype.update = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var types, schema, items, attributePromises, _a, _b, attributes, attributes_1, attributes_1_1, attribute, properties, _c, _d, key, e_1_1, _e, _f, _g, uri, contents;
+            var e_1, _h, e_2, _j, e_3, _k, _l;
+            var _this = this;
+            return __generator(this, function (_m) {
+                switch (_m.label) {
+                    case 0: return [4 /*yield*/, this.debug.debugTypes()];
+                    case 1:
+                        types = _m.sent();
+                        schema = __assign({}, common_1.deepClone(launchSchema));
+                        items = schema.properties['configurations'].items;
+                        attributePromises = types.map(function (type) { return _this.debug.getSchemaAttributes(type); });
+                        _m.label = 2;
+                    case 2:
+                        _m.trys.push([2, 7, 8, 9]);
+                        return [4 /*yield*/, Promise.all(attributePromises)];
+                    case 3:
+                        _a = __values.apply(void 0, [_m.sent()]), _b = _a.next();
+                        _m.label = 4;
+                    case 4:
+                        if (!!_b.done) return [3 /*break*/, 6];
+                        attributes = _b.value;
+                        try {
+                            for (attributes_1 = (e_2 = void 0, __values(attributes)), attributes_1_1 = attributes_1.next(); !attributes_1_1.done; attributes_1_1 = attributes_1.next()) {
+                                attribute = attributes_1_1.value;
+                                properties = {};
+                                try {
+                                    for (_c = (e_3 = void 0, __values(['debugViewLocation', 'openDebug', 'internalConsoleOptions'])), _d = _c.next(); !_d.done; _d = _c.next()) {
+                                        key = _d.value;
+                                        properties[key] = debug_preferences_1.debugPreferencesSchema.properties["debug." + key];
+                                    }
+                                }
+                                catch (e_3_1) { e_3 = { error: e_3_1 }; }
+                                finally {
+                                    try {
+                                        if (_d && !_d.done && (_k = _c.return)) _k.call(_c);
+                                    }
+                                    finally { if (e_3) throw e_3.error; }
+                                }
+                                attribute.properties = Object.assign(properties, attribute.properties);
+                                items.oneOf.push(attribute);
+                            }
+                        }
+                        catch (e_2_1) { e_2 = { error: e_2_1 }; }
+                        finally {
+                            try {
+                                if (attributes_1_1 && !attributes_1_1.done && (_j = attributes_1.return)) _j.call(attributes_1);
+                            }
+                            finally { if (e_2) throw e_2.error; }
+                        }
+                        _m.label = 5;
+                    case 5:
+                        _b = _a.next();
+                        return [3 /*break*/, 4];
+                    case 6: return [3 /*break*/, 9];
+                    case 7:
+                        e_1_1 = _m.sent();
+                        e_1 = { error: e_1_1 };
+                        return [3 /*break*/, 9];
+                    case 8:
+                        try {
+                            if (_b && !_b.done && (_h = _a.return)) _h.call(_a);
+                        }
+                        finally { if (e_1) throw e_1.error; }
+                        return [7 /*endfinally*/];
+                    case 9:
+                        _f = (_e = (_l = items.defaultSnippets).push).apply;
+                        _g = [_l];
+                        return [4 /*yield*/, this.debug.getConfigurationSnippets()];
+                    case 10:
+                        _f.apply(_e, _g.concat([__spread.apply(void 0, [_m.sent()])]));
+                        uri = new uri_1.default(exports.launchSchemaId);
+                        contents = JSON.stringify(schema);
+                        try {
+                            this.inmemoryResources.update(uri, contents);
+                        }
+                        catch (e) {
+                            this.inmemoryResources.add(uri, contents);
+                            this.jsonSchemaStore.registerSchema({
+                                fileMatch: ['launch.json'],
+                                url: uri.toString()
+                            });
+                        }
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    __decorate([
+        inversify_1.inject(json_schema_store_1.JsonSchemaStore),
+        __metadata("design:type", json_schema_store_1.JsonSchemaStore)
+    ], DebugSchemaUpdater.prototype, "jsonSchemaStore", void 0);
+    __decorate([
+        inversify_1.inject(common_1.InMemoryResources),
+        __metadata("design:type", common_1.InMemoryResources)
+    ], DebugSchemaUpdater.prototype, "inmemoryResources", void 0);
+    __decorate([
+        inversify_1.inject(debug_service_1.DebugService),
+        __metadata("design:type", Object)
+    ], DebugSchemaUpdater.prototype, "debug", void 0);
+    DebugSchemaUpdater = __decorate([
+        inversify_1.injectable()
+    ], DebugSchemaUpdater);
+    return DebugSchemaUpdater;
+}());
+exports.DebugSchemaUpdater = DebugSchemaUpdater;
+exports.launchSchemaId = 'vscode://schemas/launch';
+var launchSchema = {
+    $id: exports.launchSchemaId,
+    type: 'object',
+    title: 'Launch',
+    required: [],
+    default: { version: '0.2.0', configurations: [] },
+    properties: {
+        version: {
+            type: 'string',
+            description: 'Version of this file format.',
+            default: '0.2.0'
+        },
+        configurations: {
+            type: 'array',
+            description: 'List of configurations. Add new configurations or edit existing ones by using IntelliSense.',
+            items: {
+                defaultSnippets: [],
+                'type': 'object',
+                oneOf: []
+            }
+        },
+        inputs: variable_input_schema_1.inputsSchema.definitions.inputs
+    }
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/lib/browser/editor/debug-breakpoint-widget.js":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/@theia/debug/lib/browser/editor/debug-breakpoint-widget.js ***!
+  \*********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/********************************************************************************
+ * Copyright (C) 2018 TypeFox and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+var __values = (this && this.__values) || function(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+    if (m) return m.call(o);
+    if (o && typeof o.length === "number") return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DebugBreakpointWidget = void 0;
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var ReactDOM = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
+var core_1 = __webpack_require__(/*! @theia/core */ "./node_modules/@theia/core/lib/common/index.js");
+var uri_1 = __webpack_require__(/*! @theia/core/lib/common/uri */ "./node_modules/@theia/core/lib/common/uri.js");
+var monaco_editor_provider_1 = __webpack_require__(/*! @theia/monaco/lib/browser/monaco-editor-provider */ "./node_modules/@theia/monaco/lib/browser/monaco-editor-provider.js");
+var monaco_editor_zone_widget_1 = __webpack_require__(/*! @theia/monaco/lib/browser/monaco-editor-zone-widget */ "./node_modules/@theia/monaco/lib/browser/monaco-editor-zone-widget.js");
+var debug_editor_1 = __webpack_require__(/*! ./debug-editor */ "./node_modules/@theia/debug/lib/browser/editor/debug-editor.js");
+var debug_source_breakpoint_1 = __webpack_require__(/*! ../model/debug-source-breakpoint */ "./node_modules/@theia/debug/lib/browser/model/debug-source-breakpoint.js");
+var DebugBreakpointWidget = /** @class */ (function () {
+    function DebugBreakpointWidget() {
+        var _this = this;
+        this.toDispose = new core_1.DisposableCollection();
+        this.context = 'condition';
+        this._values = {};
+        this.updateInput = function (e) {
+            if (_this._input) {
+                _this._values[_this.context] = _this._input.getControl().getValue();
+            }
+            _this.context = e.currentTarget.value;
+            _this.render();
+            if (_this._input) {
+                _this._input.focus();
+            }
+        };
+    }
+    DebugBreakpointWidget_1 = DebugBreakpointWidget;
+    Object.defineProperty(DebugBreakpointWidget.prototype, "values", {
+        get: function () {
+            var _a;
+            if (!this._input) {
+                return undefined;
+            }
+            return __assign(__assign({}, this._values), (_a = {}, _a[this.context] = this._input.getControl().getValue(), _a));
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(DebugBreakpointWidget.prototype, "input", {
+        get: function () {
+            return this._input;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    DebugBreakpointWidget.prototype.init = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var selectNode, inputNode, input, _a;
+            var _this = this;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        this.toDispose.push(this.zone = new monaco_editor_zone_widget_1.MonacoEditorZoneWidget(this.editor.getControl()));
+                        this.zone.containerNode.classList.add('theia-debug-breakpoint-widget');
+                        selectNode = this.selectNode = document.createElement('div');
+                        selectNode.classList.add('theia-debug-breakpoint-select');
+                        this.zone.containerNode.appendChild(selectNode);
+                        inputNode = document.createElement('div');
+                        inputNode.classList.add('theia-debug-breakpoint-input');
+                        this.zone.containerNode.appendChild(inputNode);
+                        _a = this;
+                        return [4 /*yield*/, this.createInput(inputNode)];
+                    case 1:
+                        input = _a._input = _b.sent();
+                        if (this.toDispose.disposed) {
+                            input.dispose();
+                            return [2 /*return*/];
+                        }
+                        this.toDispose.push(input);
+                        this.toDispose.push(monaco.modes.CompletionProviderRegistry.register({ scheme: input.uri.scheme }, {
+                            provideCompletionItems: function (model, position, context, token) { return __awaiter(_this, void 0, void 0, function () {
+                                var suggestions, editor, items, overwriteBefore, value, items_1, items_1_1, completion;
+                                var e_1, _a;
+                                return __generator(this, function (_b) {
+                                    switch (_b.label) {
+                                        case 0:
+                                            suggestions = [];
+                                            if (!((this.context === 'condition' || this.context === 'logMessage')
+                                                && input.uri.toString() === model.uri.toString())) return [3 /*break*/, 2];
+                                            editor = this.editor.getControl();
+                                            return [4 /*yield*/, monaco.suggest.provideSuggestionItems(editor.getModel(), new monaco.Position(editor.getPosition().lineNumber, 1), new monaco.suggest.CompletionOptions(undefined, new Set().add(monaco.languages.CompletionItemKind.Snippet)), context, token)];
+                                        case 1:
+                                            items = _b.sent();
+                                            overwriteBefore = 0;
+                                            if (this.context === 'condition') {
+                                                overwriteBefore = position.column - 1;
+                                            }
+                                            else {
+                                                value = editor.getModel().getValue();
+                                                while ((position.column - 2 - overwriteBefore >= 0)
+                                                    && value[position.column - 2 - overwriteBefore] !== '{' && value[position.column - 2 - overwriteBefore] !== ' ') {
+                                                    overwriteBefore++;
+                                                }
+                                            }
+                                            try {
+                                                for (items_1 = __values(items), items_1_1 = items_1.next(); !items_1_1.done; items_1_1 = items_1.next()) {
+                                                    completion = items_1_1.value.completion;
+                                                    completion.range = monaco.Range.fromPositions(position.delta(0, -overwriteBefore), position);
+                                                    suggestions.push(completion);
+                                                }
+                                            }
+                                            catch (e_1_1) { e_1 = { error: e_1_1 }; }
+                                            finally {
+                                                try {
+                                                    if (items_1_1 && !items_1_1.done && (_a = items_1.return)) _a.call(items_1);
+                                                }
+                                                finally { if (e_1) throw e_1.error; }
+                                            }
+                                            _b.label = 2;
+                                        case 2: return [2 /*return*/, { suggestions: suggestions }];
+                                    }
+                                });
+                            }); }
+                        }));
+                        this.toDispose.push(this.zone.onDidLayoutChange(function (dimension) { return _this.layout(dimension); }));
+                        this.toDispose.push(input.getControl().onDidChangeModelContent(function () {
+                            var heightInLines = input.getControl().getModel().getLineCount() + 1;
+                            _this.zone.layout(heightInLines);
+                            _this.updatePlaceholder();
+                        }));
+                        this.toDispose.push(core_1.Disposable.create(function () { return ReactDOM.unmountComponentAtNode(selectNode); }));
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    DebugBreakpointWidget.prototype.dispose = function () {
+        this.toDispose.dispose();
+    };
+    Object.defineProperty(DebugBreakpointWidget.prototype, "position", {
+        get: function () {
+            var options = this.zone.options;
+            return options && new monaco.Position(options.afterLineNumber, options.afterColumn || -1);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    DebugBreakpointWidget.prototype.show = function (options) {
+        if (!this._input) {
+            return;
+        }
+        var breakpoint = options instanceof debug_source_breakpoint_1.DebugSourceBreakpoint ? options : 'breakpoint' in options ? options.breakpoint : undefined;
+        this._values = breakpoint ? {
+            condition: breakpoint.condition,
+            hitCondition: breakpoint.hitCondition,
+            logMessage: breakpoint.logMessage
+        } : {};
+        if (options instanceof debug_source_breakpoint_1.DebugSourceBreakpoint) {
+            if (options.logMessage) {
+                this.context = 'logMessage';
+            }
+            else if (options.hitCondition && !options.condition) {
+                this.context = 'hitCondition';
+            }
+            else {
+                this.context = 'condition';
+            }
+        }
+        else {
+            this.context = options.context;
+        }
+        this.render();
+        var position = 'position' in options ? options.position : undefined;
+        var afterLineNumber = breakpoint ? breakpoint.line : position.lineNumber;
+        var afterColumn = breakpoint ? breakpoint.column : position.column;
+        var editor = this._input.getControl();
+        var heightInLines = editor.getModel().getLineCount() + 1;
+        this.zone.show({ afterLineNumber: afterLineNumber, afterColumn: afterColumn, heightInLines: heightInLines, frameWidth: 1 });
+        editor.setPosition(editor.getModel().getPositionAt(editor.getModel().getValueLength()));
+        this._input.focus();
+    };
+    DebugBreakpointWidget.prototype.hide = function () {
+        this.zone.hide();
+        this.editor.focus();
+    };
+    DebugBreakpointWidget.prototype.layout = function (dimension) {
+        if (this._input) {
+            this._input.getControl().layout(dimension);
+        }
+    };
+    DebugBreakpointWidget.prototype.createInput = function (node) {
+        return this.editorProvider.createInline(new uri_1.default().withScheme('breakpointinput').withPath(this.editor.getControl().getId()), node, {
+            autoSizing: false
+        });
+    };
+    DebugBreakpointWidget.prototype.render = function () {
+        if (this._input) {
+            this._input.getControl().setValue(this._values[this.context] || '');
+        }
+        ReactDOM.render(React.createElement("select", { className: 'theia-select', value: this.context, onChange: this.updateInput },
+            this.renderOption('condition', 'Expression'),
+            this.renderOption('hitCondition', 'Hit Count'),
+            this.renderOption('logMessage', 'Log Message')), this.selectNode);
+    };
+    DebugBreakpointWidget.prototype.renderOption = function (context, label) {
+        return React.createElement("option", { value: context }, label);
+    };
+    DebugBreakpointWidget.prototype.updatePlaceholder = function () {
+        if (!this._input) {
+            return;
+        }
+        var value = this._input.getControl().getValue();
+        var decorations = !!value ? [] : [{
+                color: undefined,
+                range: {
+                    startLineNumber: 0,
+                    endLineNumber: 0,
+                    startColumn: 0,
+                    endColumn: 1
+                },
+                renderOptions: {
+                    after: {
+                        contentText: this.placeholder,
+                        opacity: '0.4'
+                    }
+                }
+            }];
+        this._input.getControl().setDecorations(DebugBreakpointWidget_1.PLACEHOLDER_DECORATION, decorations);
+    };
+    Object.defineProperty(DebugBreakpointWidget.prototype, "placeholder", {
+        get: function () {
+            if (this.context === 'logMessage') {
+                return "Message to log when breakpoint is hit. Expressions within {} are interpolated. 'Enter' to accept, 'esc' to cancel.";
+            }
+            if (this.context === 'hitCondition') {
+                return "Break when hit count condition is met. 'Enter' to accept, 'esc' to cancel.";
+            }
+            return "Break when expression evaluates to true. 'Enter' to accept, 'esc' to cancel.";
+        },
+        enumerable: false,
+        configurable: true
+    });
+    var DebugBreakpointWidget_1;
+    DebugBreakpointWidget.PLACEHOLDER_DECORATION = 'placeholderDecoration';
+    __decorate([
+        inversify_1.inject(debug_editor_1.DebugEditor),
+        __metadata("design:type", Object)
+    ], DebugBreakpointWidget.prototype, "editor", void 0);
+    __decorate([
+        inversify_1.inject(monaco_editor_provider_1.MonacoEditorProvider),
+        __metadata("design:type", monaco_editor_provider_1.MonacoEditorProvider)
+    ], DebugBreakpointWidget.prototype, "editorProvider", void 0);
+    __decorate([
+        inversify_1.postConstruct(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", Promise)
+    ], DebugBreakpointWidget.prototype, "init", null);
+    DebugBreakpointWidget = DebugBreakpointWidget_1 = __decorate([
+        inversify_1.injectable()
+    ], DebugBreakpointWidget);
+    return DebugBreakpointWidget;
+}());
+exports.DebugBreakpointWidget = DebugBreakpointWidget;
+
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/lib/browser/editor/debug-editor-model.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/@theia/debug/lib/browser/editor/debug-editor-model.js ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/********************************************************************************
+ * Copyright (C) 2018 TypeFox and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+var __values = (this && this.__values) || function(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+    if (m) return m.call(o);
+    if (o && typeof o.length === "number") return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DebugEditorModel = exports.DebugEditorModelFactory = void 0;
+var debounce = __webpack_require__(/*! p-debounce */ "./node_modules/p-debounce/index.js");
+var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
+var uri_1 = __webpack_require__(/*! @theia/core/lib/common/uri */ "./node_modules/@theia/core/lib/common/uri.js");
+var core_1 = __webpack_require__(/*! @theia/core */ "./node_modules/@theia/core/lib/common/index.js");
+var browser_1 = __webpack_require__(/*! @theia/core/lib/browser */ "./node_modules/@theia/core/lib/browser/index.js");
+var breakpoint_manager_1 = __webpack_require__(/*! ../breakpoint/breakpoint-manager */ "./node_modules/@theia/debug/lib/browser/breakpoint/breakpoint-manager.js");
+var debug_session_manager_1 = __webpack_require__(/*! ../debug-session-manager */ "./node_modules/@theia/debug/lib/browser/debug-session-manager.js");
+var breakpoint_marker_1 = __webpack_require__(/*! ../breakpoint/breakpoint-marker */ "./node_modules/@theia/debug/lib/browser/breakpoint/breakpoint-marker.js");
+var debug_editor_1 = __webpack_require__(/*! ./debug-editor */ "./node_modules/@theia/debug/lib/browser/editor/debug-editor.js");
+var debug_hover_widget_1 = __webpack_require__(/*! ./debug-hover-widget */ "./node_modules/@theia/debug/lib/browser/editor/debug-hover-widget.js");
+var debug_breakpoint_widget_1 = __webpack_require__(/*! ./debug-breakpoint-widget */ "./node_modules/@theia/debug/lib/browser/editor/debug-breakpoint-widget.js");
+var debug_exception_widget_1 = __webpack_require__(/*! ./debug-exception-widget */ "./node_modules/@theia/debug/lib/browser/editor/debug-exception-widget.js");
+exports.DebugEditorModelFactory = Symbol('DebugEditorModelFactory');
+var DebugEditorModel = /** @class */ (function () {
+    function DebugEditorModel() {
+        var _this = this;
+        this.toDispose = new core_1.DisposableCollection();
+        this.breakpointDecorations = [];
+        this.breakpointRanges = new Map();
+        this.currentBreakpointDecorations = [];
+        this.frameDecorations = [];
+        this.updatingDecorations = false;
+        this.renderFrames = debounce(function () {
+            if (_this.toDispose.disposed) {
+                return;
+            }
+            _this.toggleExceptionWidget();
+            var decorations = _this.createFrameDecorations();
+            _this.frameDecorations = _this.deltaDecorations(_this.frameDecorations, decorations);
+        }, 100);
+        this.hintDecorations = [];
+    }
+    DebugEditorModel_1 = DebugEditorModel;
+    DebugEditorModel.createContainer = function (parent, editor) {
+        var child = debug_hover_widget_1.createDebugHoverWidgetContainer(parent, editor);
+        child.bind(DebugEditorModel_1).toSelf();
+        child.bind(debug_breakpoint_widget_1.DebugBreakpointWidget).toSelf();
+        child.bind(debug_exception_widget_1.DebugExceptionWidget).toSelf();
+        return child;
+    };
+    DebugEditorModel.createModel = function (parent, editor) {
+        return DebugEditorModel_1.createContainer(parent, editor).get(DebugEditorModel_1);
+    };
+    DebugEditorModel.prototype.init = function () {
+        var _this = this;
+        this.uri = new uri_1.default(this.editor.getControl().getModel().uri.toString());
+        this.toDispose.pushAll([
+            this.hover,
+            this.breakpointWidget,
+            this.exceptionWidget,
+            this.editor.getControl().onMouseDown(function (event) { return _this.handleMouseDown(event); }),
+            this.editor.getControl().onMouseMove(function (event) { return _this.handleMouseMove(event); }),
+            this.editor.getControl().onMouseLeave(function (event) { return _this.handleMouseLeave(event); }),
+            this.editor.getControl().onKeyDown(function () { return _this.hover.hide({ immediate: false }); }),
+            this.editor.getControl().getModel().onDidChangeDecorations(function () { return _this.updateBreakpoints(); }),
+            this.sessions.onDidChange(function () { return _this.renderFrames(); })
+        ]);
+        this.renderFrames();
+        this.render();
+    };
+    DebugEditorModel.prototype.dispose = function () {
+        this.toDispose.dispose();
+    };
+    DebugEditorModel.prototype.createFrameDecorations = function () {
+        var decorations = [];
+        var _a = this.sessions, currentFrame = _a.currentFrame, topFrame = _a.topFrame;
+        if (!currentFrame || !currentFrame.source || currentFrame.source.uri.toString() !== this.uri.toString()) {
+            return decorations;
+        }
+        var columnUntilEOLRange = new monaco.Range(currentFrame.raw.line, currentFrame.raw.column, currentFrame.raw.line, 1 << 30);
+        var range = new monaco.Range(currentFrame.raw.line, currentFrame.raw.column, currentFrame.raw.line, currentFrame.raw.column + 1);
+        if (topFrame === currentFrame) {
+            decorations.push({
+                options: DebugEditorModel_1.TOP_STACK_FRAME_MARGIN,
+                range: range
+            });
+            decorations.push({
+                options: DebugEditorModel_1.TOP_STACK_FRAME_DECORATION,
+                range: columnUntilEOLRange
+            });
+            var topFrameRange = this.topFrameRange;
+            if (topFrameRange && topFrameRange.startLineNumber === currentFrame.raw.line && topFrameRange.startColumn !== currentFrame.raw.column) {
+                decorations.push({
+                    options: DebugEditorModel_1.TOP_STACK_FRAME_INLINE_DECORATION,
+                    range: columnUntilEOLRange
+                });
+            }
+            this.topFrameRange = columnUntilEOLRange;
+        }
+        else {
+            decorations.push({
+                options: DebugEditorModel_1.FOCUSED_STACK_FRAME_MARGIN,
+                range: range
+            });
+            decorations.push({
+                options: DebugEditorModel_1.FOCUSED_STACK_FRAME_DECORATION,
+                range: columnUntilEOLRange
+            });
+        }
+        return decorations;
+    };
+    DebugEditorModel.prototype.toggleExceptionWidget = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var currentFrame, info;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        currentFrame = this.sessions.currentFrame;
+                        if (!currentFrame) {
+                            this.exceptionWidget.hide();
+                            return [2 /*return*/];
+                        }
+                        return [4 /*yield*/, currentFrame.thread.getExceptionInfo()];
+                    case 1:
+                        info = _a.sent();
+                        if (!info) {
+                            this.exceptionWidget.hide();
+                            return [2 /*return*/];
+                        }
+                        this.exceptionWidget.show({
+                            info: info,
+                            lineNumber: currentFrame.raw.line,
+                            column: currentFrame.raw.column
+                        });
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    DebugEditorModel.prototype.render = function () {
+        this.renderBreakpoints();
+        this.renderCurrentBreakpoints();
+    };
+    DebugEditorModel.prototype.renderBreakpoints = function () {
+        var decorations = this.createBreakpointDecorations();
+        this.breakpointDecorations = this.deltaDecorations(this.breakpointDecorations, decorations);
+        this.updateBreakpointRanges();
+    };
+    DebugEditorModel.prototype.createBreakpointDecorations = function () {
+        var _this = this;
+        var breakpoints = this.breakpoints.getBreakpoints(this.uri);
+        return breakpoints.map(function (breakpoint) { return _this.createBreakpointDecoration(breakpoint); });
+    };
+    DebugEditorModel.prototype.createBreakpointDecoration = function (breakpoint) {
+        var lineNumber = breakpoint.raw.line;
+        var column = breakpoint.raw.column;
+        var range = typeof column === 'number' ? new monaco.Range(lineNumber, column, lineNumber, column + 1) : new monaco.Range(lineNumber, 1, lineNumber, 2);
+        return {
+            range: range,
+            options: {
+                stickiness: DebugEditorModel_1.STICKINESS
+            }
+        };
+    };
+    DebugEditorModel.prototype.updateBreakpointRanges = function () {
+        var e_1, _a;
+        this.breakpointRanges.clear();
+        try {
+            for (var _b = __values(this.breakpointDecorations), _c = _b.next(); !_c.done; _c = _b.next()) {
+                var decoration = _c.value;
+                var range = this.editor.getControl().getModel().getDecorationRange(decoration);
+                this.breakpointRanges.set(decoration, range);
+            }
+        }
+        catch (e_1_1) { e_1 = { error: e_1_1 }; }
+        finally {
+            try {
+                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+            }
+            finally { if (e_1) throw e_1.error; }
+        }
+    };
+    DebugEditorModel.prototype.renderCurrentBreakpoints = function () {
+        var decorations = this.createCurrentBreakpointDecorations();
+        this.currentBreakpointDecorations = this.deltaDecorations(this.currentBreakpointDecorations, decorations);
+    };
+    DebugEditorModel.prototype.createCurrentBreakpointDecorations = function () {
+        var _this = this;
+        var breakpoints = this.sessions.getBreakpoints(this.uri);
+        return breakpoints.map(function (breakpoint) { return _this.createCurrentBreakpointDecoration(breakpoint); });
+    };
+    DebugEditorModel.prototype.createCurrentBreakpointDecoration = function (breakpoint) {
+        var lineNumber = breakpoint.line;
+        var column = breakpoint.column;
+        var range = typeof column === 'number' ? new monaco.Range(lineNumber, column, lineNumber, column + 1) : new monaco.Range(lineNumber, 1, lineNumber, 1);
+        var _a = breakpoint.getDecoration(), className = _a.className, message = _a.message;
+        var renderInline = typeof column === 'number' && (column > this.editor.getControl().getModel().getLineFirstNonWhitespaceColumn(lineNumber));
+        return {
+            range: range,
+            options: {
+                glyphMarginClassName: className,
+                glyphMarginHoverMessage: message.map(function (value) { return ({ value: value }); }),
+                stickiness: DebugEditorModel_1.STICKINESS,
+                beforeContentClassName: renderInline ? "theia-debug-breakpoint-column " + className + "-column" : undefined
+            }
+        };
+    };
+    DebugEditorModel.prototype.updateBreakpoints = function () {
+        if (this.areBreakpointsAffected()) {
+            var breakpoints = this.createBreakpoints();
+            this.breakpoints.setBreakpoints(this.uri, breakpoints);
+        }
+    };
+    DebugEditorModel.prototype.areBreakpointsAffected = function () {
+        var e_2, _a;
+        if (this.updatingDecorations || !this.editor.getControl().getModel()) {
+            return false;
+        }
+        try {
+            for (var _b = __values(this.breakpointDecorations), _c = _b.next(); !_c.done; _c = _b.next()) {
+                var decoration = _c.value;
+                var range = this.editor.getControl().getModel().getDecorationRange(decoration);
+                var oldRange = this.breakpointRanges.get(decoration);
+                if (!range || !range.equalsRange(oldRange)) {
+                    return true;
+                }
+            }
+        }
+        catch (e_2_1) { e_2 = { error: e_2_1 }; }
+        finally {
+            try {
+                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+            }
+            finally { if (e_2) throw e_2.error; }
+        }
+        return false;
+    };
+    DebugEditorModel.prototype.createBreakpoints = function () {
+        var e_3, _a;
+        var uri = this.uri;
+        var lines = new Set();
+        var breakpoints = [];
+        try {
+            for (var _b = __values(this.breakpointDecorations), _c = _b.next(); !_c.done; _c = _b.next()) {
+                var decoration = _c.value;
+                var range = this.editor.getControl().getModel().getDecorationRange(decoration);
+                if (range && !lines.has(range.startLineNumber)) {
+                    var line = range.startLineNumber;
+                    var column = range.startColumn;
+                    var oldRange = this.breakpointRanges.get(decoration);
+                    var oldBreakpoint = oldRange && this.breakpoints.getInlineBreakpoint(uri, oldRange.startLineNumber, oldRange.startColumn);
+                    var breakpoint = breakpoint_marker_1.SourceBreakpoint.create(uri, { line: line, column: column }, oldBreakpoint);
+                    breakpoints.push(breakpoint);
+                    lines.add(line);
+                }
+            }
+        }
+        catch (e_3_1) { e_3 = { error: e_3_1 }; }
+        finally {
+            try {
+                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+            }
+            finally { if (e_3) throw e_3.error; }
+        }
+        return breakpoints;
+    };
+    Object.defineProperty(DebugEditorModel.prototype, "position", {
+        get: function () {
+            return this.editor.getControl().getPosition();
+        },
+        enumerable: false,
+        configurable: true
+    });
+    DebugEditorModel.prototype.getBreakpoint = function (position) {
+        if (position === void 0) { position = this.position; }
+        return this.getInlineBreakpoint(position) || this.getLineBreakpoints(position)[0];
+    };
+    DebugEditorModel.prototype.getInlineBreakpoint = function (position) {
+        if (position === void 0) { position = this.position; }
+        return this.sessions.getInlineBreakpoint(this.uri, position.lineNumber, position.column);
+    };
+    DebugEditorModel.prototype.getLineBreakpoints = function (position) {
+        if (position === void 0) { position = this.position; }
+        return this.sessions.getLineBreakpoints(this.uri, position.lineNumber);
+    };
+    DebugEditorModel.prototype.addBreakpoint = function (raw) {
+        this.breakpoints.addBreakpoint(breakpoint_marker_1.SourceBreakpoint.create(this.uri, raw));
+    };
+    DebugEditorModel.prototype.toggleBreakpoint = function (position) {
+        var e_4, _a;
+        if (position === void 0) { position = this.position; }
+        var lineNumber = position.lineNumber;
+        var breakpoints = this.getLineBreakpoints(position);
+        if (breakpoints.length) {
+            try {
+                for (var breakpoints_1 = __values(breakpoints), breakpoints_1_1 = breakpoints_1.next(); !breakpoints_1_1.done; breakpoints_1_1 = breakpoints_1.next()) {
+                    var breakpoint = breakpoints_1_1.value;
+                    breakpoint.remove();
+                }
+            }
+            catch (e_4_1) { e_4 = { error: e_4_1 }; }
+            finally {
+                try {
+                    if (breakpoints_1_1 && !breakpoints_1_1.done && (_a = breakpoints_1.return)) _a.call(breakpoints_1);
+                }
+                finally { if (e_4) throw e_4.error; }
+            }
+        }
+        else {
+            this.addBreakpoint({ line: lineNumber });
+        }
+    };
+    DebugEditorModel.prototype.addInlineBreakpoint = function () {
+        var position = this.position;
+        var lineNumber = position.lineNumber, column = position.column;
+        var breakpoint = this.getInlineBreakpoint(position);
+        if (breakpoint) {
+            return;
+        }
+        this.addBreakpoint({ line: lineNumber, column: column });
+    };
+    DebugEditorModel.prototype.acceptBreakpoint = function () {
+        var _a = this.breakpointWidget, position = _a.position, values = _a.values;
+        if (position && values) {
+            var breakpoint = position.column > 0 ? this.getInlineBreakpoint(position) : this.getLineBreakpoints(position)[0];
+            if (breakpoint) {
+                breakpoint.updateOrigins(values);
+            }
+            else {
+                var lineNumber = position.lineNumber;
+                var column = position.column > 0 ? position.column : undefined;
+                this.addBreakpoint(__assign({ line: lineNumber, column: column }, values));
+            }
+            this.breakpointWidget.hide();
+        }
+    };
+    DebugEditorModel.prototype.handleMouseDown = function (event) {
+        var _this = this;
+        if (event.target && event.target.type === monaco.editor.MouseTargetType.GUTTER_GLYPH_MARGIN) {
+            if (event.event.rightButton) {
+                this.editor.focus();
+                setTimeout(function () {
+                    _this.contextMenu.render({
+                        menuPath: DebugEditorModel_1.CONTEXT_MENU,
+                        anchor: event.event.browserEvent,
+                        args: [event.target.position]
+                    });
+                });
+            }
+            else {
+                this.toggleBreakpoint(event.target.position);
+            }
+        }
+        this.hintBreakpoint(event);
+    };
+    DebugEditorModel.prototype.handleMouseMove = function (event) {
+        this.showHover(event);
+        this.hintBreakpoint(event);
+    };
+    DebugEditorModel.prototype.handleMouseLeave = function (event) {
+        this.hideHover(event);
+        this.deltaHintDecorations([]);
+    };
+    DebugEditorModel.prototype.hintBreakpoint = function (event) {
+        var hintDecorations = this.createHintDecorations(event);
+        this.deltaHintDecorations(hintDecorations);
+    };
+    DebugEditorModel.prototype.deltaHintDecorations = function (hintDecorations) {
+        this.hintDecorations = this.deltaDecorations(this.hintDecorations, hintDecorations);
+    };
+    DebugEditorModel.prototype.createHintDecorations = function (event) {
+        if (event.target && event.target.type === monaco.editor.MouseTargetType.GUTTER_GLYPH_MARGIN && event.target.position) {
+            var lineNumber = event.target.position.lineNumber;
+            if (this.getLineBreakpoints(event.target.position).length) {
+                return [];
+            }
+            return [{
+                    range: new monaco.Range(lineNumber, 1, lineNumber, 1),
+                    options: DebugEditorModel_1.BREAKPOINT_HINT_DECORATION
+                }];
+        }
+        return [];
+    };
+    DebugEditorModel.prototype.showHover = function (mouseEvent) {
+        var targetType = mouseEvent.target.type;
+        var stopKey = core_1.isOSX ? 'metaKey' : 'ctrlKey';
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        if (targetType === monaco.editor.MouseTargetType.CONTENT_WIDGET && mouseEvent.target.detail === this.hover.getId() && !mouseEvent.event[stopKey]) {
+            // mouse moved on top of debug hover widget
+            return;
+        }
+        if (targetType === monaco.editor.MouseTargetType.CONTENT_TEXT) {
+            this.hover.show({
+                selection: mouseEvent.target.range,
+                immediate: false
+            });
+        }
+        else {
+            this.hover.hide({ immediate: false });
+        }
+    };
+    DebugEditorModel.prototype.hideHover = function (_a) {
+        var event = _a.event;
+        var rect = this.hover.getDomNode().getBoundingClientRect();
+        if (event.posx < rect.left || event.posx > rect.right || event.posy < rect.top || event.posy > rect.bottom) {
+            this.hover.hide({ immediate: false });
+        }
+    };
+    DebugEditorModel.prototype.deltaDecorations = function (oldDecorations, newDecorations) {
+        this.updatingDecorations = true;
+        try {
+            return this.editor.getControl().getModel().deltaDecorations(oldDecorations, newDecorations);
+        }
+        finally {
+            this.updatingDecorations = false;
+        }
+    };
+    var DebugEditorModel_1;
+    DebugEditorModel.CONTEXT_MENU = ['debug-editor-context-menu'];
+    DebugEditorModel.STICKINESS = monaco.editor.TrackedRangeStickiness.NeverGrowsWhenTypingAtEdges;
+    DebugEditorModel.BREAKPOINT_HINT_DECORATION = {
+        glyphMarginClassName: 'theia-debug-breakpoint-hint',
+        stickiness: DebugEditorModel_1.STICKINESS
+    };
+    DebugEditorModel.TOP_STACK_FRAME_MARGIN = {
+        glyphMarginClassName: 'theia-debug-top-stack-frame',
+        stickiness: DebugEditorModel_1.STICKINESS
+    };
+    DebugEditorModel.FOCUSED_STACK_FRAME_MARGIN = {
+        glyphMarginClassName: 'theia-debug-focused-stack-frame',
+        stickiness: DebugEditorModel_1.STICKINESS
+    };
+    DebugEditorModel.TOP_STACK_FRAME_DECORATION = {
+        isWholeLine: true,
+        className: 'theia-debug-top-stack-frame-line',
+        stickiness: DebugEditorModel_1.STICKINESS
+    };
+    DebugEditorModel.TOP_STACK_FRAME_INLINE_DECORATION = {
+        beforeContentClassName: 'theia-debug-top-stack-frame-column'
+    };
+    DebugEditorModel.FOCUSED_STACK_FRAME_DECORATION = {
+        isWholeLine: true,
+        className: 'theia-debug-focused-stack-frame-line',
+        stickiness: DebugEditorModel_1.STICKINESS
+    };
+    __decorate([
+        inversify_1.inject(debug_hover_widget_1.DebugHoverWidget),
+        __metadata("design:type", debug_hover_widget_1.DebugHoverWidget)
+    ], DebugEditorModel.prototype, "hover", void 0);
+    __decorate([
+        inversify_1.inject(debug_editor_1.DebugEditor),
+        __metadata("design:type", Object)
+    ], DebugEditorModel.prototype, "editor", void 0);
+    __decorate([
+        inversify_1.inject(breakpoint_manager_1.BreakpointManager),
+        __metadata("design:type", breakpoint_manager_1.BreakpointManager)
+    ], DebugEditorModel.prototype, "breakpoints", void 0);
+    __decorate([
+        inversify_1.inject(debug_session_manager_1.DebugSessionManager),
+        __metadata("design:type", debug_session_manager_1.DebugSessionManager)
+    ], DebugEditorModel.prototype, "sessions", void 0);
+    __decorate([
+        inversify_1.inject(browser_1.ContextMenuRenderer),
+        __metadata("design:type", browser_1.ContextMenuRenderer)
+    ], DebugEditorModel.prototype, "contextMenu", void 0);
+    __decorate([
+        inversify_1.inject(debug_breakpoint_widget_1.DebugBreakpointWidget),
+        __metadata("design:type", debug_breakpoint_widget_1.DebugBreakpointWidget)
+    ], DebugEditorModel.prototype, "breakpointWidget", void 0);
+    __decorate([
+        inversify_1.inject(debug_exception_widget_1.DebugExceptionWidget),
+        __metadata("design:type", debug_exception_widget_1.DebugExceptionWidget)
+    ], DebugEditorModel.prototype, "exceptionWidget", void 0);
+    __decorate([
+        inversify_1.postConstruct(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", void 0)
+    ], DebugEditorModel.prototype, "init", null);
+    DebugEditorModel = DebugEditorModel_1 = __decorate([
+        inversify_1.injectable()
+    ], DebugEditorModel);
+    return DebugEditorModel;
+}());
+exports.DebugEditorModel = DebugEditorModel;
+
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/lib/browser/editor/debug-editor-service.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@theia/debug/lib/browser/editor/debug-editor-service.js ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/********************************************************************************
+ * Copyright (C) 2018 TypeFox and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+var __values = (this && this.__values) || function(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+    if (m) return m.call(o);
+    if (o && typeof o.length === "number") return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DebugEditorService = void 0;
+var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
+var browser_1 = __webpack_require__(/*! @theia/editor/lib/browser */ "./node_modules/@theia/editor/lib/browser/index.js");
+var browser_2 = __webpack_require__(/*! @theia/core/lib/browser */ "./node_modules/@theia/core/lib/browser/index.js");
+var monaco_editor_1 = __webpack_require__(/*! @theia/monaco/lib/browser/monaco-editor */ "./node_modules/@theia/monaco/lib/browser/monaco-editor.js");
+var debug_session_manager_1 = __webpack_require__(/*! ../debug-session-manager */ "./node_modules/@theia/debug/lib/browser/debug-session-manager.js");
+var debug_editor_model_1 = __webpack_require__(/*! ./debug-editor-model */ "./node_modules/@theia/debug/lib/browser/editor/debug-editor-model.js");
+var breakpoint_manager_1 = __webpack_require__(/*! ../breakpoint/breakpoint-manager */ "./node_modules/@theia/debug/lib/browser/breakpoint/breakpoint-manager.js");
+var DebugEditorService = /** @class */ (function () {
+    function DebugEditorService() {
+        this.models = new Map();
+    }
+    DebugEditorService.prototype.init = function () {
+        var _this = this;
+        this.editors.all.forEach(function (widget) { return _this.push(widget); });
+        this.editors.onCreated(function (widget) { return _this.push(widget); });
+        this.sessionManager.onDidChangeBreakpoints(function (_a) {
+            var session = _a.session, uri = _a.uri;
+            if (!session || session === _this.sessionManager.currentSession) {
+                _this.render(uri);
+            }
+        });
+        this.breakpoints.onDidChangeBreakpoints(function (event) { return _this.closeBreakpointIfAffected(event); });
+    };
+    DebugEditorService.prototype.push = function (widget) {
+        var _this = this;
+        var editor = widget.editor;
+        if (!(editor instanceof monaco_editor_1.MonacoEditor)) {
+            return;
+        }
+        var uri = editor.getControl().getModel().uri.toString();
+        var debugModel = this.factory(editor);
+        this.models.set(uri, debugModel);
+        editor.getControl().onDidDispose(function () {
+            debugModel.dispose();
+            _this.models.delete(uri);
+        });
+    };
+    DebugEditorService.prototype.render = function (uri) {
+        var model = this.models.get(uri.toString());
+        if (model) {
+            model.render();
+        }
+    };
+    Object.defineProperty(DebugEditorService.prototype, "model", {
+        get: function () {
+            var currentEditor = this.editors.currentEditor;
+            var uri = currentEditor && currentEditor.getResourceUri();
+            return uri && this.models.get(uri.toString());
+        },
+        enumerable: false,
+        configurable: true
+    });
+    DebugEditorService.prototype.getLogpoint = function (position) {
+        var logpoint = this.anyBreakpoint(position);
+        return logpoint && logpoint.logMessage ? logpoint : undefined;
+    };
+    DebugEditorService.prototype.getLogpointEnabled = function (position) {
+        var logpoint = this.getLogpoint(position);
+        return logpoint && logpoint.enabled;
+    };
+    DebugEditorService.prototype.getBreakpoint = function (position) {
+        var breakpoint = this.anyBreakpoint(position);
+        return breakpoint && breakpoint.logMessage ? undefined : breakpoint;
+    };
+    DebugEditorService.prototype.getBreakpointEnabled = function (position) {
+        var breakpoint = this.getBreakpoint(position);
+        return breakpoint && breakpoint.enabled;
+    };
+    DebugEditorService.prototype.anyBreakpoint = function (position) {
+        return this.model && this.model.getBreakpoint(position);
+    };
+    DebugEditorService.prototype.getInlineBreakpoint = function (position) {
+        return this.model && this.model.getInlineBreakpoint(position);
+    };
+    DebugEditorService.prototype.toggleBreakpoint = function (position) {
+        var model = this.model;
+        if (model) {
+            model.toggleBreakpoint(position);
+        }
+    };
+    DebugEditorService.prototype.setBreakpointEnabled = function (position, enabled) {
+        var breakpoint = this.anyBreakpoint(position);
+        if (breakpoint) {
+            breakpoint.setEnabled(enabled);
+        }
+    };
+    DebugEditorService.prototype.addInlineBreakpoint = function () {
+        var model = this.model;
+        if (model) {
+            model.addInlineBreakpoint();
+        }
+    };
+    DebugEditorService.prototype.showHover = function () {
+        var model = this.model;
+        if (model) {
+            var selection = model.editor.getControl().getSelection();
+            model.hover.show({ selection: selection, focus: true });
+        }
+    };
+    DebugEditorService.prototype.canShowHover = function () {
+        var model = this.model;
+        if (model) {
+            var selection = model.editor.getControl().getSelection();
+            return !!model.editor.getControl().getModel().getWordAtPosition(selection.getStartPosition());
+        }
+        return false;
+    };
+    DebugEditorService.prototype.addBreakpoint = function (context, position) {
+        var model = this.model;
+        if (model) {
+            position = position || model.position;
+            var breakpoint = model.getBreakpoint(position);
+            if (breakpoint) {
+                model.breakpointWidget.show({ breakpoint: breakpoint, context: context });
+            }
+            else {
+                model.breakpointWidget.show({
+                    position: position,
+                    context: context
+                });
+            }
+        }
+    };
+    DebugEditorService.prototype.editBreakpoint = function (breakpointOrPosition) {
+        return __awaiter(this, void 0, void 0, function () {
+            var model;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        if (breakpointOrPosition instanceof monaco.Position) {
+                            breakpointOrPosition = this.anyBreakpoint(breakpointOrPosition);
+                        }
+                        if (!breakpointOrPosition) return [3 /*break*/, 2];
+                        return [4 /*yield*/, breakpointOrPosition.open()];
+                    case 1:
+                        _a.sent();
+                        model = this.models.get(breakpointOrPosition.uri.toString());
+                        if (model) {
+                            model.breakpointWidget.show(breakpointOrPosition);
+                        }
+                        _a.label = 2;
+                    case 2: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    DebugEditorService.prototype.closeBreakpoint = function () {
+        var model = this.model;
+        if (model) {
+            model.breakpointWidget.hide();
+        }
+    };
+    DebugEditorService.prototype.acceptBreakpoint = function () {
+        var model = this.model;
+        if (model) {
+            model.acceptBreakpoint();
+        }
+    };
+    DebugEditorService.prototype.closeBreakpointIfAffected = function (_a) {
+        var e_1, _b;
+        var uri = _a.uri, removed = _a.removed;
+        var model = this.models.get(uri.toString());
+        if (!model) {
+            return;
+        }
+        var position = model.breakpointWidget.position;
+        if (!position) {
+            return;
+        }
+        try {
+            for (var removed_1 = __values(removed), removed_1_1 = removed_1.next(); !removed_1_1.done; removed_1_1 = removed_1.next()) {
+                var breakpoint = removed_1_1.value;
+                if (breakpoint.raw.line === position.lineNumber) {
+                    model.breakpointWidget.hide();
+                }
+            }
+        }
+        catch (e_1_1) { e_1 = { error: e_1_1 }; }
+        finally {
+            try {
+                if (removed_1_1 && !removed_1_1.done && (_b = removed_1.return)) _b.call(removed_1);
+            }
+            finally { if (e_1) throw e_1.error; }
+        }
+    };
+    __decorate([
+        inversify_1.inject(browser_1.EditorManager),
+        __metadata("design:type", browser_1.EditorManager)
+    ], DebugEditorService.prototype, "editors", void 0);
+    __decorate([
+        inversify_1.inject(breakpoint_manager_1.BreakpointManager),
+        __metadata("design:type", breakpoint_manager_1.BreakpointManager)
+    ], DebugEditorService.prototype, "breakpoints", void 0);
+    __decorate([
+        inversify_1.inject(debug_session_manager_1.DebugSessionManager),
+        __metadata("design:type", debug_session_manager_1.DebugSessionManager)
+    ], DebugEditorService.prototype, "sessionManager", void 0);
+    __decorate([
+        inversify_1.inject(browser_2.ContextMenuRenderer),
+        __metadata("design:type", browser_2.ContextMenuRenderer)
+    ], DebugEditorService.prototype, "contextMenu", void 0);
+    __decorate([
+        inversify_1.inject(debug_editor_model_1.DebugEditorModelFactory),
+        __metadata("design:type", Function)
+    ], DebugEditorService.prototype, "factory", void 0);
+    __decorate([
+        inversify_1.postConstruct(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", void 0)
+    ], DebugEditorService.prototype, "init", null);
+    DebugEditorService = __decorate([
+        inversify_1.injectable()
+    ], DebugEditorService);
+    return DebugEditorService;
+}());
+exports.DebugEditorService = DebugEditorService;
+
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/lib/browser/editor/debug-editor.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@theia/debug/lib/browser/editor/debug-editor.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/********************************************************************************
+ * Copyright (C) 2018 TypeFox and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DebugEditor = void 0;
+exports.DebugEditor = Symbol('DebugEditor');
+
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/lib/browser/editor/debug-exception-widget.js":
+/*!********************************************************************************!*\
+  !*** ./node_modules/@theia/debug/lib/browser/editor/debug-exception-widget.js ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/********************************************************************************
+ * Copyright (C) 2019 TypeFox and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DebugExceptionWidget = void 0;
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var ReactDOM = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
+var disposable_1 = __webpack_require__(/*! @theia/core/lib/common/disposable */ "./node_modules/@theia/core/lib/common/disposable.js");
+var monaco_editor_zone_widget_1 = __webpack_require__(/*! @theia/monaco/lib/browser/monaco-editor-zone-widget */ "./node_modules/@theia/monaco/lib/browser/monaco-editor-zone-widget.js");
+var debug_editor_1 = __webpack_require__(/*! ./debug-editor */ "./node_modules/@theia/debug/lib/browser/editor/debug-editor.js");
+var DebugExceptionWidget = /** @class */ (function () {
+    function DebugExceptionWidget() {
+        this.toDispose = new disposable_1.DisposableCollection();
+    }
+    DebugExceptionWidget.prototype.init = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                this.toDispose.push(this.zone = new monaco_editor_zone_widget_1.MonacoEditorZoneWidget(this.editor.getControl()));
+                this.zone.containerNode.classList.add('theia-debug-exception-widget');
+                this.toDispose.push(disposable_1.Disposable.create(function () { return ReactDOM.unmountComponentAtNode(_this.zone.containerNode); }));
+                return [2 /*return*/];
+            });
+        });
+    };
+    DebugExceptionWidget.prototype.dispose = function () {
+        this.toDispose.dispose();
+    };
+    DebugExceptionWidget.prototype.show = function (_a) {
+        var info = _a.info, lineNumber = _a.lineNumber, column = _a.column;
+        this.render(info);
+        var fontInfo = this.editor.getControl().getOption(monaco.editor.EditorOption.fontInfo);
+        this.zone.containerNode.style.fontSize = fontInfo.fontSize + "px";
+        this.zone.containerNode.style.lineHeight = fontInfo.lineHeight + "px";
+        if (lineNumber !== undefined && column !== undefined) {
+            var afterLineNumber = lineNumber;
+            var afterColumn = column;
+            var heightInLines = 0;
+            this.zone.show({ showFrame: true, afterLineNumber: afterLineNumber, afterColumn: afterColumn, heightInLines: heightInLines, frameWidth: 1 });
+        }
+    };
+    DebugExceptionWidget.prototype.hide = function () {
+        this.zone.hide();
+    };
+    DebugExceptionWidget.prototype.render = function (info) {
+        var _this = this;
+        var stackTrace = info.details && info.details.stackTrace;
+        ReactDOM.render(React.createElement(React.Fragment, null,
+            React.createElement("div", { className: 'title' }, info.id ? "Exception has occurred: " + info.id : 'Exception has occurred.'),
+            info.description && React.createElement("div", { className: 'description' }, info.description),
+            stackTrace && React.createElement("div", { className: 'stack-trace' }, stackTrace)), this.zone.containerNode, function () {
+            var lineHeight = _this.editor.getControl().getOption(monaco.editor.EditorOption.lineHeight);
+            var heightInLines = Math.ceil(_this.zone.containerNode.offsetHeight / lineHeight);
+            _this.zone.layout(heightInLines);
+        });
+    };
+    __decorate([
+        inversify_1.inject(debug_editor_1.DebugEditor),
+        __metadata("design:type", Object)
+    ], DebugExceptionWidget.prototype, "editor", void 0);
+    __decorate([
+        inversify_1.postConstruct(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", Promise)
+    ], DebugExceptionWidget.prototype, "init", null);
+    DebugExceptionWidget = __decorate([
+        inversify_1.injectable()
+    ], DebugExceptionWidget);
+    return DebugExceptionWidget;
+}());
+exports.DebugExceptionWidget = DebugExceptionWidget;
+
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/lib/browser/editor/debug-expression-provider.js":
+/*!***********************************************************************************!*\
+  !*** ./node_modules/@theia/debug/lib/browser/editor/debug-expression-provider.js ***!
+  \***********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/********************************************************************************
+ * Copyright (C) 2018 TypeFox and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation and others. All rights reserved.
+ *  Licensed under the MIT License. See https://github.com/Microsoft/vscode/blob/master/LICENSE.txt for license information.
+ *--------------------------------------------------------------------------------------------*/
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DebugExpressionProvider = void 0;
+var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
+/**
+ * TODO: introduce a new request to LSP to look up an expression range: https://github.com/Microsoft/language-server-protocol/issues/462
+ */
+var DebugExpressionProvider = /** @class */ (function () {
+    function DebugExpressionProvider() {
+    }
+    DebugExpressionProvider.prototype.get = function (model, selection) {
+        var lineContent = model.getLineContent(selection.startLineNumber);
+        var _a = this.getExactExpressionStartAndEnd(lineContent, selection.startColumn, selection.endColumn), start = _a.start, end = _a.end;
+        return lineContent.substring(start - 1, end);
+    };
+    DebugExpressionProvider.prototype.getExactExpressionStartAndEnd = function (lineContent, looseStart, looseEnd) {
+        var matchingExpression = undefined;
+        var startOffset = 0;
+        // Some example supported expressions: myVar.prop, a.b.c.d, myVar?.prop, myVar->prop, MyClass::StaticProp, *myVar
+        // Match any character except a set of characters which often break interesting sub-expressions
+        var expression = /([^()\[\]{}<>\s+\-/%~#^;=|,`!]|\->)+/g;
+        // eslint-disable-next-line no-null/no-null
+        var result = null;
+        // First find the full expression under the cursor
+        while (result = expression.exec(lineContent)) {
+            var start = result.index + 1;
+            var end = start + result[0].length;
+            if (start <= looseStart && end >= looseEnd) {
+                matchingExpression = result[0];
+                startOffset = start;
+                break;
+            }
+        }
+        // If there are non-word characters after the cursor, we want to truncate the expression then.
+        // For example in expression 'a.b.c.d', if the focus was under 'b', 'a.b' would be evaluated.
+        if (matchingExpression) {
+            var subExpression = /\w+/g;
+            // eslint-disable-next-line no-null/no-null
+            var subExpressionResult = null;
+            while (subExpressionResult = subExpression.exec(matchingExpression)) {
+                var subEnd = subExpressionResult.index + 1 + startOffset + subExpressionResult[0].length;
+                if (subEnd >= looseEnd) {
+                    break;
+                }
+            }
+            if (subExpressionResult) {
+                matchingExpression = matchingExpression.substring(0, subExpression.lastIndex);
+            }
+        }
+        return matchingExpression ?
+            { start: startOffset, end: startOffset + matchingExpression.length - 1 } :
+            { start: 0, end: 0 };
+    };
+    DebugExpressionProvider = __decorate([
+        inversify_1.injectable()
+    ], DebugExpressionProvider);
+    return DebugExpressionProvider;
+}());
+exports.DebugExpressionProvider = DebugExpressionProvider;
+
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/lib/browser/editor/debug-hover-source.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/@theia/debug/lib/browser/editor/debug-hover-source.js ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/********************************************************************************
+ * Copyright (C) 2018 TypeFox and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
 var __read = (this && this.__read) || function (o, n) {
     var m = typeof Symbol === "function" && o[Symbol.iterator];
     if (!m) return o;
@@ -1991,190 +4064,198 @@ var __values = (this && this.__values) || function(o) {
     throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.MonacoThemeRegistry = void 0;
-/* eslint-disable @typescript-eslint/no-explicit-any */
+exports.DebugHoverSource = void 0;
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var source_tree_1 = __webpack_require__(/*! @theia/core/lib/browser/source-tree */ "./node_modules/@theia/core/lib/browser/source-tree/index.js");
+var debug_console_items_1 = __webpack_require__(/*! ../console/debug-console-items */ "./node_modules/@theia/debug/lib/browser/console/debug-console-items.js");
+var debug_session_manager_1 = __webpack_require__(/*! ../debug-session-manager */ "./node_modules/@theia/debug/lib/browser/debug-session-manager.js");
 var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
-var vscode_textmate_1 = __webpack_require__(/*! vscode-textmate */ "./node_modules/vscode-textmate/release/main.js");
-var MonacoThemeRegistry = /** @class */ (function () {
-    function MonacoThemeRegistry() {
+var DebugHoverSource = /** @class */ (function (_super) {
+    __extends(DebugHoverSource, _super);
+    function DebugHoverSource() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.elements = [];
+        return _this;
     }
-    MonacoThemeRegistry.prototype.getThemeData = function (name) {
-        var theme = this.doGetTheme(name);
-        return theme && theme.themeData;
+    Object.defineProperty(DebugHoverSource.prototype, "expression", {
+        get: function () {
+            return this._expression;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    DebugHoverSource.prototype.getElements = function () {
+        return this.elements[Symbol.iterator]();
     };
-    MonacoThemeRegistry.prototype.getTheme = function (name) {
-        return this.doGetTheme(name);
+    DebugHoverSource.prototype.renderTitle = function (element) {
+        return React.createElement("div", { className: 'theia-debug-hover-title', title: element.value }, element.value);
     };
-    MonacoThemeRegistry.prototype.doGetTheme = function (name) {
-        var standaloneThemeService = monaco.services.StaticServices.standaloneThemeService.get();
-        var theme = !name ? standaloneThemeService.getTheme() : standaloneThemeService._knownThemes.get(name);
-        return theme;
+    DebugHoverSource.prototype.reset = function () {
+        this._expression = undefined;
+        this.elements = [];
+        this.fireDidChange();
     };
-    MonacoThemeRegistry.prototype.setTheme = function (name, data) {
-        // monaco auto refreshes a theme with new data
-        monaco.editor.defineTheme(name, data);
-    };
-    /**
-     * Register VS Code compatible themes
-     */
-    MonacoThemeRegistry.prototype.register = function (json, includes, givenName, monacoBase) {
-        var _a, _b, e_1, _c, e_2, _d;
-        var name = givenName || json.name;
-        var result = {
-            name: name,
-            base: monacoBase || 'vs',
-            inherit: true,
-            colors: {},
-            rules: [],
-            settings: []
-        };
-        if (typeof json.include !== 'undefined') {
-            if (!includes || !includes[json.include]) {
-                console.error("Couldn't resolve includes theme " + json.include + ".");
-            }
-            else {
-                var parentTheme = this.register(includes[json.include], includes);
-                Object.assign(result.colors, parentTheme.colors);
-                (_a = result.rules).push.apply(_a, __spread(parentTheme.rules));
-                (_b = result.settings).push.apply(_b, __spread(parentTheme.settings));
-            }
-        }
-        var tokenColors = json.tokenColors;
-        if (Array.isArray(tokenColors)) {
-            try {
-                for (var tokenColors_1 = __values(tokenColors), tokenColors_1_1 = tokenColors_1.next(); !tokenColors_1_1.done; tokenColors_1_1 = tokenColors_1.next()) {
-                    var tokenColor = tokenColors_1_1.value;
-                    if (tokenColor.scope && tokenColor.settings) {
-                        result.settings.push({
-                            scope: tokenColor.scope,
-                            settings: {
-                                foreground: this.normalizeColor(tokenColor.settings.foreground),
-                                background: this.normalizeColor(tokenColor.settings.background),
-                                fontStyle: tokenColor.settings.fontStyle
-                            }
-                        });
-                    }
-                }
-            }
-            catch (e_1_1) { e_1 = { error: e_1_1 }; }
-            finally {
-                try {
-                    if (tokenColors_1_1 && !tokenColors_1_1.done && (_c = tokenColors_1.return)) _c.call(tokenColors_1);
-                }
-                finally { if (e_1) throw e_1.error; }
-            }
-        }
-        if (json.colors) {
-            Object.assign(result.colors, json.colors);
-            result.encodedTokensColors = Object.keys(result.colors).map(function (key) { return result.colors[key]; });
-        }
-        if (monacoBase && givenName) {
-            try {
-                for (var _e = __values(result.settings), _f = _e.next(); !_f.done; _f = _e.next()) {
-                    var setting = _f.value;
-                    this.transform(setting, function (rule) { return result.rules.push(rule); });
-                }
-            }
-            catch (e_2_1) { e_2 = { error: e_2_1 }; }
-            finally {
-                try {
-                    if (_f && !_f.done && (_d = _e.return)) _d.call(_e);
-                }
-                finally { if (e_2) throw e_2.error; }
-            }
-            // the default rule (scope empty) is always the first rule. Ignore all other default rules.
-            var defaultTheme = monaco.services.StaticServices.standaloneThemeService.get()._knownThemes.get(result.base);
-            var foreground = result.colors['editor.foreground'] || defaultTheme.getColor('editor.foreground');
-            var background = result.colors['editor.background'] || defaultTheme.getColor('editor.background');
-            result.settings.unshift({
-                settings: {
-                    foreground: this.normalizeColor(foreground),
-                    background: this.normalizeColor(background)
+    DebugHoverSource.prototype.evaluate = function (expression) {
+        return __awaiter(this, void 0, void 0, function () {
+            var evaluated, elements, _a;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0: return [4 /*yield*/, this.doEvaluate(expression)];
+                    case 1:
+                        evaluated = _b.sent();
+                        _a = evaluated;
+                        if (!_a) return [3 /*break*/, 3];
+                        return [4 /*yield*/, evaluated.getElements()];
+                    case 2:
+                        _a = (_b.sent());
+                        _b.label = 3;
+                    case 3:
+                        elements = _a;
+                        this._expression = evaluated;
+                        this.elements = elements ? __spread(elements) : [];
+                        this.fireDidChange();
+                        return [2 /*return*/, !!evaluated];
                 }
             });
-            var reg = new vscode_textmate_1.Registry();
-            reg.setTheme(result);
-            result.encodedTokensColors = reg.getColorMap();
-            // index 0 has to be set to null as it is 'undefined' by default, but monaco code expects it to be null
-            // eslint-disable-next-line no-null/no-null
-            result.encodedTokensColors[0] = null;
-            this.setTheme(givenName, result);
-        }
-        return result;
+        });
     };
-    MonacoThemeRegistry.prototype.transform = function (tokenColor, acceptor) {
-        var e_3, _a;
-        if (typeof tokenColor.scope === 'undefined') {
-            tokenColor.scope = [''];
-        }
-        else if (typeof tokenColor.scope === 'string') {
-            tokenColor.scope = tokenColor.scope.split(',').map(function (scope) { return scope.trim(); });
-        }
-        try {
-            for (var _b = __values(tokenColor.scope), _c = _b.next(); !_c.done; _c = _b.next()) {
-                var scope = _c.value;
-                acceptor(__assign(__assign({}, tokenColor.settings), { token: scope }));
-            }
-        }
-        catch (e_3_1) { e_3 = { error: e_3_1 }; }
-        finally {
-            try {
-                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
-            }
-            finally { if (e_3) throw e_3.error; }
-        }
+    DebugHoverSource.prototype.doEvaluate = function (expression) {
+        return __awaiter(this, void 0, void 0, function () {
+            var currentSession, item;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        currentSession = this.sessions.currentSession;
+                        if (!currentSession) {
+                            return [2 /*return*/, undefined];
+                        }
+                        if (!currentSession.capabilities.supportsEvaluateForHovers) return [3 /*break*/, 2];
+                        item = new debug_console_items_1.ExpressionItem(expression, function () { return currentSession; });
+                        return [4 /*yield*/, item.evaluate('hover')];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/, item.available && item || undefined];
+                    case 2: return [2 /*return*/, this.findVariable(expression.split('.').map(function (word) { return word.trim(); }).filter(function (word) { return !!word; }))];
+                }
+            });
+        });
     };
-    MonacoThemeRegistry.prototype.normalizeColor = function (color) {
-        if (!color) {
-            return undefined;
-        }
-        var normalized = String(color).replace(/^\#/, '').slice(0, 6);
-        if (normalized.length < 6) {
-            // ignoring not normalized colors to avoid breaking token color indexes between monaco and vscode-textmate
-            console.error("Color '" + normalized + "' is NOT normalized, it must have 6 positions.");
-            return undefined;
-        }
-        return '#' + normalized;
+    DebugHoverSource.prototype.findVariable = function (namesToFind) {
+        return __awaiter(this, void 0, void 0, function () {
+            var currentFrame, variable, scopes, scopes_1, scopes_1_1, scope, found, e_1_1;
+            var e_1, _a;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        currentFrame = this.sessions.currentFrame;
+                        if (!currentFrame) {
+                            return [2 /*return*/, undefined];
+                        }
+                        return [4 /*yield*/, currentFrame.getScopes()];
+                    case 1:
+                        scopes = _b.sent();
+                        _b.label = 2;
+                    case 2:
+                        _b.trys.push([2, 7, 8, 9]);
+                        scopes_1 = __values(scopes), scopes_1_1 = scopes_1.next();
+                        _b.label = 3;
+                    case 3:
+                        if (!!scopes_1_1.done) return [3 /*break*/, 6];
+                        scope = scopes_1_1.value;
+                        return [4 /*yield*/, this.doFindVariable(scope, namesToFind)];
+                    case 4:
+                        found = _b.sent();
+                        if (!variable) {
+                            variable = found;
+                        }
+                        else if (found && found.value !== variable.value) {
+                            // only show if all expressions found have the same value
+                            return [2 /*return*/, undefined];
+                        }
+                        _b.label = 5;
+                    case 5:
+                        scopes_1_1 = scopes_1.next();
+                        return [3 /*break*/, 3];
+                    case 6: return [3 /*break*/, 9];
+                    case 7:
+                        e_1_1 = _b.sent();
+                        e_1 = { error: e_1_1 };
+                        return [3 /*break*/, 9];
+                    case 8:
+                        try {
+                            if (scopes_1_1 && !scopes_1_1.done && (_a = scopes_1.return)) _a.call(scopes_1);
+                        }
+                        finally { if (e_1) throw e_1.error; }
+                        return [7 /*endfinally*/];
+                    case 9: return [2 /*return*/, variable];
+                }
+            });
+        });
     };
-    MonacoThemeRegistry = __decorate([
+    DebugHoverSource.prototype.doFindVariable = function (owner, namesToFind) {
+        return __awaiter(this, void 0, void 0, function () {
+            var elements, variables, elements_1, elements_1_1, element;
+            var e_2, _a;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0: return [4 /*yield*/, owner.getElements()];
+                    case 1:
+                        elements = _b.sent();
+                        variables = [];
+                        try {
+                            for (elements_1 = __values(elements), elements_1_1 = elements_1.next(); !elements_1_1.done; elements_1_1 = elements_1.next()) {
+                                element = elements_1_1.value;
+                                if (element instanceof debug_console_items_1.DebugVariable && element.name === namesToFind[0]) {
+                                    variables.push(element);
+                                }
+                            }
+                        }
+                        catch (e_2_1) { e_2 = { error: e_2_1 }; }
+                        finally {
+                            try {
+                                if (elements_1_1 && !elements_1_1.done && (_a = elements_1.return)) _a.call(elements_1);
+                            }
+                            finally { if (e_2) throw e_2.error; }
+                        }
+                        if (variables.length !== 1) {
+                            return [2 /*return*/, undefined];
+                        }
+                        if (namesToFind.length === 1) {
+                            return [2 /*return*/, variables[0]];
+                        }
+                        else {
+                            return [2 /*return*/, this.doFindVariable(variables[0], namesToFind.slice(1))];
+                        }
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    __decorate([
+        inversify_1.inject(debug_session_manager_1.DebugSessionManager),
+        __metadata("design:type", debug_session_manager_1.DebugSessionManager)
+    ], DebugHoverSource.prototype, "sessions", void 0);
+    DebugHoverSource = __decorate([
         inversify_1.injectable()
-    ], MonacoThemeRegistry);
-    return MonacoThemeRegistry;
-}());
-exports.MonacoThemeRegistry = MonacoThemeRegistry;
-(function (MonacoThemeRegistry) {
-    MonacoThemeRegistry.SINGLETON = new MonacoThemeRegistry();
-    MonacoThemeRegistry.DARK_DEFAULT_THEME = MonacoThemeRegistry.SINGLETON.register(__webpack_require__(/*! ../../../data/monaco-themes/vscode/dark_theia.json */ "./node_modules/@theia/monaco/data/monaco-themes/vscode/dark_theia.json"), {
-        './dark_defaults.json': __webpack_require__(/*! ../../../data/monaco-themes/vscode/dark_defaults.json */ "./node_modules/@theia/monaco/data/monaco-themes/vscode/dark_defaults.json"),
-        './dark_vs.json': __webpack_require__(/*! ../../../data/monaco-themes/vscode/dark_vs.json */ "./node_modules/@theia/monaco/data/monaco-themes/vscode/dark_vs.json"),
-        './dark_plus.json': __webpack_require__(/*! ../../../data/monaco-themes/vscode/dark_plus.json */ "./node_modules/@theia/monaco/data/monaco-themes/vscode/dark_plus.json")
-    }, 'dark-theia', 'vs-dark').name;
-    MonacoThemeRegistry.LIGHT_DEFAULT_THEME = MonacoThemeRegistry.SINGLETON.register(__webpack_require__(/*! ../../../data/monaco-themes/vscode/light_theia.json */ "./node_modules/@theia/monaco/data/monaco-themes/vscode/light_theia.json"), {
-        './light_defaults.json': __webpack_require__(/*! ../../../data/monaco-themes/vscode/light_defaults.json */ "./node_modules/@theia/monaco/data/monaco-themes/vscode/light_defaults.json"),
-        './light_vs.json': __webpack_require__(/*! ../../../data/monaco-themes/vscode/light_vs.json */ "./node_modules/@theia/monaco/data/monaco-themes/vscode/light_vs.json"),
-        './light_plus.json': __webpack_require__(/*! ../../../data/monaco-themes/vscode/light_plus.json */ "./node_modules/@theia/monaco/data/monaco-themes/vscode/light_plus.json"),
-    }, 'light-theia', 'vs').name;
-    MonacoThemeRegistry.HC_DEFAULT_THEME = MonacoThemeRegistry.SINGLETON.register(__webpack_require__(/*! ../../../data/monaco-themes/vscode/hc_theia.json */ "./node_modules/@theia/monaco/data/monaco-themes/vscode/hc_theia.json"), {
-        './hc_black_defaults.json': __webpack_require__(/*! ../../../data/monaco-themes/vscode/hc_black_defaults.json */ "./node_modules/@theia/monaco/data/monaco-themes/vscode/hc_black_defaults.json"),
-        './hc_black.json': __webpack_require__(/*! ../../../data/monaco-themes/vscode/hc_black.json */ "./node_modules/@theia/monaco/data/monaco-themes/vscode/hc_black.json")
-    }, 'hc-theia', 'hc-black').name;
-})(MonacoThemeRegistry = exports.MonacoThemeRegistry || (exports.MonacoThemeRegistry = {}));
-exports.MonacoThemeRegistry = MonacoThemeRegistry;
+    ], DebugHoverSource);
+    return DebugHoverSource;
+}(source_tree_1.TreeSource));
+exports.DebugHoverSource = DebugHoverSource;
 
 
 /***/ }),
 
-/***/ "./node_modules/@theia/monaco/lib/browser/textmate/textmate-contribution.js":
-/*!**********************************************************************************!*\
-  !*** ./node_modules/@theia/monaco/lib/browser/textmate/textmate-contribution.js ***!
-  \**********************************************************************************/
+/***/ "./node_modules/@theia/debug/lib/browser/editor/debug-hover-widget.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/@theia/debug/lib/browser/editor/debug-hover-widget.js ***!
+  \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 /********************************************************************************
- * Copyright (C) 2018 Ericsson and others.
+ * Copyright (C) 2018 TypeFox and others.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0 which is available at
@@ -2188,49 +4269,603 @@ exports.MonacoThemeRegistry = MonacoThemeRegistry;
  *
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.getEncodedLanguageId = exports.LanguageGrammarDefinitionContribution = void 0;
-/**
- * Callback for extensions to contribute language grammar definitions
- */
-exports.LanguageGrammarDefinitionContribution = Symbol('LanguageGrammarDefinitionContribution');
-function getEncodedLanguageId(languageId) {
-    return monaco.languages.getEncodedLanguageId(languageId);
-}
-exports.getEncodedLanguageId = getEncodedLanguageId;
-
-
-/***/ }),
-
-/***/ "./node_modules/@theia/monaco/lib/browser/textmate/textmate-registry.js":
-/*!******************************************************************************!*\
-  !*** ./node_modules/@theia/monaco/lib/browser/textmate/textmate-registry.js ***!
-  \******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/********************************************************************************
- * Copyright (C) 2018 Ericsson and others.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Eclipse Public License v. 2.0 which is available at
- * http://www.eclipse.org/legal/epl-2.0.
- *
- * This Source Code may also be made available under the following Secondary
- * Licenses when the conditions for such availability set forth in the Eclipse
- * Public License v. 2.0 are satisfied: GNU General Public License, version 2
- * with the GNU Classpath Exception which is available at
- * https://www.gnu.org/software/classpath/license.html.
- *
- * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
- ********************************************************************************/
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DebugHoverWidget = exports.createDebugHoverWidgetContainer = void 0;
+var debounce = __webpack_require__(/*! lodash.debounce */ "./node_modules/lodash.debounce/index.js");
+var widgets_1 = __webpack_require__(/*! @phosphor/widgets */ "./node_modules/@phosphor/widgets/lib/index.js");
+var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
+var browser_1 = __webpack_require__(/*! @theia/core/lib/browser */ "./node_modules/@theia/core/lib/browser/index.js");
+var source_tree_1 = __webpack_require__(/*! @theia/core/lib/browser/source-tree */ "./node_modules/@theia/core/lib/browser/source-tree/index.js");
+var disposable_1 = __webpack_require__(/*! @theia/core/lib/common/disposable */ "./node_modules/@theia/core/lib/common/disposable.js");
+var debug_session_manager_1 = __webpack_require__(/*! ../debug-session-manager */ "./node_modules/@theia/debug/lib/browser/debug-session-manager.js");
+var debug_editor_1 = __webpack_require__(/*! ./debug-editor */ "./node_modules/@theia/debug/lib/browser/editor/debug-editor.js");
+var debug_expression_provider_1 = __webpack_require__(/*! ./debug-expression-provider */ "./node_modules/@theia/debug/lib/browser/editor/debug-expression-provider.js");
+var debug_hover_source_1 = __webpack_require__(/*! ./debug-hover-source */ "./node_modules/@theia/debug/lib/browser/editor/debug-hover-source.js");
+function createDebugHoverWidgetContainer(parent, editor) {
+    var child = source_tree_1.SourceTreeWidget.createContainer(parent, {
+        virtualized: false
+    });
+    child.bind(debug_editor_1.DebugEditor).toConstantValue(editor);
+    child.bind(debug_hover_source_1.DebugHoverSource).toSelf();
+    child.unbind(source_tree_1.SourceTreeWidget);
+    child.bind(debug_expression_provider_1.DebugExpressionProvider).toSelf();
+    child.bind(DebugHoverWidget).toSelf();
+    return child;
+}
+exports.createDebugHoverWidgetContainer = createDebugHoverWidgetContainer;
+var DebugHoverWidget = /** @class */ (function (_super) {
+    __extends(DebugHoverWidget, _super);
+    function DebugHoverWidget() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.toDispose = new disposable_1.DisposableCollection();
+        _this.allowEditorOverflow = true;
+        _this.domNode = document.createElement('div');
+        _this.titleNode = document.createElement('div');
+        _this.contentNode = document.createElement('div');
+        _this.doSchedule = debounce(function (fn) { return fn(); }, 300);
+        return _this;
+    }
+    DebugHoverWidget_1 = DebugHoverWidget;
+    DebugHoverWidget.prototype.getId = function () {
+        return DebugHoverWidget_1.ID;
+    };
+    DebugHoverWidget.prototype.getDomNode = function () {
+        return this.domNode;
+    };
+    DebugHoverWidget.prototype.init = function () {
+        var _this = this;
+        _super.prototype.init.call(this);
+        this.domNode.className = 'theia-debug-hover';
+        this.titleNode.className = 'theia-debug-hover-title';
+        this.domNode.appendChild(this.titleNode);
+        this.contentNode.className = 'theia-debug-hover-content';
+        this.domNode.appendChild(this.contentNode);
+        this.editor.getControl().addContentWidget(this);
+        this.source = this.hoverSource;
+        this.toDispose.pushAll([
+            this.hoverSource,
+            disposable_1.Disposable.create(function () { return _this.editor.getControl().removeContentWidget(_this); }),
+            disposable_1.Disposable.create(function () { return _this.hide(); }),
+            this.sessions.onDidChange(function () {
+                if (!_this.isEditorFrame()) {
+                    _this.hide();
+                }
+            })
+        ]);
+    };
+    DebugHoverWidget.prototype.dispose = function () {
+        this.toDispose.dispose();
+    };
+    DebugHoverWidget.prototype.show = function (options) {
+        var _this = this;
+        this.schedule(function () { return _this.doShow(options); }, options && options.immediate);
+    };
+    DebugHoverWidget.prototype.hide = function (options) {
+        var _this = this;
+        this.schedule(function () { return _this.doHide(); }, options && options.immediate);
+    };
+    DebugHoverWidget.prototype.schedule = function (fn, immediate) {
+        if (immediate === void 0) { immediate = true; }
+        if (immediate) {
+            this.doSchedule.cancel();
+            fn();
+        }
+        else {
+            this.doSchedule(fn);
+        }
+    };
+    DebugHoverWidget.prototype.doHide = function () {
+        if (!this.isVisible) {
+            return;
+        }
+        if (this.domNode.contains(document.activeElement)) {
+            this.editor.getControl().focus();
+        }
+        if (this.isAttached) {
+            widgets_1.Widget.detach(this);
+        }
+        this.hoverSource.reset();
+        _super.prototype.hide.call(this);
+        this.options = undefined;
+        this.editor.getControl().layoutContentWidget(this);
+    };
+    DebugHoverWidget.prototype.doShow = function (options) {
+        if (options === void 0) { options = this.options; }
+        return __awaiter(this, void 0, void 0, function () {
+            var expression, toFocus;
+            var _this = this;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        if (!this.isEditorFrame()) {
+                            this.hide();
+                            return [2 /*return*/];
+                        }
+                        if (!options) {
+                            this.hide();
+                            return [2 /*return*/];
+                        }
+                        if (this.options && this.options.selection.equalsRange(options.selection)) {
+                            return [2 /*return*/];
+                        }
+                        if (!this.isAttached) {
+                            widgets_1.Widget.attach(this, this.contentNode);
+                        }
+                        _super.prototype.show.call(this);
+                        this.options = options;
+                        expression = this.expressionProvider.get(this.editor.getControl().getModel(), options.selection);
+                        if (!expression) {
+                            this.hide();
+                            return [2 /*return*/];
+                        }
+                        toFocus = new disposable_1.DisposableCollection();
+                        if (this.options.focus === true) {
+                            toFocus.push(this.model.onNodeRefreshed(function () {
+                                toFocus.dispose();
+                                _this.activate();
+                            }));
+                        }
+                        return [4 /*yield*/, this.hoverSource.evaluate(expression)];
+                    case 1:
+                        if (!(_a.sent())) {
+                            toFocus.dispose();
+                            this.hide();
+                            return [2 /*return*/];
+                        }
+                        this.editor.getControl().layoutContentWidget(this);
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    DebugHoverWidget.prototype.isEditorFrame = function () {
+        var currentFrame = this.sessions.currentFrame;
+        return !!currentFrame && !!currentFrame.source &&
+            this.editor.getControl().getModel().uri.toString() === currentFrame.source.uri.toString();
+    };
+    DebugHoverWidget.prototype.getPosition = function () {
+        if (!this.isVisible) {
+            return undefined;
+        }
+        var position = this.options && this.options.selection.getStartPosition();
+        var word = position && this.editor.getControl().getModel().getWordAtPosition(position);
+        return position && word ? {
+            position: new monaco.Position(position.lineNumber, word.startColumn),
+            preference: [
+                monaco.editor.ContentWidgetPositionPreference.ABOVE,
+                monaco.editor.ContentWidgetPositionPreference.BELOW
+            ]
+        } : undefined;
+    };
+    DebugHoverWidget.prototype.onUpdateRequest = function (msg) {
+        _super.prototype.onUpdateRequest.call(this, msg);
+        var expression = this.hoverSource.expression;
+        var value = expression && expression.value || '';
+        this.titleNode.textContent = value;
+        this.titleNode.title = value;
+    };
+    DebugHoverWidget.prototype.onAfterAttach = function (msg) {
+        var _this = this;
+        _super.prototype.onAfterAttach.call(this, msg);
+        this.addKeyListener(this.domNode, browser_1.Key.ESCAPE, function () { return _this.hide(); });
+    };
+    var DebugHoverWidget_1;
+    DebugHoverWidget.ID = 'debug.editor.hover';
+    __decorate([
+        inversify_1.inject(debug_editor_1.DebugEditor),
+        __metadata("design:type", Object)
+    ], DebugHoverWidget.prototype, "editor", void 0);
+    __decorate([
+        inversify_1.inject(debug_session_manager_1.DebugSessionManager),
+        __metadata("design:type", debug_session_manager_1.DebugSessionManager)
+    ], DebugHoverWidget.prototype, "sessions", void 0);
+    __decorate([
+        inversify_1.inject(debug_hover_source_1.DebugHoverSource),
+        __metadata("design:type", debug_hover_source_1.DebugHoverSource)
+    ], DebugHoverWidget.prototype, "hoverSource", void 0);
+    __decorate([
+        inversify_1.inject(debug_expression_provider_1.DebugExpressionProvider),
+        __metadata("design:type", debug_expression_provider_1.DebugExpressionProvider)
+    ], DebugHoverWidget.prototype, "expressionProvider", void 0);
+    __decorate([
+        inversify_1.postConstruct(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", void 0)
+    ], DebugHoverWidget.prototype, "init", null);
+    DebugHoverWidget = DebugHoverWidget_1 = __decorate([
+        inversify_1.injectable()
+    ], DebugHoverWidget);
+    return DebugHoverWidget;
+}(source_tree_1.SourceTreeWidget));
+exports.DebugHoverWidget = DebugHoverWidget;
+
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/lib/browser/view/debug-action.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@theia/debug/lib/browser/view/debug-action.js ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/********************************************************************************
+ * Copyright (C) 2018 TypeFox and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DebugAction = void 0;
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var browser_1 = __webpack_require__(/*! @theia/core/lib/browser */ "./node_modules/@theia/core/lib/browser/index.js");
+var DebugAction = /** @class */ (function (_super) {
+    __extends(DebugAction, _super);
+    function DebugAction() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.setRef = function (ref) { return _this.ref = ref || undefined; };
+        return _this;
+    }
+    DebugAction.prototype.render = function () {
+        var _a = this.props, enabled = _a.enabled, label = _a.label, iconClass = _a.iconClass;
+        var classNames = ['debug-action', 'theia-debug-' + iconClass];
+        if (enabled === false) {
+            classNames.push(browser_1.DISABLED_CLASS);
+        }
+        return React.createElement("span", { tabIndex: 0, className: classNames.join(' '), title: label, onClick: this.props.run, ref: this.setRef });
+    };
+    DebugAction.prototype.focus = function () {
+        if (this.ref) {
+            this.ref.focus();
+        }
+    };
+    return DebugAction;
+}(React.Component));
+exports.DebugAction = DebugAction;
+
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/lib/browser/view/debug-breakpoints-source.js":
+/*!********************************************************************************!*\
+  !*** ./node_modules/@theia/debug/lib/browser/view/debug-breakpoints-source.js ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/********************************************************************************
+ * Copyright (C) 2018 TypeFox and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+var __values = (this && this.__values) || function(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+    if (m) return m.call(o);
+    if (o && typeof o.length === "number") return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DebugBreakpointsSource = void 0;
+var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
+var source_tree_1 = __webpack_require__(/*! @theia/core/lib/browser/source-tree */ "./node_modules/@theia/core/lib/browser/source-tree/index.js");
+var debug_view_model_1 = __webpack_require__(/*! ./debug-view-model */ "./node_modules/@theia/debug/lib/browser/view/debug-view-model.js");
+var breakpoint_manager_1 = __webpack_require__(/*! ../breakpoint/breakpoint-manager */ "./node_modules/@theia/debug/lib/browser/breakpoint/breakpoint-manager.js");
+var debug_exception_breakpoint_1 = __webpack_require__(/*! ./debug-exception-breakpoint */ "./node_modules/@theia/debug/lib/browser/view/debug-exception-breakpoint.js");
+var DebugBreakpointsSource = /** @class */ (function (_super) {
+    __extends(DebugBreakpointsSource, _super);
+    function DebugBreakpointsSource() {
+        return _super.call(this, {
+            placeholder: 'No breakpoints'
+        }) || this;
+    }
+    DebugBreakpointsSource.prototype.init = function () {
+        var _this = this;
+        this.fireDidChange();
+        this.toDispose.push(this.model.onDidChangeBreakpoints(function () { return _this.fireDidChange(); }));
+    };
+    DebugBreakpointsSource.prototype.getElements = function () {
+        var _a, _b, exceptionBreakpoint, e_1_1, _c, _d, functionBreakpoint, e_2_1, _e, _f, breakpoint, e_3_1;
+        var e_1, _g, e_2, _h, e_3, _j;
+        return __generator(this, function (_k) {
+            switch (_k.label) {
+                case 0:
+                    _k.trys.push([0, 5, 6, 7]);
+                    _a = __values(this.breakpoints.getExceptionBreakpoints()), _b = _a.next();
+                    _k.label = 1;
+                case 1:
+                    if (!!_b.done) return [3 /*break*/, 4];
+                    exceptionBreakpoint = _b.value;
+                    return [4 /*yield*/, new debug_exception_breakpoint_1.DebugExceptionBreakpoint(exceptionBreakpoint, this.breakpoints)];
+                case 2:
+                    _k.sent();
+                    _k.label = 3;
+                case 3:
+                    _b = _a.next();
+                    return [3 /*break*/, 1];
+                case 4: return [3 /*break*/, 7];
+                case 5:
+                    e_1_1 = _k.sent();
+                    e_1 = { error: e_1_1 };
+                    return [3 /*break*/, 7];
+                case 6:
+                    try {
+                        if (_b && !_b.done && (_g = _a.return)) _g.call(_a);
+                    }
+                    finally { if (e_1) throw e_1.error; }
+                    return [7 /*endfinally*/];
+                case 7:
+                    _k.trys.push([7, 12, 13, 14]);
+                    _c = __values(this.model.functionBreakpoints), _d = _c.next();
+                    _k.label = 8;
+                case 8:
+                    if (!!_d.done) return [3 /*break*/, 11];
+                    functionBreakpoint = _d.value;
+                    return [4 /*yield*/, functionBreakpoint];
+                case 9:
+                    _k.sent();
+                    _k.label = 10;
+                case 10:
+                    _d = _c.next();
+                    return [3 /*break*/, 8];
+                case 11: return [3 /*break*/, 14];
+                case 12:
+                    e_2_1 = _k.sent();
+                    e_2 = { error: e_2_1 };
+                    return [3 /*break*/, 14];
+                case 13:
+                    try {
+                        if (_d && !_d.done && (_h = _c.return)) _h.call(_c);
+                    }
+                    finally { if (e_2) throw e_2.error; }
+                    return [7 /*endfinally*/];
+                case 14:
+                    _k.trys.push([14, 19, 20, 21]);
+                    _e = __values(this.model.breakpoints), _f = _e.next();
+                    _k.label = 15;
+                case 15:
+                    if (!!_f.done) return [3 /*break*/, 18];
+                    breakpoint = _f.value;
+                    return [4 /*yield*/, breakpoint];
+                case 16:
+                    _k.sent();
+                    _k.label = 17;
+                case 17:
+                    _f = _e.next();
+                    return [3 /*break*/, 15];
+                case 18: return [3 /*break*/, 21];
+                case 19:
+                    e_3_1 = _k.sent();
+                    e_3 = { error: e_3_1 };
+                    return [3 /*break*/, 21];
+                case 20:
+                    try {
+                        if (_f && !_f.done && (_j = _e.return)) _j.call(_e);
+                    }
+                    finally { if (e_3) throw e_3.error; }
+                    return [7 /*endfinally*/];
+                case 21: return [2 /*return*/];
+            }
+        });
+    };
+    __decorate([
+        inversify_1.inject(debug_view_model_1.DebugViewModel),
+        __metadata("design:type", debug_view_model_1.DebugViewModel)
+    ], DebugBreakpointsSource.prototype, "model", void 0);
+    __decorate([
+        inversify_1.inject(breakpoint_manager_1.BreakpointManager),
+        __metadata("design:type", breakpoint_manager_1.BreakpointManager)
+    ], DebugBreakpointsSource.prototype, "breakpoints", void 0);
+    __decorate([
+        inversify_1.postConstruct(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", void 0)
+    ], DebugBreakpointsSource.prototype, "init", null);
+    DebugBreakpointsSource = __decorate([
+        inversify_1.injectable(),
+        __metadata("design:paramtypes", [])
+    ], DebugBreakpointsSource);
+    return DebugBreakpointsSource;
+}(source_tree_1.TreeSource));
+exports.DebugBreakpointsSource = DebugBreakpointsSource;
+
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/lib/browser/view/debug-breakpoints-widget.js":
+/*!********************************************************************************!*\
+  !*** ./node_modules/@theia/debug/lib/browser/view/debug-breakpoints-widget.js ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/********************************************************************************
+ * Copyright (C) 2018 TypeFox and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var __read = (this && this.__read) || function (o, n) {
     var m = typeof Symbol === "function" && o[Symbol.iterator];
@@ -2248,136 +4883,299 @@ var __read = (this && this.__read) || function (o, n) {
     }
     return ar;
 };
-var __values = (this && this.__values) || function(o) {
-    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
-    if (m) return m.call(o);
-    if (o && typeof o.length === "number") return {
-        next: function () {
-            if (o && i >= o.length) o = void 0;
-            return { value: o && o[i++], done: !o };
-        }
-    };
-    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+var __spread = (this && this.__spread) || function () {
+    for (var ar = [], i = 0; i < arguments.length; i++) ar = ar.concat(__read(arguments[i]));
+    return ar;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TextmateRegistry = void 0;
+exports.DebugBreakpointsWidget = void 0;
 var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
-var disposable_1 = __webpack_require__(/*! @theia/core/lib/common/disposable */ "./node_modules/@theia/core/lib/common/disposable.js");
-var TextmateRegistry = /** @class */ (function () {
-    function TextmateRegistry() {
-        this.scopeToProvider = new Map();
-        this.languageToConfig = new Map();
-        this.languageIdToScope = new Map();
+var source_tree_1 = __webpack_require__(/*! @theia/core/lib/browser/source-tree */ "./node_modules/@theia/core/lib/browser/source-tree/index.js");
+var debug_breakpoints_source_1 = __webpack_require__(/*! ./debug-breakpoints-source */ "./node_modules/@theia/debug/lib/browser/view/debug-breakpoints-source.js");
+var breakpoint_manager_1 = __webpack_require__(/*! ../breakpoint/breakpoint-manager */ "./node_modules/@theia/debug/lib/browser/breakpoint/breakpoint-manager.js");
+var debug_view_model_1 = __webpack_require__(/*! ./debug-view-model */ "./node_modules/@theia/debug/lib/browser/view/debug-view-model.js");
+var DebugBreakpointsWidget = /** @class */ (function (_super) {
+    __extends(DebugBreakpointsWidget, _super);
+    function DebugBreakpointsWidget() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
-    Object.defineProperty(TextmateRegistry.prototype, "languages", {
-        get: function () {
-            return this.languageIdToScope.keys();
-        },
-        enumerable: false,
-        configurable: true
-    });
-    TextmateRegistry.prototype.registerTextmateGrammarScope = function (scope, provider) {
-        var providers = this.scopeToProvider.get(scope) || [];
-        var existingProvider = providers[0];
-        if (existingProvider) {
-            Promise.all([existingProvider.getGrammarDefinition(), provider.getGrammarDefinition()]).then(function (_a) {
-                var _b = __read(_a, 2), a = _b[0], b = _b[1];
-                if (a.location !== b.location || !a.location && !b.location) {
-                    console.warn(new Error("a registered grammar provider for '" + scope + "' scope is overridden"));
-                }
-            });
-        }
-        providers.unshift(provider);
-        this.scopeToProvider.set(scope, providers);
-        return disposable_1.Disposable.create(function () {
-            var index = providers.indexOf(provider);
-            if (index !== -1) {
-                providers.splice(index, 1);
-            }
+    DebugBreakpointsWidget_1 = DebugBreakpointsWidget;
+    DebugBreakpointsWidget.createContainer = function (parent) {
+        var child = source_tree_1.SourceTreeWidget.createContainer(parent, {
+            contextMenuPath: DebugBreakpointsWidget_1.CONTEXT_MENU,
+            virtualized: false,
+            scrollIfActive: true
         });
+        child.bind(debug_breakpoints_source_1.DebugBreakpointsSource).toSelf();
+        child.unbind(source_tree_1.SourceTreeWidget);
+        child.bind(DebugBreakpointsWidget_1).toSelf();
+        return child;
     };
-    TextmateRegistry.prototype.getProvider = function (scope) {
-        var providers = this.scopeToProvider.get(scope);
-        return providers && providers[0];
+    DebugBreakpointsWidget.createWidget = function (parent) {
+        return DebugBreakpointsWidget_1.createContainer(parent).get(DebugBreakpointsWidget_1);
     };
-    TextmateRegistry.prototype.mapLanguageIdToTextmateGrammar = function (languageId, scope) {
-        var scopes = this.languageIdToScope.get(languageId) || [];
-        var existingScope = scopes[0];
-        if (typeof existingScope === 'string') {
-            console.warn(new Error("'" + languageId + "' language is remapped from '" + existingScope + "' to '" + scope + "' scope"));
-        }
-        scopes.unshift(scope);
-        this.languageIdToScope.set(languageId, scopes);
-        return disposable_1.Disposable.create(function () {
-            var index = scopes.indexOf(scope);
-            if (index !== -1) {
-                scopes.splice(index, 1);
-            }
-        });
+    DebugBreakpointsWidget.prototype.init = function () {
+        _super.prototype.init.call(this);
+        this.id = 'debug:breakpoints:' + this.viewModel.id;
+        this.title.label = 'Breakpoints';
+        this.toDispose.push(this.breakpointsSource);
+        this.source = this.breakpointsSource;
     };
-    TextmateRegistry.prototype.getScope = function (languageId) {
-        var scopes = this.languageIdToScope.get(languageId);
-        return scopes && scopes[0];
-    };
-    TextmateRegistry.prototype.getLanguageId = function (scope) {
-        var e_1, _a;
-        try {
-            for (var _b = __values(this.languageIdToScope.keys()), _c = _b.next(); !_c.done; _c = _b.next()) {
-                var languageId = _c.value;
-                if (this.getScope(languageId) === scope) {
-                    return languageId;
-                }
-            }
-        }
-        catch (e_1_1) { e_1 = { error: e_1_1 }; }
-        finally {
-            try {
-                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
-            }
-            finally { if (e_1) throw e_1.error; }
-        }
+    DebugBreakpointsWidget.prototype.getDefaultNodeStyle = function (node, props) {
         return undefined;
     };
-    TextmateRegistry.prototype.registerGrammarConfiguration = function (languageId, config) {
-        var configs = this.languageToConfig.get(languageId) || [];
-        var existingConfig = configs[0];
-        if (existingConfig) {
-            console.warn(new Error("a registered grammar configuration for '" + languageId + "' language is overridden"));
-        }
-        configs.unshift(config);
-        this.languageToConfig.set(languageId, configs);
-        return disposable_1.Disposable.create(function () {
-            var index = configs.indexOf(config);
-            if (index !== -1) {
-                configs.splice(index, 1);
-            }
-        });
-    };
-    TextmateRegistry.prototype.getGrammarConfiguration = function (languageId) {
-        var configs = this.languageToConfig.get(languageId);
-        return configs && configs[0] || {};
-    };
-    TextmateRegistry = __decorate([
+    var DebugBreakpointsWidget_1;
+    DebugBreakpointsWidget.CONTEXT_MENU = ['debug-breakpoints-context-menu'];
+    DebugBreakpointsWidget.EDIT_MENU = __spread(DebugBreakpointsWidget_1.CONTEXT_MENU, ['a_edit']);
+    DebugBreakpointsWidget.REMOVE_MENU = __spread(DebugBreakpointsWidget_1.CONTEXT_MENU, ['b_remove']);
+    DebugBreakpointsWidget.ENABLE_MENU = __spread(DebugBreakpointsWidget_1.CONTEXT_MENU, ['c_enable']);
+    __decorate([
+        inversify_1.inject(debug_view_model_1.DebugViewModel),
+        __metadata("design:type", debug_view_model_1.DebugViewModel)
+    ], DebugBreakpointsWidget.prototype, "viewModel", void 0);
+    __decorate([
+        inversify_1.inject(breakpoint_manager_1.BreakpointManager),
+        __metadata("design:type", breakpoint_manager_1.BreakpointManager)
+    ], DebugBreakpointsWidget.prototype, "breakpoints", void 0);
+    __decorate([
+        inversify_1.inject(debug_breakpoints_source_1.DebugBreakpointsSource),
+        __metadata("design:type", debug_breakpoints_source_1.DebugBreakpointsSource)
+    ], DebugBreakpointsWidget.prototype, "breakpointsSource", void 0);
+    __decorate([
+        inversify_1.postConstruct(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", void 0)
+    ], DebugBreakpointsWidget.prototype, "init", null);
+    DebugBreakpointsWidget = DebugBreakpointsWidget_1 = __decorate([
         inversify_1.injectable()
-    ], TextmateRegistry);
-    return TextmateRegistry;
-}());
-exports.TextmateRegistry = TextmateRegistry;
+    ], DebugBreakpointsWidget);
+    return DebugBreakpointsWidget;
+}(source_tree_1.SourceTreeWidget));
+exports.DebugBreakpointsWidget = DebugBreakpointsWidget;
 
 
 /***/ }),
 
-/***/ "./node_modules/@theia/monaco/lib/browser/textmate/textmate-tokenizer.js":
-/*!*******************************************************************************!*\
-  !*** ./node_modules/@theia/monaco/lib/browser/textmate/textmate-tokenizer.js ***!
-  \*******************************************************************************/
+/***/ "./node_modules/@theia/debug/lib/browser/view/debug-configuration-widget.js":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/@theia/debug/lib/browser/view/debug-configuration-widget.js ***!
+  \**********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 /********************************************************************************
- * Copyright (C) 2018 Ericsson and others.
+ * Copyright (C) 2018 TypeFox and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DebugConfigurationWidget = void 0;
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
+var common_1 = __webpack_require__(/*! @theia/core/lib/common */ "./node_modules/@theia/core/lib/common/index.js");
+var uri_1 = __webpack_require__(/*! @theia/core/lib/common/uri */ "./node_modules/@theia/core/lib/common/uri.js");
+var browser_1 = __webpack_require__(/*! @theia/core/lib/browser */ "./node_modules/@theia/core/lib/browser/index.js");
+var browser_2 = __webpack_require__(/*! @theia/workspace/lib/browser */ "./node_modules/@theia/workspace/lib/browser/index.js");
+var debug_console_contribution_1 = __webpack_require__(/*! ../console/debug-console-contribution */ "./node_modules/@theia/debug/lib/browser/console/debug-console-contribution.js");
+var debug_configuration_manager_1 = __webpack_require__(/*! ../debug-configuration-manager */ "./node_modules/@theia/debug/lib/browser/debug-configuration-manager.js");
+var debug_session_manager_1 = __webpack_require__(/*! ../debug-session-manager */ "./node_modules/@theia/debug/lib/browser/debug-session-manager.js");
+var debug_action_1 = __webpack_require__(/*! ./debug-action */ "./node_modules/@theia/debug/lib/browser/view/debug-action.js");
+var debug_view_model_1 = __webpack_require__(/*! ./debug-view-model */ "./node_modules/@theia/debug/lib/browser/view/debug-view-model.js");
+var debug_frontend_application_contribution_1 = __webpack_require__(/*! ../debug-frontend-application-contribution */ "./node_modules/@theia/debug/lib/browser/debug-frontend-application-contribution.js");
+var common_2 = __webpack_require__(/*! @theia/core/lib/common */ "./node_modules/@theia/core/lib/common/index.js");
+var DebugConfigurationWidget = /** @class */ (function (_super) {
+    __extends(DebugConfigurationWidget, _super);
+    function DebugConfigurationWidget() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.setStepRef = function (stepRef) { return _this.stepRef = stepRef || undefined; };
+        _this.setCurrentConfiguration = function (event) {
+            var value = event.currentTarget.value;
+            if (value === '__ADD_CONF__') {
+                _this.manager.addConfiguration();
+            }
+            else {
+                var _a = __read(value.split('__CONF__'), 2), name_1 = _a[0], workspaceFolderUri = _a[1];
+                _this.manager.current = _this.manager.find(name_1, workspaceFolderUri);
+            }
+        };
+        _this.start = function () {
+            var configuration = _this.manager.current;
+            _this.commandRegistry.executeCommand(debug_frontend_application_contribution_1.DebugCommands.START.id, configuration);
+        };
+        _this.openConfiguration = function () { return _this.manager.openConfiguration(); };
+        _this.openConsole = function () { return _this.debugConsole.openView({
+            activate: true
+        }); };
+        return _this;
+    }
+    DebugConfigurationWidget.prototype.init = function () {
+        var _this = this;
+        this.addClass('debug-toolbar');
+        this.toDispose.push(this.manager.onDidChange(function () { return _this.update(); }));
+        this.toDispose.push(this.workspaceService.onWorkspaceChanged(function () { return _this.update(); }));
+        this.toDispose.push(this.workspaceService.onWorkspaceLocationChanged(function () { return _this.update(); }));
+        this.scrollOptions = undefined;
+        this.update();
+    };
+    DebugConfigurationWidget.prototype.focus = function () {
+        var _this = this;
+        if (!this.doFocus()) {
+            this.onRender.push(common_1.Disposable.create(function () { return _this.doFocus(); }));
+            this.update();
+        }
+    };
+    DebugConfigurationWidget.prototype.doFocus = function () {
+        if (!this.stepRef) {
+            return false;
+        }
+        this.stepRef.focus();
+        return true;
+    };
+    DebugConfigurationWidget.prototype.render = function () {
+        var options = this.options;
+        return React.createElement(React.Fragment, null,
+            React.createElement(debug_action_1.DebugAction, { run: this.start, label: 'Start Debugging', iconClass: 'start', ref: this.setStepRef }),
+            React.createElement("select", { className: 'theia-select debug-configuration', value: this.currentValue, onChange: this.setCurrentConfiguration },
+                options.length ? options : React.createElement("option", { value: '__NO_CONF__' }, "No Configurations"),
+                React.createElement("option", { disabled: true }, 'Add Configuration...'.replace(/./g, '-')),
+                React.createElement("option", { value: '__ADD_CONF__' }, "Add Configuration...")),
+            React.createElement(debug_action_1.DebugAction, { run: this.openConfiguration, label: 'Open launch.json', iconClass: 'configure' }),
+            React.createElement(debug_action_1.DebugAction, { run: this.openConsole, label: 'Debug Console', iconClass: 'repl' }));
+    };
+    Object.defineProperty(DebugConfigurationWidget.prototype, "currentValue", {
+        get: function () {
+            var current = this.manager.current;
+            return current ? this.toValue(current) : '__NO_CONF__';
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(DebugConfigurationWidget.prototype, "options", {
+        get: function () {
+            var _this = this;
+            return Array.from(this.manager.all).map(function (options, index) {
+                return React.createElement("option", { key: index, value: _this.toValue(options) }, _this.toName(options));
+            });
+        },
+        enumerable: false,
+        configurable: true
+    });
+    DebugConfigurationWidget.prototype.toValue = function (_a) {
+        var configuration = _a.configuration, workspaceFolderUri = _a.workspaceFolderUri;
+        if (!workspaceFolderUri) {
+            return configuration.name;
+        }
+        return configuration.name + '__CONF__' + workspaceFolderUri;
+    };
+    DebugConfigurationWidget.prototype.toName = function (_a) {
+        var configuration = _a.configuration, workspaceFolderUri = _a.workspaceFolderUri;
+        if (!workspaceFolderUri || !this.workspaceService.isMultiRootWorkspaceOpened) {
+            return configuration.name;
+        }
+        return configuration.name + ' (' + new uri_1.default(workspaceFolderUri).path.base + ')';
+    };
+    __decorate([
+        inversify_1.inject(common_2.CommandRegistry),
+        __metadata("design:type", common_2.CommandRegistry)
+    ], DebugConfigurationWidget.prototype, "commandRegistry", void 0);
+    __decorate([
+        inversify_1.inject(debug_view_model_1.DebugViewModel),
+        __metadata("design:type", debug_view_model_1.DebugViewModel)
+    ], DebugConfigurationWidget.prototype, "viewModel", void 0);
+    __decorate([
+        inversify_1.inject(debug_configuration_manager_1.DebugConfigurationManager),
+        __metadata("design:type", debug_configuration_manager_1.DebugConfigurationManager)
+    ], DebugConfigurationWidget.prototype, "manager", void 0);
+    __decorate([
+        inversify_1.inject(debug_session_manager_1.DebugSessionManager),
+        __metadata("design:type", debug_session_manager_1.DebugSessionManager)
+    ], DebugConfigurationWidget.prototype, "sessionManager", void 0);
+    __decorate([
+        inversify_1.inject(debug_console_contribution_1.DebugConsoleContribution),
+        __metadata("design:type", debug_console_contribution_1.DebugConsoleContribution)
+    ], DebugConfigurationWidget.prototype, "debugConsole", void 0);
+    __decorate([
+        inversify_1.inject(browser_2.WorkspaceService),
+        __metadata("design:type", browser_2.WorkspaceService)
+    ], DebugConfigurationWidget.prototype, "workspaceService", void 0);
+    __decorate([
+        inversify_1.postConstruct(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", void 0)
+    ], DebugConfigurationWidget.prototype, "init", null);
+    DebugConfigurationWidget = __decorate([
+        inversify_1.injectable()
+    ], DebugConfigurationWidget);
+    return DebugConfigurationWidget;
+}(browser_1.ReactWidget));
+exports.DebugConfigurationWidget = DebugConfigurationWidget;
+
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/lib/browser/view/debug-exception-breakpoint.js":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/@theia/debug/lib/browser/view/debug-exception-breakpoint.js ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/********************************************************************************
+ * Copyright (C) 2019 TypeFox and others.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0 which is available at
@@ -2392,3462 +5190,53 @@ exports.TextmateRegistry = TextmateRegistry;
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.createTextmateTokenizer = exports.TokenizerOption = exports.TokenizerState = void 0;
-var vscode_textmate_1 = __webpack_require__(/*! vscode-textmate */ "./node_modules/vscode-textmate/release/main.js");
-var TokenizerState = /** @class */ (function () {
-    function TokenizerState(ruleStack) {
-        this.ruleStack = ruleStack;
+exports.DebugExceptionBreakpoint = void 0;
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var DebugExceptionBreakpoint = /** @class */ (function () {
+    function DebugExceptionBreakpoint(data, breakpoints) {
+        var _this = this;
+        this.data = data;
+        this.breakpoints = breakpoints;
+        this.toggle = function () { return _this.breakpoints.toggleExceptionBreakpoint(_this.data.raw.filter); };
+        this.id = data.raw.filter + ':' + data.raw.label;
     }
-    TokenizerState.prototype.clone = function () {
-        return new TokenizerState(this.ruleStack);
+    DebugExceptionBreakpoint.prototype.render = function () {
+        return React.createElement("div", { title: this.data.raw.label, className: 'theia-source-breakpoint' },
+            React.createElement("span", { className: 'theia-debug-breakpoint-icon' }),
+            React.createElement("input", { type: 'checkbox', checked: this.data.enabled, onChange: this.toggle }),
+            React.createElement("span", { className: 'line-info' }, this.data.raw.label));
     };
-    TokenizerState.prototype.equals = function (other) {
-        return other instanceof TokenizerState && (other === this || other.ruleStack === this.ruleStack);
-    };
-    return TokenizerState;
+    return DebugExceptionBreakpoint;
 }());
-exports.TokenizerState = TokenizerState;
-var TokenizerOption;
-(function (TokenizerOption) {
-    /**
-     * The default TextMate tokenizer option.
-     *
-     * @deprecated Use the current value of `editor.maxTokenizationLineLength` preference instead.
-     */
-    TokenizerOption.DEFAULT = {
-        lineLimit: 400
-    };
-})(TokenizerOption = exports.TokenizerOption || (exports.TokenizerOption = {}));
-function createTextmateTokenizer(grammar, options) {
-    if (options.lineLimit !== undefined && (options.lineLimit <= 0 || !Number.isInteger(options.lineLimit))) {
-        throw new Error("The 'lineLimit' must be a positive integer. It was " + options.lineLimit + ".");
-    }
-    return {
-        getInitialState: function () { return new TokenizerState(vscode_textmate_1.INITIAL); },
-        tokenizeEncoded: function (line, state) {
-            var processedLine = line;
-            if (options.lineLimit !== undefined && line.length > options.lineLimit) {
-                // Line is too long to be tokenized
-                processedLine = line.substr(0, options.lineLimit);
-            }
-            var result = grammar.tokenizeLine2(processedLine, state.ruleStack);
-            return {
-                endState: new TokenizerState(result.ruleStack),
-                tokens: result.tokens
-            };
-        },
-        tokenize: function (line, state) {
-            var processedLine = line;
-            if (options.lineLimit !== undefined && line.length > options.lineLimit) {
-                // Line is too long to be tokenized
-                processedLine = line.substr(0, options.lineLimit);
-            }
-            var result = grammar.tokenizeLine(processedLine, state.ruleStack);
-            return {
-                endState: new TokenizerState(result.ruleStack),
-                tokens: result.tokens.map(function (t) { return ({
-                    startIndex: t.startIndex,
-                    scopes: t.scopes.reverse().join(' ')
-                }); })
-            };
-        }
-    };
-}
-exports.createTextmateTokenizer = createTextmateTokenizer;
+exports.DebugExceptionBreakpoint = DebugExceptionBreakpoint;
 
 
 /***/ }),
 
-/***/ "./node_modules/fast-plist/release/src/main.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/fast-plist/release/src/main.js ***!
-  \*****************************************************/
+/***/ "./node_modules/@theia/debug/lib/browser/view/debug-session-widget.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/@theia/debug/lib/browser/view/debug-session-widget.js ***!
+  \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/*---------------------------------------------------------
- * Copyright (C) Microsoft Corporation. All rights reserved.
- *--------------------------------------------------------*/
 
-function parseWithLocation(content, filename, locationKeyName) {
-    return _parse(content, filename, locationKeyName);
-}
-exports.parseWithLocation = parseWithLocation;
-/**
- * A very fast plist parser
- */
-function parse(content) {
-    return _parse(content, null, null);
-}
-exports.parse = parse;
-function _parse(content, filename, locationKeyName) {
-    var len = content.length;
-    var pos = 0;
-    var line = 1;
-    var char = 0;
-    // Skip UTF8 BOM
-    if (len > 0 && content.charCodeAt(0) === 65279 /* BOM */) {
-        pos = 1;
-    }
-    function advancePosBy(by) {
-        if (locationKeyName === null) {
-            pos = pos + by;
-        }
-        else {
-            while (by > 0) {
-                var chCode = content.charCodeAt(pos);
-                if (chCode === 10 /* LINE_FEED */) {
-                    pos++;
-                    line++;
-                    char = 0;
-                }
-                else {
-                    pos++;
-                    char++;
-                }
-                by--;
-            }
-        }
-    }
-    function advancePosTo(to) {
-        if (locationKeyName === null) {
-            pos = to;
-        }
-        else {
-            advancePosBy(to - pos);
-        }
-    }
-    function skipWhitespace() {
-        while (pos < len) {
-            var chCode = content.charCodeAt(pos);
-            if (chCode !== 32 /* SPACE */ && chCode !== 9 /* TAB */ && chCode !== 13 /* CARRIAGE_RETURN */ && chCode !== 10 /* LINE_FEED */) {
-                break;
-            }
-            advancePosBy(1);
-        }
-    }
-    function advanceIfStartsWith(str) {
-        if (content.substr(pos, str.length) === str) {
-            advancePosBy(str.length);
-            return true;
-        }
-        return false;
-    }
-    function advanceUntil(str) {
-        var nextOccurence = content.indexOf(str, pos);
-        if (nextOccurence !== -1) {
-            advancePosTo(nextOccurence + str.length);
-        }
-        else {
-            // EOF
-            advancePosTo(len);
-        }
-    }
-    function captureUntil(str) {
-        var nextOccurence = content.indexOf(str, pos);
-        if (nextOccurence !== -1) {
-            var r = content.substring(pos, nextOccurence);
-            advancePosTo(nextOccurence + str.length);
-            return r;
-        }
-        else {
-            // EOF
-            var r = content.substr(pos);
-            advancePosTo(len);
-            return r;
-        }
-    }
-    var state = 0 /* ROOT_STATE */;
-    var cur = null;
-    var stateStack = [];
-    var objStack = [];
-    var curKey = null;
-    function pushState(newState, newCur) {
-        stateStack.push(state);
-        objStack.push(cur);
-        state = newState;
-        cur = newCur;
-    }
-    function popState() {
-        state = stateStack.pop();
-        cur = objStack.pop();
-    }
-    function fail(msg) {
-        throw new Error('Near offset ' + pos + ': ' + msg + ' ~~~' + content.substr(pos, 50) + '~~~');
-    }
-    var dictState = {
-        enterDict: function () {
-            if (curKey === null) {
-                fail('missing <key>');
-            }
-            var newDict = {};
-            if (locationKeyName !== null) {
-                newDict[locationKeyName] = {
-                    filename: filename,
-                    line: line,
-                    char: char
-                };
-            }
-            cur[curKey] = newDict;
-            curKey = null;
-            pushState(1 /* DICT_STATE */, newDict);
-        },
-        enterArray: function () {
-            if (curKey === null) {
-                fail('missing <key>');
-            }
-            var newArr = [];
-            cur[curKey] = newArr;
-            curKey = null;
-            pushState(2 /* ARR_STATE */, newArr);
-        }
-    };
-    var arrState = {
-        enterDict: function () {
-            var newDict = {};
-            if (locationKeyName !== null) {
-                newDict[locationKeyName] = {
-                    filename: filename,
-                    line: line,
-                    char: char
-                };
-            }
-            cur.push(newDict);
-            pushState(1 /* DICT_STATE */, newDict);
-        },
-        enterArray: function () {
-            var newArr = [];
-            cur.push(newArr);
-            pushState(2 /* ARR_STATE */, newArr);
-        }
-    };
-    function enterDict() {
-        if (state === 1 /* DICT_STATE */) {
-            dictState.enterDict();
-        }
-        else if (state === 2 /* ARR_STATE */) {
-            arrState.enterDict();
-        }
-        else {
-            cur = {};
-            if (locationKeyName !== null) {
-                cur[locationKeyName] = {
-                    filename: filename,
-                    line: line,
-                    char: char
-                };
-            }
-            pushState(1 /* DICT_STATE */, cur);
-        }
-    }
-    function leaveDict() {
-        if (state === 1 /* DICT_STATE */) {
-            popState();
-        }
-        else if (state === 2 /* ARR_STATE */) {
-            fail('unexpected </dict>');
-        }
-        else {
-            fail('unexpected </dict>');
-        }
-    }
-    function enterArray() {
-        if (state === 1 /* DICT_STATE */) {
-            dictState.enterArray();
-        }
-        else if (state === 2 /* ARR_STATE */) {
-            arrState.enterArray();
-        }
-        else {
-            cur = [];
-            pushState(2 /* ARR_STATE */, cur);
-        }
-    }
-    function leaveArray() {
-        if (state === 1 /* DICT_STATE */) {
-            fail('unexpected </array>');
-        }
-        else if (state === 2 /* ARR_STATE */) {
-            popState();
-        }
-        else {
-            fail('unexpected </array>');
-        }
-    }
-    function acceptKey(val) {
-        if (state === 1 /* DICT_STATE */) {
-            if (curKey !== null) {
-                fail('too many <key>');
-            }
-            curKey = val;
-        }
-        else if (state === 2 /* ARR_STATE */) {
-            fail('unexpected <key>');
-        }
-        else {
-            fail('unexpected <key>');
-        }
-    }
-    function acceptString(val) {
-        if (state === 1 /* DICT_STATE */) {
-            if (curKey === null) {
-                fail('missing <key>');
-            }
-            cur[curKey] = val;
-            curKey = null;
-        }
-        else if (state === 2 /* ARR_STATE */) {
-            cur.push(val);
-        }
-        else {
-            cur = val;
-        }
-    }
-    function acceptReal(val) {
-        if (isNaN(val)) {
-            fail('cannot parse float');
-        }
-        if (state === 1 /* DICT_STATE */) {
-            if (curKey === null) {
-                fail('missing <key>');
-            }
-            cur[curKey] = val;
-            curKey = null;
-        }
-        else if (state === 2 /* ARR_STATE */) {
-            cur.push(val);
-        }
-        else {
-            cur = val;
-        }
-    }
-    function acceptInteger(val) {
-        if (isNaN(val)) {
-            fail('cannot parse integer');
-        }
-        if (state === 1 /* DICT_STATE */) {
-            if (curKey === null) {
-                fail('missing <key>');
-            }
-            cur[curKey] = val;
-            curKey = null;
-        }
-        else if (state === 2 /* ARR_STATE */) {
-            cur.push(val);
-        }
-        else {
-            cur = val;
-        }
-    }
-    function acceptDate(val) {
-        if (state === 1 /* DICT_STATE */) {
-            if (curKey === null) {
-                fail('missing <key>');
-            }
-            cur[curKey] = val;
-            curKey = null;
-        }
-        else if (state === 2 /* ARR_STATE */) {
-            cur.push(val);
-        }
-        else {
-            cur = val;
-        }
-    }
-    function acceptData(val) {
-        if (state === 1 /* DICT_STATE */) {
-            if (curKey === null) {
-                fail('missing <key>');
-            }
-            cur[curKey] = val;
-            curKey = null;
-        }
-        else if (state === 2 /* ARR_STATE */) {
-            cur.push(val);
-        }
-        else {
-            cur = val;
-        }
-    }
-    function acceptBool(val) {
-        if (state === 1 /* DICT_STATE */) {
-            if (curKey === null) {
-                fail('missing <key>');
-            }
-            cur[curKey] = val;
-            curKey = null;
-        }
-        else if (state === 2 /* ARR_STATE */) {
-            cur.push(val);
-        }
-        else {
-            cur = val;
-        }
-    }
-    function escapeVal(str) {
-        return str.replace(/&#([0-9]+);/g, function (_, m0) {
-            return String.fromCodePoint(parseInt(m0, 10));
-        }).replace(/&#x([0-9a-f]+);/g, function (_, m0) {
-            return String.fromCodePoint(parseInt(m0, 16));
-        }).replace(/&amp;|&lt;|&gt;|&quot;|&apos;/g, function (_) {
-            switch (_) {
-                case '&amp;': return '&';
-                case '&lt;': return '<';
-                case '&gt;': return '>';
-                case '&quot;': return '"';
-                case '&apos;': return '\'';
-            }
-            return _;
-        });
-    }
-    function parseOpenTag() {
-        var r = captureUntil('>');
-        var isClosed = false;
-        if (r.charCodeAt(r.length - 1) === 47 /* SLASH */) {
-            isClosed = true;
-            r = r.substring(0, r.length - 1);
-        }
-        return {
-            name: r.trim(),
-            isClosed: isClosed
-        };
-    }
-    function parseTagValue(tag) {
-        if (tag.isClosed) {
-            return '';
-        }
-        var val = captureUntil('</');
-        advanceUntil('>');
-        return escapeVal(val);
-    }
-    while (pos < len) {
-        skipWhitespace();
-        if (pos >= len) {
-            break;
-        }
-        var chCode = content.charCodeAt(pos);
-        advancePosBy(1);
-        if (chCode !== 60 /* LESS_THAN */) {
-            fail('expected <');
-        }
-        if (pos >= len) {
-            fail('unexpected end of input');
-        }
-        var peekChCode = content.charCodeAt(pos);
-        if (peekChCode === 63 /* QUESTION_MARK */) {
-            advancePosBy(1);
-            advanceUntil('?>');
-            continue;
-        }
-        if (peekChCode === 33 /* EXCLAMATION_MARK */) {
-            advancePosBy(1);
-            if (advanceIfStartsWith('--')) {
-                advanceUntil('-->');
-                continue;
-            }
-            advanceUntil('>');
-            continue;
-        }
-        if (peekChCode === 47 /* SLASH */) {
-            advancePosBy(1);
-            skipWhitespace();
-            if (advanceIfStartsWith('plist')) {
-                advanceUntil('>');
-                continue;
-            }
-            if (advanceIfStartsWith('dict')) {
-                advanceUntil('>');
-                leaveDict();
-                continue;
-            }
-            if (advanceIfStartsWith('array')) {
-                advanceUntil('>');
-                leaveArray();
-                continue;
-            }
-            fail('unexpected closed tag');
-        }
-        var tag = parseOpenTag();
-        switch (tag.name) {
-            case 'dict':
-                enterDict();
-                if (tag.isClosed) {
-                    leaveDict();
-                }
-                continue;
-            case 'array':
-                enterArray();
-                if (tag.isClosed) {
-                    leaveArray();
-                }
-                continue;
-            case 'key':
-                acceptKey(parseTagValue(tag));
-                continue;
-            case 'string':
-                acceptString(parseTagValue(tag));
-                continue;
-            case 'real':
-                acceptReal(parseFloat(parseTagValue(tag)));
-                continue;
-            case 'integer':
-                acceptInteger(parseInt(parseTagValue(tag), 10));
-                continue;
-            case 'date':
-                acceptDate(new Date(parseTagValue(tag)));
-                continue;
-            case 'data':
-                acceptData(parseTagValue(tag));
-                continue;
-            case 'true':
-                parseTagValue(tag);
-                acceptBool(true);
-                continue;
-            case 'false':
-                parseTagValue(tag);
-                acceptBool(false);
-                continue;
-        }
-        if (/^plist/.test(tag.name)) {
-            continue;
-        }
-        fail('unexpected opened tag ' + tag.name);
-    }
-    return cur;
-}
-//# sourceMappingURL=main.js.map
-
-/***/ }),
-
-/***/ "./node_modules/idb/build/esm/chunk.js":
-/*!*********************************************!*\
-  !*** ./node_modules/idb/build/esm/chunk.js ***!
-  \*********************************************/
-/*! exports provided: a, b, c, d, e */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return wrap; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return addTraps; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return instanceOfAny; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return reverseTransformCache; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return unwrap; });
-const instanceOfAny = (object, constructors) => constructors.some(c => object instanceof c);
-
-let idbProxyableTypes;
-let cursorAdvanceMethods;
-// This is a function to prevent it throwing up in node environments.
-function getIdbProxyableTypes() {
-    return (idbProxyableTypes ||
-        (idbProxyableTypes = [
-            IDBDatabase,
-            IDBObjectStore,
-            IDBIndex,
-            IDBCursor,
-            IDBTransaction,
-        ]));
-}
-// This is a function to prevent it throwing up in node environments.
-function getCursorAdvanceMethods() {
-    return (cursorAdvanceMethods ||
-        (cursorAdvanceMethods = [
-            IDBCursor.prototype.advance,
-            IDBCursor.prototype.continue,
-            IDBCursor.prototype.continuePrimaryKey,
-        ]));
-}
-const cursorRequestMap = new WeakMap();
-const transactionDoneMap = new WeakMap();
-const transactionStoreNamesMap = new WeakMap();
-const transformCache = new WeakMap();
-const reverseTransformCache = new WeakMap();
-function promisifyRequest(request) {
-    const promise = new Promise((resolve, reject) => {
-        const unlisten = () => {
-            request.removeEventListener('success', success);
-            request.removeEventListener('error', error);
-        };
-        const success = () => {
-            resolve(wrap(request.result));
-            unlisten();
-        };
-        const error = () => {
-            reject(request.error);
-            unlisten();
-        };
-        request.addEventListener('success', success);
-        request.addEventListener('error', error);
-    });
-    promise
-        .then(value => {
-        // Since cursoring reuses the IDBRequest (*sigh*), we cache it for later retrieval
-        // (see wrapFunction).
-        if (value instanceof IDBCursor) {
-            cursorRequestMap.set(value, request);
-        }
-        // Catching to avoid "Uncaught Promise exceptions"
-    })
-        .catch(() => { });
-    // This mapping exists in reverseTransformCache but doesn't doesn't exist in transformCache. This
-    // is because we create many promises from a single IDBRequest.
-    reverseTransformCache.set(promise, request);
-    return promise;
-}
-function cacheDonePromiseForTransaction(tx) {
-    // Early bail if we've already created a done promise for this transaction.
-    if (transactionDoneMap.has(tx))
-        return;
-    const done = new Promise((resolve, reject) => {
-        const unlisten = () => {
-            tx.removeEventListener('complete', complete);
-            tx.removeEventListener('error', error);
-            tx.removeEventListener('abort', error);
-        };
-        const complete = () => {
-            resolve();
-            unlisten();
-        };
-        const error = () => {
-            reject(tx.error);
-            unlisten();
-        };
-        tx.addEventListener('complete', complete);
-        tx.addEventListener('error', error);
-        tx.addEventListener('abort', error);
-    });
-    // Cache it for later retrieval.
-    transactionDoneMap.set(tx, done);
-}
-let idbProxyTraps = {
-    get(target, prop, receiver) {
-        if (target instanceof IDBTransaction) {
-            // Special handling for transaction.done.
-            if (prop === 'done')
-                return transactionDoneMap.get(target);
-            // Polyfill for objectStoreNames because of Edge.
-            if (prop === 'objectStoreNames') {
-                return target.objectStoreNames || transactionStoreNamesMap.get(target);
-            }
-            // Make tx.store return the only store in the transaction, or undefined if there are many.
-            if (prop === 'store') {
-                return receiver.objectStoreNames[1]
-                    ? undefined
-                    : receiver.objectStore(receiver.objectStoreNames[0]);
-            }
-        }
-        // Else transform whatever we get back.
-        return wrap(target[prop]);
-    },
-    has(target, prop) {
-        if (target instanceof IDBTransaction &&
-            (prop === 'done' || prop === 'store')) {
-            return true;
-        }
-        return prop in target;
-    },
-};
-function addTraps(callback) {
-    idbProxyTraps = callback(idbProxyTraps);
-}
-function wrapFunction(func) {
-    // Due to expected object equality (which is enforced by the caching in `wrap`), we
-    // only create one new func per func.
-    // Edge doesn't support objectStoreNames (booo), so we polyfill it here.
-    if (func === IDBDatabase.prototype.transaction &&
-        !('objectStoreNames' in IDBTransaction.prototype)) {
-        return function (storeNames, ...args) {
-            const tx = func.call(unwrap(this), storeNames, ...args);
-            transactionStoreNamesMap.set(tx, storeNames.sort ? storeNames.sort() : [storeNames]);
-            return wrap(tx);
-        };
-    }
-    // Cursor methods are special, as the behaviour is a little more different to standard IDB. In
-    // IDB, you advance the cursor and wait for a new 'success' on the IDBRequest that gave you the
-    // cursor. It's kinda like a promise that can resolve with many values. That doesn't make sense
-    // with real promises, so each advance methods returns a new promise for the cursor object, or
-    // undefined if the end of the cursor has been reached.
-    if (getCursorAdvanceMethods().includes(func)) {
-        return function (...args) {
-            // Calling the original function with the proxy as 'this' causes ILLEGAL INVOCATION, so we use
-            // the original object.
-            func.apply(unwrap(this), args);
-            return wrap(cursorRequestMap.get(this));
-        };
-    }
-    return function (...args) {
-        // Calling the original function with the proxy as 'this' causes ILLEGAL INVOCATION, so we use
-        // the original object.
-        return wrap(func.apply(unwrap(this), args));
-    };
-}
-function transformCachableValue(value) {
-    if (typeof value === 'function')
-        return wrapFunction(value);
-    // This doesn't return, it just creates a 'done' promise for the transaction,
-    // which is later returned for transaction.done (see idbObjectHandler).
-    if (value instanceof IDBTransaction)
-        cacheDonePromiseForTransaction(value);
-    if (instanceOfAny(value, getIdbProxyableTypes()))
-        return new Proxy(value, idbProxyTraps);
-    // Return the same value back if we're not going to transform it.
-    return value;
-}
-function wrap(value) {
-    // We sometimes generate multiple promises from a single IDBRequest (eg when cursoring), because
-    // IDB is weird and a single IDBRequest can yield many responses, so these can't be cached.
-    if (value instanceof IDBRequest)
-        return promisifyRequest(value);
-    // If we've already transformed this value before, reuse the transformed value.
-    // This is faster, but it also provides object equality.
-    if (transformCache.has(value))
-        return transformCache.get(value);
-    const newValue = transformCachableValue(value);
-    // Not all types are transformed.
-    // These may be primitive types, so they can't be WeakMap keys.
-    if (newValue !== value) {
-        transformCache.set(value, newValue);
-        reverseTransformCache.set(newValue, value);
-    }
-    return newValue;
-}
-const unwrap = (value) => reverseTransformCache.get(value);
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/idb/build/esm/index.js":
-/*!*********************************************!*\
-  !*** ./node_modules/idb/build/esm/index.js ***!
-  \*********************************************/
-/*! exports provided: unwrap, wrap, openDB, deleteDB */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openDB", function() { return openDB; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteDB", function() { return deleteDB; });
-/* harmony import */ var _chunk_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./chunk.js */ "./node_modules/idb/build/esm/chunk.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "unwrap", function() { return _chunk_js__WEBPACK_IMPORTED_MODULE_0__["e"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "wrap", function() { return _chunk_js__WEBPACK_IMPORTED_MODULE_0__["a"]; });
-
-
-
-
-/**
- * Open a database.
+/********************************************************************************
+ * Copyright (C) 2018 TypeFox and others.
  *
- * @param name Name of the database.
- * @param version Schema version.
- * @param callbacks Additional callbacks.
- */
-function openDB(name, version, { blocked, upgrade, blocking } = {}) {
-    const request = indexedDB.open(name, version);
-    const openPromise = Object(_chunk_js__WEBPACK_IMPORTED_MODULE_0__["a"])(request);
-    if (upgrade) {
-        request.addEventListener('upgradeneeded', event => {
-            upgrade(Object(_chunk_js__WEBPACK_IMPORTED_MODULE_0__["a"])(request.result), event.oldVersion, event.newVersion, Object(_chunk_js__WEBPACK_IMPORTED_MODULE_0__["a"])(request.transaction));
-        });
-    }
-    if (blocked)
-        request.addEventListener('blocked', () => blocked());
-    if (blocking) {
-        openPromise.then(db => db.addEventListener('versionchange', blocking)).catch(() => { });
-    }
-    return openPromise;
-}
-/**
- * Delete a database.
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
  *
- * @param name Name of the database.
- */
-function deleteDB(name, { blocked } = {}) {
-    const request = indexedDB.deleteDatabase(name);
-    if (blocked)
-        request.addEventListener('blocked', () => blocked());
-    return Object(_chunk_js__WEBPACK_IMPORTED_MODULE_0__["a"])(request).then(() => undefined);
-}
-
-const readMethods = ['get', 'getKey', 'getAll', 'getAllKeys', 'count'];
-const writeMethods = ['put', 'add', 'delete', 'clear'];
-const cachedMethods = new Map();
-function getMethod(target, prop) {
-    if (!(target instanceof IDBDatabase &&
-        !(prop in target) &&
-        typeof prop === 'string')) {
-        return;
-    }
-    if (cachedMethods.get(prop))
-        return cachedMethods.get(prop);
-    const targetFuncName = prop.replace(/FromIndex$/, '');
-    const useIndex = prop !== targetFuncName;
-    const isWrite = writeMethods.includes(targetFuncName);
-    if (
-    // Bail if the target doesn't exist on the target. Eg, getAll isn't in Edge.
-    !(targetFuncName in (useIndex ? IDBIndex : IDBObjectStore).prototype) ||
-        !(isWrite || readMethods.includes(targetFuncName))) {
-        return;
-    }
-    const method = async function (storeName, ...args) {
-        // isWrite ? 'readwrite' : undefined gzipps better, but fails in Edge :(
-        const tx = this.transaction(storeName, isWrite ? 'readwrite' : 'readonly');
-        let target = tx.store;
-        if (useIndex)
-            target = target.index(args.shift());
-        const returnVal = target[targetFuncName](...args);
-        if (isWrite)
-            await tx.done;
-        return returnVal;
-    };
-    cachedMethods.set(prop, method);
-    return method;
-}
-Object(_chunk_js__WEBPACK_IMPORTED_MODULE_0__["b"])(oldTraps => ({
-    get: (target, prop, receiver) => getMethod(target, prop) || oldTraps.get(target, prop, receiver),
-    has: (target, prop) => !!getMethod(target, prop) || oldTraps.has(target, prop),
-}));
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/lru-cache/index.js":
-/*!*****************************************!*\
-  !*** ./node_modules/lru-cache/index.js ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// A linked list to keep track of recently-used-ness
-const Yallist = __webpack_require__(/*! yallist */ "./node_modules/yallist/yallist.js")
-
-const MAX = Symbol('max')
-const LENGTH = Symbol('length')
-const LENGTH_CALCULATOR = Symbol('lengthCalculator')
-const ALLOW_STALE = Symbol('allowStale')
-const MAX_AGE = Symbol('maxAge')
-const DISPOSE = Symbol('dispose')
-const NO_DISPOSE_ON_SET = Symbol('noDisposeOnSet')
-const LRU_LIST = Symbol('lruList')
-const CACHE = Symbol('cache')
-const UPDATE_AGE_ON_GET = Symbol('updateAgeOnGet')
-
-const naiveLength = () => 1
-
-// lruList is a yallist where the head is the youngest
-// item, and the tail is the oldest.  the list contains the Hit
-// objects as the entries.
-// Each Hit object has a reference to its Yallist.Node.  This
-// never changes.
-//
-// cache is a Map (or PseudoMap) that matches the keys to
-// the Yallist.Node object.
-class LRUCache {
-  constructor (options) {
-    if (typeof options === 'number')
-      options = { max: options }
-
-    if (!options)
-      options = {}
-
-    if (options.max && (typeof options.max !== 'number' || options.max < 0))
-      throw new TypeError('max must be a non-negative number')
-    // Kind of weird to have a default max of Infinity, but oh well.
-    const max = this[MAX] = options.max || Infinity
-
-    const lc = options.length || naiveLength
-    this[LENGTH_CALCULATOR] = (typeof lc !== 'function') ? naiveLength : lc
-    this[ALLOW_STALE] = options.stale || false
-    if (options.maxAge && typeof options.maxAge !== 'number')
-      throw new TypeError('maxAge must be a number')
-    this[MAX_AGE] = options.maxAge || 0
-    this[DISPOSE] = options.dispose
-    this[NO_DISPOSE_ON_SET] = options.noDisposeOnSet || false
-    this[UPDATE_AGE_ON_GET] = options.updateAgeOnGet || false
-    this.reset()
-  }
-
-  // resize the cache when the max changes.
-  set max (mL) {
-    if (typeof mL !== 'number' || mL < 0)
-      throw new TypeError('max must be a non-negative number')
-
-    this[MAX] = mL || Infinity
-    trim(this)
-  }
-  get max () {
-    return this[MAX]
-  }
-
-  set allowStale (allowStale) {
-    this[ALLOW_STALE] = !!allowStale
-  }
-  get allowStale () {
-    return this[ALLOW_STALE]
-  }
-
-  set maxAge (mA) {
-    if (typeof mA !== 'number')
-      throw new TypeError('maxAge must be a non-negative number')
-
-    this[MAX_AGE] = mA
-    trim(this)
-  }
-  get maxAge () {
-    return this[MAX_AGE]
-  }
-
-  // resize the cache when the lengthCalculator changes.
-  set lengthCalculator (lC) {
-    if (typeof lC !== 'function')
-      lC = naiveLength
-
-    if (lC !== this[LENGTH_CALCULATOR]) {
-      this[LENGTH_CALCULATOR] = lC
-      this[LENGTH] = 0
-      this[LRU_LIST].forEach(hit => {
-        hit.length = this[LENGTH_CALCULATOR](hit.value, hit.key)
-        this[LENGTH] += hit.length
-      })
-    }
-    trim(this)
-  }
-  get lengthCalculator () { return this[LENGTH_CALCULATOR] }
-
-  get length () { return this[LENGTH] }
-  get itemCount () { return this[LRU_LIST].length }
-
-  rforEach (fn, thisp) {
-    thisp = thisp || this
-    for (let walker = this[LRU_LIST].tail; walker !== null;) {
-      const prev = walker.prev
-      forEachStep(this, fn, walker, thisp)
-      walker = prev
-    }
-  }
-
-  forEach (fn, thisp) {
-    thisp = thisp || this
-    for (let walker = this[LRU_LIST].head; walker !== null;) {
-      const next = walker.next
-      forEachStep(this, fn, walker, thisp)
-      walker = next
-    }
-  }
-
-  keys () {
-    return this[LRU_LIST].toArray().map(k => k.key)
-  }
-
-  values () {
-    return this[LRU_LIST].toArray().map(k => k.value)
-  }
-
-  reset () {
-    if (this[DISPOSE] &&
-        this[LRU_LIST] &&
-        this[LRU_LIST].length) {
-      this[LRU_LIST].forEach(hit => this[DISPOSE](hit.key, hit.value))
-    }
-
-    this[CACHE] = new Map() // hash of items by key
-    this[LRU_LIST] = new Yallist() // list of items in order of use recency
-    this[LENGTH] = 0 // length of items in the list
-  }
-
-  dump () {
-    return this[LRU_LIST].map(hit =>
-      isStale(this, hit) ? false : {
-        k: hit.key,
-        v: hit.value,
-        e: hit.now + (hit.maxAge || 0)
-      }).toArray().filter(h => h)
-  }
-
-  dumpLru () {
-    return this[LRU_LIST]
-  }
-
-  set (key, value, maxAge) {
-    maxAge = maxAge || this[MAX_AGE]
-
-    if (maxAge && typeof maxAge !== 'number')
-      throw new TypeError('maxAge must be a number')
-
-    const now = maxAge ? Date.now() : 0
-    const len = this[LENGTH_CALCULATOR](value, key)
-
-    if (this[CACHE].has(key)) {
-      if (len > this[MAX]) {
-        del(this, this[CACHE].get(key))
-        return false
-      }
-
-      const node = this[CACHE].get(key)
-      const item = node.value
-
-      // dispose of the old one before overwriting
-      // split out into 2 ifs for better coverage tracking
-      if (this[DISPOSE]) {
-        if (!this[NO_DISPOSE_ON_SET])
-          this[DISPOSE](key, item.value)
-      }
-
-      item.now = now
-      item.maxAge = maxAge
-      item.value = value
-      this[LENGTH] += len - item.length
-      item.length = len
-      this.get(key)
-      trim(this)
-      return true
-    }
-
-    const hit = new Entry(key, value, len, now, maxAge)
-
-    // oversized objects fall out of cache automatically.
-    if (hit.length > this[MAX]) {
-      if (this[DISPOSE])
-        this[DISPOSE](key, value)
-
-      return false
-    }
-
-    this[LENGTH] += hit.length
-    this[LRU_LIST].unshift(hit)
-    this[CACHE].set(key, this[LRU_LIST].head)
-    trim(this)
-    return true
-  }
-
-  has (key) {
-    if (!this[CACHE].has(key)) return false
-    const hit = this[CACHE].get(key).value
-    return !isStale(this, hit)
-  }
-
-  get (key) {
-    return get(this, key, true)
-  }
-
-  peek (key) {
-    return get(this, key, false)
-  }
-
-  pop () {
-    const node = this[LRU_LIST].tail
-    if (!node)
-      return null
-
-    del(this, node)
-    return node.value
-  }
-
-  del (key) {
-    del(this, this[CACHE].get(key))
-  }
-
-  load (arr) {
-    // reset the cache
-    this.reset()
-
-    const now = Date.now()
-    // A previous serialized cache has the most recent items first
-    for (let l = arr.length - 1; l >= 0; l--) {
-      const hit = arr[l]
-      const expiresAt = hit.e || 0
-      if (expiresAt === 0)
-        // the item was created without expiration in a non aged cache
-        this.set(hit.k, hit.v)
-      else {
-        const maxAge = expiresAt - now
-        // dont add already expired items
-        if (maxAge > 0) {
-          this.set(hit.k, hit.v, maxAge)
-        }
-      }
-    }
-  }
-
-  prune () {
-    this[CACHE].forEach((value, key) => get(this, key, false))
-  }
-}
-
-const get = (self, key, doUse) => {
-  const node = self[CACHE].get(key)
-  if (node) {
-    const hit = node.value
-    if (isStale(self, hit)) {
-      del(self, node)
-      if (!self[ALLOW_STALE])
-        return undefined
-    } else {
-      if (doUse) {
-        if (self[UPDATE_AGE_ON_GET])
-          node.value.now = Date.now()
-        self[LRU_LIST].unshiftNode(node)
-      }
-    }
-    return hit.value
-  }
-}
-
-const isStale = (self, hit) => {
-  if (!hit || (!hit.maxAge && !self[MAX_AGE]))
-    return false
-
-  const diff = Date.now() - hit.now
-  return hit.maxAge ? diff > hit.maxAge
-    : self[MAX_AGE] && (diff > self[MAX_AGE])
-}
-
-const trim = self => {
-  if (self[LENGTH] > self[MAX]) {
-    for (let walker = self[LRU_LIST].tail;
-      self[LENGTH] > self[MAX] && walker !== null;) {
-      // We know that we're about to delete this one, and also
-      // what the next least recently used key will be, so just
-      // go ahead and set it now.
-      const prev = walker.prev
-      del(self, walker)
-      walker = prev
-    }
-  }
-}
-
-const del = (self, node) => {
-  if (node) {
-    const hit = node.value
-    if (self[DISPOSE])
-      self[DISPOSE](hit.key, hit.value)
-
-    self[LENGTH] -= hit.length
-    self[CACHE].delete(hit.key)
-    self[LRU_LIST].removeNode(node)
-  }
-}
-
-class Entry {
-  constructor (key, value, length, now, maxAge) {
-    this.key = key
-    this.value = value
-    this.length = length
-    this.now = now
-    this.maxAge = maxAge || 0
-  }
-}
-
-const forEachStep = (self, fn, node, thisp) => {
-  let hit = node.value
-  if (isStale(self, hit)) {
-    del(self, node)
-    if (!self[ALLOW_STALE])
-      hit = undefined
-  }
-  if (hit)
-    fn.call(thisp, hit.value, hit.key, self)
-}
-
-module.exports = LRUCache
-
-
-/***/ }),
-
-/***/ "./node_modules/onigasm/lib/OnigRegExp.js":
-/*!************************************************!*\
-  !*** ./node_modules/onigasm/lib/OnigRegExp.js ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-const OnigScanner_1 = __webpack_require__(/*! ./OnigScanner */ "./node_modules/onigasm/lib/OnigScanner.js");
-class OnigRegExp {
-    /**
-     * Create a new regex with the given pattern
-     * @param source A string pattern
-     */
-    constructor(source) {
-        this.source = source;
-        try {
-            this.scanner = new OnigScanner_1.default([this.source]);
-        }
-        catch (error) {
-            // doesn't make much sense, but this to pass atom/node-oniguruam tests
-        }
-    }
-    /**
-     * Synchronously search the string for a match starting at the given position
-     * @param string The string to search
-     * @param startPosition The optional position to start the search at, defaults to `0`
-     */
-    searchSync(string, startPosition) {
-        let match;
-        if (startPosition == null) {
-            startPosition = 0;
-        }
-        match = this.scanner.findNextMatchSync(string, startPosition);
-        return this.captureIndicesForMatch(string, match);
-    }
-    /**
-     * Search the string for a match starting at the given position
-     * @param string The string to search
-     * @param startPosition The optional position to start the search at, defaults to `0`
-     * @param callback The `(error, match)` function to call when done, match will be null if no matches were found. match will be an array of objects for each matched group on a successful search
-     */
-    search(string, startPosition, callback) {
-        if (startPosition == null) {
-            startPosition = 0;
-        }
-        if (typeof startPosition === 'function') {
-            callback = startPosition;
-            startPosition = 0;
-        }
-        try {
-            const ret = this.searchSync(string, startPosition);
-            callback(null, ret);
-        }
-        catch (error) {
-            callback(error);
-        }
-    }
-    /**
-     * Synchronously test if this regular expression matches the given string
-     * @param string The string to test against
-     */
-    testSync(string) {
-        if ((typeof this.source === 'boolean' || typeof string === 'boolean')) {
-            return this.source === string;
-        }
-        return this.searchSync(string) != null;
-    }
-    /**
-     * Test if this regular expression matches the given string
-     * @param string The string to test against
-     * @param callback The (error, matches) function to call when done, matches will be true if at least one match is found, false otherwise
-     */
-    test(string, callback) {
-        if (typeof callback !== 'function') {
-            callback = () => { };
-        }
-        try {
-            callback(null, this.testSync(string));
-        }
-        catch (error) {
-            callback(error);
-        }
-    }
-    captureIndicesForMatch(string, match) {
-        if (match != null) {
-            const { captureIndices } = match;
-            let capture;
-            string = this.scanner.convertToString(string);
-            for (let i = 0; i < captureIndices.length; i++) {
-                capture = captureIndices[i];
-                capture.match = string.slice(capture.start, capture.end);
-            }
-            return captureIndices;
-        }
-        else {
-            return null;
-        }
-    }
-}
-exports.default = OnigRegExp;
-//# sourceMappingURL=OnigRegExp.js.map
-
-/***/ }),
-
-/***/ "./node_modules/onigasm/lib/OnigScanner.js":
-/*!*************************************************!*\
-  !*** ./node_modules/onigasm/lib/OnigScanner.js ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-const LRUCache = __webpack_require__(/*! lru-cache */ "./node_modules/lru-cache/index.js");
-const onigasmH_1 = __webpack_require__(/*! ./onigasmH */ "./node_modules/onigasm/lib/onigasmH.js");
-const OnigString_1 = __webpack_require__(/*! ./OnigString */ "./node_modules/onigasm/lib/OnigString.js");
-/**
- * Allocates space on the heap and copies the string bytes on to it
- * @param str
- * @returns pointer to the first byte's address on heap
- */
-function mallocAndWriteString(str) {
-    const ptr = onigasmH_1.onigasmH._malloc(str.utf8Bytes.length);
-    onigasmH_1.onigasmH.HEAPU8.set(str.utf8Bytes, ptr);
-    return ptr;
-}
-function convertUTF8BytesFromPtrToString(ptr) {
-    const chars = [];
-    let i = 0;
-    while (onigasmH_1.onigasmH.HEAPU8[ptr] !== 0x00) {
-        chars[i++] = onigasmH_1.onigasmH.HEAPU8[ptr++];
-    }
-    return chars.join();
-}
-const cache = new LRUCache({
-    dispose: (scanner, info) => {
-        const regexTPtrsPtr = onigasmH_1.onigasmH._malloc(info.regexTPtrs.length);
-        onigasmH_1.onigasmH.HEAPU8.set(info.regexTPtrs, regexTPtrsPtr);
-        const status = onigasmH_1.onigasmH._disposeCompiledPatterns(regexTPtrsPtr, scanner.patterns.length);
-        if (status !== 0) {
-            const errMessage = convertUTF8BytesFromPtrToString(onigasmH_1.onigasmH._getLastError());
-            throw new Error(errMessage);
-        }
-        onigasmH_1.onigasmH._free(regexTPtrsPtr);
-    },
-    max: 1000,
-});
-class OnigScanner {
-    /**
-     * Create a new scanner with the given patterns
-     * @param patterns  An array of string patterns
-     */
-    constructor(patterns) {
-        if (onigasmH_1.onigasmH === null) {
-            throw new Error(`Onigasm has not been initialized, call loadWASM from 'onigasm' exports before using any other API`);
-        }
-        for (let i = 0; i < patterns.length; i++) {
-            const pattern = patterns[i];
-            if (typeof pattern !== 'string') {
-                throw new TypeError(`First parameter to OnigScanner constructor must be array of (pattern) strings`);
-            }
-        }
-        this.sources = patterns.slice();
-    }
-    get patterns() {
-        return this.sources.slice();
-    }
-    /**
-     * Find the next match from a given position
-     * @param string The string to search
-     * @param startPosition The optional position to start at, defaults to 0
-     * @param callback The (error, match) function to call when done, match will null when there is no match
-     */
-    findNextMatch(string, startPosition, callback) {
-        if (startPosition == null) {
-            startPosition = 0;
-        }
-        if (typeof startPosition === 'function') {
-            callback = startPosition;
-            startPosition = 0;
-        }
-        try {
-            const match = this.findNextMatchSync(string, startPosition);
-            callback(null, match);
-        }
-        catch (error) {
-            callback(error);
-        }
-    }
-    /**
-     * Find the next match from a given position
-     * @param string The string to search
-     * @param startPosition The optional position to start at, defaults to 0
-     */
-    findNextMatchSync(string, startPosition) {
-        if (startPosition == null) {
-            startPosition = 0;
-        }
-        startPosition = this.convertToNumber(startPosition);
-        let onigNativeInfo = cache.get(this);
-        let status = 0;
-        if (!onigNativeInfo) {
-            const regexTAddrRecieverPtr = onigasmH_1.onigasmH._malloc(4);
-            const regexTPtrs = [];
-            for (let i = 0; i < this.sources.length; i++) {
-                const pattern = this.sources[i];
-                const patternStrPtr = mallocAndWriteString(new OnigString_1.default(pattern));
-                status = onigasmH_1.onigasmH._compilePattern(patternStrPtr, regexTAddrRecieverPtr);
-                if (status !== 0) {
-                    const errMessage = convertUTF8BytesFromPtrToString(onigasmH_1.onigasmH._getLastError());
-                    throw new Error(errMessage);
-                }
-                const regexTAddress = onigasmH_1.onigasmH.HEAP32[regexTAddrRecieverPtr / 4];
-                regexTPtrs.push(regexTAddress);
-                onigasmH_1.onigasmH._free(patternStrPtr);
-            }
-            onigNativeInfo = {
-                regexTPtrs: new Uint8Array(Uint32Array.from(regexTPtrs).buffer),
-            };
-            onigasmH_1.onigasmH._free(regexTAddrRecieverPtr);
-            cache.set(this, onigNativeInfo);
-        }
-        const onigString = string instanceof OnigString_1.default ? string : new OnigString_1.default(this.convertToString(string));
-        const strPtr = mallocAndWriteString(onigString);
-        const resultInfoReceiverPtr = onigasmH_1.onigasmH._malloc(8);
-        const regexTPtrsPtr = onigasmH_1.onigasmH._malloc(onigNativeInfo.regexTPtrs.length);
-        onigasmH_1.onigasmH.HEAPU8.set(onigNativeInfo.regexTPtrs, regexTPtrsPtr);
-        status = onigasmH_1.onigasmH._findBestMatch(
-        // regex_t **patterns
-        regexTPtrsPtr, 
-        // int patternCount
-        this.sources.length, 
-        // UChar *utf8String
-        strPtr, 
-        // int strLen
-        onigString.utf8Bytes.length - 1, 
-        // int startOffset
-        onigString.convertUtf16OffsetToUtf8(startPosition), 
-        // int *resultInfo
-        resultInfoReceiverPtr);
-        if (status !== 0) {
-            const errMessage = convertUTF8BytesFromPtrToString(onigasmH_1.onigasmH._getLastError());
-            throw new Error(errMessage);
-        }
-        const [
-        // The index of pattern which matched the string at least offset from 0 (start)
-        bestPatternIdx, 
-        // Begin address of capture info encoded as pairs
-        // like [start, end, start, end, start, end, ...]
-        //  - first start-end pair is entire match (index 0 and 1)
-        //  - subsequent pairs are capture groups (2, 3 = first capture group, 4, 5 = second capture group and so on)
-        encodedResultBeginAddress, 
-        // Length of the [start, end, ...] sequence so we know how much memory to read (will always be 0 or multiple of 2)
-        encodedResultLength,] = new Uint32Array(onigasmH_1.onigasmH.HEAPU32.buffer, resultInfoReceiverPtr, 3);
-        onigasmH_1.onigasmH._free(strPtr);
-        onigasmH_1.onigasmH._free(resultInfoReceiverPtr);
-        onigasmH_1.onigasmH._free(regexTPtrsPtr);
-        if (encodedResultLength > 0) {
-            const encodedResult = new Uint32Array(onigasmH_1.onigasmH.HEAPU32.buffer, encodedResultBeginAddress, encodedResultLength);
-            const captureIndices = [];
-            let i = 0;
-            let captureIdx = 0;
-            while (i < encodedResultLength) {
-                const index = captureIdx++;
-                let start = encodedResult[i++];
-                let end = encodedResult[i++];
-                if (onigString.hasMultiByteCharacters) {
-                    start = onigString.convertUtf8OffsetToUtf16(start);
-                    end = onigString.convertUtf8OffsetToUtf16(end);
-                }
-                captureIndices.push({
-                    end,
-                    index,
-                    length: end - start,
-                    start,
-                });
-            }
-            onigasmH_1.onigasmH._free(encodedResultBeginAddress);
-            return {
-                captureIndices,
-                index: bestPatternIdx,
-                scanner: this,
-            };
-        }
-        return null;
-    }
-    convertToString(value) {
-        if (value === undefined) {
-            return 'undefined';
-        }
-        if (value === null) {
-            return 'null';
-        }
-        if (value instanceof OnigString_1.default) {
-            return value.content;
-        }
-        return value.toString();
-    }
-    convertToNumber(value) {
-        value = parseInt(value, 10);
-        if (!isFinite(value)) {
-            value = 0;
-        }
-        value = Math.max(value, 0);
-        return value;
-    }
-}
-exports.OnigScanner = OnigScanner;
-exports.default = OnigScanner;
-//# sourceMappingURL=OnigScanner.js.map
-
-/***/ }),
-
-/***/ "./node_modules/onigasm/lib/OnigString.js":
-/*!************************************************!*\
-  !*** ./node_modules/onigasm/lib/OnigString.js ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-class OnigString {
-    constructor(content) {
-        this.substring = (start, end) => {
-            return this.source.substring(start, end);
-        };
-        this.toString = (start, end) => {
-            return this.source;
-        };
-        if (typeof content !== 'string') {
-            throw new TypeError('Argument must be a string');
-        }
-        this.source = content;
-        this._utf8Bytes = null;
-        this._utf8Indexes = null;
-    }
-    get utf8Bytes() {
-        if (!this._utf8Bytes) {
-            this.encode();
-        }
-        return this._utf8Bytes;
-    }
-    /**
-     * Returns `null` if all utf8 offsets match utf-16 offset (content has no multi byte characters)
-     */
-    get utf8Indexes() {
-        if (!this._utf8Bytes) {
-            this.encode();
-        }
-        return this._utf8Indexes;
-    }
-    get content() {
-        return this.source;
-    }
-    get length() {
-        return this.source.length;
-    }
-    get hasMultiByteCharacters() {
-        return this.utf8Indexes !== null;
-    }
-    convertUtf8OffsetToUtf16(utf8Offset) {
-        if (utf8Offset < 0) {
-            return 0;
-        }
-        const utf8Array = this._utf8Bytes;
-        if (utf8Offset >= utf8Array.length - 1) {
-            return this.source.length;
-        }
-        const utf8OffsetMap = this.utf8Indexes;
-        if (utf8OffsetMap && utf8Offset >= this._mappingTableStartOffset) {
-            return findFirstInSorted(utf8OffsetMap, utf8Offset - this._mappingTableStartOffset) + this._mappingTableStartOffset;
-        }
-        return utf8Offset;
-    }
-    convertUtf16OffsetToUtf8(utf16Offset) {
-        if (utf16Offset < 0) {
-            return 0;
-        }
-        const utf8Array = this._utf8Bytes;
-        if (utf16Offset >= this.source.length) {
-            return utf8Array.length - 1;
-        }
-        const utf8OffsetMap = this.utf8Indexes;
-        if (utf8OffsetMap && utf16Offset >= this._mappingTableStartOffset) {
-            return utf8OffsetMap[utf16Offset - this._mappingTableStartOffset] + this._mappingTableStartOffset;
-        }
-        return utf16Offset;
-    }
-    encode() {
-        const str = this.source;
-        const n = str.length;
-        let utf16OffsetToUtf8;
-        let utf8Offset = 0;
-        let mappingTableStartOffset = 0;
-        function createOffsetTable(startOffset) {
-            const maxUtf8Len = (n - startOffset) * 3;
-            if (maxUtf8Len <= 0xff) {
-                utf16OffsetToUtf8 = new Uint8Array(n - startOffset);
-            }
-            else if (maxUtf8Len <= 0xffff) {
-                utf16OffsetToUtf8 = new Uint16Array(n - startOffset);
-            }
-            else {
-                utf16OffsetToUtf8 = new Uint32Array(n - startOffset);
-            }
-            mappingTableStartOffset = startOffset;
-            utf16OffsetToUtf8[utf8Offset++] = 0;
-        }
-        const u8view = new Uint8Array((n * 3) /* alloc max now, trim later*/ + 1 /** null termination character */);
-        let ptrHead = 0;
-        let i = 0;
-        // for some reason, v8 is faster with str.length than using a variable (might be illusion)
-        while (i < str.length) {
-            let codepoint;
-            const c = str.charCodeAt(i);
-            if (utf16OffsetToUtf8) {
-                utf16OffsetToUtf8[utf8Offset++] = ptrHead - mappingTableStartOffset;
-            }
-            if (c < 0xD800 || c > 0xDFFF) {
-                codepoint = c;
-            }
-            else if (c >= 0xDC00) {
-                codepoint = 0xFFFD;
-            }
-            else {
-                if (i === n - 1) {
-                    codepoint = 0xFFFD;
-                }
-                else {
-                    const d = str.charCodeAt(i + 1);
-                    if (0xDC00 <= d && d <= 0xDFFF) {
-                        if (!utf16OffsetToUtf8) {
-                            createOffsetTable(i);
-                        }
-                        const a = c & 0x3FF;
-                        const b = d & 0x3FF;
-                        codepoint = 0x10000 + (a << 10) + b;
-                        i += 1;
-                        utf16OffsetToUtf8[utf8Offset++] = ptrHead - mappingTableStartOffset;
-                    }
-                    else {
-                        codepoint = 0xFFFD;
-                    }
-                }
-            }
-            let bytesRequiredToEncode;
-            let offset;
-            if (codepoint <= 0x7F) {
-                bytesRequiredToEncode = 1;
-                offset = 0;
-            }
-            else if (codepoint <= 0x07FF) {
-                bytesRequiredToEncode = 2;
-                offset = 0xC0;
-            }
-            else if (codepoint <= 0xFFFF) {
-                bytesRequiredToEncode = 3;
-                offset = 0xE0;
-            }
-            else {
-                bytesRequiredToEncode = 4;
-                offset = 0xF0;
-            }
-            if (bytesRequiredToEncode === 1) {
-                u8view[ptrHead++] = codepoint;
-            }
-            else {
-                if (!utf16OffsetToUtf8) {
-                    createOffsetTable(ptrHead);
-                }
-                u8view[ptrHead++] = (codepoint >> (6 * (--bytesRequiredToEncode))) + offset;
-                while (bytesRequiredToEncode > 0) {
-                    const temp = codepoint >> (6 * (bytesRequiredToEncode - 1));
-                    u8view[ptrHead++] = (0x80 | (temp & 0x3F));
-                    bytesRequiredToEncode -= 1;
-                }
-            }
-            i += 1;
-        }
-        const utf8 = u8view.slice(0, ptrHead + 1);
-        utf8[ptrHead] = 0x00;
-        this._utf8Bytes = utf8;
-        if (utf16OffsetToUtf8) { // set if UTF-16 surrogate chars or multi-byte characters found
-            this._utf8Indexes = utf16OffsetToUtf8;
-            this._mappingTableStartOffset = mappingTableStartOffset;
-        }
-    }
-}
-function findFirstInSorted(array, i) {
-    let low = 0;
-    let high = array.length;
-    if (high === 0) {
-        return 0; // no children
-    }
-    while (low < high) {
-        const mid = Math.floor((low + high) / 2);
-        if (array[mid] >= i) {
-            high = mid;
-        }
-        else {
-            low = mid + 1;
-        }
-    }
-    // low is on the index of the first value >= i or array.length. Decrement low until we find array[low] <= i
-    while (low > 0 && (low >= array.length || array[low] > i)) {
-        low--;
-    }
-    // check whether we are on the second index of a utf-16 surrogate char. If so, go to the first index.
-    if (low > 0 && array[low] === array[low - 1]) {
-        low--;
-    }
-    return low;
-}
-exports.default = OnigString;
-//# sourceMappingURL=OnigString.js.map
-
-/***/ }),
-
-/***/ "./node_modules/onigasm/lib/index.js":
-/*!*******************************************!*\
-  !*** ./node_modules/onigasm/lib/index.js ***!
-  \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-const onigasmH_1 = __webpack_require__(/*! ./onigasmH */ "./node_modules/onigasm/lib/onigasmH.js");
-exports.loadWASM = onigasmH_1.loadWASM;
-const OnigRegExp_1 = __webpack_require__(/*! ./OnigRegExp */ "./node_modules/onigasm/lib/OnigRegExp.js");
-exports.OnigRegExp = OnigRegExp_1.default;
-const OnigScanner_1 = __webpack_require__(/*! ./OnigScanner */ "./node_modules/onigasm/lib/OnigScanner.js");
-exports.OnigScanner = OnigScanner_1.default;
-const OnigString_1 = __webpack_require__(/*! ./OnigString */ "./node_modules/onigasm/lib/OnigString.js");
-exports.OnigString = OnigString_1.default;
-//# sourceMappingURL=index.js.map
-
-/***/ }),
-
-/***/ "./node_modules/onigasm/lib/onigasm.js":
-/*!*********************************************!*\
-  !*** ./node_modules/onigasm/lib/onigasm.js ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var Onigasm = (function() {
-  var _scriptDir = typeof document !== 'undefined' && document.currentScript ? document.currentScript.src : undefined;
-  return (
-function(Onigasm) {
-  Onigasm = Onigasm || {};
-
-var Module=typeof Onigasm!=="undefined"?Onigasm:{};var moduleOverrides={};var key;for(key in Module){if(Module.hasOwnProperty(key)){moduleOverrides[key]=Module[key]}}var arguments_=[];var thisProgram="./this.program";var quit_=function(status,toThrow){throw toThrow};var ENVIRONMENT_IS_WEB=false;var ENVIRONMENT_IS_WORKER=false;var ENVIRONMENT_IS_NODE=false;var ENVIRONMENT_IS_SHELL=true;var scriptDirectory="";function locateFile(path){if(Module["locateFile"]){return Module["locateFile"](path,scriptDirectory)}return scriptDirectory+path}var read_,readBinary;if(ENVIRONMENT_IS_SHELL){if(typeof read!="undefined"){read_=function shell_read(f){return read(f)}}readBinary=function readBinary(f){var data;if(typeof readbuffer==="function"){return new Uint8Array(readbuffer(f))}data=read(f,"binary");assert(typeof data==="object");return data};if(typeof scriptArgs!="undefined"){arguments_=scriptArgs}else if(typeof arguments!="undefined"){arguments_=arguments}if(typeof quit==="function"){quit_=function(status){quit(status)}}if(typeof print!=="undefined"){if(typeof console==="undefined")console={};console.log=print;console.warn=console.error=typeof printErr!=="undefined"?printErr:print}}else{}var out=Module["print"]||console.log.bind(console);var err=Module["printErr"]||console.warn.bind(console);for(key in moduleOverrides){if(moduleOverrides.hasOwnProperty(key)){Module[key]=moduleOverrides[key]}}moduleOverrides=null;if(Module["arguments"])arguments_=Module["arguments"];if(Module["thisProgram"])thisProgram=Module["thisProgram"];if(Module["quit"])quit_=Module["quit"];var STACK_ALIGN=16;function dynamicAlloc(size){var ret=HEAP32[DYNAMICTOP_PTR>>2];var end=ret+size+15&-16;if(end>_emscripten_get_heap_size()){abort()}HEAP32[DYNAMICTOP_PTR>>2]=end;return ret}function getNativeTypeSize(type){switch(type){case"i1":case"i8":return 1;case"i16":return 2;case"i32":return 4;case"i64":return 8;case"float":return 4;case"double":return 8;default:{if(type[type.length-1]==="*"){return 4}else if(type[0]==="i"){var bits=parseInt(type.substr(1));assert(bits%8===0,"getNativeTypeSize invalid bits "+bits+", type "+type);return bits/8}else{return 0}}}}function warnOnce(text){if(!warnOnce.shown)warnOnce.shown={};if(!warnOnce.shown[text]){warnOnce.shown[text]=1;err(text)}}function convertJsFunctionToWasm(func,sig){var typeSection=[1,0,1,96];var sigRet=sig.slice(0,1);var sigParam=sig.slice(1);var typeCodes={"i":127,"j":126,"f":125,"d":124};typeSection.push(sigParam.length);for(var i=0;i<sigParam.length;++i){typeSection.push(typeCodes[sigParam[i]])}if(sigRet=="v"){typeSection.push(0)}else{typeSection=typeSection.concat([1,typeCodes[sigRet]])}typeSection[1]=typeSection.length-2;var bytes=new Uint8Array([0,97,115,109,1,0,0,0].concat(typeSection,[2,7,1,1,101,1,102,0,0,7,5,1,1,102,0,0]));var module=new WebAssembly.Module(bytes);var instance=new WebAssembly.Instance(module,{e:{f:func}});var wrappedFunc=instance.exports.f;return wrappedFunc}function addFunctionWasm(func,sig){var table=wasmTable;var ret=table.length;try{table.grow(1)}catch(err){if(!err instanceof RangeError){throw err}throw"Unable to grow wasm table. Use a higher value for RESERVED_FUNCTION_POINTERS or set ALLOW_TABLE_GROWTH."}try{table.set(ret,func)}catch(err){if(!err instanceof TypeError){throw err}assert(typeof sig!=="undefined","Missing signature argument to addFunction");var wrapped=convertJsFunctionToWasm(func,sig);table.set(ret,wrapped)}return ret}function removeFunctionWasm(index){}var funcWrappers={};function dynCall(sig,ptr,args){if(args&&args.length){return Module["dynCall_"+sig].apply(null,[ptr].concat(args))}else{return Module["dynCall_"+sig].call(null,ptr)}}var tempRet0=0;var setTempRet0=function(value){tempRet0=value};var wasmBinary;if(Module["wasmBinary"])wasmBinary=Module["wasmBinary"];var noExitRuntime;if(Module["noExitRuntime"])noExitRuntime=Module["noExitRuntime"];if(typeof WebAssembly!=="object"){err("no native wasm support detected")}function setValue(ptr,value,type,noSafe){type=type||"i8";if(type.charAt(type.length-1)==="*")type="i32";switch(type){case"i1":HEAP8[ptr>>0]=value;break;case"i8":HEAP8[ptr>>0]=value;break;case"i16":HEAP16[ptr>>1]=value;break;case"i32":HEAP32[ptr>>2]=value;break;case"i64":tempI64=[value>>>0,(tempDouble=value,+Math_abs(tempDouble)>=1?tempDouble>0?(Math_min(+Math_floor(tempDouble/4294967296),4294967295)|0)>>>0:~~+Math_ceil((tempDouble-+(~~tempDouble>>>0))/4294967296)>>>0:0)],HEAP32[ptr>>2]=tempI64[0],HEAP32[ptr+4>>2]=tempI64[1];break;case"float":HEAPF32[ptr>>2]=value;break;case"double":HEAPF64[ptr>>3]=value;break;default:abort("invalid type for setValue: "+type)}}var wasmMemory;var wasmTable=new WebAssembly.Table({"initial":244,"maximum":244+0,"element":"anyfunc"});var ABORT=false;var EXITSTATUS=0;function assert(condition,text){if(!condition){abort("Assertion failed: "+text)}}function getCFunc(ident){var func=Module["_"+ident];assert(func,"Cannot call unknown function "+ident+", make sure it is exported");return func}function ccall(ident,returnType,argTypes,args,opts){var toC={"string":function(str){var ret=0;if(str!==null&&str!==undefined&&str!==0){var len=(str.length<<2)+1;ret=stackAlloc(len);stringToUTF8(str,ret,len)}return ret},"array":function(arr){var ret=stackAlloc(arr.length);writeArrayToMemory(arr,ret);return ret}};function convertReturnValue(ret){if(returnType==="string")return UTF8ToString(ret);if(returnType==="boolean")return Boolean(ret);return ret}var func=getCFunc(ident);var cArgs=[];var stack=0;if(args){for(var i=0;i<args.length;i++){var converter=toC[argTypes[i]];if(converter){if(stack===0)stack=stackSave();cArgs[i]=converter(args[i])}else{cArgs[i]=args[i]}}}var ret=func.apply(null,cArgs);ret=convertReturnValue(ret);if(stack!==0)stackRestore(stack);return ret}var ALLOC_NONE=3;var UTF8Decoder=typeof TextDecoder!=="undefined"?new TextDecoder("utf8"):undefined;function UTF8ArrayToString(u8Array,idx,maxBytesToRead){var endIdx=idx+maxBytesToRead;var endPtr=idx;while(u8Array[endPtr]&&!(endPtr>=endIdx))++endPtr;if(endPtr-idx>16&&u8Array.subarray&&UTF8Decoder){return UTF8Decoder.decode(u8Array.subarray(idx,endPtr))}else{var str="";while(idx<endPtr){var u0=u8Array[idx++];if(!(u0&128)){str+=String.fromCharCode(u0);continue}var u1=u8Array[idx++]&63;if((u0&224)==192){str+=String.fromCharCode((u0&31)<<6|u1);continue}var u2=u8Array[idx++]&63;if((u0&240)==224){u0=(u0&15)<<12|u1<<6|u2}else{u0=(u0&7)<<18|u1<<12|u2<<6|u8Array[idx++]&63}if(u0<65536){str+=String.fromCharCode(u0)}else{var ch=u0-65536;str+=String.fromCharCode(55296|ch>>10,56320|ch&1023)}}}return str}function UTF8ToString(ptr,maxBytesToRead){return ptr?UTF8ArrayToString(HEAPU8,ptr,maxBytesToRead):""}function stringToUTF8Array(str,outU8Array,outIdx,maxBytesToWrite){if(!(maxBytesToWrite>0))return 0;var startIdx=outIdx;var endIdx=outIdx+maxBytesToWrite-1;for(var i=0;i<str.length;++i){var u=str.charCodeAt(i);if(u>=55296&&u<=57343){var u1=str.charCodeAt(++i);u=65536+((u&1023)<<10)|u1&1023}if(u<=127){if(outIdx>=endIdx)break;outU8Array[outIdx++]=u}else if(u<=2047){if(outIdx+1>=endIdx)break;outU8Array[outIdx++]=192|u>>6;outU8Array[outIdx++]=128|u&63}else if(u<=65535){if(outIdx+2>=endIdx)break;outU8Array[outIdx++]=224|u>>12;outU8Array[outIdx++]=128|u>>6&63;outU8Array[outIdx++]=128|u&63}else{if(outIdx+3>=endIdx)break;outU8Array[outIdx++]=240|u>>18;outU8Array[outIdx++]=128|u>>12&63;outU8Array[outIdx++]=128|u>>6&63;outU8Array[outIdx++]=128|u&63}}outU8Array[outIdx]=0;return outIdx-startIdx}function stringToUTF8(str,outPtr,maxBytesToWrite){return stringToUTF8Array(str,HEAPU8,outPtr,maxBytesToWrite)}function lengthBytesUTF8(str){var len=0;for(var i=0;i<str.length;++i){var u=str.charCodeAt(i);if(u>=55296&&u<=57343)u=65536+((u&1023)<<10)|str.charCodeAt(++i)&1023;if(u<=127)++len;else if(u<=2047)len+=2;else if(u<=65535)len+=3;else len+=4}return len}var UTF16Decoder=typeof TextDecoder!=="undefined"?new TextDecoder("utf-16le"):undefined;function writeArrayToMemory(array,buffer){HEAP8.set(array,buffer)}function writeAsciiToMemory(str,buffer,dontAddNull){for(var i=0;i<str.length;++i){HEAP8[buffer++>>0]=str.charCodeAt(i)}if(!dontAddNull)HEAP8[buffer>>0]=0}var WASM_PAGE_SIZE=65536;function alignUp(x,multiple){if(x%multiple>0){x+=multiple-x%multiple}return x}var buffer,HEAP8,HEAPU8,HEAP16,HEAPU16,HEAP32,HEAPU32,HEAPF32,HEAPF64;function updateGlobalBufferAndViews(buf){buffer=buf;Module["HEAP8"]=HEAP8=new Int8Array(buf);Module["HEAP16"]=HEAP16=new Int16Array(buf);Module["HEAP32"]=HEAP32=new Int32Array(buf);Module["HEAPU8"]=HEAPU8=new Uint8Array(buf);Module["HEAPU16"]=HEAPU16=new Uint16Array(buf);Module["HEAPU32"]=HEAPU32=new Uint32Array(buf);Module["HEAPF32"]=HEAPF32=new Float32Array(buf);Module["HEAPF64"]=HEAPF64=new Float64Array(buf)}var STACK_BASE=5507664,DYNAMIC_BASE=5507664,DYNAMICTOP_PTR=264624;var INITIAL_TOTAL_MEMORY=Module["TOTAL_MEMORY"]||157286400;if(Module["wasmMemory"]){wasmMemory=Module["wasmMemory"]}else{wasmMemory=new WebAssembly.Memory({"initial":INITIAL_TOTAL_MEMORY/WASM_PAGE_SIZE})}if(wasmMemory){buffer=wasmMemory.buffer}INITIAL_TOTAL_MEMORY=buffer.byteLength;updateGlobalBufferAndViews(buffer);HEAP32[DYNAMICTOP_PTR>>2]=DYNAMIC_BASE;function callRuntimeCallbacks(callbacks){while(callbacks.length>0){var callback=callbacks.shift();if(typeof callback=="function"){callback();continue}var func=callback.func;if(typeof func==="number"){if(callback.arg===undefined){Module["dynCall_v"](func)}else{Module["dynCall_vi"](func,callback.arg)}}else{func(callback.arg===undefined?null:callback.arg)}}}var __ATPRERUN__=[];var __ATINIT__=[];var __ATMAIN__=[];var __ATPOSTRUN__=[];var runtimeInitialized=false;var runtimeExited=false;function preRun(){if(Module["preRun"]){if(typeof Module["preRun"]=="function")Module["preRun"]=[Module["preRun"]];while(Module["preRun"].length){addOnPreRun(Module["preRun"].shift())}}callRuntimeCallbacks(__ATPRERUN__)}function initRuntime(){runtimeInitialized=true;callRuntimeCallbacks(__ATINIT__)}function preMain(){callRuntimeCallbacks(__ATMAIN__)}function exitRuntime(){runtimeExited=true}function postRun(){if(Module["postRun"]){if(typeof Module["postRun"]=="function")Module["postRun"]=[Module["postRun"]];while(Module["postRun"].length){addOnPostRun(Module["postRun"].shift())}}callRuntimeCallbacks(__ATPOSTRUN__)}function addOnPreRun(cb){__ATPRERUN__.unshift(cb)}function addOnPostRun(cb){__ATPOSTRUN__.unshift(cb)}var Math_abs=Math.abs;var Math_ceil=Math.ceil;var Math_floor=Math.floor;var Math_min=Math.min;var runDependencies=0;var runDependencyWatcher=null;var dependenciesFulfilled=null;function addRunDependency(id){runDependencies++;if(Module["monitorRunDependencies"]){Module["monitorRunDependencies"](runDependencies)}}function removeRunDependency(id){runDependencies--;if(Module["monitorRunDependencies"]){Module["monitorRunDependencies"](runDependencies)}if(runDependencies==0){if(runDependencyWatcher!==null){clearInterval(runDependencyWatcher);runDependencyWatcher=null}if(dependenciesFulfilled){var callback=dependenciesFulfilled;dependenciesFulfilled=null;callback()}}}Module["preloadedImages"]={};Module["preloadedAudios"]={};function abort(what){if(Module["onAbort"]){Module["onAbort"](what)}what+="";out(what);err(what);ABORT=true;EXITSTATUS=1;what="abort("+what+"). Build with -s ASSERTIONS=1 for more info.";throw new WebAssembly.RuntimeError(what)}var dataURIPrefix="data:application/octet-stream;base64,";function isDataURI(filename){return String.prototype.startsWith?filename.startsWith(dataURIPrefix):filename.indexOf(dataURIPrefix)===0}var wasmBinaryFile="onigasm.wasm";if(!isDataURI(wasmBinaryFile)){wasmBinaryFile=locateFile(wasmBinaryFile)}function getBinary(){try{if(wasmBinary){return new Uint8Array(wasmBinary)}if(readBinary){return readBinary(wasmBinaryFile)}else{throw"both async and sync fetching of the wasm failed"}}catch(err){abort(err)}}function getBinaryPromise(){if(!wasmBinary&&(ENVIRONMENT_IS_WEB||ENVIRONMENT_IS_WORKER)&&typeof fetch==="function"){return fetch(wasmBinaryFile,{credentials:"same-origin"}).then(function(response){if(!response["ok"]){throw"failed to load wasm binary file at '"+wasmBinaryFile+"'"}return response["arrayBuffer"]()}).catch(function(){return getBinary()})}return new Promise(function(resolve,reject){resolve(getBinary())})}function createWasm(){var info={"env":asmLibraryArg,"wasi_unstable":asmLibraryArg};function receiveInstance(instance,module){var exports=instance.exports;Module["asm"]=exports;removeRunDependency("wasm-instantiate")}addRunDependency("wasm-instantiate");function receiveInstantiatedSource(output){receiveInstance(output["instance"])}function instantiateArrayBuffer(receiver){return getBinaryPromise().then(function(binary){return WebAssembly.instantiate(binary,info)}).then(receiver,function(reason){err("failed to asynchronously prepare wasm: "+reason);abort(reason)})}function instantiateAsync(){if(!wasmBinary&&typeof WebAssembly.instantiateStreaming==="function"&&!isDataURI(wasmBinaryFile)&&typeof fetch==="function"){fetch(wasmBinaryFile,{credentials:"same-origin"}).then(function(response){var result=WebAssembly.instantiateStreaming(response,info);return result.then(receiveInstantiatedSource,function(reason){err("wasm streaming compile failed: "+reason);err("falling back to ArrayBuffer instantiation");instantiateArrayBuffer(receiveInstantiatedSource)})})}else{return instantiateArrayBuffer(receiveInstantiatedSource)}}if(Module["instantiateWasm"]){try{var exports=Module["instantiateWasm"](info,receiveInstance);return exports}catch(e){err("Module.instantiateWasm callback failed with error: "+e);return false}}instantiateAsync();return{}}var tempDouble;var tempI64;__ATINIT__.push({func:function(){___wasm_call_ctors()}});function demangle(func){var __cxa_demangle_func=Module["___cxa_demangle"]||Module["__cxa_demangle"];assert(__cxa_demangle_func);try{var s=func;if(s.startsWith("__Z"))s=s.substr(1);var len=lengthBytesUTF8(s)+1;var buf=_malloc(len);stringToUTF8(s,buf,len);var status=_malloc(4);var ret=__cxa_demangle_func(buf,0,0,status);if(HEAP32[status>>2]===0&&ret){return UTF8ToString(ret)}}catch(e){}finally{if(buf)_free(buf);if(status)_free(status);if(ret)_free(ret)}return func}function demangleAll(text){var regex=/\b_Z[\w\d_]+/g;return text.replace(regex,function(x){var y=demangle(x);return x===y?x:y+" ["+x+"]"})}function jsStackTrace(){var err=new Error;if(!err.stack){try{throw new Error(0)}catch(e){err=e}if(!err.stack){return"(no stack trace available)"}}return err.stack.toString()}function _abort(){abort()}function _emscripten_get_heap_size(){return HEAP8.length}function _emscripten_get_sbrk_ptr(){return 264624}function _emscripten_memcpy_big(dest,src,num){HEAPU8.set(HEAPU8.subarray(src,src+num),dest)}function emscripten_realloc_buffer(size){try{wasmMemory.grow(size-buffer.byteLength+65535>>16);updateGlobalBufferAndViews(wasmMemory.buffer);return 1}catch(e){}}function _emscripten_resize_heap(requestedSize){var oldSize=_emscripten_get_heap_size();var PAGE_MULTIPLE=65536;var LIMIT=2147483648-PAGE_MULTIPLE;if(requestedSize>LIMIT){return false}var MIN_TOTAL_MEMORY=16777216;var newSize=Math.max(oldSize,MIN_TOTAL_MEMORY);while(newSize<requestedSize){if(newSize<=536870912){newSize=alignUp(2*newSize,PAGE_MULTIPLE)}else{newSize=Math.min(alignUp((3*newSize+2147483648)/4,PAGE_MULTIPLE),LIMIT)}}var replacement=emscripten_realloc_buffer(newSize);if(!replacement){return false}return true}var PATH={splitPath:function(filename){var splitPathRe=/^(\/?|)([\s\S]*?)((?:\.{1,2}|[^\/]+?|)(\.[^.\/]*|))(?:[\/]*)$/;return splitPathRe.exec(filename).slice(1)},normalizeArray:function(parts,allowAboveRoot){var up=0;for(var i=parts.length-1;i>=0;i--){var last=parts[i];if(last==="."){parts.splice(i,1)}else if(last===".."){parts.splice(i,1);up++}else if(up){parts.splice(i,1);up--}}if(allowAboveRoot){for(;up;up--){parts.unshift("..")}}return parts},normalize:function(path){var isAbsolute=path.charAt(0)==="/",trailingSlash=path.substr(-1)==="/";path=PATH.normalizeArray(path.split("/").filter(function(p){return!!p}),!isAbsolute).join("/");if(!path&&!isAbsolute){path="."}if(path&&trailingSlash){path+="/"}return(isAbsolute?"/":"")+path},dirname:function(path){var result=PATH.splitPath(path),root=result[0],dir=result[1];if(!root&&!dir){return"."}if(dir){dir=dir.substr(0,dir.length-1)}return root+dir},basename:function(path){if(path==="/")return"/";var lastSlash=path.lastIndexOf("/");if(lastSlash===-1)return path;return path.substr(lastSlash+1)},extname:function(path){return PATH.splitPath(path)[3]},join:function(){var paths=Array.prototype.slice.call(arguments,0);return PATH.normalize(paths.join("/"))},join2:function(l,r){return PATH.normalize(l+"/"+r)}};var SYSCALLS={buffers:[null,[],[]],printChar:function(stream,curr){var buffer=SYSCALLS.buffers[stream];if(curr===0||curr===10){(stream===1?out:err)(UTF8ArrayToString(buffer,0));buffer.length=0}else{buffer.push(curr)}},varargs:0,get:function(varargs){SYSCALLS.varargs+=4;var ret=HEAP32[SYSCALLS.varargs-4>>2];return ret},getStr:function(){var ret=UTF8ToString(SYSCALLS.get());return ret},get64:function(){var low=SYSCALLS.get(),high=SYSCALLS.get();return low},getZero:function(){SYSCALLS.get()}};function _fd_close(fd){try{return 0}catch(e){if(typeof FS==="undefined"||!(e instanceof FS.ErrnoError))abort(e);return e.errno}}function _fd_seek(fd,offset_low,offset_high,whence,newOffset){try{return 0}catch(e){if(typeof FS==="undefined"||!(e instanceof FS.ErrnoError))abort(e);return e.errno}}function _fd_write(fd,iov,iovcnt,pnum){try{var num=0;for(var i=0;i<iovcnt;i++){var ptr=HEAP32[iov+i*8>>2];var len=HEAP32[iov+(i*8+4)>>2];for(var j=0;j<len;j++){SYSCALLS.printChar(fd,HEAPU8[ptr+j])}num+=len}HEAP32[pnum>>2]=num;return 0}catch(e){if(typeof FS==="undefined"||!(e instanceof FS.ErrnoError))abort(e);return e.errno}}function _setTempRet0($i){setTempRet0($i|0)}var ASSERTIONS=false;var asmLibraryArg={"abort":_abort,"emscripten_get_sbrk_ptr":_emscripten_get_sbrk_ptr,"emscripten_memcpy_big":_emscripten_memcpy_big,"emscripten_resize_heap":_emscripten_resize_heap,"fd_close":_fd_close,"fd_seek":_fd_seek,"fd_write":_fd_write,"memory":wasmMemory,"setTempRet0":_setTempRet0,"table":wasmTable};var asm=createWasm();Module["asm"]=asm;var ___wasm_call_ctors=Module["___wasm_call_ctors"]=function(){return Module["asm"]["__wasm_call_ctors"].apply(null,arguments)};var _malloc=Module["_malloc"]=function(){return Module["asm"]["malloc"].apply(null,arguments)};var _free=Module["_free"]=function(){return Module["asm"]["free"].apply(null,arguments)};var _getLastError=Module["_getLastError"]=function(){return Module["asm"]["getLastError"].apply(null,arguments)};var _compilePattern=Module["_compilePattern"]=function(){return Module["asm"]["compilePattern"].apply(null,arguments)};var _disposeCompiledPatterns=Module["_disposeCompiledPatterns"]=function(){return Module["asm"]["disposeCompiledPatterns"].apply(null,arguments)};var _findBestMatch=Module["_findBestMatch"]=function(){return Module["asm"]["findBestMatch"].apply(null,arguments)};var ___cxa_demangle=Module["___cxa_demangle"]=function(){return Module["asm"]["__cxa_demangle"].apply(null,arguments)};var _setThrew=Module["_setThrew"]=function(){return Module["asm"]["setThrew"].apply(null,arguments)};var stackSave=Module["stackSave"]=function(){return Module["asm"]["stackSave"].apply(null,arguments)};var stackAlloc=Module["stackAlloc"]=function(){return Module["asm"]["stackAlloc"].apply(null,arguments)};var stackRestore=Module["stackRestore"]=function(){return Module["asm"]["stackRestore"].apply(null,arguments)};var __growWasmMemory=Module["__growWasmMemory"]=function(){return Module["asm"]["__growWasmMemory"].apply(null,arguments)};var dynCall_vi=Module["dynCall_vi"]=function(){return Module["asm"]["dynCall_vi"].apply(null,arguments)};var dynCall_iiii=Module["dynCall_iiii"]=function(){return Module["asm"]["dynCall_iiii"].apply(null,arguments)};var dynCall_iiiii=Module["dynCall_iiiii"]=function(){return Module["asm"]["dynCall_iiiii"].apply(null,arguments)};var dynCall_iii=Module["dynCall_iii"]=function(){return Module["asm"]["dynCall_iii"].apply(null,arguments)};var dynCall_iidiiii=Module["dynCall_iidiiii"]=function(){return Module["asm"]["dynCall_iidiiii"].apply(null,arguments)};var dynCall_vii=Module["dynCall_vii"]=function(){return Module["asm"]["dynCall_vii"].apply(null,arguments)};var dynCall_ii=Module["dynCall_ii"]=function(){return Module["asm"]["dynCall_ii"].apply(null,arguments)};var dynCall_i=Module["dynCall_i"]=function(){return Module["asm"]["dynCall_i"].apply(null,arguments)};var dynCall_v=Module["dynCall_v"]=function(){return Module["asm"]["dynCall_v"].apply(null,arguments)};var dynCall_viiiiii=Module["dynCall_viiiiii"]=function(){return Module["asm"]["dynCall_viiiiii"].apply(null,arguments)};var dynCall_viiiii=Module["dynCall_viiiii"]=function(){return Module["asm"]["dynCall_viiiii"].apply(null,arguments)};var dynCall_viiii=Module["dynCall_viiii"]=function(){return Module["asm"]["dynCall_viiii"].apply(null,arguments)};var dynCall_jiji=Module["dynCall_jiji"]=function(){return Module["asm"]["dynCall_jiji"].apply(null,arguments)};Module["asm"]=asm;Module["ccall"]=ccall;var calledRun;Module["then"]=function(func){if(calledRun){func(Module)}else{var old=Module["onRuntimeInitialized"];Module["onRuntimeInitialized"]=function(){if(old)old();func(Module)}}return Module};function ExitStatus(status){this.name="ExitStatus";this.message="Program terminated with exit("+status+")";this.status=status}dependenciesFulfilled=function runCaller(){if(!calledRun)run();if(!calledRun)dependenciesFulfilled=runCaller};function run(args){args=args||arguments_;if(runDependencies>0){return}preRun();if(runDependencies>0)return;function doRun(){if(calledRun)return;calledRun=true;if(ABORT)return;initRuntime();preMain();if(Module["onRuntimeInitialized"])Module["onRuntimeInitialized"]();postRun()}if(Module["setStatus"]){Module["setStatus"]("Running...");setTimeout(function(){setTimeout(function(){Module["setStatus"]("")},1);doRun()},1)}else{doRun()}}Module["run"]=run;if(Module["preInit"]){if(typeof Module["preInit"]=="function")Module["preInit"]=[Module["preInit"]];while(Module["preInit"].length>0){Module["preInit"].pop()()}}noExitRuntime=true;run();
-
-
-  return Onigasm
-}
-);
-})();
-if (true)
-      module.exports = Onigasm;
-    else {}
-    
-
-/***/ }),
-
-/***/ "./node_modules/onigasm/lib/onigasm.wasm":
-/*!***********************************************!*\
-  !*** ./node_modules/onigasm/lib/onigasm.wasm ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "154ccd182313c345d3b9dd8571931eb5.wasm";
-
-/***/ }),
-
-/***/ "./node_modules/onigasm/lib/onigasmH.js":
-/*!**********************************************!*\
-  !*** ./node_modules/onigasm/lib/onigasmH.js ***!
-  \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-const OnigasmModuleFactory = __webpack_require__(/*! ./onigasm.js */ "./node_modules/onigasm/lib/onigasm.js" /** when TS is compiled to JS, this will mean `lib/onigasm.js` (emitted by `emcc`) */);
-async function initModule(bytes) {
-    return new Promise((resolve, reject) => {
-        const { log, warn, error } = console;
-        OnigasmModuleFactory({
-            instantiateWasm(imports, successCallback) {
-                WebAssembly.instantiate(bytes, imports)
-                    .then((output) => {
-                    successCallback(output.instance);
-                })
-                    .catch((e) => {
-                    throw e;
-                });
-                return {};
-            },
-        })
-            .then(moduleH => {
-            exports.onigasmH = moduleH;
-            resolve();
-        });
-        if (typeof print !== 'undefined') {
-            // can be removed when https://github.com/emscripten-core/emscripten/issues/9829 is fixed.
-            // tslint:disable-next-line:no-console
-            console.log = log;
-            // tslint:disable-next-line:no-console
-            console.error = error;
-            // tslint:disable-next-line:no-console
-            console.warn = warn;
-        }
-    });
-}
-let isInitialized = false;
-/**
- * Mount the .wasm file that will act as library's "backend"
- * @param data Path to .wasm file or it's ArrayBuffer
- */
-async function loadWASM(data) {
-    if (isInitialized) {
-        throw new Error(`Onigasm#init has been called and was succesful, subsequent calls are not allowed once initialized`);
-    }
-    if (typeof data === 'string') {
-        const arrayBuffer = await (await fetch(data)).arrayBuffer();
-        await initModule(arrayBuffer);
-    }
-    else if (data instanceof ArrayBuffer) {
-        await initModule(data);
-    }
-    else {
-        throw new TypeError(`Expected a string (URL of .wasm file) or ArrayBuffer (.wasm file itself) as first parameter`);
-    }
-    isInitialized = true;
-}
-exports.loadWASM = loadWASM;
-//# sourceMappingURL=onigasmH.js.map
-
-/***/ }),
-
-/***/ "./node_modules/vscode-textmate/release/main.js":
-/*!******************************************************!*\
-  !*** ./node_modules/vscode-textmate/release/main.js ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(__dirname, process) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
-(function (factory) {
-    if (true) {
-        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-    } else {}
-})(function () {
-
-/*---------------------------------------------------------
- * Copyright (C) Microsoft Corporation. All rights reserved.
- *--------------------------------------------------------*/
-'use strict';
-var $map = {};
-function $load(name, factory) {
-    var mod = {
-        exports: {}
-    };
-    var requireFunc = function (mod) {
-        if ($map[mod]) {
-            return $map[mod].exports;
-        }
-        return __webpack_require__("./node_modules/vscode-textmate/release sync recursive")(mod);
-    };
-    factory.call(this, requireFunc, mod, mod.exports);
-    $map[name] = mod;
-}
-//# sourceMappingURL=_prefix.js.map
-$load('./onigLibs', function(require, module, exports) {
-/*---------------------------------------------------------
- * Copyright (C) Microsoft Corporation. All rights reserved.
- *--------------------------------------------------------*/
-'use strict';
-Object.defineProperty(exports, "__esModule", { value: true });
-var onigasmLib = null;
-var onigurumaLib = null;
-function getOnigasm() {
-    if (!onigasmLib) {
-        var onigasmModule_1 = require('onigasm');
-        var fs = require('fs');
-        var path = require('path');
-        var wasmBin = fs.readFileSync(path.join(__dirname, '../node_modules/onigasm/lib/onigasm.wasm')).buffer;
-        onigasmLib = onigasmModule_1.loadWASM(wasmBin).then(function (_) {
-            return {
-                createOnigScanner: function (patterns) { return new onigasmModule_1.OnigScanner(patterns); },
-                createOnigString: function (s) { return new onigasmModule_1.OnigString(s); }
-            };
-        });
-    }
-    return onigasmLib;
-}
-exports.getOnigasm = getOnigasm;
-function getOniguruma() {
-    if (!onigurumaLib) {
-        var getOnigModule_1 = (function () {
-            var onigurumaModule = null;
-            return function () {
-                if (!onigurumaModule) {
-                    onigurumaModule = require('oniguruma');
-                }
-                return onigurumaModule;
-            };
-        })();
-        onigurumaLib = Promise.resolve({
-            createOnigScanner: function (patterns) {
-                var onigurumaModule = getOnigModule_1();
-                return new onigurumaModule.OnigScanner(patterns);
-            },
-            createOnigString: function (s) {
-                var onigurumaModule = getOnigModule_1();
-                var string = new onigurumaModule.OnigString(s);
-                string.content = s;
-                return string;
-            }
-        });
-    }
-    return onigurumaLib;
-}
-exports.getOniguruma = getOniguruma;
-//# sourceMappingURL=onigLibs.js.map
-});
-$load('./utils', function(require, module, exports) {
-/*---------------------------------------------------------
- * Copyright (C) Microsoft Corporation. All rights reserved.
- *--------------------------------------------------------*/
-'use strict';
-Object.defineProperty(exports, "__esModule", { value: true });
-function clone(something) {
-    return doClone(something);
-}
-exports.clone = clone;
-function doClone(something) {
-    if (Array.isArray(something)) {
-        return cloneArray(something);
-    }
-    if (typeof something === 'object') {
-        return cloneObj(something);
-    }
-    return something;
-}
-function cloneArray(arr) {
-    var r = [];
-    for (var i = 0, len = arr.length; i < len; i++) {
-        r[i] = doClone(arr[i]);
-    }
-    return r;
-}
-function cloneObj(obj) {
-    var r = {};
-    for (var key in obj) {
-        r[key] = doClone(obj[key]);
-    }
-    return r;
-}
-function mergeObjects(target) {
-    var sources = [];
-    for (var _i = 1; _i < arguments.length; _i++) {
-        sources[_i - 1] = arguments[_i];
-    }
-    sources.forEach(function (source) {
-        for (var key in source) {
-            target[key] = source[key];
-        }
-    });
-    return target;
-}
-exports.mergeObjects = mergeObjects;
-function basename(path) {
-    var idx = ~path.lastIndexOf('/') || ~path.lastIndexOf('\\');
-    if (idx === 0) {
-        return path;
-    }
-    else if (~idx === path.length - 1) {
-        return basename(path.substring(0, path.length - 1));
-    }
-    else {
-        return path.substr(~idx + 1);
-    }
-}
-exports.basename = basename;
-var CAPTURING_REGEX_SOURCE = /\$(\d+)|\${(\d+):\/(downcase|upcase)}/;
-var RegexSource = /** @class */ (function () {
-    function RegexSource() {
-    }
-    RegexSource.hasCaptures = function (regexSource) {
-        if (regexSource === null) {
-            return false;
-        }
-        return CAPTURING_REGEX_SOURCE.test(regexSource);
-    };
-    RegexSource.replaceCaptures = function (regexSource, captureSource, captureIndices) {
-        return regexSource.replace(CAPTURING_REGEX_SOURCE, function (match, index, commandIndex, command) {
-            var capture = captureIndices[parseInt(index || commandIndex, 10)];
-            if (capture) {
-                var result = captureSource.substring(capture.start, capture.end);
-                // Remove leading dots that would make the selector invalid
-                while (result[0] === '.') {
-                    result = result.substring(1);
-                }
-                switch (command) {
-                    case 'downcase':
-                        return result.toLowerCase();
-                    case 'upcase':
-                        return result.toUpperCase();
-                    default:
-                        return result;
-                }
-            }
-            else {
-                return match;
-            }
-        });
-    };
-    return RegexSource;
-}());
-exports.RegexSource = RegexSource;
-//# sourceMappingURL=utils.js.map
-});
-$load('./theme', function(require, module, exports) {
-/*---------------------------------------------------------
- * Copyright (C) Microsoft Corporation. All rights reserved.
- *--------------------------------------------------------*/
-'use strict';
-Object.defineProperty(exports, "__esModule", { value: true });
-var ParsedThemeRule = /** @class */ (function () {
-    function ParsedThemeRule(scope, parentScopes, index, fontStyle, foreground, background) {
-        this.scope = scope;
-        this.parentScopes = parentScopes;
-        this.index = index;
-        this.fontStyle = fontStyle;
-        this.foreground = foreground;
-        this.background = background;
-    }
-    return ParsedThemeRule;
-}());
-exports.ParsedThemeRule = ParsedThemeRule;
-function isValidHexColor(hex) {
-    if (/^#[0-9a-f]{6}$/i.test(hex)) {
-        // #rrggbb
-        return true;
-    }
-    if (/^#[0-9a-f]{8}$/i.test(hex)) {
-        // #rrggbbaa
-        return true;
-    }
-    if (/^#[0-9a-f]{3}$/i.test(hex)) {
-        // #rgb
-        return true;
-    }
-    if (/^#[0-9a-f]{4}$/i.test(hex)) {
-        // #rgba
-        return true;
-    }
-    return false;
-}
-/**
- * Parse a raw theme into rules.
- */
-function parseTheme(source) {
-    if (!source) {
-        return [];
-    }
-    if (!source.settings || !Array.isArray(source.settings)) {
-        return [];
-    }
-    var settings = source.settings;
-    var result = [], resultLen = 0;
-    for (var i = 0, len = settings.length; i < len; i++) {
-        var entry = settings[i];
-        if (!entry.settings) {
-            continue;
-        }
-        var scopes = void 0;
-        if (typeof entry.scope === 'string') {
-            var _scope = entry.scope;
-            // remove leading commas
-            _scope = _scope.replace(/^[,]+/, '');
-            // remove trailing commans
-            _scope = _scope.replace(/[,]+$/, '');
-            scopes = _scope.split(',');
-        }
-        else if (Array.isArray(entry.scope)) {
-            scopes = entry.scope;
-        }
-        else {
-            scopes = [''];
-        }
-        var fontStyle = -1 /* NotSet */;
-        if (typeof entry.settings.fontStyle === 'string') {
-            fontStyle = 0 /* None */;
-            var segments = entry.settings.fontStyle.split(' ');
-            for (var j = 0, lenJ = segments.length; j < lenJ; j++) {
-                var segment = segments[j];
-                switch (segment) {
-                    case 'italic':
-                        fontStyle = fontStyle | 1 /* Italic */;
-                        break;
-                    case 'bold':
-                        fontStyle = fontStyle | 2 /* Bold */;
-                        break;
-                    case 'underline':
-                        fontStyle = fontStyle | 4 /* Underline */;
-                        break;
-                }
-            }
-        }
-        var foreground = null;
-        if (typeof entry.settings.foreground === 'string' && isValidHexColor(entry.settings.foreground)) {
-            foreground = entry.settings.foreground;
-        }
-        var background = null;
-        if (typeof entry.settings.background === 'string' && isValidHexColor(entry.settings.background)) {
-            background = entry.settings.background;
-        }
-        for (var j = 0, lenJ = scopes.length; j < lenJ; j++) {
-            var _scope = scopes[j].trim();
-            var segments = _scope.split(' ');
-            var scope = segments[segments.length - 1];
-            var parentScopes = null;
-            if (segments.length > 1) {
-                parentScopes = segments.slice(0, segments.length - 1);
-                parentScopes.reverse();
-            }
-            result[resultLen++] = new ParsedThemeRule(scope, parentScopes, i, fontStyle, foreground, background);
-        }
-    }
-    return result;
-}
-exports.parseTheme = parseTheme;
-/**
- * Resolve rules (i.e. inheritance).
- */
-function resolveParsedThemeRules(parsedThemeRules, _colorMap) {
-    // Sort rules lexicographically, and then by index if necessary
-    parsedThemeRules.sort(function (a, b) {
-        var r = strcmp(a.scope, b.scope);
-        if (r !== 0) {
-            return r;
-        }
-        r = strArrCmp(a.parentScopes, b.parentScopes);
-        if (r !== 0) {
-            return r;
-        }
-        return a.index - b.index;
-    });
-    // Determine defaults
-    var defaultFontStyle = 0 /* None */;
-    var defaultForeground = '#000000';
-    var defaultBackground = '#ffffff';
-    while (parsedThemeRules.length >= 1 && parsedThemeRules[0].scope === '') {
-        var incomingDefaults = parsedThemeRules.shift();
-        if (incomingDefaults.fontStyle !== -1 /* NotSet */) {
-            defaultFontStyle = incomingDefaults.fontStyle;
-        }
-        if (incomingDefaults.foreground !== null) {
-            defaultForeground = incomingDefaults.foreground;
-        }
-        if (incomingDefaults.background !== null) {
-            defaultBackground = incomingDefaults.background;
-        }
-    }
-    var colorMap = new ColorMap(_colorMap);
-    var defaults = new ThemeTrieElementRule(0, null, defaultFontStyle, colorMap.getId(defaultForeground), colorMap.getId(defaultBackground));
-    var root = new ThemeTrieElement(new ThemeTrieElementRule(0, null, -1 /* NotSet */, 0, 0), []);
-    for (var i = 0, len = parsedThemeRules.length; i < len; i++) {
-        var rule = parsedThemeRules[i];
-        root.insert(0, rule.scope, rule.parentScopes, rule.fontStyle, colorMap.getId(rule.foreground), colorMap.getId(rule.background));
-    }
-    return new Theme(colorMap, defaults, root);
-}
-var ColorMap = /** @class */ (function () {
-    function ColorMap(_colorMap) {
-        this._lastColorId = 0;
-        this._id2color = [];
-        this._color2id = Object.create(null);
-        if (Array.isArray(_colorMap)) {
-            this._isFrozen = true;
-            for (var i = 0, len = _colorMap.length; i < len; i++) {
-                this._color2id[_colorMap[i]] = i;
-                this._id2color[i] = _colorMap[i];
-            }
-        }
-        else {
-            this._isFrozen = false;
-        }
-    }
-    ColorMap.prototype.getId = function (color) {
-        if (color === null) {
-            return 0;
-        }
-        color = color.toUpperCase();
-        var value = this._color2id[color];
-        if (value) {
-            return value;
-        }
-        if (this._isFrozen) {
-            throw new Error("Missing color in color map - " + color);
-        }
-        value = ++this._lastColorId;
-        this._color2id[color] = value;
-        this._id2color[value] = color;
-        return value;
-    };
-    ColorMap.prototype.getColorMap = function () {
-        return this._id2color.slice(0);
-    };
-    return ColorMap;
-}());
-exports.ColorMap = ColorMap;
-var Theme = /** @class */ (function () {
-    function Theme(colorMap, defaults, root) {
-        this._colorMap = colorMap;
-        this._root = root;
-        this._defaults = defaults;
-        this._cache = {};
-    }
-    Theme.createFromRawTheme = function (source, colorMap) {
-        return this.createFromParsedTheme(parseTheme(source), colorMap);
-    };
-    Theme.createFromParsedTheme = function (source, colorMap) {
-        return resolveParsedThemeRules(source, colorMap);
-    };
-    Theme.prototype.getColorMap = function () {
-        return this._colorMap.getColorMap();
-    };
-    Theme.prototype.getDefaults = function () {
-        return this._defaults;
-    };
-    Theme.prototype.match = function (scopeName) {
-        if (!this._cache.hasOwnProperty(scopeName)) {
-            this._cache[scopeName] = this._root.match(scopeName);
-        }
-        return this._cache[scopeName];
-    };
-    return Theme;
-}());
-exports.Theme = Theme;
-function strcmp(a, b) {
-    if (a < b) {
-        return -1;
-    }
-    if (a > b) {
-        return 1;
-    }
-    return 0;
-}
-exports.strcmp = strcmp;
-function strArrCmp(a, b) {
-    if (a === null && b === null) {
-        return 0;
-    }
-    if (!a) {
-        return -1;
-    }
-    if (!b) {
-        return 1;
-    }
-    var len1 = a.length;
-    var len2 = b.length;
-    if (len1 === len2) {
-        for (var i = 0; i < len1; i++) {
-            var res = strcmp(a[i], b[i]);
-            if (res !== 0) {
-                return res;
-            }
-        }
-        return 0;
-    }
-    return len1 - len2;
-}
-exports.strArrCmp = strArrCmp;
-var ThemeTrieElementRule = /** @class */ (function () {
-    function ThemeTrieElementRule(scopeDepth, parentScopes, fontStyle, foreground, background) {
-        this.scopeDepth = scopeDepth;
-        this.parentScopes = parentScopes;
-        this.fontStyle = fontStyle;
-        this.foreground = foreground;
-        this.background = background;
-    }
-    ThemeTrieElementRule.prototype.clone = function () {
-        return new ThemeTrieElementRule(this.scopeDepth, this.parentScopes, this.fontStyle, this.foreground, this.background);
-    };
-    ThemeTrieElementRule.cloneArr = function (arr) {
-        var r = [];
-        for (var i = 0, len = arr.length; i < len; i++) {
-            r[i] = arr[i].clone();
-        }
-        return r;
-    };
-    ThemeTrieElementRule.prototype.acceptOverwrite = function (scopeDepth, fontStyle, foreground, background) {
-        if (this.scopeDepth > scopeDepth) {
-            console.log('how did this happen?');
-        }
-        else {
-            this.scopeDepth = scopeDepth;
-        }
-        // console.log('TODO -> my depth: ' + this.scopeDepth + ', overwriting depth: ' + scopeDepth);
-        if (fontStyle !== -1 /* NotSet */) {
-            this.fontStyle = fontStyle;
-        }
-        if (foreground !== 0) {
-            this.foreground = foreground;
-        }
-        if (background !== 0) {
-            this.background = background;
-        }
-    };
-    return ThemeTrieElementRule;
-}());
-exports.ThemeTrieElementRule = ThemeTrieElementRule;
-var ThemeTrieElement = /** @class */ (function () {
-    function ThemeTrieElement(mainRule, rulesWithParentScopes, children) {
-        if (rulesWithParentScopes === void 0) { rulesWithParentScopes = []; }
-        if (children === void 0) { children = {}; }
-        this._mainRule = mainRule;
-        this._rulesWithParentScopes = rulesWithParentScopes;
-        this._children = children;
-    }
-    ThemeTrieElement._sortBySpecificity = function (arr) {
-        if (arr.length === 1) {
-            return arr;
-        }
-        arr.sort(this._cmpBySpecificity);
-        return arr;
-    };
-    ThemeTrieElement._cmpBySpecificity = function (a, b) {
-        if (a.scopeDepth === b.scopeDepth) {
-            var aParentScopes = a.parentScopes;
-            var bParentScopes = b.parentScopes;
-            var aParentScopesLen = aParentScopes === null ? 0 : aParentScopes.length;
-            var bParentScopesLen = bParentScopes === null ? 0 : bParentScopes.length;
-            if (aParentScopesLen === bParentScopesLen) {
-                for (var i = 0; i < aParentScopesLen; i++) {
-                    var aLen = aParentScopes[i].length;
-                    var bLen = bParentScopes[i].length;
-                    if (aLen !== bLen) {
-                        return bLen - aLen;
-                    }
-                }
-            }
-            return bParentScopesLen - aParentScopesLen;
-        }
-        return b.scopeDepth - a.scopeDepth;
-    };
-    ThemeTrieElement.prototype.match = function (scope) {
-        if (scope === '') {
-            return ThemeTrieElement._sortBySpecificity([].concat(this._mainRule).concat(this._rulesWithParentScopes));
-        }
-        var dotIndex = scope.indexOf('.');
-        var head;
-        var tail;
-        if (dotIndex === -1) {
-            head = scope;
-            tail = '';
-        }
-        else {
-            head = scope.substring(0, dotIndex);
-            tail = scope.substring(dotIndex + 1);
-        }
-        if (this._children.hasOwnProperty(head)) {
-            return this._children[head].match(tail);
-        }
-        return ThemeTrieElement._sortBySpecificity([].concat(this._mainRule).concat(this._rulesWithParentScopes));
-    };
-    ThemeTrieElement.prototype.insert = function (scopeDepth, scope, parentScopes, fontStyle, foreground, background) {
-        if (scope === '') {
-            this._doInsertHere(scopeDepth, parentScopes, fontStyle, foreground, background);
-            return;
-        }
-        var dotIndex = scope.indexOf('.');
-        var head;
-        var tail;
-        if (dotIndex === -1) {
-            head = scope;
-            tail = '';
-        }
-        else {
-            head = scope.substring(0, dotIndex);
-            tail = scope.substring(dotIndex + 1);
-        }
-        var child;
-        if (this._children.hasOwnProperty(head)) {
-            child = this._children[head];
-        }
-        else {
-            child = new ThemeTrieElement(this._mainRule.clone(), ThemeTrieElementRule.cloneArr(this._rulesWithParentScopes));
-            this._children[head] = child;
-        }
-        child.insert(scopeDepth + 1, tail, parentScopes, fontStyle, foreground, background);
-    };
-    ThemeTrieElement.prototype._doInsertHere = function (scopeDepth, parentScopes, fontStyle, foreground, background) {
-        if (parentScopes === null) {
-            // Merge into the main rule
-            this._mainRule.acceptOverwrite(scopeDepth, fontStyle, foreground, background);
-            return;
-        }
-        // Try to merge into existing rule
-        for (var i = 0, len = this._rulesWithParentScopes.length; i < len; i++) {
-            var rule = this._rulesWithParentScopes[i];
-            if (strArrCmp(rule.parentScopes, parentScopes) === 0) {
-                // bingo! => we get to merge this into an existing one
-                rule.acceptOverwrite(scopeDepth, fontStyle, foreground, background);
-                return;
-            }
-        }
-        // Must add a new rule
-        // Inherit from main rule
-        if (fontStyle === -1 /* NotSet */) {
-            fontStyle = this._mainRule.fontStyle;
-        }
-        if (foreground === 0) {
-            foreground = this._mainRule.foreground;
-        }
-        if (background === 0) {
-            background = this._mainRule.background;
-        }
-        this._rulesWithParentScopes.push(new ThemeTrieElementRule(scopeDepth, parentScopes, fontStyle, foreground, background));
-    };
-    return ThemeTrieElement;
-}());
-exports.ThemeTrieElement = ThemeTrieElement;
-//# sourceMappingURL=theme.js.map
-});
-$load('./matcher', function(require, module, exports) {
-/*---------------------------------------------------------
- * Copyright (C) Microsoft Corporation. All rights reserved.
- *--------------------------------------------------------*/
-'use strict';
-Object.defineProperty(exports, "__esModule", { value: true });
-function createMatchers(selector, matchesName) {
-    var results = [];
-    var tokenizer = newTokenizer(selector);
-    var token = tokenizer.next();
-    while (token !== null) {
-        var priority = 0;
-        if (token.length === 2 && token.charAt(1) === ':') {
-            switch (token.charAt(0)) {
-                case 'R':
-                    priority = 1;
-                    break;
-                case 'L':
-                    priority = -1;
-                    break;
-                default:
-                    console.log("Unknown priority " + token + " in scope selector");
-            }
-            token = tokenizer.next();
-        }
-        var matcher = parseConjunction();
-        if (matcher) {
-            results.push({ matcher: matcher, priority: priority });
-        }
-        if (token !== ',') {
-            break;
-        }
-        token = tokenizer.next();
-    }
-    return results;
-    function parseOperand() {
-        if (token === '-') {
-            token = tokenizer.next();
-            var expressionToNegate_1 = parseOperand();
-            return function (matcherInput) { return !!expressionToNegate_1 && !expressionToNegate_1(matcherInput); };
-        }
-        if (token === '(') {
-            token = tokenizer.next();
-            var expressionInParents = parseInnerExpression();
-            if (token === ')') {
-                token = tokenizer.next();
-            }
-            return expressionInParents;
-        }
-        if (isIdentifier(token)) {
-            var identifiers_1 = [];
-            do {
-                identifiers_1.push(token);
-                token = tokenizer.next();
-            } while (isIdentifier(token));
-            return function (matcherInput) { return matchesName(identifiers_1, matcherInput); };
-        }
-        return null;
-    }
-    function parseConjunction() {
-        var matchers = [];
-        var matcher = parseOperand();
-        while (matcher) {
-            matchers.push(matcher);
-            matcher = parseOperand();
-        }
-        return function (matcherInput) { return matchers.every(function (matcher) { return matcher(matcherInput); }); }; // and
-    }
-    function parseInnerExpression() {
-        var matchers = [];
-        var matcher = parseConjunction();
-        while (matcher) {
-            matchers.push(matcher);
-            if (token === '|' || token === ',') {
-                do {
-                    token = tokenizer.next();
-                } while (token === '|' || token === ','); // ignore subsequent commas
-            }
-            else {
-                break;
-            }
-            matcher = parseConjunction();
-        }
-        return function (matcherInput) { return matchers.some(function (matcher) { return matcher(matcherInput); }); }; // or
-    }
-}
-exports.createMatchers = createMatchers;
-function isIdentifier(token) {
-    return !!token && !!token.match(/[\w\.:]+/);
-}
-function newTokenizer(input) {
-    var regex = /([LR]:|[\w\.:][\w\.:\-]*|[\,\|\-\(\)])/g;
-    var match = regex.exec(input);
-    return {
-        next: function () {
-            if (!match) {
-                return null;
-            }
-            var res = match[0];
-            match = regex.exec(input);
-            return res;
-        }
-    };
-}
-//# sourceMappingURL=matcher.js.map
-});
-$load('./debug', function(require, module, exports) {
-/*---------------------------------------------------------
- * Copyright (C) Microsoft Corporation. All rights reserved.
- *--------------------------------------------------------*/
-'use strict';
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.DebugFlags = {
-    InDebugMode: (typeof process !== 'undefined' && !!process.env['VSCODE_TEXTMATE_DEBUG'])
-};
-//# sourceMappingURL=debug.js.map
-});
-$load('./json', function(require, module, exports) {
-/*---------------------------------------------------------
- * Copyright (C) Microsoft Corporation. All rights reserved.
- *--------------------------------------------------------*/
-'use strict';
-Object.defineProperty(exports, "__esModule", { value: true });
-function doFail(streamState, msg) {
-    // console.log('Near offset ' + streamState.pos + ': ' + msg + ' ~~~' + streamState.source.substr(streamState.pos, 50) + '~~~');
-    throw new Error('Near offset ' + streamState.pos + ': ' + msg + ' ~~~' + streamState.source.substr(streamState.pos, 50) + '~~~');
-}
-function parse(source, filename, withMetadata) {
-    var streamState = new JSONStreamState(source);
-    var token = new JSONToken();
-    var state = 0 /* ROOT_STATE */;
-    var cur = null;
-    var stateStack = [];
-    var objStack = [];
-    function pushState() {
-        stateStack.push(state);
-        objStack.push(cur);
-    }
-    function popState() {
-        state = stateStack.pop();
-        cur = objStack.pop();
-    }
-    function fail(msg) {
-        doFail(streamState, msg);
-    }
-    while (nextJSONToken(streamState, token)) {
-        if (state === 0 /* ROOT_STATE */) {
-            if (cur !== null) {
-                fail('too many constructs in root');
-            }
-            if (token.type === 3 /* LEFT_CURLY_BRACKET */) {
-                cur = {};
-                if (withMetadata) {
-                    cur.$vscodeTextmateLocation = token.toLocation(filename);
-                }
-                pushState();
-                state = 1 /* DICT_STATE */;
-                continue;
-            }
-            if (token.type === 2 /* LEFT_SQUARE_BRACKET */) {
-                cur = [];
-                pushState();
-                state = 4 /* ARR_STATE */;
-                continue;
-            }
-            fail('unexpected token in root');
-        }
-        if (state === 2 /* DICT_STATE_COMMA */) {
-            if (token.type === 5 /* RIGHT_CURLY_BRACKET */) {
-                popState();
-                continue;
-            }
-            if (token.type === 7 /* COMMA */) {
-                state = 3 /* DICT_STATE_NO_CLOSE */;
-                continue;
-            }
-            fail('expected , or }');
-        }
-        if (state === 1 /* DICT_STATE */ || state === 3 /* DICT_STATE_NO_CLOSE */) {
-            if (state === 1 /* DICT_STATE */ && token.type === 5 /* RIGHT_CURLY_BRACKET */) {
-                popState();
-                continue;
-            }
-            if (token.type === 1 /* STRING */) {
-                var keyValue = token.value;
-                if (!nextJSONToken(streamState, token) || token.type !== 6 /* COLON */) {
-                    fail('expected colon');
-                }
-                if (!nextJSONToken(streamState, token)) {
-                    fail('expected value');
-                }
-                state = 2 /* DICT_STATE_COMMA */;
-                if (token.type === 1 /* STRING */) {
-                    cur[keyValue] = token.value;
-                    continue;
-                }
-                if (token.type === 8 /* NULL */) {
-                    cur[keyValue] = null;
-                    continue;
-                }
-                if (token.type === 9 /* TRUE */) {
-                    cur[keyValue] = true;
-                    continue;
-                }
-                if (token.type === 10 /* FALSE */) {
-                    cur[keyValue] = false;
-                    continue;
-                }
-                if (token.type === 11 /* NUMBER */) {
-                    cur[keyValue] = parseFloat(token.value);
-                    continue;
-                }
-                if (token.type === 2 /* LEFT_SQUARE_BRACKET */) {
-                    var newArr = [];
-                    cur[keyValue] = newArr;
-                    pushState();
-                    state = 4 /* ARR_STATE */;
-                    cur = newArr;
-                    continue;
-                }
-                if (token.type === 3 /* LEFT_CURLY_BRACKET */) {
-                    var newDict = {};
-                    if (withMetadata) {
-                        newDict.$vscodeTextmateLocation = token.toLocation(filename);
-                    }
-                    cur[keyValue] = newDict;
-                    pushState();
-                    state = 1 /* DICT_STATE */;
-                    cur = newDict;
-                    continue;
-                }
-            }
-            fail('unexpected token in dict');
-        }
-        if (state === 5 /* ARR_STATE_COMMA */) {
-            if (token.type === 4 /* RIGHT_SQUARE_BRACKET */) {
-                popState();
-                continue;
-            }
-            if (token.type === 7 /* COMMA */) {
-                state = 6 /* ARR_STATE_NO_CLOSE */;
-                continue;
-            }
-            fail('expected , or ]');
-        }
-        if (state === 4 /* ARR_STATE */ || state === 6 /* ARR_STATE_NO_CLOSE */) {
-            if (state === 4 /* ARR_STATE */ && token.type === 4 /* RIGHT_SQUARE_BRACKET */) {
-                popState();
-                continue;
-            }
-            state = 5 /* ARR_STATE_COMMA */;
-            if (token.type === 1 /* STRING */) {
-                cur.push(token.value);
-                continue;
-            }
-            if (token.type === 8 /* NULL */) {
-                cur.push(null);
-                continue;
-            }
-            if (token.type === 9 /* TRUE */) {
-                cur.push(true);
-                continue;
-            }
-            if (token.type === 10 /* FALSE */) {
-                cur.push(false);
-                continue;
-            }
-            if (token.type === 11 /* NUMBER */) {
-                cur.push(parseFloat(token.value));
-                continue;
-            }
-            if (token.type === 2 /* LEFT_SQUARE_BRACKET */) {
-                var newArr = [];
-                cur.push(newArr);
-                pushState();
-                state = 4 /* ARR_STATE */;
-                cur = newArr;
-                continue;
-            }
-            if (token.type === 3 /* LEFT_CURLY_BRACKET */) {
-                var newDict = {};
-                if (withMetadata) {
-                    newDict.$vscodeTextmateLocation = token.toLocation(filename);
-                }
-                cur.push(newDict);
-                pushState();
-                state = 1 /* DICT_STATE */;
-                cur = newDict;
-                continue;
-            }
-            fail('unexpected token in array');
-        }
-        fail('unknown state');
-    }
-    if (objStack.length !== 0) {
-        fail('unclosed constructs');
-    }
-    return cur;
-}
-exports.parse = parse;
-var JSONStreamState = /** @class */ (function () {
-    function JSONStreamState(source) {
-        this.source = source;
-        this.pos = 0;
-        this.len = source.length;
-        this.line = 1;
-        this.char = 0;
-    }
-    return JSONStreamState;
-}());
-var JSONToken = /** @class */ (function () {
-    function JSONToken() {
-        this.value = null;
-        this.type = 0 /* UNKNOWN */;
-        this.offset = -1;
-        this.len = -1;
-        this.line = -1;
-        this.char = -1;
-    }
-    JSONToken.prototype.toLocation = function (filename) {
-        return {
-            filename: filename,
-            line: this.line,
-            char: this.char
-        };
-    };
-    return JSONToken;
-}());
-/**
- * precondition: the string is known to be valid JSON (https://www.ietf.org/rfc/rfc4627.txt)
- */
-function nextJSONToken(_state, _out) {
-    _out.value = null;
-    _out.type = 0 /* UNKNOWN */;
-    _out.offset = -1;
-    _out.len = -1;
-    _out.line = -1;
-    _out.char = -1;
-    var source = _state.source;
-    var pos = _state.pos;
-    var len = _state.len;
-    var line = _state.line;
-    var char = _state.char;
-    //------------------------ skip whitespace
-    var chCode;
-    do {
-        if (pos >= len) {
-            return false; /*EOS*/
-        }
-        chCode = source.charCodeAt(pos);
-        if (chCode === 32 /* SPACE */ || chCode === 9 /* HORIZONTAL_TAB */ || chCode === 13 /* CARRIAGE_RETURN */) {
-            // regular whitespace
-            pos++;
-            char++;
-            continue;
-        }
-        if (chCode === 10 /* LINE_FEED */) {
-            // newline
-            pos++;
-            line++;
-            char = 0;
-            continue;
-        }
-        // not whitespace
-        break;
-    } while (true);
-    _out.offset = pos;
-    _out.line = line;
-    _out.char = char;
-    if (chCode === 34 /* QUOTATION_MARK */) {
-        //------------------------ strings
-        _out.type = 1 /* STRING */;
-        pos++;
-        char++;
-        do {
-            if (pos >= len) {
-                return false; /*EOS*/
-            }
-            chCode = source.charCodeAt(pos);
-            pos++;
-            char++;
-            if (chCode === 92 /* BACKSLASH */) {
-                // skip next char
-                pos++;
-                char++;
-                continue;
-            }
-            if (chCode === 34 /* QUOTATION_MARK */) {
-                // end of the string
-                break;
-            }
-        } while (true);
-        _out.value = source.substring(_out.offset + 1, pos - 1).replace(/\\u([0-9A-Fa-f]{4})/g, function (_, m0) {
-            return String.fromCodePoint(parseInt(m0, 16));
-        }).replace(/\\(.)/g, function (_, m0) {
-            switch (m0) {
-                case '"': return '"';
-                case '\\': return '\\';
-                case '/': return '/';
-                case 'b': return '\b';
-                case 'f': return '\f';
-                case 'n': return '\n';
-                case 'r': return '\r';
-                case 't': return '\t';
-                default: doFail(_state, 'invalid escape sequence');
-            }
-            throw new Error('unreachable');
-        });
-    }
-    else if (chCode === 91 /* LEFT_SQUARE_BRACKET */) {
-        _out.type = 2 /* LEFT_SQUARE_BRACKET */;
-        pos++;
-        char++;
-    }
-    else if (chCode === 123 /* LEFT_CURLY_BRACKET */) {
-        _out.type = 3 /* LEFT_CURLY_BRACKET */;
-        pos++;
-        char++;
-    }
-    else if (chCode === 93 /* RIGHT_SQUARE_BRACKET */) {
-        _out.type = 4 /* RIGHT_SQUARE_BRACKET */;
-        pos++;
-        char++;
-    }
-    else if (chCode === 125 /* RIGHT_CURLY_BRACKET */) {
-        _out.type = 5 /* RIGHT_CURLY_BRACKET */;
-        pos++;
-        char++;
-    }
-    else if (chCode === 58 /* COLON */) {
-        _out.type = 6 /* COLON */;
-        pos++;
-        char++;
-    }
-    else if (chCode === 44 /* COMMA */) {
-        _out.type = 7 /* COMMA */;
-        pos++;
-        char++;
-    }
-    else if (chCode === 110 /* n */) {
-        //------------------------ null
-        _out.type = 8 /* NULL */;
-        pos++;
-        char++;
-        chCode = source.charCodeAt(pos);
-        if (chCode !== 117 /* u */) {
-            return false; /* INVALID */
-        }
-        pos++;
-        char++;
-        chCode = source.charCodeAt(pos);
-        if (chCode !== 108 /* l */) {
-            return false; /* INVALID */
-        }
-        pos++;
-        char++;
-        chCode = source.charCodeAt(pos);
-        if (chCode !== 108 /* l */) {
-            return false; /* INVALID */
-        }
-        pos++;
-        char++;
-    }
-    else if (chCode === 116 /* t */) {
-        //------------------------ true
-        _out.type = 9 /* TRUE */;
-        pos++;
-        char++;
-        chCode = source.charCodeAt(pos);
-        if (chCode !== 114 /* r */) {
-            return false; /* INVALID */
-        }
-        pos++;
-        char++;
-        chCode = source.charCodeAt(pos);
-        if (chCode !== 117 /* u */) {
-            return false; /* INVALID */
-        }
-        pos++;
-        char++;
-        chCode = source.charCodeAt(pos);
-        if (chCode !== 101 /* e */) {
-            return false; /* INVALID */
-        }
-        pos++;
-        char++;
-    }
-    else if (chCode === 102 /* f */) {
-        //------------------------ false
-        _out.type = 10 /* FALSE */;
-        pos++;
-        char++;
-        chCode = source.charCodeAt(pos);
-        if (chCode !== 97 /* a */) {
-            return false; /* INVALID */
-        }
-        pos++;
-        char++;
-        chCode = source.charCodeAt(pos);
-        if (chCode !== 108 /* l */) {
-            return false; /* INVALID */
-        }
-        pos++;
-        char++;
-        chCode = source.charCodeAt(pos);
-        if (chCode !== 115 /* s */) {
-            return false; /* INVALID */
-        }
-        pos++;
-        char++;
-        chCode = source.charCodeAt(pos);
-        if (chCode !== 101 /* e */) {
-            return false; /* INVALID */
-        }
-        pos++;
-        char++;
-    }
-    else {
-        //------------------------ numbers
-        _out.type = 11 /* NUMBER */;
-        do {
-            if (pos >= len) {
-                return false; /*EOS*/
-            }
-            chCode = source.charCodeAt(pos);
-            if (chCode === 46 /* DOT */
-                || (chCode >= 48 /* D0 */ && chCode <= 57 /* D9 */)
-                || (chCode === 101 /* e */ || chCode === 69 /* E */)
-                || (chCode === 45 /* MINUS */ || chCode === 43 /* PLUS */)) {
-                // looks like a piece of a number
-                pos++;
-                char++;
-                continue;
-            }
-            // pos--; char--;
-            break;
-        } while (true);
-    }
-    _out.len = pos - _out.offset;
-    if (_out.value === null) {
-        _out.value = source.substr(_out.offset, _out.len);
-    }
-    _state.pos = pos;
-    _state.line = line;
-    _state.char = char;
-    // console.log('PRODUCING TOKEN: ', _out.value, JSONTokenType[_out.type]);
-    return true;
-}
-//# sourceMappingURL=json.js.map
-});
-$load('./plist', function(require, module, exports) {
-/*---------------------------------------------------------
- * Copyright (C) Microsoft Corporation. All rights reserved.
- *--------------------------------------------------------*/
-'use strict';
-Object.defineProperty(exports, "__esModule", { value: true });
-function parseWithLocation(content, filename, locationKeyName) {
-    return _parse(content, filename, locationKeyName);
-}
-exports.parseWithLocation = parseWithLocation;
-/**
- * A very fast plist parser
- */
-function parse(content) {
-    return _parse(content, null, null);
-}
-exports.parse = parse;
-function _parse(content, filename, locationKeyName) {
-    var len = content.length;
-    var pos = 0;
-    var line = 1;
-    var char = 0;
-    // Skip UTF8 BOM
-    if (len > 0 && content.charCodeAt(0) === 65279 /* BOM */) {
-        pos = 1;
-    }
-    function advancePosBy(by) {
-        if (locationKeyName === null) {
-            pos = pos + by;
-        }
-        else {
-            while (by > 0) {
-                var chCode = content.charCodeAt(pos);
-                if (chCode === 10 /* LINE_FEED */) {
-                    pos++;
-                    line++;
-                    char = 0;
-                }
-                else {
-                    pos++;
-                    char++;
-                }
-                by--;
-            }
-        }
-    }
-    function advancePosTo(to) {
-        if (locationKeyName === null) {
-            pos = to;
-        }
-        else {
-            advancePosBy(to - pos);
-        }
-    }
-    function skipWhitespace() {
-        while (pos < len) {
-            var chCode = content.charCodeAt(pos);
-            if (chCode !== 32 /* SPACE */ && chCode !== 9 /* TAB */ && chCode !== 13 /* CARRIAGE_RETURN */ && chCode !== 10 /* LINE_FEED */) {
-                break;
-            }
-            advancePosBy(1);
-        }
-    }
-    function advanceIfStartsWith(str) {
-        if (content.substr(pos, str.length) === str) {
-            advancePosBy(str.length);
-            return true;
-        }
-        return false;
-    }
-    function advanceUntil(str) {
-        var nextOccurence = content.indexOf(str, pos);
-        if (nextOccurence !== -1) {
-            advancePosTo(nextOccurence + str.length);
-        }
-        else {
-            // EOF
-            advancePosTo(len);
-        }
-    }
-    function captureUntil(str) {
-        var nextOccurence = content.indexOf(str, pos);
-        if (nextOccurence !== -1) {
-            var r = content.substring(pos, nextOccurence);
-            advancePosTo(nextOccurence + str.length);
-            return r;
-        }
-        else {
-            // EOF
-            var r = content.substr(pos);
-            advancePosTo(len);
-            return r;
-        }
-    }
-    var state = 0 /* ROOT_STATE */;
-    var cur = null;
-    var stateStack = [];
-    var objStack = [];
-    var curKey = null;
-    function pushState(newState, newCur) {
-        stateStack.push(state);
-        objStack.push(cur);
-        state = newState;
-        cur = newCur;
-    }
-    function popState() {
-        if (stateStack.length === 0) {
-            return fail('illegal state stack');
-        }
-        state = stateStack.pop();
-        cur = objStack.pop();
-    }
-    function fail(msg) {
-        throw new Error('Near offset ' + pos + ': ' + msg + ' ~~~' + content.substr(pos, 50) + '~~~');
-    }
-    var dictState = {
-        enterDict: function () {
-            if (curKey === null) {
-                return fail('missing <key>');
-            }
-            var newDict = {};
-            if (locationKeyName !== null) {
-                newDict[locationKeyName] = {
-                    filename: filename,
-                    line: line,
-                    char: char
-                };
-            }
-            cur[curKey] = newDict;
-            curKey = null;
-            pushState(1 /* DICT_STATE */, newDict);
-        },
-        enterArray: function () {
-            if (curKey === null) {
-                return fail('missing <key>');
-            }
-            var newArr = [];
-            cur[curKey] = newArr;
-            curKey = null;
-            pushState(2 /* ARR_STATE */, newArr);
-        }
-    };
-    var arrState = {
-        enterDict: function () {
-            var newDict = {};
-            if (locationKeyName !== null) {
-                newDict[locationKeyName] = {
-                    filename: filename,
-                    line: line,
-                    char: char
-                };
-            }
-            cur.push(newDict);
-            pushState(1 /* DICT_STATE */, newDict);
-        },
-        enterArray: function () {
-            var newArr = [];
-            cur.push(newArr);
-            pushState(2 /* ARR_STATE */, newArr);
-        }
-    };
-    function enterDict() {
-        if (state === 1 /* DICT_STATE */) {
-            dictState.enterDict();
-        }
-        else if (state === 2 /* ARR_STATE */) {
-            arrState.enterDict();
-        }
-        else { // ROOT_STATE
-            cur = {};
-            if (locationKeyName !== null) {
-                cur[locationKeyName] = {
-                    filename: filename,
-                    line: line,
-                    char: char
-                };
-            }
-            pushState(1 /* DICT_STATE */, cur);
-        }
-    }
-    function leaveDict() {
-        if (state === 1 /* DICT_STATE */) {
-            popState();
-        }
-        else if (state === 2 /* ARR_STATE */) {
-            return fail('unexpected </dict>');
-        }
-        else { // ROOT_STATE
-            return fail('unexpected </dict>');
-        }
-    }
-    function enterArray() {
-        if (state === 1 /* DICT_STATE */) {
-            dictState.enterArray();
-        }
-        else if (state === 2 /* ARR_STATE */) {
-            arrState.enterArray();
-        }
-        else { // ROOT_STATE
-            cur = [];
-            pushState(2 /* ARR_STATE */, cur);
-        }
-    }
-    function leaveArray() {
-        if (state === 1 /* DICT_STATE */) {
-            return fail('unexpected </array>');
-        }
-        else if (state === 2 /* ARR_STATE */) {
-            popState();
-        }
-        else { // ROOT_STATE
-            return fail('unexpected </array>');
-        }
-    }
-    function acceptKey(val) {
-        if (state === 1 /* DICT_STATE */) {
-            if (curKey !== null) {
-                return fail('too many <key>');
-            }
-            curKey = val;
-        }
-        else if (state === 2 /* ARR_STATE */) {
-            return fail('unexpected <key>');
-        }
-        else { // ROOT_STATE
-            return fail('unexpected <key>');
-        }
-    }
-    function acceptString(val) {
-        if (state === 1 /* DICT_STATE */) {
-            if (curKey === null) {
-                return fail('missing <key>');
-            }
-            cur[curKey] = val;
-            curKey = null;
-        }
-        else if (state === 2 /* ARR_STATE */) {
-            cur.push(val);
-        }
-        else { // ROOT_STATE
-            cur = val;
-        }
-    }
-    function acceptReal(val) {
-        if (isNaN(val)) {
-            return fail('cannot parse float');
-        }
-        if (state === 1 /* DICT_STATE */) {
-            if (curKey === null) {
-                return fail('missing <key>');
-            }
-            cur[curKey] = val;
-            curKey = null;
-        }
-        else if (state === 2 /* ARR_STATE */) {
-            cur.push(val);
-        }
-        else { // ROOT_STATE
-            cur = val;
-        }
-    }
-    function acceptInteger(val) {
-        if (isNaN(val)) {
-            return fail('cannot parse integer');
-        }
-        if (state === 1 /* DICT_STATE */) {
-            if (curKey === null) {
-                return fail('missing <key>');
-            }
-            cur[curKey] = val;
-            curKey = null;
-        }
-        else if (state === 2 /* ARR_STATE */) {
-            cur.push(val);
-        }
-        else { // ROOT_STATE
-            cur = val;
-        }
-    }
-    function acceptDate(val) {
-        if (state === 1 /* DICT_STATE */) {
-            if (curKey === null) {
-                return fail('missing <key>');
-            }
-            cur[curKey] = val;
-            curKey = null;
-        }
-        else if (state === 2 /* ARR_STATE */) {
-            cur.push(val);
-        }
-        else { // ROOT_STATE
-            cur = val;
-        }
-    }
-    function acceptData(val) {
-        if (state === 1 /* DICT_STATE */) {
-            if (curKey === null) {
-                return fail('missing <key>');
-            }
-            cur[curKey] = val;
-            curKey = null;
-        }
-        else if (state === 2 /* ARR_STATE */) {
-            cur.push(val);
-        }
-        else { // ROOT_STATE
-            cur = val;
-        }
-    }
-    function acceptBool(val) {
-        if (state === 1 /* DICT_STATE */) {
-            if (curKey === null) {
-                return fail('missing <key>');
-            }
-            cur[curKey] = val;
-            curKey = null;
-        }
-        else if (state === 2 /* ARR_STATE */) {
-            cur.push(val);
-        }
-        else { // ROOT_STATE
-            cur = val;
-        }
-    }
-    function escapeVal(str) {
-        return str.replace(/&#([0-9]+);/g, function (_, m0) {
-            return String.fromCodePoint(parseInt(m0, 10));
-        }).replace(/&#x([0-9a-f]+);/g, function (_, m0) {
-            return String.fromCodePoint(parseInt(m0, 16));
-        }).replace(/&amp;|&lt;|&gt;|&quot;|&apos;/g, function (_) {
-            switch (_) {
-                case '&amp;': return '&';
-                case '&lt;': return '<';
-                case '&gt;': return '>';
-                case '&quot;': return '"';
-                case '&apos;': return '\'';
-            }
-            return _;
-        });
-    }
-    function parseOpenTag() {
-        var r = captureUntil('>');
-        var isClosed = false;
-        if (r.charCodeAt(r.length - 1) === 47 /* SLASH */) {
-            isClosed = true;
-            r = r.substring(0, r.length - 1);
-        }
-        return {
-            name: r.trim(),
-            isClosed: isClosed
-        };
-    }
-    function parseTagValue(tag) {
-        if (tag.isClosed) {
-            return '';
-        }
-        var val = captureUntil('</');
-        advanceUntil('>');
-        return escapeVal(val);
-    }
-    while (pos < len) {
-        skipWhitespace();
-        if (pos >= len) {
-            break;
-        }
-        var chCode = content.charCodeAt(pos);
-        advancePosBy(1);
-        if (chCode !== 60 /* LESS_THAN */) {
-            return fail('expected <');
-        }
-        if (pos >= len) {
-            return fail('unexpected end of input');
-        }
-        var peekChCode = content.charCodeAt(pos);
-        if (peekChCode === 63 /* QUESTION_MARK */) {
-            advancePosBy(1);
-            advanceUntil('?>');
-            continue;
-        }
-        if (peekChCode === 33 /* EXCLAMATION_MARK */) {
-            advancePosBy(1);
-            if (advanceIfStartsWith('--')) {
-                advanceUntil('-->');
-                continue;
-            }
-            advanceUntil('>');
-            continue;
-        }
-        if (peekChCode === 47 /* SLASH */) {
-            advancePosBy(1);
-            skipWhitespace();
-            if (advanceIfStartsWith('plist')) {
-                advanceUntil('>');
-                continue;
-            }
-            if (advanceIfStartsWith('dict')) {
-                advanceUntil('>');
-                leaveDict();
-                continue;
-            }
-            if (advanceIfStartsWith('array')) {
-                advanceUntil('>');
-                leaveArray();
-                continue;
-            }
-            return fail('unexpected closed tag');
-        }
-        var tag = parseOpenTag();
-        switch (tag.name) {
-            case 'dict':
-                enterDict();
-                if (tag.isClosed) {
-                    leaveDict();
-                }
-                continue;
-            case 'array':
-                enterArray();
-                if (tag.isClosed) {
-                    leaveArray();
-                }
-                continue;
-            case 'key':
-                acceptKey(parseTagValue(tag));
-                continue;
-            case 'string':
-                acceptString(parseTagValue(tag));
-                continue;
-            case 'real':
-                acceptReal(parseFloat(parseTagValue(tag)));
-                continue;
-            case 'integer':
-                acceptInteger(parseInt(parseTagValue(tag), 10));
-                continue;
-            case 'date':
-                acceptDate(new Date(parseTagValue(tag)));
-                continue;
-            case 'data':
-                acceptData(parseTagValue(tag));
-                continue;
-            case 'true':
-                parseTagValue(tag);
-                acceptBool(true);
-                continue;
-            case 'false':
-                parseTagValue(tag);
-                acceptBool(false);
-                continue;
-        }
-        if (/^plist/.test(tag.name)) {
-            continue;
-        }
-        return fail('unexpected opened tag ' + tag.name);
-    }
-    return cur;
-}
-//# sourceMappingURL=plist.js.map
-});
-$load('./grammarReader', function(require, module, exports) {
-/*---------------------------------------------------------
- * Copyright (C) Microsoft Corporation. All rights reserved.
- *--------------------------------------------------------*/
-'use strict';
-Object.defineProperty(exports, "__esModule", { value: true });
-var plist = require("./plist");
-var debug_1 = require("./debug");
-var json_1 = require("./json");
-function parseRawGrammar(content, filePath) {
-    if (filePath === void 0) { filePath = null; }
-    if (filePath !== null && /\.json$/.test(filePath)) {
-        return parseJSONGrammar(content, filePath);
-    }
-    return parsePLISTGrammar(content, filePath);
-}
-exports.parseRawGrammar = parseRawGrammar;
-function parseJSONGrammar(contents, filename) {
-    if (debug_1.DebugFlags.InDebugMode) {
-        return json_1.parse(contents, filename, true);
-    }
-    return JSON.parse(contents);
-}
-function parsePLISTGrammar(contents, filename) {
-    if (debug_1.DebugFlags.InDebugMode) {
-        return plist.parseWithLocation(contents, filename, '$vscodeTextmateLocation');
-    }
-    return plist.parse(contents);
-}
-//# sourceMappingURL=grammarReader.js.map
-});
-$load('./rule', function(require, module, exports) {
-/*---------------------------------------------------------
- * Copyright (C) Microsoft Corporation. All rights reserved.
- *--------------------------------------------------------*/
-'use strict';
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -5861,2653 +5250,2138 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-Object.defineProperty(exports, "__esModule", { value: true });
-var utils_1 = require("./utils");
-var HAS_BACK_REFERENCES = /\\(\d+)/;
-var BACK_REFERENCING_END = /\\(\d+)/g;
-var Rule = /** @class */ (function () {
-    function Rule($location, id, name, contentName) {
-        this.$location = $location;
-        this.id = id;
-        this._name = name || null;
-        this._nameIsCapturing = utils_1.RegexSource.hasCaptures(this._name);
-        this._contentName = contentName || null;
-        this._contentNameIsCapturing = utils_1.RegexSource.hasCaptures(this._contentName);
-    }
-    Object.defineProperty(Rule.prototype, "debugName", {
-        get: function () {
-            var location = this.$location ? utils_1.basename(this.$location.filename) + ":" + this.$location.line : 'unknown';
-            return this.constructor.name + "#" + this.id + " @ " + location;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Rule.prototype.getName = function (lineText, captureIndices) {
-        if (!this._nameIsCapturing || this._name === null || lineText === null || captureIndices === null) {
-            return this._name;
-        }
-        return utils_1.RegexSource.replaceCaptures(this._name, lineText, captureIndices);
-    };
-    Rule.prototype.getContentName = function (lineText, captureIndices) {
-        if (!this._contentNameIsCapturing || this._contentName === null) {
-            return this._contentName;
-        }
-        return utils_1.RegexSource.replaceCaptures(this._contentName, lineText, captureIndices);
-    };
-    return Rule;
-}());
-exports.Rule = Rule;
-var CaptureRule = /** @class */ (function (_super) {
-    __extends(CaptureRule, _super);
-    function CaptureRule($location, id, name, contentName, retokenizeCapturedWithRuleId) {
-        var _this = _super.call(this, $location, id, name, contentName) || this;
-        _this.retokenizeCapturedWithRuleId = retokenizeCapturedWithRuleId;
-        return _this;
-    }
-    CaptureRule.prototype.collectPatternsRecursive = function (grammar, out, isFirst) {
-        throw new Error('Not supported!');
-    };
-    CaptureRule.prototype.compile = function (grammar, endRegexSource, allowA, allowG) {
-        throw new Error('Not supported!');
-    };
-    return CaptureRule;
-}(Rule));
-exports.CaptureRule = CaptureRule;
-var RegExpSource = /** @class */ (function () {
-    function RegExpSource(regExpSource, ruleId, handleAnchors) {
-        if (handleAnchors === void 0) { handleAnchors = true; }
-        if (handleAnchors) {
-            if (regExpSource) {
-                var len = regExpSource.length;
-                var lastPushedPos = 0;
-                var output = [];
-                var hasAnchor = false;
-                for (var pos = 0; pos < len; pos++) {
-                    var ch = regExpSource.charAt(pos);
-                    if (ch === '\\') {
-                        if (pos + 1 < len) {
-                            var nextCh = regExpSource.charAt(pos + 1);
-                            if (nextCh === 'z') {
-                                output.push(regExpSource.substring(lastPushedPos, pos));
-                                output.push('$(?!\\n)(?<!\\n)');
-                                lastPushedPos = pos + 2;
-                            }
-                            else if (nextCh === 'A' || nextCh === 'G') {
-                                hasAnchor = true;
-                            }
-                            pos++;
-                        }
-                    }
-                }
-                this.hasAnchor = hasAnchor;
-                if (lastPushedPos === 0) {
-                    // No \z hit
-                    this.source = regExpSource;
-                }
-                else {
-                    output.push(regExpSource.substring(lastPushedPos, len));
-                    this.source = output.join('');
-                }
-            }
-            else {
-                this.hasAnchor = false;
-                this.source = regExpSource;
-            }
-        }
-        else {
-            this.hasAnchor = false;
-            this.source = regExpSource;
-        }
-        if (this.hasAnchor) {
-            this._anchorCache = this._buildAnchorCache();
-        }
-        else {
-            this._anchorCache = null;
-        }
-        this.ruleId = ruleId;
-        this.hasBackReferences = HAS_BACK_REFERENCES.test(this.source);
-        // console.log('input: ' + regExpSource + ' => ' + this.source + ', ' + this.hasAnchor);
-    }
-    RegExpSource.prototype.clone = function () {
-        return new RegExpSource(this.source, this.ruleId, true);
-    };
-    RegExpSource.prototype.setSource = function (newSource) {
-        if (this.source === newSource) {
-            return;
-        }
-        this.source = newSource;
-        if (this.hasAnchor) {
-            this._anchorCache = this._buildAnchorCache();
-        }
-    };
-    RegExpSource.prototype.resolveBackReferences = function (lineText, captureIndices) {
-        var capturedValues = captureIndices.map(function (capture) {
-            return lineText.substring(capture.start, capture.end);
-        });
-        BACK_REFERENCING_END.lastIndex = 0;
-        return this.source.replace(BACK_REFERENCING_END, function (match, g1) {
-            return escapeRegExpCharacters(capturedValues[parseInt(g1, 10)] || '');
-        });
-    };
-    RegExpSource.prototype._buildAnchorCache = function () {
-        var A0_G0_result = [];
-        var A0_G1_result = [];
-        var A1_G0_result = [];
-        var A1_G1_result = [];
-        var pos, len, ch, nextCh;
-        for (pos = 0, len = this.source.length; pos < len; pos++) {
-            ch = this.source.charAt(pos);
-            A0_G0_result[pos] = ch;
-            A0_G1_result[pos] = ch;
-            A1_G0_result[pos] = ch;
-            A1_G1_result[pos] = ch;
-            if (ch === '\\') {
-                if (pos + 1 < len) {
-                    nextCh = this.source.charAt(pos + 1);
-                    if (nextCh === 'A') {
-                        A0_G0_result[pos + 1] = '\uFFFF';
-                        A0_G1_result[pos + 1] = '\uFFFF';
-                        A1_G0_result[pos + 1] = 'A';
-                        A1_G1_result[pos + 1] = 'A';
-                    }
-                    else if (nextCh === 'G') {
-                        A0_G0_result[pos + 1] = '\uFFFF';
-                        A0_G1_result[pos + 1] = 'G';
-                        A1_G0_result[pos + 1] = '\uFFFF';
-                        A1_G1_result[pos + 1] = 'G';
-                    }
-                    else {
-                        A0_G0_result[pos + 1] = nextCh;
-                        A0_G1_result[pos + 1] = nextCh;
-                        A1_G0_result[pos + 1] = nextCh;
-                        A1_G1_result[pos + 1] = nextCh;
-                    }
-                    pos++;
-                }
-            }
-        }
-        return {
-            A0_G0: A0_G0_result.join(''),
-            A0_G1: A0_G1_result.join(''),
-            A1_G0: A1_G0_result.join(''),
-            A1_G1: A1_G1_result.join('')
-        };
-    };
-    RegExpSource.prototype.resolveAnchors = function (allowA, allowG) {
-        if (!this.hasAnchor || !this._anchorCache) {
-            return this.source;
-        }
-        if (allowA) {
-            if (allowG) {
-                return this._anchorCache.A1_G1;
-            }
-            else {
-                return this._anchorCache.A1_G0;
-            }
-        }
-        else {
-            if (allowG) {
-                return this._anchorCache.A0_G1;
-            }
-            else {
-                return this._anchorCache.A0_G0;
-            }
-        }
-    };
-    return RegExpSource;
-}());
-exports.RegExpSource = RegExpSource;
-var RegExpSourceList = /** @class */ (function () {
-    function RegExpSourceList() {
-        this._items = [];
-        this._hasAnchors = false;
-        this._cached = null;
-        this._anchorCache = {
-            A0_G0: null,
-            A0_G1: null,
-            A1_G0: null,
-            A1_G1: null
-        };
-    }
-    RegExpSourceList.prototype.push = function (item) {
-        this._items.push(item);
-        this._hasAnchors = this._hasAnchors || item.hasAnchor;
-    };
-    RegExpSourceList.prototype.unshift = function (item) {
-        this._items.unshift(item);
-        this._hasAnchors = this._hasAnchors || item.hasAnchor;
-    };
-    RegExpSourceList.prototype.length = function () {
-        return this._items.length;
-    };
-    RegExpSourceList.prototype.setSource = function (index, newSource) {
-        if (this._items[index].source !== newSource) {
-            // bust the cache
-            this._cached = null;
-            this._anchorCache.A0_G0 = null;
-            this._anchorCache.A0_G1 = null;
-            this._anchorCache.A1_G0 = null;
-            this._anchorCache.A1_G1 = null;
-            this._items[index].setSource(newSource);
-        }
-    };
-    RegExpSourceList.prototype.compile = function (onigLib, allowA, allowG) {
-        if (!this._hasAnchors) {
-            if (!this._cached) {
-                var regExps = this._items.map(function (e) { return e.source; });
-                this._cached = {
-                    scanner: onigLib.createOnigScanner(regExps),
-                    rules: this._items.map(function (e) { return e.ruleId; }),
-                    debugRegExps: regExps
-                };
-            }
-            return this._cached;
-        }
-        else {
-            if (allowA) {
-                if (allowG) {
-                    if (!this._anchorCache.A1_G1) {
-                        this._anchorCache.A1_G1 = this._resolveAnchors(onigLib, allowA, allowG);
-                    }
-                    return this._anchorCache.A1_G1;
-                }
-                else {
-                    if (!this._anchorCache.A1_G0) {
-                        this._anchorCache.A1_G0 = this._resolveAnchors(onigLib, allowA, allowG);
-                    }
-                    return this._anchorCache.A1_G0;
-                }
-            }
-            else {
-                if (allowG) {
-                    if (!this._anchorCache.A0_G1) {
-                        this._anchorCache.A0_G1 = this._resolveAnchors(onigLib, allowA, allowG);
-                    }
-                    return this._anchorCache.A0_G1;
-                }
-                else {
-                    if (!this._anchorCache.A0_G0) {
-                        this._anchorCache.A0_G0 = this._resolveAnchors(onigLib, allowA, allowG);
-                    }
-                    return this._anchorCache.A0_G0;
-                }
-            }
-        }
-    };
-    RegExpSourceList.prototype._resolveAnchors = function (onigLib, allowA, allowG) {
-        var regExps = this._items.map(function (e) { return e.resolveAnchors(allowA, allowG); });
-        return {
-            scanner: onigLib.createOnigScanner(regExps),
-            rules: this._items.map(function (e) { return e.ruleId; }),
-            debugRegExps: regExps
-        };
-    };
-    return RegExpSourceList;
-}());
-exports.RegExpSourceList = RegExpSourceList;
-var MatchRule = /** @class */ (function (_super) {
-    __extends(MatchRule, _super);
-    function MatchRule($location, id, name, match, captures) {
-        var _this = _super.call(this, $location, id, name, null) || this;
-        _this._match = new RegExpSource(match, _this.id);
-        _this.captures = captures;
-        _this._cachedCompiledPatterns = null;
-        return _this;
-    }
-    Object.defineProperty(MatchRule.prototype, "debugMatchRegExp", {
-        get: function () {
-            return "" + this._match.source;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    MatchRule.prototype.collectPatternsRecursive = function (grammar, out, isFirst) {
-        out.push(this._match);
-    };
-    MatchRule.prototype.compile = function (grammar, endRegexSource, allowA, allowG) {
-        if (!this._cachedCompiledPatterns) {
-            this._cachedCompiledPatterns = new RegExpSourceList();
-            this.collectPatternsRecursive(grammar, this._cachedCompiledPatterns, true);
-        }
-        return this._cachedCompiledPatterns.compile(grammar, allowA, allowG);
-    };
-    return MatchRule;
-}(Rule));
-exports.MatchRule = MatchRule;
-var IncludeOnlyRule = /** @class */ (function (_super) {
-    __extends(IncludeOnlyRule, _super);
-    function IncludeOnlyRule($location, id, name, contentName, patterns) {
-        var _this = _super.call(this, $location, id, name, contentName) || this;
-        _this.patterns = patterns.patterns;
-        _this.hasMissingPatterns = patterns.hasMissingPatterns;
-        _this._cachedCompiledPatterns = null;
-        return _this;
-    }
-    IncludeOnlyRule.prototype.collectPatternsRecursive = function (grammar, out, isFirst) {
-        var i, len, rule;
-        for (i = 0, len = this.patterns.length; i < len; i++) {
-            rule = grammar.getRule(this.patterns[i]);
-            rule.collectPatternsRecursive(grammar, out, false);
-        }
-    };
-    IncludeOnlyRule.prototype.compile = function (grammar, endRegexSource, allowA, allowG) {
-        if (!this._cachedCompiledPatterns) {
-            this._cachedCompiledPatterns = new RegExpSourceList();
-            this.collectPatternsRecursive(grammar, this._cachedCompiledPatterns, true);
-        }
-        return this._cachedCompiledPatterns.compile(grammar, allowA, allowG);
-    };
-    return IncludeOnlyRule;
-}(Rule));
-exports.IncludeOnlyRule = IncludeOnlyRule;
-function escapeRegExpCharacters(value) {
-    return value.replace(/[\-\\\{\}\*\+\?\|\^\$\.\,\[\]\(\)\#\s]/g, '\\$&');
-}
-var BeginEndRule = /** @class */ (function (_super) {
-    __extends(BeginEndRule, _super);
-    function BeginEndRule($location, id, name, contentName, begin, beginCaptures, end, endCaptures, applyEndPatternLast, patterns) {
-        var _this = _super.call(this, $location, id, name, contentName) || this;
-        _this._begin = new RegExpSource(begin, _this.id);
-        _this.beginCaptures = beginCaptures;
-        _this._end = new RegExpSource(end ? end : '\uFFFF', -1);
-        _this.endHasBackReferences = _this._end.hasBackReferences;
-        _this.endCaptures = endCaptures;
-        _this.applyEndPatternLast = applyEndPatternLast || false;
-        _this.patterns = patterns.patterns;
-        _this.hasMissingPatterns = patterns.hasMissingPatterns;
-        _this._cachedCompiledPatterns = null;
-        return _this;
-    }
-    Object.defineProperty(BeginEndRule.prototype, "debugBeginRegExp", {
-        get: function () {
-            return "" + this._begin.source;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(BeginEndRule.prototype, "debugEndRegExp", {
-        get: function () {
-            return "" + this._end.source;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    BeginEndRule.prototype.getEndWithResolvedBackReferences = function (lineText, captureIndices) {
-        return this._end.resolveBackReferences(lineText, captureIndices);
-    };
-    BeginEndRule.prototype.collectPatternsRecursive = function (grammar, out, isFirst) {
-        if (isFirst) {
-            var i = void 0, len = void 0, rule = void 0;
-            for (i = 0, len = this.patterns.length; i < len; i++) {
-                rule = grammar.getRule(this.patterns[i]);
-                rule.collectPatternsRecursive(grammar, out, false);
-            }
-        }
-        else {
-            out.push(this._begin);
-        }
-    };
-    BeginEndRule.prototype.compile = function (grammar, endRegexSource, allowA, allowG) {
-        if (!this._cachedCompiledPatterns) {
-            this._cachedCompiledPatterns = new RegExpSourceList();
-            this.collectPatternsRecursive(grammar, this._cachedCompiledPatterns, true);
-            if (this.applyEndPatternLast) {
-                this._cachedCompiledPatterns.push(this._end.hasBackReferences ? this._end.clone() : this._end);
-            }
-            else {
-                this._cachedCompiledPatterns.unshift(this._end.hasBackReferences ? this._end.clone() : this._end);
-            }
-        }
-        if (this._end.hasBackReferences) {
-            if (this.applyEndPatternLast) {
-                this._cachedCompiledPatterns.setSource(this._cachedCompiledPatterns.length() - 1, endRegexSource);
-            }
-            else {
-                this._cachedCompiledPatterns.setSource(0, endRegexSource);
-            }
-        }
-        return this._cachedCompiledPatterns.compile(grammar, allowA, allowG);
-    };
-    return BeginEndRule;
-}(Rule));
-exports.BeginEndRule = BeginEndRule;
-var BeginWhileRule = /** @class */ (function (_super) {
-    __extends(BeginWhileRule, _super);
-    function BeginWhileRule($location, id, name, contentName, begin, beginCaptures, _while, whileCaptures, patterns) {
-        var _this = _super.call(this, $location, id, name, contentName) || this;
-        _this._begin = new RegExpSource(begin, _this.id);
-        _this.beginCaptures = beginCaptures;
-        _this.whileCaptures = whileCaptures;
-        _this._while = new RegExpSource(_while, -2);
-        _this.whileHasBackReferences = _this._while.hasBackReferences;
-        _this.patterns = patterns.patterns;
-        _this.hasMissingPatterns = patterns.hasMissingPatterns;
-        _this._cachedCompiledPatterns = null;
-        _this._cachedCompiledWhilePatterns = null;
-        return _this;
-    }
-    Object.defineProperty(BeginWhileRule.prototype, "debugBeginRegExp", {
-        get: function () {
-            return "" + this._begin.source;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(BeginWhileRule.prototype, "debugWhileRegExp", {
-        get: function () {
-            return "" + this._while.source;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    BeginWhileRule.prototype.getWhileWithResolvedBackReferences = function (lineText, captureIndices) {
-        return this._while.resolveBackReferences(lineText, captureIndices);
-    };
-    BeginWhileRule.prototype.collectPatternsRecursive = function (grammar, out, isFirst) {
-        if (isFirst) {
-            var i = void 0, len = void 0, rule = void 0;
-            for (i = 0, len = this.patterns.length; i < len; i++) {
-                rule = grammar.getRule(this.patterns[i]);
-                rule.collectPatternsRecursive(grammar, out, false);
-            }
-        }
-        else {
-            out.push(this._begin);
-        }
-    };
-    BeginWhileRule.prototype.compile = function (grammar, endRegexSource, allowA, allowG) {
-        if (!this._cachedCompiledPatterns) {
-            this._cachedCompiledPatterns = new RegExpSourceList();
-            this.collectPatternsRecursive(grammar, this._cachedCompiledPatterns, true);
-        }
-        return this._cachedCompiledPatterns.compile(grammar, allowA, allowG);
-    };
-    BeginWhileRule.prototype.compileWhile = function (grammar, endRegexSource, allowA, allowG) {
-        if (!this._cachedCompiledWhilePatterns) {
-            this._cachedCompiledWhilePatterns = new RegExpSourceList();
-            this._cachedCompiledWhilePatterns.push(this._while.hasBackReferences ? this._while.clone() : this._while);
-        }
-        if (this._while.hasBackReferences) {
-            this._cachedCompiledWhilePatterns.setSource(0, endRegexSource ? endRegexSource : '\uFFFF');
-        }
-        return this._cachedCompiledWhilePatterns.compile(grammar, allowA, allowG);
-    };
-    return BeginWhileRule;
-}(Rule));
-exports.BeginWhileRule = BeginWhileRule;
-var RuleFactory = /** @class */ (function () {
-    function RuleFactory() {
-    }
-    RuleFactory.createCaptureRule = function (helper, $location, name, contentName, retokenizeCapturedWithRuleId) {
-        return helper.registerRule(function (id) {
-            return new CaptureRule($location, id, name, contentName, retokenizeCapturedWithRuleId);
-        });
-    };
-    RuleFactory.getCompiledRuleId = function (desc, helper, repository) {
-        if (!desc.id) {
-            helper.registerRule(function (id) {
-                desc.id = id;
-                if (desc.match) {
-                    return new MatchRule(desc.$vscodeTextmateLocation, desc.id, desc.name, desc.match, RuleFactory._compileCaptures(desc.captures, helper, repository));
-                }
-                if (typeof desc.begin === 'undefined') {
-                    if (desc.repository) {
-                        repository = utils_1.mergeObjects({}, repository, desc.repository);
-                    }
-                    var patterns = desc.patterns;
-                    if (typeof patterns === 'undefined' && desc.include) {
-                        patterns = [{ include: desc.include }];
-                    }
-                    return new IncludeOnlyRule(desc.$vscodeTextmateLocation, desc.id, desc.name, desc.contentName, RuleFactory._compilePatterns(patterns, helper, repository));
-                }
-                if (desc.while) {
-                    return new BeginWhileRule(desc.$vscodeTextmateLocation, desc.id, desc.name, desc.contentName, desc.begin, RuleFactory._compileCaptures(desc.beginCaptures || desc.captures, helper, repository), desc.while, RuleFactory._compileCaptures(desc.whileCaptures || desc.captures, helper, repository), RuleFactory._compilePatterns(desc.patterns, helper, repository));
-                }
-                return new BeginEndRule(desc.$vscodeTextmateLocation, desc.id, desc.name, desc.contentName, desc.begin, RuleFactory._compileCaptures(desc.beginCaptures || desc.captures, helper, repository), desc.end, RuleFactory._compileCaptures(desc.endCaptures || desc.captures, helper, repository), desc.applyEndPatternLast, RuleFactory._compilePatterns(desc.patterns, helper, repository));
-            });
-        }
-        return desc.id;
-    };
-    RuleFactory._compileCaptures = function (captures, helper, repository) {
-        var r = [];
-        if (captures) {
-            // Find the maximum capture id
-            var maximumCaptureId = 0;
-            for (var captureId in captures) {
-                if (captureId === '$vscodeTextmateLocation') {
-                    continue;
-                }
-                var numericCaptureId = parseInt(captureId, 10);
-                if (numericCaptureId > maximumCaptureId) {
-                    maximumCaptureId = numericCaptureId;
-                }
-            }
-            // Initialize result
-            for (var i = 0; i <= maximumCaptureId; i++) {
-                r[i] = null;
-            }
-            // Fill out result
-            for (var captureId in captures) {
-                if (captureId === '$vscodeTextmateLocation') {
-                    continue;
-                }
-                var numericCaptureId = parseInt(captureId, 10);
-                var retokenizeCapturedWithRuleId = 0;
-                if (captures[captureId].patterns) {
-                    retokenizeCapturedWithRuleId = RuleFactory.getCompiledRuleId(captures[captureId], helper, repository);
-                }
-                r[numericCaptureId] = RuleFactory.createCaptureRule(helper, captures[captureId].$vscodeTextmateLocation, captures[captureId].name, captures[captureId].contentName, retokenizeCapturedWithRuleId);
-            }
-        }
-        return r;
-    };
-    RuleFactory._compilePatterns = function (patterns, helper, repository) {
-        var r = [];
-        if (patterns) {
-            for (var i = 0, len = patterns.length; i < len; i++) {
-                var pattern = patterns[i];
-                var patternId = -1;
-                if (pattern.include) {
-                    if (pattern.include.charAt(0) === '#') {
-                        // Local include found in `repository`
-                        var localIncludedRule = repository[pattern.include.substr(1)];
-                        if (localIncludedRule) {
-                            patternId = RuleFactory.getCompiledRuleId(localIncludedRule, helper, repository);
-                        }
-                        else {
-                            // console.warn('CANNOT find rule for scopeName: ' + pattern.include + ', I am: ', repository['$base'].name);
-                        }
-                    }
-                    else if (pattern.include === '$base' || pattern.include === '$self') {
-                        // Special include also found in `repository`
-                        patternId = RuleFactory.getCompiledRuleId(repository[pattern.include], helper, repository);
-                    }
-                    else {
-                        var externalGrammarName = null;
-                        var externalGrammarInclude = null;
-                        var sharpIndex = pattern.include.indexOf('#');
-                        if (sharpIndex >= 0) {
-                            externalGrammarName = pattern.include.substring(0, sharpIndex);
-                            externalGrammarInclude = pattern.include.substring(sharpIndex + 1);
-                        }
-                        else {
-                            externalGrammarName = pattern.include;
-                        }
-                        // External include
-                        var externalGrammar = helper.getExternalGrammar(externalGrammarName, repository);
-                        if (externalGrammar) {
-                            if (externalGrammarInclude) {
-                                var externalIncludedRule = externalGrammar.repository[externalGrammarInclude];
-                                if (externalIncludedRule) {
-                                    patternId = RuleFactory.getCompiledRuleId(externalIncludedRule, helper, externalGrammar.repository);
-                                }
-                                else {
-                                    // console.warn('CANNOT find rule for scopeName: ' + pattern.include + ', I am: ', repository['$base'].name);
-                                }
-                            }
-                            else {
-                                patternId = RuleFactory.getCompiledRuleId(externalGrammar.repository.$self, helper, externalGrammar.repository);
-                            }
-                        }
-                        else {
-                            // console.warn('CANNOT find grammar for scopeName: ' + pattern.include + ', I am: ', repository['$base'].name);
-                        }
-                    }
-                }
-                else {
-                    patternId = RuleFactory.getCompiledRuleId(pattern, helper, repository);
-                }
-                if (patternId !== -1) {
-                    var rule = helper.getRule(patternId);
-                    var skipRule = false;
-                    if (rule instanceof IncludeOnlyRule || rule instanceof BeginEndRule || rule instanceof BeginWhileRule) {
-                        if (rule.hasMissingPatterns && rule.patterns.length === 0) {
-                            skipRule = true;
-                        }
-                    }
-                    if (skipRule) {
-                        // console.log('REMOVING RULE ENTIRELY DUE TO EMPTY PATTERNS THAT ARE MISSING');
-                        continue;
-                    }
-                    r.push(patternId);
-                }
-            }
-        }
-        return {
-            patterns: r,
-            hasMissingPatterns: ((patterns ? patterns.length : 0) !== r.length)
-        };
-    };
-    return RuleFactory;
-}());
-exports.RuleFactory = RuleFactory;
-//# sourceMappingURL=rule.js.map
-});
-$load('./grammar', function(require, module, exports) {
-/*---------------------------------------------------------
- * Copyright (C) Microsoft Corporation. All rights reserved.
- *--------------------------------------------------------*/
-'use strict';
-Object.defineProperty(exports, "__esModule", { value: true });
-var utils_1 = require("./utils");
-var rule_1 = require("./rule");
-var matcher_1 = require("./matcher");
-var debug_1 = require("./debug");
-function createGrammar(grammar, initialLanguage, embeddedLanguages, tokenTypes, grammarRepository, onigLib) {
-    return new Grammar(grammar, initialLanguage, embeddedLanguages, tokenTypes, grammarRepository, onigLib);
-}
-exports.createGrammar = createGrammar;
-var FullScopeDependency = /** @class */ (function () {
-    function FullScopeDependency(scopeName) {
-        this.scopeName = scopeName;
-    }
-    return FullScopeDependency;
-}());
-exports.FullScopeDependency = FullScopeDependency;
-var PartialScopeDependency = /** @class */ (function () {
-    function PartialScopeDependency(scopeName, include) {
-        this.scopeName = scopeName;
-        this.include = include;
-    }
-    PartialScopeDependency.prototype.toKey = function () {
-        return this.scopeName + "#" + this.include;
-    };
-    return PartialScopeDependency;
-}());
-exports.PartialScopeDependency = PartialScopeDependency;
-var ScopeDependencyCollector = /** @class */ (function () {
-    function ScopeDependencyCollector() {
-        this.full = [];
-        this.partial = [];
-        this.visitedRule = new Set();
-        this._seenFull = new Set();
-        this._seenPartial = new Set();
-    }
-    ScopeDependencyCollector.prototype.add = function (dep) {
-        if (dep instanceof FullScopeDependency) {
-            if (!this._seenFull.has(dep.scopeName)) {
-                this._seenFull.add(dep.scopeName);
-                this.full.push(dep);
-            }
-        }
-        else {
-            if (!this._seenPartial.has(dep.toKey())) {
-                this._seenPartial.add(dep.toKey());
-                this.partial.push(dep);
-            }
-        }
-    };
-    return ScopeDependencyCollector;
-}());
-exports.ScopeDependencyCollector = ScopeDependencyCollector;
-/**
- * Fill in `result` all external included scopes in `patterns`
- */
-function _extractIncludedScopesInPatterns(result, baseGrammar, selfGrammar, patterns, repository) {
-    for (var _i = 0, patterns_1 = patterns; _i < patterns_1.length; _i++) {
-        var pattern = patterns_1[_i];
-        if (result.visitedRule.has(pattern)) {
-            continue;
-        }
-        result.visitedRule.add(pattern);
-        var patternRepository = (pattern.repository ? utils_1.mergeObjects({}, repository, pattern.repository) : repository);
-        if (Array.isArray(pattern.patterns)) {
-            _extractIncludedScopesInPatterns(result, baseGrammar, selfGrammar, pattern.patterns, patternRepository);
-        }
-        var include = pattern.include;
-        if (!include) {
-            continue;
-        }
-        if (include === '$base' || include === baseGrammar.scopeName) {
-            collectDependencies(result, baseGrammar, baseGrammar);
-        }
-        else if (include === '$self' || include === selfGrammar.scopeName) {
-            collectDependencies(result, baseGrammar, selfGrammar);
-        }
-        else if (include.charAt(0) === '#') {
-            collectSpecificDependencies(result, baseGrammar, selfGrammar, include.substring(1), patternRepository);
-        }
-        else {
-            var sharpIndex = include.indexOf('#');
-            if (sharpIndex >= 0) {
-                var scopeName = include.substring(0, sharpIndex);
-                var includedName = include.substring(sharpIndex + 1);
-                if (scopeName === baseGrammar.scopeName) {
-                    collectSpecificDependencies(result, baseGrammar, baseGrammar, includedName, patternRepository);
-                }
-                else if (scopeName === selfGrammar.scopeName) {
-                    collectSpecificDependencies(result, baseGrammar, selfGrammar, includedName, patternRepository);
-                }
-                else {
-                    result.add(new PartialScopeDependency(scopeName, include.substring(sharpIndex + 1)));
-                }
-            }
-            else {
-                result.add(new FullScopeDependency(include));
-            }
-        }
-    }
-}
-/**
- * Collect a specific dependency from the grammar's repository
- */
-function collectSpecificDependencies(result, baseGrammar, selfGrammar, include, repository) {
-    if (repository === void 0) { repository = selfGrammar.repository; }
-    if (repository && repository[include]) {
-        var rule = repository[include];
-        _extractIncludedScopesInPatterns(result, baseGrammar, selfGrammar, [rule], repository);
-    }
-}
-exports.collectSpecificDependencies = collectSpecificDependencies;
-/**
- * Collects the list of all external included scopes in `grammar`.
- */
-function collectDependencies(result, baseGrammar, selfGrammar) {
-    if (selfGrammar.patterns && Array.isArray(selfGrammar.patterns)) {
-        _extractIncludedScopesInPatterns(result, baseGrammar, selfGrammar, selfGrammar.patterns, selfGrammar.repository);
-    }
-    if (selfGrammar.injections) {
-        var injections = [];
-        for (var injection in selfGrammar.injections) {
-            injections.push(selfGrammar.injections[injection]);
-        }
-        _extractIncludedScopesInPatterns(result, baseGrammar, selfGrammar, injections, selfGrammar.repository);
-    }
-}
-exports.collectDependencies = collectDependencies;
-function scopesAreMatching(thisScopeName, scopeName) {
-    if (!thisScopeName) {
-        return false;
-    }
-    if (thisScopeName === scopeName) {
-        return true;
-    }
-    var len = scopeName.length;
-    return thisScopeName.length > len && thisScopeName.substr(0, len) === scopeName && thisScopeName[len] === '.';
-}
-function nameMatcher(identifers, scopes) {
-    if (scopes.length < identifers.length) {
-        return false;
-    }
-    var lastIndex = 0;
-    return identifers.every(function (identifier) {
-        for (var i = lastIndex; i < scopes.length; i++) {
-            if (scopesAreMatching(scopes[i], identifier)) {
-                lastIndex = i + 1;
-                return true;
-            }
-        }
-        return false;
-    });
-}
-function collectInjections(result, selector, rule, ruleFactoryHelper, grammar) {
-    var matchers = matcher_1.createMatchers(selector, nameMatcher);
-    var ruleId = rule_1.RuleFactory.getCompiledRuleId(rule, ruleFactoryHelper, grammar.repository);
-    for (var _i = 0, matchers_1 = matchers; _i < matchers_1.length; _i++) {
-        var matcher = matchers_1[_i];
-        result.push({
-            matcher: matcher.matcher,
-            ruleId: ruleId,
-            grammar: grammar,
-            priority: matcher.priority
-        });
-    }
-}
-var ScopeMetadata = /** @class */ (function () {
-    function ScopeMetadata(scopeName, languageId, tokenType, themeData) {
-        this.scopeName = scopeName;
-        this.languageId = languageId;
-        this.tokenType = tokenType;
-        this.themeData = themeData;
-    }
-    return ScopeMetadata;
-}());
-exports.ScopeMetadata = ScopeMetadata;
-var ScopeMetadataProvider = /** @class */ (function () {
-    function ScopeMetadataProvider(initialLanguage, themeProvider, embeddedLanguages) {
-        this._initialLanguage = initialLanguage;
-        this._themeProvider = themeProvider;
-        this._cache = new Map();
-        this._defaultMetaData = new ScopeMetadata('', this._initialLanguage, 0 /* Other */, [this._themeProvider.getDefaults()]);
-        // embeddedLanguages handling
-        this._embeddedLanguages = Object.create(null);
-        if (embeddedLanguages) {
-            // If embeddedLanguages are configured, fill in `this._embeddedLanguages`
-            var scopes = Object.keys(embeddedLanguages);
-            for (var i = 0, len = scopes.length; i < len; i++) {
-                var scope = scopes[i];
-                var language = embeddedLanguages[scope];
-                if (typeof language !== 'number' || language === 0) {
-                    console.warn('Invalid embedded language found at scope ' + scope + ': <<' + language + '>>');
-                    // never hurts to be too careful
-                    continue;
-                }
-                this._embeddedLanguages[scope] = language;
-            }
-        }
-        // create the regex
-        var escapedScopes = Object.keys(this._embeddedLanguages).map(function (scopeName) { return ScopeMetadataProvider._escapeRegExpCharacters(scopeName); });
-        if (escapedScopes.length === 0) {
-            // no scopes registered
-            this._embeddedLanguagesRegex = null;
-        }
-        else {
-            escapedScopes.sort();
-            escapedScopes.reverse();
-            this._embeddedLanguagesRegex = new RegExp("^((" + escapedScopes.join(')|(') + "))($|\\.)", '');
-        }
-    }
-    ScopeMetadataProvider.prototype.onDidChangeTheme = function () {
-        this._cache = new Map();
-        this._defaultMetaData = new ScopeMetadata('', this._initialLanguage, 0 /* Other */, [this._themeProvider.getDefaults()]);
-    };
-    ScopeMetadataProvider.prototype.getDefaultMetadata = function () {
-        return this._defaultMetaData;
-    };
-    /**
-     * Escapes regular expression characters in a given string
-     */
-    ScopeMetadataProvider._escapeRegExpCharacters = function (value) {
-        return value.replace(/[\-\\\{\}\*\+\?\|\^\$\.\,\[\]\(\)\#\s]/g, '\\$&');
-    };
-    ScopeMetadataProvider.prototype.getMetadataForScope = function (scopeName) {
-        if (scopeName === null) {
-            return ScopeMetadataProvider._NULL_SCOPE_METADATA;
-        }
-        var value = this._cache.get(scopeName);
-        if (value) {
-            return value;
-        }
-        value = this._doGetMetadataForScope(scopeName);
-        this._cache.set(scopeName, value);
-        return value;
-    };
-    ScopeMetadataProvider.prototype._doGetMetadataForScope = function (scopeName) {
-        var languageId = this._scopeToLanguage(scopeName);
-        var standardTokenType = this._toStandardTokenType(scopeName);
-        var themeData = this._themeProvider.themeMatch(scopeName);
-        return new ScopeMetadata(scopeName, languageId, standardTokenType, themeData);
-    };
-    /**
-     * Given a produced TM scope, return the language that token describes or null if unknown.
-     * e.g. source.html => html, source.css.embedded.html => css, punctuation.definition.tag.html => null
-     */
-    ScopeMetadataProvider.prototype._scopeToLanguage = function (scope) {
-        if (!scope) {
-            return 0;
-        }
-        if (!this._embeddedLanguagesRegex) {
-            // no scopes registered
-            return 0;
-        }
-        var m = scope.match(this._embeddedLanguagesRegex);
-        if (!m) {
-            // no scopes matched
-            return 0;
-        }
-        var language = this._embeddedLanguages[m[1]] || 0;
-        if (!language) {
-            return 0;
-        }
-        return language;
-    };
-    ScopeMetadataProvider.prototype._toStandardTokenType = function (tokenType) {
-        var m = tokenType.match(ScopeMetadataProvider.STANDARD_TOKEN_TYPE_REGEXP);
-        if (!m) {
-            return 0 /* Other */;
-        }
-        switch (m[1]) {
-            case 'comment':
-                return 1 /* Comment */;
-            case 'string':
-                return 2 /* String */;
-            case 'regex':
-                return 4 /* RegEx */;
-            case 'meta.embedded':
-                return 8 /* MetaEmbedded */;
-        }
-        throw new Error('Unexpected match for standard token type!');
-    };
-    ScopeMetadataProvider._NULL_SCOPE_METADATA = new ScopeMetadata('', 0, 0, null);
-    ScopeMetadataProvider.STANDARD_TOKEN_TYPE_REGEXP = /\b(comment|string|regex|meta\.embedded)\b/;
-    return ScopeMetadataProvider;
-}());
-var Grammar = /** @class */ (function () {
-    function Grammar(grammar, initialLanguage, embeddedLanguages, tokenTypes, grammarRepository, onigLib) {
-        this._scopeMetadataProvider = new ScopeMetadataProvider(initialLanguage, grammarRepository, embeddedLanguages);
-        this._onigLib = onigLib;
-        this._rootId = -1;
-        this._lastRuleId = 0;
-        this._ruleId2desc = [];
-        this._includedGrammars = {};
-        this._grammarRepository = grammarRepository;
-        this._grammar = initGrammar(grammar, null);
-        this._injections = null;
-        this._tokenTypeMatchers = [];
-        if (tokenTypes) {
-            for (var _i = 0, _a = Object.keys(tokenTypes); _i < _a.length; _i++) {
-                var selector = _a[_i];
-                var matchers = matcher_1.createMatchers(selector, nameMatcher);
-                for (var _b = 0, matchers_2 = matchers; _b < matchers_2.length; _b++) {
-                    var matcher = matchers_2[_b];
-                    this._tokenTypeMatchers.push({
-                        matcher: matcher.matcher,
-                        type: tokenTypes[selector]
-                    });
-                }
-            }
-        }
-    }
-    Grammar.prototype.createOnigScanner = function (sources) {
-        return this._onigLib.createOnigScanner(sources);
-    };
-    Grammar.prototype.createOnigString = function (sources) {
-        return this._onigLib.createOnigString(sources);
-    };
-    Grammar.prototype.onDidChangeTheme = function () {
-        this._scopeMetadataProvider.onDidChangeTheme();
-    };
-    Grammar.prototype.getMetadataForScope = function (scope) {
-        return this._scopeMetadataProvider.getMetadataForScope(scope);
-    };
-    Grammar.prototype.getInjections = function () {
-        var _this = this;
-        if (this._injections === null) {
-            this._injections = [];
-            // add injections from the current grammar
-            var rawInjections = this._grammar.injections;
-            if (rawInjections) {
-                for (var expression in rawInjections) {
-                    collectInjections(this._injections, expression, rawInjections[expression], this, this._grammar);
-                }
-            }
-            // add injection grammars contributed for the current scope
-            if (this._grammarRepository) {
-                var injectionScopeNames = this._grammarRepository.injections(this._grammar.scopeName);
-                if (injectionScopeNames) {
-                    injectionScopeNames.forEach(function (injectionScopeName) {
-                        var injectionGrammar = _this.getExternalGrammar(injectionScopeName);
-                        if (injectionGrammar) {
-                            var selector = injectionGrammar.injectionSelector;
-                            if (selector) {
-                                collectInjections(_this._injections, selector, injectionGrammar, _this, injectionGrammar);
-                            }
-                        }
-                    });
-                }
-            }
-            this._injections.sort(function (i1, i2) { return i1.priority - i2.priority; }); // sort by priority
-        }
-        return this._injections;
-    };
-    Grammar.prototype.registerRule = function (factory) {
-        var id = (++this._lastRuleId);
-        var result = factory(id);
-        this._ruleId2desc[id] = result;
-        return result;
-    };
-    Grammar.prototype.getRule = function (patternId) {
-        return this._ruleId2desc[patternId];
-    };
-    Grammar.prototype.getExternalGrammar = function (scopeName, repository) {
-        if (this._includedGrammars[scopeName]) {
-            return this._includedGrammars[scopeName];
-        }
-        else if (this._grammarRepository) {
-            var rawIncludedGrammar = this._grammarRepository.lookup(scopeName);
-            if (rawIncludedGrammar) {
-                // console.log('LOADED GRAMMAR ' + pattern.include);
-                this._includedGrammars[scopeName] = initGrammar(rawIncludedGrammar, repository && repository.$base);
-                return this._includedGrammars[scopeName];
-            }
-        }
-        return null;
-    };
-    Grammar.prototype.tokenizeLine = function (lineText, prevState) {
-        var r = this._tokenize(lineText, prevState, false);
-        return {
-            tokens: r.lineTokens.getResult(r.ruleStack, r.lineLength),
-            ruleStack: r.ruleStack
-        };
-    };
-    Grammar.prototype.tokenizeLine2 = function (lineText, prevState) {
-        var r = this._tokenize(lineText, prevState, true);
-        return {
-            tokens: r.lineTokens.getBinaryResult(r.ruleStack, r.lineLength),
-            ruleStack: r.ruleStack
-        };
-    };
-    Grammar.prototype._tokenize = function (lineText, prevState, emitBinaryTokens) {
-        if (this._rootId === -1) {
-            this._rootId = rule_1.RuleFactory.getCompiledRuleId(this._grammar.repository.$self, this, this._grammar.repository);
-        }
-        var isFirstLine;
-        if (!prevState || prevState === StackElement.NULL) {
-            isFirstLine = true;
-            var rawDefaultMetadata = this._scopeMetadataProvider.getDefaultMetadata();
-            var defaultTheme = rawDefaultMetadata.themeData[0];
-            var defaultMetadata = StackElementMetadata.set(0, rawDefaultMetadata.languageId, rawDefaultMetadata.tokenType, defaultTheme.fontStyle, defaultTheme.foreground, defaultTheme.background);
-            var rootScopeName = this.getRule(this._rootId).getName(null, null);
-            var rawRootMetadata = this._scopeMetadataProvider.getMetadataForScope(rootScopeName);
-            var rootMetadata = ScopeListElement.mergeMetadata(defaultMetadata, null, rawRootMetadata);
-            var scopeList = new ScopeListElement(null, rootScopeName === null ? 'unknown' : rootScopeName, rootMetadata);
-            prevState = new StackElement(null, this._rootId, -1, -1, false, null, scopeList, scopeList);
-        }
-        else {
-            isFirstLine = false;
-            prevState.reset();
-        }
-        lineText = lineText + '\n';
-        var onigLineText = this.createOnigString(lineText);
-        var lineLength = onigLineText.content.length;
-        var lineTokens = new LineTokens(emitBinaryTokens, lineText, this._tokenTypeMatchers);
-        var nextState = _tokenizeString(this, onigLineText, isFirstLine, 0, prevState, lineTokens, true);
-        disposeOnigString(onigLineText);
-        return {
-            lineLength: lineLength,
-            lineTokens: lineTokens,
-            ruleStack: nextState
-        };
-    };
-    return Grammar;
-}());
-exports.Grammar = Grammar;
-function disposeOnigString(str) {
-    if (typeof str.dispose === 'function') {
-        str.dispose();
-    }
-}
-function initGrammar(grammar, base) {
-    grammar = utils_1.clone(grammar);
-    grammar.repository = grammar.repository || {};
-    grammar.repository.$self = {
-        $vscodeTextmateLocation: grammar.$vscodeTextmateLocation,
-        patterns: grammar.patterns,
-        name: grammar.scopeName
-    };
-    grammar.repository.$base = base || grammar.repository.$self;
-    return grammar;
-}
-function handleCaptures(grammar, lineText, isFirstLine, stack, lineTokens, captures, captureIndices) {
-    if (captures.length === 0) {
-        return;
-    }
-    var lineTextContent = lineText.content;
-    var len = Math.min(captures.length, captureIndices.length);
-    var localStack = [];
-    var maxEnd = captureIndices[0].end;
-    for (var i = 0; i < len; i++) {
-        var captureRule = captures[i];
-        if (captureRule === null) {
-            // Not interested
-            continue;
-        }
-        var captureIndex = captureIndices[i];
-        if (captureIndex.length === 0) {
-            // Nothing really captured
-            continue;
-        }
-        if (captureIndex.start > maxEnd) {
-            // Capture going beyond consumed string
-            break;
-        }
-        // pop captures while needed
-        while (localStack.length > 0 && localStack[localStack.length - 1].endPos <= captureIndex.start) {
-            // pop!
-            lineTokens.produceFromScopes(localStack[localStack.length - 1].scopes, localStack[localStack.length - 1].endPos);
-            localStack.pop();
-        }
-        if (localStack.length > 0) {
-            lineTokens.produceFromScopes(localStack[localStack.length - 1].scopes, captureIndex.start);
-        }
-        else {
-            lineTokens.produce(stack, captureIndex.start);
-        }
-        if (captureRule.retokenizeCapturedWithRuleId) {
-            // the capture requires additional matching
-            var scopeName = captureRule.getName(lineTextContent, captureIndices);
-            var nameScopesList = stack.contentNameScopesList.push(grammar, scopeName);
-            var contentName = captureRule.getContentName(lineTextContent, captureIndices);
-            var contentNameScopesList = nameScopesList.push(grammar, contentName);
-            var stackClone = stack.push(captureRule.retokenizeCapturedWithRuleId, captureIndex.start, -1, false, null, nameScopesList, contentNameScopesList);
-            var onigSubStr = grammar.createOnigString(lineTextContent.substring(0, captureIndex.end));
-            _tokenizeString(grammar, onigSubStr, (isFirstLine && captureIndex.start === 0), captureIndex.start, stackClone, lineTokens, false);
-            disposeOnigString(onigSubStr);
-            continue;
-        }
-        var captureRuleScopeName = captureRule.getName(lineTextContent, captureIndices);
-        if (captureRuleScopeName !== null) {
-            // push
-            var base = localStack.length > 0 ? localStack[localStack.length - 1].scopes : stack.contentNameScopesList;
-            var captureRuleScopesList = base.push(grammar, captureRuleScopeName);
-            localStack.push(new LocalStackElement(captureRuleScopesList, captureIndex.end));
-        }
-    }
-    while (localStack.length > 0) {
-        // pop!
-        lineTokens.produceFromScopes(localStack[localStack.length - 1].scopes, localStack[localStack.length - 1].endPos);
-        localStack.pop();
-    }
-}
-function debugCompiledRuleToString(ruleScanner) {
-    var r = [];
-    for (var i = 0, len = ruleScanner.rules.length; i < len; i++) {
-        r.push('   - ' + ruleScanner.rules[i] + ': ' + ruleScanner.debugRegExps[i]);
-    }
-    return r.join('\n');
-}
-function matchInjections(injections, grammar, lineText, isFirstLine, linePos, stack, anchorPosition) {
-    // The lower the better
-    var bestMatchRating = Number.MAX_VALUE;
-    var bestMatchCaptureIndices = null;
-    var bestMatchRuleId;
-    var bestMatchResultPriority = 0;
-    var scopes = stack.contentNameScopesList.generateScopes();
-    for (var i = 0, len = injections.length; i < len; i++) {
-        var injection = injections[i];
-        if (!injection.matcher(scopes)) {
-            // injection selector doesn't match stack
-            continue;
-        }
-        var ruleScanner = grammar.getRule(injection.ruleId).compile(grammar, null, isFirstLine, linePos === anchorPosition);
-        var matchResult = ruleScanner.scanner.findNextMatchSync(lineText, linePos);
-        if (debug_1.DebugFlags.InDebugMode) {
-            console.log('  scanning for injections');
-            console.log(debugCompiledRuleToString(ruleScanner));
-        }
-        if (!matchResult) {
-            continue;
-        }
-        var matchRating = matchResult.captureIndices[0].start;
-        if (matchRating >= bestMatchRating) {
-            // Injections are sorted by priority, so the previous injection had a better or equal priority
-            continue;
-        }
-        bestMatchRating = matchRating;
-        bestMatchCaptureIndices = matchResult.captureIndices;
-        bestMatchRuleId = ruleScanner.rules[matchResult.index];
-        bestMatchResultPriority = injection.priority;
-        if (bestMatchRating === linePos) {
-            // No more need to look at the rest of the injections.
-            break;
-        }
-    }
-    if (bestMatchCaptureIndices) {
-        return {
-            priorityMatch: bestMatchResultPriority === -1,
-            captureIndices: bestMatchCaptureIndices,
-            matchedRuleId: bestMatchRuleId
-        };
-    }
-    return null;
-}
-function matchRule(grammar, lineText, isFirstLine, linePos, stack, anchorPosition) {
-    var rule = stack.getRule(grammar);
-    var ruleScanner = rule.compile(grammar, stack.endRule, isFirstLine, linePos === anchorPosition);
-    var r = ruleScanner.scanner.findNextMatchSync(lineText, linePos);
-    if (debug_1.DebugFlags.InDebugMode) {
-        // console.log(`  scanning for (linePos: ${linePos}, anchorPosition: ${anchorPosition})`);
-        // console.log(debugCompiledRuleToString(ruleScanner));
-        if (r) {
-            console.log("matched rule id: " + ruleScanner.rules[r.index] + " from " + r.captureIndices[0].start + " to " + r.captureIndices[0].end);
-        }
-    }
-    if (r) {
-        return {
-            captureIndices: r.captureIndices,
-            matchedRuleId: ruleScanner.rules[r.index]
-        };
-    }
-    return null;
-}
-function matchRuleOrInjections(grammar, lineText, isFirstLine, linePos, stack, anchorPosition) {
-    // Look for normal grammar rule
-    var matchResult = matchRule(grammar, lineText, isFirstLine, linePos, stack, anchorPosition);
-    // Look for injected rules
-    var injections = grammar.getInjections();
-    if (injections.length === 0) {
-        // No injections whatsoever => early return
-        return matchResult;
-    }
-    var injectionResult = matchInjections(injections, grammar, lineText, isFirstLine, linePos, stack, anchorPosition);
-    if (!injectionResult) {
-        // No injections matched => early return
-        return matchResult;
-    }
-    if (!matchResult) {
-        // Only injections matched => early return
-        return injectionResult;
-    }
-    // Decide if `matchResult` or `injectionResult` should win
-    var matchResultScore = matchResult.captureIndices[0].start;
-    var injectionResultScore = injectionResult.captureIndices[0].start;
-    if (injectionResultScore < matchResultScore || (injectionResult.priorityMatch && injectionResultScore === matchResultScore)) {
-        // injection won!
-        return injectionResult;
-    }
-    return matchResult;
-}
-/**
- * Walk the stack from bottom to top, and check each while condition in this order.
- * If any fails, cut off the entire stack above the failed while condition. While conditions
- * may also advance the linePosition.
- */
-function _checkWhileConditions(grammar, lineText, isFirstLine, linePos, stack, lineTokens) {
-    var anchorPosition = (stack.beginRuleCapturedEOL ? 0 : -1);
-    var whileRules = [];
-    for (var node = stack; node; node = node.pop()) {
-        var nodeRule = node.getRule(grammar);
-        if (nodeRule instanceof rule_1.BeginWhileRule) {
-            whileRules.push({
-                rule: nodeRule,
-                stack: node
-            });
-        }
-    }
-    for (var whileRule = whileRules.pop(); whileRule; whileRule = whileRules.pop()) {
-        var ruleScanner = whileRule.rule.compileWhile(grammar, whileRule.stack.endRule, isFirstLine, anchorPosition === linePos);
-        var r = ruleScanner.scanner.findNextMatchSync(lineText, linePos);
-        if (debug_1.DebugFlags.InDebugMode) {
-            console.log('  scanning for while rule');
-            console.log(debugCompiledRuleToString(ruleScanner));
-        }
-        if (r) {
-            var matchedRuleId = ruleScanner.rules[r.index];
-            if (matchedRuleId !== -2) {
-                // we shouldn't end up here
-                stack = whileRule.stack.pop();
-                break;
-            }
-            if (r.captureIndices && r.captureIndices.length) {
-                lineTokens.produce(whileRule.stack, r.captureIndices[0].start);
-                handleCaptures(grammar, lineText, isFirstLine, whileRule.stack, lineTokens, whileRule.rule.whileCaptures, r.captureIndices);
-                lineTokens.produce(whileRule.stack, r.captureIndices[0].end);
-                anchorPosition = r.captureIndices[0].end;
-                if (r.captureIndices[0].end > linePos) {
-                    linePos = r.captureIndices[0].end;
-                    isFirstLine = false;
-                }
-            }
-        }
-        else {
-            if (debug_1.DebugFlags.InDebugMode) {
-                console.log('  popping ' + whileRule.rule.debugName + ' - ' + whileRule.rule.debugWhileRegExp);
-            }
-            stack = whileRule.stack.pop();
-            break;
-        }
-    }
-    return { stack: stack, linePos: linePos, anchorPosition: anchorPosition, isFirstLine: isFirstLine };
-}
-function _tokenizeString(grammar, lineText, isFirstLine, linePos, stack, lineTokens, checkWhileConditions) {
-    var lineLength = lineText.content.length;
-    var STOP = false;
-    var anchorPosition = -1;
-    if (checkWhileConditions) {
-        var whileCheckResult = _checkWhileConditions(grammar, lineText, isFirstLine, linePos, stack, lineTokens);
-        stack = whileCheckResult.stack;
-        linePos = whileCheckResult.linePos;
-        isFirstLine = whileCheckResult.isFirstLine;
-        anchorPosition = whileCheckResult.anchorPosition;
-    }
-    while (!STOP) {
-        scanNext(); // potentially modifies linePos && anchorPosition
-    }
-    function scanNext() {
-        if (debug_1.DebugFlags.InDebugMode) {
-            console.log('');
-            console.log("@@scanNext " + linePos + ": |" + lineText.content.substr(linePos).replace(/\n$/, '\\n') + "|");
-        }
-        var r = matchRuleOrInjections(grammar, lineText, isFirstLine, linePos, stack, anchorPosition);
-        if (!r) {
-            if (debug_1.DebugFlags.InDebugMode) {
-                console.log('  no more matches.');
-            }
-            // No match
-            lineTokens.produce(stack, lineLength);
-            STOP = true;
-            return;
-        }
-        var captureIndices = r.captureIndices;
-        var matchedRuleId = r.matchedRuleId;
-        var hasAdvanced = (captureIndices && captureIndices.length > 0) ? (captureIndices[0].end > linePos) : false;
-        if (matchedRuleId === -1) {
-            // We matched the `end` for this rule => pop it
-            var poppedRule = stack.getRule(grammar);
-            if (debug_1.DebugFlags.InDebugMode) {
-                console.log('  popping ' + poppedRule.debugName + ' - ' + poppedRule.debugEndRegExp);
-            }
-            lineTokens.produce(stack, captureIndices[0].start);
-            stack = stack.setContentNameScopesList(stack.nameScopesList);
-            handleCaptures(grammar, lineText, isFirstLine, stack, lineTokens, poppedRule.endCaptures, captureIndices);
-            lineTokens.produce(stack, captureIndices[0].end);
-            // pop
-            var popped = stack;
-            stack = stack.pop();
-            anchorPosition = popped.getAnchorPos();
-            if (!hasAdvanced && popped.getEnterPos() === linePos) {
-                // Grammar pushed & popped a rule without advancing
-                if (debug_1.DebugFlags.InDebugMode) {
-                    console.error('[1] - Grammar is in an endless loop - Grammar pushed & popped a rule without advancing');
-                }
-                // See https://github.com/Microsoft/vscode-textmate/issues/12
-                // Let's assume this was a mistake by the grammar author and the intent was to continue in this state
-                stack = popped;
-                lineTokens.produce(stack, lineLength);
-                STOP = true;
-                return;
-            }
-        }
-        else {
-            // We matched a rule!
-            var _rule = grammar.getRule(matchedRuleId);
-            lineTokens.produce(stack, captureIndices[0].start);
-            var beforePush = stack;
-            // push it on the stack rule
-            var scopeName = _rule.getName(lineText.content, captureIndices);
-            var nameScopesList = stack.contentNameScopesList.push(grammar, scopeName);
-            stack = stack.push(matchedRuleId, linePos, anchorPosition, captureIndices[0].end === lineLength, null, nameScopesList, nameScopesList);
-            if (_rule instanceof rule_1.BeginEndRule) {
-                var pushedRule = _rule;
-                if (debug_1.DebugFlags.InDebugMode) {
-                    console.log('  pushing ' + pushedRule.debugName + ' - ' + pushedRule.debugBeginRegExp);
-                }
-                handleCaptures(grammar, lineText, isFirstLine, stack, lineTokens, pushedRule.beginCaptures, captureIndices);
-                lineTokens.produce(stack, captureIndices[0].end);
-                anchorPosition = captureIndices[0].end;
-                var contentName = pushedRule.getContentName(lineText.content, captureIndices);
-                var contentNameScopesList = nameScopesList.push(grammar, contentName);
-                stack = stack.setContentNameScopesList(contentNameScopesList);
-                if (pushedRule.endHasBackReferences) {
-                    stack = stack.setEndRule(pushedRule.getEndWithResolvedBackReferences(lineText.content, captureIndices));
-                }
-                if (!hasAdvanced && beforePush.hasSameRuleAs(stack)) {
-                    // Grammar pushed the same rule without advancing
-                    if (debug_1.DebugFlags.InDebugMode) {
-                        console.error('[2] - Grammar is in an endless loop - Grammar pushed the same rule without advancing');
-                    }
-                    stack = stack.pop();
-                    lineTokens.produce(stack, lineLength);
-                    STOP = true;
-                    return;
-                }
-            }
-            else if (_rule instanceof rule_1.BeginWhileRule) {
-                var pushedRule = _rule;
-                if (debug_1.DebugFlags.InDebugMode) {
-                    console.log('  pushing ' + pushedRule.debugName);
-                }
-                handleCaptures(grammar, lineText, isFirstLine, stack, lineTokens, pushedRule.beginCaptures, captureIndices);
-                lineTokens.produce(stack, captureIndices[0].end);
-                anchorPosition = captureIndices[0].end;
-                var contentName = pushedRule.getContentName(lineText.content, captureIndices);
-                var contentNameScopesList = nameScopesList.push(grammar, contentName);
-                stack = stack.setContentNameScopesList(contentNameScopesList);
-                if (pushedRule.whileHasBackReferences) {
-                    stack = stack.setEndRule(pushedRule.getWhileWithResolvedBackReferences(lineText.content, captureIndices));
-                }
-                if (!hasAdvanced && beforePush.hasSameRuleAs(stack)) {
-                    // Grammar pushed the same rule without advancing
-                    if (debug_1.DebugFlags.InDebugMode) {
-                        console.error('[3] - Grammar is in an endless loop - Grammar pushed the same rule without advancing');
-                    }
-                    stack = stack.pop();
-                    lineTokens.produce(stack, lineLength);
-                    STOP = true;
-                    return;
-                }
-            }
-            else {
-                var matchingRule = _rule;
-                if (debug_1.DebugFlags.InDebugMode) {
-                    console.log('  matched ' + matchingRule.debugName + ' - ' + matchingRule.debugMatchRegExp);
-                }
-                handleCaptures(grammar, lineText, isFirstLine, stack, lineTokens, matchingRule.captures, captureIndices);
-                lineTokens.produce(stack, captureIndices[0].end);
-                // pop rule immediately since it is a MatchRule
-                stack = stack.pop();
-                if (!hasAdvanced) {
-                    // Grammar is not advancing, nor is it pushing/popping
-                    if (debug_1.DebugFlags.InDebugMode) {
-                        console.error('[4] - Grammar is in an endless loop - Grammar is not advancing, nor is it pushing/popping');
-                    }
-                    stack = stack.safePop();
-                    lineTokens.produce(stack, lineLength);
-                    STOP = true;
-                    return;
-                }
-            }
-        }
-        if (captureIndices[0].end > linePos) {
-            // Advance stream
-            linePos = captureIndices[0].end;
-            isFirstLine = false;
-        }
-    }
-    return stack;
-}
-var StackElementMetadata = /** @class */ (function () {
-    function StackElementMetadata() {
-    }
-    StackElementMetadata.toBinaryStr = function (metadata) {
-        var r = metadata.toString(2);
-        while (r.length < 32) {
-            r = '0' + r;
-        }
-        return r;
-    };
-    StackElementMetadata.printMetadata = function (metadata) {
-        var languageId = StackElementMetadata.getLanguageId(metadata);
-        var tokenType = StackElementMetadata.getTokenType(metadata);
-        var fontStyle = StackElementMetadata.getFontStyle(metadata);
-        var foreground = StackElementMetadata.getForeground(metadata);
-        var background = StackElementMetadata.getBackground(metadata);
-        console.log({
-            languageId: languageId,
-            tokenType: tokenType,
-            fontStyle: fontStyle,
-            foreground: foreground,
-            background: background,
-        });
-    };
-    StackElementMetadata.getLanguageId = function (metadata) {
-        return (metadata & 255 /* LANGUAGEID_MASK */) >>> 0 /* LANGUAGEID_OFFSET */;
-    };
-    StackElementMetadata.getTokenType = function (metadata) {
-        return (metadata & 1792 /* TOKEN_TYPE_MASK */) >>> 8 /* TOKEN_TYPE_OFFSET */;
-    };
-    StackElementMetadata.getFontStyle = function (metadata) {
-        return (metadata & 14336 /* FONT_STYLE_MASK */) >>> 11 /* FONT_STYLE_OFFSET */;
-    };
-    StackElementMetadata.getForeground = function (metadata) {
-        return (metadata & 8372224 /* FOREGROUND_MASK */) >>> 14 /* FOREGROUND_OFFSET */;
-    };
-    StackElementMetadata.getBackground = function (metadata) {
-        return (metadata & 4286578688 /* BACKGROUND_MASK */) >>> 23 /* BACKGROUND_OFFSET */;
-    };
-    StackElementMetadata.set = function (metadata, languageId, tokenType, fontStyle, foreground, background) {
-        var _languageId = StackElementMetadata.getLanguageId(metadata);
-        var _tokenType = StackElementMetadata.getTokenType(metadata);
-        var _fontStyle = StackElementMetadata.getFontStyle(metadata);
-        var _foreground = StackElementMetadata.getForeground(metadata);
-        var _background = StackElementMetadata.getBackground(metadata);
-        if (languageId !== 0) {
-            _languageId = languageId;
-        }
-        if (tokenType !== 0 /* Other */) {
-            _tokenType = tokenType === 8 /* MetaEmbedded */ ? 0 /* Other */ : tokenType;
-        }
-        if (fontStyle !== -1 /* NotSet */) {
-            _fontStyle = fontStyle;
-        }
-        if (foreground !== 0) {
-            _foreground = foreground;
-        }
-        if (background !== 0) {
-            _background = background;
-        }
-        return ((_languageId << 0 /* LANGUAGEID_OFFSET */)
-            | (_tokenType << 8 /* TOKEN_TYPE_OFFSET */)
-            | (_fontStyle << 11 /* FONT_STYLE_OFFSET */)
-            | (_foreground << 14 /* FOREGROUND_OFFSET */)
-            | (_background << 23 /* BACKGROUND_OFFSET */)) >>> 0;
-    };
-    return StackElementMetadata;
-}());
-exports.StackElementMetadata = StackElementMetadata;
-var ScopeListElement = /** @class */ (function () {
-    function ScopeListElement(parent, scope, metadata) {
-        this.parent = parent;
-        this.scope = scope;
-        this.metadata = metadata;
-    }
-    ScopeListElement._equals = function (a, b) {
-        do {
-            if (a === b) {
-                return true;
-            }
-            if (!a && !b) {
-                // End of list reached for both
-                return true;
-            }
-            if (!a || !b) {
-                // End of list reached only for one
-                return false;
-            }
-            if (a.scope !== b.scope || a.metadata !== b.metadata) {
-                return false;
-            }
-            // Go to previous pair
-            a = a.parent;
-            b = b.parent;
-        } while (true);
-    };
-    ScopeListElement.prototype.equals = function (other) {
-        return ScopeListElement._equals(this, other);
-    };
-    ScopeListElement._matchesScope = function (scope, selector, selectorWithDot) {
-        return (selector === scope || scope.substring(0, selectorWithDot.length) === selectorWithDot);
-    };
-    ScopeListElement._matches = function (target, parentScopes) {
-        if (parentScopes === null) {
-            return true;
-        }
-        var len = parentScopes.length;
-        var index = 0;
-        var selector = parentScopes[index];
-        var selectorWithDot = selector + '.';
-        while (target) {
-            if (this._matchesScope(target.scope, selector, selectorWithDot)) {
-                index++;
-                if (index === len) {
-                    return true;
-                }
-                selector = parentScopes[index];
-                selectorWithDot = selector + '.';
-            }
-            target = target.parent;
-        }
-        return false;
-    };
-    ScopeListElement.mergeMetadata = function (metadata, scopesList, source) {
-        if (source === null) {
-            return metadata;
-        }
-        var fontStyle = -1 /* NotSet */;
-        var foreground = 0;
-        var background = 0;
-        if (source.themeData !== null) {
-            // Find the first themeData that matches
-            for (var i = 0, len = source.themeData.length; i < len; i++) {
-                var themeData = source.themeData[i];
-                if (this._matches(scopesList, themeData.parentScopes)) {
-                    fontStyle = themeData.fontStyle;
-                    foreground = themeData.foreground;
-                    background = themeData.background;
-                    break;
-                }
-            }
-        }
-        return StackElementMetadata.set(metadata, source.languageId, source.tokenType, fontStyle, foreground, background);
-    };
-    ScopeListElement._push = function (target, grammar, scopes) {
-        for (var i = 0, len = scopes.length; i < len; i++) {
-            var scope = scopes[i];
-            var rawMetadata = grammar.getMetadataForScope(scope);
-            var metadata = ScopeListElement.mergeMetadata(target.metadata, target, rawMetadata);
-            target = new ScopeListElement(target, scope, metadata);
-        }
-        return target;
-    };
-    ScopeListElement.prototype.push = function (grammar, scope) {
-        if (scope === null) {
-            return this;
-        }
-        if (scope.indexOf(' ') >= 0) {
-            // there are multiple scopes to push
-            return ScopeListElement._push(this, grammar, scope.split(/ /g));
-        }
-        // there is a single scope to push
-        return ScopeListElement._push(this, grammar, [scope]);
-    };
-    ScopeListElement._generateScopes = function (scopesList) {
-        var result = [];
-        var resultLen = 0;
-        while (scopesList) {
-            result[resultLen++] = scopesList.scope;
-            scopesList = scopesList.parent;
-        }
-        result.reverse();
-        return result;
-    };
-    ScopeListElement.prototype.generateScopes = function () {
-        return ScopeListElement._generateScopes(this);
-    };
-    return ScopeListElement;
-}());
-exports.ScopeListElement = ScopeListElement;
-/**
- * Represents a "pushed" state on the stack (as a linked list element).
- */
-var StackElement = /** @class */ (function () {
-    function StackElement(parent, ruleId, enterPos, anchorPos, beginRuleCapturedEOL, endRule, nameScopesList, contentNameScopesList) {
-        this.parent = parent;
-        this.depth = (this.parent ? this.parent.depth + 1 : 1);
-        this.ruleId = ruleId;
-        this._enterPos = enterPos;
-        this._anchorPos = anchorPos;
-        this.beginRuleCapturedEOL = beginRuleCapturedEOL;
-        this.endRule = endRule;
-        this.nameScopesList = nameScopesList;
-        this.contentNameScopesList = contentNameScopesList;
-    }
-    /**
-     * A structural equals check. Does not take into account `scopes`.
-     */
-    StackElement._structuralEquals = function (a, b) {
-        do {
-            if (a === b) {
-                return true;
-            }
-            if (!a && !b) {
-                // End of list reached for both
-                return true;
-            }
-            if (!a || !b) {
-                // End of list reached only for one
-                return false;
-            }
-            if (a.depth !== b.depth || a.ruleId !== b.ruleId || a.endRule !== b.endRule) {
-                return false;
-            }
-            // Go to previous pair
-            a = a.parent;
-            b = b.parent;
-        } while (true);
-    };
-    StackElement._equals = function (a, b) {
-        if (a === b) {
-            return true;
-        }
-        if (!this._structuralEquals(a, b)) {
-            return false;
-        }
-        return a.contentNameScopesList.equals(b.contentNameScopesList);
-    };
-    StackElement.prototype.clone = function () {
-        return this;
-    };
-    StackElement.prototype.equals = function (other) {
-        if (other === null) {
-            return false;
-        }
-        return StackElement._equals(this, other);
-    };
-    StackElement._reset = function (el) {
-        while (el) {
-            el._enterPos = -1;
-            el._anchorPos = -1;
-            el = el.parent;
-        }
-    };
-    StackElement.prototype.reset = function () {
-        StackElement._reset(this);
-    };
-    StackElement.prototype.pop = function () {
-        return this.parent;
-    };
-    StackElement.prototype.safePop = function () {
-        if (this.parent) {
-            return this.parent;
-        }
-        return this;
-    };
-    StackElement.prototype.push = function (ruleId, enterPos, anchorPos, beginRuleCapturedEOL, endRule, nameScopesList, contentNameScopesList) {
-        return new StackElement(this, ruleId, enterPos, anchorPos, beginRuleCapturedEOL, endRule, nameScopesList, contentNameScopesList);
-    };
-    StackElement.prototype.getEnterPos = function () {
-        return this._enterPos;
-    };
-    StackElement.prototype.getAnchorPos = function () {
-        return this._anchorPos;
-    };
-    StackElement.prototype.getRule = function (grammar) {
-        return grammar.getRule(this.ruleId);
-    };
-    StackElement.prototype._writeString = function (res, outIndex) {
-        if (this.parent) {
-            outIndex = this.parent._writeString(res, outIndex);
-        }
-        res[outIndex++] = "(" + this.ruleId + ", TODO-" + this.nameScopesList + ", TODO-" + this.contentNameScopesList + ")";
-        return outIndex;
-    };
-    StackElement.prototype.toString = function () {
-        var r = [];
-        this._writeString(r, 0);
-        return '[' + r.join(',') + ']';
-    };
-    StackElement.prototype.setContentNameScopesList = function (contentNameScopesList) {
-        if (this.contentNameScopesList === contentNameScopesList) {
-            return this;
-        }
-        return this.parent.push(this.ruleId, this._enterPos, this._anchorPos, this.beginRuleCapturedEOL, this.endRule, this.nameScopesList, contentNameScopesList);
-    };
-    StackElement.prototype.setEndRule = function (endRule) {
-        if (this.endRule === endRule) {
-            return this;
-        }
-        return new StackElement(this.parent, this.ruleId, this._enterPos, this._anchorPos, this.beginRuleCapturedEOL, endRule, this.nameScopesList, this.contentNameScopesList);
-    };
-    StackElement.prototype.hasSameRuleAs = function (other) {
-        return this.ruleId === other.ruleId;
-    };
-    StackElement.NULL = new StackElement(null, 0, 0, 0, false, null, null, null);
-    return StackElement;
-}());
-exports.StackElement = StackElement;
-var LocalStackElement = /** @class */ (function () {
-    function LocalStackElement(scopes, endPos) {
-        this.scopes = scopes;
-        this.endPos = endPos;
-    }
-    return LocalStackElement;
-}());
-exports.LocalStackElement = LocalStackElement;
-var LineTokens = /** @class */ (function () {
-    function LineTokens(emitBinaryTokens, lineText, tokenTypeOverrides) {
-        this._emitBinaryTokens = emitBinaryTokens;
-        this._tokenTypeOverrides = tokenTypeOverrides;
-        if (debug_1.DebugFlags.InDebugMode) {
-            this._lineText = lineText;
-        }
-        else {
-            this._lineText = null;
-        }
-        this._tokens = [];
-        this._binaryTokens = [];
-        this._lastTokenEndIndex = 0;
-    }
-    LineTokens.prototype.produce = function (stack, endIndex) {
-        this.produceFromScopes(stack.contentNameScopesList, endIndex);
-    };
-    LineTokens.prototype.produceFromScopes = function (scopesList, endIndex) {
-        if (this._lastTokenEndIndex >= endIndex) {
-            return;
-        }
-        if (this._emitBinaryTokens) {
-            var metadata = scopesList.metadata;
-            for (var _i = 0, _a = this._tokenTypeOverrides; _i < _a.length; _i++) {
-                var tokenType = _a[_i];
-                if (tokenType.matcher(scopesList.generateScopes())) {
-                    metadata = StackElementMetadata.set(metadata, 0, toTemporaryType(tokenType.type), -1 /* NotSet */, 0, 0);
-                }
-            }
-            if (this._binaryTokens.length > 0 && this._binaryTokens[this._binaryTokens.length - 1] === metadata) {
-                // no need to push a token with the same metadata
-                this._lastTokenEndIndex = endIndex;
-                return;
-            }
-            this._binaryTokens.push(this._lastTokenEndIndex);
-            this._binaryTokens.push(metadata);
-            this._lastTokenEndIndex = endIndex;
-            return;
-        }
-        var scopes = scopesList.generateScopes();
-        if (debug_1.DebugFlags.InDebugMode) {
-            console.log('  token: |' + this._lineText.substring(this._lastTokenEndIndex, endIndex).replace(/\n$/, '\\n') + '|');
-            for (var k = 0; k < scopes.length; k++) {
-                console.log('      * ' + scopes[k]);
-            }
-        }
-        this._tokens.push({
-            startIndex: this._lastTokenEndIndex,
-            endIndex: endIndex,
-            // value: lineText.substring(lastTokenEndIndex, endIndex),
-            scopes: scopes
-        });
-        this._lastTokenEndIndex = endIndex;
-    };
-    LineTokens.prototype.getResult = function (stack, lineLength) {
-        if (this._tokens.length > 0 && this._tokens[this._tokens.length - 1].startIndex === lineLength - 1) {
-            // pop produced token for newline
-            this._tokens.pop();
-        }
-        if (this._tokens.length === 0) {
-            this._lastTokenEndIndex = -1;
-            this.produce(stack, lineLength);
-            this._tokens[this._tokens.length - 1].startIndex = 0;
-        }
-        return this._tokens;
-    };
-    LineTokens.prototype.getBinaryResult = function (stack, lineLength) {
-        if (this._binaryTokens.length > 0 && this._binaryTokens[this._binaryTokens.length - 2] === lineLength - 1) {
-            // pop produced token for newline
-            this._binaryTokens.pop();
-            this._binaryTokens.pop();
-        }
-        if (this._binaryTokens.length === 0) {
-            this._lastTokenEndIndex = -1;
-            this.produce(stack, lineLength);
-            this._binaryTokens[this._binaryTokens.length - 2] = 0;
-        }
-        var result = new Uint32Array(this._binaryTokens.length);
-        for (var i = 0, len = this._binaryTokens.length; i < len; i++) {
-            result[i] = this._binaryTokens[i];
-        }
-        return result;
-    };
-    return LineTokens;
-}());
-function toTemporaryType(standardType) {
-    switch (standardType) {
-        case 4 /* RegEx */:
-            return 4 /* RegEx */;
-        case 2 /* String */:
-            return 2 /* String */;
-        case 1 /* Comment */:
-            return 1 /* Comment */;
-        case 0 /* Other */:
-        default:
-            // `MetaEmbedded` is the same scope as `Other`
-            // but it overwrites existing token types in the stack.
-            return 8 /* MetaEmbedded */;
-    }
-}
-//# sourceMappingURL=grammar.js.map
-});
-$load('./registry', function(require, module, exports) {
-/*---------------------------------------------------------
- * Copyright (C) Microsoft Corporation. All rights reserved.
- *--------------------------------------------------------*/
-'use strict';
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var grammar_1 = require("./grammar");
-var onigLibs_1 = require("./onigLibs");
-var SyncRegistry = /** @class */ (function () {
-    function SyncRegistry(theme, onigLibPromise) {
-        this._theme = theme;
-        this._grammars = {};
-        this._rawGrammars = {};
-        this._injectionGrammars = {};
-        this._onigLibPromise = onigLibPromise || onigLibs_1.getOniguruma();
+exports.DebugSessionWidget = exports.DebugSessionWidgetFactory = void 0;
+var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
+var browser_1 = __webpack_require__(/*! @theia/core/lib/browser */ "./node_modules/@theia/core/lib/browser/index.js");
+var debug_threads_widget_1 = __webpack_require__(/*! ./debug-threads-widget */ "./node_modules/@theia/debug/lib/browser/view/debug-threads-widget.js");
+var debug_stack_frames_widget_1 = __webpack_require__(/*! ./debug-stack-frames-widget */ "./node_modules/@theia/debug/lib/browser/view/debug-stack-frames-widget.js");
+var debug_breakpoints_widget_1 = __webpack_require__(/*! ./debug-breakpoints-widget */ "./node_modules/@theia/debug/lib/browser/view/debug-breakpoints-widget.js");
+var debug_variables_widget_1 = __webpack_require__(/*! ./debug-variables-widget */ "./node_modules/@theia/debug/lib/browser/view/debug-variables-widget.js");
+var debug_toolbar_widget_1 = __webpack_require__(/*! ./debug-toolbar-widget */ "./node_modules/@theia/debug/lib/browser/view/debug-toolbar-widget.js");
+var debug_view_model_1 = __webpack_require__(/*! ./debug-view-model */ "./node_modules/@theia/debug/lib/browser/view/debug-view-model.js");
+var debug_watch_widget_1 = __webpack_require__(/*! ./debug-watch-widget */ "./node_modules/@theia/debug/lib/browser/view/debug-watch-widget.js");
+exports.DebugSessionWidgetFactory = Symbol('DebugSessionWidgetFactory');
+var DebugSessionWidget = /** @class */ (function (_super) {
+    __extends(DebugSessionWidget, _super);
+    function DebugSessionWidget() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
-    SyncRegistry.prototype.setTheme = function (theme) {
-        var _this = this;
-        this._theme = theme;
-        Object.keys(this._grammars).forEach(function (scopeName) {
-            var grammar = _this._grammars[scopeName];
-            grammar.onDidChangeTheme();
+    DebugSessionWidget_1 = DebugSessionWidget;
+    DebugSessionWidget.createContainer = function (parent, options) {
+        var child = new inversify_1.Container({ defaultScope: 'Singleton' });
+        child.parent = parent;
+        child.bind(debug_view_model_1.DebugViewOptions).toConstantValue(options);
+        child.bind(debug_view_model_1.DebugViewModel).toSelf();
+        child.bind(debug_toolbar_widget_1.DebugToolBar).toSelf();
+        child.bind(debug_threads_widget_1.DebugThreadsWidget).toDynamicValue(function (_a) {
+            var container = _a.container;
+            return debug_threads_widget_1.DebugThreadsWidget.createWidget(container);
         });
-    };
-    SyncRegistry.prototype.getColorMap = function () {
-        return this._theme.getColorMap();
-    };
-    /**
-     * Add `grammar` to registry and return a list of referenced scope names
-     */
-    SyncRegistry.prototype.addGrammar = function (grammar, injectionScopeNames) {
-        this._rawGrammars[grammar.scopeName] = grammar;
-        if (injectionScopeNames) {
-            this._injectionGrammars[grammar.scopeName] = injectionScopeNames;
-        }
-    };
-    /**
-     * Lookup a raw grammar.
-     */
-    SyncRegistry.prototype.lookup = function (scopeName) {
-        return this._rawGrammars[scopeName];
-    };
-    /**
-     * Returns the injections for the given grammar
-     */
-    SyncRegistry.prototype.injections = function (targetScope) {
-        return this._injectionGrammars[targetScope];
-    };
-    /**
-     * Get the default theme settings
-     */
-    SyncRegistry.prototype.getDefaults = function () {
-        return this._theme.getDefaults();
-    };
-    /**
-     * Match a scope in the theme.
-     */
-    SyncRegistry.prototype.themeMatch = function (scopeName) {
-        return this._theme.match(scopeName);
-    };
-    /**
-     * Lookup a grammar.
-     */
-    SyncRegistry.prototype.grammarForScopeName = function (scopeName, initialLanguage, embeddedLanguages, tokenTypes) {
-        return __awaiter(this, void 0, void 0, function () {
-            var rawGrammar, _a, _b, _c, _d;
-            return __generator(this, function (_e) {
-                switch (_e.label) {
-                    case 0:
-                        if (!!this._grammars[scopeName]) return [3 /*break*/, 2];
-                        rawGrammar = this._rawGrammars[scopeName];
-                        if (!rawGrammar) {
-                            return [2 /*return*/, null];
-                        }
-                        _a = this._grammars;
-                        _b = scopeName;
-                        _c = grammar_1.createGrammar;
-                        _d = [rawGrammar, initialLanguage, embeddedLanguages, tokenTypes, this];
-                        return [4 /*yield*/, this._onigLibPromise];
-                    case 1:
-                        _a[_b] = _c.apply(void 0, _d.concat([_e.sent()]));
-                        _e.label = 2;
-                    case 2: return [2 /*return*/, this._grammars[scopeName]];
-                }
-            });
+        child.bind(debug_stack_frames_widget_1.DebugStackFramesWidget).toDynamicValue(function (_a) {
+            var container = _a.container;
+            return debug_stack_frames_widget_1.DebugStackFramesWidget.createWidget(container);
         });
-    };
-    return SyncRegistry;
-}());
-exports.SyncRegistry = SyncRegistry;
-//# sourceMappingURL=registry.js.map
-});
-$load('./main', function(require, module, exports) {
-/*---------------------------------------------------------
- * Copyright (C) Microsoft Corporation. All rights reserved.
- *--------------------------------------------------------*/
-'use strict';
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var registry_1 = require("./registry");
-var grammarReader = require("./grammarReader");
-var theme_1 = require("./theme");
-var grammar_1 = require("./grammar");
-/**
- * The registry that will hold all grammars.
- */
-var Registry = /** @class */ (function () {
-    function Registry(locator) {
-        var _this = this;
-        if (locator === void 0) { locator = { loadGrammar: function () { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
-                return [2 /*return*/, null];
-            }); }); } }; }
-        this._locator = locator;
-        this._syncRegistry = new registry_1.SyncRegistry(theme_1.Theme.createFromRawTheme(locator.theme, locator.colorMap), locator.getOnigLib && locator.getOnigLib());
-        this._ensureGrammarCache = new Map();
-    }
-    /**
-     * Change the theme. Once called, no previous `ruleStack` should be used anymore.
-     */
-    Registry.prototype.setTheme = function (theme, colorMap) {
-        this._syncRegistry.setTheme(theme_1.Theme.createFromRawTheme(theme, colorMap));
-    };
-    /**
-     * Returns a lookup array for color ids.
-     */
-    Registry.prototype.getColorMap = function () {
-        return this._syncRegistry.getColorMap();
-    };
-    /**
-     * Load the grammar for `scopeName` and all referenced included grammars asynchronously.
-     * Please do not use language id 0.
-     */
-    Registry.prototype.loadGrammarWithEmbeddedLanguages = function (initialScopeName, initialLanguage, embeddedLanguages) {
-        return this.loadGrammarWithConfiguration(initialScopeName, initialLanguage, { embeddedLanguages: embeddedLanguages });
-    };
-    /**
-     * Load the grammar for `scopeName` and all referenced included grammars asynchronously.
-     * Please do not use language id 0.
-     */
-    Registry.prototype.loadGrammarWithConfiguration = function (initialScopeName, initialLanguage, configuration) {
-        return this._loadGrammar(initialScopeName, initialLanguage, configuration.embeddedLanguages, configuration.tokenTypes);
-    };
-    /**
-     * Load the grammar for `scopeName` and all referenced included grammars asynchronously.
-     */
-    Registry.prototype.loadGrammar = function (initialScopeName) {
-        return this._loadGrammar(initialScopeName, 0, null, null);
-    };
-    Registry.prototype._doLoadSingleGrammar = function (scopeName) {
-        return __awaiter(this, void 0, void 0, function () {
-            var grammar, injections;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this._locator.loadGrammar(scopeName)];
-                    case 1:
-                        grammar = _a.sent();
-                        if (grammar) {
-                            injections = (typeof this._locator.getInjections === 'function' ? this._locator.getInjections(scopeName) : undefined);
-                            this._syncRegistry.addGrammar(grammar, injections);
-                        }
-                        return [2 /*return*/];
-                }
-            });
+        child.bind(debug_variables_widget_1.DebugVariablesWidget).toDynamicValue(function (_a) {
+            var container = _a.container;
+            return debug_variables_widget_1.DebugVariablesWidget.createWidget(container);
         });
-    };
-    Registry.prototype._loadSingleGrammar = function (scopeName) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                if (!this._ensureGrammarCache.has(scopeName)) {
-                    this._ensureGrammarCache.set(scopeName, this._doLoadSingleGrammar(scopeName));
-                }
-                return [2 /*return*/, this._ensureGrammarCache.get(scopeName)];
-            });
+        child.bind(debug_watch_widget_1.DebugWatchWidget).toDynamicValue(function (_a) {
+            var container = _a.container;
+            return debug_watch_widget_1.DebugWatchWidget.createWidget(container);
         });
-    };
-    Registry.prototype._collectDependenciesForDep = function (initialScopeName, result, dep) {
-        var grammar = this._syncRegistry.lookup(dep.scopeName);
-        if (!grammar) {
-            if (dep.scopeName === initialScopeName) {
-                throw new Error("No grammar provided for <" + initialScopeName + ">");
-            }
-            return;
-        }
-        if (dep instanceof grammar_1.FullScopeDependency) {
-            grammar_1.collectDependencies(result, this._syncRegistry.lookup(initialScopeName), grammar);
-        }
-        else {
-            grammar_1.collectSpecificDependencies(result, this._syncRegistry.lookup(initialScopeName), grammar, dep.include);
-        }
-        var injections = this._syncRegistry.injections(dep.scopeName);
-        if (injections) {
-            for (var _i = 0, injections_1 = injections; _i < injections_1.length; _i++) {
-                var injection = injections_1[_i];
-                result.add(new grammar_1.FullScopeDependency(injection));
-            }
-        }
-    };
-    Registry.prototype._loadGrammar = function (initialScopeName, initialLanguage, embeddedLanguages, tokenTypes) {
-        return __awaiter(this, void 0, void 0, function () {
-            var seenFullScopeRequests, seenPartialScopeRequests, Q, q, deps, _i, q_1, dep, _a, _b, dep, _c, _d, dep;
-            var _this = this;
-            return __generator(this, function (_e) {
-                switch (_e.label) {
-                    case 0:
-                        seenFullScopeRequests = new Set();
-                        seenPartialScopeRequests = new Set();
-                        seenFullScopeRequests.add(initialScopeName);
-                        Q = [new grammar_1.FullScopeDependency(initialScopeName)];
-                        _e.label = 1;
-                    case 1:
-                        if (!(Q.length > 0)) return [3 /*break*/, 3];
-                        q = Q;
-                        Q = [];
-                        return [4 /*yield*/, Promise.all(q.map(function (request) { return _this._loadSingleGrammar(request.scopeName); }))];
-                    case 2:
-                        _e.sent();
-                        deps = new grammar_1.ScopeDependencyCollector();
-                        for (_i = 0, q_1 = q; _i < q_1.length; _i++) {
-                            dep = q_1[_i];
-                            this._collectDependenciesForDep(initialScopeName, deps, dep);
-                        }
-                        for (_a = 0, _b = deps.full; _a < _b.length; _a++) {
-                            dep = _b[_a];
-                            if (seenFullScopeRequests.has(dep.scopeName)) {
-                                // already processed
-                                continue;
-                            }
-                            seenFullScopeRequests.add(dep.scopeName);
-                            Q.push(dep);
-                        }
-                        for (_c = 0, _d = deps.partial; _c < _d.length; _c++) {
-                            dep = _d[_c];
-                            if (seenFullScopeRequests.has(dep.scopeName)) {
-                                // already processed in full
-                                continue;
-                            }
-                            if (seenPartialScopeRequests.has(dep.toKey())) {
-                                // already processed
-                                continue;
-                            }
-                            seenPartialScopeRequests.add(dep.toKey());
-                            Q.push(dep);
-                        }
-                        return [3 /*break*/, 1];
-                    case 3: return [2 /*return*/, this.grammarForScopeName(initialScopeName, initialLanguage, embeddedLanguages, tokenTypes)];
-                }
-            });
+        child.bind(debug_breakpoints_widget_1.DebugBreakpointsWidget).toDynamicValue(function (_a) {
+            var container = _a.container;
+            return debug_breakpoints_widget_1.DebugBreakpointsWidget.createWidget(container);
         });
+        child.bind(DebugSessionWidget_1).toSelf();
+        return child;
     };
-    /**
-     * Adds a rawGrammar.
-     */
-    Registry.prototype.addGrammar = function (rawGrammar, injections, initialLanguage, embeddedLanguages) {
-        if (injections === void 0) { injections = []; }
-        if (initialLanguage === void 0) { initialLanguage = 0; }
-        if (embeddedLanguages === void 0) { embeddedLanguages = null; }
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        this._syncRegistry.addGrammar(rawGrammar, injections);
-                        return [4 /*yield*/, this.grammarForScopeName(rawGrammar.scopeName, initialLanguage, embeddedLanguages)];
-                    case 1: return [2 /*return*/, (_a.sent())];
-                }
-            });
+    DebugSessionWidget.createWidget = function (parent, options) {
+        return DebugSessionWidget_1.createContainer(parent, options).get(DebugSessionWidget_1);
+    };
+    DebugSessionWidget.prototype.init = function () {
+        this.id = 'debug:session:' + this.model.id;
+        this.title.label = this.model.label;
+        this.title.caption = this.model.label;
+        this.title.closable = true;
+        this.title.iconClass = 'debug-tab-icon';
+        this.addClass('theia-session-container');
+        this.viewContainer = this.viewContainerFactory({
+            id: 'debug:view-container:' + this.model.id
         });
+        this.viewContainer.addWidget(this.threads, { weight: 30 });
+        this.viewContainer.addWidget(this.stackFrames, { weight: 20 });
+        this.viewContainer.addWidget(this.variables, { weight: 10 });
+        this.viewContainer.addWidget(this.watch, { weight: 10 });
+        this.viewContainer.addWidget(this.breakpoints, { weight: 10 });
+        this.toDispose.pushAll([
+            this.toolbar,
+            this.viewContainer
+        ]);
+        var layout = this.layout = new browser_1.PanelLayout();
+        layout.addWidget(this.toolbar);
+        layout.addWidget(this.viewContainer);
     };
-    /**
-     * Get the grammar for `scopeName`. The grammar must first be created via `loadGrammar` or `addGrammar`.
-     */
-    Registry.prototype.grammarForScopeName = function (scopeName, initialLanguage, embeddedLanguages, tokenTypes) {
-        if (initialLanguage === void 0) { initialLanguage = 0; }
-        if (embeddedLanguages === void 0) { embeddedLanguages = null; }
-        if (tokenTypes === void 0) { tokenTypes = null; }
-        return this._syncRegistry.grammarForScopeName(scopeName, initialLanguage, embeddedLanguages, tokenTypes);
+    DebugSessionWidget.prototype.onActivateRequest = function (msg) {
+        _super.prototype.onActivateRequest.call(this, msg);
+        this.toolbar.focus();
     };
-    return Registry;
-}());
-exports.Registry = Registry;
-exports.INITIAL = grammar_1.StackElement.NULL;
-exports.parseRawGrammar = grammarReader.parseRawGrammar;
-//# sourceMappingURL=main.js.map
-});
+    DebugSessionWidget.prototype.getTrackableWidgets = function () {
+        return this.viewContainer.getTrackableWidgets();
+    };
+    DebugSessionWidget.prototype.storeState = function () {
+        return this.viewContainer.storeState();
+    };
+    DebugSessionWidget.prototype.restoreState = function (oldState) {
+        this.viewContainer.restoreState(oldState);
+    };
+    var DebugSessionWidget_1;
+    __decorate([
+        inversify_1.inject(browser_1.ViewContainer.Factory),
+        __metadata("design:type", Function)
+    ], DebugSessionWidget.prototype, "viewContainerFactory", void 0);
+    __decorate([
+        inversify_1.inject(debug_view_model_1.DebugViewModel),
+        __metadata("design:type", debug_view_model_1.DebugViewModel)
+    ], DebugSessionWidget.prototype, "model", void 0);
+    __decorate([
+        inversify_1.inject(debug_toolbar_widget_1.DebugToolBar),
+        __metadata("design:type", debug_toolbar_widget_1.DebugToolBar)
+    ], DebugSessionWidget.prototype, "toolbar", void 0);
+    __decorate([
+        inversify_1.inject(debug_threads_widget_1.DebugThreadsWidget),
+        __metadata("design:type", debug_threads_widget_1.DebugThreadsWidget)
+    ], DebugSessionWidget.prototype, "threads", void 0);
+    __decorate([
+        inversify_1.inject(debug_stack_frames_widget_1.DebugStackFramesWidget),
+        __metadata("design:type", debug_stack_frames_widget_1.DebugStackFramesWidget)
+    ], DebugSessionWidget.prototype, "stackFrames", void 0);
+    __decorate([
+        inversify_1.inject(debug_variables_widget_1.DebugVariablesWidget),
+        __metadata("design:type", debug_variables_widget_1.DebugVariablesWidget)
+    ], DebugSessionWidget.prototype, "variables", void 0);
+    __decorate([
+        inversify_1.inject(debug_watch_widget_1.DebugWatchWidget),
+        __metadata("design:type", debug_watch_widget_1.DebugWatchWidget)
+    ], DebugSessionWidget.prototype, "watch", void 0);
+    __decorate([
+        inversify_1.inject(debug_breakpoints_widget_1.DebugBreakpointsWidget),
+        __metadata("design:type", debug_breakpoints_widget_1.DebugBreakpointsWidget)
+    ], DebugSessionWidget.prototype, "breakpoints", void 0);
+    __decorate([
+        inversify_1.postConstruct(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", void 0)
+    ], DebugSessionWidget.prototype, "init", null);
+    DebugSessionWidget = DebugSessionWidget_1 = __decorate([
+        inversify_1.injectable()
+    ], DebugSessionWidget);
+    return DebugSessionWidget;
+}(browser_1.BaseWidget));
+exports.DebugSessionWidget = DebugSessionWidget;
 
-return $map['./main'].exports;;
-});
-/* WEBPACK VAR INJECTION */}.call(this, "/", __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 
-/***/ "./node_modules/yallist/iterator.js":
-/*!******************************************!*\
-  !*** ./node_modules/yallist/iterator.js ***!
-  \******************************************/
+/***/ "./node_modules/@theia/debug/lib/browser/view/debug-toolbar-widget.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/@theia/debug/lib/browser/view/debug-toolbar-widget.js ***!
+  \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-module.exports = function (Yallist) {
-  Yallist.prototype[Symbol.iterator] = function* () {
-    for (let walker = this.head; walker; walker = walker.next) {
-      yield walker.value
+/********************************************************************************
+ * Copyright (C) 2018 Red Hat, Inc. and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DebugToolBar = void 0;
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
+var core_1 = __webpack_require__(/*! @theia/core */ "./node_modules/@theia/core/lib/common/index.js");
+var widgets_1 = __webpack_require__(/*! @theia/core/lib/browser/widgets */ "./node_modules/@theia/core/lib/browser/widgets/index.js");
+var debug_view_model_1 = __webpack_require__(/*! ./debug-view-model */ "./node_modules/@theia/debug/lib/browser/view/debug-view-model.js");
+var debug_session_1 = __webpack_require__(/*! ../debug-session */ "./node_modules/@theia/debug/lib/browser/debug-session.js");
+var debug_action_1 = __webpack_require__(/*! ./debug-action */ "./node_modules/@theia/debug/lib/browser/view/debug-action.js");
+var DebugToolBar = /** @class */ (function (_super) {
+    __extends(DebugToolBar, _super);
+    function DebugToolBar() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.setStepRef = function (stepRef) { return _this.stepRef = stepRef || undefined; };
+        _this.start = function () { return _this.model.start(); };
+        _this.restart = function () { return _this.model.restart(); };
+        _this.stop = function () { return _this.model.currentSession && _this.model.currentSession.terminate(); };
+        _this.continue = function () { return _this.model.currentThread && _this.model.currentThread.continue(); };
+        _this.pause = function () { return _this.model.currentThread && _this.model.currentThread.pause(); };
+        _this.stepOver = function () { return _this.model.currentThread && _this.model.currentThread.stepOver(); };
+        _this.stepIn = function () { return _this.model.currentThread && _this.model.currentThread.stepIn(); };
+        _this.stepOut = function () { return _this.model.currentThread && _this.model.currentThread.stepOut(); };
+        return _this;
     }
-  }
-}
+    DebugToolBar.prototype.init = function () {
+        var _this = this;
+        this.id = 'debug:toolbar:' + this.model.id;
+        this.addClass('debug-toolbar');
+        this.toDispose.push(this.model);
+        this.toDispose.push(this.model.onDidChange(function () { return _this.update(); }));
+        this.scrollOptions = undefined;
+        this.update();
+    };
+    DebugToolBar.prototype.focus = function () {
+        var _this = this;
+        if (!this.doFocus()) {
+            this.onRender.push(core_1.Disposable.create(function () { return _this.doFocus(); }));
+            this.update();
+        }
+    };
+    DebugToolBar.prototype.doFocus = function () {
+        if (!this.stepRef) {
+            return false;
+        }
+        this.stepRef.focus();
+        return true;
+    };
+    DebugToolBar.prototype.render = function () {
+        var state = this.model.state;
+        return React.createElement(React.Fragment, null,
+            this.renderContinue(),
+            React.createElement(debug_action_1.DebugAction, { enabled: state === debug_session_1.DebugState.Stopped, run: this.stepOver, label: 'Step Over', iconClass: 'step-over', ref: this.setStepRef }),
+            React.createElement(debug_action_1.DebugAction, { enabled: state === debug_session_1.DebugState.Stopped, run: this.stepIn, label: 'Step Into', iconClass: 'step-into' }),
+            React.createElement(debug_action_1.DebugAction, { enabled: state === debug_session_1.DebugState.Stopped, run: this.stepOut, label: 'Step Out', iconClass: 'step-out' }),
+            React.createElement(debug_action_1.DebugAction, { enabled: state !== debug_session_1.DebugState.Inactive, run: this.restart, label: 'Restart', iconClass: 'restart' }),
+            this.renderStart());
+    };
+    DebugToolBar.prototype.renderStart = function () {
+        var state = this.model.state;
+        if (state === debug_session_1.DebugState.Inactive && this.model.sessionCount === 1) {
+            return React.createElement(debug_action_1.DebugAction, { run: this.start, label: 'Start', iconClass: 'start' });
+        }
+        return React.createElement(debug_action_1.DebugAction, { enabled: state !== debug_session_1.DebugState.Inactive, run: this.stop, label: 'Stop', iconClass: 'stop' });
+    };
+    DebugToolBar.prototype.renderContinue = function () {
+        var state = this.model.state;
+        if (state === debug_session_1.DebugState.Stopped) {
+            return React.createElement(debug_action_1.DebugAction, { run: this.continue, label: 'Continue', iconClass: 'continue' });
+        }
+        return React.createElement(debug_action_1.DebugAction, { enabled: state === debug_session_1.DebugState.Running, run: this.pause, label: 'Pause', iconClass: 'pause' });
+    };
+    __decorate([
+        inversify_1.inject(debug_view_model_1.DebugViewModel),
+        __metadata("design:type", debug_view_model_1.DebugViewModel)
+    ], DebugToolBar.prototype, "model", void 0);
+    __decorate([
+        inversify_1.postConstruct(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", void 0)
+    ], DebugToolBar.prototype, "init", null);
+    DebugToolBar = __decorate([
+        inversify_1.injectable()
+    ], DebugToolBar);
+    return DebugToolBar;
+}(widgets_1.ReactWidget));
+exports.DebugToolBar = DebugToolBar;
 
 
 /***/ }),
 
-/***/ "./node_modules/yallist/yallist.js":
+/***/ "./node_modules/@theia/debug/lib/browser/view/debug-variables-source.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@theia/debug/lib/browser/view/debug-variables-source.js ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/********************************************************************************
+ * Copyright (C) 2018 TypeFox and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DebugVariablesSource = void 0;
+var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
+var source_tree_1 = __webpack_require__(/*! @theia/core/lib/browser/source-tree */ "./node_modules/@theia/core/lib/browser/source-tree/index.js");
+var debug_view_model_1 = __webpack_require__(/*! ./debug-view-model */ "./node_modules/@theia/debug/lib/browser/view/debug-view-model.js");
+var debounce = __webpack_require__(/*! p-debounce */ "./node_modules/p-debounce/index.js");
+var DebugVariablesSource = /** @class */ (function (_super) {
+    __extends(DebugVariablesSource, _super);
+    function DebugVariablesSource() {
+        var _this = _super.call(this, {
+            placeholder: 'Not paused'
+        }) || this;
+        _this.refresh = debounce(function () { return _this.fireDidChange(); }, 400);
+        return _this;
+    }
+    DebugVariablesSource.prototype.init = function () {
+        var _this = this;
+        this.refresh();
+        this.toDispose.push(this.model.onDidChange(function () { return _this.refresh(); }));
+    };
+    DebugVariablesSource.prototype.getElements = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var currentSession, scopes, _a;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        currentSession = this.model.currentSession;
+                        if (!currentSession) return [3 /*break*/, 2];
+                        return [4 /*yield*/, currentSession.getScopes()];
+                    case 1:
+                        _a = _b.sent();
+                        return [3 /*break*/, 3];
+                    case 2:
+                        _a = [];
+                        _b.label = 3;
+                    case 3:
+                        scopes = _a;
+                        return [2 /*return*/, scopes[Symbol.iterator]()];
+                }
+            });
+        });
+    };
+    __decorate([
+        inversify_1.inject(debug_view_model_1.DebugViewModel),
+        __metadata("design:type", debug_view_model_1.DebugViewModel)
+    ], DebugVariablesSource.prototype, "model", void 0);
+    __decorate([
+        inversify_1.postConstruct(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", void 0)
+    ], DebugVariablesSource.prototype, "init", null);
+    DebugVariablesSource = __decorate([
+        inversify_1.injectable(),
+        __metadata("design:paramtypes", [])
+    ], DebugVariablesSource);
+    return DebugVariablesSource;
+}(source_tree_1.TreeSource));
+exports.DebugVariablesSource = DebugVariablesSource;
+
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/lib/browser/view/debug-variables-widget.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@theia/debug/lib/browser/view/debug-variables-widget.js ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/********************************************************************************
+ * Copyright (C) 2018 TypeFox and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+var __spread = (this && this.__spread) || function () {
+    for (var ar = [], i = 0; i < arguments.length; i++) ar = ar.concat(__read(arguments[i]));
+    return ar;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DebugVariablesWidget = void 0;
+var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
+var source_tree_1 = __webpack_require__(/*! @theia/core/lib/browser/source-tree */ "./node_modules/@theia/core/lib/browser/source-tree/index.js");
+var debug_variables_source_1 = __webpack_require__(/*! ./debug-variables-source */ "./node_modules/@theia/debug/lib/browser/view/debug-variables-source.js");
+var debug_view_model_1 = __webpack_require__(/*! ./debug-view-model */ "./node_modules/@theia/debug/lib/browser/view/debug-view-model.js");
+var DebugVariablesWidget = /** @class */ (function (_super) {
+    __extends(DebugVariablesWidget, _super);
+    function DebugVariablesWidget() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    DebugVariablesWidget_1 = DebugVariablesWidget;
+    DebugVariablesWidget.createContainer = function (parent) {
+        var child = source_tree_1.SourceTreeWidget.createContainer(parent, {
+            contextMenuPath: DebugVariablesWidget_1.CONTEXT_MENU,
+            virtualized: false,
+            scrollIfActive: true
+        });
+        child.bind(debug_variables_source_1.DebugVariablesSource).toSelf();
+        child.unbind(source_tree_1.SourceTreeWidget);
+        child.bind(DebugVariablesWidget_1).toSelf();
+        return child;
+    };
+    DebugVariablesWidget.createWidget = function (parent) {
+        return DebugVariablesWidget_1.createContainer(parent).get(DebugVariablesWidget_1);
+    };
+    DebugVariablesWidget.prototype.init = function () {
+        _super.prototype.init.call(this);
+        this.id = 'debug:variables:' + this.viewModel.id;
+        this.title.label = 'Variables';
+        this.toDispose.push(this.variables);
+        this.source = this.variables;
+    };
+    var DebugVariablesWidget_1;
+    DebugVariablesWidget.CONTEXT_MENU = ['debug-variables-context-menu'];
+    DebugVariablesWidget.EDIT_MENU = __spread(DebugVariablesWidget_1.CONTEXT_MENU, ['a_edit']);
+    DebugVariablesWidget.WATCH_MENU = __spread(DebugVariablesWidget_1.CONTEXT_MENU, ['b_watch']);
+    __decorate([
+        inversify_1.inject(debug_view_model_1.DebugViewModel),
+        __metadata("design:type", debug_view_model_1.DebugViewModel)
+    ], DebugVariablesWidget.prototype, "viewModel", void 0);
+    __decorate([
+        inversify_1.inject(debug_variables_source_1.DebugVariablesSource),
+        __metadata("design:type", debug_variables_source_1.DebugVariablesSource)
+    ], DebugVariablesWidget.prototype, "variables", void 0);
+    __decorate([
+        inversify_1.postConstruct(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", void 0)
+    ], DebugVariablesWidget.prototype, "init", null);
+    DebugVariablesWidget = DebugVariablesWidget_1 = __decorate([
+        inversify_1.injectable()
+    ], DebugVariablesWidget);
+    return DebugVariablesWidget;
+}(source_tree_1.SourceTreeWidget));
+exports.DebugVariablesWidget = DebugVariablesWidget;
+
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/lib/browser/view/debug-watch-source.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/@theia/debug/lib/browser/view/debug-watch-source.js ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/********************************************************************************
+ * Copyright (C) 2019 TypeFox and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DebugWatchSource = void 0;
+var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
+var source_tree_1 = __webpack_require__(/*! @theia/core/lib/browser/source-tree */ "./node_modules/@theia/core/lib/browser/source-tree/index.js");
+var debug_view_model_1 = __webpack_require__(/*! ./debug-view-model */ "./node_modules/@theia/debug/lib/browser/view/debug-view-model.js");
+var debounce = __webpack_require__(/*! p-debounce */ "./node_modules/p-debounce/index.js");
+var DebugWatchSource = /** @class */ (function (_super) {
+    __extends(DebugWatchSource, _super);
+    function DebugWatchSource() {
+        var _this = _super.call(this, {
+            placeholder: 'No expressions'
+        }) || this;
+        _this.refresh = debounce(function () { return _this.fireDidChange(); }, 100);
+        return _this;
+    }
+    DebugWatchSource.prototype.init = function () {
+        var _this = this;
+        this.refresh();
+        this.toDispose.push(this.model.onDidChangeWatchExpressions(function () { return _this.refresh(); }));
+    };
+    DebugWatchSource.prototype.getElements = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.model.watchExpressions[Symbol.iterator]()];
+            });
+        });
+    };
+    __decorate([
+        inversify_1.inject(debug_view_model_1.DebugViewModel),
+        __metadata("design:type", debug_view_model_1.DebugViewModel)
+    ], DebugWatchSource.prototype, "model", void 0);
+    __decorate([
+        inversify_1.postConstruct(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", void 0)
+    ], DebugWatchSource.prototype, "init", null);
+    DebugWatchSource = __decorate([
+        inversify_1.injectable(),
+        __metadata("design:paramtypes", [])
+    ], DebugWatchSource);
+    return DebugWatchSource;
+}(source_tree_1.TreeSource));
+exports.DebugWatchSource = DebugWatchSource;
+
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/lib/browser/view/debug-watch-widget.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/@theia/debug/lib/browser/view/debug-watch-widget.js ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/********************************************************************************
+ * Copyright (C) 2019 TypeFox and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+var __spread = (this && this.__spread) || function () {
+    for (var ar = [], i = 0; i < arguments.length; i++) ar = ar.concat(__read(arguments[i]));
+    return ar;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DebugWatchWidget = void 0;
+var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
+var source_tree_1 = __webpack_require__(/*! @theia/core/lib/browser/source-tree */ "./node_modules/@theia/core/lib/browser/source-tree/index.js");
+var debug_watch_source_1 = __webpack_require__(/*! ./debug-watch-source */ "./node_modules/@theia/debug/lib/browser/view/debug-watch-source.js");
+var debug_view_model_1 = __webpack_require__(/*! ./debug-view-model */ "./node_modules/@theia/debug/lib/browser/view/debug-view-model.js");
+var DebugWatchWidget = /** @class */ (function (_super) {
+    __extends(DebugWatchWidget, _super);
+    function DebugWatchWidget() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    DebugWatchWidget_1 = DebugWatchWidget;
+    DebugWatchWidget.createContainer = function (parent) {
+        var child = source_tree_1.SourceTreeWidget.createContainer(parent, {
+            contextMenuPath: DebugWatchWidget_1.CONTEXT_MENU,
+            virtualized: false,
+            scrollIfActive: true
+        });
+        child.bind(debug_watch_source_1.DebugWatchSource).toSelf();
+        child.unbind(source_tree_1.SourceTreeWidget);
+        child.bind(DebugWatchWidget_1).toSelf();
+        return child;
+    };
+    DebugWatchWidget.createWidget = function (parent) {
+        return DebugWatchWidget_1.createContainer(parent).get(DebugWatchWidget_1);
+    };
+    DebugWatchWidget.prototype.init = function () {
+        _super.prototype.init.call(this);
+        this.id = 'debug:watch:' + this.viewModel.id;
+        this.title.label = 'Watch';
+        this.toDispose.push(this.variables);
+        this.source = this.variables;
+    };
+    var DebugWatchWidget_1;
+    DebugWatchWidget.CONTEXT_MENU = ['debug-watch-context-menu'];
+    DebugWatchWidget.EDIT_MENU = __spread(DebugWatchWidget_1.CONTEXT_MENU, ['a_edit']);
+    DebugWatchWidget.REMOVE_MENU = __spread(DebugWatchWidget_1.CONTEXT_MENU, ['b_remove']);
+    __decorate([
+        inversify_1.inject(debug_view_model_1.DebugViewModel),
+        __metadata("design:type", debug_view_model_1.DebugViewModel)
+    ], DebugWatchWidget.prototype, "viewModel", void 0);
+    __decorate([
+        inversify_1.inject(debug_watch_source_1.DebugWatchSource),
+        __metadata("design:type", debug_watch_source_1.DebugWatchSource)
+    ], DebugWatchWidget.prototype, "variables", void 0);
+    __decorate([
+        inversify_1.postConstruct(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", void 0)
+    ], DebugWatchWidget.prototype, "init", null);
+    DebugWatchWidget = DebugWatchWidget_1 = __decorate([
+        inversify_1.injectable()
+    ], DebugWatchWidget);
+    return DebugWatchWidget;
+}(source_tree_1.SourceTreeWidget));
+exports.DebugWatchWidget = DebugWatchWidget;
+
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/lib/browser/view/debug-widget.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@theia/debug/lib/browser/view/debug-widget.js ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/********************************************************************************
+ * Copyright (C) 2018 TypeFox and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __values = (this && this.__values) || function(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+    if (m) return m.call(o);
+    if (o && typeof o.length === "number") return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DebugWidget = void 0;
+var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
+var browser_1 = __webpack_require__(/*! @theia/core/lib/browser */ "./node_modules/@theia/core/lib/browser/index.js");
+var debug_session_widget_1 = __webpack_require__(/*! ./debug-session-widget */ "./node_modules/@theia/debug/lib/browser/view/debug-session-widget.js");
+var debug_configuration_widget_1 = __webpack_require__(/*! ./debug-configuration-widget */ "./node_modules/@theia/debug/lib/browser/view/debug-configuration-widget.js");
+var debug_view_model_1 = __webpack_require__(/*! ./debug-view-model */ "./node_modules/@theia/debug/lib/browser/view/debug-view-model.js");
+var debug_session_manager_1 = __webpack_require__(/*! ../debug-session-manager */ "./node_modules/@theia/debug/lib/browser/debug-session-manager.js");
+var progress_bar_factory_1 = __webpack_require__(/*! @theia/core/lib/browser/progress-bar-factory */ "./node_modules/@theia/core/lib/browser/progress-bar-factory.js");
+var DebugWidget = /** @class */ (function (_super) {
+    __extends(DebugWidget, _super);
+    function DebugWidget() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    DebugWidget_1 = DebugWidget;
+    DebugWidget.createContainer = function (parent) {
+        var child = debug_session_widget_1.DebugSessionWidget.createContainer(parent, {});
+        child.bind(debug_configuration_widget_1.DebugConfigurationWidget).toSelf();
+        child.bind(DebugWidget_1).toSelf();
+        return child;
+    };
+    DebugWidget.createWidget = function (parent) {
+        return DebugWidget_1.createContainer(parent).get(DebugWidget_1);
+    };
+    DebugWidget.prototype.init = function () {
+        var e_1, _a;
+        var _this = this;
+        this.id = DebugWidget_1.ID;
+        this.title.label = DebugWidget_1.LABEL;
+        this.title.caption = DebugWidget_1.LABEL;
+        this.title.closable = true;
+        this.title.iconClass = 'debug-tab-icon';
+        this.addClass('theia-debug-container');
+        this.toDispose.pushAll([
+            this.toolbar,
+            this.sessionWidget,
+            this.sessionManager.onDidCreateDebugSession(function (session) { return _this.model.push(session); }),
+            this.sessionManager.onDidDestroyDebugSession(function (session) { return _this.model.delete(session); })
+        ]);
+        try {
+            for (var _b = __values(this.sessionManager.sessions), _c = _b.next(); !_c.done; _c = _b.next()) {
+                var session = _c.value;
+                this.model.push(session);
+            }
+        }
+        catch (e_1_1) { e_1 = { error: e_1_1 }; }
+        finally {
+            try {
+                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+            }
+            finally { if (e_1) throw e_1.error; }
+        }
+        var layout = this.layout = new browser_1.PanelLayout();
+        layout.addWidget(this.toolbar);
+        layout.addWidget(this.sessionWidget);
+        this.toDispose.push(this.progressBarFactory({ container: this.node, insertMode: 'prepend', locationId: 'debug' }));
+    };
+    DebugWidget.prototype.onActivateRequest = function (msg) {
+        _super.prototype.onActivateRequest.call(this, msg);
+        this.toolbar.focus();
+    };
+    DebugWidget.prototype.getTrackableWidgets = function () {
+        return this.sessionWidget.getTrackableWidgets();
+    };
+    DebugWidget.prototype.storeState = function () {
+        return this.sessionWidget.storeState();
+    };
+    DebugWidget.prototype.restoreState = function (oldState) {
+        this.sessionWidget.restoreState(oldState);
+    };
+    var DebugWidget_1;
+    DebugWidget.ID = 'debug';
+    DebugWidget.LABEL = 'Debug';
+    __decorate([
+        inversify_1.inject(debug_view_model_1.DebugViewModel),
+        __metadata("design:type", debug_view_model_1.DebugViewModel)
+    ], DebugWidget.prototype, "model", void 0);
+    __decorate([
+        inversify_1.inject(debug_session_manager_1.DebugSessionManager),
+        __metadata("design:type", debug_session_manager_1.DebugSessionManager)
+    ], DebugWidget.prototype, "sessionManager", void 0);
+    __decorate([
+        inversify_1.inject(debug_configuration_widget_1.DebugConfigurationWidget),
+        __metadata("design:type", debug_configuration_widget_1.DebugConfigurationWidget)
+    ], DebugWidget.prototype, "toolbar", void 0);
+    __decorate([
+        inversify_1.inject(debug_session_widget_1.DebugSessionWidget),
+        __metadata("design:type", debug_session_widget_1.DebugSessionWidget)
+    ], DebugWidget.prototype, "sessionWidget", void 0);
+    __decorate([
+        inversify_1.inject(progress_bar_factory_1.ProgressBarFactory),
+        __metadata("design:type", Function)
+    ], DebugWidget.prototype, "progressBarFactory", void 0);
+    __decorate([
+        inversify_1.postConstruct(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", void 0)
+    ], DebugWidget.prototype, "init", null);
+    DebugWidget = DebugWidget_1 = __decorate([
+        inversify_1.injectable()
+    ], DebugWidget);
+    return DebugWidget;
+}(browser_1.BaseWidget));
+exports.DebugWidget = DebugWidget;
+
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/src/browser/style/breakpoints-activate-inverse.svg":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/@theia/debug/src/browser/style/breakpoints-activate-inverse.svg ***!
+  \**************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PCEtLUNvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLi0tPgo8IS0tQ29weXJpZ2h0IChDKSAyMDE4IFR5cGVGb3ggYW5kIG90aGVycy4tLT4KPCEtLUxpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTYgMTYiPjxkZWZzPjxzdHlsZT4uaWNvbi1jYW52YXMtdHJhbnNwYXJlbnQsLmljb24tdnMtb3V0e2ZpbGw6IzI1MjUyNjt9Lmljb24tY2FudmFzLXRyYW5zcGFyZW50e29wYWNpdHk6MDt9Lmljb24tdnMtYmd7ZmlsbDojYzVjNWM1O308L3N0eWxlPjwvZGVmcz48dGl0bGU+YnJlYWtwb2ludHMtYWN0aXZhdGU8L3RpdGxlPjxnIGlkPSJjYW52YXMiPjxwYXRoIGNsYXNzPSJpY29uLWNhbnZhcy10cmFuc3BhcmVudCIgZD0iTTE2LDBWMTZIMFYwWiIvPjwvZz48ZyBpZD0ib3V0bGluZSIgc3R5bGU9ImRpc3BsYXk6IG5vbmU7Ij48cGF0aCBjbGFzcz0iaWNvbi12cy1vdXQiIGQ9Ik0xNiw1LjVBNS41MzYsNS41MzYsMCwwLDEsMTEsMTFhNS41MzYsNS41MzYsMCwwLDEtNS41LDVBNS41NDksNS41NDksMCwwLDEsMCwxMC41LDUuNDY1LDUuNDY1LDAsMCwxLDUsNWE1LjUxMiw1LjUxMiwwLDAsMSwxMSwuNVoiLz48L2c+PGcgaWQ9Imljb25CZyI+PHBhdGggY2xhc3M9Imljb24tdnMtYmciIGQ9Ik0xNSw1LjVBNC4zOTUsNC4zOTUsMCwwLDEsMTEsMTBhMi45NTcsMi45NTcsMCwwLDAtLjItMUEzLjU2NSwzLjU2NSwwLDAsMCwxNCw1LjVhMy41MDcsMy41MDcsMCwwLDAtNy0uM0EzLjU1MiwzLjU1MiwwLDAsMCw2LDVhNC42MjIsNC42MjIsMCwwLDEsNC41LTRBNC40ODEsNC40ODEsMCwwLDEsMTUsNS41Wk01LjUsNkE0LjUsNC41LDAsMSwwLDEwLDEwLjUsNC41LDQuNSwwLDAsMCw1LjUsNloiLz48L2c+PC9zdmc+Cg=="
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/src/browser/style/breakpoints-activate.svg":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@theia/debug/src/browser/style/breakpoints-activate.svg ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PCEtLUNvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLi0tPgo8IS0tQ29weXJpZ2h0IChDKSAyMDE4IFR5cGVGb3ggYW5kIG90aGVycy4tLT4KPCEtLUxpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTYgMTYiPjxkZWZzPjxzdHlsZT4uaWNvbi1jYW52YXMtdHJhbnNwYXJlbnQsLmljb24tdnMtb3V0e2ZpbGw6I2Y2ZjZmNjt9Lmljb24tY2FudmFzLXRyYW5zcGFyZW50e29wYWNpdHk6MDt9Lmljb24tdnMtYmd7ZmlsbDojNDI0MjQyO308L3N0eWxlPjwvZGVmcz48dGl0bGU+YnJlYWtwb2ludHMtYWN0aXZhdGU8L3RpdGxlPjxnIGlkPSJjYW52YXMiPjxwYXRoIGNsYXNzPSJpY29uLWNhbnZhcy10cmFuc3BhcmVudCIgZD0iTTE2LDBWMTZIMFYwWiIvPjwvZz48ZyBpZD0ib3V0bGluZSIgc3R5bGU9ImRpc3BsYXk6IG5vbmU7Ij48cGF0aCBjbGFzcz0iaWNvbi12cy1vdXQiIGQ9Ik0xNiw1LjVBNS41MzYsNS41MzYsMCwwLDEsMTEsMTFhNS41MzYsNS41MzYsMCwwLDEtNS41LDVBNS41NDksNS41NDksMCwwLDEsMCwxMC41LDUuNDY1LDUuNDY1LDAsMCwxLDUsNWE1LjUxMiw1LjUxMiwwLDAsMSwxMSwuNVoiLz48L2c+PGcgaWQ9Imljb25CZyI+PHBhdGggY2xhc3M9Imljb24tdnMtYmciIGQ9Ik0xNSw1LjVBNC4zOTUsNC4zOTUsMCwwLDEsMTEsMTBhMi45NTcsMi45NTcsMCwwLDAtLjItMUEzLjU2NSwzLjU2NSwwLDAsMCwxNCw1LjVhMy41MDcsMy41MDcsMCwwLDAtNy0uM0EzLjU1MiwzLjU1MiwwLDAsMCw2LDVhNC42MjIsNC42MjIsMCwwLDEsNC41LTRBNC40ODEsNC40ODEsMCwwLDEsMTUsNS41Wk01LjUsNkE0LjUsNC41LDAsMSwwLDEwLDEwLjUsNC41LDQuNSwwLDAsMCw1LjUsNloiLz48L2c+PC9zdmc+Cg=="
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/src/browser/style/configure-inverse.svg":
+/*!***************************************************************************!*\
+  !*** ./node_modules/@theia/debug/src/browser/style/configure-inverse.svg ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PCEtLUNvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLi0tPgo8IS0tQ29weXJpZ2h0IChDKSAyMDE4IFR5cGVGb3ggYW5kIG90aGVycy4tLT4KPCEtLUxpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTYgMTYiPjxkZWZzPjxzdHlsZT4uaWNvbi1jYW52YXMtdHJhbnNwYXJlbnQsLmljb24tdnMtb3V0e2ZpbGw6IzI1MjUyNjt9Lmljb24tY2FudmFzLXRyYW5zcGFyZW50e29wYWNpdHk6MDt9Lmljb24tdnMtYmd7ZmlsbDojYzVjNWM1O308L3N0eWxlPjwvZGVmcz48dGl0bGU+Y29uZmlndXJlPC90aXRsZT48ZyBpZD0iY2FudmFzIj48cGF0aCBjbGFzcz0iaWNvbi1jYW52YXMtdHJhbnNwYXJlbnQiIGQ9Ik0xNiwwVjE2SDBWMFoiLz48L2c+PGcgaWQ9Im91dGxpbmUiIHN0eWxlPSJkaXNwbGF5OiBub25lOyI+PHBhdGggY2xhc3M9Imljb24tdnMtb3V0IiBkPSJNMTYsMTAuMDE1bC0yLjIzOC4zNzIsMS4zMTgsMS44NDdMMTIuMjMzLDE1LjA4bC0xLjg0Ny0xLjMxOEwxMC4wMTMsMTZINS45ODZsLS4zNzMtMi4yMzdMMy43NjcsMTUuMDguOTE5LDEyLjIzM2wxLjMxOS0xLjg0N0wwLDEwLjAxM1Y1Ljk4NmwyLjIzOC0uMzczTC45MTksMy43NjcsMy43NjguOTE5LDUuNjEzLDIuMjM4LDUuOTg2LDBoNC4wMjhsLjM3MiwyLjIzOEwxMi4yMzMuOTE5LDE1LjA4LDMuNzY4LDEzLjc2Miw1LjYxMywxNiw1Ljk4NloiLz48L2c+PGcgaWQ9Imljb25CZyI+PHBhdGggY2xhc3M9Imljb24tdnMtYmciIGQ9Ik0xMi44NzYsOS41MjEsMTUsOS4xNjdWNi44MzRMMTIuODc5LDYuNDhhNS4xMiw1LjEyLDAsMCwwLS4zNTQtLjg1NGwxLjI1LTEuNzUtMS42NS0xLjY1TDEwLjM3MywzLjQ3N2MtLjEzNy0uMDcyLS4yNjItLjE1OS0uNDA4LS4yMTlzLS4zLS4wODctLjQ0NC0uMTMzTDkuMTY3LDFINi44MzRMNi40OCwzLjEyMWE1LjExOCw1LjExOCwwLDAsMC0uODU0LjM1NGwtMS43NS0xLjI1LTEuNjUsMS42NUwzLjQ3Nyw1LjYyN2MtLjA3Mi4xMzctLjE1OS4yNjItLjIxOS40MDhzLS4wODcuMy0uMTMzLjQ0NEwxLDYuODMzVjkuMTY2bDIuMTIxLjM1NGE1LjEyMiw1LjEyMiwwLDAsMCwuMzU0Ljg1NGwtMS4yNSwxLjc1LDEuNjUsMS42NSwxLjc1Mi0xLjI1MmMuMTM3LjA3Mi4yNjIuMTU5LjQwOC4yMnMuMy4wODcuNDQ0LjEzM0w2LjgzMywxNUg5LjE2NmwuMzU0LTIuMTIxYTUuMTIxLDUuMTIxLDAsMCwwLC44NTQtLjM1NGwxLjc1LDEuMjUsMS42NS0xLjY1LTEuMjUyLTEuNzUyYy4wNzItLjEzNy4xNTktLjI2My4yMTktLjQwOVMxMi44Myw5LjY2OSwxMi44NzYsOS41MjFaTTgsMTAuMjEyQTIuMjEyLDIuMjEyLDAsMSwxLDEwLjIxMiw4LDIuMjEyLDIuMjEyLDAsMCwxLDgsMTAuMjEyWiIvPjwvZz48L3N2Zz4K"
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/src/browser/style/configure.svg":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@theia/debug/src/browser/style/configure.svg ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PCEtLUNvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLi0tPgo8IS0tQ29weXJpZ2h0IChDKSAyMDE4IFR5cGVGb3ggYW5kIG90aGVycy4tLT4KPCEtLUxpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTYgMTYiPjxkZWZzPjxzdHlsZT4uaWNvbi1jYW52YXMtdHJhbnNwYXJlbnQsLmljb24tdnMtb3V0e2ZpbGw6I2Y2ZjZmNjt9Lmljb24tY2FudmFzLXRyYW5zcGFyZW50e29wYWNpdHk6MDt9Lmljb24tdnMtYmd7ZmlsbDojNDI0MjQyO308L3N0eWxlPjwvZGVmcz48dGl0bGU+Y29uZmlndXJlPC90aXRsZT48ZyBpZD0iY2FudmFzIj48cGF0aCBjbGFzcz0iaWNvbi1jYW52YXMtdHJhbnNwYXJlbnQiIGQ9Ik0xNiwwVjE2SDBWMFoiLz48L2c+PGcgaWQ9Im91dGxpbmUiIHN0eWxlPSJkaXNwbGF5OiBub25lOyI+PHBhdGggY2xhc3M9Imljb24tdnMtb3V0IiBkPSJNMTYsMTAuMDE1bC0yLjIzOC4zNzIsMS4zMTgsMS44NDdMMTIuMjMzLDE1LjA4bC0xLjg0Ny0xLjMxOEwxMC4wMTMsMTZINS45ODZsLS4zNzMtMi4yMzdMMy43NjcsMTUuMDguOTE5LDEyLjIzM2wxLjMxOS0xLjg0N0wwLDEwLjAxM1Y1Ljk4NmwyLjIzOC0uMzczTC45MTksMy43NjcsMy43NjguOTE5LDUuNjEzLDIuMjM4LDUuOTg2LDBoNC4wMjhsLjM3MiwyLjIzOEwxMi4yMzMuOTE5LDE1LjA4LDMuNzY4LDEzLjc2Miw1LjYxMywxNiw1Ljk4NloiLz48L2c+PGcgaWQ9Imljb25CZyI+PHBhdGggY2xhc3M9Imljb24tdnMtYmciIGQ9Ik0xMi44NzYsOS41MjEsMTUsOS4xNjdWNi44MzRMMTIuODc5LDYuNDhhNS4xMiw1LjEyLDAsMCwwLS4zNTQtLjg1NGwxLjI1LTEuNzUtMS42NS0xLjY1TDEwLjM3MywzLjQ3N2MtLjEzNy0uMDcyLS4yNjItLjE1OS0uNDA4LS4yMTlzLS4zLS4wODctLjQ0NC0uMTMzTDkuMTY3LDFINi44MzRMNi40OCwzLjEyMWE1LjExOCw1LjExOCwwLDAsMC0uODU0LjM1NGwtMS43NS0xLjI1LTEuNjUsMS42NUwzLjQ3Nyw1LjYyN2MtLjA3Mi4xMzctLjE1OS4yNjItLjIxOS40MDhzLS4wODcuMy0uMTMzLjQ0NEwxLDYuODMzVjkuMTY2bDIuMTIxLjM1NGE1LjEyMiw1LjEyMiwwLDAsMCwuMzU0Ljg1NGwtMS4yNSwxLjc1LDEuNjUsMS42NSwxLjc1Mi0xLjI1MmMuMTM3LjA3Mi4yNjIuMTU5LjQwOC4yMnMuMy4wODcuNDQ0LjEzM0w2LjgzMywxNUg5LjE2NmwuMzU0LTIuMTIxYTUuMTIxLDUuMTIxLDAsMCwwLC44NTQtLjM1NGwxLjc1LDEuMjUsMS42NS0xLjY1LTEuMjUyLTEuNzUyYy4wNzItLjEzNy4xNTktLjI2My4yMTktLjQwOVMxMi44Myw5LjY2OSwxMi44NzYsOS41MjFaTTgsMTAuMjEyQTIuMjEyLDIuMjEyLDAsMSwxLDEwLjIxMiw4LDIuMjEyLDIuMjEyLDAsMCwxLDgsMTAuMjEyWiIvPjwvZz48L3N2Zz4K"
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/src/browser/style/continue-inverse.svg":
+/*!**************************************************************************!*\
+  !*** ./node_modules/@theia/debug/src/browser/style/continue-inverse.svg ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PCEtLUNvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLi0tPgo8IS0tQ29weXJpZ2h0IChDKSAyMDE4IFR5cGVGb3ggYW5kIG90aGVycy4tLT4KPCEtLUxpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTYgMTYiPjxkZWZzPjxzdHlsZT4uaWNvbi1jYW52YXMtdHJhbnNwYXJlbnQsLmljb24tdnMtb3V0e2ZpbGw6IzI1MjUyNjt9Lmljb24tY2FudmFzLXRyYW5zcGFyZW50e29wYWNpdHk6MDt9Lmljb24tdnMtYWN0aW9uLWJsdWV7ZmlsbDojNzViZWZmO308L3N0eWxlPjwvZGVmcz48dGl0bGU+Y29udGludWU8L3RpdGxlPjxnIGlkPSJjYW52YXMiPjxwYXRoIGNsYXNzPSJpY29uLWNhbnZhcy10cmFuc3BhcmVudCIgZD0iTTE2LDBWMTZIMFYwWiIvPjwvZz48ZyBpZD0ib3V0bGluZSIgc3R5bGU9ImRpc3BsYXk6IG5vbmU7Ij48cGF0aCBjbGFzcz0iaWNvbi12cy1vdXQiIGQ9Ik0xNS42NCw4bC03LjgsNkgyVjJINy44NFoiLz48L2c+PGcgaWQ9Imljb25CZyI+PHBhdGggY2xhc3M9Imljb24tdnMtYWN0aW9uLWJsdWUiIGQ9Ik0zLDNINVYxM0gzWk03LjUsM1YxM0wxNCw4WiIvPjwvZz48L3N2Zz4K"
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/src/browser/style/continue.svg":
+/*!******************************************************************!*\
+  !*** ./node_modules/@theia/debug/src/browser/style/continue.svg ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PCEtLUNvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLi0tPgo8IS0tQ29weXJpZ2h0IChDKSAyMDE4IFR5cGVGb3ggYW5kIG90aGVycy4tLT4KPCEtLUxpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTYgMTYiPjxkZWZzPjxzdHlsZT4uaWNvbi1jYW52YXMtdHJhbnNwYXJlbnQsLmljb24tdnMtb3V0e2ZpbGw6I2Y2ZjZmNjt9Lmljb24tY2FudmFzLXRyYW5zcGFyZW50e29wYWNpdHk6MDt9Lmljb24tdnMtYWN0aW9uLWJsdWV7ZmlsbDojMDA1MzljO308L3N0eWxlPjwvZGVmcz48dGl0bGU+Y29udGludWU8L3RpdGxlPjxnIGlkPSJjYW52YXMiPjxwYXRoIGNsYXNzPSJpY29uLWNhbnZhcy10cmFuc3BhcmVudCIgZD0iTTE2LDBWMTZIMFYwWiIvPjwvZz48ZyBpZD0ib3V0bGluZSIgc3R5bGU9ImRpc3BsYXk6IG5vbmU7Ij48cGF0aCBjbGFzcz0iaWNvbi12cy1vdXQiIGQ9Ik0xNS42NCw4bC03LjgsNkgyVjJINy44NFoiLz48L2c+PGcgaWQ9Imljb25CZyI+PHBhdGggY2xhc3M9Imljb24tdnMtYWN0aW9uLWJsdWUiIGQ9Ik0zLDNINVYxM0gzWk03LjUsM1YxM0wxNCw4WiIvPjwvZz48L3N2Zz4K"
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/src/browser/style/debug-bright.useable.css":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@theia/debug/src/browser/style/debug-bright.useable.css ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var refs = 0;
+var dispose;
+var content = __webpack_require__(/*! !../../../../../css-loader!./debug-bright.useable.css */ "./node_modules/css-loader/index.js!./node_modules/@theia/debug/src/browser/style/debug-bright.useable.css");
+var options = {"singleton":true,"attrs":{"id":"theia-theme"},"hmr":true};
+options.insertInto = undefined;
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) exports.locals = content.locals;
+
+exports.use = exports.ref = function() {
+	if(!(refs++)) {
+		dispose = __webpack_require__(/*! ../../../../../style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+	}
+
+	return exports;
+};
+
+exports.unuse = exports.unref = function() {
+  if(refs > 0 && !(--refs)) {
+	   dispose();
+		 dispose = null;
+  }
+};
+if(false) { var lastRefs; }
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/src/browser/style/debug-dark.useable.css":
+/*!****************************************************************************!*\
+  !*** ./node_modules/@theia/debug/src/browser/style/debug-dark.useable.css ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var refs = 0;
+var dispose;
+var content = __webpack_require__(/*! !../../../../../css-loader!./debug-dark.useable.css */ "./node_modules/css-loader/index.js!./node_modules/@theia/debug/src/browser/style/debug-dark.useable.css");
+var options = {"singleton":true,"attrs":{"id":"theia-theme"},"hmr":true};
+options.insertInto = undefined;
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) exports.locals = content.locals;
+
+exports.use = exports.ref = function() {
+	if(!(refs++)) {
+		dispose = __webpack_require__(/*! ../../../../../style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+	}
+
+	return exports;
+};
+
+exports.unuse = exports.unref = function() {
+  if(refs > 0 && !(--refs)) {
+	   dispose();
+		 dispose = null;
+  }
+};
+if(false) { var lastRefs; }
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/src/browser/style/pause-inverse.svg":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@theia/debug/src/browser/style/pause-inverse.svg ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PCEtLUNvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLi0tPgo8IS0tQ29weXJpZ2h0IChDKSAyMDE4IFR5cGVGb3ggYW5kIG90aGVycy4tLT4KPCEtLUxpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTYgMTYiPjxkZWZzPjxzdHlsZT4uaWNvbi1jYW52YXMtdHJhbnNwYXJlbnQsLmljb24tdnMtb3V0e2ZpbGw6IzI1MjUyNjt9Lmljb24tY2FudmFzLXRyYW5zcGFyZW50e29wYWNpdHk6MDt9Lmljb24tdnMtYWN0aW9uLWJsdWV7ZmlsbDojNzViZWZmO308L3N0eWxlPjwvZGVmcz48dGl0bGU+cGF1c2U8L3RpdGxlPjxnIGlkPSJjYW52YXMiPjxwYXRoIGNsYXNzPSJpY29uLWNhbnZhcy10cmFuc3BhcmVudCIgZD0iTTE2LDBWMTZIMFYwWiIvPjwvZz48ZyBpZD0ib3V0bGluZSIgc3R5bGU9ImRpc3BsYXk6IG5vbmU7Ij48cGF0aCBjbGFzcz0iaWNvbi12cy1vdXQiIGQ9Ik0xMywyVjE0SDguNVYyWk0zLDE0SDcuNVYySDNaIi8+PC9nPjxnIGlkPSJpY29uQmciPjxwYXRoIGNsYXNzPSJpY29uLXZzLWFjdGlvbi1ibHVlIiBkPSJNNCwzSDYuNVYxM0g0Wk05LjUsM1YxM0gxMlYzWiIvPjwvZz48L3N2Zz4K"
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/src/browser/style/pause.svg":
+/*!***************************************************************!*\
+  !*** ./node_modules/@theia/debug/src/browser/style/pause.svg ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PCEtLUNvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLi0tPgo8IS0tQ29weXJpZ2h0IChDKSAyMDE4IFR5cGVGb3ggYW5kIG90aGVycy4tLT4KPCEtLUxpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTYgMTYiPjxkZWZzPjxzdHlsZT4uaWNvbi1jYW52YXMtdHJhbnNwYXJlbnQsLmljb24tdnMtb3V0e2ZpbGw6I2Y2ZjZmNjt9Lmljb24tY2FudmFzLXRyYW5zcGFyZW50e29wYWNpdHk6MDt9Lmljb24tdnMtYWN0aW9uLWJsdWV7ZmlsbDojMDA1MzljO308L3N0eWxlPjwvZGVmcz48dGl0bGU+cGF1c2U8L3RpdGxlPjxnIGlkPSJjYW52YXMiPjxwYXRoIGNsYXNzPSJpY29uLWNhbnZhcy10cmFuc3BhcmVudCIgZD0iTTE2LDBWMTZIMFYwWiIvPjwvZz48ZyBpZD0ib3V0bGluZSIgc3R5bGU9ImRpc3BsYXk6IG5vbmU7Ij48cGF0aCBjbGFzcz0iaWNvbi12cy1vdXQiIGQ9Ik0xMywyVjE0SDguNVYyWk0zLDE0SDcuNVYySDNaIi8+PC9nPjxnIGlkPSJpY29uQmciPjxwYXRoIGNsYXNzPSJpY29uLXZzLWFjdGlvbi1ibHVlIiBkPSJNNCwzSDYuNVYxM0g0Wk05LjUsM1YxM0gxMlYzWiIvPjwvZz48L3N2Zz4K"
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/src/browser/style/repl-inverse.svg":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@theia/debug/src/browser/style/repl-inverse.svg ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PCEtLUNvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLi0tPgo8IS0tQ29weXJpZ2h0IChDKSAyMDE4IFR5cGVGb3ggYW5kIG90aGVycy4tLT4KPCEtLUxpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTYgMTYiPjxkZWZzPjxzdHlsZT4uaWNvbi1jYW52YXMtdHJhbnNwYXJlbnQsLmljb24tdnMtb3V0e2ZpbGw6IzI1MjUyNjt9Lmljb24tY2FudmFzLXRyYW5zcGFyZW50e29wYWNpdHk6MDt9Lmljb24tdnMtYmd7ZmlsbDojYzVjNWM1O308L3N0eWxlPjwvZGVmcz48dGl0bGU+cmVwbDwvdGl0bGU+PGcgaWQ9ImNhbnZhcyI+PHBhdGggY2xhc3M9Imljb24tY2FudmFzLXRyYW5zcGFyZW50IiBkPSJNMTYsMFYxNkgwVjBaIi8+PC9nPjxnIGlkPSJvdXRsaW5lIiBzdHlsZT0iZGlzcGxheTogbm9uZTsiPjxwYXRoIGNsYXNzPSJpY29uLXZzLW91dCIgZD0iTTE2LDJWMTRIMFYyWiIvPjwvZz48ZyBpZD0iaWNvbkJnIj48cGF0aCBpZD0iaWNvbkJnLTIiIGRhdGEtbmFtZT0iaWNvbkJnIiBjbGFzcz0iaWNvbi12cy1iZyIgZD0iTTEsM1YxM0gxNVYzWm0xMyw5SDJWNEgxNFpNNy41LDgsNC44NzUsMTAuNzUsNCw5LjgzMyw1Ljc1LDgsNCw2LjE2N2wuODc1LS45MTdaIi8+PC9nPjwvc3ZnPgo="
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/src/browser/style/repl.svg":
+/*!**************************************************************!*\
+  !*** ./node_modules/@theia/debug/src/browser/style/repl.svg ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PCEtLUNvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLi0tPgo8IS0tQ29weXJpZ2h0IChDKSAyMDE4IFR5cGVGb3ggYW5kIG90aGVycy4tLT4KPCEtLUxpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTYgMTYiPjxkZWZzPjxzdHlsZT4uaWNvbi1jYW52YXMtdHJhbnNwYXJlbnQsLmljb24tdnMtb3V0e2ZpbGw6I2Y2ZjZmNjt9Lmljb24tY2FudmFzLXRyYW5zcGFyZW50e29wYWNpdHk6MDt9Lmljb24tdnMtYmd7ZmlsbDojNDI0MjQyO308L3N0eWxlPjwvZGVmcz48dGl0bGU+cmVwbDwvdGl0bGU+PGcgaWQ9ImNhbnZhcyI+PHBhdGggY2xhc3M9Imljb24tY2FudmFzLXRyYW5zcGFyZW50IiBkPSJNMTYsMFYxNkgwVjBaIi8+PC9nPjxnIGlkPSJvdXRsaW5lIiBzdHlsZT0iZGlzcGxheTogbm9uZTsiPjxwYXRoIGNsYXNzPSJpY29uLXZzLW91dCIgZD0iTTE2LDJWMTRIMFYyWiIvPjwvZz48ZyBpZD0iaWNvbkJnIj48cGF0aCBpZD0iaWNvbkJnLTIiIGRhdGEtbmFtZT0iaWNvbkJnIiBjbGFzcz0iaWNvbi12cy1iZyIgZD0iTTEsM1YxM0gxNVYzWm0xMyw5SDJWNEgxNFpNNy41LDgsNC44NzUsMTAuNzUsNCw5LjgzMyw1Ljc1LDgsNCw2LjE2N2wuODc1LS45MTdaIi8+PC9nPjwvc3ZnPgo="
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/src/browser/style/restart-inverse.svg":
+/*!*************************************************************************!*\
+  !*** ./node_modules/@theia/debug/src/browser/style/restart-inverse.svg ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PCEtLUNvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLi0tPgo8IS0tQ29weXJpZ2h0IChDKSAyMDE4IFR5cGVGb3ggYW5kIG90aGVycy4tLT4KPCEtLUxpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTYgMTYiPjxzdHlsZT4uc3Qwe2ZpbGw6IzI1MjUyNjtmaWxsLW9wYWNpdHk6MH0uc3Qxe2Rpc3BsYXk6bm9uZX0uc3Qye2Rpc3BsYXk6aW5saW5lO2ZpbGw6IzI1MjUyNn0uc3Qze2ZpbGw6Izg5ZDE4NX08L3N0eWxlPjx0aXRsZT5yZXN0YXJ0PC90aXRsZT48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTYgMHYxNkgwVjBoMTZ6IiBpZD0iY2FudmFzIi8+PGcgaWQ9Im91dGxpbmUiIGNsYXNzPSJzdDEiIHN0eWxlPSJkaXNwbGF5OiBub25lOyI+PHBhdGggY2xhc3M9InN0MiIgZD0iTTguNSAxQzYuOSAxIDUuMyAxLjUgNCAyLjVWMUgwdjhoMy4xTDEgOS42bC4zIDFjMS4xIDQgNS4zIDYuMyA5LjMgNS4yczYuMy01LjMgNS4yLTkuM0MxNC44IDMuMiAxMS45IDEgOC41IDF6bTAgMTFjLTEuNiAwLTIuOS0xLTMuNC0yLjVMNSA5aDNWNWguNUMxMC40IDUgMTIgNi42IDEyIDguNVMxMC40IDEyIDguNSAxMnoiLz48L2c+PHBhdGggY2xhc3M9InN0MyIgZD0iTTE1IDhjMCAzLjYtMi45IDYuNS02LjUgNi41LTIuOSAwLTUuNS0xLjktNi4zLTQuN2wxLjktLjVjLjcgMi40IDMuMiAzLjggNS42IDMuMSAyLjQtLjcgMy44LTMuMiAzLjEtNS42UzkuNyAzIDcuMyAzLjdjLTEgLjMtMS45LjktMi41IDEuOEg3djJIMXYtNmgydjMuMWMxLjktMyA1LjktNCA4LjktMi4xQzEzLjggMy43IDE1IDUuNyAxNSA4eiIgaWQ9Imljb25CZyIvPjwvc3ZnPgo="
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/src/browser/style/restart.svg":
+/*!*****************************************************************!*\
+  !*** ./node_modules/@theia/debug/src/browser/style/restart.svg ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PCEtLUNvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLi0tPgo8IS0tQ29weXJpZ2h0IChDKSAyMDE4IFR5cGVGb3ggYW5kIG90aGVycy4tLT4KPCEtLUxpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTYgMTYiPjxzdHlsZT4uc3Qwe2ZpbGw6I2Y2ZjZmNjtmaWxsLW9wYWNpdHk6MH0uc3Qxe2Rpc3BsYXk6bm9uZX0uc3Qye2Rpc3BsYXk6aW5saW5lO2ZpbGw6I2Y2ZjZmNn0uc3Qze2ZpbGw6IzM4OGEzNH08L3N0eWxlPjx0aXRsZT5yZXN0YXJ0PC90aXRsZT48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTYgMHYxNkgwVjBoMTZ6IiBpZD0iY2FudmFzIi8+PGcgaWQ9Im91dGxpbmUiIGNsYXNzPSJzdDEiIHN0eWxlPSJkaXNwbGF5OiBub25lOyI+PHBhdGggY2xhc3M9InN0MiIgZD0iTTguNSAxQzYuOSAxIDUuMyAxLjUgNCAyLjVWMUgwdjhoMy4xTDEgOS42bC4zIDFjMS4xIDQgNS4zIDYuMyA5LjMgNS4yczYuMy01LjMgNS4yLTkuM0MxNC44IDMuMiAxMS45IDEgOC41IDF6bTAgMTFjLTEuNiAwLTIuOS0xLTMuNC0yLjVMNSA5aDNWNWguNUMxMC40IDUgMTIgNi42IDEyIDguNVMxMC40IDEyIDguNSAxMnoiLz48L2c+PHBhdGggY2xhc3M9InN0MyIgZD0iTTE1IDhjMCAzLjYtMi45IDYuNS02LjUgNi41LTIuOSAwLTUuNS0xLjktNi4zLTQuN2wxLjktLjVjLjcgMi40IDMuMiAzLjggNS42IDMuMSAyLjQtLjcgMy44LTMuMiAzLjEtNS42UzkuNyAzIDcuMyAzLjdjLTEgLjMtMS45LjktMi41IDEuOEg3djJIMXYtNmgydjMuMWMxLjktMyA1LjktNCA4LjktMi4xQzEzLjggMy43IDE1IDUuNyAxNSA4eiIgaWQ9Imljb25CZyIvPjwvc3ZnPgo="
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/src/browser/style/start-inverse.svg":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@theia/debug/src/browser/style/start-inverse.svg ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PCEtLUNvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLi0tPgo8IS0tQ29weXJpZ2h0IChDKSAyMDE4IFR5cGVGb3ggYW5kIG90aGVycy4tLT4KPCEtLUxpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTYgMTYiPjxkZWZzPjxzdHlsZT4uaWNvbi1jYW52YXMtdHJhbnNwYXJlbnQsLmljb24tdnMtb3V0e2ZpbGw6IzI1MjUyNjt9Lmljb24tY2FudmFzLXRyYW5zcGFyZW50e29wYWNpdHk6MDt9Lmljb24tdnMtYWN0aW9uLWdyZWVue2ZpbGw6Izg5ZDE4NTt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmNvbnRpbnVlPC90aXRsZT48ZyBpZD0iY2FudmFzIj48cGF0aCBjbGFzcz0iaWNvbi1jYW52YXMtdHJhbnNwYXJlbnQiIGQ9Ik0xNiwwVjE2SDBWMFoiLz48L2c+PGcgaWQ9Im91dGxpbmUiIHN0eWxlPSJkaXNwbGF5OiBub25lOyI+PHBhdGggY2xhc3M9Imljb24tdnMtb3V0IiBkPSJNMTQuMzM0LDgsMy42NjcsMTZIM1YwaC42NjdaIi8+PC9nPjxnIGlkPSJpY29uQmciPjxwYXRoIGNsYXNzPSJpY29uLXZzLWFjdGlvbi1ncmVlbiIgZD0iTTQsMS41djEzTDEyLjY2Nyw4LDQsMS41WiIvPjwvZz48L3N2Zz4K"
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/src/browser/style/start.svg":
+/*!***************************************************************!*\
+  !*** ./node_modules/@theia/debug/src/browser/style/start.svg ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PCEtLUNvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLi0tPgo8IS0tQ29weXJpZ2h0IChDKSAyMDE4IFR5cGVGb3ggYW5kIG90aGVycy4tLT4KPCEtLUxpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTYgMTYiPjxkZWZzPjxzdHlsZT4uaWNvbi1jYW52YXMtdHJhbnNwYXJlbnQsLmljb24tdnMtb3V0e2ZpbGw6I2Y2ZjZmNjt9Lmljb24tY2FudmFzLXRyYW5zcGFyZW50e29wYWNpdHk6MDt9Lmljb24tdnMtYWN0aW9uLWdyZWVue2ZpbGw6IzM4OGEzNDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmNvbnRpbnVlPC90aXRsZT48ZyBpZD0iY2FudmFzIj48cGF0aCBjbGFzcz0iaWNvbi1jYW52YXMtdHJhbnNwYXJlbnQiIGQ9Ik0xNiwwVjE2SDBWMFoiLz48L2c+PGcgaWQ9Im91dGxpbmUiIHN0eWxlPSJkaXNwbGF5OiBub25lOyI+PHBhdGggY2xhc3M9Imljb24tdnMtb3V0IiBkPSJNMTQuMzM0LDgsMy42NjcsMTZIM1YwaC42NjdaIi8+PC9nPjxnIGlkPSJpY29uQmciPjxwYXRoIGNsYXNzPSJpY29uLXZzLWFjdGlvbi1ncmVlbiIgZD0iTTQsMS41djEzTDEyLjY2Nyw4LDQsMS41WiIvPjwvZz48L3N2Zz4K"
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/src/browser/style/step-into-inverse.svg":
+/*!***************************************************************************!*\
+  !*** ./node_modules/@theia/debug/src/browser/style/step-into-inverse.svg ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PCEtLUNvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLi0tPgo8IS0tQ29weXJpZ2h0IChDKSAyMDE4IFR5cGVGb3ggYW5kIG90aGVycy4tLT4KPCEtLUxpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTYgMTYiPjxkZWZzPjxzdHlsZT4uaWNvbi1jYW52YXMtdHJhbnNwYXJlbnQsLmljb24tdnMtb3V0e2ZpbGw6IzI1MjUyNjt9Lmljb24tY2FudmFzLXRyYW5zcGFyZW50e29wYWNpdHk6MDt9Lmljb24tdnMtYmd7ZmlsbDojYzVjNWM1O30uaWNvbi12cy1hY3Rpb24tYmx1ZXtmaWxsOiM3NWJlZmY7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5zdGVwLWludG88L3RpdGxlPjxnIGlkPSJjYW52YXMiPjxwYXRoIGNsYXNzPSJpY29uLWNhbnZhcy10cmFuc3BhcmVudCIgZD0iTTE2LDBWMTZIMFYwWiIvPjwvZz48ZyBpZD0ib3V0bGluZSIgc3R5bGU9ImRpc3BsYXk6IG5vbmU7Ij48cGF0aCBjbGFzcz0iaWNvbi12cy1vdXQiIGQ9Ik0xMSwxM2EzLDMsMCwxLDEtNC4zNzUtMi42NTFMMi41NTYsNi4yOCw1LjAzLDMuODA2bC45Ny45N1YwaDRWNC43NzVsLjk3LS45N0wxMy40NDQsNi4yOCw5LjM3NSwxMC4zNDlBMi45OTEsMi45OTEsMCwwLDEsMTEsMTNaIi8+PC9nPjxnIGlkPSJpY29uQmciPjxwYXRoIGNsYXNzPSJpY29uLXZzLWJnIiBkPSJNOCwxMWEyLDIsMCwxLDEtMiwyQTIsMiwwLDAsMSw4LDExWiIvPjwvZz48ZyBpZD0iY29sb3JBY3Rpb24iPjxwYXRoIGNsYXNzPSJpY29uLXZzLWFjdGlvbi1ibHVlIiBkPSJNMTIuMDMsNi4yOCw4LDEwLjMxMSwzLjk3LDYuMjgsNS4wMyw1LjIyLDcsNy4xODlWMUg5VjcuMTg5bDEuOTctMS45N1oiLz48L2c+PC9zdmc+Cg=="
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/src/browser/style/step-into.svg":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@theia/debug/src/browser/style/step-into.svg ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PCEtLUNvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLi0tPgo8IS0tQ29weXJpZ2h0IChDKSAyMDE4IFR5cGVGb3ggYW5kIG90aGVycy4tLT4KPCEtLUxpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTYgMTYiPjxkZWZzPjxzdHlsZT4uaWNvbi1jYW52YXMtdHJhbnNwYXJlbnQsLmljb24tdnMtb3V0e2ZpbGw6I2Y2ZjZmNjt9Lmljb24tY2FudmFzLXRyYW5zcGFyZW50e29wYWNpdHk6MDt9Lmljb24tdnMtYmd7ZmlsbDojNDI0MjQyO30uaWNvbi12cy1hY3Rpb24tYmx1ZXtmaWxsOiMwMDUzOWM7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5zdGVwLWludG88L3RpdGxlPjxnIGlkPSJjYW52YXMiPjxwYXRoIGNsYXNzPSJpY29uLWNhbnZhcy10cmFuc3BhcmVudCIgZD0iTTE2LDBWMTZIMFYwWiIvPjwvZz48ZyBpZD0ib3V0bGluZSIgc3R5bGU9ImRpc3BsYXk6IG5vbmU7Ij48cGF0aCBjbGFzcz0iaWNvbi12cy1vdXQiIGQ9Ik0xMSwxM2EzLDMsMCwxLDEtNC4zNzUtMi42NTFMMi41NTYsNi4yOCw1LjAzLDMuODA2bC45Ny45N1YwaDRWNC43NzVsLjk3LS45N0wxMy40NDQsNi4yOCw5LjM3NSwxMC4zNDlBMi45OTEsMi45OTEsMCwwLDEsMTEsMTNaIi8+PC9nPjxnIGlkPSJpY29uQmciPjxwYXRoIGNsYXNzPSJpY29uLXZzLWJnIiBkPSJNOCwxMWEyLDIsMCwxLDEtMiwyQTIsMiwwLDAsMSw4LDExWiIvPjwvZz48ZyBpZD0iY29sb3JBY3Rpb24iPjxwYXRoIGNsYXNzPSJpY29uLXZzLWFjdGlvbi1ibHVlIiBkPSJNMTIuMDMsNi4yOCw4LDEwLjMxMSwzLjk3LDYuMjgsNS4wMyw1LjIyLDcsNy4xODlWMUg5VjcuMTg5bDEuOTctMS45N1oiLz48L2c+PC9zdmc+Cg=="
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/src/browser/style/step-out-inverse.svg":
+/*!**************************************************************************!*\
+  !*** ./node_modules/@theia/debug/src/browser/style/step-out-inverse.svg ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PCEtLUNvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLi0tPgo8IS0tQ29weXJpZ2h0IChDKSAyMDE4IFR5cGVGb3ggYW5kIG90aGVycy4tLT4KPCEtLUxpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTYgMTYiPjxkZWZzPjxzdHlsZT4uaWNvbi1jYW52YXMtdHJhbnNwYXJlbnQsLmljb24tdnMtb3V0e2ZpbGw6IzI1MjUyNjt9Lmljb24tY2FudmFzLXRyYW5zcGFyZW50e29wYWNpdHk6MDt9Lmljb24tdnMtYmd7ZmlsbDojYzVjNWM1O30uaWNvbi12cy1hY3Rpb24tYmx1ZXtmaWxsOiM3NWJlZmY7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5zdGVwLW91dDwvdGl0bGU+PGcgaWQ9ImNhbnZhcyI+PHBhdGggY2xhc3M9Imljb24tY2FudmFzLXRyYW5zcGFyZW50IiBkPSJNMTYsMTZIMFYwSDE2WiIvPjwvZz48ZyBpZD0ib3V0bGluZSIgc3R5bGU9ImRpc3BsYXk6IG5vbmU7Ij48cGF0aCBjbGFzcz0iaWNvbi12cy1vdXQiIGQ9Ik0xMCwxMC43OGEzLDMsMCwxLDEtNCwwVjYuMjI1bC0uOTcuOTdMMi41NTYsNC43Miw3LjI3NSwwSDguNzI1bDQuNzIsNC43MkwxMC45Nyw3LjE5NCwxMCw2LjIyNVoiLz48L2c+PGcgaWQ9Imljb25CZyI+PHBhdGggY2xhc3M9Imljb24tdnMtYmciIGQ9Ik04LDExYTIsMiwwLDEsMS0yLDJBMiwyLDAsMCwxLDgsMTFaIi8+PC9nPjxnIGlkPSJjb2xvckFjdGlvbiI+PHBhdGggY2xhc3M9Imljb24tdnMtYWN0aW9uLWJsdWUiIGQ9Ik0zLjk3LDQuNzIsOCwuNjg5bDQuMDMsNC4wM0wxMC45Nyw1Ljc4LDksMy44MTFWMTBIN1YzLjgxMUw1LjAzLDUuNzhaIi8+PC9nPjwvc3ZnPgo="
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/src/browser/style/step-out.svg":
+/*!******************************************************************!*\
+  !*** ./node_modules/@theia/debug/src/browser/style/step-out.svg ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PCEtLUNvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLi0tPgo8IS0tQ29weXJpZ2h0IChDKSAyMDE4IFR5cGVGb3ggYW5kIG90aGVycy4tLT4KPCEtLUxpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTYgMTYiPjxkZWZzPjxzdHlsZT4uaWNvbi1jYW52YXMtdHJhbnNwYXJlbnQsLmljb24tdnMtb3V0e2ZpbGw6I2Y2ZjZmNjt9Lmljb24tY2FudmFzLXRyYW5zcGFyZW50e29wYWNpdHk6MDt9Lmljb24tdnMtYmd7ZmlsbDojNDI0MjQyO30uaWNvbi12cy1hY3Rpb24tYmx1ZXtmaWxsOiMwMDUzOWM7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5zdGVwLW91dDwvdGl0bGU+PGcgaWQ9ImNhbnZhcyI+PHBhdGggY2xhc3M9Imljb24tY2FudmFzLXRyYW5zcGFyZW50IiBkPSJNMTYsMTZIMFYwSDE2WiIvPjwvZz48ZyBpZD0ib3V0bGluZSIgc3R5bGU9ImRpc3BsYXk6IG5vbmU7Ij48cGF0aCBjbGFzcz0iaWNvbi12cy1vdXQiIGQ9Ik0xMCwxMC43OGEzLDMsMCwxLDEtNCwwVjYuMjI1bC0uOTcuOTdMMi41NTYsNC43Miw3LjI3NSwwSDguNzI1bDQuNzIsNC43MkwxMC45Nyw3LjE5NCwxMCw2LjIyNVoiLz48L2c+PGcgaWQ9Imljb25CZyI+PHBhdGggY2xhc3M9Imljb24tdnMtYmciIGQ9Ik04LDExYTIsMiwwLDEsMS0yLDJBMiwyLDAsMCwxLDgsMTFaIi8+PC9nPjxnIGlkPSJjb2xvckFjdGlvbiI+PHBhdGggY2xhc3M9Imljb24tdnMtYWN0aW9uLWJsdWUiIGQ9Ik0zLjk3LDQuNzIsOCwuNjg5bDQuMDMsNC4wM0wxMC45Nyw1Ljc4LDksMy44MTFWMTBIN1YzLjgxMUw1LjAzLDUuNzhaIi8+PC9nPjwvc3ZnPgo="
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/src/browser/style/step-over-inverse.svg":
+/*!***************************************************************************!*\
+  !*** ./node_modules/@theia/debug/src/browser/style/step-over-inverse.svg ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PCEtLUNvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLi0tPgo8IS0tQ29weXJpZ2h0IChDKSAyMDE4IFR5cGVGb3ggYW5kIG90aGVycy4tLT4KPCEtLUxpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTYgMTYiPjxkZWZzPjxzdHlsZT4uaWNvbi1jYW52YXMtdHJhbnNwYXJlbnQsLmljb24tdnMtb3V0e2ZpbGw6IzI1MjUyNjt9Lmljb24tY2FudmFzLXRyYW5zcGFyZW50e29wYWNpdHk6MDt9Lmljb24tdnMtYmd7ZmlsbDojYzVjNWM1O30uaWNvbi12cy1hY3Rpb24tYmx1ZXtmaWxsOiM3NWJlZmY7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5zdGVwLW92ZXI8L3RpdGxlPjxnIGlkPSJjYW52YXMiPjxwYXRoIGNsYXNzPSJpY29uLWNhbnZhcy10cmFuc3BhcmVudCIgZD0iTTE2LDBWMTZIMFYwWiIvPjwvZz48ZyBpZD0ib3V0bGluZSIgc3R5bGU9ImRpc3BsYXk6IG5vbmU7Ij48cGF0aCBjbGFzcz0iaWNvbi12cy1vdXQiIGQ9Ik0xMSwxM2EzLDMsMCwxLDEtMy0zQTMsMywwLDAsMSwxMSwxM1pNMTIsMVYyLjUyN0E3LjQ2Niw3LjQ2NiwwLDAsMCwuMDI4LDcuOTIzTDAsOC4yOTNWOUgzLjk0NWwuMS0uODg4QTMuNDc1LDMuNDc1LDAsMCwxLDgsNS4wMzZWOWg4VjFaIi8+PC9nPjxnIGlkPSJpY29uQmciPjxwYXRoIGNsYXNzPSJpY29uLXZzLWJnIiBkPSJNMTAsMTNhMiwyLDAsMSwxLTItMkEyLDIsMCwwLDEsMTAsMTNaIi8+PC9nPjxnIGlkPSJjb2xvckFjdGlvbiI+PHBhdGggY2xhc3M9Imljb24tdnMtYWN0aW9uLWJsdWUiIGQ9Ik0xNSwyVjhIOVY2aDIuMjM3QTQuNDgxLDQuNDgxLDAsMCwwLDMuMDUxLDhIMS4wMjVBNi40ODIsNi40ODIsMCwwLDEsMTMsNS4wNjlWMloiLz48L2c+PC9zdmc+Cg=="
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/src/browser/style/step-over.svg":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@theia/debug/src/browser/style/step-over.svg ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PCEtLUNvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLi0tPgo8IS0tQ29weXJpZ2h0IChDKSAyMDE4IFR5cGVGb3ggYW5kIG90aGVycy4tLT4KPCEtLUxpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTYgMTYiPjxkZWZzPjxzdHlsZT4uaWNvbi1jYW52YXMtdHJhbnNwYXJlbnQsLmljb24tdnMtb3V0e2ZpbGw6I2Y2ZjZmNjt9Lmljb24tY2FudmFzLXRyYW5zcGFyZW50e29wYWNpdHk6MDt9Lmljb24tdnMtYmd7ZmlsbDojNDI0MjQyO30uaWNvbi12cy1hY3Rpb24tYmx1ZXtmaWxsOiMwMDUzOWM7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5zdGVwLW92ZXI8L3RpdGxlPjxnIGlkPSJjYW52YXMiPjxwYXRoIGNsYXNzPSJpY29uLWNhbnZhcy10cmFuc3BhcmVudCIgZD0iTTE2LDBWMTZIMFYwWiIvPjwvZz48ZyBpZD0ib3V0bGluZSIgc3R5bGU9ImRpc3BsYXk6IG5vbmU7Ij48cGF0aCBjbGFzcz0iaWNvbi12cy1vdXQiIGQ9Ik0xMSwxM2EzLDMsMCwxLDEtMy0zQTMsMywwLDAsMSwxMSwxM1pNMTIsMVYyLjUyN0E3LjQ2Niw3LjQ2NiwwLDAsMCwuMDI4LDcuOTIzTDAsOC4yOTNWOUgzLjk0NWwuMS0uODg4QTMuNDc1LDMuNDc1LDAsMCwxLDgsNS4wMzZWOWg4VjFaIi8+PC9nPjxnIGlkPSJpY29uQmciPjxwYXRoIGNsYXNzPSJpY29uLXZzLWJnIiBkPSJNMTAsMTNhMiwyLDAsMSwxLTItMkEyLDIsMCwwLDEsMTAsMTNaIi8+PC9nPjxnIGlkPSJjb2xvckFjdGlvbiI+PHBhdGggY2xhc3M9Imljb24tdnMtYWN0aW9uLWJsdWUiIGQ9Ik0xNSwyVjhIOVY2aDIuMjM3QTQuNDgxLDQuNDgxLDAsMCwwLDMuMDUxLDhIMS4wMjVBNi40ODIsNi40ODIsMCwwLDEsMTMsNS4wNjlWMloiLz48L2c+PC9zdmc+Cg=="
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/src/browser/style/stop-inverse.svg":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@theia/debug/src/browser/style/stop-inverse.svg ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PCEtLUNvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLi0tPgo8IS0tQ29weXJpZ2h0IChDKSAyMDE4IFR5cGVGb3ggYW5kIG90aGVycy4tLT4KPCEtLUxpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTYgMTYiPjxkZWZzPjxzdHlsZT4uaWNvbi1jYW52YXMtdHJhbnNwYXJlbnQsLmljb24tdnMtb3V0e2ZpbGw6IzI1MjUyNjt9Lmljb24tY2FudmFzLXRyYW5zcGFyZW50e29wYWNpdHk6MDt9Lmljb24tdnMtYWN0aW9uLXJlZHtmaWxsOiNmNDg3NzE7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5zdG9wPC90aXRsZT48ZyBpZD0iY2FudmFzIj48cGF0aCBjbGFzcz0iaWNvbi1jYW52YXMtdHJhbnNwYXJlbnQiIGQ9Ik0xNiwwVjE2SDBWMFoiLz48L2c+PGcgaWQ9Im91dGxpbmUiIHN0eWxlPSJkaXNwbGF5OiBub25lOyI+PHBhdGggY2xhc3M9Imljb24tdnMtb3V0IiBkPSJNMTQsMlYxNEgyVjJaIi8+PC9nPjxnIGlkPSJpY29uQmciPjxwYXRoIGNsYXNzPSJpY29uLXZzLWFjdGlvbi1yZWQiIGQ9Ik0xMywzVjEzSDNWM1oiLz48L2c+PC9zdmc+Cg=="
+
+/***/ }),
+
+/***/ "./node_modules/@theia/debug/src/browser/style/stop.svg":
+/*!**************************************************************!*\
+  !*** ./node_modules/@theia/debug/src/browser/style/stop.svg ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PCEtLUNvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLi0tPgo8IS0tQ29weXJpZ2h0IChDKSAyMDE4IFR5cGVGb3ggYW5kIG90aGVycy4tLT4KPCEtLUxpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTYgMTYiPjxkZWZzPjxzdHlsZT4uaWNvbi1jYW52YXMtdHJhbnNwYXJlbnQsLmljb24tdnMtb3V0e2ZpbGw6I2Y2ZjZmNjt9Lmljb24tY2FudmFzLXRyYW5zcGFyZW50e29wYWNpdHk6MDt9Lmljb24tdnMtYWN0aW9uLXJlZHtmaWxsOiNhMTI2MGQ7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5zdG9wPC90aXRsZT48ZyBpZD0iY2FudmFzIj48cGF0aCBjbGFzcz0iaWNvbi1jYW52YXMtdHJhbnNwYXJlbnQiIGQ9Ik0xNiwwVjE2SDBWMFoiLz48L2c+PGcgaWQ9Im91dGxpbmUiIHN0eWxlPSJkaXNwbGF5OiBub25lOyI+PHBhdGggY2xhc3M9Imljb24tdnMtb3V0IiBkPSJNMTQsMlYxNEgyVjJaIi8+PC9nPjxnIGlkPSJpY29uQmciPjxwYXRoIGNsYXNzPSJpY29uLXZzLWFjdGlvbi1yZWQiIGQ9Ik0xMywzVjEzSDNWM1oiLz48L2c+PC9zdmc+Cg=="
+
+/***/ }),
+
+/***/ "./node_modules/@theia/monaco/lib/browser/monaco-editor-zone-widget.js":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/@theia/monaco/lib/browser/monaco-editor-zone-widget.js ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/********************************************************************************
+ * Copyright (C) 2018 TypeFox and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation and others. All rights reserved.
+ *  Licensed under the MIT License. See https://github.com/Microsoft/vscode/blob/master/LICENSE.txt for license information.
+ *--------------------------------------------------------------------------------------------*/
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MonacoEditorZoneWidget = void 0;
+var core_1 = __webpack_require__(/*! @theia/core */ "./node_modules/@theia/core/lib/common/index.js");
+var MonacoEditorZoneWidget = /** @class */ (function () {
+    function MonacoEditorZoneWidget(editor) {
+        var _this = this;
+        this.editor = editor;
+        this.zoneNode = document.createElement('div');
+        this.containerNode = document.createElement('div');
+        this.onDidLayoutChangeEmitter = new core_1.Emitter();
+        this.onDidLayoutChange = this.onDidLayoutChangeEmitter.event;
+        this.toHide = new core_1.DisposableCollection();
+        this.toDispose = new core_1.DisposableCollection(this.onDidLayoutChangeEmitter, this.toHide);
+        this.zoneNode.classList.add('zone-widget');
+        this.containerNode.classList.add('zone-widget-container');
+        this.zoneNode.appendChild(this.containerNode);
+        this.updateWidth();
+        this.toDispose.push(this.editor.onDidLayoutChange(function (info) { return _this.updateWidth(info); }));
+    }
+    MonacoEditorZoneWidget.prototype.dispose = function () {
+        this.toDispose.dispose();
+    };
+    Object.defineProperty(MonacoEditorZoneWidget.prototype, "options", {
+        get: function () {
+            return this.viewZone ? this._options : undefined;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    MonacoEditorZoneWidget.prototype.hide = function () {
+        this.toHide.dispose();
+    };
+    MonacoEditorZoneWidget.prototype.show = function (options) {
+        var _this = this;
+        var _a = this._options = __assign({ showFrame: true }, options), afterLineNumber = _a.afterLineNumber, afterColumn = _a.afterColumn, heightInLines = _a.heightInLines;
+        var lineHeight = this.editor.getOption(monaco.editor.EditorOption.lineHeight);
+        var maxHeightInLines = (this.editor.getLayoutInfo().height / lineHeight) * .8;
+        if (heightInLines >= maxHeightInLines) {
+            heightInLines = maxHeightInLines;
+        }
+        this.toHide.dispose();
+        this.editor.changeViewZones(function (accessor) {
+            _this.zoneNode.style.top = '-1000px';
+            var domNode = document.createElement('div');
+            domNode.style.overflow = 'hidden';
+            var zone = {
+                domNode: domNode,
+                afterLineNumber: afterLineNumber,
+                afterColumn: afterColumn,
+                heightInLines: heightInLines,
+                onDomNodeTop: function (zoneTop) { return _this.updateTop(zoneTop); },
+                onComputedHeight: function (zoneHeight) { return _this.updateHeight(zoneHeight); }
+            };
+            _this.viewZone = Object.assign(zone, {
+                id: accessor.addZone(zone)
+            });
+            var id = _this.viewZone.id;
+            _this.toHide.push(core_1.Disposable.create(function () {
+                _this.editor.changeViewZones(function (a) { return a.removeZone(id); });
+                _this.viewZone = undefined;
+            }));
+            var widget = {
+                getId: function () { return 'editor-zone-widget-' + id; },
+                getDomNode: function () { return _this.zoneNode; },
+                // eslint-disable-next-line no-null/no-null
+                getPosition: function () { return null; }
+            };
+            _this.editor.addOverlayWidget(widget);
+            _this.toHide.push(core_1.Disposable.create(function () { return _this.editor.removeOverlayWidget(widget); }));
+        });
+        this.containerNode.style.top = 0 + 'px';
+        this.containerNode.style.overflow = 'hidden';
+        this.updateContainerHeight(heightInLines * lineHeight);
+        var model = this.editor.getModel();
+        if (model) {
+            var revealLineNumber = Math.min(model.getLineCount(), Math.max(1, afterLineNumber + 1));
+            this.editor.revealLine(revealLineNumber, monaco.editor.ScrollType.Smooth);
+        }
+    };
+    MonacoEditorZoneWidget.prototype.layout = function (heightInLines) {
+        if (this.viewZone && this.viewZone.heightInLines !== heightInLines) {
+            this.viewZone.heightInLines = heightInLines;
+            var id_1 = this.viewZone.id;
+            this.editor.changeViewZones(function (accessor) { return accessor.layoutZone(id_1); });
+        }
+    };
+    MonacoEditorZoneWidget.prototype.updateTop = function (top) {
+        this.zoneNode.style.top = top + 'px';
+    };
+    MonacoEditorZoneWidget.prototype.updateHeight = function (zoneHeight) {
+        this.zoneNode.style.height = zoneHeight + 'px';
+        this.updateContainerHeight(zoneHeight);
+    };
+    MonacoEditorZoneWidget.prototype.updateContainerHeight = function (zoneHeight) {
+        var _a = this.computeContainerHeight(zoneHeight), frameWidth = _a.frameWidth, height = _a.height;
+        this.containerNode.style.height = height + 'px';
+        this.containerNode.style.borderTopWidth = frameWidth + 'px';
+        this.containerNode.style.borderBottomWidth = frameWidth + 'px';
+        var width = this.computeWidth();
+        this.onDidLayoutChangeEmitter.fire({ height: height, width: width });
+    };
+    MonacoEditorZoneWidget.prototype.computeContainerHeight = function (zoneHeight) {
+        var lineHeight = this.editor.getOption(monaco.editor.EditorOption.lineHeight);
+        var frameWidth = this._options && this._options.frameWidth;
+        var frameThickness = this._options && this._options.showFrame ? Math.round(lineHeight / 9) : 0;
+        return {
+            frameWidth: frameWidth !== undefined ? frameWidth : frameThickness,
+            height: zoneHeight - 2 * frameThickness
+        };
+    };
+    MonacoEditorZoneWidget.prototype.updateWidth = function (info) {
+        if (info === void 0) { info = this.editor.getLayoutInfo(); }
+        var width = this.computeWidth(info);
+        this.zoneNode.style.width = width + 'px';
+        this.zoneNode.style.left = this.computeLeft(info) + 'px';
+    };
+    MonacoEditorZoneWidget.prototype.computeWidth = function (info) {
+        if (info === void 0) { info = this.editor.getLayoutInfo(); }
+        return info.width - info.minimapWidth - info.verticalScrollbarWidth;
+    };
+    MonacoEditorZoneWidget.prototype.computeLeft = function (info) {
+        if (info === void 0) { info = this.editor.getLayoutInfo(); }
+        // If minimap is to the left, we move beyond it
+        if (info.minimapWidth > 0 && info.minimapLeft === 0) {
+            return info.minimapWidth;
+        }
+        return 0;
+    };
+    return MonacoEditorZoneWidget;
+}());
+exports.MonacoEditorZoneWidget = MonacoEditorZoneWidget;
+//# sourceMappingURL=monaco-editor-zone-widget.js.map
+
+/***/ }),
+
+/***/ "./node_modules/anser/lib/index.js":
 /*!*****************************************!*\
-  !*** ./node_modules/yallist/yallist.js ***!
+  !*** ./node_modules/anser/lib/index.js ***!
   \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-module.exports = Yallist
 
-Yallist.Node = Node
-Yallist.create = Yallist
+// This file was originally written by @drudru (https://github.com/drudru/ansi_up), MIT, 2011
 
-function Yallist (list) {
-  var self = this
-  if (!(self instanceof Yallist)) {
-    self = new Yallist()
-  }
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-  self.tail = null
-  self.head = null
-  self.length = 0
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-  if (list && typeof list.forEach === 'function') {
-    list.forEach(function (item) {
-      self.push(item)
-    })
-  } else if (arguments.length > 0) {
-    for (var i = 0, l = arguments.length; i < l; i++) {
-      self.push(arguments[i])
+var ANSI_COLORS = [[{ color: "0, 0, 0", "class": "ansi-black" }, { color: "187, 0, 0", "class": "ansi-red" }, { color: "0, 187, 0", "class": "ansi-green" }, { color: "187, 187, 0", "class": "ansi-yellow" }, { color: "0, 0, 187", "class": "ansi-blue" }, { color: "187, 0, 187", "class": "ansi-magenta" }, { color: "0, 187, 187", "class": "ansi-cyan" }, { color: "255,255,255", "class": "ansi-white" }], [{ color: "85, 85, 85", "class": "ansi-bright-black" }, { color: "255, 85, 85", "class": "ansi-bright-red" }, { color: "0, 255, 0", "class": "ansi-bright-green" }, { color: "255, 255, 85", "class": "ansi-bright-yellow" }, { color: "85, 85, 255", "class": "ansi-bright-blue" }, { color: "255, 85, 255", "class": "ansi-bright-magenta" }, { color: "85, 255, 255", "class": "ansi-bright-cyan" }, { color: "255, 255, 255", "class": "ansi-bright-white" }]];
+
+var Anser = function () {
+    _createClass(Anser, null, [{
+        key: "escapeForHtml",
+
+
+        /**
+         * Anser.escapeForHtml
+         * Escape the input HTML.
+         *
+         * This does the minimum escaping of text to make it compliant with HTML.
+         * In particular, the '&','<', and '>' characters are escaped. This should
+         * be run prior to `ansiToHtml`.
+         *
+         * @name Anser.escapeForHtml
+         * @function
+         * @param {String} txt The input text (containing the ANSI snippets).
+         * @returns {String} The escaped html.
+         */
+        value: function escapeForHtml(txt) {
+            return new Anser().escapeForHtml(txt);
+        }
+
+        /**
+         * Anser.linkify
+         * Adds the links in the HTML.
+         *
+         * This replaces any links in the text with anchor tags that display the
+         * link. The links should have at least one whitespace character
+         * surrounding it. Also, you should apply this after you have run
+         * `ansiToHtml` on the text.
+         *
+         * @name Anser.linkify
+         * @function
+         * @param {String} txt The input text.
+         * @returns {String} The HTML containing the <a> tags (unescaped).
+         */
+
+    }, {
+        key: "linkify",
+        value: function linkify(txt) {
+            return new Anser().linkify(txt);
+        }
+
+        /**
+         * Anser.ansiToHtml
+         * This replaces ANSI terminal escape codes with SPAN tags that wrap the
+         * content.
+         *
+         * This function only interprets ANSI SGR (Select Graphic Rendition) codes
+         * that can be represented in HTML.
+         * For example, cursor movement codes are ignored and hidden from output.
+         * The default style uses colors that are very close to the prescribed
+         * standard. The standard assumes that the text will have a black
+         * background. These colors are set as inline styles on the SPAN tags.
+         *
+         * Another option is to set `use_classes: true` in the options argument.
+         * This will instead set classes on the spans so the colors can be set via
+         * CSS. The class names used are of the format `ansi-*-fg/bg` and
+         * `ansi-bright-*-fg/bg` where `*` is the color name,
+         * i.e black/red/green/yellow/blue/magenta/cyan/white.
+         *
+         * @name Anser.ansiToHtml
+         * @function
+         * @param {String} txt The input text.
+         * @param {Object} options The options passed to the ansiToHTML method.
+         * @returns {String} The HTML output.
+         */
+
+    }, {
+        key: "ansiToHtml",
+        value: function ansiToHtml(txt, options) {
+            return new Anser().ansiToHtml(txt, options);
+        }
+
+        /**
+         * Anser.ansiToJson
+         * Converts ANSI input into JSON output.
+         *
+         * @name Anser.ansiToJson
+         * @function
+         * @param {String} txt The input text.
+         * @param {Object} options The options passed to the ansiToHTML method.
+         * @returns {String} The HTML output.
+         */
+
+    }, {
+        key: "ansiToJson",
+        value: function ansiToJson(txt, options) {
+            return new Anser().ansiToJson(txt, options);
+        }
+
+        /**
+         * Anser.ansiToText
+         * Converts ANSI input into text output.
+         *
+         * @name Anser.ansiToText
+         * @function
+         * @param {String} txt The input text.
+         * @returns {String} The text output.
+         */
+
+    }, {
+        key: "ansiToText",
+        value: function ansiToText(txt) {
+            return new Anser().ansiToText(txt);
+        }
+
+        /**
+         * Anser
+         * The `Anser` class.
+         *
+         * @name Anser
+         * @function
+         * @returns {Anser}
+         */
+
+    }]);
+
+    function Anser() {
+        _classCallCheck(this, Anser);
+
+        this.fg = this.bg = this.fg_truecolor = this.bg_truecolor = null;
+        this.bright = 0;
     }
-  }
 
-  return self
-}
+    /**
+     * setupPalette
+     * Sets up the palette.
+     *
+     * @name setupPalette
+     * @function
+     */
 
-Yallist.prototype.removeNode = function (node) {
-  if (node.list !== this) {
-    throw new Error('removing node which does not belong to this list')
-  }
 
-  var next = node.next
-  var prev = node.prev
+    _createClass(Anser, [{
+        key: "setupPalette",
+        value: function setupPalette() {
+            this.PALETTE_COLORS = [];
 
-  if (next) {
-    next.prev = prev
-  }
+            // Index 0..15 : System color
+            for (var i = 0; i < 2; ++i) {
+                for (var j = 0; j < 8; ++j) {
+                    this.PALETTE_COLORS.push(ANSI_COLORS[i][j].color);
+                }
+            }
 
-  if (prev) {
-    prev.next = next
-  }
+            // Index 16..231 : RGB 6x6x6
+            // https://gist.github.com/jasonm23/2868981#file-xterm-256color-yaml
+            var levels = [0, 95, 135, 175, 215, 255];
+            var format = function format(r, g, b) {
+                return levels[r] + ", " + levels[g] + ", " + levels[b];
+            };
+            var r = void 0,
+                g = void 0,
+                b = void 0;
+            for (var _r = 0; _r < 6; ++_r) {
+                for (var _g = 0; _g < 6; ++_g) {
+                    for (var _b = 0; _b < 6; ++_b) {
+                        this.PALETTE_COLORS.push(format(_r, _g, _b));
+                    }
+                }
+            }
 
-  if (node === this.head) {
-    this.head = next
-  }
-  if (node === this.tail) {
-    this.tail = prev
-  }
+            // Index 232..255 : Grayscale
+            var level = 8;
+            for (var _i = 0; _i < 24; ++_i, level += 10) {
+                this.PALETTE_COLORS.push(format(level, level, level));
+            }
+        }
 
-  node.list.length--
-  node.next = null
-  node.prev = null
-  node.list = null
+        /**
+         * escapeForHtml
+         * Escapes the input text.
+         *
+         * @name escapeForHtml
+         * @function
+         * @param {String} txt The input text.
+         * @returns {String} The escpaed HTML output.
+         */
 
-  return next
-}
+    }, {
+        key: "escapeForHtml",
+        value: function escapeForHtml(txt) {
+            return txt.replace(/[&<>]/gm, function (str) {
+                return str == "&" ? "&amp;" : str == "<" ? "&lt;" : str == ">" ? "&gt;" : "";
+            });
+        }
 
-Yallist.prototype.unshiftNode = function (node) {
-  if (node === this.head) {
-    return
-  }
+        /**
+         * linkify
+         * Adds HTML link elements.
+         *
+         * @name linkify
+         * @function
+         * @param {String} txt The input text.
+         * @returns {String} The HTML output containing link elements.
+         */
 
-  if (node.list) {
-    node.list.removeNode(node)
-  }
+    }, {
+        key: "linkify",
+        value: function linkify(txt) {
+            return txt.replace(/(https?:\/\/[^\s]+)/gm, function (str) {
+                return "<a href=\"" + str + "\">" + str + "</a>";
+            });
+        }
 
-  var head = this.head
-  node.list = this
-  node.next = head
-  if (head) {
-    head.prev = node
-  }
+        /**
+         * ansiToHtml
+         * Converts ANSI input into HTML output.
+         *
+         * @name ansiToHtml
+         * @function
+         * @param {String} txt The input text.
+         * @param {Object} options The options passed ot the `process` method.
+         * @returns {String} The HTML output.
+         */
 
-  this.head = node
-  if (!this.tail) {
-    this.tail = node
-  }
-  this.length++
-}
+    }, {
+        key: "ansiToHtml",
+        value: function ansiToHtml(txt, options) {
+            return this.process(txt, options, true);
+        }
 
-Yallist.prototype.pushNode = function (node) {
-  if (node === this.tail) {
-    return
-  }
+        /**
+         * ansiToJson
+         * Converts ANSI input into HTML output.
+         *
+         * @name ansiToJson
+         * @function
+         * @param {String} txt The input text.
+         * @param {Object} options The options passed ot the `process` method.
+         * @returns {String} The JSON output.
+         */
 
-  if (node.list) {
-    node.list.removeNode(node)
-  }
+    }, {
+        key: "ansiToJson",
+        value: function ansiToJson(txt, options) {
+            options = options || {};
+            options.json = true;
+            options.clearLine = false;
+            return this.process(txt, options, true);
+        }
 
-  var tail = this.tail
-  node.list = this
-  node.prev = tail
-  if (tail) {
-    tail.next = node
-  }
+        /**
+         * ansiToText
+         * Converts ANSI input into HTML output.
+         *
+         * @name ansiToText
+         * @function
+         * @param {String} txt The input text.
+         * @returns {String} The text output.
+         */
 
-  this.tail = node
-  if (!this.head) {
-    this.head = node
-  }
-  this.length++
-}
+    }, {
+        key: "ansiToText",
+        value: function ansiToText(txt) {
+            return this.process(txt, {}, false);
+        }
 
-Yallist.prototype.push = function () {
-  for (var i = 0, l = arguments.length; i < l; i++) {
-    push(this, arguments[i])
-  }
-  return this.length
-}
+        /**
+         * process
+         * Processes the input.
+         *
+         * @name process
+         * @function
+         * @param {String} txt The input text.
+         * @param {Object} options An object passed to `processChunk` method, extended with:
+         *
+         *  - `json` (Boolean): If `true`, the result will be an object.
+         *  - `use_classes` (Boolean): If `true`, HTML classes will be appended to the HTML output.
+         *
+         * @param {Boolean} markup
+         */
 
-Yallist.prototype.unshift = function () {
-  for (var i = 0, l = arguments.length; i < l; i++) {
-    unshift(this, arguments[i])
-  }
-  return this.length
-}
+    }, {
+        key: "process",
+        value: function process(txt, options, markup) {
+            var _this = this;
 
-Yallist.prototype.pop = function () {
-  if (!this.tail) {
-    return undefined
-  }
+            var self = this;
+            var raw_text_chunks = txt.split(/\033\[/);
+            var first_chunk = raw_text_chunks.shift(); // the first chunk is not the result of the split
 
-  var res = this.tail.value
-  this.tail = this.tail.prev
-  if (this.tail) {
-    this.tail.next = null
-  } else {
-    this.head = null
-  }
-  this.length--
-  return res
-}
+            if (options === undefined || options === null) {
+                options = {};
+            }
+            options.clearLine = /\r/.test(txt); // check for Carriage Return
+            var color_chunks = raw_text_chunks.map(function (chunk) {
+                return _this.processChunk(chunk, options, markup);
+            });
 
-Yallist.prototype.shift = function () {
-  if (!this.head) {
-    return undefined
-  }
+            if (options && options.json) {
+                var first = self.processChunkJson("");
+                first.content = first_chunk;
+                first.clearLine = options.clearLine;
+                color_chunks.unshift(first);
+                if (options.remove_empty) {
+                    color_chunks = color_chunks.filter(function (c) {
+                        return !c.isEmpty();
+                    });
+                }
+                return color_chunks;
+            } else {
+                color_chunks.unshift(first_chunk);
+            }
 
-  var res = this.head.value
-  this.head = this.head.next
-  if (this.head) {
-    this.head.prev = null
-  } else {
-    this.tail = null
-  }
-  this.length--
-  return res
-}
+            return color_chunks.join("");
+        }
 
-Yallist.prototype.forEach = function (fn, thisp) {
-  thisp = thisp || this
-  for (var walker = this.head, i = 0; walker !== null; i++) {
-    fn.call(thisp, walker.value, i, this)
-    walker = walker.next
-  }
-}
+        /**
+         * processChunkJson
+         * Processes the current chunk into json output.
+         *
+         * @name processChunkJson
+         * @function
+         * @param {String} text The input text.
+         * @param {Object} options An object containing the following fields:
+         *
+         *  - `json` (Boolean): If `true`, the result will be an object.
+         *  - `use_classes` (Boolean): If `true`, HTML classes will be appended to the HTML output.
+         *
+         * @param {Boolean} markup If false, the colors will not be parsed.
+         * @return {Object} The result object:
+         *
+         *  - `content` (String): The text.
+         *  - `fg` (String|null): The foreground color.
+         *  - `bg` (String|null): The background color.
+         *  - `fg_truecolor` (String|null): The foreground true color (if 16m color is enabled).
+         *  - `bg_truecolor` (String|null): The background true color (if 16m color is enabled).
+         *  - `clearLine` (Boolean): `true` if a carriageReturn \r was fount at end of line.
+         *  - `was_processed` (Bolean): `true` if the colors were processed, `false` otherwise.
+         *  - `isEmpty` (Function): A function returning `true` if the content is empty, or `false` otherwise.
+         *
+         */
 
-Yallist.prototype.forEachReverse = function (fn, thisp) {
-  thisp = thisp || this
-  for (var walker = this.tail, i = this.length - 1; walker !== null; i--) {
-    fn.call(thisp, walker.value, i, this)
-    walker = walker.prev
-  }
-}
+    }, {
+        key: "processChunkJson",
+        value: function processChunkJson(text, options, markup) {
 
-Yallist.prototype.get = function (n) {
-  for (var i = 0, walker = this.head; walker !== null && i < n; i++) {
-    // abort out of the list early if we hit a cycle
-    walker = walker.next
-  }
-  if (i === n && walker !== null) {
-    return walker.value
-  }
-}
+            // Are we using classes or styles?
+            options = typeof options == "undefined" ? {} : options;
+            var use_classes = options.use_classes = typeof options.use_classes != "undefined" && options.use_classes;
+            var key = options.key = use_classes ? "class" : "color";
 
-Yallist.prototype.getReverse = function (n) {
-  for (var i = 0, walker = this.tail; walker !== null && i < n; i++) {
-    // abort out of the list early if we hit a cycle
-    walker = walker.prev
-  }
-  if (i === n && walker !== null) {
-    return walker.value
-  }
-}
+            var result = {
+                content: text,
+                fg: null,
+                bg: null,
+                fg_truecolor: null,
+                bg_truecolor: null,
+                clearLine: options.clearLine,
+                decoration: null,
+                was_processed: false,
+                isEmpty: function isEmpty() {
+                    return !result.content;
+                }
+            };
 
-Yallist.prototype.map = function (fn, thisp) {
-  thisp = thisp || this
-  var res = new Yallist()
-  for (var walker = this.head; walker !== null;) {
-    res.push(fn.call(thisp, walker.value, this))
-    walker = walker.next
-  }
-  return res
-}
+            // Each "chunk" is the text after the CSI (ESC + "[") and before the next CSI/EOF.
+            //
+            // This regex matches four groups within a chunk.
+            //
+            // The first and third groups match code type.
+            // We supported only SGR command. It has empty first group and "m" in third.
+            //
+            // The second group matches all of the number+semicolon command sequences
+            // before the "m" (or other trailing) character.
+            // These are the graphics or SGR commands.
+            //
+            // The last group is the text (including newlines) that is colored by
+            // the other group"s commands.
+            var matches = text.match(/^([!\x3c-\x3f]*)([\d;]*)([\x20-\x2c]*[\x40-\x7e])([\s\S]*)/m);
 
-Yallist.prototype.mapReverse = function (fn, thisp) {
-  thisp = thisp || this
-  var res = new Yallist()
-  for (var walker = this.tail; walker !== null;) {
-    res.push(fn.call(thisp, walker.value, this))
-    walker = walker.prev
-  }
-  return res
-}
+            if (!matches) return result;
 
-Yallist.prototype.reduce = function (fn, initial) {
-  var acc
-  var walker = this.head
-  if (arguments.length > 1) {
-    acc = initial
-  } else if (this.head) {
-    walker = this.head.next
-    acc = this.head.value
-  } else {
-    throw new TypeError('Reduce of empty list with no initial value')
-  }
+            var orig_txt = result.content = matches[4];
+            var nums = matches[2].split(";");
 
-  for (var i = 0; walker !== null; i++) {
-    acc = fn(acc, walker.value, i)
-    walker = walker.next
-  }
+            // We currently support only "SGR" (Select Graphic Rendition)
+            // Simply ignore if not a SGR command.
+            if (matches[1] !== "" || matches[3] !== "m") {
+                return result;
+            }
 
-  return acc
-}
+            if (!markup) {
+                return result;
+            }
 
-Yallist.prototype.reduceReverse = function (fn, initial) {
-  var acc
-  var walker = this.tail
-  if (arguments.length > 1) {
-    acc = initial
-  } else if (this.tail) {
-    walker = this.tail.prev
-    acc = this.tail.value
-  } else {
-    throw new TypeError('Reduce of empty list with no initial value')
-  }
+            var self = this;
 
-  for (var i = this.length - 1; walker !== null; i--) {
-    acc = fn(acc, walker.value, i)
-    walker = walker.prev
-  }
+            self.decoration = null;
 
-  return acc
-}
+            while (nums.length > 0) {
+                var num_str = nums.shift();
+                var num = parseInt(num_str);
 
-Yallist.prototype.toArray = function () {
-  var arr = new Array(this.length)
-  for (var i = 0, walker = this.head; walker !== null; i++) {
-    arr[i] = walker.value
-    walker = walker.next
-  }
-  return arr
-}
+                if (isNaN(num) || num === 0) {
+                    self.fg = self.bg = self.decoration = null;
+                } else if (num === 1) {
+                    self.decoration = "bold";
+                } else if (num === 2) {
+                    self.decoration = "dim";
+                    // Enable code 2 to get string
+                } else if (num == 3) {
+                    self.decoration = "italic";
+                } else if (num == 4) {
+                    self.decoration = "underline";
+                } else if (num == 5) {
+                    self.decoration = "blink";
+                } else if (num === 7) {
+                    self.decoration = "reverse";
+                } else if (num === 8) {
+                    self.decoration = "hidden";
+                    // Enable code 9 to get strikethrough
+                } else if (num === 9) {
+                    self.decoration = "strikethrough";
+                } else if (num == 39) {
+                    self.fg = null;
+                } else if (num == 49) {
+                    self.bg = null;
+                    // Foreground color
+                } else if (num >= 30 && num < 38) {
+                    self.fg = ANSI_COLORS[0][num % 10][key];
+                    // Foreground bright color
+                } else if (num >= 90 && num < 98) {
+                    self.fg = ANSI_COLORS[1][num % 10][key];
+                    // Background color
+                } else if (num >= 40 && num < 48) {
+                    self.bg = ANSI_COLORS[0][num % 10][key];
+                    // Background bright color
+                } else if (num >= 100 && num < 108) {
+                    self.bg = ANSI_COLORS[1][num % 10][key];
+                } else if (num === 38 || num === 48) {
+                    // extend color (38=fg, 48=bg)
+                    var is_foreground = num === 38;
+                    if (nums.length >= 1) {
+                        var mode = nums.shift();
+                        if (mode === "5" && nums.length >= 1) {
+                            // palette color
+                            var palette_index = parseInt(nums.shift());
+                            if (palette_index >= 0 && palette_index <= 255) {
+                                if (!use_classes) {
+                                    if (!this.PALETTE_COLORS) {
+                                        self.setupPalette();
+                                    }
+                                    if (is_foreground) {
+                                        self.fg = this.PALETTE_COLORS[palette_index];
+                                    } else {
+                                        self.bg = this.PALETTE_COLORS[palette_index];
+                                    }
+                                } else {
+                                    var klass = palette_index >= 16 ? "ansi-palette-" + palette_index : ANSI_COLORS[palette_index > 7 ? 1 : 0][palette_index % 8]["class"];
+                                    if (is_foreground) {
+                                        self.fg = klass;
+                                    } else {
+                                        self.bg = klass;
+                                    }
+                                }
+                            }
+                        } else if (mode === "2" && nums.length >= 3) {
+                            // true color
+                            var r = parseInt(nums.shift());
+                            var g = parseInt(nums.shift());
+                            var b = parseInt(nums.shift());
+                            if (r >= 0 && r <= 255 && g >= 0 && g <= 255 && b >= 0 && b <= 255) {
+                                var color = r + ", " + g + ", " + b;
+                                if (!use_classes) {
+                                    if (is_foreground) {
+                                        self.fg = color;
+                                    } else {
+                                        self.bg = color;
+                                    }
+                                } else {
+                                    if (is_foreground) {
+                                        self.fg = "ansi-truecolor";
+                                        self.fg_truecolor = color;
+                                    } else {
+                                        self.bg = "ansi-truecolor";
+                                        self.bg_truecolor = color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
 
-Yallist.prototype.toArrayReverse = function () {
-  var arr = new Array(this.length)
-  for (var i = 0, walker = this.tail; walker !== null; i++) {
-    arr[i] = walker.value
-    walker = walker.prev
-  }
-  return arr
-}
+            if (self.fg === null && self.bg === null && self.decoration === null) {
+                return result;
+            } else {
+                var styles = [];
+                var classes = [];
+                var data = {};
 
-Yallist.prototype.slice = function (from, to) {
-  to = to || this.length
-  if (to < 0) {
-    to += this.length
-  }
-  from = from || 0
-  if (from < 0) {
-    from += this.length
-  }
-  var ret = new Yallist()
-  if (to < from || to < 0) {
-    return ret
-  }
-  if (from < 0) {
-    from = 0
-  }
-  if (to > this.length) {
-    to = this.length
-  }
-  for (var i = 0, walker = this.head; walker !== null && i < from; i++) {
-    walker = walker.next
-  }
-  for (; walker !== null && i < to; i++, walker = walker.next) {
-    ret.push(walker.value)
-  }
-  return ret
-}
+                result.fg = self.fg;
+                result.bg = self.bg;
+                result.fg_truecolor = self.fg_truecolor;
+                result.bg_truecolor = self.bg_truecolor;
+                result.decoration = self.decoration;
+                result.was_processed = true;
 
-Yallist.prototype.sliceReverse = function (from, to) {
-  to = to || this.length
-  if (to < 0) {
-    to += this.length
-  }
-  from = from || 0
-  if (from < 0) {
-    from += this.length
-  }
-  var ret = new Yallist()
-  if (to < from || to < 0) {
-    return ret
-  }
-  if (from < 0) {
-    from = 0
-  }
-  if (to > this.length) {
-    to = this.length
-  }
-  for (var i = this.length, walker = this.tail; walker !== null && i > to; i--) {
-    walker = walker.prev
-  }
-  for (; walker !== null && i > from; i--, walker = walker.prev) {
-    ret.push(walker.value)
-  }
-  return ret
-}
+                return result;
+            }
+        }
 
-Yallist.prototype.splice = function (start, deleteCount /*, ...nodes */) {
-  if (start > this.length) {
-    start = this.length - 1
-  }
-  if (start < 0) {
-    start = this.length + start;
-  }
+        /**
+         * processChunk
+         * Processes the current chunk of text.
+         *
+         * @name processChunk
+         * @function
+         * @param {String} text The input text.
+         * @param {Object} options An object containing the following fields:
+         *
+         *  - `json` (Boolean): If `true`, the result will be an object.
+         *  - `use_classes` (Boolean): If `true`, HTML classes will be appended to the HTML output.
+         *
+         * @param {Boolean} markup If false, the colors will not be parsed.
+         * @return {Object|String} The result (object if `json` is wanted back or string otherwise).
+         */
 
-  for (var i = 0, walker = this.head; walker !== null && i < start; i++) {
-    walker = walker.next
-  }
+    }, {
+        key: "processChunk",
+        value: function processChunk(text, options, markup) {
+            var _this2 = this;
 
-  var ret = []
-  for (var i = 0; walker && i < deleteCount; i++) {
-    ret.push(walker.value)
-    walker = this.removeNode(walker)
-  }
-  if (walker === null) {
-    walker = this.tail
-  }
+            var self = this;
+            options = options || {};
+            var jsonChunk = this.processChunkJson(text, options, markup);
 
-  if (walker !== this.head && walker !== this.tail) {
-    walker = walker.prev
-  }
+            if (options.json) {
+                return jsonChunk;
+            }
+            if (jsonChunk.isEmpty()) {
+                return "";
+            }
+            if (!jsonChunk.was_processed) {
+                return jsonChunk.content;
+            }
 
-  for (var i = 2; i < arguments.length; i++) {
-    walker = insert(this, walker, arguments[i])
-  }
-  return ret;
-}
+            var use_classes = options.use_classes;
 
-Yallist.prototype.reverse = function () {
-  var head = this.head
-  var tail = this.tail
-  for (var walker = head; walker !== null; walker = walker.prev) {
-    var p = walker.prev
-    walker.prev = walker.next
-    walker.next = p
-  }
-  this.head = tail
-  this.tail = head
-  return this
-}
+            var styles = [];
+            var classes = [];
+            var data = {};
+            var render_data = function render_data(data) {
+                var fragments = [];
+                var key = void 0;
+                for (key in data) {
+                    if (data.hasOwnProperty(key)) {
+                        fragments.push("data-" + key + "=\"" + _this2.escapeForHtml(data[key]) + "\"");
+                    }
+                }
+                return fragments.length > 0 ? " " + fragments.join(" ") : "";
+            };
 
-function insert (self, node, value) {
-  var inserted = node === self.head ?
-    new Node(value, null, node, self) :
-    new Node(value, node, node.next, self)
+            if (jsonChunk.fg) {
+                if (use_classes) {
+                    classes.push(jsonChunk.fg + "-fg");
+                    if (jsonChunk.fg_truecolor !== null) {
+                        data["ansi-truecolor-fg"] = jsonChunk.fg_truecolor;
+                        jsonChunk.fg_truecolor = null;
+                    }
+                } else {
+                    styles.push("color:rgb(" + jsonChunk.fg + ")");
+                }
+            }
 
-  if (inserted.next === null) {
-    self.tail = inserted
-  }
-  if (inserted.prev === null) {
-    self.head = inserted
-  }
+            if (jsonChunk.bg) {
+                if (use_classes) {
+                    classes.push(jsonChunk.bg + "-bg");
+                    if (jsonChunk.bg_truecolor !== null) {
+                        data["ansi-truecolor-bg"] = jsonChunk.bg_truecolor;
+                        jsonChunk.bg_truecolor = null;
+                    }
+                } else {
+                    styles.push("background-color:rgb(" + jsonChunk.bg + ")");
+                }
+            }
 
-  self.length++
+            if (jsonChunk.decoration) {
+                if (use_classes) {
+                    classes.push("ansi-" + jsonChunk.decoration);
+                } else if (jsonChunk.decoration === "bold") {
+                    styles.push("font-weight:bold");
+                } else if (jsonChunk.decoration === "dim") {
+                    styles.push("opacity:0.5");
+                } else if (jsonChunk.decoration === "italic") {
+                    styles.push("font-style:italic");
+                    // underline and blink are treated bellow
+                } else if (jsonChunk.decoration === "reverse") {
+                    styles.push("filter:invert(100%)");
+                } else if (jsonChunk.decoration === "hidden") {
+                    styles.push("visibility:hidden");
+                } else if (jsonChunk.decoration === "strikethrough") {
+                    styles.push("text-decoration:line-through");
+                } else {
+                    styles.push("text-decoration:" + jsonChunk.decoration);
+                }
+            }
 
-  return inserted
-}
+            if (use_classes) {
+                return "<span class=\"" + classes.join(" ") + "\"" + render_data(data) + ">" + jsonChunk.content + "</span>";
+            } else {
+                return "<span style=\"" + styles.join(";") + "\"" + render_data(data) + ">" + jsonChunk.content + "</span>";
+            }
+        }
+    }]);
 
-function push (self, item) {
-  self.tail = new Node(item, self.tail, null, self)
-  if (!self.head) {
-    self.head = self.tail
-  }
-  self.length++
-}
+    return Anser;
+}();
 
-function unshift (self, item) {
-  self.head = new Node(item, null, self.head, self)
-  if (!self.tail) {
-    self.tail = self.head
-  }
-  self.length++
-}
+;
 
-function Node (value, prev, next, list) {
-  if (!(this instanceof Node)) {
-    return new Node(value, prev, next, list)
-  }
+module.exports = Anser;
 
-  this.list = list
-  this.value = value
+/***/ }),
 
-  if (prev) {
-    prev.next = this
-    this.prev = prev
-  } else {
-    this.prev = null
-  }
+/***/ "./node_modules/css-loader/index.js!./node_modules/@theia/debug/src/browser/style/debug-bright.useable.css":
+/*!********************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/@theia/debug/src/browser/style/debug-bright.useable.css ***!
+  \********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
-  if (next) {
-    next.prev = this
-    this.next = next
-  } else {
-    this.next = null
-  }
-}
+var escape = __webpack_require__(/*! ../../../../../css-loader/lib/url/escape.js */ "./node_modules/css-loader/lib/url/escape.js");
+exports = module.exports = __webpack_require__(/*! ../../../../../css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
 
-try {
-  // add if support for Symbol.iterator is present
-  __webpack_require__(/*! ./iterator.js */ "./node_modules/yallist/iterator.js")(Yallist)
-} catch (er) {}
+
+// module
+exports.push([module.i, ":root {\n    --theia-debug-start: url(" + escape(__webpack_require__(/*! ./start.svg */ "./node_modules/@theia/debug/src/browser/style/start.svg")) + ");\n    --theia-debug-stop: url(" + escape(__webpack_require__(/*! ./stop.svg */ "./node_modules/@theia/debug/src/browser/style/stop.svg")) + ");\n    --theia-debug-restart: url(" + escape(__webpack_require__(/*! ./restart.svg */ "./node_modules/@theia/debug/src/browser/style/restart.svg")) + ");\n    --theia-debug-pause: url(" + escape(__webpack_require__(/*! ./pause.svg */ "./node_modules/@theia/debug/src/browser/style/pause.svg")) + ");\n    --theia-debug-continue: url(" + escape(__webpack_require__(/*! ./continue.svg */ "./node_modules/@theia/debug/src/browser/style/continue.svg")) + ");\n    --theia-debug-step-over: url(" + escape(__webpack_require__(/*! ./step-over.svg */ "./node_modules/@theia/debug/src/browser/style/step-over.svg")) + ");\n    --theia-debug-step-into: url(" + escape(__webpack_require__(/*! ./step-into.svg */ "./node_modules/@theia/debug/src/browser/style/step-into.svg")) + ");\n    --theia-debug-step-out: url(" + escape(__webpack_require__(/*! ./step-out.svg */ "./node_modules/@theia/debug/src/browser/style/step-out.svg")) + ");\n    --theia-debug-configure: url(" + escape(__webpack_require__(/*! ./configure.svg */ "./node_modules/@theia/debug/src/browser/style/configure.svg")) + ");\n    --theia-debug-repl: url(" + escape(__webpack_require__(/*! ./repl.svg */ "./node_modules/@theia/debug/src/browser/style/repl.svg")) + ");\n    --breakpoints-activate-url: url(" + escape(__webpack_require__(/*! ./breakpoints-activate.svg */ "./node_modules/@theia/debug/src/browser/style/breakpoints-activate.svg")) + ");\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/@theia/debug/src/browser/style/debug-dark.useable.css":
+/*!******************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/@theia/debug/src/browser/style/debug-dark.useable.css ***!
+  \******************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var escape = __webpack_require__(/*! ../../../../../css-loader/lib/url/escape.js */ "./node_modules/css-loader/lib/url/escape.js");
+exports = module.exports = __webpack_require__(/*! ../../../../../css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ":root {\n    --theia-debug-start: url(" + escape(__webpack_require__(/*! ./start-inverse.svg */ "./node_modules/@theia/debug/src/browser/style/start-inverse.svg")) + ");\n    --theia-debug-stop: url(" + escape(__webpack_require__(/*! ./stop-inverse.svg */ "./node_modules/@theia/debug/src/browser/style/stop-inverse.svg")) + ");\n    --theia-debug-restart: url(" + escape(__webpack_require__(/*! ./restart-inverse.svg */ "./node_modules/@theia/debug/src/browser/style/restart-inverse.svg")) + ");\n    --theia-debug-pause: url(" + escape(__webpack_require__(/*! ./pause-inverse.svg */ "./node_modules/@theia/debug/src/browser/style/pause-inverse.svg")) + ");\n    --theia-debug-continue: url(" + escape(__webpack_require__(/*! ./continue-inverse.svg */ "./node_modules/@theia/debug/src/browser/style/continue-inverse.svg")) + ");\n    --theia-debug-step-over: url(" + escape(__webpack_require__(/*! ./step-over-inverse.svg */ "./node_modules/@theia/debug/src/browser/style/step-over-inverse.svg")) + ");\n    --theia-debug-step-into: url(" + escape(__webpack_require__(/*! ./step-into-inverse.svg */ "./node_modules/@theia/debug/src/browser/style/step-into-inverse.svg")) + ");\n    --theia-debug-step-out: url(" + escape(__webpack_require__(/*! ./step-out-inverse.svg */ "./node_modules/@theia/debug/src/browser/style/step-out-inverse.svg")) + ");\n    --theia-debug-configure: url(" + escape(__webpack_require__(/*! ./configure-inverse.svg */ "./node_modules/@theia/debug/src/browser/style/configure-inverse.svg")) + ");\n    --theia-debug-repl: url(" + escape(__webpack_require__(/*! ./repl-inverse.svg */ "./node_modules/@theia/debug/src/browser/style/repl-inverse.svg")) + ");\n    --breakpoints-activate-url: url(" + escape(__webpack_require__(/*! ./breakpoints-activate-inverse.svg */ "./node_modules/@theia/debug/src/browser/style/breakpoints-activate-inverse.svg")) + ");\n}\n", ""]);
+
+// exports
 
 
 /***/ })

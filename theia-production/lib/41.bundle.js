@@ -1,9 +1,48 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[41],{
 
-/***/ "./node_modules/@theia/search-in-workspace/lib/browser/in-memory-text-resource.js":
-/*!****************************************************************************************!*\
-  !*** ./node_modules/@theia/search-in-workspace/lib/browser/in-memory-text-resource.js ***!
-  \****************************************************************************************/
+/***/ "./node_modules/@theia/scm-extra/lib/browser/history/index.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@theia/scm-extra/lib/browser/history/index.js ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/********************************************************************************
+ * Copyright (C) 2020 Arm and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScmHistoryProvider = exports.ScmHistorySupport = void 0;
+var scm_history_widget_1 = __webpack_require__(/*! ./scm-history-widget */ "./node_modules/@theia/scm-extra/lib/browser/history/scm-history-widget.js");
+Object.defineProperty(exports, "ScmHistorySupport", { enumerable: true, get: function () { return scm_history_widget_1.ScmHistorySupport; } });
+var ScmHistoryProvider;
+(function (ScmHistoryProvider) {
+    function is(scmProvider) {
+        return !!scmProvider && 'historySupport' in scmProvider;
+    }
+    ScmHistoryProvider.is = is;
+})(ScmHistoryProvider = exports.ScmHistoryProvider || (exports.ScmHistoryProvider = {}));
+
+
+/***/ }),
+
+/***/ "./node_modules/@theia/scm-extra/lib/browser/history/scm-history-contribution.js":
+/*!***************************************************************************************!*\
+  !*** ./node_modules/@theia/scm-extra/lib/browser/history/scm-history-contribution.js ***!
+  \***************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -24,11 +63,27 @@
  *
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
@@ -67,234 +122,123 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.InMemoryTextResourceResolver = exports.InMemoryTextResource = exports.MEMORY_TEXT = void 0;
+exports.ScmHistoryContribution = exports.ScmHistoryCommands = exports.SCM_HISTORY_MAX_COUNT = exports.SCM_HISTORY_TOGGLE_KEYBINDING = exports.SCM_HISTORY_LABEL = exports.SCM_HISTORY_ID = void 0;
+var core_1 = __webpack_require__(/*! @theia/core */ "./node_modules/@theia/core/lib/common/index.js");
+var browser_1 = __webpack_require__(/*! @theia/core/lib/browser */ "./node_modules/@theia/core/lib/browser/index.js");
 var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
-exports.MEMORY_TEXT = 'mem-txt';
-var InMemoryTextResource = /** @class */ (function () {
-    function InMemoryTextResource(uri) {
-        this.uri = uri;
+var navigator_contribution_1 = __webpack_require__(/*! @theia/navigator/lib/browser/navigator-contribution */ "./node_modules/@theia/navigator/lib/browser/navigator-contribution.js");
+var uri_command_handler_1 = __webpack_require__(/*! @theia/core/lib/common/uri-command-handler */ "./node_modules/@theia/core/lib/common/uri-command-handler.js");
+var scm_service_1 = __webpack_require__(/*! @theia/scm/lib/browser/scm-service */ "./node_modules/@theia/scm/lib/browser/scm-service.js");
+var scm_extra_contribution_1 = __webpack_require__(/*! ../scm-extra-contribution */ "./node_modules/@theia/scm-extra/lib/browser/scm-extra-contribution.js");
+exports.SCM_HISTORY_ID = 'scm-history';
+exports.SCM_HISTORY_LABEL = 'History';
+exports.SCM_HISTORY_TOGGLE_KEYBINDING = 'alt+h';
+exports.SCM_HISTORY_MAX_COUNT = 100;
+var ScmHistoryCommands;
+(function (ScmHistoryCommands) {
+    ScmHistoryCommands.OPEN_FILE_HISTORY = {
+        id: 'scm-history:open-file-history',
+    };
+    ScmHistoryCommands.OPEN_BRANCH_HISTORY = {
+        id: 'scm-history:open-branch-history',
+        label: exports.SCM_HISTORY_LABEL
+    };
+})(ScmHistoryCommands = exports.ScmHistoryCommands || (exports.ScmHistoryCommands = {}));
+var ScmHistoryContribution = /** @class */ (function (_super) {
+    __extends(ScmHistoryContribution, _super);
+    function ScmHistoryContribution() {
+        return _super.call(this, {
+            widgetId: exports.SCM_HISTORY_ID,
+            widgetName: exports.SCM_HISTORY_LABEL,
+            defaultWidgetOptions: {
+                area: 'left',
+                rank: 500
+            },
+            toggleCommandId: ScmHistoryCommands.OPEN_BRANCH_HISTORY.id,
+            toggleKeybinding: exports.SCM_HISTORY_TOGGLE_KEYBINDING
+        }) || this;
     }
-    InMemoryTextResource.prototype.readContents = function (options) {
+    ScmHistoryContribution.prototype.openView = function (args) {
         return __awaiter(this, void 0, void 0, function () {
+            var widget;
             return __generator(this, function (_a) {
-                return [2 /*return*/, this.uri.query];
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, _super.prototype.openView.call(this, args)];
+                    case 1:
+                        widget = _a.sent();
+                        this.refreshWidget(args.uri);
+                        return [2 /*return*/, widget];
+                }
             });
         });
     };
-    InMemoryTextResource.prototype.dispose = function () { };
-    return InMemoryTextResource;
-}());
-exports.InMemoryTextResource = InMemoryTextResource;
-var InMemoryTextResourceResolver = /** @class */ (function () {
-    function InMemoryTextResourceResolver() {
-    }
-    InMemoryTextResourceResolver.prototype.resolve = function (uri) {
-        if (uri.scheme !== exports.MEMORY_TEXT) {
-            throw new Error("Expected a URI with " + exports.MEMORY_TEXT + " scheme. Was: " + uri + ".");
-        }
-        return new InMemoryTextResource(uri);
+    ScmHistoryContribution.prototype.registerMenus = function (menus) {
+        menus.registerMenuAction(navigator_contribution_1.NavigatorContextMenu.SEARCH, {
+            commandId: ScmHistoryCommands.OPEN_FILE_HISTORY.id,
+            label: exports.SCM_HISTORY_LABEL
+        });
+        menus.registerMenuAction(scm_extra_contribution_1.EDITOR_CONTEXT_MENU_SCM, {
+            commandId: ScmHistoryCommands.OPEN_FILE_HISTORY.id,
+            label: exports.SCM_HISTORY_LABEL
+        });
+        _super.prototype.registerMenus.call(this, menus);
     };
-    InMemoryTextResourceResolver = __decorate([
-        inversify_1.injectable()
-    ], InMemoryTextResourceResolver);
-    return InMemoryTextResourceResolver;
-}());
-exports.InMemoryTextResourceResolver = InMemoryTextResourceResolver;
-
-
-/***/ }),
-
-/***/ "./node_modules/@theia/search-in-workspace/lib/browser/search-in-workspace-context-key-service.js":
-/*!********************************************************************************************************!*\
-  !*** ./node_modules/@theia/search-in-workspace/lib/browser/search-in-workspace-context-key-service.js ***!
-  \********************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/********************************************************************************
- * Copyright (C) 2019 TypeFox and others.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Eclipse Public License v. 2.0 which is available at
- * http://www.eclipse.org/legal/epl-2.0.
- *
- * This Source Code may also be made available under the following Secondary
- * Licenses when the conditions for such availability set forth in the Eclipse
- * Public License v. 2.0 are satisfied: GNU General Public License, version 2
- * with the GNU Classpath Exception which is available at
- * https://www.gnu.org/software/classpath/license.html.
- *
- * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
- ********************************************************************************/
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.SearchInWorkspaceContextKeyService = void 0;
-var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
-var context_key_service_1 = __webpack_require__(/*! @theia/core/lib/browser/context-key-service */ "./node_modules/@theia/core/lib/browser/context-key-service.js");
-var SearchInWorkspaceContextKeyService = /** @class */ (function () {
-    function SearchInWorkspaceContextKeyService() {
-    }
-    Object.defineProperty(SearchInWorkspaceContextKeyService.prototype, "searchViewletVisible", {
-        get: function () {
-            return this._searchViewletVisible;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(SearchInWorkspaceContextKeyService.prototype, "searchViewletFocus", {
-        get: function () {
-            return this._searchViewletFocus;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    SearchInWorkspaceContextKeyService.prototype.setSearchInputBoxFocus = function (searchInputBoxFocus) {
-        this.searchInputBoxFocus.set(searchInputBoxFocus);
-        this.updateInputBoxFocus();
+    ScmHistoryContribution.prototype.registerCommands = function (commands) {
+        var _this = this;
+        commands.registerCommand(ScmHistoryCommands.OPEN_FILE_HISTORY, this.newUriAwareCommandHandler({
+            isEnabled: function (uri) { return !!_this.scmService.findRepository(uri); },
+            isVisible: function (uri) { return !!_this.scmService.findRepository(uri); },
+            execute: function (uri) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                return [2 /*return*/, this.openView({ activate: true, uri: uri.toString() })];
+            }); }); },
+        }));
+        _super.prototype.registerCommands.call(this, commands);
     };
-    SearchInWorkspaceContextKeyService.prototype.setReplaceInputBoxFocus = function (replaceInputBoxFocus) {
-        this.replaceInputBoxFocus.set(replaceInputBoxFocus);
-        this.updateInputBoxFocus();
+    ScmHistoryContribution.prototype.refreshWidget = function (uri) {
+        return __awaiter(this, void 0, void 0, function () {
+            var widget;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        widget = this.tryGetWidget();
+                        if (!widget) {
+                            // the widget doesn't exist, so don't wake it up
+                            return [2 /*return*/];
+                        }
+                        return [4 /*yield*/, widget.setContent({ uri: uri })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
     };
-    SearchInWorkspaceContextKeyService.prototype.setPatternIncludesInputBoxFocus = function (patternIncludesInputBoxFocus) {
-        this.patternIncludesInputBoxFocus.set(patternIncludesInputBoxFocus);
-        this.updateInputBoxFocus();
-    };
-    SearchInWorkspaceContextKeyService.prototype.setPatternExcludesInputBoxFocus = function (patternExcludesInputBoxFocus) {
-        this.patternExcludesInputBoxFocus.set(patternExcludesInputBoxFocus);
-        this.updateInputBoxFocus();
-    };
-    SearchInWorkspaceContextKeyService.prototype.updateInputBoxFocus = function () {
-        this.inputBoxFocus.set(this.searchInputBoxFocus.get() ||
-            this.replaceInputBoxFocus.get() ||
-            this.patternIncludesInputBoxFocus.get() ||
-            this.patternExcludesInputBoxFocus.get());
-    };
-    Object.defineProperty(SearchInWorkspaceContextKeyService.prototype, "replaceActive", {
-        get: function () {
-            return this._replaceActive;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(SearchInWorkspaceContextKeyService.prototype, "hasSearchResult", {
-        get: function () {
-            return this._hasSearchResult;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    SearchInWorkspaceContextKeyService.prototype.init = function () {
-        this._searchViewletVisible = this.contextKeyService.createKey('searchViewletVisible', false);
-        this._searchViewletFocus = this.contextKeyService.createKey('searchViewletFocus', false);
-        this.inputBoxFocus = this.contextKeyService.createKey('inputBoxFocus', false);
-        this.searchInputBoxFocus = this.contextKeyService.createKey('searchInputBoxFocus', false);
-        this.replaceInputBoxFocus = this.contextKeyService.createKey('replaceInputBoxFocus', false);
-        this.patternIncludesInputBoxFocus = this.contextKeyService.createKey('patternIncludesInputBoxFocus', false);
-        this.patternExcludesInputBoxFocus = this.contextKeyService.createKey('patternExcludesInputBoxFocus', false);
-        this._replaceActive = this.contextKeyService.createKey('replaceActive', false);
-        this._hasSearchResult = this.contextKeyService.createKey('hasSearchResult', false);
+    ScmHistoryContribution.prototype.newUriAwareCommandHandler = function (handler) {
+        return new uri_command_handler_1.UriAwareCommandHandler(this.selectionService, handler);
     };
     __decorate([
-        inversify_1.inject(context_key_service_1.ContextKeyService),
-        __metadata("design:type", context_key_service_1.ContextKeyService)
-    ], SearchInWorkspaceContextKeyService.prototype, "contextKeyService", void 0);
+        inversify_1.inject(core_1.SelectionService),
+        __metadata("design:type", core_1.SelectionService)
+    ], ScmHistoryContribution.prototype, "selectionService", void 0);
     __decorate([
-        inversify_1.postConstruct(),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", []),
-        __metadata("design:returntype", void 0)
-    ], SearchInWorkspaceContextKeyService.prototype, "init", null);
-    SearchInWorkspaceContextKeyService = __decorate([
-        inversify_1.injectable()
-    ], SearchInWorkspaceContextKeyService);
-    return SearchInWorkspaceContextKeyService;
-}());
-exports.SearchInWorkspaceContextKeyService = SearchInWorkspaceContextKeyService;
+        inversify_1.inject(scm_service_1.ScmService),
+        __metadata("design:type", scm_service_1.ScmService)
+    ], ScmHistoryContribution.prototype, "scmService", void 0);
+    ScmHistoryContribution = __decorate([
+        inversify_1.injectable(),
+        __metadata("design:paramtypes", [])
+    ], ScmHistoryContribution);
+    return ScmHistoryContribution;
+}(browser_1.AbstractViewContribution));
+exports.ScmHistoryContribution = ScmHistoryContribution;
 
 
 /***/ }),
 
-/***/ "./node_modules/@theia/search-in-workspace/lib/browser/search-in-workspace-preferences.js":
-/*!************************************************************************************************!*\
-  !*** ./node_modules/@theia/search-in-workspace/lib/browser/search-in-workspace-preferences.js ***!
-  \************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/********************************************************************************
- * Copyright (C) 2019 Ericsson and others.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Eclipse Public License v. 2.0 which is available at
- * http://www.eclipse.org/legal/epl-2.0.
- *
- * This Source Code may also be made available under the following Secondary
- * Licenses when the conditions for such availability set forth in the Eclipse
- * Public License v. 2.0 are satisfied: GNU General Public License, version 2
- * with the GNU Classpath Exception which is available at
- * https://www.gnu.org/software/classpath/license.html.
- *
- * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
- ********************************************************************************/
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.bindSearchInWorkspacePreferences = exports.createSearchInWorkspacePreferences = exports.SearchInWorkspacePreferences = exports.SearchInWorkspaceConfiguration = exports.searchInWorkspacePreferencesSchema = void 0;
-var preferences_1 = __webpack_require__(/*! @theia/core/lib/browser/preferences */ "./node_modules/@theia/core/lib/browser/preferences/index.js");
-exports.searchInWorkspacePreferencesSchema = {
-    type: 'object',
-    properties: {
-        'search.lineNumbers': {
-            description: 'Controls whether to show line numbers for search results.',
-            default: false,
-            type: 'boolean',
-        },
-        'search.collapseResults': {
-            description: 'Controls whether the search results will be collapsed or expanded.',
-            default: 'auto',
-            type: 'string',
-            enum: ['auto', 'alwaysCollapse', 'alwaysExpand'],
-        }
-    }
-};
-var SearchInWorkspaceConfiguration = /** @class */ (function () {
-    function SearchInWorkspaceConfiguration() {
-    }
-    return SearchInWorkspaceConfiguration;
-}());
-exports.SearchInWorkspaceConfiguration = SearchInWorkspaceConfiguration;
-exports.SearchInWorkspacePreferences = Symbol('SearchInWorkspacePreferences');
-function createSearchInWorkspacePreferences(preferences) {
-    return preferences_1.createPreferenceProxy(preferences, exports.searchInWorkspacePreferencesSchema);
-}
-exports.createSearchInWorkspacePreferences = createSearchInWorkspacePreferences;
-function bindSearchInWorkspacePreferences(bind) {
-    bind(exports.SearchInWorkspacePreferences).toDynamicValue(function (ctx) {
-        var preferences = ctx.container.get(preferences_1.PreferenceService);
-        return createSearchInWorkspacePreferences(preferences);
-    }).inSingletonScope();
-    bind(preferences_1.PreferenceContribution).toConstantValue({ schema: exports.searchInWorkspacePreferencesSchema });
-}
-exports.bindSearchInWorkspacePreferences = bindSearchInWorkspacePreferences;
-
-
-/***/ }),
-
-/***/ "./node_modules/@theia/search-in-workspace/lib/browser/search-in-workspace-result-tree-widget.js":
-/*!*******************************************************************************************************!*\
-  !*** ./node_modules/@theia/search-in-workspace/lib/browser/search-in-workspace-result-tree-widget.js ***!
-  \*******************************************************************************************************/
+/***/ "./node_modules/@theia/scm-extra/lib/browser/history/scm-history-widget.js":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/@theia/scm-extra/lib/browser/history/scm-history-widget.js ***!
+  \*********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -419,890 +363,631 @@ var __spread = (this && this.__spread) || function () {
     return ar;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SearchInWorkspaceResultTreeWidget = exports.SearchInWorkspaceResultLineNode = exports.SearchInWorkspaceFileNode = exports.SearchInWorkspaceRootFolderNode = exports.SearchInWorkspaceRoot = void 0;
+exports.ScmHistoryList = exports.ScmHistoryWidget = exports.ScmCommitNode = exports.ScmHistorySupport = void 0;
 var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
-var browser_1 = __webpack_require__(/*! @theia/core/lib/browser */ "./node_modules/@theia/core/lib/browser/index.js");
 var core_1 = __webpack_require__(/*! @theia/core */ "./node_modules/@theia/core/lib/common/index.js");
-var browser_2 = __webpack_require__(/*! @theia/editor/lib/browser */ "./node_modules/@theia/editor/lib/browser/index.js");
-var browser_3 = __webpack_require__(/*! @theia/workspace/lib/browser */ "./node_modules/@theia/workspace/lib/browser/index.js");
-var browser_4 = __webpack_require__(/*! @theia/filesystem/lib/browser */ "./node_modules/@theia/filesystem/lib/browser/index.js");
-var search_in_workspace_service_1 = __webpack_require__(/*! ./search-in-workspace-service */ "./node_modules/@theia/search-in-workspace/lib/browser/search-in-workspace-service.js");
-var in_memory_text_resource_1 = __webpack_require__(/*! ./in-memory-text-resource */ "./node_modules/@theia/search-in-workspace/lib/browser/in-memory-text-resource.js");
+var browser_1 = __webpack_require__(/*! @theia/core/lib/browser */ "./node_modules/@theia/core/lib/browser/index.js");
+var cancellation_1 = __webpack_require__(/*! @theia/core/lib/common/cancellation */ "./node_modules/@theia/core/lib/common/cancellation.js");
+var react_virtualized_1 = __webpack_require__(/*! react-virtualized */ "./node_modules/react-virtualized/dist/es/index.js");
 var uri_1 = __webpack_require__(/*! @theia/core/lib/common/uri */ "./node_modules/@theia/core/lib/common/uri.js");
+var scm_service_1 = __webpack_require__(/*! @theia/scm/lib/browser/scm-service */ "./node_modules/@theia/scm/lib/browser/scm-service.js");
+var _1 = __webpack_require__(/*! . */ "./node_modules/@theia/scm-extra/lib/browser/history/index.js");
+var scm_history_contribution_1 = __webpack_require__(/*! ./scm-history-contribution */ "./node_modules/@theia/scm-extra/lib/browser/history/scm-history-contribution.js");
+var common_1 = __webpack_require__(/*! @theia/filesystem/lib/common */ "./node_modules/@theia/filesystem/lib/common/index.js");
+var scm_avatar_service_1 = __webpack_require__(/*! @theia/scm/lib/browser/scm-avatar-service */ "./node_modules/@theia/scm/lib/browser/scm-avatar-service.js");
+var scm_navigable_list_widget_1 = __webpack_require__(/*! ../scm-navigable-list-widget */ "./node_modules/@theia/scm-extra/lib/browser/scm-navigable-list-widget.js");
+var scm_file_change_node_1 = __webpack_require__(/*! ../scm-file-change-node */ "./node_modules/@theia/scm-extra/lib/browser/scm-file-change-node.js");
+var scm_navigable_list_widget_2 = __webpack_require__(/*! ../scm-navigable-list-widget */ "./node_modules/@theia/scm-extra/lib/browser/scm-navigable-list-widget.js");
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-var search_in_workspace_preferences_1 = __webpack_require__(/*! ./search-in-workspace-preferences */ "./node_modules/@theia/search-in-workspace/lib/browser/search-in-workspace-preferences.js");
-var core_2 = __webpack_require__(/*! @theia/core */ "./node_modules/@theia/core/lib/common/index.js");
-var color_registry_1 = __webpack_require__(/*! @theia/core/lib/browser/color-registry */ "./node_modules/@theia/core/lib/browser/color-registry.js");
-var ROOT_ID = 'ResultTree';
-var SearchInWorkspaceRoot;
-(function (SearchInWorkspaceRoot) {
+var alert_message_1 = __webpack_require__(/*! @theia/core/lib/browser/widgets/alert-message */ "./node_modules/@theia/core/lib/browser/widgets/alert-message.js");
+exports.ScmHistorySupport = Symbol('scm-history-support');
+var ScmCommitNode;
+(function (ScmCommitNode) {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     function is(node) {
-        return browser_1.CompositeTreeNode.is(node) && node.id === ROOT_ID;
+        return !!node && 'commitDetails' in node && 'expanded' in node && 'selected' in node;
     }
-    SearchInWorkspaceRoot.is = is;
-})(SearchInWorkspaceRoot = exports.SearchInWorkspaceRoot || (exports.SearchInWorkspaceRoot = {}));
-var SearchInWorkspaceRootFolderNode;
-(function (SearchInWorkspaceRootFolderNode) {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    function is(node) {
-        return browser_1.ExpandableTreeNode.is(node) && browser_1.SelectableTreeNode.is(node) && 'path' in node && 'folderUri' in node && !('fileUri' in node);
-    }
-    SearchInWorkspaceRootFolderNode.is = is;
-})(SearchInWorkspaceRootFolderNode = exports.SearchInWorkspaceRootFolderNode || (exports.SearchInWorkspaceRootFolderNode = {}));
-var SearchInWorkspaceFileNode;
-(function (SearchInWorkspaceFileNode) {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    function is(node) {
-        return browser_1.ExpandableTreeNode.is(node) && browser_1.SelectableTreeNode.is(node) && 'path' in node && 'fileUri' in node && !('folderUri' in node);
-    }
-    SearchInWorkspaceFileNode.is = is;
-})(SearchInWorkspaceFileNode = exports.SearchInWorkspaceFileNode || (exports.SearchInWorkspaceFileNode = {}));
-var SearchInWorkspaceResultLineNode;
-(function (SearchInWorkspaceResultLineNode) {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    function is(node) {
-        return browser_1.SelectableTreeNode.is(node) && 'line' in node && 'character' in node && 'lineText' in node;
-    }
-    SearchInWorkspaceResultLineNode.is = is;
-})(SearchInWorkspaceResultLineNode = exports.SearchInWorkspaceResultLineNode || (exports.SearchInWorkspaceResultLineNode = {}));
-var SearchInWorkspaceResultTreeWidget = /** @class */ (function (_super) {
-    __extends(SearchInWorkspaceResultTreeWidget, _super);
-    function SearchInWorkspaceResultTreeWidget(props, model, contextMenuRenderer) {
-        var _this = _super.call(this, props, model, contextMenuRenderer) || this;
-        _this.props = props;
-        _this.model = model;
-        _this.contextMenuRenderer = contextMenuRenderer;
-        _this._showReplaceButtons = false;
-        _this._replaceTerm = '';
-        _this.searchTerm = '';
-        _this.appliedDecorations = new Map();
-        _this.changeEmitter = new core_1.Emitter();
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        _this.focusInputEmitter = new core_1.Emitter();
-        _this.remove = function (node, e) { return _this.doRemove(node, e); };
-        model.root = {
-            id: ROOT_ID,
-            parent: undefined,
-            visible: false,
-            children: []
-        };
-        _this.toDispose.push(model.onSelectionChanged(function (nodes) {
-            var node = nodes[0];
-            if (SearchInWorkspaceResultLineNode.is(node)) {
-                _this.doOpen(node, true);
-            }
-        }));
-        _this.resultTree = new Map();
-        _this.toDispose.push(model.onNodeRefreshed(function () { return _this.changeEmitter.fire(_this.resultTree); }));
+    ScmCommitNode.is = is;
+})(ScmCommitNode = exports.ScmCommitNode || (exports.ScmCommitNode = {}));
+var ScmHistoryWidget = /** @class */ (function (_super) {
+    __extends(ScmHistoryWidget, _super);
+    function ScmHistoryWidget(scmService, openerService, shell, fileSystem, avatarService, widgetManager) {
+        var _this = _super.call(this) || this;
+        _this.scmService = scmService;
+        _this.openerService = openerService;
+        _this.shell = shell;
+        _this.fileSystem = fileSystem;
+        _this.avatarService = avatarService;
+        _this.widgetManager = widgetManager;
+        _this.toDisposeOnRepositoryChange = new core_1.DisposableCollection();
+        _this.toDisposeOnRefresh = new core_1.DisposableCollection();
+        _this.handleScroll = function (info) { return _this.doHandleScroll(info); };
+        _this.loadMoreRows = function (params) { return _this.doLoadMoreRows(params); };
+        _this.renderCommit = function (commit) { return _this.doRenderCommit(commit); };
+        _this.renderFileChangeList = function (fileChange) { return _this.doRenderFileChangeList(fileChange); };
+        _this.id = scm_history_contribution_1.SCM_HISTORY_ID;
+        _this.scrollContainer = 'scm-history-list-container';
+        _this.title.label = scm_history_contribution_1.SCM_HISTORY_LABEL;
+        _this.title.caption = scm_history_contribution_1.SCM_HISTORY_LABEL;
+        _this.title.iconClass = 'fa scm-history-tab-icon';
+        _this.title.closable = true;
+        _this.addClass('theia-scm');
+        _this.addClass('theia-scm-history');
+        _this.resetState();
+        _this.cancelIndicator = new cancellation_1.CancellationTokenSource();
         return _this;
     }
-    SearchInWorkspaceResultTreeWidget.prototype.init = function () {
+    ScmHistoryWidget.prototype.init = function () {
         var _this = this;
-        _super.prototype.init.call(this);
-        this.addClass('resultContainer');
-        this.toDispose.push(this.changeEmitter);
-        this.toDispose.push(this.focusInputEmitter);
-        this.toDispose.push(this.editorManager.onActiveEditorChanged(function () {
-            _this.updateCurrentEditorDecorations();
-        }));
-        this.toDispose.push(this.searchInWorkspacePreferences.onPreferenceChanged(function () {
-            _this.update();
+        this.refreshOnRepositoryChange();
+        this.toDispose.push(this.scmService.onDidChangeSelectedRepository(function () { return _this.refreshOnRepositoryChange(); }));
+        this.toDispose.push(this.labelProvider.onDidChange(function (event) {
+            if (_this.scmNodes.some(function (node) { return scm_file_change_node_1.ScmFileChangeNode.is(node) && event.affects(new uri_1.default(node.fileChange.uri)); })) {
+                _this.update();
+            }
         }));
     };
-    Object.defineProperty(SearchInWorkspaceResultTreeWidget.prototype, "fileNumber", {
-        get: function () {
-            var e_1, _a;
-            var num = 0;
-            try {
-                for (var _b = __values(this.resultTree.values()), _c = _b.next(); !_c.done; _c = _b.next()) {
-                    var rootFolderNode = _c.value;
-                    num += rootFolderNode.children.length;
-                }
-            }
-            catch (e_1_1) { e_1 = { error: e_1_1 }; }
-            finally {
-                try {
-                    if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
-                }
-                finally { if (e_1) throw e_1.error; }
-            }
-            return num;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(SearchInWorkspaceResultTreeWidget.prototype, "showReplaceButtons", {
-        set: function (srb) {
-            this._showReplaceButtons = srb;
-            this.update();
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(SearchInWorkspaceResultTreeWidget.prototype, "replaceTerm", {
-        set: function (rt) {
-            this._replaceTerm = rt;
-            this.update();
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(SearchInWorkspaceResultTreeWidget.prototype, "onChange", {
-        get: function () {
-            return this.changeEmitter.event;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(SearchInWorkspaceResultTreeWidget.prototype, "onFocusInput", {
-        get: function () {
-            return this.focusInputEmitter.event;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    SearchInWorkspaceResultTreeWidget.prototype.collapseAll = function () {
+    ScmHistoryWidget.prototype.refreshOnRepositoryChange = function () {
         var _this = this;
-        this.resultTree.forEach(function (rootFolderNode) {
-            rootFolderNode.children.forEach(function (fileNode) { return _this.expansionService.collapseNode(fileNode); });
-            if (rootFolderNode.visible) {
-                _this.expansionService.collapseNode(rootFolderNode);
+        this.toDisposeOnRepositoryChange.dispose();
+        var repository = this.scmService.selectedRepository;
+        if (repository && _1.ScmHistoryProvider.is(repository.provider)) {
+            this.historySupport = repository.provider.historySupport;
+            if (this.historySupport) {
+                this.toDisposeOnRepositoryChange.push(this.historySupport.onDidChangeHistory(function () { return _this.setContent(_this.options); }));
+            }
+        }
+        else {
+            this.historySupport = undefined;
+        }
+        this.setContent(this.options);
+        // If switching repository, discard options because they are specific to a repository
+        this.options = {};
+        this.refresh();
+    };
+    ScmHistoryWidget.prototype.refresh = function () {
+        var _this = this;
+        this.toDisposeOnRefresh.dispose();
+        this.toDispose.push(this.toDisposeOnRefresh);
+        var repository = this.scmService.selectedRepository;
+        this.title.label = scm_history_contribution_1.SCM_HISTORY_LABEL;
+        if (repository) {
+            this.title.label += ': ' + repository.provider.label;
+        }
+        var area = this.shell.getAreaFor(this);
+        if (area === 'left') {
+            this.shell.leftPanelHandler.refresh();
+        }
+        else if (area === 'right') {
+            this.shell.rightPanelHandler.refresh();
+        }
+        this.update();
+        if (repository) {
+            this.toDisposeOnRefresh.push(repository.onDidChange(function () { return _this.update(); }));
+            // render synchronously to avoid cursor jumping
+            // see https://stackoverflow.com/questions/28922275/in-reactjs-why-does-setstate-behave-differently-when-called-synchronously/28922465#28922465
+            this.toDisposeOnRefresh.push(repository.input.onDidChange(function () { return _this.setContent(_this.options); }));
+        }
+    };
+    ScmHistoryWidget.prototype.onAfterAttach = function (msg) {
+        var _this = this;
+        _super.prototype.onAfterAttach.call(this, msg);
+        this.addListNavigationKeyListeners(this.node);
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        this.addEventListener(this.node, 'ps-scroll-y', function (e) {
+            if (_this.listView && _this.listView.list && _this.listView.list.Grid) {
+                var scrollTop = e.target.scrollTop;
+                _this.listView.list.Grid.handleScrollEvent({ scrollTop: scrollTop });
             }
         });
     };
-    SearchInWorkspaceResultTreeWidget.prototype.search = function (searchTerm, searchOptions) {
+    ScmHistoryWidget.prototype.update = function () {
+        if (this.listView && this.listView.list) {
+            this.listView.list.forceUpdateGrid();
+        }
+        _super.prototype.update.call(this);
+    };
+    ScmHistoryWidget.prototype.setContent = function (options) {
         return __awaiter(this, void 0, void 0, function () {
-            var collapseValue, cancelIndicator, token, progress, pendingRefreshTimeout, searchId;
-            var _this = this;
+            var fileStat;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        this.searchTerm = searchTerm;
-                        collapseValue = this.searchInWorkspacePreferences['search.collapseResults'];
-                        this.resultTree.clear();
-                        if (this.cancelIndicator) {
-                            this.cancelIndicator.cancel();
-                        }
-                        if (searchTerm === '') {
-                            this.refreshModelChildren();
-                            return [2 /*return*/];
-                        }
-                        this.cancelIndicator = new core_1.CancellationTokenSource();
-                        cancelIndicator = this.cancelIndicator;
-                        token = this.cancelIndicator.token;
-                        token.onCancellationRequested(function () {
-                            _this.changeEmitter.fire(_this.resultTree);
-                        });
-                        return [4 /*yield*/, this.progressService.showProgress({ text: "search: " + searchTerm, options: { location: 'search' } })];
+                        this.resetState(options);
+                        if (!(options && options.uri)) return [3 /*break*/, 2];
+                        return [4 /*yield*/, this.fileSystem.getFileStat(options.uri)];
                     case 1:
-                        progress = _a.sent();
-                        return [4 /*yield*/, this.searchService.search(searchTerm, {
-                                onResult: function (aSearchId, result) {
-                                    var e_2, _a;
-                                    if (token.isCancellationRequested || aSearchId !== searchId) {
-                                        return;
-                                    }
-                                    var path = _this.filenameAndPath(result.root, result.fileUri).path;
-                                    var tree = _this.resultTree;
-                                    var rootFolderNode = tree.get(result.root);
-                                    if (!rootFolderNode) {
-                                        rootFolderNode = _this.createRootFolderNode(result.root);
-                                        tree.set(result.root, rootFolderNode);
-                                    }
-                                    var fileNode = rootFolderNode.children.find(function (f) { return f.fileUri === result.fileUri; });
-                                    if (!fileNode) {
-                                        fileNode = _this.createFileNode(result.root, path, result.fileUri, rootFolderNode);
-                                        rootFolderNode.children.push(fileNode);
-                                    }
-                                    var _loop_1 = function (match) {
-                                        var line = _this.createResultLineNode(result, match, fileNode);
-                                        if (fileNode.children.findIndex(function (lineNode) { return lineNode.id === line.id; }) < 0) {
-                                            fileNode.children.push(line);
-                                        }
-                                    };
-                                    try {
-                                        for (var _b = __values(result.matches), _c = _b.next(); !_c.done; _c = _b.next()) {
-                                            var match = _c.value;
-                                            _loop_1(match);
-                                        }
-                                    }
-                                    catch (e_2_1) { e_2 = { error: e_2_1 }; }
-                                    finally {
-                                        try {
-                                            if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
-                                        }
-                                        finally { if (e_2) throw e_2.error; }
-                                    }
-                                    _this.collapseFileNode(fileNode, collapseValue);
-                                    if (pendingRefreshTimeout) {
-                                        clearTimeout(pendingRefreshTimeout);
-                                    }
-                                    pendingRefreshTimeout = setTimeout(function () { return _this.refreshModelChildren(); }, 100);
-                                },
-                                onDone: function () {
-                                    cancelIndicator.cancel();
-                                    // Sort the result map by folder URI.
-                                    _this.resultTree = new Map(__spread(_this.resultTree).sort(function (a, b) { return _this.compare(a[1].folderUri, b[1].folderUri); }));
-                                    // Update the list of children nodes, sorting them by their file URI.
-                                    Array.from(_this.resultTree.values())
-                                        .forEach(function (folder) {
-                                        folder.children = folder.children.sort(function (a, b) { return _this.compare(a.fileUri, b.fileUri); });
-                                    });
-                                    _this.refreshModelChildren();
-                                }
-                            }, searchOptions).catch(function () { return undefined; })];
-                    case 2:
-                        searchId = _a.sent();
-                        token.onCancellationRequested(function () {
-                            progress.cancel();
-                            if (searchId) {
-                                _this.searchService.cancel(searchId);
-                            }
-                            _this.cancelIndicator = undefined;
-                        });
+                        fileStat = _a.sent();
+                        this.singleFileMode = !!fileStat && !fileStat.isDirectory;
+                        _a.label = 2;
+                    case 2: return [4 /*yield*/, this.addCommits(options)];
+                    case 3:
+                        _a.sent();
+                        this.onDataReady();
+                        if (this.scmNodes.length > 0) {
+                            this.selectNode(this.scmNodes[0]);
+                        }
                         return [2 /*return*/];
                 }
             });
         });
     };
-    SearchInWorkspaceResultTreeWidget.prototype.focusFirstResult = function () {
-        if (SearchInWorkspaceRoot.is(this.model.root) && this.model.root.children.length > 0) {
-            var node = this.model.root.children[0];
-            if (browser_1.SelectableTreeNode.is(node)) {
-                this.node.focus();
-                this.model.selectNode(node);
-            }
-        }
+    ScmHistoryWidget.prototype.resetState = function (options) {
+        this.options = options || {};
+        this.status = { state: 'loading' };
+        this.scmNodes = [];
+        this.hasMoreCommits = true;
+        this.allowScrollToSelected = true;
     };
-    /**
-     * Collapse the search-in-workspace file node
-     * based on the preference value.
-     */
-    SearchInWorkspaceResultTreeWidget.prototype.collapseFileNode = function (node, preferenceValue) {
-        if (preferenceValue === 'auto' && node.children.length >= 10) {
-            node.expanded = false;
-        }
-        else if (preferenceValue === 'alwaysCollapse') {
-            node.expanded = false;
-        }
-        else if (preferenceValue === 'alwaysExpand') {
-            node.expanded = true;
-        }
-    };
-    SearchInWorkspaceResultTreeWidget.prototype.handleUp = function (event) {
-        if (!this.model.getPrevSelectableNode(this.model.selectedNodes[0])) {
-            this.focusInputEmitter.fire(true);
-        }
-        else {
-            _super.prototype.handleUp.call(this, event);
-        }
-    };
-    SearchInWorkspaceResultTreeWidget.prototype.refreshModelChildren = function () {
+    ScmHistoryWidget.prototype.addCommits = function (options) {
         return __awaiter(this, void 0, void 0, function () {
+            var repository, token, currentCommits, history_2, commits, _loop_1, this_1, history_1, history_1_1, commit, e_1_1, error_1;
+            var e_1, _a;
+            var _this = this;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        repository = this.scmService.selectedRepository;
+                        this.cancelIndicator.cancel();
+                        this.cancelIndicator = new cancellation_1.CancellationTokenSource();
+                        token = this.cancelIndicator.token;
+                        if (!repository) return [3 /*break*/, 15];
+                        if (!this.historySupport) return [3 /*break*/, 13];
+                        _b.label = 1;
+                    case 1:
+                        _b.trys.push([1, 11, , 12]);
+                        currentCommits = this.status.state === 'ready' ? this.status.commits : [];
+                        return [4 /*yield*/, this.historySupport.getCommitHistory(options)];
+                    case 2:
+                        history_2 = _b.sent();
+                        if (token.isCancellationRequested || !this.hasMoreCommits) {
+                            return [2 /*return*/];
+                        }
+                        if (options && ((options.maxCount && history_2.length < options.maxCount) || (!options.maxCount && currentCommits))) {
+                            this.hasMoreCommits = false;
+                        }
+                        if (currentCommits.length > 0) {
+                            history_2 = history_2.slice(1);
+                        }
+                        commits = [];
+                        _loop_1 = function (commit) {
+                            var fileChangeNodes, avatarUrl;
+                            return __generator(this, function (_a) {
+                                switch (_a.label) {
+                                    case 0:
+                                        fileChangeNodes = [];
+                                        return [4 /*yield*/, Promise.all(commit.fileChanges.map(function (fileChange) { return __awaiter(_this, void 0, void 0, function () {
+                                                return __generator(this, function (_a) {
+                                                    fileChangeNodes.push({
+                                                        fileChange: fileChange,
+                                                        commitId: commit.id
+                                                    });
+                                                    return [2 /*return*/];
+                                                });
+                                            }); }))];
+                                    case 1:
+                                        _a.sent();
+                                        return [4 /*yield*/, this_1.avatarService.getAvatar(commit.authorEmail)];
+                                    case 2:
+                                        avatarUrl = _a.sent();
+                                        commits.push({
+                                            commitDetails: commit,
+                                            authorAvatar: avatarUrl,
+                                            fileChangeNodes: fileChangeNodes,
+                                            expanded: false,
+                                            selected: false
+                                        });
+                                        return [2 /*return*/];
+                                }
+                            });
+                        };
+                        this_1 = this;
+                        _b.label = 3;
+                    case 3:
+                        _b.trys.push([3, 8, 9, 10]);
+                        history_1 = __values(history_2), history_1_1 = history_1.next();
+                        _b.label = 4;
+                    case 4:
+                        if (!!history_1_1.done) return [3 /*break*/, 7];
+                        commit = history_1_1.value;
+                        return [5 /*yield**/, _loop_1(commit)];
+                    case 5:
+                        _b.sent();
+                        _b.label = 6;
+                    case 6:
+                        history_1_1 = history_1.next();
+                        return [3 /*break*/, 4];
+                    case 7: return [3 /*break*/, 10];
+                    case 8:
+                        e_1_1 = _b.sent();
+                        e_1 = { error: e_1_1 };
+                        return [3 /*break*/, 10];
+                    case 9:
+                        try {
+                            if (history_1_1 && !history_1_1.done && (_a = history_1.return)) _a.call(history_1);
+                        }
+                        finally { if (e_1) throw e_1.error; }
+                        return [7 /*endfinally*/];
+                    case 10:
+                        currentCommits.push.apply(currentCommits, __spread(commits));
+                        this.status = { state: 'ready', commits: currentCommits };
+                        return [3 /*break*/, 12];
+                    case 11:
+                        error_1 = _b.sent();
+                        if (options && options.uri && repository) {
+                            this.hasMoreCommits = false;
+                        }
+                        this.status = { state: 'error', errorMessage: React.createElement(React.Fragment, null,
+                                " ",
+                                error_1.message,
+                                " ") };
+                        return [3 /*break*/, 12];
+                    case 12: return [3 /*break*/, 14];
+                    case 13:
+                        this.status = { state: 'error', errorMessage: React.createElement(React.Fragment, null,
+                                "History is not supported for ",
+                                repository.provider.label,
+                                " source control.") };
+                        _b.label = 14;
+                    case 14: return [3 /*break*/, 16];
+                    case 15:
+                        this.status = { state: 'error', errorMessage: React.createElement(React.Fragment, null, "There is no repository selected in this workspace.") };
+                        _b.label = 16;
+                    case 16: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    ScmHistoryWidget.prototype.addOrRemoveFileChangeNodes = function (commit) {
+        return __awaiter(this, void 0, void 0, function () {
+            var id;
             return __generator(this, function (_a) {
-                if (SearchInWorkspaceRoot.is(this.model.root)) {
-                    this.model.root.children = Array.from(this.resultTree.values());
-                    this.model.refresh();
-                    this.updateCurrentEditorDecorations();
+                switch (_a.label) {
+                    case 0:
+                        id = this.scmNodes.findIndex(function (node) { return node === commit; });
+                        if (!commit.expanded) return [3 /*break*/, 1];
+                        this.removeFileChangeNodes(commit, id);
+                        return [3 /*break*/, 3];
+                    case 1: return [4 /*yield*/, this.addFileChangeNodes(commit, id)];
+                    case 2:
+                        _a.sent();
+                        _a.label = 3;
+                    case 3:
+                        commit.expanded = !commit.expanded;
+                        this.update();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    ScmHistoryWidget.prototype.addFileChangeNodes = function (commit, scmNodesArrayIndex) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _a;
+            return __generator(this, function (_b) {
+                if (commit.fileChangeNodes) {
+                    (_a = this.scmNodes).splice.apply(_a, __spread([scmNodesArrayIndex + 1, 0], commit.fileChangeNodes.map(function (node) {
+                        return Object.assign(node, { commitSha: commit.commitDetails.id });
+                    })));
                 }
                 return [2 /*return*/];
             });
         });
     };
-    SearchInWorkspaceResultTreeWidget.prototype.updateCurrentEditorDecorations = function () {
+    ScmHistoryWidget.prototype.removeFileChangeNodes = function (commit, scmNodesArrayIndex) {
+        if (commit.fileChangeNodes) {
+            this.scmNodes.splice(scmNodesArrayIndex + 1, commit.fileChangeNodes.length);
+        }
+    };
+    ScmHistoryWidget.prototype.storeState = function () {
+        var _a = this, options = _a.options, singleFileMode = _a.singleFileMode;
+        return {
+            options: options,
+            singleFileMode: singleFileMode
+        };
+    };
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    ScmHistoryWidget.prototype.restoreState = function (oldState) {
+        this.options = oldState['options'];
+        this.singleFileMode = oldState['singleFileMode'];
+        this.setContent(this.options);
+    };
+    ScmHistoryWidget.prototype.onDataReady = function () {
+        if (this.status.state === 'ready') {
+            this.scmNodes = this.status.commits;
+        }
+        this.update();
+    };
+    ScmHistoryWidget.prototype.render = function () {
+        var content;
+        switch (this.status.state) {
+            case 'ready':
+                content = React.createElement(React.Fragment, null,
+                    this.renderHistoryHeader(),
+                    this.renderCommitList());
+                break;
+            case 'error':
+                var reason = this.status.errorMessage;
+                var path = '';
+                if (this.options.uri) {
+                    var relPathEncoded = this.scmLabelProvider.relativePath(this.options.uri);
+                    var relPath = relPathEncoded ? "" + decodeURIComponent(relPathEncoded) : '';
+                    var repo = this.scmService.findRepository(new uri_1.default(this.options.uri));
+                    var repoName = repo ? "" + new uri_1.default(repo.provider.rootUri).displayName : '';
+                    var relPathAndRepo = [relPath, repoName].filter(Boolean).join(' in ');
+                    path = " for " + relPathAndRepo;
+                }
+                content = React.createElement(alert_message_1.AlertMessage, { type: 'WARNING', header: "There is no history available" + path + "." }, reason);
+                break;
+            case 'loading':
+                content = React.createElement("div", { className: 'spinnerContainer' },
+                    React.createElement("span", { className: 'fa fa-spinner fa-pulse fa-3x fa-fw' }));
+                break;
+        }
+        return React.createElement("div", { className: 'scm-diff-container' }, content);
+    };
+    ScmHistoryWidget.prototype.renderHistoryHeader = function () {
+        if (this.options.uri) {
+            var path = this.scmLabelProvider.relativePath(this.options.uri);
+            var fileName = path.split('/').pop();
+            return React.createElement("div", { className: 'diff-header' },
+                this.renderHeaderRow({ name: 'repository', value: this.getRepositoryLabel(this.options.uri) }),
+                this.renderHeaderRow({ name: 'file', value: fileName, title: path }),
+                React.createElement("div", { className: 'theia-header' }, "Commits"));
+        }
+    };
+    ScmHistoryWidget.prototype.renderCommitList = function () {
         var _this = this;
-        this.shell.allTabBars.map(function (tb) {
-            var currentTitle = tb.currentTitle;
-            if (currentTitle && currentTitle.owner instanceof browser_2.EditorWidget) {
-                var widget_1 = currentTitle.owner;
-                var fileNodes = _this.getFileNodesByUri(widget_1.editor.uri);
-                if (fileNodes.length > 0) {
-                    fileNodes.forEach(function (node) {
-                        _this.decorateEditor(node, widget_1);
-                    });
+        var list = React.createElement("div", { className: 'listContainer', id: this.scrollContainer },
+            React.createElement(ScmHistoryList, { ref: function (listView) { return _this.listView = (listView || undefined); }, rows: this.scmNodes, hasMoreRows: this.hasMoreCommits, indexOfSelected: this.allowScrollToSelected ? this.indexOfSelected : -1, handleScroll: this.handleScroll, loadMoreRows: this.loadMoreRows, renderCommit: this.renderCommit, renderFileChangeList: this.renderFileChangeList }));
+        this.allowScrollToSelected = true;
+        return list;
+    };
+    ScmHistoryWidget.prototype.doHandleScroll = function (info) {
+        this.node.scrollTop = info.scrollTop;
+    };
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    ScmHistoryWidget.prototype.doLoadMoreRows = function (params) {
+        var _this = this;
+        var resolver;
+        var promise = new Promise(function (resolve) { return resolver = resolve; });
+        var lastRow = this.scmNodes[params.stopIndex - 1];
+        if (ScmCommitNode.is(lastRow)) {
+            var toRevision = lastRow.commitDetails.id;
+            this.addCommits({
+                range: { toRevision: toRevision },
+                maxCount: scm_history_contribution_1.SCM_HISTORY_MAX_COUNT,
+                uri: this.options.uri
+            }).then(function () {
+                _this.allowScrollToSelected = false;
+                _this.onDataReady();
+                resolver();
+            });
+        }
+        return promise;
+    };
+    ScmHistoryWidget.prototype.doRenderCommit = function (commit) {
+        var _this = this;
+        var expansionToggleIcon = 'caret-right';
+        if (commit && commit.expanded) {
+            expansionToggleIcon = 'caret-down';
+        }
+        return React.createElement("div", { className: "containerHead" + (commit.selected ? ' ' + browser_1.SELECTED_CLASS : ''), onClick: function (e) {
+                if (commit.selected && !_this.singleFileMode) {
+                    _this.addOrRemoveFileChangeNodes(commit);
                 }
                 else {
-                    _this.decorateEditor(undefined, widget_1);
+                    _this.selectNode(commit);
                 }
-            }
-        });
-        var currentWidget = this.editorManager.currentEditor;
-        if (currentWidget) {
-            var fileNodes = this.getFileNodesByUri(currentWidget.editor.uri);
-            fileNodes.forEach(function (node) {
-                _this.decorateEditor(node, currentWidget);
+                e.preventDefault();
+            }, onDoubleClick: function (e) {
+                if (_this.singleFileMode && commit.fileChangeNodes.length > 0) {
+                    _this.openFile(commit.fileChangeNodes[0].fileChange);
+                }
+                e.preventDefault();
+            } },
+            React.createElement("div", { className: 'headContent' },
+                React.createElement("div", { className: 'image-container' },
+                    React.createElement("img", { className: 'gravatar', src: commit.authorAvatar })),
+                React.createElement("div", { className: "headLabelContainer" + (this.singleFileMode ? ' singleFileMode' : '') },
+                    React.createElement("div", { className: 'headLabel noWrapInfo noselect' }, commit.commitDetails.summary),
+                    React.createElement("div", { className: 'commitTime noWrapInfo noselect' }, commit.commitDetails.authorDateRelative + ' by ' + commit.commitDetails.authorName)),
+                React.createElement("div", { className: 'fa fa-eye detailButton', onClick: function () { return _this.openDetailWidget(commit); } }),
+                !this.singleFileMode ? React.createElement("div", { className: 'expansionToggle noselect' },
+                    React.createElement("div", { className: 'toggle' },
+                        React.createElement("div", { className: 'number' }, commit.commitDetails.fileChanges.length.toString()),
+                        React.createElement("div", { className: 'icon fa fa-' + expansionToggleIcon })))
+                    : ''));
+    };
+    ScmHistoryWidget.prototype.openDetailWidget = function (commitNode) {
+        return __awaiter(this, void 0, void 0, function () {
+            var options;
+            return __generator(this, function (_a) {
+                options = __assign(__assign({}, commitNode.commitDetails.commitDetailOptions), { mode: 'reveal' });
+                browser_1.open(this.openerService, commitNode.commitDetails.commitDetailUri, options);
+                return [2 /*return*/];
             });
-        }
+        });
     };
-    SearchInWorkspaceResultTreeWidget.prototype.createRootFolderNode = function (rootUri) {
-        var uri = new uri_1.default(rootUri);
-        return {
-            selected: false,
-            path: uri.path.toString(),
-            folderUri: rootUri,
-            children: [],
-            expanded: true,
-            id: rootUri,
-            parent: this.model.root,
-            visible: this.workspaceService.isMultiRootWorkspaceOpened
-        };
+    ScmHistoryWidget.prototype.doRenderFileChangeList = function (fileChange) {
+        var fileChangeElement = this.renderScmItem(fileChange, fileChange.commitId);
+        return fileChangeElement;
     };
-    SearchInWorkspaceResultTreeWidget.prototype.createFileNode = function (rootUri, path, fileUri, parent) {
-        return {
-            selected: false,
-            path: path,
-            children: [],
-            expanded: true,
-            id: rootUri + "::" + fileUri,
-            parent: parent,
-            fileUri: fileUri
-        };
+    ScmHistoryWidget.prototype.renderScmItem = function (change, commitSha) {
+        var _this = this;
+        return React.createElement(scm_navigable_list_widget_1.ScmItemComponent, __assign({ key: change.fileChange.uri.toString() }, {
+            labelProvider: this.labelProvider,
+            scmLabelProvider: this.scmLabelProvider,
+            change: change,
+            revealChange: function () { return _this.openFile(change.fileChange); },
+            selectNode: function () { return _this.selectNode(change); }
+        }));
     };
-    SearchInWorkspaceResultTreeWidget.prototype.createResultLineNode = function (result, match, fileNode) {
-        return __assign(__assign(__assign({}, result), match), { selected: false, id: result.fileUri + '-' + match.line + '-' + match.character + '-' + match.length, name: typeof match.lineText === 'string' ? match.lineText : match.lineText.text, parent: fileNode });
-    };
-    SearchInWorkspaceResultTreeWidget.prototype.getFileNodesByUri = function (uri) {
-        var e_3, _a, e_4, _b;
-        var nodes = [];
-        var fileUri = uri.withScheme('file').toString();
-        try {
-            for (var _c = __values(this.resultTree.values()), _d = _c.next(); !_d.done; _d = _c.next()) {
-                var rootFolderNode = _d.value;
-                var rootUri = new uri_1.default(rootFolderNode.path).withScheme('file');
-                if (rootUri.isEqualOrParent(uri)) {
-                    try {
-                        for (var _e = (e_4 = void 0, __values(rootFolderNode.children)), _f = _e.next(); !_f.done; _f = _e.next()) {
-                            var fileNode = _f.value;
-                            if (fileNode.fileUri === fileUri) {
-                                nodes.push(fileNode);
-                            }
-                        }
-                    }
-                    catch (e_4_1) { e_4 = { error: e_4_1 }; }
-                    finally {
-                        try {
-                            if (_f && !_f.done && (_b = _e.return)) _b.call(_e);
-                        }
-                        finally { if (e_4) throw e_4.error; }
+    ScmHistoryWidget.prototype.navigateLeft = function () {
+        var selected = this.getSelected();
+        if (selected && this.status.state === 'ready') {
+            if (ScmCommitNode.is(selected)) {
+                var idx = this.status.commits.findIndex(function (c) { return c.commitDetails.id === selected.commitDetails.id; });
+                if (selected.expanded) {
+                    this.addOrRemoveFileChangeNodes(selected);
+                }
+                else {
+                    if (idx > 0) {
+                        this.selectNode(this.status.commits[idx - 1]);
                     }
                 }
             }
-        }
-        catch (e_3_1) { e_3 = { error: e_3_1 }; }
-        finally {
-            try {
-                if (_d && !_d.done && (_a = _c.return)) _a.call(_c);
-            }
-            finally { if (e_3) throw e_3.error; }
-        }
-        return nodes;
-    };
-    SearchInWorkspaceResultTreeWidget.prototype.filenameAndPath = function (rootUriStr, uriStr) {
-        var uri = new uri_1.default(uriStr);
-        var relativePath = new uri_1.default(rootUriStr).relative(uri.parent);
-        return {
-            name: uri.displayName,
-            path: relativePath ? relativePath.toString() : ''
-        };
-    };
-    SearchInWorkspaceResultTreeWidget.prototype.renderCaption = function (node, props) {
-        if (SearchInWorkspaceRootFolderNode.is(node)) {
-            return this.renderRootFolderNode(node);
-        }
-        else if (SearchInWorkspaceFileNode.is(node)) {
-            return this.renderFileNode(node);
-        }
-        else if (SearchInWorkspaceResultLineNode.is(node)) {
-            return this.renderResultLineNode(node);
-        }
-        return '';
-    };
-    SearchInWorkspaceResultTreeWidget.prototype.renderTailDecorations = function (node, props) {
-        return React.createElement("div", { className: 'result-node-buttons' },
-            this._showReplaceButtons && this.renderReplaceButton(node),
-            this.renderRemoveButton(node));
-    };
-    SearchInWorkspaceResultTreeWidget.prototype.doReplace = function (node, e) {
-        this.replace(node);
-        e.stopPropagation();
-    };
-    SearchInWorkspaceResultTreeWidget.prototype.renderReplaceButton = function (node) {
-        var _this = this;
-        var isResultLineNode = SearchInWorkspaceResultLineNode.is(node);
-        return React.createElement("span", { className: isResultLineNode ? 'replace-result' : 'replace-all-result', onClick: function (e) { return _this.doReplace(node, e); }, title: isResultLineNode ? 'Replace' : 'Replace All' });
-    };
-    SearchInWorkspaceResultTreeWidget.prototype.getFileCount = function (node) {
-        var _this = this;
-        if (SearchInWorkspaceRoot.is(node)) {
-            return node.children.reduce(function (acc, current) { return acc + _this.getFileCount(current); }, 0);
-        }
-        else if (SearchInWorkspaceRootFolderNode.is(node)) {
-            return node.children.length;
-        }
-        else if (SearchInWorkspaceFileNode.is(node)) {
-            return 1;
-        }
-        return 0;
-    };
-    SearchInWorkspaceResultTreeWidget.prototype.getResultCount = function (node) {
-        var _this = this;
-        if (SearchInWorkspaceRoot.is(node)) {
-            return node.children.reduce(function (acc, current) { return acc + _this.getResultCount(current); }, 0);
-        }
-        else if (SearchInWorkspaceRootFolderNode.is(node)) {
-            return node.children.reduce(function (acc, current) { return acc + _this.getResultCount(current); }, 0);
-        }
-        else if (SearchInWorkspaceFileNode.is(node)) {
-            return node.children.length;
-        }
-        else if (SearchInWorkspaceResultLineNode.is(node)) {
-            return 1;
-        }
-        return 0;
-    };
-    /**
-     * Replace results under the node passed into the function. If node is undefined, replace all results.
-     * @param node Node in the tree widget where the "replace all" operation is performed
-     */
-    SearchInWorkspaceResultTreeWidget.prototype.replace = function (node) {
-        return __awaiter(this, void 0, void 0, function () {
-            var replaceForNode, needConfirm, _a;
-            var _this = this;
-            return __generator(this, function (_b) {
-                switch (_b.label) {
-                    case 0:
-                        replaceForNode = node || this.model.root;
-                        needConfirm = !SearchInWorkspaceFileNode.is(node) && !SearchInWorkspaceResultLineNode.is(node);
-                        _a = !needConfirm;
-                        if (_a) return [3 /*break*/, 2];
-                        return [4 /*yield*/, this.confirmReplaceAll(this.getResultCount(replaceForNode), this.getFileCount(replaceForNode))];
-                    case 1:
-                        _a = (_b.sent());
-                        _b.label = 2;
-                    case 2:
-                        if (_a) {
-                            (node ? [node] : Array.from(this.resultTree.values())).forEach(function (n) {
-                                _this.replaceResult(n, !!node);
-                                _this.removeNode(n);
-                            });
-                        }
-                        return [2 /*return*/];
-                }
-            });
-        });
-    };
-    SearchInWorkspaceResultTreeWidget.prototype.confirmReplaceAll = function (resultNumber, fileNumber) {
-        var go = fileNumber > 1;
-        return new browser_1.ConfirmDialog({
-            title: 'Replace all',
-            msg: "Do you really want to replace " + resultNumber + " match" + (resultNumber > 1 ? 'es' : '') + " " + (go ? 'across' : 'in') + " "
-                + (fileNumber + " file" + (go ? 's' : '') + " with \"" + this._replaceTerm + "\"?")
-        }).open();
-    };
-    SearchInWorkspaceResultTreeWidget.prototype.updateRightResults = function (node) {
-        var fileNode = node.parent;
-        var rightPositionedNodes = fileNode.children.filter(function (rl) { return rl.line === node.line && rl.character > node.character; });
-        var diff = this._replaceTerm.length - this.searchTerm.length;
-        rightPositionedNodes.map(function (r) { return r.character += diff; });
-    };
-    /**
-     * Replace text either in all search matches under a node or in all search matches, and save the changes.
-     * @param node - node in the tree widget in which the "replace all" is performed.
-     * @param {boolean} replaceOne - whether the function is to replace all matches under a node. If it is false, replace all.
-     */
-    SearchInWorkspaceResultTreeWidget.prototype.replaceResult = function (node, replaceOne) {
-        return __awaiter(this, void 0, void 0, function () {
-            var toReplace, trackedEditors, widget, _a, source, replaceOperations;
-            var _this = this;
-            return __generator(this, function (_b) {
-                switch (_b.label) {
-                    case 0:
-                        toReplace = [];
-                        if (SearchInWorkspaceRootFolderNode.is(node)) {
-                            node.children.forEach(function (fileNode) { return _this.replaceResult(fileNode, replaceOne); });
-                        }
-                        else if (SearchInWorkspaceFileNode.is(node)) {
-                            toReplace.push.apply(toReplace, __spread(node.children));
-                        }
-                        else if (SearchInWorkspaceResultLineNode.is(node)) {
-                            toReplace.push(node);
-                            this.updateRightResults(node);
-                        }
-                        if (!(toReplace.length > 0)) return [3 /*break*/, 7];
-                        trackedEditors = this.editorManager.all;
-                        if (!replaceOne) return [3 /*break*/, 2];
-                        return [4 /*yield*/, this.doOpen(toReplace[0])];
-                    case 1:
-                        _a = _b.sent();
-                        return [3 /*break*/, 4];
-                    case 2: return [4 /*yield*/, this.doGetWidget(toReplace[0])];
-                    case 3:
-                        _a = _b.sent();
-                        _b.label = 4;
-                    case 4:
-                        widget = _a;
-                        source = widget.editor.document.getText();
-                        replaceOperations = toReplace.map(function (resultLineNode) { return ({
-                            text: _this._replaceTerm,
-                            range: {
-                                start: {
-                                    line: resultLineNode.line - 1,
-                                    character: resultLineNode.character - 1
-                                },
-                                end: {
-                                    line: resultLineNode.line - 1,
-                                    character: resultLineNode.character - 1 + resultLineNode.length
-                                }
-                            }
-                        }); });
-                        // Replace the text.
-                        return [4 /*yield*/, widget.editor.replaceText({
-                                source: source,
-                                replaceOperations: replaceOperations
-                            })];
-                    case 5:
-                        // Replace the text.
-                        _b.sent();
-                        // Save the text replacement changes in the editor.
-                        return [4 /*yield*/, widget.saveable.save()];
-                    case 6:
-                        // Save the text replacement changes in the editor.
-                        _b.sent();
-                        // Dispose the widget if it is not opened but created for `replaceAll`.
-                        if (!replaceOne) {
-                            if (trackedEditors.indexOf(widget) === -1) {
-                                widget.dispose();
-                            }
-                        }
-                        _b.label = 7;
-                    case 7: return [2 /*return*/];
-                }
-            });
-        });
-    };
-    SearchInWorkspaceResultTreeWidget.prototype.doRemove = function (node, e) {
-        this.removeNode(node);
-        e.stopPropagation();
-    };
-    SearchInWorkspaceResultTreeWidget.prototype.renderRemoveButton = function (node) {
-        var _this = this;
-        return React.createElement("span", { className: 'remove-node', onClick: function (e) { return _this.remove(node, e); }, title: 'Dismiss' });
-    };
-    SearchInWorkspaceResultTreeWidget.prototype.removeNode = function (node) {
-        if (SearchInWorkspaceRootFolderNode.is(node)) {
-            this.removeRootFolderNode(node);
-        }
-        else if (SearchInWorkspaceFileNode.is(node)) {
-            this.removeFileNode(node);
-        }
-        else if (SearchInWorkspaceResultLineNode.is(node)) {
-            this.removeResultLineNode(node);
-        }
-        this.refreshModelChildren();
-    };
-    SearchInWorkspaceResultTreeWidget.prototype.removeRootFolderNode = function (node) {
-        var e_5, _a;
-        try {
-            for (var _b = __values(this.resultTree.keys()), _c = _b.next(); !_c.done; _c = _b.next()) {
-                var rootUri = _c.value;
-                if (rootUri === node.folderUri) {
-                    this.resultTree.delete(rootUri);
-                    break;
-                }
+            else if (scm_file_change_node_1.ScmFileChangeNode.is(selected)) {
+                var idx = this.status.commits.findIndex(function (c) { return c.commitDetails.id === selected.commitId; });
+                this.selectNode(this.status.commits[idx]);
             }
         }
-        catch (e_5_1) { e_5 = { error: e_5_1 }; }
-        finally {
-            try {
-                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+        this.update();
+    };
+    ScmHistoryWidget.prototype.navigateRight = function () {
+        var selected = this.getSelected();
+        if (selected) {
+            if (ScmCommitNode.is(selected) && !selected.expanded && !this.singleFileMode) {
+                this.addOrRemoveFileChangeNodes(selected);
             }
-            finally { if (e_5) throw e_5.error; }
-        }
-    };
-    SearchInWorkspaceResultTreeWidget.prototype.removeFileNode = function (node) {
-        var rootFolderNode = node.parent;
-        var index = rootFolderNode.children.findIndex(function (fileNode) { return fileNode.id === node.id; });
-        if (index > -1) {
-            rootFolderNode.children.splice(index, 1);
-        }
-        if (this.getFileCount(rootFolderNode) === 0) {
-            this.removeRootFolderNode(rootFolderNode);
-        }
-    };
-    SearchInWorkspaceResultTreeWidget.prototype.removeResultLineNode = function (node) {
-        var fileNode = node.parent;
-        var index = fileNode.children.findIndex(function (n) { return n.fileUri === node.fileUri && n.line === node.line && n.character === node.character; });
-        if (index > -1) {
-            fileNode.children.splice(index, 1);
-            if (this.getResultCount(fileNode) === 0) {
-                this.removeFileNode(fileNode);
+            else {
+                this.selectNextNode();
             }
         }
+        this.update();
     };
-    SearchInWorkspaceResultTreeWidget.prototype.renderRootFolderNode = function (node) {
-        return React.createElement("div", { className: 'result' },
-            React.createElement("div", { className: 'result-head' },
-                React.createElement("div", { className: "result-head-info noWrapInfo noselect " + (node.selected ? 'selected' : '') },
-                    React.createElement("span", { className: "file-icon " + (this.toNodeIcon(node) || '') }),
-                    React.createElement("div", { className: 'noWrapInfo' },
-                        React.createElement("span", { className: 'file-name' }, this.toNodeName(node)),
-                        React.createElement("span", { className: 'file-path' }, node.path))),
-                React.createElement("span", { className: 'notification-count-container highlighted-count-container' },
-                    React.createElement("span", { className: 'notification-count' }, this.getFileCount(node)))));
-    };
-    SearchInWorkspaceResultTreeWidget.prototype.renderFileNode = function (node) {
-        return React.createElement("div", { className: 'result' },
-            React.createElement("div", { className: 'result-head' },
-                React.createElement("div", { className: "result-head-info noWrapInfo noselect " + (node.selected ? 'selected' : ''), title: new uri_1.default(node.fileUri).path.toString() },
-                    React.createElement("span", { className: "file-icon " + this.toNodeIcon(node) }),
-                    React.createElement("div", { className: 'noWrapInfo' },
-                        React.createElement("span", { className: 'file-name' }, this.toNodeName(node)),
-                        React.createElement("span", { className: 'file-path' }, node.path))),
-                React.createElement("span", { className: 'notification-count-container' },
-                    React.createElement("span", { className: 'notification-count' }, this.getResultCount(node)))));
-    };
-    SearchInWorkspaceResultTreeWidget.prototype.renderResultLineNode = function (node) {
-        var before;
-        var after;
-        var title;
-        if (typeof node.lineText === 'string') {
-            var prefix = node.character > 26 ? '... ' : '';
-            before = prefix + node.lineText.substr(0, node.character - 1).substr(-25);
-            after = node.lineText.substr(node.character - 1 + node.length, 75);
-            title = node.lineText.trim();
-        }
-        else {
-            before = node.lineText.text.substr(0, node.lineText.character);
-            after = node.lineText.text.substr(node.lineText.character + node.length);
-            title = node.lineText.text.trim();
-        }
-        return React.createElement("div", { className: "resultLine noWrapInfo " + (node.selected ? 'selected' : ''), title: title },
-            this.searchInWorkspacePreferences['search.lineNumbers'] && React.createElement("span", { className: 'theia-siw-lineNumber' }, node.line),
-            React.createElement("span", null, before),
-            this.renderMatchLinePart(node),
-            React.createElement("span", null, after));
-    };
-    SearchInWorkspaceResultTreeWidget.prototype.renderMatchLinePart = function (node) {
-        var replaceTerm = this._replaceTerm !== '' && this._showReplaceButtons ? React.createElement("span", { className: 'replace-term' }, this._replaceTerm) : '';
-        var className = "match" + (this._showReplaceButtons ? ' strike-through' : '');
-        var match = typeof node.lineText === 'string' ?
-            node.lineText.substr(node.character - 1, node.length)
-            : node.lineText.text.substr(node.lineText.character - 1, node.length);
-        return React.createElement(React.Fragment, null,
-            React.createElement("span", { className: className }, match),
-            replaceTerm);
-    };
-    /**
-     * Get the editor widget by the node.
-     * @param {SearchInWorkspaceResultLineNode} node - the node representing a match in the search results.
-     * @returns The editor widget to which the text replace will be done.
-     */
-    SearchInWorkspaceResultTreeWidget.prototype.doGetWidget = function (node) {
-        return __awaiter(this, void 0, void 0, function () {
-            var fileUri, editorWidget;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        fileUri = new uri_1.default(node.fileUri);
-                        return [4 /*yield*/, this.editorManager.getOrCreateByUri(fileUri)];
-                    case 1:
-                        editorWidget = _a.sent();
-                        return [2 /*return*/, editorWidget];
+    ScmHistoryWidget.prototype.handleListEnter = function () {
+        var selected = this.getSelected();
+        if (selected) {
+            if (ScmCommitNode.is(selected)) {
+                if (this.singleFileMode) {
+                    this.openFile(selected.fileChangeNodes[0].fileChange);
                 }
-            });
-        });
-    };
-    SearchInWorkspaceResultTreeWidget.prototype.doOpen = function (node, preview) {
-        if (preview === void 0) { preview = false; }
-        return __awaiter(this, void 0, void 0, function () {
-            var fileUri, resultNode, leftUri, rightUri, opts, editorWidget;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        resultNode = node.parent;
-                        if (!(resultNode && this._showReplaceButtons && preview)) return [3 /*break*/, 2];
-                        leftUri = new uri_1.default(node.fileUri);
-                        return [4 /*yield*/, this.createReplacePreview(resultNode)];
-                    case 1:
-                        rightUri = _a.sent();
-                        fileUri = browser_1.DiffUris.encode(leftUri, rightUri);
-                        return [3 /*break*/, 3];
-                    case 2:
-                        fileUri = new uri_1.default(node.fileUri);
-                        _a.label = 3;
-                    case 3:
-                        opts = !browser_1.DiffUris.isDiffUri(fileUri) ? {
-                            selection: {
-                                start: {
-                                    line: node.line - 1,
-                                    character: node.character - 1
-                                },
-                                end: {
-                                    line: node.line - 1,
-                                    character: node.character - 1 + node.length
-                                }
-                            },
-                            mode: 'reveal'
-                        } : undefined;
-                        return [4 /*yield*/, this.editorManager.open(fileUri, opts)];
-                    case 4:
-                        editorWidget = _a.sent();
-                        if (!browser_1.DiffUris.isDiffUri(fileUri)) {
-                            this.decorateEditor(resultNode, editorWidget);
-                        }
-                        return [2 /*return*/, editorWidget];
+                else {
+                    this.openDetailWidget(selected);
                 }
-            });
-        });
-    };
-    SearchInWorkspaceResultTreeWidget.prototype.createReplacePreview = function (node) {
-        return __awaiter(this, void 0, void 0, function () {
-            var fileUri, resource, content, lines;
-            var _this = this;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        fileUri = new uri_1.default(node.fileUri).withScheme('file');
-                        return [4 /*yield*/, this.fileResourceResolver.resolve(fileUri)];
-                    case 1:
-                        resource = _a.sent();
-                        return [4 /*yield*/, resource.readContents()];
-                    case 2:
-                        content = _a.sent();
-                        lines = content.split('\n');
-                        node.children.map(function (l) {
-                            var leftPositionedNodes = node.children.filter(function (rl) { return rl.line === l.line && rl.character < l.character; });
-                            var diff = (_this._replaceTerm.length - _this.searchTerm.length) * leftPositionedNodes.length;
-                            var start = lines[l.line - 1].substr(0, l.character - 1 + diff);
-                            var end = lines[l.line - 1].substr(l.character - 1 + diff + l.length);
-                            lines[l.line - 1] = start + _this._replaceTerm + end;
-                        });
-                        return [2 /*return*/, fileUri.withScheme(in_memory_text_resource_1.MEMORY_TEXT).withQuery(lines.join('\n'))];
-                }
-            });
-        });
-    };
-    SearchInWorkspaceResultTreeWidget.prototype.decorateEditor = function (node, editorWidget) {
-        if (!browser_1.DiffUris.isDiffUri(editorWidget.editor.uri)) {
-            var key = editorWidget.editor.uri.toString() + "#search-in-workspace-matches";
-            var oldDecorations = this.appliedDecorations.get(key) || [];
-            var newDecorations = this.createEditorDecorations(node);
-            var appliedDecorations = editorWidget.editor.deltaDecorations({
-                newDecorations: newDecorations,
-                oldDecorations: oldDecorations,
-            });
-            this.appliedDecorations.set(key, appliedDecorations);
+            }
+            else if (scm_file_change_node_1.ScmFileChangeNode.is(selected)) {
+                this.openFile(selected.fileChange);
+            }
         }
+        this.update();
     };
-    SearchInWorkspaceResultTreeWidget.prototype.createEditorDecorations = function (resultNode) {
-        var decorations = [];
-        if (resultNode) {
-            resultNode.children.map(function (res) {
-                decorations.push({
-                    range: {
-                        start: {
-                            line: res.line - 1,
-                            character: res.character - 1
-                        },
-                        end: {
-                            line: res.line - 1,
-                            character: res.character - 1 + res.length
-                        }
-                    },
-                    options: {
-                        overviewRuler: {
-                            color: {
-                                id: 'editor.findMatchHighlightBackground'
-                            },
-                            position: browser_2.OverviewRulerLane.Center
-                        },
-                        className: res.selected ? 'current-search-in-workspace-editor-match' : 'search-in-workspace-editor-match',
-                        stickiness: browser_2.TrackedRangeStickiness.GrowsOnlyWhenTypingBefore
-                    }
-                });
-            });
-        }
-        return decorations;
+    ScmHistoryWidget.prototype.openFile = function (change) {
+        var uriToOpen = change.getUriToOpen();
+        browser_1.open(this.openerService, uriToOpen, { mode: 'reveal' });
     };
-    /**
-     * Compare two normalized strings.
-     *
-     * @param a {string} the first string.
-     * @param b {string} the second string.
-     */
-    SearchInWorkspaceResultTreeWidget.prototype.compare = function (a, b) {
-        var itemA = a.toLowerCase().trim();
-        var itemB = b.toLowerCase().trim();
-        return itemA.localeCompare(itemB);
-    };
-    __decorate([
-        inversify_1.inject(search_in_workspace_service_1.SearchInWorkspaceService),
-        __metadata("design:type", search_in_workspace_service_1.SearchInWorkspaceService)
-    ], SearchInWorkspaceResultTreeWidget.prototype, "searchService", void 0);
-    __decorate([
-        inversify_1.inject(browser_2.EditorManager),
-        __metadata("design:type", browser_2.EditorManager)
-    ], SearchInWorkspaceResultTreeWidget.prototype, "editorManager", void 0);
-    __decorate([
-        inversify_1.inject(browser_4.FileResourceResolver),
-        __metadata("design:type", browser_4.FileResourceResolver)
-    ], SearchInWorkspaceResultTreeWidget.prototype, "fileResourceResolver", void 0);
-    __decorate([
-        inversify_1.inject(browser_1.ApplicationShell),
-        __metadata("design:type", browser_1.ApplicationShell)
-    ], SearchInWorkspaceResultTreeWidget.prototype, "shell", void 0);
-    __decorate([
-        inversify_1.inject(browser_3.WorkspaceService),
-        __metadata("design:type", browser_3.WorkspaceService)
-    ], SearchInWorkspaceResultTreeWidget.prototype, "workspaceService", void 0);
-    __decorate([
-        inversify_1.inject(browser_1.TreeExpansionService),
-        __metadata("design:type", Object)
-    ], SearchInWorkspaceResultTreeWidget.prototype, "expansionService", void 0);
-    __decorate([
-        inversify_1.inject(search_in_workspace_preferences_1.SearchInWorkspacePreferences),
-        __metadata("design:type", Object)
-    ], SearchInWorkspaceResultTreeWidget.prototype, "searchInWorkspacePreferences", void 0);
-    __decorate([
-        inversify_1.inject(core_2.ProgressService),
-        __metadata("design:type", core_2.ProgressService)
-    ], SearchInWorkspaceResultTreeWidget.prototype, "progressService", void 0);
-    __decorate([
-        inversify_1.inject(color_registry_1.ColorRegistry),
-        __metadata("design:type", color_registry_1.ColorRegistry)
-    ], SearchInWorkspaceResultTreeWidget.prototype, "colorRegistry", void 0);
     __decorate([
         inversify_1.postConstruct(),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", []),
         __metadata("design:returntype", void 0)
-    ], SearchInWorkspaceResultTreeWidget.prototype, "init", null);
-    SearchInWorkspaceResultTreeWidget = __decorate([
+    ], ScmHistoryWidget.prototype, "init", null);
+    ScmHistoryWidget = __decorate([
         inversify_1.injectable(),
-        __param(0, inversify_1.inject(browser_1.TreeProps)),
-        __param(1, inversify_1.inject(browser_1.TreeModel)),
-        __param(2, inversify_1.inject(browser_1.ContextMenuRenderer)),
-        __metadata("design:paramtypes", [Object, Object, browser_1.ContextMenuRenderer])
-    ], SearchInWorkspaceResultTreeWidget);
-    return SearchInWorkspaceResultTreeWidget;
-}(browser_1.TreeWidget));
-exports.SearchInWorkspaceResultTreeWidget = SearchInWorkspaceResultTreeWidget;
+        __param(0, inversify_1.inject(scm_service_1.ScmService)),
+        __param(1, inversify_1.inject(browser_1.OpenerService)),
+        __param(2, inversify_1.inject(browser_1.ApplicationShell)),
+        __param(3, inversify_1.inject(common_1.FileSystem)),
+        __param(4, inversify_1.inject(scm_avatar_service_1.ScmAvatarService)),
+        __param(5, inversify_1.inject(browser_1.WidgetManager)),
+        __metadata("design:paramtypes", [scm_service_1.ScmService, Object, browser_1.ApplicationShell, Object, scm_avatar_service_1.ScmAvatarService,
+            browser_1.WidgetManager])
+    ], ScmHistoryWidget);
+    return ScmHistoryWidget;
+}(scm_navigable_list_widget_2.ScmNavigableListWidget));
+exports.ScmHistoryWidget = ScmHistoryWidget;
+var ScmHistoryList = /** @class */ (function (_super) {
+    __extends(ScmHistoryList, _super);
+    function ScmHistoryList() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.checkIfRowIsLoaded = function (opts) { return _this.doCheckIfRowIsLoaded(opts); };
+        _this.measureCache = new react_virtualized_1.CellMeasurerCache();
+        _this.measureRowRenderer = function (params) {
+            var index = params.index, key = params.key, parent = params.parent;
+            return (React.createElement(react_virtualized_1.CellMeasurer, { cache: _this.measureCache, columnIndex: 0, key: key, rowIndex: index, parent: parent }, function () { return _this.renderRow(params); }));
+        };
+        _this.renderRow = function (_a) {
+            var index = _a.index, key = _a.key, style = _a.style;
+            if (_this.checkIfRowIsLoaded({ index: index })) {
+                var row = _this.props.rows[index];
+                if (ScmCommitNode.is(row)) {
+                    var head = _this.props.renderCommit(row);
+                    return React.createElement("div", { key: key, style: style, className: "commitListElement" + (index === 0 ? ' first' : '') }, head);
+                }
+                else if (scm_file_change_node_1.ScmFileChangeNode.is(row)) {
+                    return React.createElement("div", { key: key, style: style, className: 'fileChangeListElement' }, _this.props.renderFileChangeList(row));
+                }
+            }
+            else {
+                return React.createElement("div", { key: key, style: style, className: "commitListElement" + (index === 0 ? ' first' : '') },
+                    React.createElement("span", { className: 'fa fa-spinner fa-pulse fa-fw' }));
+            }
+        };
+        return _this;
+    }
+    ScmHistoryList.prototype.doCheckIfRowIsLoaded = function (opts) {
+        var row = this.props.rows[opts.index];
+        return !!row;
+    };
+    ScmHistoryList.prototype.render = function () {
+        var _this = this;
+        return React.createElement(react_virtualized_1.InfiniteLoader, { isRowLoaded: this.checkIfRowIsLoaded, loadMoreRows: this.props.loadMoreRows, rowCount: this.props.rows.length + 1, threshold: 15 }, function (_a) {
+            var onRowsRendered = _a.onRowsRendered, registerChild = _a.registerChild;
+            return (React.createElement(react_virtualized_1.AutoSizer, null, function (_a) {
+                var width = _a.width, height = _a.height;
+                return React.createElement(react_virtualized_1.List, { className: 'commitList', ref: function (list) {
+                        _this.list = (list || undefined);
+                        registerChild(list);
+                    }, width: width, height: height, onRowsRendered: onRowsRendered, rowRenderer: _this.measureRowRenderer, rowHeight: _this.measureCache.rowHeight, rowCount: _this.props.hasMoreRows ? _this.props.rows.length + 1 : _this.props.rows.length, tabIndex: -1, onScroll: _this.props.handleScroll, scrollToIndex: _this.props.indexOfSelected, style: {
+                        overflowY: 'visible',
+                        overflowX: 'visible'
+                    } });
+            }));
+        });
+    };
+    ScmHistoryList.prototype.componentWillUpdate = function () {
+        this.measureCache.clearAll();
+    };
+    return ScmHistoryList;
+}(React.Component));
+exports.ScmHistoryList = ScmHistoryList;
 
 
 /***/ }),
 
-/***/ "./node_modules/@theia/search-in-workspace/lib/browser/search-in-workspace-service.js":
-/*!********************************************************************************************!*\
-  !*** ./node_modules/@theia/search-in-workspace/lib/browser/search-in-workspace-service.js ***!
-  \********************************************************************************************/
+/***/ "./node_modules/@theia/scm-extra/lib/browser/scm-extra-contribution.js":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/@theia/scm-extra/lib/browser/scm-extra-contribution.js ***!
+  \*****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+var __spread = (this && this.__spread) || function () {
+    for (var ar = [], i = 0; i < arguments.length; i++) ar = ar.concat(__read(arguments[i]));
+    return ar;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EDITOR_CONTEXT_MENU_SCM = void 0;
 /********************************************************************************
- * Copyright (C) 2017-2018 Ericsson and others.
+ * Copyright (C) 2019 Arm and others.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0 which is available at
@@ -1316,6 +1001,180 @@ exports.SearchInWorkspaceResultTreeWidget = SearchInWorkspaceResultTreeWidget;
  *
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
+var browser_1 = __webpack_require__(/*! @theia/editor/lib/browser */ "./node_modules/@theia/editor/lib/browser/index.js");
+exports.EDITOR_CONTEXT_MENU_SCM = __spread(browser_1.EDITOR_CONTEXT_MENU, ['3_scm']);
+
+
+/***/ }),
+
+/***/ "./node_modules/@theia/scm-extra/lib/browser/scm-file-change-label-provider.js":
+/*!*************************************************************************************!*\
+  !*** ./node_modules/@theia/scm-extra/lib/browser/scm-file-change-label-provider.js ***!
+  \*************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/********************************************************************************
+ * Copyright (C) 2019 TypeFox and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScmFileChangeLabelProvider = void 0;
+var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
+var label_provider_1 = __webpack_require__(/*! @theia/core/lib/browser/label-provider */ "./node_modules/@theia/core/lib/browser/label-provider.js");
+var scm_file_change_node_1 = __webpack_require__(/*! ./scm-file-change-node */ "./node_modules/@theia/scm-extra/lib/browser/scm-file-change-node.js");
+var uri_1 = __webpack_require__(/*! @theia/core/lib/common/uri */ "./node_modules/@theia/core/lib/common/uri.js");
+var scm_service_1 = __webpack_require__(/*! @theia/scm/lib/browser/scm-service */ "./node_modules/@theia/scm/lib/browser/scm-service.js");
+var ScmFileChangeLabelProvider = /** @class */ (function () {
+    function ScmFileChangeLabelProvider() {
+    }
+    ScmFileChangeLabelProvider.prototype.canHandle = function (element) {
+        return scm_file_change_node_1.ScmFileChangeNode.is(element) ? 100 : 0;
+    };
+    ScmFileChangeLabelProvider.prototype.getIcon = function (node) {
+        return this.labelProvider.getIcon(new uri_1.default(node.fileChange.uri));
+    };
+    ScmFileChangeLabelProvider.prototype.getName = function (node) {
+        return this.labelProvider.getName(new uri_1.default(node.fileChange.uri));
+    };
+    ScmFileChangeLabelProvider.prototype.getDescription = function (node) {
+        return this.relativePath(new uri_1.default(node.fileChange.uri).parent);
+    };
+    ScmFileChangeLabelProvider.prototype.affects = function (node, event) {
+        return event.affects(new uri_1.default(node.fileChange.uri));
+    };
+    ScmFileChangeLabelProvider.prototype.getCaption = function (node) {
+        return node.fileChange.getCaption();
+    };
+    ScmFileChangeLabelProvider.prototype.relativePath = function (uri) {
+        var parsedUri = typeof uri === 'string' ? new uri_1.default(uri) : uri;
+        var repo = this.scmService.findRepository(parsedUri);
+        if (repo) {
+            var repositoryUri = new uri_1.default(repo.provider.rootUri);
+            var relativePath = repositoryUri.relative(parsedUri);
+            if (relativePath) {
+                return relativePath.toString();
+            }
+        }
+        return this.labelProvider.getLongName(parsedUri);
+    };
+    ScmFileChangeLabelProvider.prototype.getStatusCaption = function (node) {
+        return node.fileChange.getStatusCaption();
+    };
+    __decorate([
+        inversify_1.inject(label_provider_1.LabelProvider),
+        __metadata("design:type", label_provider_1.LabelProvider)
+    ], ScmFileChangeLabelProvider.prototype, "labelProvider", void 0);
+    __decorate([
+        inversify_1.inject(scm_service_1.ScmService),
+        __metadata("design:type", scm_service_1.ScmService)
+    ], ScmFileChangeLabelProvider.prototype, "scmService", void 0);
+    ScmFileChangeLabelProvider = __decorate([
+        inversify_1.injectable()
+    ], ScmFileChangeLabelProvider);
+    return ScmFileChangeLabelProvider;
+}());
+exports.ScmFileChangeLabelProvider = ScmFileChangeLabelProvider;
+
+
+/***/ }),
+
+/***/ "./node_modules/@theia/scm-extra/lib/browser/scm-file-change-node.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/@theia/scm-extra/lib/browser/scm-file-change-node.js ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/********************************************************************************
+ * Copyright (C) 2018 Ericsson and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScmFileChangeNode = void 0;
+var ScmFileChangeNode;
+(function (ScmFileChangeNode) {
+    function is(node) {
+        return !!node && 'fileChange' in node && 'commitId' in node;
+    }
+    ScmFileChangeNode.is = is;
+})(ScmFileChangeNode = exports.ScmFileChangeNode || (exports.ScmFileChangeNode = {}));
+
+
+/***/ }),
+
+/***/ "./node_modules/@theia/scm-extra/lib/browser/scm-navigable-list-widget.js":
+/*!********************************************************************************!*\
+  !*** ./node_modules/@theia/scm-extra/lib/browser/scm-navigable-list-widget.js ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/********************************************************************************
+ * Copyright (C) 2018 TypeFox and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1361,722 +1220,200 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.SearchInWorkspaceService = exports.SearchInWorkspaceClientImpl = void 0;
-var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
-var search_in_workspace_interface_1 = __webpack_require__(/*! ../common/search-in-workspace-interface */ "./node_modules/@theia/search-in-workspace/lib/common/search-in-workspace-interface.js");
-var browser_1 = __webpack_require__(/*! @theia/workspace/lib/browser */ "./node_modules/@theia/workspace/lib/browser/index.js");
-var core_1 = __webpack_require__(/*! @theia/core */ "./node_modules/@theia/core/lib/common/index.js");
-/**
- * Class that will receive the search results from the server.  This is separate
- * from the SearchInWorkspaceService class only to avoid a cycle in the
- * dependency injection.
- */
-var SearchInWorkspaceClientImpl = /** @class */ (function () {
-    function SearchInWorkspaceClientImpl() {
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
     }
-    SearchInWorkspaceClientImpl.prototype.onResult = function (searchId, result) {
-        this.service.onResult(searchId, result);
-    };
-    SearchInWorkspaceClientImpl.prototype.onDone = function (searchId, error) {
-        this.service.onDone(searchId, error);
-    };
-    SearchInWorkspaceClientImpl.prototype.setService = function (service) {
-        this.service = service;
-    };
-    SearchInWorkspaceClientImpl = __decorate([
-        inversify_1.injectable()
-    ], SearchInWorkspaceClientImpl);
-    return SearchInWorkspaceClientImpl;
-}());
-exports.SearchInWorkspaceClientImpl = SearchInWorkspaceClientImpl;
-/**
- * Service to search text in the workspace files.
- */
-var SearchInWorkspaceService = /** @class */ (function () {
-    function SearchInWorkspaceService() {
-        // All the searches that we have started, that are not done yet (onDone
-        // with that searchId has not been called).
-        this.pendingSearches = new Map();
-        // Due to the asynchronicity of the node backend, it's possible that we
-        // start a search, receive an event for that search, and then receive
-        // the search id for that search.We therefore need to keep those
-        // events until we get the search id and return it to the caller.
-        // Otherwise the caller would discard the event because it doesn't know
-        // the search id yet.
-        this.pendingOnDones = new Map();
-        this.lastKnownSearchId = -1;
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
     }
-    SearchInWorkspaceService.prototype.init = function () {
-        this.client.setService(this);
-    };
-    SearchInWorkspaceService.prototype.isEnabled = function () {
-        return this.workspaceService.opened;
-    };
-    SearchInWorkspaceService.prototype.onResult = function (searchId, result) {
-        var callbacks = this.pendingSearches.get(searchId);
-        if (callbacks) {
-            callbacks.onResult(searchId, result);
-        }
-    };
-    SearchInWorkspaceService.prototype.onDone = function (searchId, error) {
-        var callbacks = this.pendingSearches.get(searchId);
-        if (callbacks) {
-            this.pendingSearches.delete(searchId);
-            callbacks.onDone(searchId, error);
-        }
-        else {
-            if (searchId > this.lastKnownSearchId) {
-                this.logger.debug("Got an onDone for a searchId we don't know about (" + searchId + "), stashing it for later with error = ", error);
-                this.pendingOnDones.set(searchId, error);
-            }
-            else {
-                // It's possible to receive an onDone for a search we have cancelled.  Just ignore it.
-                this.logger.debug("Got an onDone for a searchId we don't know about (" + searchId + "), but it's probably an old one, error = ", error);
-            }
-        }
-    };
-    // Start a search of the string "what" in the workspace.
-    SearchInWorkspaceService.prototype.search = function (what, callbacks, opts) {
-        return __awaiter(this, void 0, void 0, function () {
-            var roots, searchId, error_1;
-            var _this = this;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        if (!this.workspaceService.open) {
-                            throw new Error('Search failed: no workspace root.');
-                        }
-                        return [4 /*yield*/, this.workspaceService.roots];
-                    case 1:
-                        roots = _a.sent();
-                        return [4 /*yield*/, this.searchServer.search(what, roots.map(function (r) { return r.uri; }), opts)];
-                    case 2:
-                        searchId = _a.sent();
-                        this.pendingSearches.set(searchId, callbacks);
-                        this.lastKnownSearchId = searchId;
-                        this.logger.debug('Service launched search ' + searchId);
-                        // Check if we received an onDone before search() returned.
-                        if (this.pendingOnDones.has(searchId)) {
-                            this.logger.debug('Ohh, we have a stashed onDone for that searchId');
-                            error_1 = this.pendingOnDones.get(searchId);
-                            this.pendingOnDones.delete(searchId);
-                            // Call the client's searchId, but first give it a
-                            // chance to record the returned searchId.
-                            setTimeout(function () {
-                                _this.onDone(searchId, error_1);
-                            }, 0);
-                        }
-                        return [2 /*return*/, searchId];
-                }
-            });
-        });
-    };
-    // Cancel an ongoing search.
-    SearchInWorkspaceService.prototype.cancel = function (searchId) {
-        this.pendingSearches.delete(searchId);
-        this.searchServer.cancel(searchId);
-    };
-    __decorate([
-        inversify_1.inject(search_in_workspace_interface_1.SearchInWorkspaceServer),
-        __metadata("design:type", Object)
-    ], SearchInWorkspaceService.prototype, "searchServer", void 0);
-    __decorate([
-        inversify_1.inject(SearchInWorkspaceClientImpl),
-        __metadata("design:type", SearchInWorkspaceClientImpl)
-    ], SearchInWorkspaceService.prototype, "client", void 0);
-    __decorate([
-        inversify_1.inject(browser_1.WorkspaceService),
-        __metadata("design:type", browser_1.WorkspaceService)
-    ], SearchInWorkspaceService.prototype, "workspaceService", void 0);
-    __decorate([
-        inversify_1.inject(core_1.ILogger),
-        __metadata("design:type", Object)
-    ], SearchInWorkspaceService.prototype, "logger", void 0);
-    __decorate([
-        inversify_1.postConstruct(),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", []),
-        __metadata("design:returntype", void 0)
-    ], SearchInWorkspaceService.prototype, "init", null);
-    SearchInWorkspaceService = __decorate([
-        inversify_1.injectable()
-    ], SearchInWorkspaceService);
-    return SearchInWorkspaceService;
-}());
-exports.SearchInWorkspaceService = SearchInWorkspaceService;
-
-
-/***/ }),
-
-/***/ "./node_modules/@theia/search-in-workspace/lib/browser/search-in-workspace-widget.js":
-/*!*******************************************************************************************!*\
-  !*** ./node_modules/@theia/search-in-workspace/lib/browser/search-in-workspace-widget.js ***!
-  \*******************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/********************************************************************************
- * Copyright (C) 2018 TypeFox and others.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Eclipse Public License v. 2.0 which is available at
- * http://www.eclipse.org/legal/epl-2.0.
- *
- * This Source Code may also be made available under the following Secondary
- * Licenses when the conditions for such availability set forth in the Eclipse
- * Public License v. 2.0 are satisfied: GNU General Public License, version 2
- * with the GNU Classpath Exception which is available at
- * https://www.gnu.org/software/classpath/license.html.
- *
- * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
- ********************************************************************************/
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
+    return ar;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+var __spread = (this && this.__spread) || function () {
+    for (var ar = [], i = 0; i < arguments.length; i++) ar = ar.concat(__read(arguments[i]));
+    return ar;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SearchInWorkspaceWidget = void 0;
+exports.ScmItemComponent = exports.ScmNavigableListWidget = void 0;
 var browser_1 = __webpack_require__(/*! @theia/core/lib/browser */ "./node_modules/@theia/core/lib/browser/index.js");
+var scm_service_1 = __webpack_require__(/*! @theia/scm/lib/browser/scm-service */ "./node_modules/@theia/scm/lib/browser/scm-service.js");
+var uri_1 = __webpack_require__(/*! @theia/core/lib/common/uri */ "./node_modules/@theia/core/lib/common/uri.js");
+var label_provider_1 = __webpack_require__(/*! @theia/core/lib/browser/label-provider */ "./node_modules/@theia/core/lib/browser/label-provider.js");
+var domutils_1 = __webpack_require__(/*! @phosphor/domutils */ "./node_modules/@phosphor/domutils/lib/index.js");
 var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
-var search_in_workspace_result_tree_widget_1 = __webpack_require__(/*! ./search-in-workspace-result-tree-widget */ "./node_modules/@theia/search-in-workspace/lib/browser/search-in-workspace-result-tree-widget.js");
+var react_widget_1 = __webpack_require__(/*! @theia/core/lib/browser/widgets/react-widget */ "./node_modules/@theia/core/lib/browser/widgets/react-widget.js");
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-var ReactDOM = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-var common_1 = __webpack_require__(/*! @theia/core/lib/common */ "./node_modules/@theia/core/lib/common/index.js");
-var browser_2 = __webpack_require__(/*! @theia/workspace/lib/browser */ "./node_modules/@theia/workspace/lib/browser/index.js");
-var search_in_workspace_context_key_service_1 = __webpack_require__(/*! ./search-in-workspace-context-key-service */ "./node_modules/@theia/search-in-workspace/lib/browser/search-in-workspace-context-key-service.js");
-var progress_bar_factory_1 = __webpack_require__(/*! @theia/core/lib/browser/progress-bar-factory */ "./node_modules/@theia/core/lib/browser/progress-bar-factory.js");
-var SearchInWorkspaceWidget = /** @class */ (function (_super) {
-    __extends(SearchInWorkspaceWidget, _super);
-    function SearchInWorkspaceWidget() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.showSearchDetails = false;
-        _this._hasResults = false;
-        _this.resultNumber = 0;
-        _this.searchFieldContainerIsFocused = false;
-        _this.searchTerm = '';
-        _this.replaceTerm = '';
-        _this._showReplaceField = false;
-        _this.onDidUpdateEmitter = new common_1.Emitter();
-        _this.onDidUpdate = _this.onDidUpdateEmitter.event;
-        _this.focusSearchFieldContainer = function () { return _this.doFocusSearchFieldContainer(); };
-        _this.unfocusSearchFieldContainer = function () { return _this.doUnfocusSearchFieldContainer(); };
-        _this.search = function (e) { return _this.doSearch(e); };
-        _this.handleFocusSearchInputBox = function () { return _this.contextKeyService.setSearchInputBoxFocus(true); };
-        _this.handleBlurSearchInputBox = function () { return _this.contextKeyService.setSearchInputBoxFocus(false); };
-        _this.updateReplaceTerm = function (e) { return _this.doUpdateReplaceTerm(e); };
-        _this.handleFocusReplaceInputBox = function () { return _this.contextKeyService.setReplaceInputBoxFocus(true); };
-        _this.handleBlurReplaceInputBox = function () { return _this.contextKeyService.setReplaceInputBoxFocus(false); };
-        _this.handleFocusIncludesInputBox = function () { return _this.contextKeyService.setPatternExcludesInputBoxFocus(true); };
-        _this.handleBlurIncludesInputBox = function () { return _this.contextKeyService.setPatternExcludesInputBoxFocus(false); };
-        _this.handleFocusExcludesInputBox = function () { return _this.contextKeyService.setPatternExcludesInputBoxFocus(true); };
-        _this.handleBlurExcludesInputBox = function () { return _this.contextKeyService.setPatternExcludesInputBoxFocus(false); };
+var scm_file_change_label_provider_1 = __webpack_require__(/*! ./scm-file-change-label-provider */ "./node_modules/@theia/scm-extra/lib/browser/scm-file-change-label-provider.js");
+var ScmNavigableListWidget = /** @class */ (function (_super) {
+    __extends(ScmNavigableListWidget, _super);
+    function ScmNavigableListWidget() {
+        var _this = _super.call(this) || this;
+        _this.node.tabIndex = 0;
         return _this;
     }
-    SearchInWorkspaceWidget_1 = SearchInWorkspaceWidget;
-    Object.defineProperty(SearchInWorkspaceWidget.prototype, "hasResults", {
-        get: function () {
-            return this._hasResults;
-        },
-        set: function (hasResults) {
-            this.contextKeyService.hasSearchResult.set(hasResults);
-            this._hasResults = hasResults;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(SearchInWorkspaceWidget.prototype, "showReplaceField", {
-        get: function () {
-            return this._showReplaceField;
-        },
-        set: function (showReplaceField) {
-            this.contextKeyService.replaceActive.set(showReplaceField);
-            this._showReplaceField = showReplaceField;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    SearchInWorkspaceWidget.prototype.init = function () {
-        var _this = this;
-        this.id = SearchInWorkspaceWidget_1.ID;
-        this.title.label = SearchInWorkspaceWidget_1.LABEL;
-        this.title.caption = SearchInWorkspaceWidget_1.LABEL;
-        this.title.iconClass = 'search-in-workspace-tab-icon';
-        this.title.closable = true;
-        this.contentNode = document.createElement('div');
-        this.contentNode.classList.add('t-siw-search-container');
-        this.searchFormContainer = document.createElement('div');
-        this.searchFormContainer.classList.add('searchHeader');
-        this.contentNode.appendChild(this.searchFormContainer);
-        this.node.appendChild(this.contentNode);
-        this.matchCaseState = {
-            className: 'match-case',
-            enabled: false,
-            title: 'Match Case'
-        };
-        this.wholeWordState = {
-            className: 'whole-word',
-            enabled: false,
-            title: 'Match Whole Word'
-        };
-        this.regExpState = {
-            className: 'use-regexp',
-            enabled: false,
-            title: 'Use Regular Expression'
-        };
-        this.includeIgnoredState = {
-            className: 'include-ignored fa fa-eye',
-            enabled: false,
-            title: 'Include Ignored Files'
-        };
-        this.searchInWorkspaceOptions = {
-            matchCase: false,
-            matchWholeWord: false,
-            useRegExp: false,
-            includeIgnored: false,
-            include: [],
-            exclude: [],
-            maxResults: 2000
-        };
-        this.toDispose.push(this.resultTreeWidget.onChange(function (r) {
-            _this.hasResults = r.size > 0;
-            _this.resultNumber = 0;
-            var results = Array.from(r.values());
-            results.forEach(function (rootFolder) {
-                return rootFolder.children.forEach(function (file) { return _this.resultNumber += file.children.length; });
-            });
-            _this.update();
-        }));
-        this.toDispose.push(this.resultTreeWidget.onFocusInput(function (b) {
-            _this.focusInputField();
-        }));
-        this.toDispose.push(this.resultTreeWidget);
-        this.toDispose.push(this.progressBarFactory({ container: this.node, insertMode: 'prepend', locationId: 'search' }));
-    };
-    SearchInWorkspaceWidget.prototype.storeState = function () {
-        return {
-            matchCaseState: this.matchCaseState,
-            wholeWordState: this.wholeWordState,
-            regExpState: this.regExpState,
-            includeIgnoredState: this.includeIgnoredState,
-            showSearchDetails: this.showSearchDetails,
-            searchInWorkspaceOptions: this.searchInWorkspaceOptions,
-            searchTerm: this.searchTerm,
-            replaceTerm: this.replaceTerm,
-            showReplaceField: this.showReplaceField
-        };
-    };
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    SearchInWorkspaceWidget.prototype.restoreState = function (oldState) {
-        this.matchCaseState = oldState.matchCaseState;
-        this.wholeWordState = oldState.wholeWordState;
-        this.regExpState = oldState.regExpState;
-        this.includeIgnoredState = oldState.includeIgnoredState;
-        this.showSearchDetails = oldState.showSearchDetails;
-        this.searchInWorkspaceOptions = oldState.searchInWorkspaceOptions;
-        this.searchTerm = oldState.searchTerm;
-        this.replaceTerm = oldState.replaceTerm;
-        this.showReplaceField = oldState.showReplaceField;
-        this.resultTreeWidget.replaceTerm = this.replaceTerm;
-        this.resultTreeWidget.showReplaceButtons = this.showReplaceField;
-        this.refresh();
-    };
-    SearchInWorkspaceWidget.prototype.findInFolder = function (uris) {
-        this.showSearchDetails = true;
-        var values = Array.from(new Set(uris.map(function (uri) { return uri + "/**"; })));
-        var value = values.join(', ');
-        this.searchInWorkspaceOptions.include = values;
-        var include = document.getElementById('include-glob-field');
-        if (include) {
-            include.value = value;
-        }
-        this.update();
-    };
-    /**
-     * Update the search term and input field.
-     * @param term the search term.
-     */
-    SearchInWorkspaceWidget.prototype.updateSearchTerm = function (term) {
-        this.searchTerm = term;
-        var search = document.getElementById('search-input-field');
-        if (search) {
-            search.value = term;
-        }
-        this.refresh();
-    };
-    SearchInWorkspaceWidget.prototype.hasResultList = function () {
-        return this.hasResults;
-    };
-    SearchInWorkspaceWidget.prototype.hasSearchTerm = function () {
-        return this.searchTerm !== '';
-    };
-    SearchInWorkspaceWidget.prototype.refresh = function () {
-        this.resultTreeWidget.search(this.searchTerm, this.searchInWorkspaceOptions);
-        this.update();
-    };
-    SearchInWorkspaceWidget.prototype.getCancelIndicator = function () {
-        return this.resultTreeWidget.cancelIndicator;
-    };
-    SearchInWorkspaceWidget.prototype.collapseAll = function () {
-        this.resultTreeWidget.collapseAll();
-        this.update();
-    };
-    SearchInWorkspaceWidget.prototype.clear = function () {
-        this.searchTerm = '';
-        this.replaceTerm = '';
-        this.searchInWorkspaceOptions.include = [];
-        this.searchInWorkspaceOptions.exclude = [];
-        this.includeIgnoredState.enabled = false;
-        this.matchCaseState.enabled = false;
-        this.wholeWordState.enabled = false;
-        this.regExpState.enabled = false;
-        var search = document.getElementById('search-input-field');
-        var replace = document.getElementById('replace-input-field');
-        var include = document.getElementById('include-glob-field');
-        var exclude = document.getElementById('exclude-glob-field');
-        if (search && replace && include && exclude) {
-            search.value = '';
-            replace.value = '';
-            include.value = '';
-            exclude.value = '';
-        }
-        this.resultTreeWidget.search(this.searchTerm, this.searchInWorkspaceOptions);
-        this.update();
-    };
-    SearchInWorkspaceWidget.prototype.onAfterAttach = function (msg) {
-        var _this = this;
-        _super.prototype.onAfterAttach.call(this, msg);
-        ReactDOM.render(React.createElement(React.Fragment, null,
-            this.renderSearchHeader(),
-            this.renderSearchInfo()), this.searchFormContainer);
-        browser_1.Widget.attach(this.resultTreeWidget, this.contentNode);
-        this.toDisposeOnDetach.push(common_1.Disposable.create(function () {
-            browser_1.Widget.detach(_this.resultTreeWidget);
-        }));
-    };
-    SearchInWorkspaceWidget.prototype.onUpdateRequest = function (msg) {
-        _super.prototype.onUpdateRequest.call(this, msg);
-        var searchInfo = this.renderSearchInfo();
-        if (searchInfo) {
-            ReactDOM.render(React.createElement(React.Fragment, null,
-                this.renderSearchHeader(),
-                searchInfo), this.searchFormContainer);
-            this.onDidUpdateEmitter.fire(undefined);
-        }
-    };
-    SearchInWorkspaceWidget.prototype.onResize = function (msg) {
-        _super.prototype.onResize.call(this, msg);
-        browser_1.MessageLoop.sendMessage(this.resultTreeWidget, browser_1.Widget.ResizeMessage.UnknownSize);
-    };
-    SearchInWorkspaceWidget.prototype.onAfterShow = function (msg) {
-        _super.prototype.onAfterShow.call(this, msg);
-        this.focusInputField();
-        this.contextKeyService.searchViewletVisible.set(true);
-    };
-    SearchInWorkspaceWidget.prototype.onAfterHide = function (msg) {
-        _super.prototype.onAfterHide.call(this, msg);
-        this.contextKeyService.searchViewletVisible.set(false);
-    };
-    SearchInWorkspaceWidget.prototype.onActivateRequest = function (msg) {
+    ScmNavigableListWidget.prototype.onActivateRequest = function (msg) {
         _super.prototype.onActivateRequest.call(this, msg);
-        this.focusInputField();
-    };
-    SearchInWorkspaceWidget.prototype.focusInputField = function () {
-        var f = document.getElementById('search-input-field');
-        if (f) {
-            f.focus();
-            f.select();
-        }
-    };
-    SearchInWorkspaceWidget.prototype.renderSearchHeader = function () {
-        var searchAndReplaceContainer = this.renderSearchAndReplace();
-        var searchDetails = this.renderSearchDetails();
-        return React.createElement("div", null,
-            searchAndReplaceContainer,
-            searchDetails);
-    };
-    SearchInWorkspaceWidget.prototype.renderSearchAndReplace = function () {
-        var toggleContainer = this.renderReplaceFieldToggle();
-        var searchField = this.renderSearchField();
-        var replaceField = this.renderReplaceField();
-        return React.createElement("div", { className: 'search-and-replace-container' },
-            toggleContainer,
-            React.createElement("div", { className: 'search-and-replace-fields' },
-                searchField,
-                replaceField));
-    };
-    SearchInWorkspaceWidget.prototype.renderReplaceFieldToggle = function () {
-        var _this = this;
-        var toggle = React.createElement("span", { className: "fa fa-caret-" + (this.showReplaceField ? 'down' : 'right') });
-        return React.createElement("div", { title: 'Toggle Replace', className: 'replace-toggle', tabIndex: 0, onClick: function (e) {
-                var elArr = document.getElementsByClassName('replace-toggle');
-                if (elArr && elArr.length > 0) {
-                    elArr[0].focus();
-                }
-                _this.showReplaceField = !_this.showReplaceField;
-                _this.resultTreeWidget.showReplaceButtons = _this.showReplaceField;
-                _this.update();
-            } }, toggle);
-    };
-    SearchInWorkspaceWidget.prototype.renderNotification = function () {
-        if (this.workspaceService.tryGetRoots().length <= 0) {
-            return React.createElement("div", { className: 'search-notification show' },
-                React.createElement("div", null, "Cannot search without an active workspace present."));
-        }
-        return React.createElement("div", { className: "search-notification " + (this.searchInWorkspaceOptions.maxResults && this.resultNumber >= this.searchInWorkspaceOptions.maxResults ? 'show' : '') },
-            React.createElement("div", null, "This is only a subset of all results. Use a more specific search term to narrow down the result list."));
-    };
-    SearchInWorkspaceWidget.prototype.doFocusSearchFieldContainer = function () {
-        this.searchFieldContainerIsFocused = true;
         this.update();
+        this.node.focus();
     };
-    SearchInWorkspaceWidget.prototype.doUnfocusSearchFieldContainer = function () {
-        this.searchFieldContainerIsFocused = false;
-        this.update();
-    };
-    SearchInWorkspaceWidget.prototype.doSearch = function (e) {
-        if (e.target) {
-            if (browser_1.Key.ARROW_DOWN.keyCode === e.keyCode) {
-                this.resultTreeWidget.focusFirstResult();
-            }
-            else {
-                this.searchTerm = e.target.value;
-                this.resultTreeWidget.search(this.searchTerm, (this.searchInWorkspaceOptions || {}));
-            }
-        }
-    };
-    SearchInWorkspaceWidget.prototype.renderSearchField = function () {
-        var input = React.createElement("input", { id: 'search-input-field', className: 'theia-input', title: 'Search', type: 'text', size: 1, placeholder: 'Search', defaultValue: this.searchTerm, autoComplete: 'off', onKeyUp: this.search, onFocus: this.handleFocusSearchInputBox, onBlur: this.handleBlurSearchInputBox });
-        var notification = this.renderNotification();
-        var optionContainer = this.renderOptionContainer();
-        var tooMany = this.searchInWorkspaceOptions.maxResults && this.resultNumber >= this.searchInWorkspaceOptions.maxResults ? 'tooManyResults' : '';
-        var className = "search-field-container " + tooMany + " " + (this.searchFieldContainerIsFocused ? 'focused' : '');
-        return React.createElement("div", { className: className },
-            React.createElement("div", { className: 'search-field', tabIndex: -1, onFocus: this.focusSearchFieldContainer, onBlur: this.unfocusSearchFieldContainer },
-                input,
-                optionContainer),
-            notification);
-    };
-    SearchInWorkspaceWidget.prototype.doUpdateReplaceTerm = function (e) {
-        if (e.target) {
-            this.replaceTerm = e.target.value;
-            this.resultTreeWidget.replaceTerm = this.replaceTerm;
-            this.resultTreeWidget.search(this.searchTerm, (this.searchInWorkspaceOptions || {}));
-            this.update();
-        }
-    };
-    SearchInWorkspaceWidget.prototype.renderReplaceField = function () {
-        var replaceAllButtonContainer = this.renderReplaceAllButtonContainer();
-        return React.createElement("div", { className: "replace-field" + (this.showReplaceField ? '' : ' hidden') },
-            React.createElement("input", { id: 'replace-input-field', className: 'theia-input', title: 'Replace', type: 'text', size: 1, placeholder: 'Replace', defaultValue: this.replaceTerm, onKeyUp: this.updateReplaceTerm, onFocus: this.handleFocusReplaceInputBox, onBlur: this.handleBlurReplaceInputBox }),
-            replaceAllButtonContainer);
-    };
-    SearchInWorkspaceWidget.prototype.renderReplaceAllButtonContainer = function () {
+    Object.defineProperty(ScmNavigableListWidget.prototype, "scrollContainer", {
+        get: function () {
+            return this._scrollContainer;
+        },
+        set: function (id) {
+            this._scrollContainer = id + Date.now();
+        },
+        enumerable: false,
+        configurable: true
+    });
+    ScmNavigableListWidget.prototype.onUpdateRequest = function (msg) {
         var _this = this;
-        // The `Replace All` button is enabled if there is a search term present with results.
-        var enabled = this.searchTerm !== '' && this.resultNumber > 0;
-        return React.createElement("div", { className: 'replace-all-button-container' },
-            React.createElement("span", { title: 'Replace All', className: "replace-all-button" + (enabled ? ' ' : ' disabled'), onClick: function () {
-                    if (enabled) {
-                        _this.resultTreeWidget.replace(undefined);
+        if (!this.isAttached || !this.isVisible) {
+            return;
+        }
+        _super.prototype.onUpdateRequest.call(this, msg);
+        (function () { return __awaiter(_this, void 0, void 0, function () {
+            var selected, container;
+            return __generator(this, function (_a) {
+                selected = this.node.getElementsByClassName(browser_1.SELECTED_CLASS)[0];
+                if (selected) {
+                    container = document.getElementById(this.scrollContainer);
+                    if (container) {
+                        domutils_1.ElementExt.scrollIntoViewIfNeeded(container, selected);
                     }
-                } }));
+                }
+                return [2 /*return*/];
+            });
+        }); })();
     };
-    SearchInWorkspaceWidget.prototype.renderOptionContainer = function () {
-        var matchCaseOption = this.renderOptionElement(this.matchCaseState);
-        var wholeWordOption = this.renderOptionElement(this.wholeWordState);
-        var regexOption = this.renderOptionElement(this.regExpState);
-        var includeIgnoredOption = this.renderOptionElement(this.includeIgnoredState);
-        return React.createElement("div", { className: 'option-buttons' },
-            matchCaseOption,
-            wholeWordOption,
-            regexOption,
-            includeIgnoredOption);
-    };
-    SearchInWorkspaceWidget.prototype.renderOptionElement = function (opt) {
-        var _this = this;
-        return React.createElement("span", { className: opt.className + " option " + (opt.enabled ? 'enabled' : ''), title: opt.title, onClick: function () { return _this.handleOptionClick(opt); } });
-    };
-    SearchInWorkspaceWidget.prototype.handleOptionClick = function (option) {
-        option.enabled = !option.enabled;
-        this.updateSearchOptions();
-        this.searchFieldContainerIsFocused = true;
-        this.resultTreeWidget.search(this.searchTerm, this.searchInWorkspaceOptions);
+    ScmNavigableListWidget.prototype.onResize = function (msg) {
+        _super.prototype.onResize.call(this, msg);
         this.update();
     };
-    SearchInWorkspaceWidget.prototype.updateSearchOptions = function () {
-        this.searchInWorkspaceOptions.matchCase = this.matchCaseState.enabled;
-        this.searchInWorkspaceOptions.matchWholeWord = this.wholeWordState.enabled;
-        this.searchInWorkspaceOptions.useRegExp = this.regExpState.enabled;
-        this.searchInWorkspaceOptions.includeIgnored = this.includeIgnoredState.enabled;
+    ScmNavigableListWidget.prototype.getRepositoryLabel = function (uri) {
+        var repository = this.scmService.findRepository(new uri_1.default(uri));
+        var isSelectedRepo = this.scmService.selectedRepository && repository && this.scmService.selectedRepository.provider.rootUri === repository.provider.rootUri;
+        return repository && !isSelectedRepo ? this.labelProvider.getLongName(new uri_1.default(repository.provider.rootUri)) : undefined;
     };
-    SearchInWorkspaceWidget.prototype.renderSearchDetails = function () {
-        var expandButton = this.renderExpandGlobFieldsButton();
-        var globFieldContainer = this.renderGlobFieldContainer();
-        return React.createElement("div", { className: 'search-details' },
-            expandButton,
-            globFieldContainer);
-    };
-    SearchInWorkspaceWidget.prototype.renderGlobFieldContainer = function () {
-        var includeField = this.renderGlobField('include');
-        var excludeField = this.renderGlobField('exclude');
-        return React.createElement("div", { className: "glob-field-container" + (!this.showSearchDetails ? ' hidden' : '') },
-            includeField,
-            excludeField);
-    };
-    SearchInWorkspaceWidget.prototype.renderExpandGlobFieldsButton = function () {
-        var _this = this;
-        return React.createElement("div", { className: 'button-container' },
-            React.createElement("span", { title: 'Toggle Search Details', className: 'fa fa-ellipsis-h btn', onClick: function () {
-                    _this.showSearchDetails = !_this.showSearchDetails;
-                    _this.update();
-                } }));
-    };
-    SearchInWorkspaceWidget.prototype.renderGlobField = function (kind) {
-        var _this = this;
-        var currentValue = this.searchInWorkspaceOptions[kind];
-        var value = currentValue && currentValue.join(', ') || '';
-        return React.createElement("div", { className: 'glob-field' },
-            React.createElement("div", { className: 'label' }, 'files to ' + kind),
-            React.createElement("input", { className: 'theia-input', type: 'text', size: 1, defaultValue: value, id: kind + '-glob-field', onKeyUp: function (e) {
-                    if (e.target) {
-                        if (browser_1.Key.ENTER.keyCode === e.keyCode) {
-                            _this.resultTreeWidget.search(_this.searchTerm, _this.searchInWorkspaceOptions);
-                        }
-                        else {
-                            _this.searchInWorkspaceOptions[kind] = _this.splitOnComma(e.target.value);
-                        }
-                    }
-                }, onFocus: kind === 'include' ? this.handleFocusIncludesInputBox : this.handleFocusExcludesInputBox, onBlur: kind === 'include' ? this.handleBlurIncludesInputBox : this.handleBlurExcludesInputBox }));
-    };
-    SearchInWorkspaceWidget.prototype.splitOnComma = function (patterns) {
-        return patterns.length > 0 ? patterns.split(',').map(function (s) { return s.trim(); }) : [];
-    };
-    SearchInWorkspaceWidget.prototype.renderSearchInfo = function () {
-        var message = '';
-        if (this.searchTerm) {
-            if (this.searchInWorkspaceOptions.include && this.searchInWorkspaceOptions.include.length > 0 && this.resultNumber === 0) {
-                message = "No results found in '" + this.searchInWorkspaceOptions.include + "'";
-            }
-            else if (this.resultNumber === 0) {
-                message = 'No results found.';
-            }
-            else {
-                if (this.resultNumber === 1 && this.resultTreeWidget.fileNumber === 1) {
-                    message = this.resultNumber + " result in " + this.resultTreeWidget.fileNumber + " file";
-                }
-                else if (this.resultTreeWidget.fileNumber === 1) {
-                    message = this.resultNumber + " results in " + this.resultTreeWidget.fileNumber + " file";
-                }
-                else if (this.resultTreeWidget.fileNumber > 0) {
-                    message = this.resultNumber + " results in " + this.resultTreeWidget.fileNumber + " files";
-                }
-                else {
-                    // if fileNumber === 0, return undefined so that `onUpdateRequest()` would not re-render component
-                    return undefined;
-                }
-            }
+    ScmNavigableListWidget.prototype.renderHeaderRow = function (_a) {
+        var name = _a.name, value = _a.value, classNames = _a.classNames, title = _a.title;
+        if (!value) {
+            return;
         }
-        return React.createElement("div", { className: 'search-info' }, message);
+        var className = __spread(['header-row'], (classNames || [])).join(' ');
+        return React.createElement("div", { key: name, className: className, title: title },
+            React.createElement("div", { className: 'theia-header' }, name),
+            React.createElement("div", { className: 'header-value' }, value));
     };
-    var SearchInWorkspaceWidget_1;
-    SearchInWorkspaceWidget.ID = 'search-in-workspace';
-    SearchInWorkspaceWidget.LABEL = 'Search';
-    __decorate([
-        inversify_1.inject(search_in_workspace_result_tree_widget_1.SearchInWorkspaceResultTreeWidget),
-        __metadata("design:type", search_in_workspace_result_tree_widget_1.SearchInWorkspaceResultTreeWidget)
-    ], SearchInWorkspaceWidget.prototype, "resultTreeWidget", void 0);
-    __decorate([
-        inversify_1.inject(browser_2.WorkspaceService),
-        __metadata("design:type", browser_2.WorkspaceService)
-    ], SearchInWorkspaceWidget.prototype, "workspaceService", void 0);
-    __decorate([
-        inversify_1.inject(search_in_workspace_context_key_service_1.SearchInWorkspaceContextKeyService),
-        __metadata("design:type", search_in_workspace_context_key_service_1.SearchInWorkspaceContextKeyService)
-    ], SearchInWorkspaceWidget.prototype, "contextKeyService", void 0);
-    __decorate([
-        inversify_1.inject(progress_bar_factory_1.ProgressBarFactory),
-        __metadata("design:type", Function)
-    ], SearchInWorkspaceWidget.prototype, "progressBarFactory", void 0);
-    __decorate([
-        inversify_1.postConstruct(),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", []),
-        __metadata("design:returntype", void 0)
-    ], SearchInWorkspaceWidget.prototype, "init", null);
-    SearchInWorkspaceWidget = SearchInWorkspaceWidget_1 = __decorate([
-        inversify_1.injectable()
-    ], SearchInWorkspaceWidget);
-    return SearchInWorkspaceWidget;
-}(browser_1.BaseWidget));
-exports.SearchInWorkspaceWidget = SearchInWorkspaceWidget;
-
-
-/***/ }),
-
-/***/ "./node_modules/@theia/search-in-workspace/lib/common/search-in-workspace-interface.js":
-/*!*********************************************************************************************!*\
-  !*** ./node_modules/@theia/search-in-workspace/lib/common/search-in-workspace-interface.js ***!
-  \*********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/********************************************************************************
- * Copyright (C) 2017-2018 Ericsson and others.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Eclipse Public License v. 2.0 which is available at
- * http://www.eclipse.org/legal/epl-2.0.
- *
- * This Source Code may also be made available under the following Secondary
- * Licenses when the conditions for such availability set forth in the Eclipse
- * Public License v. 2.0 are satisfied: GNU General Public License, version 2
- * with the GNU Classpath Exception which is available at
- * https://www.gnu.org/software/classpath/license.html.
- *
- * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
- ********************************************************************************/
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.SearchInWorkspaceServer = exports.SIW_WS_PATH = exports.SearchInWorkspaceClient = exports.SearchInWorkspaceResult = void 0;
-var SearchInWorkspaceResult;
-(function (SearchInWorkspaceResult) {
-    /**
-     * Sort search in workspace results according to file, line, character position
-     * and then length.
-     */
-    function compare(a, b) {
-        if (a.fileUri !== b.fileUri) {
-            return a.fileUri < b.fileUri ? -1 : 1;
+    ScmNavigableListWidget.prototype.addListNavigationKeyListeners = function (container) {
+        var _this = this;
+        this.addKeyListener(container, browser_1.Key.ARROW_LEFT, function () { return _this.navigateLeft(); });
+        this.addKeyListener(container, browser_1.Key.ARROW_RIGHT, function () { return _this.navigateRight(); });
+        this.addKeyListener(container, browser_1.Key.ARROW_UP, function () { return _this.navigateUp(); });
+        this.addKeyListener(container, browser_1.Key.ARROW_DOWN, function () { return _this.navigateDown(); });
+        this.addKeyListener(container, browser_1.Key.ENTER, function () { return _this.handleListEnter(); });
+    };
+    ScmNavigableListWidget.prototype.navigateLeft = function () {
+        this.selectPreviousNode();
+    };
+    ScmNavigableListWidget.prototype.navigateRight = function () {
+        this.selectNextNode();
+    };
+    ScmNavigableListWidget.prototype.navigateUp = function () {
+        this.selectPreviousNode();
+    };
+    ScmNavigableListWidget.prototype.navigateDown = function () {
+        this.selectNextNode();
+    };
+    ScmNavigableListWidget.prototype.handleListEnter = function () {
+    };
+    ScmNavigableListWidget.prototype.getSelected = function () {
+        return this.scmNodes ? this.scmNodes.find(function (c) { return c.selected || false; }) : undefined;
+    };
+    ScmNavigableListWidget.prototype.selectNode = function (node) {
+        var n = this.getSelected();
+        if (n) {
+            n.selected = false;
         }
-        return 0;
+        node.selected = true;
+        this.update();
+    };
+    ScmNavigableListWidget.prototype.selectNextNode = function () {
+        var idx = this.indexOfSelected;
+        if (idx >= 0 && idx < this.scmNodes.length - 1) {
+            this.selectNode(this.scmNodes[idx + 1]);
+        }
+        else if (this.scmNodes.length > 0 && idx === -1) {
+            this.selectNode(this.scmNodes[0]);
+        }
+    };
+    ScmNavigableListWidget.prototype.selectPreviousNode = function () {
+        var idx = this.indexOfSelected;
+        if (idx > 0) {
+            this.selectNode(this.scmNodes[idx - 1]);
+        }
+    };
+    Object.defineProperty(ScmNavigableListWidget.prototype, "indexOfSelected", {
+        get: function () {
+            if (this.scmNodes && this.scmNodes.length > 0) {
+                return this.scmNodes.findIndex(function (c) { return c.selected || false; });
+            }
+            return -1;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    __decorate([
+        inversify_1.inject(scm_service_1.ScmService),
+        __metadata("design:type", scm_service_1.ScmService)
+    ], ScmNavigableListWidget.prototype, "scmService", void 0);
+    __decorate([
+        inversify_1.inject(label_provider_1.LabelProvider),
+        __metadata("design:type", label_provider_1.LabelProvider)
+    ], ScmNavigableListWidget.prototype, "labelProvider", void 0);
+    __decorate([
+        inversify_1.inject(scm_file_change_label_provider_1.ScmFileChangeLabelProvider),
+        __metadata("design:type", scm_file_change_label_provider_1.ScmFileChangeLabelProvider)
+    ], ScmNavigableListWidget.prototype, "scmLabelProvider", void 0);
+    ScmNavigableListWidget = __decorate([
+        inversify_1.injectable(),
+        __metadata("design:paramtypes", [])
+    ], ScmNavigableListWidget);
+    return ScmNavigableListWidget;
+}(react_widget_1.ReactWidget));
+exports.ScmNavigableListWidget = ScmNavigableListWidget;
+var ScmItemComponent = /** @class */ (function (_super) {
+    __extends(ScmItemComponent, _super);
+    function ScmItemComponent() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.revealChange = function () { return _this.props.revealChange(_this.props.change); };
+        _this.selectNode = function () { return _this.props.selectNode(_this.props.change); };
+        return _this;
     }
-    SearchInWorkspaceResult.compare = compare;
-})(SearchInWorkspaceResult = exports.SearchInWorkspaceResult || (exports.SearchInWorkspaceResult = {}));
-exports.SearchInWorkspaceClient = Symbol('SearchInWorkspaceClient');
-exports.SIW_WS_PATH = '/services/search-in-workspace';
-exports.SearchInWorkspaceServer = Symbol('SearchInWorkspaceServer');
+    ScmItemComponent.prototype.render = function () {
+        var _a = this.props, labelProvider = _a.labelProvider, scmLabelProvider = _a.scmLabelProvider, change = _a.change;
+        var icon = labelProvider.getIcon(change);
+        var label = labelProvider.getName(change);
+        var description = labelProvider.getLongName(change);
+        var caption = scmLabelProvider.getCaption(change);
+        var statusCaption = scmLabelProvider.getStatusCaption(change);
+        return React.createElement("div", { className: "scmItem noselect" + (change.selected ? ' ' + browser_1.SELECTED_CLASS : ''), onDoubleClick: this.revealChange, onClick: this.selectNode },
+            React.createElement("span", { className: icon + ' file-icon' }),
+            React.createElement("div", { className: 'noWrapInfo', title: caption },
+                React.createElement("span", { className: 'name' }, label + ' '),
+                React.createElement("span", { className: 'path' }, description)),
+            React.createElement("div", { title: caption, className: change.fileChange.getClassNameForStatus() }, statusCaption.charAt(0)));
+    };
+    return ScmItemComponent;
+}(React.Component));
+exports.ScmItemComponent = ScmItemComponent;
 
 
 /***/ })

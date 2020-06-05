@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[74],{
 
-/***/ "./node_modules/@theia/output/lib/browser/output-frontend-module.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/@theia/output/lib/browser/output-frontend-module.js ***!
-  \**************************************************************************/
+/***/ "./node_modules/@theia/git/lib/browser/prompt/git-prompt-module.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/@theia/git/lib/browser/prompt/git-prompt-module.js ***!
+  \*************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -25,43 +25,34 @@
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.bindPromptServer = void 0;
 var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
-var output_widget_1 = __webpack_require__(/*! ./output-widget */ "./node_modules/@theia/output/lib/browser/output-widget.js");
-var browser_1 = __webpack_require__(/*! @theia/core/lib/browser */ "./node_modules/@theia/core/lib/browser/index.js");
-var output_contribution_1 = __webpack_require__(/*! ./output-contribution */ "./node_modules/@theia/output/lib/browser/output-contribution.js");
-var output_toolbar_contribution_1 = __webpack_require__(/*! ./output-toolbar-contribution */ "./node_modules/@theia/output/lib/browser/output-toolbar-contribution.js");
-var output_channel_1 = __webpack_require__(/*! ../common/output-channel */ "./node_modules/@theia/output/lib/common/output-channel.js");
-var output_preferences_1 = __webpack_require__(/*! ../common/output-preferences */ "./node_modules/@theia/output/lib/common/output-preferences.js");
-var tab_bar_toolbar_1 = __webpack_require__(/*! @theia/core/lib/browser/shell/tab-bar-toolbar */ "./node_modules/@theia/core/lib/browser/shell/tab-bar-toolbar.js");
-exports.default = new inversify_1.ContainerModule(function (bind, unbind, isBound, rebind) {
-    output_preferences_1.bindOutputPreferences(bind);
-    bind(output_widget_1.OutputWidget).toSelf();
-    bind(output_channel_1.OutputChannelManager).toSelf().inSingletonScope();
-    bind(browser_1.WidgetFactory).toDynamicValue(function (context) { return ({
-        id: output_widget_1.OUTPUT_WIDGET_KIND,
-        createWidget: function () { return context.container.get(output_widget_1.OutputWidget); }
-    }); });
-    browser_1.bindViewContribution(bind, output_contribution_1.OutputContribution);
-    bind(output_contribution_1.OutputWidgetIsActiveContext).toSelf().inSingletonScope();
-    bind(browser_1.KeybindingContext).toService(output_contribution_1.OutputWidgetIsActiveContext);
-    bind(output_toolbar_contribution_1.OutputToolbarContribution).toSelf().inSingletonScope();
-    bind(tab_bar_toolbar_1.TabBarToolbarContribution).toService(output_toolbar_contribution_1.OutputToolbarContribution);
+var ws_connection_provider_1 = __webpack_require__(/*! @theia/core/lib/browser/messaging/ws-connection-provider */ "./node_modules/@theia/core/lib/browser/messaging/ws-connection-provider.js");
+var git_prompt_1 = __webpack_require__(/*! ../../common/git-prompt */ "./node_modules/@theia/git/lib/common/git-prompt.js");
+exports.default = new inversify_1.ContainerModule(function (bind) {
+    bind(git_prompt_1.GitPrompt).toSelf();
+    bindPromptServer(bind);
 });
+function bindPromptServer(bind) {
+    bind(git_prompt_1.GitPromptServer).to(git_prompt_1.GitPromptServerImpl).inSingletonScope();
+    bind(git_prompt_1.GitPromptServerProxy).toDynamicValue(function (context) { return ws_connection_provider_1.WebSocketConnectionProvider.createProxy(context.container, git_prompt_1.GitPrompt.WS_PATH); }).inSingletonScope();
+}
+exports.bindPromptServer = bindPromptServer;
 
 
 /***/ }),
 
-/***/ "./node_modules/@theia/output/lib/browser/output-toolbar-contribution.js":
-/*!*******************************************************************************!*\
-  !*** ./node_modules/@theia/output/lib/browser/output-toolbar-contribution.js ***!
-  \*******************************************************************************/
+/***/ "./node_modules/@theia/git/lib/common/git-prompt.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/@theia/git/lib/common/git-prompt.js ***!
+  \**********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 /********************************************************************************
- * Copyright (C) 2019 Arm and others.
+ * Copyright (C) 2018 TypeFox and others.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0 which is available at
@@ -121,63 +112,131 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.OutputToolbarContribution = void 0;
+exports.GitPromptServerImpl = exports.GitPromptClient = exports.GitPrompt = exports.GitPromptServerProxy = exports.GitPromptServer = void 0;
 var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
-var output_widget_1 = __webpack_require__(/*! ./output-widget */ "./node_modules/@theia/output/lib/browser/output-widget.js");
-var output_channel_1 = __webpack_require__(/*! ../common/output-channel */ "./node_modules/@theia/output/lib/common/output-channel.js");
-var output_contribution_1 = __webpack_require__(/*! ./output-contribution */ "./node_modules/@theia/output/lib/browser/output-contribution.js");
-var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-var OutputToolbarContribution = /** @class */ (function () {
-    function OutputToolbarContribution() {
-        var _this = this;
-        this.NONE = '<no channels>';
-        this.changeChannel = function (event) {
-            var channelName = event.target.value;
-            if (channelName !== _this.NONE) {
-                _this.outputChannelManager.selectedChannel = _this.outputChannelManager.getChannel(channelName);
-            }
-        };
+var disposable_1 = __webpack_require__(/*! @theia/core/lib/common/disposable */ "./node_modules/@theia/core/lib/common/disposable.js");
+exports.GitPromptServer = Symbol('GitPromptServer');
+exports.GitPromptServerProxy = Symbol('GitPromptServerProxy');
+var GitPrompt = /** @class */ (function () {
+    function GitPrompt() {
+        this.toDispose = new disposable_1.DisposableCollection();
     }
-    OutputToolbarContribution.prototype.registerToolbarItems = function (toolbarRegistry) {
+    GitPrompt_1 = GitPrompt;
+    GitPrompt.prototype.init = function () {
+        this.server.setClient(this);
+    };
+    GitPrompt.prototype.dispose = function () {
+        this.toDispose.dispose();
+    };
+    GitPrompt.prototype.ask = function (question) {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             return __generator(this, function (_a) {
-                toolbarRegistry.registerItem({
-                    id: 'channels',
-                    render: function () { return _this.renderChannelSelector(); },
-                    isVisible: function (widget) { return (widget instanceof output_widget_1.OutputWidget); },
-                    onDidChange: this.outputChannelManager.onListOrSelectionChange
-                });
-                toolbarRegistry.registerItem({
-                    id: output_contribution_1.OutputCommands.CLEAR_OUTPUT_TOOLBAR.id,
-                    command: output_contribution_1.OutputCommands.CLEAR_OUTPUT_TOOLBAR.id,
-                    tooltip: 'Clear Output',
-                    priority: 1,
-                });
-                return [2 /*return*/];
+                return [2 /*return*/, GitPrompt_1.Failure.create('Interactive Git prompt is not supported in the browser.')];
             });
         });
     };
-    OutputToolbarContribution.prototype.renderChannelSelector = function () {
-        var channelOptionElements = [];
-        this.outputChannelManager.getVisibleChannels().forEach(function (channel) {
-            channelOptionElements.push(React.createElement("option", { value: channel.name, key: channel.name }, channel.name));
-        });
-        if (channelOptionElements.length === 0) {
-            channelOptionElements.push(React.createElement("option", { key: this.NONE, value: this.NONE }, this.NONE));
+    var GitPrompt_1;
+    __decorate([
+        inversify_1.inject(exports.GitPromptServer),
+        __metadata("design:type", Object)
+    ], GitPrompt.prototype, "server", void 0);
+    __decorate([
+        inversify_1.postConstruct(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", void 0)
+    ], GitPrompt.prototype, "init", null);
+    GitPrompt = GitPrompt_1 = __decorate([
+        inversify_1.injectable()
+    ], GitPrompt);
+    return GitPrompt;
+}());
+exports.GitPrompt = GitPrompt;
+(function (GitPrompt) {
+    /**
+     * Unique WS endpoint path for the Git prompt service.
+     */
+    GitPrompt.WS_PATH = 'services/git-prompt';
+    var Success;
+    (function (Success) {
+        function is(answer) {
+            return answer.type === Answer.Type.SUCCESS
+                && 'result' in answer
+                && ((typeof answer.result) === 'string' || (typeof answer.result) === 'boolean');
         }
-        return React.createElement("select", { className: 'theia-select', id: output_widget_1.OutputWidget.IDs.CHANNEL_LIST, key: output_widget_1.OutputWidget.IDs.CHANNEL_LIST, value: this.outputChannelManager.selectedChannel ? this.outputChannelManager.selectedChannel.name : this.NONE, onChange: this.changeChannel }, channelOptionElements);
+        Success.is = is;
+        function create(result) {
+            return {
+                type: Answer.Type.SUCCESS,
+                result: result
+            };
+        }
+        Success.create = create;
+    })(Success = GitPrompt.Success || (GitPrompt.Success = {}));
+    var Cancel;
+    (function (Cancel) {
+        function is(answer) {
+            return answer.type === Answer.Type.CANCEL;
+        }
+        Cancel.is = is;
+        function create() {
+            return {
+                type: Answer.Type.CANCEL
+            };
+        }
+        Cancel.create = create;
+    })(Cancel = GitPrompt.Cancel || (GitPrompt.Cancel = {}));
+    var Failure;
+    (function (Failure) {
+        function is(answer) {
+            return answer.type === Answer.Type.FAILURE
+                && 'error' in answer
+                && ((typeof answer.error) === 'string' || answer.error instanceof Error);
+        }
+        Failure.is = is;
+        function create(error) {
+            return {
+                type: Answer.Type.FAILURE,
+                error: error
+            };
+        }
+        Failure.create = create;
+    })(Failure = GitPrompt.Failure || (GitPrompt.Failure = {}));
+    var Answer;
+    (function (Answer) {
+        var Type;
+        (function (Type) {
+            Type[Type["SUCCESS"] = 0] = "SUCCESS";
+            Type[Type["CANCEL"] = 1] = "CANCEL";
+            Type[Type["FAILURE"] = 2] = "FAILURE";
+        })(Type = Answer.Type || (Answer.Type = {}));
+    })(Answer = GitPrompt.Answer || (GitPrompt.Answer = {}));
+})(GitPrompt = exports.GitPrompt || (exports.GitPrompt = {}));
+exports.GitPrompt = GitPrompt;
+exports.GitPromptClient = Symbol('GitPromptClient');
+/**
+ * Note: This implementation is not reconnecting.
+ * Git prompting is not supported in the browser. In electron, there's no need to reconnect.
+ */
+var GitPromptServerImpl = /** @class */ (function () {
+    function GitPromptServerImpl() {
+    }
+    GitPromptServerImpl.prototype.setClient = function (client) {
+        this.proxy.setClient(client);
+    };
+    GitPromptServerImpl.prototype.dispose = function () {
+        this.proxy.dispose();
     };
     __decorate([
-        inversify_1.inject(output_channel_1.OutputChannelManager),
-        __metadata("design:type", output_channel_1.OutputChannelManager)
-    ], OutputToolbarContribution.prototype, "outputChannelManager", void 0);
-    OutputToolbarContribution = __decorate([
+        inversify_1.inject(exports.GitPromptServerProxy),
+        __metadata("design:type", Object)
+    ], GitPromptServerImpl.prototype, "proxy", void 0);
+    GitPromptServerImpl = __decorate([
         inversify_1.injectable()
-    ], OutputToolbarContribution);
-    return OutputToolbarContribution;
+    ], GitPromptServerImpl);
+    return GitPromptServerImpl;
 }());
-exports.OutputToolbarContribution = OutputToolbarContribution;
+exports.GitPromptServerImpl = GitPromptServerImpl;
 
 
 /***/ })

@@ -1,16 +1,16 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[54],{
 
-/***/ "./node_modules/@theia/terminal/lib/browser/search/terminal-search-container.js":
-/*!**************************************************************************************!*\
-  !*** ./node_modules/@theia/terminal/lib/browser/search/terminal-search-container.js ***!
-  \**************************************************************************************/
+/***/ "./node_modules/@theia/markers/lib/browser/marker-tree-label-provider.js":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/@theia/markers/lib/browser/marker-tree-label-provider.js ***!
+  \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 /********************************************************************************
- * Copyright (C) 2019 Red Hat, Inc. and others.
+ * Copyright (C) 2019 TypeFox and others.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0 which is available at
@@ -24,25 +24,84 @@
  *
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.createTerminalSearchFactory = void 0;
-var terminal_search_widget_1 = __webpack_require__(/*! ./terminal-search-widget */ "./node_modules/@theia/terminal/lib/browser/search/terminal-search-widget.js");
-var xterm_1 = __webpack_require__(/*! xterm */ "./node_modules/xterm/lib/xterm.js");
-function createTerminalSearchFactory(container) {
-    container.bind(terminal_search_widget_1.TerminalSearchWidget).toSelf().inSingletonScope();
-    return function (terminal) {
-        container.bind(xterm_1.Terminal).toConstantValue(terminal);
-        return container.get(terminal_search_widget_1.TerminalSearchWidget);
+exports.MarkerTreeLabelProvider = void 0;
+var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
+var label_provider_1 = __webpack_require__(/*! @theia/core/lib/browser/label-provider */ "./node_modules/@theia/core/lib/browser/label-provider.js");
+var marker_tree_1 = __webpack_require__(/*! ./marker-tree */ "./node_modules/@theia/markers/lib/browser/marker-tree.js");
+var tree_label_provider_1 = __webpack_require__(/*! @theia/core/lib/browser/tree/tree-label-provider */ "./node_modules/@theia/core/lib/browser/tree/tree-label-provider.js");
+var browser_1 = __webpack_require__(/*! @theia/workspace/lib/browser */ "./node_modules/@theia/workspace/lib/browser/index.js");
+var MarkerTreeLabelProvider = /** @class */ (function () {
+    function MarkerTreeLabelProvider() {
+    }
+    MarkerTreeLabelProvider.prototype.canHandle = function (element) {
+        return marker_tree_1.MarkerInfoNode.is(element) ?
+            this.treeLabelProvider.canHandle(element) + 1 :
+            0;
     };
-}
-exports.createTerminalSearchFactory = createTerminalSearchFactory;
+    MarkerTreeLabelProvider.prototype.getIcon = function (node) {
+        return this.labelProvider.getIcon(node.uri);
+    };
+    MarkerTreeLabelProvider.prototype.getName = function (node) {
+        return this.labelProvider.getName(node.uri);
+    };
+    MarkerTreeLabelProvider.prototype.getLongName = function (node) {
+        var description = [];
+        var rootUri = this.workspaceService.getWorkspaceRootUri(node.uri);
+        // In a multiple-root workspace include the root name to the label before the parent directory.
+        if (this.workspaceService.isMultiRootWorkspaceOpened && rootUri) {
+            description.push(this.labelProvider.getName(rootUri));
+        }
+        // If the given resource is not at the workspace root, include the parent directory to the label.
+        if (rootUri && rootUri.toString() !== node.uri.parent.toString()) {
+            description.push(this.labelProvider.getLongName(node.uri.parent));
+        }
+        // Get the full path of a resource which does not exist in the given workspace.
+        if (!rootUri) {
+            description.push(this.labelProvider.getLongName(node.uri.parent.withScheme('markers')));
+        }
+        return description.join(' ● ');
+    };
+    MarkerTreeLabelProvider.prototype.getDescription = function (node) {
+        return this.labelProvider.getLongName(node.uri.parent);
+    };
+    MarkerTreeLabelProvider.prototype.affects = function (node, event) {
+        return event.affects(node.uri) || event.affects(node.uri.parent);
+    };
+    __decorate([
+        inversify_1.inject(label_provider_1.LabelProvider),
+        __metadata("design:type", label_provider_1.LabelProvider)
+    ], MarkerTreeLabelProvider.prototype, "labelProvider", void 0);
+    __decorate([
+        inversify_1.inject(tree_label_provider_1.TreeLabelProvider),
+        __metadata("design:type", tree_label_provider_1.TreeLabelProvider)
+    ], MarkerTreeLabelProvider.prototype, "treeLabelProvider", void 0);
+    __decorate([
+        inversify_1.inject(browser_1.WorkspaceService),
+        __metadata("design:type", browser_1.WorkspaceService)
+    ], MarkerTreeLabelProvider.prototype, "workspaceService", void 0);
+    MarkerTreeLabelProvider = __decorate([
+        inversify_1.injectable()
+    ], MarkerTreeLabelProvider);
+    return MarkerTreeLabelProvider;
+}());
+exports.MarkerTreeLabelProvider = MarkerTreeLabelProvider;
 
 
 /***/ }),
 
-/***/ "./node_modules/@theia/terminal/lib/browser/terminal-frontend-module.js":
+/***/ "./node_modules/@theia/markers/lib/browser/problem/problem-container.js":
 /*!******************************************************************************!*\
-  !*** ./node_modules/@theia/terminal/lib/browser/terminal-frontend-module.js ***!
+  !*** ./node_modules/@theia/markers/lib/browser/problem/problem-container.js ***!
   \******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -75,6 +134,450 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.createProblemWidget = exports.createProblemTreeContainer = exports.PROBLEM_OPTIONS = exports.PROBLEM_TREE_PROPS = void 0;
+var marker_tree_1 = __webpack_require__(/*! ../marker-tree */ "./node_modules/@theia/markers/lib/browser/marker-tree.js");
+var problem_widget_1 = __webpack_require__(/*! ./problem-widget */ "./node_modules/@theia/markers/lib/browser/problem/problem-widget.js");
+var problem_tree_model_1 = __webpack_require__(/*! ./problem-tree-model */ "./node_modules/@theia/markers/lib/browser/problem/problem-tree-model.js");
+var browser_1 = __webpack_require__(/*! @theia/core/lib/browser */ "./node_modules/@theia/core/lib/browser/index.js");
+var problem_marker_1 = __webpack_require__(/*! ../../common/problem-marker */ "./node_modules/@theia/markers/lib/common/problem-marker.js");
+exports.PROBLEM_TREE_PROPS = __assign(__assign({}, browser_1.defaultTreeProps), { contextMenuPath: [problem_marker_1.PROBLEM_KIND], globalSelection: true });
+exports.PROBLEM_OPTIONS = {
+    kind: 'problem'
+};
+function createProblemTreeContainer(parent) {
+    var child = browser_1.createTreeContainer(parent);
+    child.unbind(browser_1.TreeImpl);
+    child.bind(problem_tree_model_1.ProblemTree).toSelf();
+    child.rebind(browser_1.Tree).toService(problem_tree_model_1.ProblemTree);
+    child.unbind(browser_1.TreeWidget);
+    child.bind(problem_widget_1.ProblemWidget).toSelf();
+    child.unbind(browser_1.TreeModelImpl);
+    child.bind(problem_tree_model_1.ProblemTreeModel).toSelf();
+    child.rebind(browser_1.TreeModel).toService(problem_tree_model_1.ProblemTreeModel);
+    child.rebind(browser_1.TreeProps).toConstantValue(exports.PROBLEM_TREE_PROPS);
+    child.bind(marker_tree_1.MarkerOptions).toConstantValue(exports.PROBLEM_OPTIONS);
+    return child;
+}
+exports.createProblemTreeContainer = createProblemTreeContainer;
+function createProblemWidget(parent) {
+    return createProblemTreeContainer(parent).get(problem_widget_1.ProblemWidget);
+}
+exports.createProblemWidget = createProblemWidget;
+
+
+/***/ }),
+
+/***/ "./node_modules/@theia/markers/lib/browser/problem/problem-contribution.js":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/@theia/markers/lib/browser/problem/problem-contribution.js ***!
+  \*********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/********************************************************************************
+ * Copyright (C) 2017 TypeFox and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+var __spread = (this && this.__spread) || function () {
+    for (var ar = [], i = 0; i < arguments.length; i++) ar = ar.concat(__read(arguments[i]));
+    return ar;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProblemContribution = exports.ProblemsCommands = exports.ProblemsMenu = exports.PROBLEMS_CONTEXT_MENU = void 0;
+var debounce = __webpack_require__(/*! lodash.debounce */ "./node_modules/lodash.debounce/index.js");
+var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
+var browser_1 = __webpack_require__(/*! @theia/core/lib/browser */ "./node_modules/@theia/core/lib/browser/index.js");
+var status_bar_1 = __webpack_require__(/*! @theia/core/lib/browser/status-bar/status-bar */ "./node_modules/@theia/core/lib/browser/status-bar/status-bar.js");
+var view_contribution_1 = __webpack_require__(/*! @theia/core/lib/browser/shell/view-contribution */ "./node_modules/@theia/core/lib/browser/shell/view-contribution.js");
+var problem_marker_1 = __webpack_require__(/*! ../../common/problem-marker */ "./node_modules/@theia/markers/lib/common/problem-marker.js");
+var problem_manager_1 = __webpack_require__(/*! ./problem-manager */ "./node_modules/@theia/markers/lib/browser/problem/problem-manager.js");
+var problem_widget_1 = __webpack_require__(/*! ./problem-widget */ "./node_modules/@theia/markers/lib/browser/problem/problem-widget.js");
+var selection_service_1 = __webpack_require__(/*! @theia/core/lib/common/selection-service */ "./node_modules/@theia/core/lib/common/selection-service.js");
+var problem_selection_1 = __webpack_require__(/*! ./problem-selection */ "./node_modules/@theia/markers/lib/browser/problem/problem-selection.js");
+exports.PROBLEMS_CONTEXT_MENU = [problem_marker_1.PROBLEM_KIND];
+var ProblemsMenu;
+(function (ProblemsMenu) {
+    ProblemsMenu.CLIPBOARD = __spread(exports.PROBLEMS_CONTEXT_MENU, ['1_clipboard']);
+    ProblemsMenu.PROBLEMS = __spread(exports.PROBLEMS_CONTEXT_MENU, ['2_problems']);
+})(ProblemsMenu = exports.ProblemsMenu || (exports.ProblemsMenu = {}));
+var ProblemsCommands;
+(function (ProblemsCommands) {
+    ProblemsCommands.COLLAPSE_ALL = {
+        id: 'problems.collapse.all'
+    };
+    ProblemsCommands.COLLAPSE_ALL_TOOLBAR = {
+        id: 'problems.collapse.all.toolbar',
+        iconClass: 'theia-collapse-all-icon'
+    };
+    ProblemsCommands.COPY = {
+        id: 'problems.copy'
+    };
+    ProblemsCommands.COPY_MESSAGE = {
+        id: 'problems.copy.message',
+    };
+})(ProblemsCommands = exports.ProblemsCommands || (exports.ProblemsCommands = {}));
+var ProblemContribution = /** @class */ (function (_super) {
+    __extends(ProblemContribution, _super);
+    function ProblemContribution() {
+        var _this = _super.call(this, {
+            widgetId: problem_widget_1.PROBLEMS_WIDGET_ID,
+            widgetName: 'Problems',
+            defaultWidgetOptions: {
+                area: 'bottom'
+            },
+            toggleCommandId: 'problemsView:toggle',
+            toggleKeybinding: 'ctrlcmd+shift+m'
+        }) || this;
+        _this.updateStatusBarElement = debounce(function () { return _this.setStatusBarElement(_this.problemManager.getProblemStat()); }, 10);
+        return _this;
+    }
+    ProblemContribution.prototype.onStart = function (app) {
+        this.updateStatusBarElement();
+        this.problemManager.onDidChangeMarkers(this.updateStatusBarElement);
+    };
+    ProblemContribution.prototype.initializeLayout = function (app) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.openView()];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    ProblemContribution.prototype.setStatusBarElement = function (problemStat) {
+        this.statusBar.setElement('problem-marker-status', {
+            text: problemStat.infos <= 0
+                ? "$(times-circle) " + problemStat.errors + " $(exclamation-triangle) " + problemStat.warnings
+                : "$(times-circle) " + problemStat.errors + " $(exclamation-triangle) " + problemStat.warnings + " $(info-circle) " + problemStat.infos,
+            alignment: status_bar_1.StatusBarAlignment.LEFT,
+            priority: 10,
+            command: this.toggleCommand ? this.toggleCommand.id : undefined,
+            tooltip: this.getStatusBarTooltip(problemStat)
+        });
+    };
+    /**
+     * Get the tooltip to be displayed when hovering over the problem statusbar item.
+     * - Displays `No Problems` when no problems are present.
+     * - Displays a human-readable label which describes for each type of problem stat properties,
+     * their overall count and type when any one of these properties has a positive count.
+     * @param stat the problem stat describing the number of `errors`, `warnings` and `infos`.
+     *
+     * @return the tooltip to be displayed in the statusbar.
+     */
+    ProblemContribution.prototype.getStatusBarTooltip = function (stat) {
+        if (stat.errors <= 0 && stat.warnings <= 0 && stat.infos <= 0) {
+            return 'No Problems';
+        }
+        var tooltip = [];
+        if (stat.errors > 0) {
+            tooltip.push(stat.errors + " Errors");
+        }
+        if (stat.warnings > 0) {
+            tooltip.push(stat.warnings + " Warnings");
+        }
+        if (stat.infos > 0) {
+            tooltip.push(stat.infos + " Infos");
+        }
+        return tooltip.join(', ');
+    };
+    ProblemContribution.prototype.registerCommands = function (commands) {
+        var _this = this;
+        _super.prototype.registerCommands.call(this, commands);
+        commands.registerCommand(ProblemsCommands.COLLAPSE_ALL, {
+            execute: function () { return _this.collapseAllProblems(); }
+        });
+        commands.registerCommand(ProblemsCommands.COLLAPSE_ALL_TOOLBAR, {
+            isEnabled: function (widget) { return _this.withWidget(widget, function () { return true; }); },
+            isVisible: function (widget) { return _this.withWidget(widget, function () { return true; }); },
+            execute: function (widget) { return _this.withWidget(widget, function () { return _this.collapseAllProblems(); }); }
+        });
+        commands.registerCommand(ProblemsCommands.COPY, new problem_selection_1.ProblemSelection.CommandHandler(this.selectionService, {
+            multi: false,
+            isEnabled: function () { return true; },
+            isVisible: function () { return true; },
+            execute: function (selection) { return _this.copy(selection); }
+        }));
+        commands.registerCommand(ProblemsCommands.COPY_MESSAGE, new problem_selection_1.ProblemSelection.CommandHandler(this.selectionService, {
+            multi: false,
+            isEnabled: function () { return true; },
+            isVisible: function () { return true; },
+            execute: function (selection) { return _this.copyMessage(selection); }
+        }));
+    };
+    ProblemContribution.prototype.registerMenus = function (menus) {
+        _super.prototype.registerMenus.call(this, menus);
+        menus.registerMenuAction(ProblemsMenu.CLIPBOARD, {
+            commandId: ProblemsCommands.COPY.id,
+            label: 'Copy',
+            order: '0'
+        });
+        menus.registerMenuAction(ProblemsMenu.CLIPBOARD, {
+            commandId: ProblemsCommands.COPY_MESSAGE.id,
+            label: 'Copy Message',
+            order: '1'
+        });
+        menus.registerMenuAction(ProblemsMenu.PROBLEMS, {
+            commandId: ProblemsCommands.COLLAPSE_ALL.id,
+            label: 'Collapse All',
+            order: '2'
+        });
+    };
+    ProblemContribution.prototype.registerToolbarItems = function (toolbarRegistry) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                toolbarRegistry.registerItem({
+                    id: ProblemsCommands.COLLAPSE_ALL_TOOLBAR.id,
+                    command: ProblemsCommands.COLLAPSE_ALL_TOOLBAR.id,
+                    tooltip: 'Collapse All',
+                    priority: 0,
+                });
+                return [2 /*return*/];
+            });
+        });
+    };
+    ProblemContribution.prototype.collapseAllProblems = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var model, root, firstChild;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.widget];
+                    case 1:
+                        model = (_a.sent()).model;
+                        root = model.root;
+                        firstChild = root.children[0];
+                        root.children.forEach(function (child) { return browser_1.CompositeTreeNode.is(child) && model.collapseAll(child); });
+                        if (browser_1.SelectableTreeNode.is(firstChild)) {
+                            model.selectNode(firstChild);
+                        }
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    ProblemContribution.prototype.addToClipboard = function (content) {
+        var handleCopy = function (e) {
+            document.removeEventListener('copy', handleCopy);
+            if (e.clipboardData) {
+                e.clipboardData.setData('text/plain', content);
+                e.preventDefault();
+            }
+        };
+        document.addEventListener('copy', handleCopy);
+        document.execCommand('copy');
+    };
+    ProblemContribution.prototype.copy = function (selection) {
+        var marker = selection.marker;
+        var serializedProblem = JSON.stringify({
+            resource: marker.uri,
+            owner: marker.uri,
+            code: marker.data.code,
+            severity: marker.data.severity,
+            message: marker.data.message,
+            source: marker.data.source,
+            startLineNumber: marker.data.range.start.line,
+            startColumn: marker.data.range.start.character,
+            endLineNumber: marker.data.range.end.line,
+            endColumn: marker.data.range.end.character
+        }, undefined, '\t');
+        this.addToClipboard(serializedProblem);
+    };
+    ProblemContribution.prototype.copyMessage = function (selection) {
+        var marker = selection.marker;
+        this.addToClipboard(marker.data.message);
+    };
+    ProblemContribution.prototype.withWidget = function (widget, cb) {
+        if (widget === void 0) { widget = this.tryGetWidget(); }
+        if (widget instanceof problem_widget_1.ProblemWidget && widget.id === problem_widget_1.PROBLEMS_WIDGET_ID) {
+            return cb(widget);
+        }
+        return false;
+    };
+    __decorate([
+        inversify_1.inject(problem_manager_1.ProblemManager),
+        __metadata("design:type", problem_manager_1.ProblemManager)
+    ], ProblemContribution.prototype, "problemManager", void 0);
+    __decorate([
+        inversify_1.inject(status_bar_1.StatusBar),
+        __metadata("design:type", Object)
+    ], ProblemContribution.prototype, "statusBar", void 0);
+    __decorate([
+        inversify_1.inject(selection_service_1.SelectionService),
+        __metadata("design:type", selection_service_1.SelectionService)
+    ], ProblemContribution.prototype, "selectionService", void 0);
+    ProblemContribution = __decorate([
+        inversify_1.injectable(),
+        __metadata("design:paramtypes", [])
+    ], ProblemContribution);
+    return ProblemContribution;
+}(view_contribution_1.AbstractViewContribution));
+exports.ProblemContribution = ProblemContribution;
+
+
+/***/ }),
+
+/***/ "./node_modules/@theia/markers/lib/browser/problem/problem-decorator.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@theia/markers/lib/browser/problem/problem-decorator.js ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/********************************************************************************
+ * Copyright (C) 2018 TypeFox and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
 var __values = (this && this.__values) || function(o) {
     var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
     if (m) return m.call(o);
@@ -86,121 +589,314 @@ var __values = (this && this.__values) || function(o) {
     };
     throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
 };
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-__webpack_require__(/*! ../../src/browser/style/terminal.css */ "./node_modules/@theia/terminal/src/browser/style/terminal.css");
-__webpack_require__(/*! xterm/css/xterm.css */ "./node_modules/xterm/css/xterm.css");
+exports.ProblemDecorator = void 0;
 var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
-var common_1 = __webpack_require__(/*! @theia/core/lib/common */ "./node_modules/@theia/core/lib/common/index.js");
-var core_1 = __webpack_require__(/*! @theia/core */ "./node_modules/@theia/core/lib/common/index.js");
+var vscode_languageserver_types_1 = __webpack_require__(/*! vscode-languageserver-types */ "./node_modules/vscode-languageserver-types/lib/esm/main.js");
+var uri_1 = __webpack_require__(/*! @theia/core/lib/common/uri */ "./node_modules/@theia/core/lib/common/uri.js");
+var objects_1 = __webpack_require__(/*! @theia/core/lib/common/objects */ "./node_modules/@theia/core/lib/common/objects.js");
+var event_1 = __webpack_require__(/*! @theia/core/lib/common/event */ "./node_modules/@theia/core/lib/common/event.js");
+var tree_iterator_1 = __webpack_require__(/*! @theia/core/lib/browser/tree/tree-iterator */ "./node_modules/@theia/core/lib/browser/tree/tree-iterator.js");
+var tree_decorator_1 = __webpack_require__(/*! @theia/core/lib/browser/tree/tree-decorator */ "./node_modules/@theia/core/lib/browser/tree/tree-decorator.js");
+var browser_1 = __webpack_require__(/*! @theia/filesystem/lib/browser */ "./node_modules/@theia/filesystem/lib/browser/index.js");
+var problem_manager_1 = __webpack_require__(/*! ./problem-manager */ "./node_modules/@theia/markers/lib/browser/problem/problem-manager.js");
+var problem_preferences_1 = __webpack_require__(/*! ./problem-preferences */ "./node_modules/@theia/markers/lib/browser/problem/problem-preferences.js");
+var problem_utils_1 = __webpack_require__(/*! ./problem-utils */ "./node_modules/@theia/markers/lib/browser/problem/problem-utils.js");
+var ProblemDecorator = /** @class */ (function () {
+    function ProblemDecorator(problemManager) {
+        var _this = this;
+        this.problemManager = problemManager;
+        this.id = 'theia-problem-decorator';
+        this.emitter = new event_1.Emitter();
+        this.problemManager.onDidChangeMarkers(function () { return _this.fireDidChangeDecorations(function (tree) { return _this.collectDecorators(tree); }); });
+    }
+    ProblemDecorator_1 = ProblemDecorator;
+    ProblemDecorator.prototype.init = function () {
+        var _this = this;
+        this.problemPreferences.onPreferenceChanged(function (event) {
+            var preferenceName = event.preferenceName;
+            if (preferenceName === 'problems.decorations.enabled') {
+                _this.fireDidChangeDecorations(function (tree) { return _this.collectDecorators(tree); });
+            }
+        });
+    };
+    ProblemDecorator.prototype.decorations = function (tree) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.collectDecorators(tree)];
+            });
+        });
+    };
+    Object.defineProperty(ProblemDecorator.prototype, "onDidChangeDecorations", {
+        get: function () {
+            return this.emitter.event;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    ProblemDecorator.prototype.fireDidChangeDecorations = function (event) {
+        this.emitter.fire(event);
+    };
+    ProblemDecorator.prototype.collectDecorators = function (tree) {
+        var e_1, _a;
+        var _this = this;
+        var result = new Map();
+        // If the tree root is undefined or the preference for the decorations is disabled, return an empty result map.
+        if (tree.root === undefined || !this.problemPreferences['problems.decorations.enabled']) {
+            return result;
+        }
+        var markers = this.appendContainerMarkers(tree, this.collectMarkers(tree));
+        try {
+            for (var _b = __values(new tree_iterator_1.DepthFirstTreeIterator(tree.root)), _c = _b.next(); !_c.done; _c = _b.next()) {
+                var node = _c.value;
+                var nodeUri = browser_1.FileStatNode.getUri(node);
+                if (nodeUri) {
+                    var marker = markers.get(nodeUri);
+                    if (marker) {
+                        result.set(node.id, marker);
+                    }
+                }
+            }
+        }
+        catch (e_1_1) { e_1 = { error: e_1_1 }; }
+        finally {
+            try {
+                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+            }
+            finally { if (e_1) throw e_1.error; }
+        }
+        return new Map(Array.from(result.entries()).map(function (m) { return [m[0], _this.toDecorator(m[1])]; }));
+    };
+    ProblemDecorator.prototype.appendContainerMarkers = function (tree, markers) {
+        var e_2, _a;
+        var result = new Map();
+        try {
+            // We traverse up and assign the diagnostic to the container directory.
+            // Note, instead of stopping at the WS root, we traverse up the driver root.
+            // We will filter them later based on the expansion state of the tree.
+            for (var _b = __values(new Map(markers.map(function (m) { return [new uri_1.default(m.uri), m]; })).entries()), _c = _b.next(); !_c.done; _c = _b.next()) {
+                var _d = __read(_c.value, 2), uri = _d[0], marker = _d[1];
+                var uriString = uri.toString();
+                result.set(uriString, marker);
+                var parentUri = uri.parent;
+                while (parentUri && !parentUri.path.isRoot) {
+                    var parentUriString = parentUri.toString();
+                    var existing = result.get(parentUriString);
+                    // Make sure the highest diagnostic severity (smaller number) will be propagated to the container directory.
+                    if (existing === undefined || this.compare(marker, existing) < 0) {
+                        result.set(parentUriString, {
+                            data: marker.data,
+                            uri: parentUriString,
+                            owner: marker.owner,
+                            kind: marker.kind
+                        });
+                        parentUri = parentUri.parent;
+                    }
+                    else {
+                        parentUri = undefined;
+                    }
+                }
+            }
+        }
+        catch (e_2_1) { e_2 = { error: e_2_1 }; }
+        finally {
+            try {
+                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+            }
+            finally { if (e_2) throw e_2.error; }
+        }
+        return result;
+    };
+    ProblemDecorator.prototype.collectMarkers = function (tree) {
+        var _this = this;
+        return Array.from(this.problemManager.getUris())
+            .map(function (uri) { return new uri_1.default(uri); })
+            .map(function (uri) { return _this.problemManager.findMarkers({ uri: uri }); })
+            .map(function (markers) { return markers.sort(_this.compare.bind(_this)); })
+            .map(function (markers) { return markers.shift(); })
+            .filter(objects_1.notEmpty)
+            .filter(this.filterMarker.bind(this));
+    };
+    ProblemDecorator.prototype.toDecorator = function (marker) {
+        var position = tree_decorator_1.TreeDecoration.IconOverlayPosition.BOTTOM_RIGHT;
+        var icon = this.getOverlayIcon(marker);
+        var color = this.getOverlayIconColor(marker);
+        var priority = this.getPriority(marker);
+        return {
+            priority: priority,
+            fontData: {
+                color: color,
+            },
+            iconOverlay: {
+                position: position,
+                icon: icon,
+                color: color,
+                background: {
+                    shape: 'circle',
+                    color: 'transparent'
+                }
+            },
+        };
+    };
+    ProblemDecorator.prototype.getOverlayIcon = function (marker) {
+        var severity = marker.data.severity;
+        switch (severity) {
+            case 1: return 'times-circle';
+            case 2: return 'exclamation-circle';
+            case 3: return 'info-circle';
+            default: return 'hand-o-up';
+        }
+    };
+    ProblemDecorator.prototype.getOverlayIconColor = function (marker) {
+        var severity = marker.data.severity;
+        switch (severity) {
+            case 1: return 'var(--theia-editorError-foreground)';
+            case 2: return 'var(--theia-editorWarning-foreground)';
+            case 3: return 'var(--theia-editorInfo-foreground)';
+            default: return 'var(--theia-successBackground)';
+        }
+    };
+    /**
+     * Get the decoration for a given marker diagnostic.
+     * Markers with higher severity have a higher priority and should be displayed.
+     * @param marker the diagnostic marker.
+     */
+    ProblemDecorator.prototype.getPriority = function (marker) {
+        var severity = marker.data.severity;
+        switch (severity) {
+            case 1: return 30; // Errors.
+            case 2: return 20; // Warnings.
+            case 3: return 10; // Infos.
+            default: return 0;
+        }
+    };
+    /**
+     * Returns `true` if the diagnostic (`data`) of the marker argument has `Error`, `Warning`, or `Information` severity.
+     * Otherwise, returns `false`.
+     */
+    ProblemDecorator.prototype.filterMarker = function (marker) {
+        var severity = marker.data.severity;
+        return severity === vscode_languageserver_types_1.DiagnosticSeverity.Error
+            || severity === vscode_languageserver_types_1.DiagnosticSeverity.Warning
+            || severity === vscode_languageserver_types_1.DiagnosticSeverity.Information;
+    };
+    ProblemDecorator.prototype.compare = function (left, right) {
+        return ProblemDecorator_1.severityCompare(left, right);
+    };
+    var ProblemDecorator_1;
+    __decorate([
+        inversify_1.inject(problem_preferences_1.ProblemPreferences),
+        __metadata("design:type", Object)
+    ], ProblemDecorator.prototype, "problemPreferences", void 0);
+    __decorate([
+        inversify_1.postConstruct(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", void 0)
+    ], ProblemDecorator.prototype, "init", null);
+    ProblemDecorator = ProblemDecorator_1 = __decorate([
+        inversify_1.injectable(),
+        __param(0, inversify_1.inject(problem_manager_1.ProblemManager)),
+        __metadata("design:paramtypes", [problem_manager_1.ProblemManager])
+    ], ProblemDecorator);
+    return ProblemDecorator;
+}());
+exports.ProblemDecorator = ProblemDecorator;
+(function (ProblemDecorator) {
+    // Highest severities (errors) come first, then the others. Undefined severities treated as the last ones.
+    ProblemDecorator.severityCompare = problem_utils_1.ProblemUtils.severityCompare;
+})(ProblemDecorator = exports.ProblemDecorator || (exports.ProblemDecorator = {}));
+exports.ProblemDecorator = ProblemDecorator;
+
+
+/***/ }),
+
+/***/ "./node_modules/@theia/markers/lib/browser/problem/problem-frontend-module.js":
+/*!************************************************************************************!*\
+  !*** ./node_modules/@theia/markers/lib/browser/problem/problem-frontend-module.js ***!
+  \************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/********************************************************************************
+ * Copyright (C) 2017 TypeFox and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+Object.defineProperty(exports, "__esModule", { value: true });
+__webpack_require__(/*! ../../../src/browser/style/index.css */ "./node_modules/@theia/markers/src/browser/style/index.css");
+var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
+var problem_widget_1 = __webpack_require__(/*! ./problem-widget */ "./node_modules/@theia/markers/lib/browser/problem/problem-widget.js");
+var problem_contribution_1 = __webpack_require__(/*! ./problem-contribution */ "./node_modules/@theia/markers/lib/browser/problem/problem-contribution.js");
+var problem_container_1 = __webpack_require__(/*! ./problem-container */ "./node_modules/@theia/markers/lib/browser/problem/problem-container.js");
 var browser_1 = __webpack_require__(/*! @theia/core/lib/browser */ "./node_modules/@theia/core/lib/browser/index.js");
+var problem_manager_1 = __webpack_require__(/*! ./problem-manager */ "./node_modules/@theia/markers/lib/browser/problem/problem-manager.js");
+var widget_manager_1 = __webpack_require__(/*! @theia/core/lib/browser/widget-manager */ "./node_modules/@theia/core/lib/browser/widget-manager.js");
+var navigator_decorator_service_1 = __webpack_require__(/*! @theia/navigator/lib/browser/navigator-decorator-service */ "./node_modules/@theia/navigator/lib/browser/navigator-decorator-service.js");
+var problem_decorator_1 = __webpack_require__(/*! ./problem-decorator */ "./node_modules/@theia/markers/lib/browser/problem/problem-decorator.js");
+var problem_tabbar_decorator_1 = __webpack_require__(/*! ./problem-tabbar-decorator */ "./node_modules/@theia/markers/lib/browser/problem/problem-tabbar-decorator.js");
 var tab_bar_toolbar_1 = __webpack_require__(/*! @theia/core/lib/browser/shell/tab-bar-toolbar */ "./node_modules/@theia/core/lib/browser/shell/tab-bar-toolbar.js");
-var terminal_frontend_contribution_1 = __webpack_require__(/*! ./terminal-frontend-contribution */ "./node_modules/@theia/terminal/lib/browser/terminal-frontend-contribution.js");
-var terminal_widget_impl_1 = __webpack_require__(/*! ./terminal-widget-impl */ "./node_modules/@theia/terminal/lib/browser/terminal-widget-impl.js");
-var terminal_widget_1 = __webpack_require__(/*! ./base/terminal-widget */ "./node_modules/@theia/terminal/lib/browser/base/terminal-widget.js");
-var terminal_protocol_1 = __webpack_require__(/*! ../common/terminal-protocol */ "./node_modules/@theia/terminal/lib/common/terminal-protocol.js");
-var terminal_watcher_1 = __webpack_require__(/*! ../common/terminal-watcher */ "./node_modules/@theia/terminal/lib/common/terminal-watcher.js");
-var shell_terminal_protocol_1 = __webpack_require__(/*! ../common/shell-terminal-protocol */ "./node_modules/@theia/terminal/lib/common/shell-terminal-protocol.js");
-var terminal_keybinding_contexts_1 = __webpack_require__(/*! ./terminal-keybinding-contexts */ "./node_modules/@theia/terminal/lib/browser/terminal-keybinding-contexts.js");
-var terminal_common_module_1 = __webpack_require__(/*! ../common/terminal-common-module */ "./node_modules/@theia/terminal/lib/common/terminal-common-module.js");
-var terminal_service_1 = __webpack_require__(/*! ./base/terminal-service */ "./node_modules/@theia/terminal/lib/browser/base/terminal-service.js");
-var terminal_preferences_1 = __webpack_require__(/*! ./terminal-preferences */ "./node_modules/@theia/terminal/lib/browser/terminal-preferences.js");
-var terminal_linkmatcher_1 = __webpack_require__(/*! ./terminal-linkmatcher */ "./node_modules/@theia/terminal/lib/browser/terminal-linkmatcher.js");
-var terminal_contribution_1 = __webpack_require__(/*! ./terminal-contribution */ "./node_modules/@theia/terminal/lib/browser/terminal-contribution.js");
-var terminal_linkmatcher_files_1 = __webpack_require__(/*! ./terminal-linkmatcher-files */ "./node_modules/@theia/terminal/lib/browser/terminal-linkmatcher-files.js");
-var terminal_linkmatcher_diff_1 = __webpack_require__(/*! ./terminal-linkmatcher-diff */ "./node_modules/@theia/terminal/lib/browser/terminal-linkmatcher-diff.js");
-var terminal_search_widget_1 = __webpack_require__(/*! ./search/terminal-search-widget */ "./node_modules/@theia/terminal/lib/browser/search/terminal-search-widget.js");
-var terminal_quick_open_service_1 = __webpack_require__(/*! ./terminal-quick-open-service */ "./node_modules/@theia/terminal/lib/browser/terminal-quick-open-service.js");
-var terminal_search_container_1 = __webpack_require__(/*! ./search/terminal-search-container */ "./node_modules/@theia/terminal/lib/browser/search/terminal-search-container.js");
-var terminal_copy_on_selection_handler_1 = __webpack_require__(/*! ./terminal-copy-on-selection-handler */ "./node_modules/@theia/terminal/lib/browser/terminal-copy-on-selection-handler.js");
-var color_application_contribution_1 = __webpack_require__(/*! @theia/core/lib/browser/color-application-contribution */ "./node_modules/@theia/core/lib/browser/color-application-contribution.js");
-var terminal_theme_service_1 = __webpack_require__(/*! ./terminal-theme-service */ "./node_modules/@theia/terminal/lib/browser/terminal-theme-service.js");
+var problem_layout_migrations_1 = __webpack_require__(/*! ./problem-layout-migrations */ "./node_modules/@theia/markers/lib/browser/problem/problem-layout-migrations.js");
+var tab_bar_decorator_1 = __webpack_require__(/*! @theia/core/lib/browser/shell/tab-bar-decorator */ "./node_modules/@theia/core/lib/browser/shell/tab-bar-decorator.js");
+var problem_preferences_1 = __webpack_require__(/*! ./problem-preferences */ "./node_modules/@theia/markers/lib/browser/problem/problem-preferences.js");
+var marker_tree_label_provider_1 = __webpack_require__(/*! ../marker-tree-label-provider */ "./node_modules/@theia/markers/lib/browser/marker-tree-label-provider.js");
 exports.default = new inversify_1.ContainerModule(function (bind) {
-    var e_1, _a, e_2, _b;
-    terminal_preferences_1.bindTerminalPreferences(bind);
-    bind(browser_1.KeybindingContext).to(terminal_keybinding_contexts_1.TerminalActiveContext).inSingletonScope();
-    bind(browser_1.KeybindingContext).to(terminal_keybinding_contexts_1.TerminalSearchVisibleContext).inSingletonScope();
-    bind(terminal_widget_1.TerminalWidget).to(terminal_widget_impl_1.TerminalWidgetImpl).inTransientScope();
-    bind(terminal_watcher_1.TerminalWatcher).toSelf().inSingletonScope();
-    var terminalNum = 0;
-    bind(browser_1.WidgetFactory).toDynamicValue(function (ctx) { return ({
-        id: terminal_widget_impl_1.TERMINAL_WIDGET_FACTORY_ID,
-        createWidget: function (options) {
-            var child = new inversify_1.Container({ defaultScope: 'Singleton' });
-            child.parent = ctx.container;
-            var counter = terminalNum++;
-            var domId = options.id || 'terminal-' + counter;
-            var widgetOptions = __assign({ title: 'Terminal ' + counter, useServerTitle: true, destroyTermOnClose: true }, options);
-            child.bind(terminal_widget_1.TerminalWidgetOptions).toConstantValue(widgetOptions);
-            child.bind('terminal-dom-id').toConstantValue(domId);
-            child.bind(terminal_search_widget_1.TerminalSearchWidgetFactory).toDynamicValue(function (context) { return terminal_search_container_1.createTerminalSearchFactory(context.container); });
-            return child.get(terminal_widget_1.TerminalWidget);
-        }
+    problem_preferences_1.bindProblemPreferences(bind);
+    bind(problem_manager_1.ProblemManager).toSelf().inSingletonScope();
+    bind(problem_widget_1.ProblemWidget).toDynamicValue(function (ctx) {
+        return problem_container_1.createProblemWidget(ctx.container);
+    });
+    bind(widget_manager_1.WidgetFactory).toDynamicValue(function (context) { return ({
+        id: problem_widget_1.PROBLEMS_WIDGET_ID,
+        createWidget: function () { return context.container.get(problem_widget_1.ProblemWidget); }
     }); });
-    bind(terminal_quick_open_service_1.TerminalQuickOpenService).toSelf().inSingletonScope();
-    bind(terminal_copy_on_selection_handler_1.TerminalCopyOnSelectionHandler).toSelf().inSingletonScope();
-    bind(terminal_quick_open_service_1.TerminalQuickOpenContribution).toSelf().inSingletonScope();
-    try {
-        for (var _c = __values([common_1.CommandContribution, browser_1.QuickOpenContribution]), _d = _c.next(); !_d.done; _d = _c.next()) {
-            var identifier = _d.value;
-            bind(identifier).toService(terminal_quick_open_service_1.TerminalQuickOpenContribution);
-        }
-    }
-    catch (e_1_1) { e_1 = { error: e_1_1 }; }
-    finally {
-        try {
-            if (_d && !_d.done && (_a = _c.return)) _a.call(_c);
-        }
-        finally { if (e_1) throw e_1.error; }
-    }
-    bind(terminal_theme_service_1.TerminalThemeService).toSelf().inSingletonScope();
-    bind(terminal_frontend_contribution_1.TerminalFrontendContribution).toSelf().inSingletonScope();
-    bind(terminal_service_1.TerminalService).toService(terminal_frontend_contribution_1.TerminalFrontendContribution);
-    try {
-        for (var _e = __values([common_1.CommandContribution, common_1.MenuContribution, browser_1.KeybindingContribution, tab_bar_toolbar_1.TabBarToolbarContribution, color_application_contribution_1.ColorContribution]), _f = _e.next(); !_f.done; _f = _e.next()) {
-            var identifier = _f.value;
-            bind(identifier).toService(terminal_frontend_contribution_1.TerminalFrontendContribution);
-        }
-    }
-    catch (e_2_1) { e_2 = { error: e_2_1 }; }
-    finally {
-        try {
-            if (_f && !_f.done && (_b = _e.return)) _b.call(_e);
-        }
-        finally { if (e_2) throw e_2.error; }
-    }
-    bind(terminal_protocol_1.ITerminalServer).toDynamicValue(function (ctx) {
-        var connection = ctx.container.get(browser_1.WebSocketConnectionProvider);
-        var terminalWatcher = ctx.container.get(terminal_watcher_1.TerminalWatcher);
-        return connection.createProxy(terminal_protocol_1.terminalPath, terminalWatcher.getTerminalClient());
-    }).inSingletonScope();
-    bind(shell_terminal_protocol_1.ShellTerminalServerProxy).toDynamicValue(function (ctx) {
-        var connection = ctx.container.get(browser_1.WebSocketConnectionProvider);
-        var terminalWatcher = ctx.container.get(terminal_watcher_1.TerminalWatcher);
-        return connection.createProxy(shell_terminal_protocol_1.shellTerminalPath, terminalWatcher.getTerminalClient());
-    }).inSingletonScope();
-    bind(shell_terminal_protocol_1.IShellTerminalServer).toService(shell_terminal_protocol_1.ShellTerminalServerProxy);
-    terminal_common_module_1.createCommonBindings(bind);
-    // link matchers
-    core_1.bindContributionProvider(bind, terminal_contribution_1.TerminalContribution);
-    bind(terminal_linkmatcher_1.URLMatcher).toSelf().inSingletonScope();
-    bind(terminal_contribution_1.TerminalContribution).toService(terminal_linkmatcher_1.URLMatcher);
-    bind(terminal_linkmatcher_1.LocalhostMatcher).toSelf().inSingletonScope();
-    bind(terminal_contribution_1.TerminalContribution).toService(terminal_linkmatcher_1.LocalhostMatcher);
-    bind(terminal_linkmatcher_files_1.TerminalLinkmatcherFiles).toSelf().inSingletonScope();
-    bind(terminal_contribution_1.TerminalContribution).toService(terminal_linkmatcher_files_1.TerminalLinkmatcherFiles);
-    bind(terminal_linkmatcher_diff_1.TerminalLinkmatcherDiffPre).toSelf().inSingletonScope();
-    bind(terminal_contribution_1.TerminalContribution).toService(terminal_linkmatcher_diff_1.TerminalLinkmatcherDiffPre);
-    bind(terminal_linkmatcher_diff_1.TerminalLinkmatcherDiffPost).toSelf().inSingletonScope();
-    bind(terminal_contribution_1.TerminalContribution).toService(terminal_linkmatcher_diff_1.TerminalLinkmatcherDiffPost);
+    bind(browser_1.ApplicationShellLayoutMigration).to(problem_layout_migrations_1.ProblemLayoutVersion3Migration).inSingletonScope();
+    browser_1.bindViewContribution(bind, problem_contribution_1.ProblemContribution);
+    bind(browser_1.FrontendApplicationContribution).toService(problem_contribution_1.ProblemContribution);
+    bind(tab_bar_toolbar_1.TabBarToolbarContribution).toService(problem_contribution_1.ProblemContribution);
+    bind(problem_decorator_1.ProblemDecorator).toSelf().inSingletonScope();
+    bind(navigator_decorator_service_1.NavigatorTreeDecorator).toService(problem_decorator_1.ProblemDecorator);
+    bind(problem_tabbar_decorator_1.ProblemTabBarDecorator).toSelf().inSingletonScope();
+    bind(tab_bar_decorator_1.TabBarDecorator).toService(problem_tabbar_decorator_1.ProblemTabBarDecorator);
+    bind(marker_tree_label_provider_1.MarkerTreeLabelProvider).toSelf().inSingletonScope();
+    bind(browser_1.LabelProviderContribution).toService(marker_tree_label_provider_1.MarkerTreeLabelProvider);
 });
 
 
 /***/ }),
 
-/***/ "./node_modules/@theia/terminal/lib/browser/terminal-linkmatcher-diff.js":
-/*!*******************************************************************************!*\
-  !*** ./node_modules/@theia/terminal/lib/browser/terminal-linkmatcher-diff.js ***!
-  \*******************************************************************************/
+/***/ "./node_modules/@theia/markers/lib/browser/problem/problem-layout-migrations.js":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/@theia/markers/lib/browser/problem/problem-layout-migrations.js ***!
+  \**************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -221,108 +917,41 @@ exports.default = new inversify_1.ContainerModule(function (bind) {
  *
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TerminalLinkmatcherDiffPost = exports.TerminalLinkmatcherDiffPre = void 0;
+exports.ProblemLayoutVersion3Migration = void 0;
 var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
-var terminal_linkmatcher_files_1 = __webpack_require__(/*! ./terminal-linkmatcher-files */ "./node_modules/@theia/terminal/lib/browser/terminal-linkmatcher-files.js");
-var TerminalLinkmatcherDiffPre = /** @class */ (function (_super) {
-    __extends(TerminalLinkmatcherDiffPre, _super);
-    function TerminalLinkmatcherDiffPre() {
-        return _super !== null && _super.apply(this, arguments) || this;
+var problem_marker_1 = __webpack_require__(/*! ../../common/problem-marker */ "./node_modules/@theia/markers/lib/common/problem-marker.js");
+var problem_widget_1 = __webpack_require__(/*! ./problem-widget */ "./node_modules/@theia/markers/lib/browser/problem/problem-widget.js");
+var ProblemLayoutVersion3Migration = /** @class */ (function () {
+    function ProblemLayoutVersion3Migration() {
+        this.layoutVersion = 3.0;
     }
-    TerminalLinkmatcherDiffPre.prototype.getRegExp = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, /^--- a\/(\S*)/];
-            });
-        });
+    ProblemLayoutVersion3Migration.prototype.onWillInflateWidget = function (desc) {
+        if (desc.constructionOptions.factoryId === problem_marker_1.PROBLEM_KIND) {
+            desc.constructionOptions.factoryId = problem_widget_1.PROBLEMS_WIDGET_ID;
+            return desc;
+        }
+        return undefined;
     };
-    TerminalLinkmatcherDiffPre = __decorate([
+    ProblemLayoutVersion3Migration = __decorate([
         inversify_1.injectable()
-    ], TerminalLinkmatcherDiffPre);
-    return TerminalLinkmatcherDiffPre;
-}(terminal_linkmatcher_files_1.TerminalLinkmatcherFiles));
-exports.TerminalLinkmatcherDiffPre = TerminalLinkmatcherDiffPre;
-var TerminalLinkmatcherDiffPost = /** @class */ (function (_super) {
-    __extends(TerminalLinkmatcherDiffPost, _super);
-    function TerminalLinkmatcherDiffPost() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    TerminalLinkmatcherDiffPost.prototype.getRegExp = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, /^\+\+\+ b\/(\S*)/];
-            });
-        });
-    };
-    TerminalLinkmatcherDiffPost = __decorate([
-        inversify_1.injectable()
-    ], TerminalLinkmatcherDiffPost);
-    return TerminalLinkmatcherDiffPost;
-}(terminal_linkmatcher_files_1.TerminalLinkmatcherFiles));
-exports.TerminalLinkmatcherDiffPost = TerminalLinkmatcherDiffPost;
+    ], ProblemLayoutVersion3Migration);
+    return ProblemLayoutVersion3Migration;
+}());
+exports.ProblemLayoutVersion3Migration = ProblemLayoutVersion3Migration;
 
 
 /***/ }),
 
-/***/ "./node_modules/@theia/terminal/lib/browser/terminal-linkmatcher-files.js":
+/***/ "./node_modules/@theia/markers/lib/browser/problem/problem-preferences.js":
 /*!********************************************************************************!*\
-  !*** ./node_modules/@theia/terminal/lib/browser/terminal-linkmatcher-files.js ***!
+  !*** ./node_modules/@theia/markers/lib/browser/problem/problem-preferences.js ***!
   \********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -330,7 +959,7 @@ exports.TerminalLinkmatcherDiffPost = TerminalLinkmatcherDiffPost;
 "use strict";
 
 /********************************************************************************
- * Copyright (C) 2019 TypeFox and others.
+ * Copyright (C) 2019 Ericsson and others.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0 which is available at
@@ -344,551 +973,43 @@ exports.TerminalLinkmatcherDiffPost = TerminalLinkmatcherDiffPost;
  *
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TerminalLinkmatcherFiles = void 0;
-var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
-var application_protocol_1 = __webpack_require__(/*! @theia/core/lib/common/application-protocol */ "./node_modules/@theia/core/lib/common/application-protocol.js");
-var common_1 = __webpack_require__(/*! @theia/core/lib/common */ "./node_modules/@theia/core/lib/common/index.js");
+exports.bindProblemPreferences = exports.createProblemPreferences = exports.ProblemPreferences = exports.ProblemConfigSchema = void 0;
 var browser_1 = __webpack_require__(/*! @theia/core/lib/browser */ "./node_modules/@theia/core/lib/browser/index.js");
-var terminal_linkmatcher_1 = __webpack_require__(/*! ./terminal-linkmatcher */ "./node_modules/@theia/terminal/lib/browser/terminal-linkmatcher.js");
-var core_1 = __webpack_require__(/*! @theia/core */ "./node_modules/@theia/core/lib/common/index.js");
-var common_2 = __webpack_require__(/*! @theia/filesystem/lib/common */ "./node_modules/@theia/filesystem/lib/common/index.js");
-var TerminalLinkmatcherFiles = /** @class */ (function (_super) {
-    __extends(TerminalLinkmatcherFiles, _super);
-    function TerminalLinkmatcherFiles() {
-        return _super !== null && _super.apply(this, arguments) || this;
+exports.ProblemConfigSchema = {
+    'type': 'object',
+    'properties': {
+        'problems.decorations.enabled': {
+            'type': 'boolean',
+            'description': 'Show problem decorators (diagnostic markers) in tree widgets.',
+            'default': true,
+        },
+        'problems.decorations.tabbar.enabled': {
+            'type': 'boolean',
+            'description': 'Show problem decorators (diagnostic markers) in the tab bars.',
+            'default': true
+        }
     }
-    TerminalLinkmatcherFiles.prototype.init = function () {
-        this.backendOs = this.appServer.getBackendOS();
-    };
-    TerminalLinkmatcherFiles.prototype.getRegExp = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            var os, baseLocalLinkClause;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.backendOs];
-                    case 1:
-                        os = _a.sent();
-                        baseLocalLinkClause = os === common_1.OS.Type.Windows ? winLocalLinkClause : unixLocalLinkClause;
-                        return [2 /*return*/, new RegExp(baseLocalLinkClause + "(" + lineAndColumnClause + ")")];
-                }
-            });
-        });
-    };
-    TerminalLinkmatcherFiles.prototype.getValidate = function (terminalWidget) {
-        var _this = this;
-        return function (match) { return __awaiter(_this, void 0, void 0, function () {
-            var toOpen, _a, _b, f, err_1;
-            return __generator(this, function (_c) {
-                switch (_c.label) {
-                    case 0:
-                        _c.trys.push([0, 5, , 6]);
-                        _a = this.toURI;
-                        _b = [match];
-                        return [4 /*yield*/, terminalWidget.cwd];
-                    case 1: return [4 /*yield*/, _a.apply(this, _b.concat([_c.sent()]))];
-                    case 2:
-                        toOpen = _c.sent();
-                        if (!toOpen) return [3 /*break*/, 4];
-                        return [4 /*yield*/, this.fileSystem.getFileStat(toOpen.toString())];
-                    case 3:
-                        f = _c.sent();
-                        // eslint-disable-next-line no-null/no-null
-                        return [2 /*return*/, f !== undefined && f !== null && !f.isDirectory];
-                    case 4: return [3 /*break*/, 6];
-                    case 5:
-                        err_1 = _c.sent();
-                        console.trace('Error validating ' + match);
-                        return [3 /*break*/, 6];
-                    case 6: return [2 /*return*/, false];
-                }
-            });
-        }); };
-    };
-    TerminalLinkmatcherFiles.prototype.getHandler = function (terminalWidget) {
-        var _this = this;
-        return function (event, fullMatch) { return __awaiter(_this, void 0, void 0, function () {
-            var toOpen, _a, _b, position, options, opener_1, err_2;
-            return __generator(this, function (_c) {
-                switch (_c.label) {
-                    case 0:
-                        _a = this.toURI;
-                        _b = [fullMatch];
-                        return [4 /*yield*/, terminalWidget.cwd];
-                    case 1: return [4 /*yield*/, _a.apply(this, _b.concat([_c.sent()]))];
-                    case 2:
-                        toOpen = _c.sent();
-                        if (!toOpen) {
-                            return [2 /*return*/];
-                        }
-                        return [4 /*yield*/, this.extractPosition(fullMatch)];
-                    case 3:
-                        position = _c.sent();
-                        options = {};
-                        if (position) {
-                            options = {
-                                selection: {
-                                    start: position
-                                }
-                            };
-                        }
-                        _c.label = 4;
-                    case 4:
-                        _c.trys.push([4, 6, , 7]);
-                        return [4 /*yield*/, this.openerService.getOpener(toOpen, options)];
-                    case 5:
-                        opener_1 = _c.sent();
-                        opener_1.open(toOpen, options);
-                        return [3 /*break*/, 7];
-                    case 6:
-                        err_2 = _c.sent();
-                        console.error('Cannot open link ' + fullMatch, err_2);
-                        return [3 /*break*/, 7];
-                    case 7: return [2 /*return*/];
-                }
-            });
-        }); };
-    };
-    TerminalLinkmatcherFiles.prototype.toURI = function (match, cwd) {
-        return __awaiter(this, void 0, void 0, function () {
-            var path, pathObj;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.extractPath(match)];
-                    case 1:
-                        path = _a.sent();
-                        if (!path) {
-                            return [2 /*return*/];
-                        }
-                        pathObj = new core_1.Path(path);
-                        return [2 /*return*/, pathObj.isAbsolute ? cwd.withPath(path) : cwd.resolve(path)];
-                }
-            });
-        });
-    };
-    TerminalLinkmatcherFiles.prototype.extractPosition = function (link) {
-        return __awaiter(this, void 0, void 0, function () {
-            var matches, info, lineAndColumnMatchIndex, i, lineMatchIndex, rowNumber, columnNumber;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.getRegExp()];
-                    case 1:
-                        matches = (_a.sent()).exec(link);
-                        info = {
-                            line: 1,
-                            character: 1
-                        };
-                        if (!matches) {
-                            return [2 /*return*/, info];
-                        }
-                        return [4 /*yield*/, this.backendOs];
-                    case 2:
-                        lineAndColumnMatchIndex = (_a.sent()) === common_1.OS.Type.Windows ? winLineAndColumnMatchIndex : unixLineAndColumnMatchIndex;
-                        for (i = 0; i < lineAndColumnClause.length; i++) {
-                            lineMatchIndex = lineAndColumnMatchIndex + (lineAndColumnClauseGroupCount * i);
-                            rowNumber = matches[lineMatchIndex];
-                            if (rowNumber) {
-                                info.line = parseInt(rowNumber, 10) - 1;
-                                columnNumber = matches[lineMatchIndex + 2];
-                                if (columnNumber) {
-                                    info.character = parseInt(columnNumber, 10) - 1;
-                                }
-                                break;
-                            }
-                        }
-                        return [2 /*return*/, info];
-                }
-            });
-        });
-    };
-    TerminalLinkmatcherFiles.prototype.extractPath = function (link) {
-        return __awaiter(this, void 0, void 0, function () {
-            var matches;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.getRegExp()];
-                    case 1:
-                        matches = (_a.sent()).exec(link);
-                        if (!matches) {
-                            return [2 /*return*/, undefined];
-                        }
-                        return [2 /*return*/, matches[1]];
-                }
-            });
-        });
-    };
-    __decorate([
-        inversify_1.inject(application_protocol_1.ApplicationServer),
-        __metadata("design:type", Object)
-    ], TerminalLinkmatcherFiles.prototype, "appServer", void 0);
-    __decorate([
-        inversify_1.inject(browser_1.OpenerService),
-        __metadata("design:type", Object)
-    ], TerminalLinkmatcherFiles.prototype, "openerService", void 0);
-    __decorate([
-        inversify_1.inject(common_2.FileSystem),
-        __metadata("design:type", Object)
-    ], TerminalLinkmatcherFiles.prototype, "fileSystem", void 0);
-    __decorate([
-        inversify_1.postConstruct(),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", []),
-        __metadata("design:returntype", void 0)
-    ], TerminalLinkmatcherFiles.prototype, "init", null);
-    TerminalLinkmatcherFiles = __decorate([
-        inversify_1.injectable()
-    ], TerminalLinkmatcherFiles);
-    return TerminalLinkmatcherFiles;
-}(terminal_linkmatcher_1.AbstractCmdClickTerminalContribution));
-exports.TerminalLinkmatcherFiles = TerminalLinkmatcherFiles;
-// The following regular expressions are taken from:
-// https://github.com/microsoft/vscode/blob/fbbc1aa80332189aa0d3006cb2159b79a9eba480/src/vs/workbench/contrib/terminal/browser/terminalLinkHandler.ts
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-var pathPrefix = '(\\.\\.?|\\~)';
-var pathSeparatorClause = '\\/';
-// '":; are allowed in paths but they are often separators so ignore them
-// Also disallow \\ to prevent a catastrophic backtracking case #24798
-var excludedPathCharactersClause = '[^\\0\\s!$`&*()\\[\\]+\'":;\\\\]';
-/** A regex that matches paths in the form /foo, ~/foo, ./foo, ../foo, foo/bar */
-var unixLocalLinkClause = '((' + pathPrefix + '|(' + excludedPathCharactersClause + ')+)?(' + pathSeparatorClause + '(' + excludedPathCharactersClause + ')+)+)';
-var winDrivePrefix = '[a-zA-Z]:';
-var winPathPrefix = '(' + winDrivePrefix + '|\\.\\.?|\\~)';
-var winPathSeparatorClause = '(\\\\|\\/)';
-var winExcludedPathCharactersClause = '[^\\0<>\\?\\|\\/\\s!$`&*()\\[\\]+\'":;]';
-/** A regex that matches paths in the form c:\foo, ~\foo, .\foo, ..\foo, foo\bar */
-var winLocalLinkClause = '((' + winPathPrefix + '|(' + winExcludedPathCharactersClause + ')+)?(' + winPathSeparatorClause + '(' + winExcludedPathCharactersClause + ')+)+)';
-/** As xterm reads from DOM, space in that case is non-breaking char ASCII code - 160, replacing space with nonBreakingSpace or space ASCII code - 32. */
-var lineAndColumnClause = [
-    // "(file path)", line 45 [see #40468]
-    '((\\S*)", line ((\\d+)( column (\\d+))?))',
-    // (file path) on line 8, column 13
-    '((\\S*) on line ((\\d+)(, column (\\d+))?))',
-    // (file path):line 8, column 13
-    '((\\S*):line ((\\d+)(, column (\\d+))?))',
-    // (file path)(45), (file path) (45), (file path)(45,18), (file path) (45,18), (file path)(45, 18), (file path) (45, 18), also with []
-    '(([^\\s\\(\\)]*)(\\s?[\\(\\[](\\d+)(,\\s?(\\d+))?)[\\)\\]])',
-    // (file path):336, (file path):336:9
-    '(([^:\\s\\(\\)<>\'\"\\[\\]]*)(:(\\d+))?(:(\\d+))?)'
-].join('|').replace(/ /g, "[" + '\u00A0' + " ]");
-// Changing any regex may effect this value, hence changes this as well if required.
-var winLineAndColumnMatchIndex = 12;
-var unixLineAndColumnMatchIndex = 11;
-// Each line and column clause have 6 groups (ie no. of expressions in round brackets)
-var lineAndColumnClauseGroupCount = 6;
-
-
-/***/ }),
-
-/***/ "./node_modules/@theia/terminal/lib/browser/terminal-linkmatcher.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/@theia/terminal/lib/browser/terminal-linkmatcher.js ***!
-  \**************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/********************************************************************************
- * Copyright (C) 2019 TypeFox and others.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Eclipse Public License v. 2.0 which is available at
- * http://www.eclipse.org/legal/epl-2.0.
- *
- * This Source Code may also be made available under the following Secondary
- * Licenses when the conditions for such availability set forth in the Eclipse
- * Public License v. 2.0 are satisfied: GNU General Public License, version 2
- * with the GNU Classpath Exception which is available at
- * https://www.gnu.org/software/classpath/license.html.
- *
- * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
- ********************************************************************************/
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+exports.ProblemPreferences = Symbol('ProblemPreferences');
+exports.createProblemPreferences = function (preferences) {
+    return browser_1.createPreferenceProxy(preferences, exports.ProblemConfigSchema);
 };
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
+exports.bindProblemPreferences = function (bind) {
+    bind(exports.ProblemPreferences).toDynamicValue(function (ctx) {
+        var preferences = ctx.container.get(browser_1.PreferenceService);
+        return exports.createProblemPreferences(preferences);
     });
+    bind(browser_1.PreferenceContribution).toConstantValue({ schema: exports.ProblemConfigSchema });
 };
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LocalhostMatcher = exports.URLMatcher = exports.AbstractCmdClickTerminalContribution = void 0;
-var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
-var core_1 = __webpack_require__(/*! @theia/core */ "./node_modules/@theia/core/lib/common/index.js");
-var opener_service_1 = __webpack_require__(/*! @theia/core/lib/browser/opener-service */ "./node_modules/@theia/core/lib/browser/opener-service.js");
-var uri_1 = __webpack_require__(/*! @theia/core/lib/common/uri */ "./node_modules/@theia/core/lib/common/uri.js");
-var AbstractCmdClickTerminalContribution = /** @class */ (function () {
-    function AbstractCmdClickTerminalContribution() {
-    }
-    AbstractCmdClickTerminalContribution.prototype.getValidate = function (terminalWidget) {
-        return function () { return Promise.resolve(true); };
-    };
-    AbstractCmdClickTerminalContribution.prototype.onCreate = function (terminalWidget) {
-        return __awaiter(this, void 0, void 0, function () {
-            var term, regexp, handler, validate, wrappedHandler, matcherId;
-            var _this = this;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        term = terminalWidget.getTerminal();
-                        return [4 /*yield*/, this.getRegExp(terminalWidget)];
-                    case 1:
-                        regexp = _a.sent();
-                        handler = this.getHandler(terminalWidget);
-                        validate = this.getValidate(terminalWidget);
-                        wrappedHandler = function (event, match) {
-                            event.preventDefault();
-                            if (_this.isCommandPressed(event) || _this.wasTouchEvent(event, terminalWidget.lastTouchEndEvent)) {
-                                handler(event, match);
-                            }
-                            else {
-                                term.focus();
-                            }
-                        };
-                        matcherId = term.registerLinkMatcher(regexp, wrappedHandler, {
-                            willLinkActivate: function (event, uri) { return _this.isCommandPressed(event) || _this.wasTouchEvent(event, terminalWidget.lastTouchEndEvent); },
-                            tooltipCallback: function (event, uri) {
-                                if (!_this.wasTouchEvent(event, terminalWidget.lastTouchEndEvent)) {
-                                    terminalWidget.showHoverMessage(event.clientX, event.clientY, _this.getHoverMessage());
-                                }
-                            },
-                            leaveCallback: function () {
-                                terminalWidget.hideHover();
-                            },
-                            validationCallback: function (uri, callBack) { return __awaiter(_this, void 0, void 0, function () {
-                                var _a;
-                                return __generator(this, function (_b) {
-                                    switch (_b.label) {
-                                        case 0:
-                                            _a = callBack;
-                                            return [4 /*yield*/, validate(uri)];
-                                        case 1:
-                                            _a.apply(void 0, [_b.sent()]);
-                                            return [2 /*return*/];
-                                    }
-                                });
-                            }); }
-                        });
-                        terminalWidget.onDispose(function () {
-                            term.deregisterLinkMatcher(matcherId);
-                        });
-                        return [2 /*return*/];
-                }
-            });
-        });
-    };
-    AbstractCmdClickTerminalContribution.prototype.isCommandPressed = function (event) {
-        return core_1.isOSX ? event.metaKey : event.ctrlKey;
-    };
-    AbstractCmdClickTerminalContribution.prototype.wasTouchEvent = function (event, lastTouchEnd) {
-        if (!lastTouchEnd) {
-            return false;
-        }
-        if ((event.timeStamp - lastTouchEnd.timeStamp) > 400) {
-            // A 'touchend' event typically precedes a matching 'click' event by 50ms.
-            return false;
-        }
-        if (Math.abs(event.pageX - lastTouchEnd.pageX) > 5) {
-            // Matching 'touchend' and 'click' events typically have the same page coordinates,
-            // plus or minus 1 pixel.
-            return false;
-        }
-        if (Math.abs(event.pageY - lastTouchEnd.pageY) > 5) {
-            return false;
-        }
-        // We have a match! This link was tapped.
-        return true;
-    };
-    AbstractCmdClickTerminalContribution.prototype.getHoverMessage = function () {
-        if (core_1.isOSX) {
-            return 'Cmd + click to follow link';
-        }
-        else {
-            return 'Ctrl + click to follow link';
-        }
-    };
-    AbstractCmdClickTerminalContribution = __decorate([
-        inversify_1.injectable()
-    ], AbstractCmdClickTerminalContribution);
-    return AbstractCmdClickTerminalContribution;
-}());
-exports.AbstractCmdClickTerminalContribution = AbstractCmdClickTerminalContribution;
-var URLMatcher = /** @class */ (function (_super) {
-    __extends(URLMatcher, _super);
-    function URLMatcher() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    URLMatcher.prototype.getRegExp = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/];
-            });
-        });
-    };
-    URLMatcher.prototype.getHandler = function () {
-        var _this = this;
-        return function (event, uri) {
-            return opener_service_1.open(_this.openerService, new uri_1.default(uri));
-        };
-    };
-    __decorate([
-        inversify_1.inject(opener_service_1.OpenerService),
-        __metadata("design:type", Object)
-    ], URLMatcher.prototype, "openerService", void 0);
-    URLMatcher = __decorate([
-        inversify_1.injectable()
-    ], URLMatcher);
-    return URLMatcher;
-}(AbstractCmdClickTerminalContribution));
-exports.URLMatcher = URLMatcher;
-var LocalhostMatcher = /** @class */ (function (_super) {
-    __extends(LocalhostMatcher, _super);
-    function LocalhostMatcher() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    LocalhostMatcher.prototype.getRegExp = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, /(https?:\/\/)?(localhost|127\.0\.0\.1|0\.0\.0\.0)(:[0-9]{1,5})?([-a-zA-Z0-9@:%_\+.~#?&//=]*)/];
-            });
-        });
-    };
-    LocalhostMatcher.prototype.getHandler = function () {
-        var _this = this;
-        return function (event, matched) {
-            var uri = matched.startsWith('http') ? matched : "http://" + matched;
-            opener_service_1.open(_this.openerService, new uri_1.default(uri));
-        };
-    };
-    __decorate([
-        inversify_1.inject(opener_service_1.OpenerService),
-        __metadata("design:type", Object)
-    ], LocalhostMatcher.prototype, "openerService", void 0);
-    LocalhostMatcher = __decorate([
-        inversify_1.injectable()
-    ], LocalhostMatcher);
-    return LocalhostMatcher;
-}(AbstractCmdClickTerminalContribution));
-exports.LocalhostMatcher = LocalhostMatcher;
 
 
 /***/ }),
 
-/***/ "./node_modules/@theia/terminal/lib/browser/terminal-quick-open-service.js":
-/*!*********************************************************************************!*\
-  !*** ./node_modules/@theia/terminal/lib/browser/terminal-quick-open-service.js ***!
-  \*********************************************************************************/
+/***/ "./node_modules/@theia/markers/lib/browser/problem/problem-tabbar-decorator.js":
+/*!*************************************************************************************!*\
+  !*** ./node_modules/@theia/markers/lib/browser/problem/problem-tabbar-decorator.js ***!
+  \*************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -966,257 +1087,174 @@ var __values = (this && this.__values) || function(o) {
     throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TerminalQuickOpenContribution = exports.TerminalQuickOpenService = void 0;
+exports.ProblemTabBarDecorator = void 0;
 var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
+var vscode_languageserver_types_1 = __webpack_require__(/*! vscode-languageserver-types */ "./node_modules/vscode-languageserver-types/lib/esm/main.js");
+var event_1 = __webpack_require__(/*! @theia/core/lib/common/event */ "./node_modules/@theia/core/lib/common/event.js");
+var widget_decoration_1 = __webpack_require__(/*! @theia/core/lib/browser/widget-decoration */ "./node_modules/@theia/core/lib/browser/widget-decoration.js");
+var problem_manager_1 = __webpack_require__(/*! ./problem-manager */ "./node_modules/@theia/markers/lib/browser/problem/problem-manager.js");
+var problem_preferences_1 = __webpack_require__(/*! ./problem-preferences */ "./node_modules/@theia/markers/lib/browser/problem/problem-preferences.js");
 var browser_1 = __webpack_require__(/*! @theia/core/lib/browser */ "./node_modules/@theia/core/lib/browser/index.js");
-var common_1 = __webpack_require__(/*! @theia/core/lib/common */ "./node_modules/@theia/core/lib/common/index.js");
-var terminal_service_1 = __webpack_require__(/*! ./base/terminal-service */ "./node_modules/@theia/terminal/lib/browser/base/terminal-service.js");
-var terminal_frontend_contribution_1 = __webpack_require__(/*! ./terminal-frontend-contribution */ "./node_modules/@theia/terminal/lib/browser/terminal-frontend-contribution.js");
-var TerminalQuickOpenService = /** @class */ (function () {
-    function TerminalQuickOpenService() {
-        this.prefix = 'term ';
+var ProblemTabBarDecorator = /** @class */ (function () {
+    function ProblemTabBarDecorator() {
+        this.id = 'theia-problem-tabbar-decorator';
+        this.emitter = new event_1.Emitter();
     }
-    Object.defineProperty(TerminalQuickOpenService.prototype, "description", {
+    ProblemTabBarDecorator.prototype.init = function () {
+        var _this = this;
+        this.problemManager.onDidChangeMarkers(function () { return _this.fireDidChangeDecorations(); });
+        this.preferences.onPreferenceChanged(function (event) { return _this.handlePreferenceChange(event); });
+    };
+    ProblemTabBarDecorator.prototype.decorate = function (title) {
+        var e_1, _a;
+        var widget = title.owner;
+        if (browser_1.Navigatable.is(widget)) {
+            var resourceUri = widget.getResourceUri();
+            if (resourceUri) {
+                // Get the list of problem markers for the given resource URI.
+                var markers = this.problemManager.findMarkers({ uri: resourceUri });
+                // If no markers are available, return early.
+                if (markers.length === 0) {
+                    return [];
+                }
+                // Store the marker with the highest severity.
+                var maxSeverity = void 0;
+                try {
+                    // Iterate over available markers to determine that which has the highest severity.
+                    // Only display a decoration if an error or warning marker is available.
+                    for (var markers_1 = __values(markers), markers_1_1 = markers_1.next(); !markers_1_1.done; markers_1_1 = markers_1.next()) {
+                        var marker = markers_1_1.value;
+                        // Break early if an error marker is present, since it represents the highest severity.
+                        if (marker.data.severity === vscode_languageserver_types_1.DiagnosticSeverity.Error) {
+                            maxSeverity = marker;
+                            break;
+                        }
+                        else if (marker.data.severity === vscode_languageserver_types_1.DiagnosticSeverity.Warning) {
+                            maxSeverity = marker;
+                        }
+                    }
+                }
+                catch (e_1_1) { e_1 = { error: e_1_1 }; }
+                finally {
+                    try {
+                        if (markers_1_1 && !markers_1_1.done && (_a = markers_1.return)) _a.call(markers_1);
+                    }
+                    finally { if (e_1) throw e_1.error; }
+                }
+                // Decorate the tabbar with the highest marker severity if available.
+                return maxSeverity ? [this.toDecorator(maxSeverity)] : [];
+            }
+        }
+        return [];
+    };
+    Object.defineProperty(ProblemTabBarDecorator.prototype, "onDidChangeDecorations", {
         get: function () {
-            return 'Show All Opened Terminals';
+            return this.emitter.event;
         },
         enumerable: false,
         configurable: true
     });
-    TerminalQuickOpenService.prototype.getModel = function () {
-        return this;
+    ProblemTabBarDecorator.prototype.fireDidChangeDecorations = function () {
+        this.emitter.fire(undefined);
     };
-    TerminalQuickOpenService.prototype.getOptions = function () {
-        return {
-            fuzzyMatchLabel: {
-                enableSeparateSubstringMatching: true
-            },
-            fuzzyMatchDescription: {
-                enableSeparateSubstringMatching: true
-            }
-        };
-    };
-    TerminalQuickOpenService.prototype.open = function () {
-        this.prefixQuickOpenService.open(this.prefix);
-    };
-    TerminalQuickOpenService.prototype.onType = function (lookFor, acceptor) {
+    /**
+     * Handle changes in preference.
+     * @param {PreferenceChangeEvent<ProblemConfiguration>} event The event of the changes in preference.
+     */
+    ProblemTabBarDecorator.prototype.handlePreferenceChange = function (event) {
         return __awaiter(this, void 0, void 0, function () {
-            var terminalItems, widgets, widgets_1, widgets_1_1, widget, item, e_1_1, createNewTerminalItem;
-            var e_1, _a;
-            var _this = this;
-            return __generator(this, function (_b) {
-                switch (_b.label) {
-                    case 0:
-                        terminalItems = [];
-                        widgets = this.terminalService.all
-                            .sort(function (a, b) { return _this.compareItems(a, b); });
-                        _b.label = 1;
-                    case 1:
-                        _b.trys.push([1, 6, 7, 8]);
-                        widgets_1 = __values(widgets), widgets_1_1 = widgets_1.next();
-                        _b.label = 2;
-                    case 2:
-                        if (!!widgets_1_1.done) return [3 /*break*/, 5];
-                        widget = widgets_1_1.value;
-                        return [4 /*yield*/, this.toItem(widget)];
-                    case 3:
-                        item = _b.sent();
-                        terminalItems.push(item);
-                        _b.label = 4;
-                    case 4:
-                        widgets_1_1 = widgets_1.next();
-                        return [3 /*break*/, 2];
-                    case 5: return [3 /*break*/, 8];
-                    case 6:
-                        e_1_1 = _b.sent();
-                        e_1 = { error: e_1_1 };
-                        return [3 /*break*/, 8];
-                    case 7:
-                        try {
-                            if (widgets_1_1 && !widgets_1_1.done && (_a = widgets_1.return)) _a.call(widgets_1);
-                        }
-                        finally { if (e_1) throw e_1.error; }
-                        return [7 /*endfinally*/];
-                    case 8:
-                        createNewTerminalItem = new browser_1.QuickOpenGroupItem({
-                            label: 'Open New Terminal',
-                            iconClass: 'fa fa-plus',
-                            run: this.doCreateNewTerminal(),
-                            groupLabel: undefined,
-                            showBorder: !!terminalItems.length
-                        });
-                        terminalItems.push(createNewTerminalItem);
-                        acceptor(terminalItems);
-                        return [2 /*return*/];
-                }
-            });
-        });
-    };
-    /**
-     * Compare two terminal widgets by label. If labels are identical, compare by the widget id.
-     * @param a `TerminalWidget` for comparison
-     * @param b `TerminalWidget` for comparison
-     */
-    TerminalQuickOpenService.prototype.compareItems = function (a, b) {
-        var normalize = function (str) { return str.trim().toLowerCase(); };
-        if (normalize(a.title.label) !== normalize(b.title.label)) {
-            return normalize(a.title.label).localeCompare(normalize(b.title.label));
-        }
-        else {
-            return normalize(a.id).localeCompare(normalize(b.id));
-        }
-    };
-    /**
-     * Get the function that can create a new terminal.
-     * @param {TerminalWidget} widget - the terminal widget to be opened.
-     * @returns Function that would create a new terminal if mode === QuickOpenMode.OPEN.
-     */
-    TerminalQuickOpenService.prototype.doCreateNewTerminal = function () {
-        var _this = this;
-        return function (mode) {
-            if (mode !== browser_1.QuickOpenMode.OPEN) {
-                return false;
-            }
-            _this.commandService.executeCommand(terminal_frontend_contribution_1.TerminalCommands.NEW.id);
-            return true;
-        };
-    };
-    /**
-     * Convert the terminal widget to the quick open item.
-     * @param {TerminalWidget} widget - the terminal widget.
-     * @returns The quick open group item.
-     */
-    TerminalQuickOpenService.prototype.toItem = function (widget) {
-        return __awaiter(this, void 0, void 0, function () {
-            var options;
+            var preferenceName;
             return __generator(this, function (_a) {
-                options = {
-                    label: widget.title.label,
-                    description: widget.id,
-                    tooltip: widget.title.label,
-                    hidden: false,
-                    run: this.getRunFunction(widget),
-                    groupLabel: undefined,
-                    showBorder: false
-                };
-                return [2 /*return*/, new browser_1.QuickOpenGroupItem(options)];
+                preferenceName = event.preferenceName;
+                if (preferenceName === 'problems.decorations.tabbar.enabled') {
+                    this.fireDidChangeDecorations();
+                }
+                return [2 /*return*/];
             });
         });
     };
     /**
-     * Get the function that can open the editor file.
-     * @param {TerminalWidget} widget - the terminal widget to be opened.
-     * @returns Function that would open the terminal if mode === QuickOpenMode.OPEN.
+     * Convert a diagnostic marker to a decorator.
+     * @param {Marker<Diagnostic>} marker A diagnostic marker.
+     * @returns {WidgetDecoration.Data} The decoration data.
      */
-    TerminalQuickOpenService.prototype.getRunFunction = function (widget) {
-        var _this = this;
-        return function (mode) {
-            if (mode !== browser_1.QuickOpenMode.OPEN) {
-                return false;
+    ProblemTabBarDecorator.prototype.toDecorator = function (marker) {
+        var position = widget_decoration_1.WidgetDecoration.IconOverlayPosition.BOTTOM_RIGHT;
+        var icon = this.getOverlayIcon(marker);
+        var color = this.getOverlayIconColor(marker);
+        return {
+            iconOverlay: {
+                position: position,
+                icon: icon,
+                color: color,
+                background: {
+                    shape: 'circle',
+                    color: 'transparent'
+                }
             }
-            _this.terminalService.open(widget);
-            return true;
         };
     };
-    __decorate([
-        inversify_1.inject(browser_1.PrefixQuickOpenService),
-        __metadata("design:type", browser_1.PrefixQuickOpenService)
-    ], TerminalQuickOpenService.prototype, "prefixQuickOpenService", void 0);
-    __decorate([
-        inversify_1.inject(common_1.CommandService),
-        __metadata("design:type", Object)
-    ], TerminalQuickOpenService.prototype, "commandService", void 0);
-    __decorate([
-        inversify_1.inject(terminal_service_1.TerminalService),
-        __metadata("design:type", Object)
-    ], TerminalQuickOpenService.prototype, "terminalService", void 0);
-    TerminalQuickOpenService = __decorate([
-        inversify_1.injectable()
-    ], TerminalQuickOpenService);
-    return TerminalQuickOpenService;
-}());
-exports.TerminalQuickOpenService = TerminalQuickOpenService;
-/**
- * TODO: merge it to TerminalFrontendContribution.
- */
-var TerminalQuickOpenContribution = /** @class */ (function () {
-    function TerminalQuickOpenContribution() {
-    }
-    TerminalQuickOpenContribution.prototype.registerQuickOpenHandlers = function (handlers) {
-        handlers.registerHandler(this.terminalQuickOpenService);
+    /**
+     * Get the appropriate overlay icon for decoration.
+     * @param {Marker<Diagnostic>} marker A diagnostic marker.
+     * @returns {string} A string representing the overlay icon class.
+     */
+    ProblemTabBarDecorator.prototype.getOverlayIcon = function (marker) {
+        var severity = marker.data.severity;
+        switch (severity) {
+            case 1: return 'times-circle';
+            case 2: return 'exclamation-circle';
+            case 3: return 'info-circle';
+            default: return 'hand-o-up';
+        }
     };
-    TerminalQuickOpenContribution.prototype.registerCommands = function (commands) {
-        var _this = this;
-        commands.registerCommand(terminal_frontend_contribution_1.TerminalCommands.SHOW_ALL_OPENED_TERMINALS, {
-            execute: function () { return _this.terminalQuickOpenService.open(); }
-        });
+    /**
+     * Get the appropriate overlay icon color for decoration.
+     * @param {Marker<Diagnostic>} marker A diagnostic marker.
+     * @returns {WidgetDecoration.Color} The decoration color.
+     */
+    ProblemTabBarDecorator.prototype.getOverlayIconColor = function (marker) {
+        var severity = marker.data.severity;
+        switch (severity) {
+            case 1: return 'var(--theia-editorError-foreground)';
+            case 2: return 'var(--theia-editorWarning-foreground)';
+            case 3: return 'var(--theia-editorInfo-foreground)';
+            default: return 'var(--theia-successBackground)';
+        }
     };
     __decorate([
-        inversify_1.inject(TerminalQuickOpenService),
-        __metadata("design:type", TerminalQuickOpenService)
-    ], TerminalQuickOpenContribution.prototype, "terminalQuickOpenService", void 0);
-    TerminalQuickOpenContribution = __decorate([
+        inversify_1.inject(problem_preferences_1.ProblemPreferences),
+        __metadata("design:type", Object)
+    ], ProblemTabBarDecorator.prototype, "preferences", void 0);
+    __decorate([
+        inversify_1.inject(problem_manager_1.ProblemManager),
+        __metadata("design:type", problem_manager_1.ProblemManager)
+    ], ProblemTabBarDecorator.prototype, "problemManager", void 0);
+    __decorate([
+        inversify_1.postConstruct(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", void 0)
+    ], ProblemTabBarDecorator.prototype, "init", null);
+    ProblemTabBarDecorator = __decorate([
         inversify_1.injectable()
-    ], TerminalQuickOpenContribution);
-    return TerminalQuickOpenContribution;
+    ], ProblemTabBarDecorator);
+    return ProblemTabBarDecorator;
 }());
-exports.TerminalQuickOpenContribution = TerminalQuickOpenContribution;
+exports.ProblemTabBarDecorator = ProblemTabBarDecorator;
 
 
 /***/ }),
 
-/***/ "./node_modules/@theia/terminal/lib/common/terminal-common-module.js":
-/*!***************************************************************************!*\
-  !*** ./node_modules/@theia/terminal/lib/common/terminal-common-module.js ***!
-  \***************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/********************************************************************************
- * Copyright (C) 2018 Ericsson and others.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Eclipse Public License v. 2.0 which is available at
- * http://www.eclipse.org/legal/epl-2.0.
- *
- * This Source Code may also be made available under the following Secondary
- * Licenses when the conditions for such availability set forth in the Eclipse
- * Public License v. 2.0 are satisfied: GNU General Public License, version 2
- * with the GNU Classpath Exception which is available at
- * https://www.gnu.org/software/classpath/license.html.
- *
- * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
- ********************************************************************************/
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.createCommonBindings = void 0;
-var core_1 = __webpack_require__(/*! @theia/core */ "./node_modules/@theia/core/lib/common/index.js");
-/**
- * Create the bindings common to node and browser.
- *
- * @param bind The bind function from inversify.
- */
-function createCommonBindings(bind) {
-    bind(core_1.ILogger).toDynamicValue(function (ctx) {
-        var logger = ctx.container.get(core_1.ILogger);
-        return logger.child('terminal');
-    }).inSingletonScope().whenTargetNamed('terminal');
-}
-exports.createCommonBindings = createCommonBindings;
-
-
-/***/ }),
-
-/***/ "./node_modules/@theia/terminal/src/browser/style/terminal.css":
-/*!*********************************************************************!*\
-  !*** ./node_modules/@theia/terminal/src/browser/style/terminal.css ***!
-  \*********************************************************************/
+/***/ "./node_modules/@theia/markers/src/browser/style/index.css":
+/*!*****************************************************************!*\
+  !*** ./node_modules/@theia/markers/src/browser/style/index.css ***!
+  \*****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../../../css-loader!./terminal.css */ "./node_modules/css-loader/index.js!./node_modules/@theia/terminal/src/browser/style/terminal.css");
+var content = __webpack_require__(/*! !../../../../../css-loader!./index.css */ "./node_modules/css-loader/index.js!./node_modules/@theia/markers/src/browser/style/index.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -1238,10 +1276,134 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js!./node_modules/@theia/terminal/src/browser/style/terminal.css":
-/*!***********************************************************************************************!*\
-  !*** ./node_modules/css-loader!./node_modules/@theia/terminal/src/browser/style/terminal.css ***!
-  \***********************************************************************************************/
+/***/ "./node_modules/@theia/navigator/lib/browser/navigator-decorator-service.js":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/@theia/navigator/lib/browser/navigator-decorator-service.js ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/********************************************************************************
+ * Copyright (C) 2018 TypeFox and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NavigatorDecoratorService = exports.NavigatorTreeDecorator = void 0;
+var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
+var contribution_provider_1 = __webpack_require__(/*! @theia/core/lib/common/contribution-provider */ "./node_modules/@theia/core/lib/common/contribution-provider.js");
+var tree_decorator_1 = __webpack_require__(/*! @theia/core/lib/browser/tree/tree-decorator */ "./node_modules/@theia/core/lib/browser/tree/tree-decorator.js");
+/**
+ * Symbol for all decorators that would like to contribute into the navigator.
+ */
+exports.NavigatorTreeDecorator = Symbol('NavigatorTreeDecorator');
+/**
+ * Decorator service for the navigator.
+ */
+var NavigatorDecoratorService = /** @class */ (function (_super) {
+    __extends(NavigatorDecoratorService, _super);
+    function NavigatorDecoratorService(contributions) {
+        var _this = _super.call(this, contributions.getContributions()) || this;
+        _this.contributions = contributions;
+        return _this;
+    }
+    NavigatorDecoratorService = __decorate([
+        inversify_1.injectable(),
+        __param(0, inversify_1.inject(contribution_provider_1.ContributionProvider)), __param(0, inversify_1.named(exports.NavigatorTreeDecorator)),
+        __metadata("design:paramtypes", [Object])
+    ], NavigatorDecoratorService);
+    return NavigatorDecoratorService;
+}(tree_decorator_1.AbstractTreeDecoratorService));
+exports.NavigatorDecoratorService = NavigatorDecoratorService;
+
+
+/***/ }),
+
+/***/ "./node_modules/@theia/workspace/lib/browser/index.js":
+/*!************************************************************!*\
+  !*** ./node_modules/@theia/workspace/lib/browser/index.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/********************************************************************************
+ * Copyright (C) 2017 TypeFox and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !exports.hasOwnProperty(p)) __createBinding(exports, m, p);
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(__webpack_require__(/*! ./workspace-commands */ "./node_modules/@theia/workspace/lib/browser/workspace-commands.js"), exports);
+__exportStar(__webpack_require__(/*! ./workspace-service */ "./node_modules/@theia/workspace/lib/browser/workspace-service.js"), exports);
+__exportStar(__webpack_require__(/*! ./workspace-frontend-contribution */ "./node_modules/@theia/workspace/lib/browser/workspace-frontend-contribution.js"), exports);
+__exportStar(__webpack_require__(/*! ./workspace-frontend-module */ "./node_modules/@theia/workspace/lib/browser/workspace-frontend-module.js"), exports);
+__exportStar(__webpack_require__(/*! ./workspace-preferences */ "./node_modules/@theia/workspace/lib/browser/workspace-preferences.js"), exports);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/@theia/markers/src/browser/style/index.css":
+/*!*******************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/@theia/markers/src/browser/style/index.css ***!
+  \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1250,59 +1412,10 @@ exports = module.exports = __webpack_require__(/*! ../../../../../css-loader/lib
 
 
 // module
-exports.push([module.i, "/********************************************************************************\n * Copyright (C) 2017 TypeFox and others.\n *\n * This program and the accompanying materials are made available under the\n * terms of the Eclipse Public License v. 2.0 which is available at\n * http://www.eclipse.org/legal/epl-2.0.\n *\n * This Source Code may also be made available under the following Secondary\n * Licenses when the conditions for such availability set forth in the Eclipse\n * Public License v. 2.0 are satisfied: GNU General Public License, version 2\n * with the GNU Classpath Exception which is available at\n * https://www.gnu.org/software/classpath/license.html.\n *\n * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0\n ********************************************************************************/\n\n.terminal-container {\n    width:100%;\n    height:100%;\n    padding: var(--theia-code-padding);\n    background: var(--theia-terminal-background);\n}\n\n.xterm .xterm-screen canvas {\n  /* fix random 1px white border on terminal in Firefox. See https://github.com/eclipse-theia/theia/issues/4665 */\n  border: 1px solid var(--theia-terminal-background);\n}\n", ""]);
+exports.push([module.i, "/********************************************************************************\n * Copyright (C) 2017 TypeFox and others.\n *\n * This program and the accompanying materials are made available under the\n * terms of the Eclipse Public License v. 2.0 which is available at\n * http://www.eclipse.org/legal/epl-2.0.\n *\n * This Source Code may also be made available under the following Secondary\n * Licenses when the conditions for such availability set forth in the Eclipse\n * Public License v. 2.0 are satisfied: GNU General Public License, version 2\n * with the GNU Classpath Exception which is available at\n * https://www.gnu.org/software/classpath/license.html.\n *\n * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0\n ********************************************************************************/\n\n.theia-marker-container {\n    font-size: var(--theia-ui-font-size1);\n}\n\n.theia-side-panel .theia-marker-container .noMarkers {\n    padding-left: 19px;\n}\n\n.theia-marker-container .markerNode,\n.theia-marker-container .markerFileNode {\n    display: flex;\n    align-items: center;\n}\n\n.theia-marker-container .markerNode,\n.theia-marker-container .markerFileNode {\n    width: calc(100% - 32px);\n}\n\n.theia-marker-container .markerNode div,\n.theia-marker-container .markerFileNode div {\n    margin-right: 5px;\n}\n\n.theia-marker-container .markerFileNode .name,\n.theia-marker-container .markerFileNode .path {\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n}\n\n.theia-marker-container .markerFileNode .path {\n    font-size: var(--theia-ui-font-size0);\n    color: var(--theia-descriptionForeground);\n    align-self: flex-end;\n    white-space: nowrap;\n}\n\n.theia-marker-container .error {\n    color: var(--theia-editorError-foreground);\n}\n\n.theia-marker-container .warning {\n    color: var(--theia-editorWarning-foreground);\n}\n\n.theia-marker-container .information {\n    color: var(--theia-editorInfo-foreground);\n}\n\n.theia-marker-container .hint {\n    color: var(--theia-successBackground);\n}\n\n.theia-marker-container .markerNode .position,\n.theia-marker-container .markerNode .owner {\n    color: var(--theia-descriptionForeground);\n    white-space: nowrap;\n    margin-left: 5px;\n}\n\n.theia-marker-container .markerNode .message {\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n}\n\n.problem-tab-icon::before {\n    content: \"\\F06A\"\n}\n\n.theia-marker-container .row-button-container {\n    display: none;\n}\n\n.theia-marker-container .theia-TreeNodeContent:hover .row-button-container {\n    display: flex;\n    justify-content: flex-end;\n    flex: 1;\n    align-items: center;\n    align-self: center;\n}\n\n.theia-marker-container .row-button-container .remove-node {\n    background-image: var(--theia-icon-close);\n    width: 15px;\n    height: 15px;\n}\n", ""]);
 
 // exports
 
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js!./node_modules/xterm/css/xterm.css":
-/*!********************************************************************!*\
-  !*** ./node_modules/css-loader!./node_modules/xterm/css/xterm.css ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "/**\n * Copyright (c) 2014 The xterm.js authors. All rights reserved.\n * Copyright (c) 2012-2013, Christopher Jeffrey (MIT License)\n * https://github.com/chjj/term.js\n * @license MIT\n *\n * Permission is hereby granted, free of charge, to any person obtaining a copy\n * of this software and associated documentation files (the \"Software\"), to deal\n * in the Software without restriction, including without limitation the rights\n * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n * copies of the Software, and to permit persons to whom the Software is\n * furnished to do so, subject to the following conditions:\n *\n * The above copyright notice and this permission notice shall be included in\n * all copies or substantial portions of the Software.\n *\n * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n * THE SOFTWARE.\n *\n * Originally forked from (with the author's permission):\n *   Fabrice Bellard's javascript vt100 for jslinux:\n *   http://bellard.org/jslinux/\n *   Copyright (c) 2011 Fabrice Bellard\n *   The original design remains. The terminal itself\n *   has been extended to include xterm CSI codes, among\n *   other features.\n */\n\n/**\n *  Default styles for xterm.js\n */\n\n.xterm {\n    font-feature-settings: \"liga\" 0;\n    position: relative;\n    user-select: none;\n    -ms-user-select: none;\n    -webkit-user-select: none;\n}\n\n.xterm.focus,\n.xterm:focus {\n    outline: none;\n}\n\n.xterm .xterm-helpers {\n    position: absolute;\n    top: 0;\n    /**\n     * The z-index of the helpers must be higher than the canvases in order for\n     * IMEs to appear on top.\n     */\n    z-index: 5;\n}\n\n.xterm .xterm-helper-textarea {\n    /*\n     * HACK: to fix IE's blinking cursor\n     * Move textarea out of the screen to the far left, so that the cursor is not visible.\n     */\n    position: absolute;\n    opacity: 0;\n    left: -9999em;\n    top: 0;\n    width: 0;\n    height: 0;\n    z-index: -5;\n    /** Prevent wrapping so the IME appears against the textarea at the correct position */\n    white-space: nowrap;\n    overflow: hidden;\n    resize: none;\n}\n\n.xterm .composition-view {\n    /* TODO: Composition position got messed up somewhere */\n    background: #000;\n    color: #FFF;\n    display: none;\n    position: absolute;\n    white-space: nowrap;\n    z-index: 1;\n}\n\n.xterm .composition-view.active {\n    display: block;\n}\n\n.xterm .xterm-viewport {\n    /* On OS X this is required in order for the scroll bar to appear fully opaque */\n    background-color: #000;\n    overflow-y: scroll;\n    cursor: default;\n    position: absolute;\n    right: 0;\n    left: 0;\n    top: 0;\n    bottom: 0;\n}\n\n.xterm .xterm-screen {\n    position: relative;\n}\n\n.xterm .xterm-screen canvas {\n    position: absolute;\n    left: 0;\n    top: 0;\n}\n\n.xterm .xterm-scroll-area {\n    visibility: hidden;\n}\n\n.xterm-char-measure-element {\n    display: inline-block;\n    visibility: hidden;\n    position: absolute;\n    top: 0;\n    left: -9999em;\n    line-height: normal;\n}\n\n.xterm {\n    cursor: text;\n}\n\n.xterm.enable-mouse-events {\n    /* When mouse events are enabled (eg. tmux), revert to the standard pointer cursor */\n    cursor: default;\n}\n\n.xterm.xterm-cursor-pointer {\n    cursor: pointer;\n}\n\n.xterm.column-select.focus {\n    /* Column selection mode */\n    cursor: crosshair;\n}\n\n.xterm .xterm-accessibility,\n.xterm .xterm-message {\n    position: absolute;\n    left: 0;\n    top: 0;\n    bottom: 0;\n    right: 0;\n    z-index: 10;\n    color: transparent;\n}\n\n.xterm .live-region {\n    position: absolute;\n    left: -9999px;\n    width: 1px;\n    height: 1px;\n    overflow: hidden;\n}\n\n.xterm-dim {\n    opacity: 0.5;\n}\n\n.xterm-underline {\n    text-decoration: underline;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/xterm/css/xterm.css":
-/*!******************************************!*\
-  !*** ./node_modules/xterm/css/xterm.css ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../css-loader!./xterm.css */ "./node_modules/css-loader/index.js!./node_modules/xterm/css/xterm.css");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
 
 /***/ })
 

@@ -1,16 +1,16 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[64],{
 
-/***/ "./node_modules/@theia/outline-view/lib/browser/outline-view-contribution.js":
-/*!***********************************************************************************!*\
-  !*** ./node_modules/@theia/outline-view/lib/browser/outline-view-contribution.js ***!
-  \***********************************************************************************/
+/***/ "./node_modules/@theia/json/lib/browser/json-client-contribution.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/@theia/json/lib/browser/json-client-contribution.js ***!
+  \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 /********************************************************************************
- * Copyright (C) 2017 TypeFox and others.
+ * Copyright (C) 2018 TypeFox and others.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0 which is available at
@@ -45,6 +45,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
 };
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
@@ -82,118 +85,374 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.OutlineViewContribution = exports.OutlineViewCommands = exports.OUTLINE_WIDGET_FACTORY_ID = void 0;
-var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
-var view_contribution_1 = __webpack_require__(/*! @theia/core/lib/browser/shell/view-contribution */ "./node_modules/@theia/core/lib/browser/shell/view-contribution.js");
-var outline_view_widget_1 = __webpack_require__(/*! ./outline-view-widget */ "./node_modules/@theia/outline-view/lib/browser/outline-view-widget.js");
-var tree_1 = __webpack_require__(/*! @theia/core/lib/browser/tree */ "./node_modules/@theia/core/lib/browser/tree/index.js");
-var os_1 = __webpack_require__(/*! @theia/core/lib/common/os */ "./node_modules/@theia/core/lib/common/os.js");
-exports.OUTLINE_WIDGET_FACTORY_ID = 'outline-view';
-/**
- * Collection of `outline-view` commands.
- */
-var OutlineViewCommands;
-(function (OutlineViewCommands) {
-    /**
-     * Command which collapses all nodes
-     * from the `outline-view` tree.
-     */
-    OutlineViewCommands.COLLAPSE_ALL = {
-        id: 'outlineView.collapse.all',
-        iconClass: 'collapse-all'
-    };
-})(OutlineViewCommands = exports.OutlineViewCommands || (exports.OutlineViewCommands = {}));
-var OutlineViewContribution = /** @class */ (function (_super) {
-    __extends(OutlineViewContribution, _super);
-    function OutlineViewContribution() {
-        return _super.call(this, {
-            widgetId: exports.OUTLINE_WIDGET_FACTORY_ID,
-            widgetName: 'Outline',
-            defaultWidgetOptions: {
-                area: 'right',
-                rank: 500
-            },
-            toggleCommandId: 'outlineView:toggle',
-            toggleKeybinding: os_1.OS.type() !== os_1.OS.Type.Linux
-                ? 'ctrlcmd+shift+i'
-                : undefined
-        }) || this;
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
     }
-    OutlineViewContribution.prototype.initializeLayout = function (app) {
-        return __awaiter(this, void 0, void 0, function () {
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+var __spread = (this && this.__spread) || function () {
+    for (var ar = [], i = 0; i < arguments.length; i++) ar = ar.concat(__read(arguments[i]));
+    return ar;
+};
+var __values = (this && this.__values) || function(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+    if (m) return m.call(o);
+    if (o && typeof o.length === "number") return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JsonClientContribution = void 0;
+var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
+var browser_1 = __webpack_require__(/*! @theia/languages/lib/browser */ "./node_modules/@theia/languages/lib/browser/index.js");
+var common_1 = __webpack_require__(/*! ../common */ "./node_modules/@theia/json/lib/common/index.js");
+var core_1 = __webpack_require__(/*! @theia/core */ "./node_modules/@theia/core/lib/common/index.js");
+var uri_1 = __webpack_require__(/*! @theia/core/lib/common/uri */ "./node_modules/@theia/core/lib/common/uri.js");
+var json_preferences_1 = __webpack_require__(/*! ./json-preferences */ "./node_modules/@theia/json/lib/browser/json-preferences.js");
+var json_schema_store_1 = __webpack_require__(/*! @theia/core/lib/browser/json-schema-store */ "./node_modules/@theia/core/lib/browser/json-schema-store.js");
+var browser_2 = __webpack_require__(/*! @theia/core/lib/browser */ "./node_modules/@theia/core/lib/browser/index.js");
+var JsonClientContribution = /** @class */ (function (_super) {
+    __extends(JsonClientContribution, _super);
+    function JsonClientContribution(workspace, resourceProvider, languages, languageClientFactory, preferences, jsonSchemaStore) {
+        var _this = _super.call(this, workspace, languages, languageClientFactory) || this;
+        _this.workspace = workspace;
+        _this.resourceProvider = resourceProvider;
+        _this.languages = languages;
+        _this.languageClientFactory = languageClientFactory;
+        _this.preferences = preferences;
+        _this.jsonSchemaStore = jsonSchemaStore;
+        _this.id = common_1.JSON_LANGUAGE_ID;
+        _this.name = common_1.JSON_LANGUAGE_NAME;
+        _this.initializeJsonSchemaAssociations();
+        return _this;
+    }
+    JsonClientContribution.prototype.updateSchemas = function (client) {
+        var e_1, _a, e_2, _b;
+        var allConfigs = __spread(this.jsonSchemaStore.getJsonSchemaConfigurations());
+        var config = this.preferences['json.schemas'];
+        if (config instanceof Array) {
+            allConfigs.push.apply(allConfigs, __spread(config));
+        }
+        var registry = {};
+        try {
+            for (var allConfigs_1 = __values(allConfigs), allConfigs_1_1 = allConfigs_1.next(); !allConfigs_1_1.done; allConfigs_1_1 = allConfigs_1.next()) {
+                var s = allConfigs_1_1.value;
+                if (s.fileMatch) {
+                    try {
+                        for (var _c = (e_2 = void 0, __values(s.fileMatch)), _d = _c.next(); !_d.done; _d = _c.next()) {
+                            var fileMatch = _d.value;
+                            if (fileMatch.charAt(0) !== '/' && !fileMatch.match(/\w+:/)) {
+                                fileMatch = '/' + fileMatch;
+                            }
+                            registry[fileMatch] = [s.url];
+                        }
+                    }
+                    catch (e_2_1) { e_2 = { error: e_2_1 }; }
+                    finally {
+                        try {
+                            if (_d && !_d.done && (_b = _c.return)) _b.call(_c);
+                        }
+                        finally { if (e_2) throw e_2.error; }
+                    }
+                }
+            }
+        }
+        catch (e_1_1) { e_1 = { error: e_1_1 }; }
+        finally {
+            try {
+                if (allConfigs_1_1 && !allConfigs_1_1.done && (_a = allConfigs_1.return)) _a.call(allConfigs_1);
+            }
+            finally { if (e_1) throw e_1.error; }
+        }
+        client.sendNotification('json/schemaAssociations', registry);
+    };
+    Object.defineProperty(JsonClientContribution.prototype, "globPatterns", {
+        get: function () {
+            return [
+                '**/*.json',
+                '**/*.jsonc',
+            ];
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(JsonClientContribution.prototype, "documentSelector", {
+        get: function () {
+            return [this.id, common_1.JSONC_LANGUAGE_ID];
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(JsonClientContribution.prototype, "configurationSection", {
+        get: function () {
+            return [this.id];
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(JsonClientContribution.prototype, "initializationOptions", {
+        get: function () {
+            return {};
+        },
+        enumerable: false,
+        configurable: true
+    });
+    JsonClientContribution.prototype.onReady = function (languageClient, toStop) {
+        var _this = this;
+        _super.prototype.onReady.call(this, languageClient, toStop);
+        // handle content request
+        languageClient.onRequest('vscode/content', function (uriPath) { return __awaiter(_this, void 0, void 0, function () {
+            var uri, resource, text;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.openView()];
+                    case 0:
+                        uri = new uri_1.default(uriPath);
+                        return [4 /*yield*/, this.resourceProvider(uri)];
                     case 1:
-                        _a.sent();
-                        return [2 /*return*/];
+                        resource = _a.sent();
+                        return [4 /*yield*/, resource.readContents()];
+                    case 2:
+                        text = _a.sent();
+                        return [2 /*return*/, text];
                 }
             });
-        });
+        }); });
+        toStop.push(this.preferences.onPreferenceChanged(function (e) {
+            if (e.preferenceName === 'json.schemas') {
+                _this.updateSchemas(languageClient);
+            }
+        }));
+        toStop.push(this.jsonSchemaStore.onSchemasChanged(function () { return _this.updateSchemas(languageClient); }));
+        this.updateSchemas(languageClient);
     };
-    OutlineViewContribution.prototype.registerCommands = function (commands) {
-        var _this = this;
-        _super.prototype.registerCommands.call(this, commands);
-        commands.registerCommand(OutlineViewCommands.COLLAPSE_ALL, {
-            isEnabled: function (widget) { return _this.withWidget(widget, function () { return true; }); },
-            isVisible: function (widget) { return _this.withWidget(widget, function () { return true; }); },
-            execute: function () { return _this.collapseAllItems(); }
-        });
-    };
-    OutlineViewContribution.prototype.registerToolbarItems = function (toolbar) {
-        toolbar.registerItem({
-            id: OutlineViewCommands.COLLAPSE_ALL.id,
-            command: OutlineViewCommands.COLLAPSE_ALL.id,
-            tooltip: 'Collapse All',
-            priority: 0
-        });
-    };
-    /**
-     * Collapse all nodes in the outline view tree.
-     */
-    OutlineViewContribution.prototype.collapseAllItems = function () {
+    JsonClientContribution.prototype.initializeJsonSchemaAssociations = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var model, root;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.widget];
+            var url, response, schemas, schemas_1, schemas_1_1, s;
+            var e_3, _a;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        url = new browser_2.Endpoint().httpScheme + "//schemastore.azurewebsites.net/api/json/catalog.json";
+                        return [4 /*yield*/, fetch(url)];
                     case 1:
-                        model = (_a.sent()).model;
-                        root = model.root;
-                        if (tree_1.CompositeTreeNode.is(root)) {
-                            model.collapseAll(root);
+                        response = _b.sent();
+                        return [4 /*yield*/, response.json()];
+                    case 2:
+                        schemas = (_b.sent()).schemas;
+                        try {
+                            for (schemas_1 = __values(schemas), schemas_1_1 = schemas_1.next(); !schemas_1_1.done; schemas_1_1 = schemas_1.next()) {
+                                s = schemas_1_1.value;
+                                if (s.fileMatch) {
+                                    this.jsonSchemaStore.registerSchema({
+                                        fileMatch: s.fileMatch,
+                                        url: s.url
+                                    });
+                                }
+                            }
+                        }
+                        catch (e_3_1) { e_3 = { error: e_3_1 }; }
+                        finally {
+                            try {
+                                if (schemas_1_1 && !schemas_1_1.done && (_a = schemas_1.return)) _a.call(schemas_1);
+                            }
+                            finally { if (e_3) throw e_3.error; }
                         }
                         return [2 /*return*/];
                 }
             });
         });
     };
-    /**
-     * Determine if the current widget is the `outline-view`.
-     */
-    OutlineViewContribution.prototype.withWidget = function (widget, cb) {
-        if (widget === void 0) { widget = this.tryGetWidget(); }
-        if (widget instanceof outline_view_widget_1.OutlineViewWidget && widget.id === exports.OUTLINE_WIDGET_FACTORY_ID) {
-            return cb(widget);
-        }
-        return false;
-    };
-    OutlineViewContribution = __decorate([
+    JsonClientContribution = __decorate([
         inversify_1.injectable(),
-        __metadata("design:paramtypes", [])
-    ], OutlineViewContribution);
-    return OutlineViewContribution;
-}(view_contribution_1.AbstractViewContribution));
-exports.OutlineViewContribution = OutlineViewContribution;
+        __param(0, inversify_1.inject(browser_1.Workspace)),
+        __param(1, inversify_1.inject(core_1.ResourceProvider)),
+        __param(2, inversify_1.inject(browser_1.Languages)),
+        __param(3, inversify_1.inject(browser_1.LanguageClientFactory)),
+        __param(4, inversify_1.inject(json_preferences_1.JsonPreferences)),
+        __param(5, inversify_1.inject(json_schema_store_1.JsonSchemaStore)),
+        __metadata("design:paramtypes", [Object, Function, Object, browser_1.LanguageClientFactory, Object, json_schema_store_1.JsonSchemaStore])
+    ], JsonClientContribution);
+    return JsonClientContribution;
+}(browser_1.BaseLanguageClientContribution));
+exports.JsonClientContribution = JsonClientContribution;
 
 
 /***/ }),
 
-/***/ "./node_modules/@theia/outline-view/lib/browser/outline-view-frontend-module.js":
-/*!**************************************************************************************!*\
-  !*** ./node_modules/@theia/outline-view/lib/browser/outline-view-frontend-module.js ***!
-  \**************************************************************************************/
+/***/ "./node_modules/@theia/json/lib/browser/json-frontend-module.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@theia/json/lib/browser/json-frontend-module.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/********************************************************************************
+ * Copyright (C) 2018 TypeFox and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+Object.defineProperty(exports, "__esModule", { value: true });
+var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
+var browser_1 = __webpack_require__(/*! @theia/languages/lib/browser */ "./node_modules/@theia/languages/lib/browser/index.js");
+var json_client_contribution_1 = __webpack_require__(/*! ./json-client-contribution */ "./node_modules/@theia/json/lib/browser/json-client-contribution.js");
+var json_preferences_1 = __webpack_require__(/*! ./json-preferences */ "./node_modules/@theia/json/lib/browser/json-preferences.js");
+exports.default = new inversify_1.ContainerModule(function (bind) {
+    json_preferences_1.bindJsonPreferences(bind);
+    bind(browser_1.LanguageClientContribution).to(json_client_contribution_1.JsonClientContribution).inSingletonScope();
+});
+
+
+/***/ }),
+
+/***/ "./node_modules/@theia/json/lib/browser/json-preferences.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@theia/json/lib/browser/json-preferences.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/********************************************************************************
+ * Copyright (C) 2018 TypeFox and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.bindJsonPreferences = exports.createJsonPreferences = exports.JsonPreferences = exports.jsonPreferenceSchema = void 0;
+var preferences_1 = __webpack_require__(/*! @theia/core/lib/browser/preferences */ "./node_modules/@theia/core/lib/browser/preferences/index.js");
+exports.jsonPreferenceSchema = {
+    'type': 'object',
+    'properties': {
+        'json.schemas': {
+            'type': 'array',
+            'description': 'Associate schemas to JSON files in the current project',
+            'items': {
+                'type': 'object',
+                'default': {
+                    'fileMatch': [
+                        '/myfile'
+                    ],
+                    'url': 'schemaURL'
+                },
+                'properties': {
+                    'url': {
+                        'type': 'string',
+                        'default': '/user.schema.json',
+                        'description': 'A URL to a schema or a relative path to a schema in the current directory'
+                    },
+                    'fileMatch': {
+                        'type': 'array',
+                        'items': {
+                            'type': 'string',
+                            'default': 'MyFile.json',
+                            'description': 'A file pattern that can contain \'*\' to match against when resolving JSON files to schemas.'
+                        },
+                        'minItems': 1,
+                        'description': 'An array of file patterns to match against when resolving JSON files to schemas.'
+                    }
+                }
+            }
+        },
+        'json.format.enable': {
+            'type': 'boolean',
+            'default': true,
+            'description': 'Enable/disable default JSON formatter'
+        },
+    }
+};
+exports.JsonPreferences = Symbol('JsonPreferences');
+function createJsonPreferences(preferences) {
+    return preferences_1.createPreferenceProxy(preferences, exports.jsonPreferenceSchema);
+}
+exports.createJsonPreferences = createJsonPreferences;
+function bindJsonPreferences(bind) {
+    bind(exports.JsonPreferences).toDynamicValue(function (ctx) {
+        var preferences = ctx.container.get(preferences_1.PreferenceService);
+        return createJsonPreferences(preferences);
+    }).inSingletonScope();
+    bind(preferences_1.PreferenceContribution).toConstantValue({ schema: exports.jsonPreferenceSchema });
+}
+exports.bindJsonPreferences = bindJsonPreferences;
+
+
+/***/ }),
+
+/***/ "./node_modules/@theia/json/lib/common/index.js":
+/*!******************************************************!*\
+  !*** ./node_modules/@theia/json/lib/common/index.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/********************************************************************************
+ * Copyright (C) 2018 TypeFox and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JSONC_LANGUAGE_NAME = exports.JSONC_LANGUAGE_ID = exports.JSON_LANGUAGE_NAME = exports.JSON_LANGUAGE_ID = void 0;
+exports.JSON_LANGUAGE_ID = 'json';
+exports.JSON_LANGUAGE_NAME = 'JSON';
+exports.JSONC_LANGUAGE_ID = 'jsonc';
+exports.JSONC_LANGUAGE_NAME = 'JSONC';
+
+
+/***/ }),
+
+/***/ "./node_modules/@theia/languages/lib/browser/index.js":
+/*!************************************************************!*\
+  !*** ./node_modules/@theia/languages/lib/browser/index.js ***!
+  \************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -214,110 +473,22 @@ exports.OutlineViewContribution = OutlineViewContribution;
  *
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
-var outline_view_service_1 = __webpack_require__(/*! ./outline-view-service */ "./node_modules/@theia/outline-view/lib/browser/outline-view-service.js");
-var outline_view_contribution_1 = __webpack_require__(/*! ./outline-view-contribution */ "./node_modules/@theia/outline-view/lib/browser/outline-view-contribution.js");
-var widget_manager_1 = __webpack_require__(/*! @theia/core/lib/browser/widget-manager */ "./node_modules/@theia/core/lib/browser/widget-manager.js");
-var browser_1 = __webpack_require__(/*! @theia/core/lib/browser */ "./node_modules/@theia/core/lib/browser/index.js");
-var tab_bar_toolbar_1 = __webpack_require__(/*! @theia/core/lib/browser/shell/tab-bar-toolbar */ "./node_modules/@theia/core/lib/browser/shell/tab-bar-toolbar.js");
-var outline_view_widget_1 = __webpack_require__(/*! ./outline-view-widget */ "./node_modules/@theia/outline-view/lib/browser/outline-view-widget.js");
-__webpack_require__(/*! ../../src/browser/styles/index.css */ "./node_modules/@theia/outline-view/src/browser/styles/index.css");
-var contribution_provider_1 = __webpack_require__(/*! @theia/core/lib/common/contribution-provider */ "./node_modules/@theia/core/lib/common/contribution-provider.js");
-var outline_decorator_service_1 = __webpack_require__(/*! ./outline-decorator-service */ "./node_modules/@theia/outline-view/lib/browser/outline-decorator-service.js");
-var outline_view_tree_1 = __webpack_require__(/*! ./outline-view-tree */ "./node_modules/@theia/outline-view/lib/browser/outline-view-tree.js");
-exports.default = new inversify_1.ContainerModule(function (bind) {
-    bind(outline_view_widget_1.OutlineViewWidgetFactory).toFactory(function (ctx) {
-        return function () { return createOutlineViewWidget(ctx.container); };
-    });
-    bind(outline_view_service_1.OutlineViewService).toSelf().inSingletonScope();
-    bind(widget_manager_1.WidgetFactory).toService(outline_view_service_1.OutlineViewService);
-    browser_1.bindViewContribution(bind, outline_view_contribution_1.OutlineViewContribution);
-    bind(browser_1.FrontendApplicationContribution).toService(outline_view_contribution_1.OutlineViewContribution);
-    bind(tab_bar_toolbar_1.TabBarToolbarContribution).toService(outline_view_contribution_1.OutlineViewContribution);
-});
-/**
- * Create an `OutlineViewWidget`.
- * - The creation of the `OutlineViewWidget` includes:
- *  - The creation of the tree widget itself with it's own customized props.
- *  - The binding of necessary components into the container.
- * @param parent the Inversify container.
- *
- * @returns the `OutlineViewWidget`.
- */
-function createOutlineViewWidget(parent) {
-    var child = browser_1.createTreeContainer(parent);
-    child.rebind(browser_1.TreeProps).toConstantValue(__assign(__assign({}, browser_1.defaultTreeProps), { search: true }));
-    child.unbind(browser_1.TreeWidget);
-    child.bind(outline_view_widget_1.OutlineViewWidget).toSelf();
-    child.unbind(browser_1.TreeModelImpl);
-    child.bind(outline_view_tree_1.OutlineViewTreeModel).toSelf();
-    child.rebind(browser_1.TreeModel).toService(outline_view_tree_1.OutlineViewTreeModel);
-    child.bind(outline_decorator_service_1.OutlineDecoratorService).toSelf().inSingletonScope();
-    child.rebind(browser_1.TreeDecoratorService).toDynamicValue(function (ctx) { return ctx.container.get(outline_decorator_service_1.OutlineDecoratorService); }).inSingletonScope();
-    contribution_provider_1.bindContributionProvider(child, outline_decorator_service_1.OutlineTreeDecorator);
-    return child.get(outline_view_widget_1.OutlineViewWidget);
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !exports.hasOwnProperty(p)) __createBinding(exports, m, p);
 }
-
-
-/***/ }),
-
-/***/ "./node_modules/@theia/outline-view/src/browser/styles/index.css":
-/*!***********************************************************************!*\
-  !*** ./node_modules/@theia/outline-view/src/browser/styles/index.css ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../../../../css-loader!./index.css */ "./node_modules/css-loader/index.js!./node_modules/@theia/outline-view/src/browser/styles/index.css");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../../../../style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js!./node_modules/@theia/outline-view/src/browser/styles/index.css":
-/*!*************************************************************************************************!*\
-  !*** ./node_modules/css-loader!./node_modules/@theia/outline-view/src/browser/styles/index.css ***!
-  \*************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../../../css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "/********************************************************************************\n * Copyright (C) 2017-2018 TypeFox and others.\n *\n * This program and the accompanying materials are made available under the\n * terms of the Eclipse Public License v. 2.0 which is available at\n * http://www.eclipse.org/legal/epl-2.0.\n *\n * This Source Code may also be made available under the following Secondary\n * Licenses when the conditions for such availability set forth in the Eclipse\n * Public License v. 2.0 are satisfied: GNU General Public License, version 2\n * with the GNU Classpath Exception which is available at\n * https://www.gnu.org/software/classpath/license.html.\n *\n * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0\n ********************************************************************************/\n\n.outline-view-tab-icon::before {\n    content: \"\\F03A\"\n}\n\n.no-outline {\n    color: var(--theia-foreground);\n    text-align: left;\n}\n\n.theia-side-panel .no-outline {\n    margin-left: 9px;\n}\n", ""]);
-
-// exports
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(__webpack_require__(/*! ./language-client-services */ "./node_modules/@theia/languages/lib/browser/language-client-services.js"), exports);
+__exportStar(__webpack_require__(/*! ./language-client-factory */ "./node_modules/@theia/languages/lib/browser/language-client-factory.js"), exports);
+__exportStar(__webpack_require__(/*! ./language-client-contribution */ "./node_modules/@theia/languages/lib/browser/language-client-contribution.js"), exports);
+__exportStar(__webpack_require__(/*! ./languages-frontend-contribution */ "./node_modules/@theia/languages/lib/browser/languages-frontend-contribution.js"), exports);
+__exportStar(__webpack_require__(/*! ./languages-frontend-module */ "./node_modules/@theia/languages/lib/browser/languages-frontend-module.js"), exports);
 
 
 /***/ })

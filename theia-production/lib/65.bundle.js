@@ -1,16 +1,16 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[65],{
 
-/***/ "./node_modules/@theia/core/lib/browser/browser-clipboard-service.js":
-/*!***************************************************************************!*\
-  !*** ./node_modules/@theia/core/lib/browser/browser-clipboard-service.js ***!
-  \***************************************************************************/
+/***/ "./node_modules/@theia/mini-browser/lib/browser/mini-browser-frontend-module.js":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/@theia/mini-browser/lib/browser/mini-browser-frontend-module.js ***!
+  \**************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 /********************************************************************************
- * Copyright (C) 2019 RedHat and others.
+ * Copyright (C) 2018 TypeFox and others.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0 which is available at
@@ -24,15 +24,6 @@
  *
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -70,313 +61,122 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.BrowserClipboardService = void 0;
+__webpack_require__(/*! ../../src/browser/style/index.css */ "./node_modules/@theia/mini-browser/src/browser/style/index.css");
 var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
-var browser_1 = __webpack_require__(/*! ./browser */ "./node_modules/@theia/core/lib/browser/browser.js");
-var logger_1 = __webpack_require__(/*! ../common/logger */ "./node_modules/@theia/core/lib/common/logger.js");
-var message_service_1 = __webpack_require__(/*! ../common/message-service */ "./node_modules/@theia/core/lib/common/message-service.js");
-var BrowserClipboardService = /** @class */ (function () {
-    function BrowserClipboardService() {
-    }
-    BrowserClipboardService.prototype.readText = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            var permission, e1_1, e2_1;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        _a.trys.push([0, 2, , 7]);
-                        return [4 /*yield*/, this.queryPermission('clipboard-read')];
-                    case 1:
-                        permission = _a.sent();
-                        return [3 /*break*/, 7];
-                    case 2:
-                        e1_1 = _a.sent();
-                        this.logger.error('Failed checking a clipboard-read permission.', e1_1);
-                        _a.label = 3;
-                    case 3:
-                        _a.trys.push([3, 5, , 6]);
-                        return [4 /*yield*/, this.getClipboardAPI().readText()];
-                    case 4: return [2 /*return*/, _a.sent()];
-                    case 5:
-                        e2_1 = _a.sent();
-                        this.logger.error('Failed reading clipboard content.', e2_1);
-                        if (browser_1.isFirefox) {
-                            this.messageService.warn("Clipboard API is not available.\n                    It can be enabled by 'dom.events.testing.asyncClipboard' preference on 'about:config' page. Then reload Theia.\n                    Note, it will allow FireFox getting full access to the system clipboard.");
-                        }
-                        return [2 /*return*/, ''];
-                    case 6: return [3 /*break*/, 7];
-                    case 7:
-                        if (permission.state === 'denied') {
-                            // most likely, the user intentionally denied the access
-                            this.messageService.warn("Access to the clipboard is denied. Check your browser's permission.");
-                            return [2 /*return*/, ''];
-                        }
-                        return [2 /*return*/, this.getClipboardAPI().readText()];
-                }
-            });
-        });
-    };
-    BrowserClipboardService.prototype.writeText = function (value) {
-        return __awaiter(this, void 0, void 0, function () {
-            var permission, e1_2, e2_2;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        _a.trys.push([0, 2, , 7]);
-                        return [4 /*yield*/, this.queryPermission('clipboard-write')];
-                    case 1:
-                        permission = _a.sent();
-                        return [3 /*break*/, 7];
-                    case 2:
-                        e1_2 = _a.sent();
-                        this.logger.error('Failed checking a clipboard-write permission.', e1_2);
-                        _a.label = 3;
-                    case 3:
-                        _a.trys.push([3, 5, , 6]);
-                        return [4 /*yield*/, this.getClipboardAPI().writeText(value)];
-                    case 4:
-                        _a.sent();
-                        return [2 /*return*/];
-                    case 5:
-                        e2_2 = _a.sent();
-                        this.logger.error('Failed writing to the clipboard.', e2_2);
-                        if (browser_1.isFirefox) {
-                            this.messageService.warn("Clipboard API is not available.\n                    It can be enabled by 'dom.events.testing.asyncClipboard' preference on 'about:config' page. Then reload Theia.\n                    Note, it will allow FireFox getting full access to the system clipboard.");
-                        }
-                        return [2 /*return*/];
-                    case 6: return [3 /*break*/, 7];
-                    case 7:
-                        if (permission.state === 'denied') {
-                            // most likely, the user intentionally denied the access
-                            this.messageService.warn("Access to the clipboard is denied. Check your browser's permission.");
-                            return [2 /*return*/];
-                        }
-                        return [2 /*return*/, this.getClipboardAPI().writeText(value)];
-                }
-            });
-        });
-    };
-    BrowserClipboardService.prototype.queryPermission = function (name) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                if ('permissions' in navigator) {
-                    return [2 /*return*/, navigator['permissions'].query({ name: name })];
-                }
-                throw new Error('Permissions API unavailable');
-            });
-        });
-    };
-    BrowserClipboardService.prototype.getClipboardAPI = function () {
-        if ('clipboard' in navigator) {
-            return navigator['clipboard'];
-        }
-        throw new Error('Async Clipboard API unavailable');
-    };
-    __decorate([
-        inversify_1.inject(message_service_1.MessageService),
-        __metadata("design:type", message_service_1.MessageService)
-    ], BrowserClipboardService.prototype, "messageService", void 0);
-    __decorate([
-        inversify_1.inject(logger_1.ILogger),
-        __metadata("design:type", Object)
-    ], BrowserClipboardService.prototype, "logger", void 0);
-    BrowserClipboardService = __decorate([
-        inversify_1.injectable()
-    ], BrowserClipboardService);
-    return BrowserClipboardService;
-}());
-exports.BrowserClipboardService = BrowserClipboardService;
-
-
-/***/ }),
-
-/***/ "./node_modules/@theia/core/lib/browser/clipboard-service.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/@theia/core/lib/browser/clipboard-service.js ***!
-  \*******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/********************************************************************************
- * Copyright (C) 2019 RedHat and others.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Eclipse Public License v. 2.0 which is available at
- * http://www.eclipse.org/legal/epl-2.0.
- *
- * This Source Code may also be made available under the following Secondary
- * Licenses when the conditions for such availability set forth in the Eclipse
- * Public License v. 2.0 are satisfied: GNU General Public License, version 2
- * with the GNU Classpath Exception which is available at
- * https://www.gnu.org/software/classpath/license.html.
- *
- * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
- ********************************************************************************/
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ClipboardService = void 0;
-exports.ClipboardService = Symbol('ClipboardService');
-
-
-/***/ }),
-
-/***/ "./node_modules/@theia/core/lib/browser/window/browser-window-module.js":
-/*!******************************************************************************!*\
-  !*** ./node_modules/@theia/core/lib/browser/window/browser-window-module.js ***!
-  \******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/********************************************************************************
- * Copyright (C) 2017 TypeFox and others.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Eclipse Public License v. 2.0 which is available at
- * http://www.eclipse.org/legal/epl-2.0.
- *
- * This Source Code may also be made available under the following Secondary
- * Licenses when the conditions for such availability set forth in the Eclipse
- * Public License v. 2.0 are satisfied: GNU General Public License, version 2
- * with the GNU Classpath Exception which is available at
- * https://www.gnu.org/software/classpath/license.html.
- *
- * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
- ********************************************************************************/
-Object.defineProperty(exports, "__esModule", { value: true });
-var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
-var window_service_1 = __webpack_require__(/*! ../../browser/window/window-service */ "./node_modules/@theia/core/lib/browser/window/window-service.js");
-var default_window_service_1 = __webpack_require__(/*! ../../browser/window/default-window-service */ "./node_modules/@theia/core/lib/browser/window/default-window-service.js");
-var frontend_application_1 = __webpack_require__(/*! ../frontend-application */ "./node_modules/@theia/core/lib/browser/frontend-application.js");
-var clipboard_service_1 = __webpack_require__(/*! ../clipboard-service */ "./node_modules/@theia/core/lib/browser/clipboard-service.js");
-var browser_clipboard_service_1 = __webpack_require__(/*! ../browser-clipboard-service */ "./node_modules/@theia/core/lib/browser/browser-clipboard-service.js");
+var uri_1 = __webpack_require__(/*! @theia/core/lib/common/uri */ "./node_modules/@theia/core/lib/common/uri.js");
+var opener_service_1 = __webpack_require__(/*! @theia/core/lib/browser/opener-service */ "./node_modules/@theia/core/lib/browser/opener-service.js");
+var widget_manager_1 = __webpack_require__(/*! @theia/core/lib/browser/widget-manager */ "./node_modules/@theia/core/lib/browser/widget-manager.js");
+var contribution_provider_1 = __webpack_require__(/*! @theia/core/lib/common/contribution-provider */ "./node_modules/@theia/core/lib/common/contribution-provider.js");
+var ws_connection_provider_1 = __webpack_require__(/*! @theia/core/lib/browser/messaging/ws-connection-provider */ "./node_modules/@theia/core/lib/browser/messaging/ws-connection-provider.js");
+var frontend_application_1 = __webpack_require__(/*! @theia/core/lib/browser/frontend-application */ "./node_modules/@theia/core/lib/browser/frontend-application.js");
+var tab_bar_toolbar_1 = __webpack_require__(/*! @theia/core/lib/browser/shell/tab-bar-toolbar */ "./node_modules/@theia/core/lib/browser/shell/tab-bar-toolbar.js");
+var command_1 = __webpack_require__(/*! @theia/core/lib/common/command */ "./node_modules/@theia/core/lib/common/command.js");
+var menu_1 = __webpack_require__(/*! @theia/core/lib/common/menu */ "./node_modules/@theia/core/lib/common/menu.js");
+var mini_browser_open_handler_1 = __webpack_require__(/*! ./mini-browser-open-handler */ "./node_modules/@theia/mini-browser/lib/browser/mini-browser-open-handler.js");
+var mini_browser_service_1 = __webpack_require__(/*! ../common/mini-browser-service */ "./node_modules/@theia/mini-browser/lib/common/mini-browser-service.js");
+var mini_browser_1 = __webpack_require__(/*! ./mini-browser */ "./node_modules/@theia/mini-browser/lib/browser/mini-browser.js");
+var mini_browser_content_1 = __webpack_require__(/*! ./mini-browser-content */ "./node_modules/@theia/mini-browser/lib/browser/mini-browser-content.js");
+var location_mapper_service_1 = __webpack_require__(/*! ./location-mapper-service */ "./node_modules/@theia/mini-browser/lib/browser/location-mapper-service.js");
 exports.default = new inversify_1.ContainerModule(function (bind) {
-    bind(default_window_service_1.DefaultWindowService).toSelf().inSingletonScope();
-    bind(window_service_1.WindowService).toService(default_window_service_1.DefaultWindowService);
-    bind(frontend_application_1.FrontendApplicationContribution).toService(default_window_service_1.DefaultWindowService);
-    bind(clipboard_service_1.ClipboardService).to(browser_clipboard_service_1.BrowserClipboardService).inSingletonScope();
+    bind(mini_browser_content_1.MiniBrowserContent).toSelf();
+    bind(mini_browser_content_1.MiniBrowserContentFactory).toFactory(function (context) { return function (props) {
+        var container = context.container;
+        var child = container.createChild();
+        child.bind(mini_browser_content_1.MiniBrowserProps).toConstantValue(props);
+        return child.get(mini_browser_content_1.MiniBrowserContent);
+    }; });
+    bind(mini_browser_1.MiniBrowser).toSelf();
+    bind(widget_manager_1.WidgetFactory).toDynamicValue(function (context) { return ({
+        id: mini_browser_1.MiniBrowser.ID,
+        createWidget: function (options) {
+            return __awaiter(this, void 0, void 0, function () {
+                var container, child, uri;
+                return __generator(this, function (_a) {
+                    container = context.container;
+                    child = container.createChild();
+                    uri = new uri_1.default(options.uri);
+                    child.bind(mini_browser_1.MiniBrowserOptions).toConstantValue({ uri: uri });
+                    return [2 /*return*/, child.get(mini_browser_1.MiniBrowser)];
+                });
+            });
+        }
+    }); }).inSingletonScope();
+    bind(mini_browser_open_handler_1.MiniBrowserOpenHandler).toSelf().inSingletonScope();
+    bind(opener_service_1.OpenHandler).toService(mini_browser_open_handler_1.MiniBrowserOpenHandler);
+    bind(frontend_application_1.FrontendApplicationContribution).toService(mini_browser_open_handler_1.MiniBrowserOpenHandler);
+    bind(command_1.CommandContribution).toService(mini_browser_open_handler_1.MiniBrowserOpenHandler);
+    bind(menu_1.MenuContribution).toService(mini_browser_open_handler_1.MiniBrowserOpenHandler);
+    bind(tab_bar_toolbar_1.TabBarToolbarContribution).toService(mini_browser_open_handler_1.MiniBrowserOpenHandler);
+    contribution_provider_1.bindContributionProvider(bind, location_mapper_service_1.LocationMapper);
+    bind(location_mapper_service_1.LocationMapper).to(location_mapper_service_1.FileLocationMapper).inSingletonScope();
+    bind(location_mapper_service_1.LocationMapper).to(location_mapper_service_1.HttpLocationMapper).inSingletonScope();
+    bind(location_mapper_service_1.LocationMapper).to(location_mapper_service_1.HttpsLocationMapper).inSingletonScope();
+    bind(location_mapper_service_1.LocationWithoutSchemeMapper).toSelf().inSingletonScope();
+    bind(location_mapper_service_1.LocationMapper).toService(location_mapper_service_1.LocationWithoutSchemeMapper);
+    bind(location_mapper_service_1.LocationMapperService).toSelf().inSingletonScope();
+    bind(mini_browser_service_1.MiniBrowserService).toDynamicValue(function (context) { return ws_connection_provider_1.WebSocketConnectionProvider.createProxy(context.container, mini_browser_service_1.MiniBrowserServicePath); }).inSingletonScope();
 });
 
 
 /***/ }),
 
-/***/ "./node_modules/@theia/core/lib/browser/window/default-window-service.js":
-/*!*******************************************************************************!*\
-  !*** ./node_modules/@theia/core/lib/browser/window/default-window-service.js ***!
-  \*******************************************************************************/
+/***/ "./node_modules/@theia/mini-browser/src/browser/style/index.css":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@theia/mini-browser/src/browser/style/index.css ***!
+  \**********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
 
-/********************************************************************************
- * Copyright (C) 2017 TypeFox and others.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Eclipse Public License v. 2.0 which is available at
- * http://www.eclipse.org/legal/epl-2.0.
- *
- * This Source Code may also be made available under the following Secondary
- * Licenses when the conditions for such availability set forth in the Eclipse
- * Public License v. 2.0 are satisfied: GNU General Public License, version 2
- * with the GNU Classpath Exception which is available at
- * https://www.gnu.org/software/classpath/license.html.
- *
- * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
- ********************************************************************************/
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __values = (this && this.__values) || function(o) {
-    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
-    if (m) return m.call(o);
-    if (o && typeof o.length === "number") return {
-        next: function () {
-            if (o && i >= o.length) o = void 0;
-            return { value: o && o[i++], done: !o };
-        }
-    };
-    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.DefaultWindowService = void 0;
-var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
-var core_preferences_1 = __webpack_require__(/*! ../core-preferences */ "./node_modules/@theia/core/lib/browser/core-preferences.js");
-var contribution_provider_1 = __webpack_require__(/*! ../../common/contribution-provider */ "./node_modules/@theia/core/lib/common/contribution-provider.js");
-var frontend_application_1 = __webpack_require__(/*! ../frontend-application */ "./node_modules/@theia/core/lib/browser/frontend-application.js");
-var DefaultWindowService = /** @class */ (function () {
-    function DefaultWindowService() {
-    }
-    DefaultWindowService.prototype.onStart = function (app) {
-        var _this = this;
-        this.frontendApplication = app;
-        window.addEventListener('beforeunload', function (event) {
-            if (!_this.canUnload()) {
-                return _this.preventUnload(event);
-            }
-        });
-    };
-    DefaultWindowService.prototype.openNewWindow = function (url) {
-        window.open(url, undefined, 'noopener');
-        return undefined;
-    };
-    DefaultWindowService.prototype.canUnload = function () {
-        var e_1, _a;
-        var confirmExit = this.corePreferences['application.confirmExit'];
-        if (confirmExit === 'never') {
-            return true;
-        }
-        try {
-            for (var _b = __values(this.contributions.getContributions()), _c = _b.next(); !_c.done; _c = _b.next()) {
-                var contribution = _c.value;
-                if (contribution.onWillStop) {
-                    if (!!contribution.onWillStop(this.frontendApplication)) {
-                        return false;
-                    }
-                }
-            }
-        }
-        catch (e_1_1) { e_1 = { error: e_1_1 }; }
-        finally {
-            try {
-                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
-            }
-            finally { if (e_1) throw e_1.error; }
-        }
-        return confirmExit !== 'always';
-    };
-    /**
-     * Ask the user to confirm if they want to unload the window. Prevent it if they do not.
-     * @param event The beforeunload event
-     */
-    DefaultWindowService.prototype.preventUnload = function (event) {
-        event.returnValue = '';
-        event.preventDefault();
-        return '';
-    };
-    __decorate([
-        inversify_1.inject(core_preferences_1.CorePreferences),
-        __metadata("design:type", Object)
-    ], DefaultWindowService.prototype, "corePreferences", void 0);
-    __decorate([
-        inversify_1.inject(contribution_provider_1.ContributionProvider),
-        inversify_1.named(frontend_application_1.FrontendApplicationContribution),
-        __metadata("design:type", Object)
-    ], DefaultWindowService.prototype, "contributions", void 0);
-    DefaultWindowService = __decorate([
-        inversify_1.injectable()
-    ], DefaultWindowService);
-    return DefaultWindowService;
-}());
-exports.DefaultWindowService = DefaultWindowService;
+var content = __webpack_require__(/*! !../../../../../css-loader!./index.css */ "./node_modules/css-loader/index.js!./node_modules/@theia/mini-browser/src/browser/style/index.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/@theia/mini-browser/src/browser/style/mini-browser.svg":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/@theia/mini-browser/src/browser/style/mini-browser.svg ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PCEtLUNvcHlyaWdodCAoYykgMjAxOSBLZW5uZXRoIEF1Y2hlbmJlcmcuIC0tPgo8IS0tQ29weXJpZ2h0IChDKSAyMDE5IFR5cGVGb3ggYW5kIG90aGVycy4tLT4KPCEtLUxpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4tLT4KPHN2ZyB3aWR0aD0iMjVweCIgaGVpZ2h0PSIyNXB4IiB2aWV3Qm94PSIwIDAgMjUgMjUiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUyLjIgKDY3MTQ1KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5pY29uPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9Imljb24iIGZpbGw9IiMyODc5RkYiPgogICAgICAgICAgICA8cG9seWdvbiBpZD0iUGF0aCIgcG9pbnRzPSIxMy44NjcxODc1IDE1LjYyNSAxMy44NjcxODc1IDE0LjA2MjUgMTguNTU0Njg3NSAxNC4wNjI1IDE4LjU1NDY4NzUgMTUuNjI1Ij48L3BvbHlnb24+CiAgICAgICAgICAgIDxwb2x5Z29uIGlkPSJQYXRoIiBwb2ludHM9IjEzLjg2NzE4NzUgMTIuNSAxMy44NjcxODc1IDEwLjkzNzUgMjEuNjc5Njg3NSAxMC45Mzc1IDIxLjY3OTY4NzUgMTIuNSI+PC9wb2x5Z29uPgogICAgICAgICAgICA8cG9seWdvbiBpZD0iUGF0aCIgcG9pbnRzPSIxMy44NjcxODc1IDkuMzc1IDEzLjg2NzE4NzUgNy44MTI1IDIxLjY3OTY4NzUgNy44MTI1IDIxLjY3OTY4NzUgOS4zNzUiPjwvcG9seWdvbj4KICAgICAgICAgICAgPHJlY3QgaWQ9IlJlY3RhbmdsZSIgeD0iMi45Mjk2ODc1IiB5PSI3LjgxMjUiIHdpZHRoPSI3LjgxMjUiIGhlaWdodD0iNy44MTI1Ij48L3JlY3Q+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0wLDAgTDAsMjUgTDI0Ljk5OTIxODgsMjUgTDI1LDAgTDAsMCBaIE0xNy4xODc1LDEuNTYyNSBMMTcuMTg3NSwzLjEyNSBMNy44MTI1LDMuMTI1IEw3LjgxMjUsMS41NjI1IEwxNy4xODc1LDEuNTYyNSBaIE02LjI1LDEuNTYyNSBMNi4yNSwzLjEyNSBMNC42ODc1LDMuMTI1IEw0LjY4NzUsMS41NjI1IEw2LjI1LDEuNTYyNSBaIE0xLjU2MjUsMS41NjI1IEwzLjEyNSwxLjU2MjUgTDMuMTI1LDMuMTI1IEwxLjU2MjUsMy4xMjUgTDEuNTYyNSwxLjU2MjUgWiBNMjMuNDM2NzE4OCwyMy4wNDY4NzUgTDEuNTYyNSwyMy4wNDY4NzUgTDEuNTYyNSw0LjY4NzUgTDIzLjQzNjcxODgsNC42ODc1IEwyMy40MzY3MTg4LDIzLjA0Njg3NSBaIE0yMy40Mzc1LDMuMTI1IEwyMC4zMTI1LDMuMTI1IEwyMC4zMTI1LDEuNTYyNSBMMjMuNDM3NSwxLjU2MjUgTDIzLjQzNzUsMy4xMjUgWiIgaWQ9IlNoYXBlIiBmaWxsLXJ1bGU9Im5vbnplcm8iPjwvcGF0aD4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo="
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/@theia/mini-browser/src/browser/style/index.css":
+/*!************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/@theia/mini-browser/src/browser/style/index.css ***!
+  \************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var escape = __webpack_require__(/*! ../../../../../css-loader/lib/url/escape.js */ "./node_modules/css-loader/lib/url/escape.js");
+exports = module.exports = __webpack_require__(/*! ../../../../../css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "/********************************************************************************\n * Copyright (C) 2018 TypeFox and others.\n *\n * This program and the accompanying materials are made available under the\n * terms of the Eclipse Public License v. 2.0 which is available at\n * http://www.eclipse.org/legal/epl-2.0.\n *\n * This Source Code may also be made available under the following Secondary\n * Licenses when the conditions for such availability set forth in the Eclipse\n * Public License v. 2.0 are satisfied: GNU General Public License, version 2\n * with the GNU Classpath Exception which is available at\n * https://www.gnu.org/software/classpath/license.html.\n *\n * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0\n ********************************************************************************/\n\n:root {\n    --theia-private-mini-browser-height: var(--theia-content-line-height);\n}\n\n.theia-mini-browser {\n    display: flex;\n    flex-direction: column;\n    height: 100%;\n}\n\n.theia-mini-browser-icon {\n    mask: url(" + escape(__webpack_require__(/*! ./mini-browser.svg */ "./node_modules/@theia/mini-browser/src/browser/style/mini-browser.svg")) + ");\n    -webkit-mask: url(" + escape(__webpack_require__(/*! ./mini-browser.svg */ "./node_modules/@theia/mini-browser/src/browser/style/mini-browser.svg")) + ");\n}\n\n.theia-mini-browser-toolbar {\n    margin-top: 8px;\n    display: flex;\n    align-items: center;\n    justify-content: space-evenly;\n    padding: 0 10px;\n}\n\n.theia-mini-browser-toolbar-read-only {\n    margin-top: 8px;\n    display: flex;\n    align-items: center;\n    justify-content: space-evenly;\n    padding: 0 10px;\n}\n\n.theia-mini-browser-toolbar .theia-input {\n    width: 100%;\n    line-height: var(--theia-private-mini-browser-height);\n    margin-left: 4px;\n    margin-right: 4px;\n}\n\n.theia-mini-browser-toolbar-read-only .theia-input {\n    width: 100%;\n    line-height: var(--theia-private-mini-browser-height);\n    margin-left: 4px;\n    margin-right: 4px;\n    cursor: pointer;\n    background: var(--theia-input-background);\n    border: none;\n    text-decoration: underline;\n    outline: none;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    color: var(--theia-input-foreground);\n}\n\n.theia-mini-browser-toolbar-read-only .theia-input:hover {\n    color: var(--theia-button-hoverBackground);\n}\n\n.theia-mini-browser-button {\n    min-width: 1rem;\n    text-align: center;\n    flex-grow: 0;\n    font-family: FontAwesome;\n    font-size: calc(var(--theia-content-font-size) * 0.8);\n    color: var(--theia-icon-foreground);\n    margin: 0px 4px 0px 4px;\n}\n\n.theia-mini-browser-button:not(.theia-mini-browser-button-disabled):hover {\n    cursor: pointer;\n}\n\n.theia-mini-browser-button-disabled {\n    opacity: var(--theia-mod-disabled-opacity);\n}\n\n.theia-mini-browser-previous::before {\n    content: \"\\F053\";\n}\n\n.theia-mini-browser-next::before {\n    content: \"\\F054\";\n}\n\n.theia-mini-browser-refresh::before {\n    content: \"\\F021\";\n}\n\n.theia-mini-browser-open::before {\n    content: \"\\F08E\";\n}\n\n.theia-mini-browser-content-area {\n    position: relative;\n    display: flex;\n    height: 100%;\n    width: 100%;\n    flex-direction: column;\n    overflow: hidden;\n    margin-top: 6px;\n}\n\n.theia-mini-browser-pdf-container {\n    width: 100%;\n    height: 100%;\n}\n\n.theia-mini-browser-load-indicator {\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    z-index: 10;\n    background: var(--theia-editor-background);\n    background-image: var(--theia-preloader);\n    background-size: 60px 60px;\n    background-repeat: no-repeat;\n    background-position: center;\n    transition: opacity 0.8s;\n}\n\n.theia-mini-browser-load-indicator.theia-fade-out {\n    opacity: 0;\n}\n\n.theia-mini-browser-error-bar {\n    height: 19px;\n    padding-left: var(--theia-ui-padding);\n    background-color: var(--theia-inputValidation-errorBorder);\n    color: var(--theia-editor-foreground);\n    font-size: var(--theia-statusBar-font-size);\n    z-index: 1000; /* Above the transparent overlay (`z-index: 999;`). */\n}\n\n.theia-mini-browser-error-bar span {\n    margin-top: 3px;\n    margin-left: var(--theia-ui-padding);\n}\n\n.theia-mini-browser-content-area iframe {\n    flex-grow: 1;\n    border: none; margin: 0; padding: 0;\n}\n", ""]);
+
+// exports
 
 
 /***/ })

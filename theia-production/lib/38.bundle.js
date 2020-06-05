@@ -1,1691 +1,137 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[38],{
 
-/***/ "./node_modules/@theia/plugin-ext/lib/common/disposable-util.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/@theia/plugin-ext/lib/common/disposable-util.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./node_modules/@theia/monaco/data/monaco-themes/vscode/dark_defaults.json":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/@theia/monaco/data/monaco-themes/vscode/dark_defaults.json ***!
+  \*********************************************************************************/
+/*! exports provided: $schema, name, colors, default */
+/***/ (function(module) {
 
-"use strict";
-
-/********************************************************************************
- * Copyright (C) 2018 Red Hat, Inc. and others.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Eclipse Public License v. 2.0 which is available at
- * http://www.eclipse.org/legal/epl-2.0.
- *
- * This Source Code may also be made available under the following Secondary
- * Licenses when the conditions for such availability set forth in the Eclipse
- * Public License v. 2.0 are satisfied: GNU General Public License, version 2
- * with the GNU Classpath Exception which is available at
- * https://www.gnu.org/software/classpath/license.html.
- *
- * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
- ********************************************************************************/
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.dispose = void 0;
-function dispose(first) {
-    var rest = [];
-    for (var _i = 1; _i < arguments.length; _i++) {
-        rest[_i - 1] = arguments[_i];
-    }
-    if (Array.isArray(first)) {
-        first.forEach(function (d) { return d && d.dispose(); });
-        return [];
-    }
-    else if (rest.length === 0) {
-        if (first) {
-            first.dispose();
-            return first;
-        }
-        return undefined;
-    }
-    else {
-        dispose(first);
-        dispose(rest);
-        return [];
-    }
-}
-exports.dispose = dispose;
-
+module.exports = JSON.parse("{\"$schema\":\"vscode://schemas/color-theme\",\"name\":\"Dark Default Colors\",\"colors\":{\"editor.background\":\"#1E1E1E\",\"editor.foreground\":\"#D4D4D4\",\"editor.inactiveSelectionBackground\":\"#3A3D41\",\"editorIndentGuide.background\":\"#404040\",\"editorIndentGuide.activeBackground\":\"#707070\",\"editor.selectionHighlightBackground\":\"#ADD6FF26\",\"list.dropBackground\":\"#383B3D\",\"activityBarBadge.background\":\"#007ACC\",\"sideBarTitle.foreground\":\"#BBBBBB\",\"input.placeholderForeground\":\"#A6A6A6\",\"settings.textInputBackground\":\"#292929\",\"settings.numberInputBackground\":\"#292929\",\"menu.background\":\"#252526\",\"menu.foreground\":\"#CCCCCC\",\"statusBarItem.remoteForeground\":\"#FFF\",\"statusBarItem.remoteBackground\":\"#16825D\"}}");
 
 /***/ }),
 
-/***/ "./node_modules/@theia/plugin-ext/lib/common/errors.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/@theia/plugin-ext/lib/common/errors.js ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./node_modules/@theia/monaco/data/monaco-themes/vscode/dark_plus.json":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/@theia/monaco/data/monaco-themes/vscode/dark_plus.json ***!
+  \*****************************************************************************/
+/*! exports provided: $schema, name, include, tokenColors, default */
+/***/ (function(module) {
 
-"use strict";
-
-/********************************************************************************
- * Copyright (C) 2018 Red Hat, Inc. and others.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Eclipse Public License v. 2.0 which is available at
- * http://www.eclipse.org/legal/epl-2.0.
- *
- * This Source Code may also be made available under the following Secondary
- * Licenses when the conditions for such availability set forth in the Eclipse
- * Public License v. 2.0 are satisfied: GNU General Public License, version 2
- * with the GNU Classpath Exception which is available at
- * https://www.gnu.org/software/classpath/license.html.
- *
- * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
- ********************************************************************************/
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.disposed = exports.readonly = exports.illegalArgument = void 0;
-function illegalArgument(message) {
-    if (message) {
-        return new Error("Illegal argument: " + message);
-    }
-    else {
-        return new Error('Illegal argument');
-    }
-}
-exports.illegalArgument = illegalArgument;
-function readonly(name) {
-    if (name) {
-        return new Error("readonly property '" + name + " cannot be changed'");
-    }
-    else {
-        return new Error('readonly property cannot be changed');
-    }
-}
-exports.readonly = readonly;
-function disposed(what) {
-    var result = new Error(what + " has been disposed");
-    result.name = 'DISPOSED';
-    return result;
-}
-exports.disposed = disposed;
-
+module.exports = JSON.parse("{\"$schema\":\"vscode://schemas/color-theme\",\"name\":\"Dark+ (default dark)\",\"include\":\"./dark_vs.json\",\"tokenColors\":[{\"name\":\"Function declarations\",\"scope\":[\"entity.name.function\",\"support.function\",\"support.constant.handlebars\",\"source.powershell variable.other.member\",\"entity.name.operator.custom-literal\"],\"settings\":{\"foreground\":\"#DCDCAA\"}},{\"name\":\"Types declaration and references\",\"scope\":[\"meta.return-type\",\"support.class\",\"support.type\",\"entity.name.type\",\"entity.name.namespace\",\"entity.other.attribute\",\"entity.name.scope-resolution\",\"entity.name.class\",\"storage.type.numeric.go\",\"storage.type.byte.go\",\"storage.type.boolean.go\",\"storage.type.string.go\",\"storage.type.uintptr.go\",\"storage.type.error.go\",\"storage.type.rune.go\",\"storage.type.cs\",\"storage.type.generic.cs\",\"storage.type.modifier.cs\",\"storage.type.variable.cs\",\"storage.type.annotation.java\",\"storage.type.generic.java\",\"storage.type.java\",\"storage.type.object.array.java\",\"storage.type.primitive.array.java\",\"storage.type.primitive.java\",\"storage.type.token.java\",\"storage.type.groovy\",\"storage.type.annotation.groovy\",\"storage.type.parameters.groovy\",\"storage.type.generic.groovy\",\"storage.type.object.array.groovy\",\"storage.type.primitive.array.groovy\",\"storage.type.primitive.groovy\"],\"settings\":{\"foreground\":\"#4EC9B0\"}},{\"name\":\"Types declaration and references, TS grammar specific\",\"scope\":[\"meta.type.cast.expr\",\"meta.type.new.expr\",\"support.constant.math\",\"support.constant.dom\",\"support.constant.json\",\"entity.other.inherited-class\"],\"settings\":{\"foreground\":\"#4EC9B0\"}},{\"name\":\"Control flow / Special keywords\",\"scope\":[\"keyword.control\",\"source.cpp keyword.operator.new\",\"keyword.operator.delete\",\"keyword.other.using\",\"keyword.other.operator\",\"entity.name.operator\"],\"settings\":{\"foreground\":\"#C586C0\"}},{\"name\":\"Variable and parameter name\",\"scope\":[\"variable\",\"meta.definition.variable.name\",\"support.variable\",\"entity.name.variable\"],\"settings\":{\"foreground\":\"#9CDCFE\"}},{\"name\":\"Object keys, TS grammar specific\",\"scope\":[\"meta.object-literal.key\"],\"settings\":{\"foreground\":\"#9CDCFE\"}},{\"name\":\"CSS property value\",\"scope\":[\"support.constant.property-value\",\"support.constant.font-name\",\"support.constant.media-type\",\"support.constant.media\",\"constant.other.color.rgb-value\",\"constant.other.rgb-value\",\"support.constant.color\"],\"settings\":{\"foreground\":\"#CE9178\"}},{\"name\":\"Regular expression groups\",\"scope\":[\"punctuation.definition.group.regexp\",\"punctuation.definition.group.assertion.regexp\",\"punctuation.definition.character-class.regexp\",\"punctuation.character.set.begin.regexp\",\"punctuation.character.set.end.regexp\",\"keyword.operator.negation.regexp\",\"support.other.parenthesis.regexp\"],\"settings\":{\"foreground\":\"#CE9178\"}},{\"scope\":[\"constant.character.character-class.regexp\",\"constant.other.character-class.set.regexp\",\"constant.other.character-class.regexp\",\"constant.character.set.regexp\"],\"settings\":{\"foreground\":\"#d16969\"}},{\"scope\":[\"keyword.operator.or.regexp\",\"keyword.control.anchor.regexp\"],\"settings\":{\"foreground\":\"#DCDCAA\"}},{\"scope\":\"keyword.operator.quantifier.regexp\",\"settings\":{\"foreground\":\"#d7ba7d\"}},{\"scope\":\"constant.character\",\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":\"constant.character.escape\",\"settings\":{\"foreground\":\"#d7ba7d\"}},{\"scope\":\"entity.name.label\",\"settings\":{\"foreground\":\"#C8C8C8\"}}]}");
 
 /***/ }),
 
-/***/ "./node_modules/@theia/plugin-ext/lib/common/index.js":
-/*!************************************************************!*\
-  !*** ./node_modules/@theia/plugin-ext/lib/common/index.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./node_modules/@theia/monaco/data/monaco-themes/vscode/dark_theia.json":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@theia/monaco/data/monaco-themes/vscode/dark_theia.json ***!
+  \******************************************************************************/
+/*! exports provided: $schema, name, include, default */
+/***/ (function(module) {
 
-"use strict";
-
-/********************************************************************************
- * Copyright (C) 2018 Red Hat, Inc. and others.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Eclipse Public License v. 2.0 which is available at
- * http://www.eclipse.org/legal/epl-2.0.
- *
- * This Source Code may also be made available under the following Secondary
- * Licenses when the conditions for such availability set forth in the Eclipse
- * Public License v. 2.0 are satisfied: GNU General Public License, version 2
- * with the GNU Classpath Exception which is available at
- * https://www.gnu.org/software/classpath/license.html.
- *
- * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
- ********************************************************************************/
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __exportStar = (this && this.__exportStar) || function(m, exports) {
-    for (var p in m) if (p !== "default" && !exports.hasOwnProperty(p)) __createBinding(exports, m, p);
-}
-Object.defineProperty(exports, "__esModule", { value: true });
-// Here we expose types from @theia/plugin, so it becomes a direct dependency
-__exportStar(__webpack_require__(/*! ./plugin-protocol */ "./node_modules/@theia/plugin-ext/lib/common/plugin-protocol.js"), exports);
-__exportStar(__webpack_require__(/*! ./plugin-api-rpc */ "./node_modules/@theia/plugin-ext/lib/common/plugin-api-rpc.js"), exports);
-__exportStar(__webpack_require__(/*! ./plugin-ext-api-contribution */ "./node_modules/@theia/plugin-ext/lib/common/plugin-ext-api-contribution.js"), exports);
-
+module.exports = JSON.parse("{\"$schema\":\"vscode://schemas/color-theme\",\"name\":\"Dark (Theia)\",\"include\":\"./dark_plus.json\"}");
 
 /***/ }),
 
-/***/ "./node_modules/@theia/plugin-ext/lib/common/paths-util.js":
-/*!*****************************************************************!*\
-  !*** ./node_modules/@theia/plugin-ext/lib/common/paths-util.js ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/********************************************************************************
- * Copyright (C) 2018 Red Hat, Inc. and others.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Eclipse Public License v. 2.0 which is available at
- * http://www.eclipse.org/legal/epl-2.0.
- *
- * This Source Code may also be made available under the following Secondary
- * Licenses when the conditions for such availability set forth in the Eclipse
- * Public License v. 2.0 are satisfied: GNU General Public License, version 2
- * with the GNU Classpath Exception which is available at
- * https://www.gnu.org/software/classpath/license.html.
- *
- * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
- ********************************************************************************/
-var __values = (this && this.__values) || function(o) {
-    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
-    if (m) return m.call(o);
-    if (o && typeof o.length === "number") return {
-        next: function () {
-            if (o && i >= o.length) o = void 0;
-            return { value: o && o[i++], done: !o };
-        }
-    };
-    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.normalize = exports.relative = exports.resolve = void 0;
-// file copied from https://github.com/wjordan/browser-path/blob/master/src/node_path.ts
-// Original license:
-/*
-====
-
-Copyright (c) 2015 John Vilk and other contributors.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of
-this software and associated documentation files (the "Software"), to deal in
-the Software without restriction, including without limitation the rights to
-use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
-of the Software, and to permit persons to whom the Software is furnished to do
-so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-====
-*/
-var paths_1 = __webpack_require__(/*! @theia/languages/lib/common/language-selector/paths */ "./node_modules/@theia/languages/lib/common/language-selector/paths.js");
-var replaceRegex = new RegExp('//+', 'g');
-function resolve() {
-    var e_1, _a;
-    var paths = [];
-    for (var _i = 0; _i < arguments.length; _i++) {
-        paths[_i] = arguments[_i];
-    }
-    var processed = [];
-    try {
-        for (var paths_2 = __values(paths), paths_2_1 = paths_2.next(); !paths_2_1.done; paths_2_1 = paths_2.next()) {
-            var p = paths_2_1.value;
-            if (typeof p !== 'string') {
-                throw new TypeError('Invalid argument type to path.join: ' + (typeof p));
-            }
-            else if (p !== '') {
-                if (p.charAt(0) === paths_1.sep) {
-                    processed = [];
-                }
-                processed.push(p);
-            }
-        }
-    }
-    catch (e_1_1) { e_1 = { error: e_1_1 }; }
-    finally {
-        try {
-            if (paths_2_1 && !paths_2_1.done && (_a = paths_2.return)) _a.call(paths_2);
-        }
-        finally { if (e_1) throw e_1.error; }
-    }
-    var resolved = normalize(processed.join(paths_1.sep));
-    if (resolved.length > 1 && resolved.charAt(resolved.length - 1) === paths_1.sep) {
-        return resolved.substr(0, resolved.length - 1);
-    }
-    return resolved;
-}
-exports.resolve = resolve;
-function relative(from, to) {
-    var i;
-    from = resolve(from);
-    to = resolve(to);
-    var fromSegments = from.split(paths_1.sep);
-    var toSegments = to.split(paths_1.sep);
-    toSegments.shift();
-    fromSegments.shift();
-    var upCount = 0;
-    var downSegments = [];
-    for (i = 0; i < fromSegments.length; i++) {
-        var seg = fromSegments[i];
-        if (seg === toSegments[i]) {
-            continue;
-        }
-        upCount = fromSegments.length - i;
-        break;
-    }
-    downSegments = toSegments.slice(i);
-    if (fromSegments.length === 1 && fromSegments[0] === '') {
-        upCount = 0;
-    }
-    if (upCount > fromSegments.length) {
-        upCount = fromSegments.length;
-    }
-    var rv = '';
-    for (i = 0; i < upCount; i++) {
-        rv += '../';
-    }
-    rv += downSegments.join(paths_1.sep);
-    if (rv.length > 1 && rv.charAt(rv.length - 1) === paths_1.sep) {
-        rv = rv.substr(0, rv.length - 1);
-    }
-    return rv;
-}
-exports.relative = relative;
-function normalize(p) {
-    var e_2, _a;
-    if (p === '') {
-        p = '.';
-    }
-    var absolute = p.charAt(0) === paths_1.sep;
-    p = removeDuplicateSeparators(p);
-    var components = p.split(paths_1.sep);
-    var goodComponents = [];
-    try {
-        for (var components_1 = __values(components), components_1_1 = components_1.next(); !components_1_1.done; components_1_1 = components_1.next()) {
-            var c = components_1_1.value;
-            if (c === '.') {
-                continue;
-            }
-            else if (c === '..' && (absolute || (!absolute && goodComponents.length > 0 && goodComponents[0] !== '..'))) {
-                goodComponents.pop();
-            }
-            else {
-                goodComponents.push(c);
-            }
-        }
-    }
-    catch (e_2_1) { e_2 = { error: e_2_1 }; }
-    finally {
-        try {
-            if (components_1_1 && !components_1_1.done && (_a = components_1.return)) _a.call(components_1);
-        }
-        finally { if (e_2) throw e_2.error; }
-    }
-    if (!absolute && goodComponents.length < 2) {
-        switch (goodComponents.length) {
-            case 1:
-                if (goodComponents[0] === '') {
-                    goodComponents.unshift('.');
-                }
-                break;
-            default:
-                goodComponents.push('.');
-        }
-    }
-    p = goodComponents.join(paths_1.sep);
-    if (absolute && p.charAt(0) !== paths_1.sep) {
-        p = paths_1.sep + p;
-    }
-    return p;
-}
-exports.normalize = normalize;
-function removeDuplicateSeparators(p) {
-    p = p.replace(replaceRegex, paths_1.sep);
-    return p;
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/@theia/plugin-ext/lib/common/plugin-api-rpc-model.js":
+/***/ "./node_modules/@theia/monaco/data/monaco-themes/vscode/dark_vs.json":
 /*!***************************************************************************!*\
-  !*** ./node_modules/@theia/plugin-ext/lib/common/plugin-api-rpc-model.js ***!
+  !*** ./node_modules/@theia/monaco/data/monaco-themes/vscode/dark_vs.json ***!
   \***************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: $schema, name, include, tokenColors, default */
+/***/ (function(module) {
 
-"use strict";
-
-/********************************************************************************
- * Copyright (C) 2018 Red Hat, Inc. and others.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Eclipse Public License v. 2.0 which is available at
- * http://www.eclipse.org/legal/epl-2.0.
- *
- * This Source Code may also be made available under the following Secondary
- * Licenses when the conditions for such availability set forth in the Eclipse
- * Public License v. 2.0 are satisfied: GNU General Public License, version 2
- * with the GNU Classpath Exception which is available at
- * https://www.gnu.org/software/classpath/license.html.
- *
- * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
- ********************************************************************************/
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.FoldingRangeKind = exports.SymbolTag = exports.SymbolKind = exports.DocumentHighlightKind = exports.MarkerTag = exports.MarkerSeverity = exports.IdObject = exports.CompletionItemKind = exports.CompletionItemInsertTextRule = exports.CompletionTriggerKind = void 0;
-var CompletionTriggerKind;
-(function (CompletionTriggerKind) {
-    CompletionTriggerKind[CompletionTriggerKind["Invoke"] = 0] = "Invoke";
-    CompletionTriggerKind[CompletionTriggerKind["TriggerCharacter"] = 1] = "TriggerCharacter";
-    CompletionTriggerKind[CompletionTriggerKind["TriggerForIncompleteCompletions"] = 2] = "TriggerForIncompleteCompletions";
-})(CompletionTriggerKind = exports.CompletionTriggerKind || (exports.CompletionTriggerKind = {}));
-var CompletionItemInsertTextRule;
-(function (CompletionItemInsertTextRule) {
-    CompletionItemInsertTextRule[CompletionItemInsertTextRule["KeepWhitespace"] = 1] = "KeepWhitespace";
-    CompletionItemInsertTextRule[CompletionItemInsertTextRule["InsertAsSnippet"] = 4] = "InsertAsSnippet";
-})(CompletionItemInsertTextRule = exports.CompletionItemInsertTextRule || (exports.CompletionItemInsertTextRule = {}));
-var CompletionItemKind;
-(function (CompletionItemKind) {
-    CompletionItemKind[CompletionItemKind["Method"] = 0] = "Method";
-    CompletionItemKind[CompletionItemKind["Function"] = 1] = "Function";
-    CompletionItemKind[CompletionItemKind["Constructor"] = 2] = "Constructor";
-    CompletionItemKind[CompletionItemKind["Field"] = 3] = "Field";
-    CompletionItemKind[CompletionItemKind["Variable"] = 4] = "Variable";
-    CompletionItemKind[CompletionItemKind["Class"] = 5] = "Class";
-    CompletionItemKind[CompletionItemKind["Struct"] = 6] = "Struct";
-    CompletionItemKind[CompletionItemKind["Interface"] = 7] = "Interface";
-    CompletionItemKind[CompletionItemKind["Module"] = 8] = "Module";
-    CompletionItemKind[CompletionItemKind["Property"] = 9] = "Property";
-    CompletionItemKind[CompletionItemKind["Event"] = 10] = "Event";
-    CompletionItemKind[CompletionItemKind["Operator"] = 11] = "Operator";
-    CompletionItemKind[CompletionItemKind["Unit"] = 12] = "Unit";
-    CompletionItemKind[CompletionItemKind["Value"] = 13] = "Value";
-    CompletionItemKind[CompletionItemKind["Constant"] = 14] = "Constant";
-    CompletionItemKind[CompletionItemKind["Enum"] = 15] = "Enum";
-    CompletionItemKind[CompletionItemKind["EnumMember"] = 16] = "EnumMember";
-    CompletionItemKind[CompletionItemKind["Keyword"] = 17] = "Keyword";
-    CompletionItemKind[CompletionItemKind["Text"] = 18] = "Text";
-    CompletionItemKind[CompletionItemKind["Color"] = 19] = "Color";
-    CompletionItemKind[CompletionItemKind["File"] = 20] = "File";
-    CompletionItemKind[CompletionItemKind["Reference"] = 21] = "Reference";
-    CompletionItemKind[CompletionItemKind["Customcolor"] = 22] = "Customcolor";
-    CompletionItemKind[CompletionItemKind["Folder"] = 23] = "Folder";
-    CompletionItemKind[CompletionItemKind["TypeParameter"] = 24] = "TypeParameter";
-    CompletionItemKind[CompletionItemKind["Snippet"] = 25] = "Snippet";
-})(CompletionItemKind = exports.CompletionItemKind || (exports.CompletionItemKind = {}));
-var IdObject = /** @class */ (function () {
-    function IdObject() {
-    }
-    return IdObject;
-}());
-exports.IdObject = IdObject;
-var MarkerSeverity;
-(function (MarkerSeverity) {
-    MarkerSeverity[MarkerSeverity["Hint"] = 1] = "Hint";
-    MarkerSeverity[MarkerSeverity["Info"] = 2] = "Info";
-    MarkerSeverity[MarkerSeverity["Warning"] = 4] = "Warning";
-    MarkerSeverity[MarkerSeverity["Error"] = 8] = "Error";
-})(MarkerSeverity = exports.MarkerSeverity || (exports.MarkerSeverity = {}));
-var MarkerTag;
-(function (MarkerTag) {
-    MarkerTag[MarkerTag["Unnecessary"] = 1] = "Unnecessary";
-})(MarkerTag = exports.MarkerTag || (exports.MarkerTag = {}));
-var DocumentHighlightKind;
-(function (DocumentHighlightKind) {
-    DocumentHighlightKind[DocumentHighlightKind["Text"] = 0] = "Text";
-    DocumentHighlightKind[DocumentHighlightKind["Read"] = 1] = "Read";
-    DocumentHighlightKind[DocumentHighlightKind["Write"] = 2] = "Write";
-})(DocumentHighlightKind = exports.DocumentHighlightKind || (exports.DocumentHighlightKind = {}));
-var SymbolKind;
-(function (SymbolKind) {
-    SymbolKind[SymbolKind["File"] = 0] = "File";
-    SymbolKind[SymbolKind["Module"] = 1] = "Module";
-    SymbolKind[SymbolKind["Namespace"] = 2] = "Namespace";
-    SymbolKind[SymbolKind["Package"] = 3] = "Package";
-    SymbolKind[SymbolKind["Class"] = 4] = "Class";
-    SymbolKind[SymbolKind["Method"] = 5] = "Method";
-    SymbolKind[SymbolKind["Property"] = 6] = "Property";
-    SymbolKind[SymbolKind["Field"] = 7] = "Field";
-    SymbolKind[SymbolKind["Constructor"] = 8] = "Constructor";
-    SymbolKind[SymbolKind["Enum"] = 9] = "Enum";
-    SymbolKind[SymbolKind["Interface"] = 10] = "Interface";
-    SymbolKind[SymbolKind["Function"] = 11] = "Function";
-    SymbolKind[SymbolKind["Variable"] = 12] = "Variable";
-    SymbolKind[SymbolKind["Constant"] = 13] = "Constant";
-    SymbolKind[SymbolKind["String"] = 14] = "String";
-    SymbolKind[SymbolKind["Number"] = 15] = "Number";
-    SymbolKind[SymbolKind["Boolean"] = 16] = "Boolean";
-    SymbolKind[SymbolKind["Array"] = 17] = "Array";
-    SymbolKind[SymbolKind["Object"] = 18] = "Object";
-    SymbolKind[SymbolKind["Key"] = 19] = "Key";
-    SymbolKind[SymbolKind["Null"] = 20] = "Null";
-    SymbolKind[SymbolKind["EnumMember"] = 21] = "EnumMember";
-    SymbolKind[SymbolKind["Struct"] = 22] = "Struct";
-    SymbolKind[SymbolKind["Event"] = 23] = "Event";
-    SymbolKind[SymbolKind["Operator"] = 24] = "Operator";
-    SymbolKind[SymbolKind["TypeParameter"] = 25] = "TypeParameter";
-})(SymbolKind = exports.SymbolKind || (exports.SymbolKind = {}));
-var SymbolTag;
-(function (SymbolTag) {
-    SymbolTag[SymbolTag["Deprecated"] = 1] = "Deprecated";
-})(SymbolTag = exports.SymbolTag || (exports.SymbolTag = {}));
-var FoldingRangeKind = /** @class */ (function () {
-    function FoldingRangeKind(value) {
-        this.value = value;
-    }
-    FoldingRangeKind.Comment = new FoldingRangeKind('comment');
-    FoldingRangeKind.Imports = new FoldingRangeKind('imports');
-    FoldingRangeKind.Region = new FoldingRangeKind('region');
-    return FoldingRangeKind;
-}());
-exports.FoldingRangeKind = FoldingRangeKind;
-
+module.exports = JSON.parse("{\"$schema\":\"vscode://schemas/color-theme\",\"name\":\"Dark (Visual Studio)\",\"include\":\"./dark_defaults.json\",\"tokenColors\":[{\"scope\":[\"meta.embedded\",\"source.groovy.embedded\"],\"settings\":{\"foreground\":\"#D4D4D4\"}},{\"scope\":\"emphasis\",\"settings\":{\"fontStyle\":\"italic\"}},{\"scope\":\"strong\",\"settings\":{\"fontStyle\":\"bold\"}},{\"scope\":\"header\",\"settings\":{\"foreground\":\"#000080\"}},{\"scope\":\"comment\",\"settings\":{\"foreground\":\"#6A9955\"}},{\"scope\":\"constant.language\",\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":[\"constant.numeric\",\"entity.name.operator.custom-literal.number\",\"variable.other.enummember\",\"keyword.operator.plus.exponent\",\"keyword.operator.minus.exponent\"],\"settings\":{\"foreground\":\"#b5cea8\"}},{\"scope\":\"constant.regexp\",\"settings\":{\"foreground\":\"#646695\"}},{\"scope\":\"entity.name.tag\",\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":\"entity.name.tag.css\",\"settings\":{\"foreground\":\"#d7ba7d\"}},{\"scope\":\"entity.other.attribute-name\",\"settings\":{\"foreground\":\"#9cdcfe\"}},{\"scope\":[\"entity.other.attribute-name.class.css\",\"entity.other.attribute-name.class.mixin.css\",\"entity.other.attribute-name.id.css\",\"entity.other.attribute-name.parent-selector.css\",\"entity.other.attribute-name.pseudo-class.css\",\"entity.other.attribute-name.pseudo-element.css\",\"source.css.less entity.other.attribute-name.id\",\"entity.other.attribute-name.attribute.scss\",\"entity.other.attribute-name.scss\"],\"settings\":{\"foreground\":\"#d7ba7d\"}},{\"scope\":\"invalid\",\"settings\":{\"foreground\":\"#f44747\"}},{\"scope\":\"markup.underline\",\"settings\":{\"fontStyle\":\"underline\"}},{\"scope\":\"markup.bold\",\"settings\":{\"fontStyle\":\"bold\",\"foreground\":\"#569cd6\"}},{\"scope\":\"markup.heading\",\"settings\":{\"fontStyle\":\"bold\",\"foreground\":\"#569cd6\"}},{\"scope\":\"markup.italic\",\"settings\":{\"fontStyle\":\"italic\"}},{\"scope\":\"markup.inserted\",\"settings\":{\"foreground\":\"#b5cea8\"}},{\"scope\":\"markup.deleted\",\"settings\":{\"foreground\":\"#ce9178\"}},{\"scope\":\"markup.changed\",\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":\"punctuation.definition.quote.begin.markdown\",\"settings\":{\"foreground\":\"#6A9955\"}},{\"scope\":\"punctuation.definition.list.begin.markdown\",\"settings\":{\"foreground\":\"#6796e6\"}},{\"scope\":\"markup.inline.raw\",\"settings\":{\"foreground\":\"#ce9178\"}},{\"name\":\"brackets of XML/HTML tags\",\"scope\":\"punctuation.definition.tag\",\"settings\":{\"foreground\":\"#808080\"}},{\"scope\":[\"meta.preprocessor\",\"entity.name.function.preprocessor\"],\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":\"meta.preprocessor.string\",\"settings\":{\"foreground\":\"#ce9178\"}},{\"scope\":\"meta.preprocessor.numeric\",\"settings\":{\"foreground\":\"#b5cea8\"}},{\"scope\":\"meta.structure.dictionary.key.python\",\"settings\":{\"foreground\":\"#9cdcfe\"}},{\"scope\":\"meta.diff.header\",\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":\"storage\",\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":\"storage.type\",\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":[\"storage.modifier\",\"keyword.operator.noexcept\"],\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":[\"string\",\"entity.name.operator.custom-literal.string\",\"meta.embedded.assembly\"],\"settings\":{\"foreground\":\"#ce9178\"}},{\"scope\":\"string.tag\",\"settings\":{\"foreground\":\"#ce9178\"}},{\"scope\":\"string.value\",\"settings\":{\"foreground\":\"#ce9178\"}},{\"scope\":\"string.regexp\",\"settings\":{\"foreground\":\"#d16969\"}},{\"name\":\"String interpolation\",\"scope\":[\"punctuation.definition.template-expression.begin\",\"punctuation.definition.template-expression.end\",\"punctuation.section.embedded\"],\"settings\":{\"foreground\":\"#569cd6\"}},{\"name\":\"Reset JavaScript string interpolation expression\",\"scope\":[\"meta.template.expression\"],\"settings\":{\"foreground\":\"#d4d4d4\"}},{\"scope\":[\"support.type.vendored.property-name\",\"support.type.property-name\",\"variable.css\",\"variable.scss\",\"variable.other.less\",\"source.coffee.embedded\"],\"settings\":{\"foreground\":\"#9cdcfe\"}},{\"scope\":\"keyword\",\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":\"keyword.control\",\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":\"keyword.operator\",\"settings\":{\"foreground\":\"#d4d4d4\"}},{\"scope\":[\"keyword.operator.new\",\"keyword.operator.expression\",\"keyword.operator.cast\",\"keyword.operator.sizeof\",\"keyword.operator.alignof\",\"keyword.operator.typeid\",\"keyword.operator.alignas\",\"keyword.operator.instanceof\",\"keyword.operator.logical.python\",\"keyword.operator.wordlike\"],\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":\"keyword.other.unit\",\"settings\":{\"foreground\":\"#b5cea8\"}},{\"scope\":[\"punctuation.section.embedded.begin.php\",\"punctuation.section.embedded.end.php\"],\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":\"support.function.git-rebase\",\"settings\":{\"foreground\":\"#9cdcfe\"}},{\"scope\":\"constant.sha.git-rebase\",\"settings\":{\"foreground\":\"#b5cea8\"}},{\"name\":\"coloring of the Java import and package identifiers\",\"scope\":[\"storage.modifier.import.java\",\"variable.language.wildcard.java\",\"storage.modifier.package.java\"],\"settings\":{\"foreground\":\"#d4d4d4\"}},{\"name\":\"this.self\",\"scope\":\"variable.language\",\"settings\":{\"foreground\":\"#569cd6\"}}]}");
 
 /***/ }),
 
-/***/ "./node_modules/@theia/plugin-ext/lib/common/plugin-api-rpc.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/@theia/plugin-ext/lib/common/plugin-api-rpc.js ***!
-  \*********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./node_modules/@theia/monaco/data/monaco-themes/vscode/hc_black.json":
+/*!****************************************************************************!*\
+  !*** ./node_modules/@theia/monaco/data/monaco-themes/vscode/hc_black.json ***!
+  \****************************************************************************/
+/*! exports provided: $schema, name, include, colors, tokenColors, default */
+/***/ (function(module) {
 
-"use strict";
-
-/********************************************************************************
- * Copyright (C) 2018 Red Hat, Inc. and others.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Eclipse Public License v. 2.0 which is available at
- * http://www.eclipse.org/legal/epl-2.0.
- *
- * This Source Code may also be made available under the following Secondary
- * Licenses when the conditions for such availability set forth in the Eclipse
- * Public License v. 2.0 are satisfied: GNU General Public License, version 2
- * with the GNU Classpath Exception which is available at
- * https://www.gnu.org/software/classpath/license.html.
- *
- * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
- ********************************************************************************/
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.MAIN_RPC_CONTEXT = exports.PLUGIN_RPC_CONTEXT = exports.OutputChannelRegistryFactory = exports.LanguagesMainFactory = exports.ResourceTextEditDto = exports.TrackedRangeStickiness = exports.TextEditorRevealType = exports.EditorPosition = exports.ScmCommandArg = exports.TreeViewItemCollapsibleState = exports.TreeViewSelection = exports.MainMessageType = exports.emptyPlugin = void 0;
-/* eslint-disable @typescript-eslint/no-explicit-any */
-var rpc_protocol_1 = __webpack_require__(/*! ./rpc-protocol */ "./node_modules/@theia/plugin-ext/lib/common/rpc-protocol.js");
-exports.emptyPlugin = {
-    lifecycle: {
-        startMethod: 'empty',
-        stopMethod: 'empty'
-    },
-    model: {
-        id: 'emptyPlugin',
-        name: 'emptyPlugin',
-        publisher: 'Theia',
-        version: 'empty',
-        displayName: 'empty',
-        description: 'empty',
-        engine: {
-            type: 'empty',
-            version: 'empty'
-        },
-        packagePath: 'empty',
-        packageUri: 'empty',
-        entryPoint: {}
-    },
-    pluginPath: 'empty',
-    pluginFolder: 'empty',
-    rawModel: {
-        name: 'emptyPlugin',
-        publisher: 'Theia',
-        version: 'empty',
-        displayName: 'empty',
-        description: 'empty',
-        engines: {
-            type: 'empty',
-            version: 'empty'
-        },
-        packagePath: 'empty'
-    }
-};
-var MainMessageType;
-(function (MainMessageType) {
-    MainMessageType[MainMessageType["Error"] = 0] = "Error";
-    MainMessageType[MainMessageType["Warning"] = 1] = "Warning";
-    MainMessageType[MainMessageType["Info"] = 2] = "Info";
-})(MainMessageType = exports.MainMessageType || (exports.MainMessageType = {}));
-var TreeViewSelection;
-(function (TreeViewSelection) {
-    function is(arg) {
-        return !!arg && typeof arg === 'object' && 'treeViewId' in arg && 'treeItemId' in arg;
-    }
-    TreeViewSelection.is = is;
-})(TreeViewSelection = exports.TreeViewSelection || (exports.TreeViewSelection = {}));
-/**
- * Collapsible state of the tree item
- */
-var TreeViewItemCollapsibleState;
-(function (TreeViewItemCollapsibleState) {
-    /**
-     * Determines an item can be neither collapsed nor expanded. Implies it has no children.
-     */
-    TreeViewItemCollapsibleState[TreeViewItemCollapsibleState["None"] = 0] = "None";
-    /**
-     * Determines an item is collapsed
-     */
-    TreeViewItemCollapsibleState[TreeViewItemCollapsibleState["Collapsed"] = 1] = "Collapsed";
-    /**
-     * Determines an item is expanded
-     */
-    TreeViewItemCollapsibleState[TreeViewItemCollapsibleState["Expanded"] = 2] = "Expanded";
-})(TreeViewItemCollapsibleState = exports.TreeViewItemCollapsibleState || (exports.TreeViewItemCollapsibleState = {}));
-var ScmCommandArg;
-(function (ScmCommandArg) {
-    function is(arg) {
-        return !!arg && typeof arg === 'object' && 'sourceControlHandle' in arg;
-    }
-    ScmCommandArg.is = is;
-})(ScmCommandArg = exports.ScmCommandArg || (exports.ScmCommandArg = {}));
-var EditorPosition;
-(function (EditorPosition) {
-    EditorPosition[EditorPosition["ONE"] = 0] = "ONE";
-    EditorPosition[EditorPosition["TWO"] = 1] = "TWO";
-    EditorPosition[EditorPosition["THREE"] = 2] = "THREE";
-    EditorPosition[EditorPosition["FOUR"] = 3] = "FOUR";
-    EditorPosition[EditorPosition["FIVE"] = 4] = "FIVE";
-    EditorPosition[EditorPosition["SIX"] = 5] = "SIX";
-    EditorPosition[EditorPosition["SEVEN"] = 6] = "SEVEN";
-    EditorPosition[EditorPosition["EIGHT"] = 7] = "EIGHT";
-    EditorPosition[EditorPosition["NINE"] = 8] = "NINE";
-})(EditorPosition = exports.EditorPosition || (exports.EditorPosition = {}));
-var TextEditorRevealType;
-(function (TextEditorRevealType) {
-    TextEditorRevealType[TextEditorRevealType["Default"] = 0] = "Default";
-    TextEditorRevealType[TextEditorRevealType["InCenter"] = 1] = "InCenter";
-    TextEditorRevealType[TextEditorRevealType["InCenterIfOutsideViewport"] = 2] = "InCenterIfOutsideViewport";
-    TextEditorRevealType[TextEditorRevealType["AtTop"] = 3] = "AtTop";
-})(TextEditorRevealType = exports.TextEditorRevealType || (exports.TextEditorRevealType = {}));
-/**
- * Describes the behavior of decorations when typing/editing near their edges.
- */
-var TrackedRangeStickiness;
-(function (TrackedRangeStickiness) {
-    TrackedRangeStickiness[TrackedRangeStickiness["AlwaysGrowsWhenTypingAtEdges"] = 0] = "AlwaysGrowsWhenTypingAtEdges";
-    TrackedRangeStickiness[TrackedRangeStickiness["NeverGrowsWhenTypingAtEdges"] = 1] = "NeverGrowsWhenTypingAtEdges";
-    TrackedRangeStickiness[TrackedRangeStickiness["GrowsOnlyWhenTypingBefore"] = 2] = "GrowsOnlyWhenTypingBefore";
-    TrackedRangeStickiness[TrackedRangeStickiness["GrowsOnlyWhenTypingAfter"] = 3] = "GrowsOnlyWhenTypingAfter";
-})(TrackedRangeStickiness = exports.TrackedRangeStickiness || (exports.TrackedRangeStickiness = {}));
-var ResourceTextEditDto;
-(function (ResourceTextEditDto) {
-    function is(arg) {
-        return !!arg && typeof arg === 'object' && 'resource' in arg && 'edits' in arg;
-    }
-    ResourceTextEditDto.is = is;
-})(ResourceTextEditDto = exports.ResourceTextEditDto || (exports.ResourceTextEditDto = {}));
-exports.LanguagesMainFactory = Symbol('LanguagesMainFactory');
-exports.OutputChannelRegistryFactory = Symbol('OutputChannelRegistryFactory');
-exports.PLUGIN_RPC_CONTEXT = {
-    COMMAND_REGISTRY_MAIN: rpc_protocol_1.createProxyIdentifier('CommandRegistryMain'),
-    QUICK_OPEN_MAIN: rpc_protocol_1.createProxyIdentifier('QuickOpenMain'),
-    DIALOGS_MAIN: rpc_protocol_1.createProxyIdentifier('DialogsMain'),
-    WORKSPACE_MAIN: rpc_protocol_1.createProxyIdentifier('WorkspaceMain'),
-    MESSAGE_REGISTRY_MAIN: rpc_protocol_1.createProxyIdentifier('MessageRegistryMain'),
-    TEXT_EDITORS_MAIN: rpc_protocol_1.createProxyIdentifier('TextEditorsMain'),
-    DOCUMENTS_MAIN: rpc_protocol_1.createProxyIdentifier('DocumentsMain'),
-    STATUS_BAR_MESSAGE_REGISTRY_MAIN: rpc_protocol_1.createProxyIdentifier('StatusBarMessageRegistryMain'),
-    ENV_MAIN: rpc_protocol_1.createProxyIdentifier('EnvMain'),
-    NOTIFICATION_MAIN: rpc_protocol_1.createProxyIdentifier('NotificationMain'),
-    TERMINAL_MAIN: rpc_protocol_1.createProxyIdentifier('TerminalServiceMain'),
-    TREE_VIEWS_MAIN: rpc_protocol_1.createProxyIdentifier('TreeViewsMain'),
-    PREFERENCE_REGISTRY_MAIN: rpc_protocol_1.createProxyIdentifier('PreferenceRegistryMain'),
-    OUTPUT_CHANNEL_REGISTRY_MAIN: rpc_protocol_1.createProxyIdentifier('OutputChannelRegistryMain'),
-    LANGUAGES_MAIN: rpc_protocol_1.createProxyIdentifier('LanguagesMain'),
-    CONNECTION_MAIN: rpc_protocol_1.createProxyIdentifier('ConnectionMain'),
-    WEBVIEWS_MAIN: rpc_protocol_1.createProxyIdentifier('WebviewsMain'),
-    STORAGE_MAIN: rpc_protocol_1.createProxyIdentifier('StorageMain'),
-    TASKS_MAIN: rpc_protocol_1.createProxyIdentifier('TasksMain'),
-    LANGUAGES_CONTRIBUTION_MAIN: rpc_protocol_1.createProxyIdentifier('LanguagesContributionMain'),
-    DEBUG_MAIN: rpc_protocol_1.createProxyIdentifier('DebugMain'),
-    FILE_SYSTEM_MAIN: rpc_protocol_1.createProxyIdentifier('FileSystemMain'),
-    SCM_MAIN: rpc_protocol_1.createProxyIdentifier('ScmMain'),
-    DECORATIONS_MAIN: rpc_protocol_1.createProxyIdentifier('DecorationsMain'),
-    WINDOW_MAIN: rpc_protocol_1.createProxyIdentifier('WindowMain'),
-    CLIPBOARD_MAIN: rpc_protocol_1.createProxyIdentifier('ClipboardMain')
-};
-exports.MAIN_RPC_CONTEXT = {
-    HOSTED_PLUGIN_MANAGER_EXT: rpc_protocol_1.createProxyIdentifier('PluginManagerExt'),
-    COMMAND_REGISTRY_EXT: rpc_protocol_1.createProxyIdentifier('CommandRegistryExt'),
-    QUICK_OPEN_EXT: rpc_protocol_1.createProxyIdentifier('QuickOpenExt'),
-    WINDOW_STATE_EXT: rpc_protocol_1.createProxyIdentifier('WindowStateExt'),
-    NOTIFICATION_EXT: rpc_protocol_1.createProxyIdentifier('NotificationExt'),
-    WORKSPACE_EXT: rpc_protocol_1.createProxyIdentifier('WorkspaceExt'),
-    TEXT_EDITORS_EXT: rpc_protocol_1.createProxyIdentifier('TextEditorsExt'),
-    EDITORS_AND_DOCUMENTS_EXT: rpc_protocol_1.createProxyIdentifier('EditorsAndDocumentsExt'),
-    DOCUMENTS_EXT: rpc_protocol_1.createProxyIdentifier('DocumentsExt'),
-    TERMINAL_EXT: rpc_protocol_1.createProxyIdentifier('TerminalServiceExt'),
-    OUTPUT_CHANNEL_REGISTRY_EXT: rpc_protocol_1.createProxyIdentifier('OutputChannelRegistryExt'),
-    TREE_VIEWS_EXT: rpc_protocol_1.createProxyIdentifier('TreeViewsExt'),
-    PREFERENCE_REGISTRY_EXT: rpc_protocol_1.createProxyIdentifier('PreferenceRegistryExt'),
-    LANGUAGES_EXT: rpc_protocol_1.createProxyIdentifier('LanguagesExt'),
-    CONNECTION_EXT: rpc_protocol_1.createProxyIdentifier('ConnectionExt'),
-    WEBVIEWS_EXT: rpc_protocol_1.createProxyIdentifier('WebviewsExt'),
-    STORAGE_EXT: rpc_protocol_1.createProxyIdentifier('StorageExt'),
-    TASKS_EXT: rpc_protocol_1.createProxyIdentifier('TasksExt'),
-    LANGUAGES_CONTRIBUTION_EXT: rpc_protocol_1.createProxyIdentifier('LanguagesContributionExt'),
-    DEBUG_EXT: rpc_protocol_1.createProxyIdentifier('DebugExt'),
-    FILE_SYSTEM_EXT: rpc_protocol_1.createProxyIdentifier('FileSystemExt'),
-    SCM_EXT: rpc_protocol_1.createProxyIdentifier('ScmExt'),
-    DECORATIONS_EXT: rpc_protocol_1.createProxyIdentifier('DecorationsExt')
-};
-
+module.exports = JSON.parse("{\"$schema\":\"vscode://schemas/color-theme\",\"name\":\"Dark High Contrast\",\"include\":\"./hc_black_defaults.json\",\"colors\":{\"selection.background\":\"#008000\",\"editor.selectionBackground\":\"#FFFFFF\",\"statusBarItem.remoteBackground\":\"#00000000\"},\"tokenColors\":[{\"name\":\"Function declarations\",\"scope\":[\"entity.name.function\",\"support.function\",\"support.constant.handlebars\",\"source.powershell variable.other.member\"],\"settings\":{\"foreground\":\"#DCDCAA\"}},{\"name\":\"Types declaration and references\",\"scope\":[\"meta.return-type\",\"support.class\",\"support.type\",\"entity.name.type\",\"entity.name.namespace\",\"entity.name.scope-resolution\",\"entity.name.class\",\"storage.type.cs\",\"storage.type.generic.cs\",\"storage.type.modifier.cs\",\"storage.type.variable.cs\",\"storage.type.annotation.java\",\"storage.type.generic.java\",\"storage.type.java\",\"storage.type.object.array.java\",\"storage.type.primitive.array.java\",\"storage.type.primitive.java\",\"storage.type.token.java\",\"storage.type.groovy\",\"storage.type.annotation.groovy\",\"storage.type.parameters.groovy\",\"storage.type.generic.groovy\",\"storage.type.object.array.groovy\",\"storage.type.primitive.array.groovy\",\"storage.type.primitive.groovy\"],\"settings\":{\"foreground\":\"#4EC9B0\"}},{\"name\":\"Types declaration and references, TS grammar specific\",\"scope\":[\"meta.type.cast.expr\",\"meta.type.new.expr\",\"support.constant.math\",\"support.constant.dom\",\"support.constant.json\",\"entity.other.inherited-class\"],\"settings\":{\"foreground\":\"#4EC9B0\"}},{\"name\":\"Control flow / Special keywords\",\"scope\":[\"keyword.control\",\"source.cpp keyword.operator.new\",\"source.cpp keyword.operator.delete\",\"keyword.other.using\",\"keyword.other.operator\"],\"settings\":{\"foreground\":\"#C586C0\"}},{\"name\":\"Variable and parameter name\",\"scope\":[\"variable\",\"meta.definition.variable.name\",\"support.variable\"],\"settings\":{\"foreground\":\"#9CDCFE\"}},{\"name\":\"Object keys, TS grammar specific\",\"scope\":[\"meta.object-literal.key\"],\"settings\":{\"foreground\":\"#9CDCFE\"}},{\"name\":\"CSS property value\",\"scope\":[\"support.constant.property-value\",\"support.constant.font-name\",\"support.constant.media-type\",\"support.constant.media\",\"constant.other.color.rgb-value\",\"constant.other.rgb-value\",\"support.constant.color\"],\"settings\":{\"foreground\":\"#CE9178\"}},{\"name\":\"HC Search Editor context line override\",\"scope\":\"meta.resultLinePrefix.contextLinePrefix.search\",\"settings\":{\"foreground\":\"#CBEDCB\"}}]}");
 
 /***/ }),
 
-/***/ "./node_modules/@theia/plugin-ext/lib/common/plugin-ext-api-contribution.js":
-/*!**********************************************************************************!*\
-  !*** ./node_modules/@theia/plugin-ext/lib/common/plugin-ext-api-contribution.js ***!
-  \**********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.MainPluginApiProvider = exports.ExtPluginApiProvider = void 0;
-exports.ExtPluginApiProvider = 'extPluginApi';
-exports.MainPluginApiProvider = Symbol('mainPluginApi');
-
-
-/***/ }),
-
-/***/ "./node_modules/@theia/plugin-ext/lib/common/plugin-protocol.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/@theia/plugin-ext/lib/common/plugin-protocol.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.PluginHostEnvironmentVariable = exports.ServerPluginRunner = exports.PluginServer = exports.pluginServerJsonRpcPath = exports.HostedPluginServer = exports.PluginDeployerHandler = exports.HostedPluginClient = exports.buildFrontendModuleName = exports.getPluginId = exports.MetadataProcessor = exports.PluginType = exports.PluginDeployerEntryType = exports.PluginDeployerParticipant = exports.PluginDeployer = exports.PluginDeployerFileHandler = exports.PluginDeployerDirectoryHandler = exports.PluginDeployerResolver = exports.PluginScanner = exports.PluginPackage = exports.hostedServicePath = void 0;
-exports.hostedServicePath = '/services/hostedPlugin';
-var PluginPackage;
-(function (PluginPackage) {
-    function toPluginUrl(pck, relativePath) {
-        return "hostedPlugin/" + getPluginId(pck) + "/" + encodeURIComponent(relativePath);
-    }
-    PluginPackage.toPluginUrl = toPluginUrl;
-})(PluginPackage = exports.PluginPackage || (exports.PluginPackage = {}));
-exports.PluginScanner = Symbol('PluginScanner');
-/**
- * A plugin resolver is handling how to resolve a plugin link into a local resource.
- */
-exports.PluginDeployerResolver = Symbol('PluginDeployerResolver');
-exports.PluginDeployerDirectoryHandler = Symbol('PluginDeployerDirectoryHandler');
-exports.PluginDeployerFileHandler = Symbol('PluginDeployerFileHandler');
-exports.PluginDeployer = Symbol('PluginDeployer');
-exports.PluginDeployerParticipant = Symbol('PluginDeployerParticipant');
-var PluginDeployerEntryType;
-(function (PluginDeployerEntryType) {
-    PluginDeployerEntryType[PluginDeployerEntryType["FRONTEND"] = 0] = "FRONTEND";
-    PluginDeployerEntryType[PluginDeployerEntryType["BACKEND"] = 1] = "BACKEND";
-})(PluginDeployerEntryType = exports.PluginDeployerEntryType || (exports.PluginDeployerEntryType = {}));
-/**
- * Whether a plugin installed by a user or system.
- */
-var PluginType;
-(function (PluginType) {
-    PluginType[PluginType["System"] = 0] = "System";
-    PluginType[PluginType["User"] = 1] = "User";
-})(PluginType = exports.PluginType || (exports.PluginType = {}));
-;
-exports.MetadataProcessor = Symbol('MetadataProcessor');
-function getPluginId(plugin) {
-    return (plugin.publisher + "_" + plugin.name).replace(/\W/g, '_');
-}
-exports.getPluginId = getPluginId;
-function buildFrontendModuleName(plugin) {
-    return (plugin.publisher + "_" + plugin.name).replace(/\W/g, '_');
-}
-exports.buildFrontendModuleName = buildFrontendModuleName;
-exports.HostedPluginClient = Symbol('HostedPluginClient');
-exports.PluginDeployerHandler = Symbol('PluginDeployerHandler');
-exports.HostedPluginServer = Symbol('HostedPluginServer');
-/**
- * The JSON-RPC workspace interface.
- */
-exports.pluginServerJsonRpcPath = '/services/plugin-ext';
-exports.PluginServer = Symbol('PluginServer');
-exports.ServerPluginRunner = Symbol('ServerPluginRunner');
-exports.PluginHostEnvironmentVariable = Symbol('PluginHostEnvironmentVariable');
-
-
-/***/ }),
-
-/***/ "./node_modules/@theia/plugin-ext/lib/common/rpc-protocol.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/@theia/plugin-ext/lib/common/rpc-protocol.js ***!
-  \*******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(setImmediate) {
-/********************************************************************************
- * Copyright (C) 2018 Red Hat, Inc. and others.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Eclipse Public License v. 2.0 which is available at
- * http://www.eclipse.org/legal/epl-2.0.
- *
- * This Source Code may also be made available under the following Secondary
- * Licenses when the conditions for such availability set forth in the Eclipse
- * Public License v. 2.0 are satisfied: GNU General Public License, version 2
- * with the GNU Classpath Exception which is available at
- * https://www.gnu.org/software/classpath/license.html.
- *
- * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
- ********************************************************************************/
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-// copied from https://github.com/Microsoft/vscode/blob/master/src/vs/workbench/services/extensions/node/rpcProtocol.ts
-// with small modifications
-var __values = (this && this.__values) || function(o) {
-    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
-    if (m) return m.call(o);
-    if (o && typeof o.length === "number") return {
-        next: function () {
-            if (o && i >= o.length) o = void 0;
-            return { value: o && o[i++], done: !o };
-        }
-    };
-    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.transformErrorForSerialization = exports.RPCProtocolImpl = exports.ConnectionClosedError = exports.createProxyIdentifier = exports.ProxyIdentifier = exports.RPCProtocol = void 0;
-var disposable_1 = __webpack_require__(/*! @theia/core/lib/common/disposable */ "./node_modules/@theia/core/lib/common/disposable.js");
-var promise_util_1 = __webpack_require__(/*! @theia/core/lib/common/promise-util */ "./node_modules/@theia/core/lib/common/promise-util.js");
-var vscode_uri_1 = __webpack_require__(/*! vscode-uri */ "./node_modules/vscode-uri/lib/esm/index.js");
-var uri_1 = __webpack_require__(/*! @theia/core/lib/common/uri */ "./node_modules/@theia/core/lib/common/uri.js");
-var vscode_languageserver_protocol_1 = __webpack_require__(/*! vscode-languageserver-protocol */ "./node_modules/vscode-languageserver-protocol/lib/main.js");
-var types_impl_1 = __webpack_require__(/*! ../plugin/types-impl */ "./node_modules/@theia/plugin-ext/lib/plugin/types-impl.js");
-exports.RPCProtocol = Symbol('RPCProtocol');
-var ProxyIdentifier = /** @class */ (function () {
-    function ProxyIdentifier(isMain, id) {
-        this.isMain = isMain;
-        // TODO this is nasty, rewrite this
-        this.id = id.toString();
-    }
-    return ProxyIdentifier;
-}());
-exports.ProxyIdentifier = ProxyIdentifier;
-function createProxyIdentifier(identifier) {
-    return new ProxyIdentifier(false, identifier);
-}
-exports.createProxyIdentifier = createProxyIdentifier;
-var ConnectionClosedError;
-(function (ConnectionClosedError) {
-    var code = 'RPC_PROTOCOL_CLOSED';
-    function create(message) {
-        if (message === void 0) { message = 'connection is closed'; }
-        return Object.assign(new Error(message), { code: code });
-    }
-    ConnectionClosedError.create = create;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    function is(error) {
-        return !!error && typeof error === 'object' && 'code' in error && error['code'] === code;
-    }
-    ConnectionClosedError.is = is;
-})(ConnectionClosedError = exports.ConnectionClosedError || (exports.ConnectionClosedError = {}));
-var RPCProtocolImpl = /** @class */ (function () {
-    function RPCProtocolImpl(connection, remoteHostID) {
-        var _this = this;
-        this.remoteHostID = remoteHostID;
-        this.locals = new Map();
-        this.proxies = new Map();
-        this.lastMessageId = 0;
-        this.cancellationTokenSources = new Map();
-        this.pendingRPCReplies = new Map();
-        this.toDispose = new disposable_1.DisposableCollection(disposable_1.Disposable.create(function () { }));
-        this.toDispose.push(this.multiplexor = new RPCMultiplexer(connection, function (msg) { return _this.receiveOneMessage(msg); }, remoteHostID));
-        this.toDispose.push(disposable_1.Disposable.create(function () {
-            var e_1, _a;
-            _this.proxies.clear();
-            try {
-                for (var _b = __values(_this.pendingRPCReplies.values()), _c = _b.next(); !_c.done; _c = _b.next()) {
-                    var reply = _c.value;
-                    reply.reject(ConnectionClosedError.create());
-                }
-            }
-            catch (e_1_1) { e_1 = { error: e_1_1 }; }
-            finally {
-                try {
-                    if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
-                }
-                finally { if (e_1) throw e_1.error; }
-            }
-            _this.pendingRPCReplies.clear();
-        }));
-    }
-    Object.defineProperty(RPCProtocolImpl.prototype, "isDisposed", {
-        get: function () {
-            return this.toDispose.disposed;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    RPCProtocolImpl.prototype.dispose = function () {
-        this.toDispose.dispose();
-    };
-    RPCProtocolImpl.prototype.getProxy = function (proxyId) {
-        if (this.isDisposed) {
-            throw ConnectionClosedError.create();
-        }
-        var proxy = this.proxies.get(proxyId.id);
-        if (!proxy) {
-            proxy = this.createProxy(proxyId.id);
-            this.proxies.set(proxyId.id, proxy);
-        }
-        return proxy;
-    };
-    RPCProtocolImpl.prototype.set = function (identifier, instance) {
-        var _this = this;
-        if (this.isDisposed) {
-            throw ConnectionClosedError.create();
-        }
-        this.locals.set(identifier.id, instance);
-        if (disposable_1.Disposable.is(instance)) {
-            this.toDispose.push(instance);
-        }
-        this.toDispose.push(disposable_1.Disposable.create(function () { return _this.locals.delete(identifier.id); }));
-        return instance;
-    };
-    RPCProtocolImpl.prototype.createProxy = function (proxyId) {
-        var _this = this;
-        var handler = {
-            get: function (target, name) {
-                if (!target[name] && name.charCodeAt(0) === 36 /* CharCode.DollarSign */) {
-                    target[name] = function () {
-                        var myArgs = [];
-                        for (var _i = 0; _i < arguments.length; _i++) {
-                            myArgs[_i] = arguments[_i];
-                        }
-                        return _this.remoteCall(proxyId, name, myArgs);
-                    };
-                }
-                return target[name];
-            }
-        };
-        return new Proxy(Object.create(null), handler);
-    };
-    RPCProtocolImpl.prototype.remoteCall = function (proxyId, methodName, args) {
-        var _this = this;
-        if (this.isDisposed) {
-            return Promise.reject(ConnectionClosedError.create());
-        }
-        var cancellationToken = args.length && vscode_languageserver_protocol_1.CancellationToken.is(args[args.length - 1]) ? args.pop() : undefined;
-        if (cancellationToken && cancellationToken.isCancellationRequested) {
-            return Promise.reject(canceled());
-        }
-        var callId = String(++this.lastMessageId);
-        var result = new promise_util_1.Deferred();
-        if (cancellationToken) {
-            args.push('add.cancellation.token');
-            cancellationToken.onCancellationRequested(function () {
-                return _this.multiplexor.send(MessageFactory.cancel(callId, _this.messageToSendHostId));
-            });
-        }
-        this.pendingRPCReplies.set(callId, result);
-        this.multiplexor.send(MessageFactory.request(callId, proxyId, methodName, args, this.messageToSendHostId));
-        return result.promise;
-    };
-    RPCProtocolImpl.prototype.receiveOneMessage = function (rawmsg) {
-        if (this.isDisposed) {
-            return;
-        }
-        var msg = JSON.parse(rawmsg, ObjectsTransferrer.reviver);
-        // handle message that sets the Host ID
-        if (msg.setHostID) {
-            this.messageToSendHostId = msg.setHostID;
-            return;
-        }
-        // skip message if not matching host
-        if (this.remoteHostID && msg.hostID && this.remoteHostID !== msg.hostID) {
-            return;
-        }
-        switch (msg.type) {
-            case 1 /* Request */:
-                this.receiveRequest(msg);
-                break;
-            case 2 /* Reply */:
-                this.receiveReply(msg);
-                break;
-            case 3 /* ReplyErr */:
-                this.receiveReplyErr(msg);
-                break;
-            case 4 /* Cancel */:
-                this.receiveCancel(msg);
-                break;
-        }
-    };
-    RPCProtocolImpl.prototype.receiveCancel = function (msg) {
-        var cancellationTokenSource = this.cancellationTokenSources.get(msg.id);
-        if (cancellationTokenSource) {
-            cancellationTokenSource.cancel();
-        }
-    };
-    RPCProtocolImpl.prototype.receiveRequest = function (msg) {
-        var _this = this;
-        var callId = msg.id;
-        var proxyId = msg.proxyId;
-        // convert `null` to `undefined`, since we don't use `null` in internal plugin APIs
-        var args = msg.args.map(function (arg) { return arg === null ? undefined : arg; }); // eslint-disable-line no-null/no-null
-        var addToken = args.length && args[args.length - 1] === 'add.cancellation.token' ? args.pop() : false;
-        if (addToken) {
-            var tokenSource = new vscode_languageserver_protocol_1.CancellationTokenSource();
-            this.cancellationTokenSources.set(callId, tokenSource);
-            args.push(tokenSource.token);
-        }
-        var invocation = this.invokeHandler(proxyId, msg.method, args);
-        invocation.then(function (result) {
-            _this.cancellationTokenSources.delete(callId);
-            _this.multiplexor.send(MessageFactory.replyOK(callId, result, _this.messageToSendHostId));
-        }, function (error) {
-            _this.cancellationTokenSources.delete(callId);
-            _this.multiplexor.send(MessageFactory.replyErr(callId, error, _this.messageToSendHostId));
-        });
-    };
-    RPCProtocolImpl.prototype.receiveReply = function (msg) {
-        var callId = msg.id;
-        var pendingReply = this.pendingRPCReplies.get(callId);
-        if (!pendingReply) {
-            return;
-        }
-        this.pendingRPCReplies.delete(callId);
-        pendingReply.resolve(msg.res);
-    };
-    RPCProtocolImpl.prototype.receiveReplyErr = function (msg) {
-        var callId = msg.id;
-        var pendingReply = this.pendingRPCReplies.get(callId);
-        if (!pendingReply) {
-            return;
-        }
-        this.pendingRPCReplies.delete(callId);
-        var err = undefined;
-        if (msg.err && msg.err.$isError) {
-            err = new Error();
-            err.name = msg.err.name;
-            err.message = msg.err.message;
-            err.stack = msg.err.stack;
-        }
-        pendingReply.reject(err);
-    };
-    RPCProtocolImpl.prototype.invokeHandler = function (proxyId, methodName, args) {
-        try {
-            return Promise.resolve(this.doInvokeHandler(proxyId, methodName, args));
-        }
-        catch (err) {
-            return Promise.reject(err);
-        }
-    };
-    RPCProtocolImpl.prototype.doInvokeHandler = function (proxyId, methodName, args) {
-        var actor = this.locals.get(proxyId);
-        if (!actor) {
-            throw new Error('Unknown actor ' + proxyId);
-        }
-        var method = actor[methodName];
-        if (typeof method !== 'function') {
-            throw new Error('Unknown method ' + methodName + ' on actor ' + proxyId);
-        }
-        return method.apply(actor, args);
-    };
-    return RPCProtocolImpl;
-}());
-exports.RPCProtocolImpl = RPCProtocolImpl;
-function canceled() {
-    var error = new Error('Canceled');
-    error.name = error.message;
-    return error;
-}
-/**
- * Sends/Receives multiple messages in one go:
- *  - multiple messages to be sent from one stack get sent in bulk at `process.nextTick`.
- *  - each incoming message is handled in a separate `process.nextTick`.
- */
-var RPCMultiplexer = /** @class */ (function () {
-    function RPCMultiplexer(connection, onMessage, remoteHostId) {
-        var _this = this;
-        this.toDispose = new disposable_1.DisposableCollection();
-        this.connection = connection;
-        this.sendAccumulatedBound = this.sendAccumulated.bind(this);
-        this.toDispose.push(disposable_1.Disposable.create(function () { return _this.messagesToSend = []; }));
-        this.toDispose.push(this.connection.onMessage(function (data) {
-            var len = data.length;
-            for (var i = 0; i < len; i++) {
-                onMessage(data[i]);
-            }
-        }));
-        this.messagesToSend = [];
-        if (remoteHostId) {
-            this.send("{\"setHostID\":\"" + remoteHostId + "\"}");
-        }
-    }
-    RPCMultiplexer.prototype.dispose = function () {
-        this.toDispose.dispose();
-    };
-    RPCMultiplexer.prototype.sendAccumulated = function () {
-        var tmp = this.messagesToSend;
-        this.messagesToSend = [];
-        this.connection.send(tmp);
-    };
-    RPCMultiplexer.prototype.send = function (msg) {
-        if (this.toDispose.disposed) {
-            throw ConnectionClosedError.create();
-        }
-        if (this.messagesToSend.length === 0) {
-            if (typeof setImmediate !== 'undefined') {
-                setImmediate(this.sendAccumulatedBound);
-            }
-            else {
-                setTimeout(this.sendAccumulatedBound, 0);
-            }
-        }
-        this.messagesToSend.push(msg);
-    };
-    return RPCMultiplexer;
-}());
-var MessageFactory = /** @class */ (function () {
-    function MessageFactory() {
-    }
-    MessageFactory.cancel = function (req, messageToSendHostId) {
-        var prefix = '';
-        if (messageToSendHostId) {
-            prefix = "\"hostID\":\"" + messageToSendHostId + "\",";
-        }
-        return "{" + prefix + "\"type\":" + 4 /* Cancel */ + ",\"id\":\"" + req + "\"}";
-    };
-    MessageFactory.request = function (req, rpcId, method, args, messageToSendHostId) {
-        var prefix = '';
-        if (messageToSendHostId) {
-            prefix = "\"hostID\":\"" + messageToSendHostId + "\",";
-        }
-        return "{" + prefix + "\"type\":" + 1 /* Request */ + ",\"id\":\"" + req + "\",\"proxyId\":\"" + rpcId + "\",\"method\":\"" + method + "\",\"args\":" + JSON.stringify(args, ObjectsTransferrer.replacer) + "}";
-    };
-    MessageFactory.replyOK = function (req, res, messageToSendHostId) {
-        var prefix = '';
-        if (messageToSendHostId) {
-            prefix = "\"hostID\":\"" + messageToSendHostId + "\",";
-        }
-        if (typeof res === 'undefined') {
-            return "{" + prefix + "\"type\":" + 2 /* Reply */ + ",\"id\":\"" + req + "\"}";
-        }
-        return "{" + prefix + "\"type\":" + 2 /* Reply */ + ",\"id\":\"" + req + "\",\"res\":" + JSON.stringify(res, ObjectsTransferrer.replacer) + "}";
-    };
-    MessageFactory.replyErr = function (req, err, messageToSendHostId) {
-        var prefix = '';
-        if (messageToSendHostId) {
-            prefix = "\"hostID\":\"" + messageToSendHostId + "\",";
-        }
-        err = typeof err === 'string' ? new Error(err) : err;
-        if (err instanceof Error) {
-            return "{" + prefix + "\"type\":" + 3 /* ReplyErr */ + ",\"id\":\"" + req + "\",\"err\":" + JSON.stringify(transformErrorForSerialization(err)) + "}";
-        }
-        return "{" + prefix + "\"type\":" + 3 /* ReplyErr */ + ",\"id\":\"" + req + "\",\"err\":null}";
-    };
-    return MessageFactory;
-}());
-/**
- * These functions are responsible for correct transferring objects via rpc channel.
- *
- * To reach that some specific kind of objects is converted to json in some custom way
- * and then, after receiving, revived to objects again,
- * so there is feeling that object was transferred via rpc channel.
- *
- * To distinguish between regular and altered objects, field $type is added to altered ones.
- * Also value of that field specifies kind of the object.
- */
-var ObjectsTransferrer;
-(function (ObjectsTransferrer) {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    function replacer(key, value) {
-        if (value instanceof uri_1.default) {
-            return {
-                $type: SerializedObjectType.THEIA_URI,
-                data: value.toString()
-            };
-        }
-        else if (value instanceof types_impl_1.Range) {
-            var range = value;
-            var serializedValue = {
-                start: {
-                    line: range.start.line,
-                    character: range.start.character
-                },
-                end: {
-                    line: range.end.line,
-                    character: range.end.character
-                }
-            };
-            return {
-                $type: SerializedObjectType.THEIA_RANGE,
-                data: JSON.stringify(serializedValue)
-            };
-        }
-        else if (value && value['$mid'] === 1) {
-            // Given value is VSCode URI
-            // We cannot use instanceof here because VSCode URI has toJSON method which is invoked before this replacer.
-            var uri = vscode_uri_1.URI.revive(value);
-            return {
-                $type: SerializedObjectType.VSCODE_URI,
-                data: uri.toString()
-            };
-        }
-        return value;
-    }
-    ObjectsTransferrer.replacer = replacer;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    function reviver(key, value) {
-        if (isSerializedObject(value)) {
-            switch (value.$type) {
-                case SerializedObjectType.THEIA_URI:
-                    return new uri_1.default(value.data);
-                case SerializedObjectType.VSCODE_URI:
-                    return vscode_uri_1.URI.parse(value.data);
-                case SerializedObjectType.THEIA_RANGE:
-                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                    var obj = JSON.parse(value.data);
-                    var start = new types_impl_1.Position(obj.start.line, obj.start.character);
-                    var end = new types_impl_1.Position(obj.end.line, obj.end.character);
-                    return new types_impl_1.Range(start, end);
-            }
-        }
-        return value;
-    }
-    ObjectsTransferrer.reviver = reviver;
-})(ObjectsTransferrer || (ObjectsTransferrer = {}));
-var SerializedObjectType;
-(function (SerializedObjectType) {
-    SerializedObjectType[SerializedObjectType["THEIA_URI"] = 0] = "THEIA_URI";
-    SerializedObjectType[SerializedObjectType["VSCODE_URI"] = 1] = "VSCODE_URI";
-    SerializedObjectType[SerializedObjectType["THEIA_RANGE"] = 2] = "THEIA_RANGE";
-})(SerializedObjectType || (SerializedObjectType = {}));
-function isSerializedObject(obj) {
-    return obj && obj.$type !== undefined && obj.data !== undefined;
-}
-var CancelMessage = /** @class */ (function () {
-    function CancelMessage() {
-    }
-    return CancelMessage;
-}());
-var RequestMessage = /** @class */ (function () {
-    function RequestMessage() {
-    }
-    return RequestMessage;
-}());
-var ReplyMessage = /** @class */ (function () {
-    function ReplyMessage() {
-    }
-    return ReplyMessage;
-}());
-var ReplyErrMessage = /** @class */ (function () {
-    function ReplyErrMessage() {
-    }
-    return ReplyErrMessage;
-}());
-function transformErrorForSerialization(error) {
-    if (error instanceof Error) {
-        var name_1 = error.name, message = error.message;
-        var stack = error.stacktrace || error.stack;
-        return {
-            $isError: true,
-            name: name_1,
-            message: message,
-            stack: stack
-        };
-    }
-    // return as is
-    return error;
-}
-exports.transformErrorForSerialization = transformErrorForSerialization;
-
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../timers-browserify/main.js */ "./node_modules/timers-browserify/main.js").setImmediate))
-
-/***/ }),
-
-/***/ "./node_modules/@theia/plugin-ext/lib/common/uri-components.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/@theia/plugin-ext/lib/common/uri-components.js ***!
-  \*********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/********************************************************************************
- * Copyright (C) 2018 Red Hat, Inc. and others.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Eclipse Public License v. 2.0 which is available at
- * http://www.eclipse.org/legal/epl-2.0.
- *
- * This Source Code may also be made available under the following Secondary
- * Licenses when the conditions for such availability set forth in the Eclipse
- * Public License v. 2.0 are satisfied: GNU General Public License, version 2
- * with the GNU Classpath Exception which is available at
- * https://www.gnu.org/software/classpath/license.html.
- *
- * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
- ********************************************************************************/
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.theiaUritoUriComponents = exports.Schemes = void 0;
-// some well known URI schemas
-var Schemes;
-(function (Schemes) {
-    Schemes.FILE = 'file';
-    Schemes.UNTITLED = 'untitled';
-    Schemes.HTTP = 'http';
-    Schemes.HTTPS = 'https';
-    Schemes.MAILTO = 'mailto';
-    Schemes.DATA = 'data';
-    /**
-     * A schema is used for models that exist in memory
-     * only and that have no correspondence on a server or such.
-     */
-    Schemes.IN_MEMORY = 'inmemory';
-    /** A schema is used for settings files. */
-    Schemes.VSCODE = 'vscode';
-    /** A schema is used for internal private files. */
-    Schemes.INTERNAL = 'private';
-    Schemes.COMMAND = 'command';
-})(Schemes = exports.Schemes || (exports.Schemes = {}));
-function theiaUritoUriComponents(uri) {
-    return {
-        scheme: uri.scheme,
-        authority: uri.authority,
-        path: uri.path.toString(),
-        query: uri.query,
-        fragment: uri.fragment
-    };
-}
-exports.theiaUritoUriComponents = theiaUritoUriComponents;
-
-
-/***/ }),
-
-/***/ "./node_modules/@theia/plugin-ext/lib/main/browser/documents-main.js":
-/*!***************************************************************************!*\
-  !*** ./node_modules/@theia/plugin-ext/lib/main/browser/documents-main.js ***!
-  \***************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-var __values = (this && this.__values) || function(o) {
-    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
-    if (m) return m.call(o);
-    if (o && typeof o.length === "number") return {
-        next: function () {
-            if (o && i >= o.length) o = void 0;
-            return { value: o && o[i++], done: !o };
-        }
-    };
-    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.DocumentsMainImpl = exports.ModelReferenceCollection = void 0;
-/********************************************************************************
- * Copyright (C) 2018 Red Hat, Inc. and others.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Eclipse Public License v. 2.0 which is available at
- * http://www.eclipse.org/legal/epl-2.0.
- *
- * This Source Code may also be made available under the following Secondary
- * Licenses when the conditions for such availability set forth in the Eclipse
- * Public License v. 2.0 are satisfied: GNU General Public License, version 2
- * with the GNU Classpath Exception which is available at
- * https://www.gnu.org/software/classpath/license.html.
- *
- * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
- ********************************************************************************/
-var plugin_api_rpc_1 = __webpack_require__(/*! ../../common/plugin-api-rpc */ "./node_modules/@theia/plugin-ext/lib/common/plugin-api-rpc.js");
-var core_1 = __webpack_require__(/*! @theia/core */ "./node_modules/@theia/core/lib/common/index.js");
-var uri_1 = __webpack_require__(/*! @theia/core/lib/common/uri */ "./node_modules/@theia/core/lib/common/uri.js");
-var vscode_uri_1 = __webpack_require__(/*! vscode-uri */ "./node_modules/vscode-uri/lib/esm/index.js");
-var browser_1 = __webpack_require__(/*! @theia/core/lib/browser */ "./node_modules/@theia/core/lib/browser/index.js");
-var disposable_util_1 = __webpack_require__(/*! ../../common/disposable-util */ "./node_modules/@theia/plugin-ext/lib/common/disposable-util.js");
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-var ModelReferenceCollection = /** @class */ (function () {
-    function ModelReferenceCollection(maxAge, maxLength) {
-        if (maxAge === void 0) { maxAge = 1000 * 60 * 3; }
-        if (maxLength === void 0) { maxLength = 1024 * 1024 * 80; }
-        this.maxAge = maxAge;
-        this.maxLength = maxLength;
-        this.data = new Array();
-        this.length = 0;
-    }
-    ModelReferenceCollection.prototype.dispose = function () {
-        this.data = disposable_util_1.dispose(this.data) || [];
-    };
-    ModelReferenceCollection.prototype.add = function (ref) {
-        var length = ref.object.textEditorModel.getValueLength();
-        var handle = setTimeout(_dispose, this.maxAge);
-        var entry = { length: length, dispose: _dispose };
-        var self = this;
-        function _dispose() {
-            var idx = self.data.indexOf(entry);
-            if (idx >= 0) {
-                self.length -= length;
-                ref.dispose();
-                clearTimeout(handle);
-                self.data.splice(idx, 1);
-            }
-        }
-        ;
-        this.data.push(entry);
-        this.length += length;
-        this.cleanup();
-    };
-    ModelReferenceCollection.prototype.cleanup = function () {
-        while (this.length > this.maxLength) {
-            this.data[0].dispose();
-        }
-    };
-    return ModelReferenceCollection;
-}());
-exports.ModelReferenceCollection = ModelReferenceCollection;
-var DocumentsMainImpl = /** @class */ (function () {
-    function DocumentsMainImpl(editorsAndDocuments, modelService, rpc, editorManager, openerService, shell, untitledResourceResolver, fileResourceResolver) {
-        var _this = this;
-        this.modelService = modelService;
-        this.editorManager = editorManager;
-        this.openerService = openerService;
-        this.shell = shell;
-        this.untitledResourceResolver = untitledResourceResolver;
-        this.fileResourceResolver = fileResourceResolver;
-        this.syncedModels = new Map();
-        this.modelReferenceCache = new ModelReferenceCollection();
-        this.saveTimeout = 1750;
-        this.toDispose = new core_1.DisposableCollection(this.modelReferenceCache);
-        this.proxy = rpc.getProxy(plugin_api_rpc_1.MAIN_RPC_CONTEXT.DOCUMENTS_EXT);
-        this.toDispose.push(editorsAndDocuments);
-        this.toDispose.push(editorsAndDocuments.onDocumentAdd(function (documents) { return documents.forEach(_this.onModelAdded, _this); }));
-        this.toDispose.push(editorsAndDocuments.onDocumentRemove(function (documents) { return documents.forEach(_this.onModelRemoved, _this); }));
-        this.toDispose.push(modelService.onModelModeChanged(this.onModelChanged, this));
-        this.toDispose.push(modelService.onModelSaved(function (m) {
-            _this.proxy.$acceptModelSaved(m.textEditorModel.uri);
-        }));
-        this.toDispose.push(modelService.onModelWillSave(function (onWillSaveModelEvent) {
-            onWillSaveModelEvent.waitUntil(new Promise(function (resolve, reject) { return __awaiter(_this, void 0, void 0, function () {
-                var edits, editOperations, edits_1, edits_1_1, edit, range, text;
-                var e_1, _a;
-                var _this = this;
-                return __generator(this, function (_b) {
-                    switch (_b.label) {
-                        case 0:
-                            setTimeout(function () { return reject(new Error("Aborted onWillSaveTextDocument-event after " + _this.saveTimeout + "ms")); }, this.saveTimeout);
-                            return [4 /*yield*/, this.proxy.$acceptModelWillSave(onWillSaveModelEvent.model.textEditorModel.uri, onWillSaveModelEvent.reason, this.saveTimeout)];
-                        case 1:
-                            edits = _b.sent();
-                            editOperations = [];
-                            try {
-                                for (edits_1 = __values(edits), edits_1_1 = edits_1.next(); !edits_1_1.done; edits_1_1 = edits_1.next()) {
-                                    edit = edits_1_1.value;
-                                    range = edit.range, text = edit.text;
-                                    if (!range && !text) {
-                                        continue;
-                                    }
-                                    if (range && range.startLineNumber === range.endLineNumber && range.startColumn === range.endColumn && !edit.text) {
-                                        continue;
-                                    }
-                                    editOperations.push({
-                                        range: range ? monaco.Range.lift(range) : onWillSaveModelEvent.model.textEditorModel.getFullModelRange(),
-                                        /* eslint-disable-next-line no-null/no-null */
-                                        text: text || null,
-                                        forceMoveMarkers: edit.forceMoveMarkers
-                                    });
-                                }
-                            }
-                            catch (e_1_1) { e_1 = { error: e_1_1 }; }
-                            finally {
-                                try {
-                                    if (edits_1_1 && !edits_1_1.done && (_a = edits_1.return)) _a.call(edits_1);
-                                }
-                                finally { if (e_1) throw e_1.error; }
-                            }
-                            resolve(editOperations);
-                            return [2 /*return*/];
-                    }
-                });
-            }); }));
-        }));
-        this.toDispose.push(modelService.onModelDirtyChanged(function (m) {
-            _this.proxy.$acceptDirtyStateChanged(m.textEditorModel.uri, m.dirty);
-        }));
-    }
-    DocumentsMainImpl.prototype.dispose = function () {
-        this.toDispose.dispose();
-    };
-    DocumentsMainImpl.prototype.onModelChanged = function (event) {
-        var modelUrl = event.model.textEditorModel.uri;
-        if (this.syncedModels.has(modelUrl.toString())) {
-            this.proxy.$acceptModelModeChanged(modelUrl, event.oldModeId, event.model.languageId);
-        }
-    };
-    DocumentsMainImpl.prototype.onModelAdded = function (model) {
-        var _this = this;
-        var modelUri = model.textEditorModel.uri;
-        var key = modelUri.toString();
-        var toDispose = new core_1.DisposableCollection(model.textEditorModel.onDidChangeContent(function (e) {
-            return _this.proxy.$acceptModelChanged(modelUri, {
-                eol: e.eol,
-                versionId: e.versionId,
-                changes: e.changes.map(function (c) {
-                    return ({
-                        text: c.text,
-                        range: c.range,
-                        rangeLength: c.rangeLength,
-                        rangeOffset: c.rangeOffset
-                    });
-                })
-            }, model.dirty);
-        }), core_1.Disposable.create(function () { return _this.syncedModels.delete(key); }));
-        this.syncedModels.set(key, toDispose);
-        this.toDispose.push(toDispose);
-    };
-    DocumentsMainImpl.prototype.onModelRemoved = function (url) {
-        var model = this.syncedModels.get(url.toString());
-        if (model) {
-            model.dispose();
-        }
-    };
-    DocumentsMainImpl.prototype.$tryCreateDocument = function (options) {
-        return __awaiter(this, void 0, void 0, function () {
-            var language, content, resource;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        language = options && options.language;
-                        content = options && options.content;
-                        return [4 /*yield*/, this.untitledResourceResolver.createUntitledResource(this.fileResourceResolver, content, language)];
-                    case 1:
-                        resource = _a.sent();
-                        return [2 /*return*/, monaco.Uri.parse(resource.uri.toString())];
-                }
-            });
-        });
-    };
-    DocumentsMainImpl.prototype.$tryShowDocument = function (uri, options) {
-        return __awaiter(this, void 0, void 0, function () {
-            var editorOptions, uriArg, opener_1, err_1;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        _a.trys.push([0, 3, , 4]);
-                        editorOptions = DocumentsMainImpl.toEditorOpenerOptions(this.shell, options);
-                        uriArg = new uri_1.default(vscode_uri_1.URI.revive(uri));
-                        return [4 /*yield*/, this.openerService.getOpener(uriArg, editorOptions)];
-                    case 1:
-                        opener_1 = _a.sent();
-                        return [4 /*yield*/, opener_1.open(uriArg, editorOptions)];
-                    case 2:
-                        _a.sent();
-                        return [3 /*break*/, 4];
-                    case 3:
-                        err_1 = _a.sent();
-                        throw new Error(err_1);
-                    case 4: return [2 /*return*/];
-                }
-            });
-        });
-    };
-    DocumentsMainImpl.prototype.$trySaveDocument = function (uri) {
-        return __awaiter(this, void 0, void 0, function () {
-            var widget;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.editorManager.getByUri(new uri_1.default(vscode_uri_1.URI.revive(uri)))];
-                    case 1:
-                        widget = _a.sent();
-                        if (!widget) return [3 /*break*/, 3];
-                        return [4 /*yield*/, browser_1.Saveable.save(widget)];
-                    case 2:
-                        _a.sent();
-                        return [2 /*return*/, true];
-                    case 3: return [2 /*return*/, false];
-                }
-            });
-        });
-    };
-    DocumentsMainImpl.prototype.$tryOpenDocument = function (uri) {
-        return __awaiter(this, void 0, void 0, function () {
-            var ref;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.modelService.createModelReference(new uri_1.default(vscode_uri_1.URI.revive(uri)))];
-                    case 1:
-                        ref = _a.sent();
-                        if (ref.object) {
-                            this.modelReferenceCache.add(ref);
-                            return [2 /*return*/, true];
-                        }
-                        else {
-                            ref.dispose();
-                            return [2 /*return*/, false];
-                        }
-                        return [2 /*return*/];
-                }
-            });
-        });
-    };
-    DocumentsMainImpl.prototype.$tryCloseDocument = function (uri) {
-        return __awaiter(this, void 0, void 0, function () {
-            var widget;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.editorManager.getByUri(new uri_1.default(vscode_uri_1.URI.revive(uri)))];
-                    case 1:
-                        widget = _a.sent();
-                        if (!widget) return [3 /*break*/, 3];
-                        return [4 /*yield*/, browser_1.Saveable.save(widget)];
-                    case 2:
-                        _a.sent();
-                        widget.close();
-                        return [2 /*return*/, true];
-                    case 3: return [2 /*return*/, false];
-                }
-            });
-        });
-    };
-    DocumentsMainImpl.toEditorOpenerOptions = function (shell, options) {
-        if (!options) {
-            return undefined;
-        }
-        var range;
-        if (options.selection) {
-            var selection = options.selection;
-            range = {
-                start: { line: selection.startLineNumber - 1, character: selection.startColumn - 1 },
-                end: { line: selection.endLineNumber - 1, character: selection.endColumn - 1 }
-            };
-        }
-        /* fall back to side group -> split relative to the active widget */
-        var widgetOptions = { mode: 'split-right' };
-        var viewColumn = options.viewColumn;
-        if (viewColumn === undefined || viewColumn === -1) {
-            /* active group -> skip (default behaviour) */
-            widgetOptions = undefined;
-        }
-        else if (viewColumn > 0) {
-            var tabBars = shell.mainAreaTabBars;
-            // convert to zero-based index
-            var tabBar = tabBars[viewColumn - 1];
-            if (tabBar && tabBar.currentTitle) {
-                widgetOptions = { ref: tabBar.currentTitle.owner };
-            }
-        }
-        return {
-            selection: range,
-            mode: options.preserveFocus ? 'reveal' : 'activate',
-            preview: options.preview,
-            widgetOptions: widgetOptions
-        };
-    };
-    return DocumentsMainImpl;
-}());
-exports.DocumentsMainImpl = DocumentsMainImpl;
-
-
-/***/ }),
-
-/***/ "./node_modules/@theia/plugin-ext/lib/main/browser/editor/untitled-resource.js":
+/***/ "./node_modules/@theia/monaco/data/monaco-themes/vscode/hc_black_defaults.json":
 /*!*************************************************************************************!*\
-  !*** ./node_modules/@theia/plugin-ext/lib/main/browser/editor/untitled-resource.js ***!
+  !*** ./node_modules/@theia/monaco/data/monaco-themes/vscode/hc_black_defaults.json ***!
   \*************************************************************************************/
+/*! exports provided: $schema, name, colors, settings, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"$schema\":\"vscode://schemas/color-theme\",\"name\":\"High Contrast Default Colors\",\"colors\":{\"editor.background\":\"#000000\",\"editor.foreground\":\"#FFFFFF\",\"editorIndentGuide.background\":\"#FFFFFF\",\"editorIndentGuide.activeBackground\":\"#FFFFFF\",\"statusBarItem.remoteBackground\":\"#00000000\",\"sideBarTitle.foreground\":\"#FFFFFF\"},\"settings\":[{\"settings\":{\"foreground\":\"#FFFFFF\",\"background\":\"#000000\"}},{\"scope\":[\"meta.embedded\",\"source.groovy.embedded\"],\"settings\":{\"foreground\":\"#FFFFFF\",\"background\":\"#000000\"}},{\"scope\":\"emphasis\",\"settings\":{\"fontStyle\":\"italic\"}},{\"scope\":\"strong\",\"settings\":{\"fontStyle\":\"bold\"}},{\"scope\":\"meta.diff.header\",\"settings\":{\"foreground\":\"#000080\"}},{\"scope\":\"comment\",\"settings\":{\"foreground\":\"#7ca668\"}},{\"scope\":\"constant.language\",\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":[\"constant.numeric\",\"constant.other.color.rgb-value\",\"constant.other.rgb-value\",\"support.constant.color\"],\"settings\":{\"foreground\":\"#b5cea8\"}},{\"scope\":\"constant.regexp\",\"settings\":{\"foreground\":\"#b46695\"}},{\"scope\":\"constant.character\",\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":\"entity.name.tag\",\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":\"entity.name.tag.css\",\"settings\":{\"foreground\":\"#d7ba7d\"}},{\"scope\":\"entity.other.attribute-name\",\"settings\":{\"foreground\":\"#9cdcfe\"}},{\"scope\":[\"entity.other.attribute-name.class.css\",\"entity.other.attribute-name.class.mixin.css\",\"entity.other.attribute-name.id.css\",\"entity.other.attribute-name.parent-selector.css\",\"entity.other.attribute-name.pseudo-class.css\",\"entity.other.attribute-name.pseudo-element.css\",\"source.css.less entity.other.attribute-name.id\",\"entity.other.attribute-name.attribute.scss\",\"entity.other.attribute-name.scss\"],\"settings\":{\"foreground\":\"#d7ba7d\"}},{\"scope\":\"invalid\",\"settings\":{\"foreground\":\"#f44747\"}},{\"scope\":\"markup.underline\",\"settings\":{\"fontStyle\":\"underline\"}},{\"scope\":\"markup.bold\",\"settings\":{\"fontStyle\":\"bold\"}},{\"scope\":\"markup.heading\",\"settings\":{\"foreground\":\"#6796e6\"}},{\"scope\":\"markup.italic\",\"settings\":{\"fontStyle\":\"italic\"}},{\"scope\":\"markup.inserted\",\"settings\":{\"foreground\":\"#b5cea8\"}},{\"scope\":\"markup.deleted\",\"settings\":{\"foreground\":\"#ce9178\"}},{\"scope\":\"markup.changed\",\"settings\":{\"foreground\":\"#569cd6\"}},{\"name\":\"brackets of XML/HTML tags\",\"scope\":[\"punctuation.definition.tag\"],\"settings\":{\"foreground\":\"#808080\"}},{\"scope\":\"meta.preprocessor\",\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":\"meta.preprocessor.string\",\"settings\":{\"foreground\":\"#ce9178\"}},{\"scope\":\"meta.preprocessor.numeric\",\"settings\":{\"foreground\":\"#b5cea8\"}},{\"scope\":\"meta.structure.dictionary.key.python\",\"settings\":{\"foreground\":\"#9cdcfe\"}},{\"scope\":\"storage\",\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":\"storage.type\",\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":\"storage.modifier\",\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":\"string\",\"settings\":{\"foreground\":\"#ce9178\"}},{\"scope\":\"string.tag\",\"settings\":{\"foreground\":\"#ce9178\"}},{\"scope\":\"string.value\",\"settings\":{\"foreground\":\"#ce9178\"}},{\"scope\":\"string.regexp\",\"settings\":{\"foreground\":\"#d16969\"}},{\"name\":\"String interpolation\",\"scope\":[\"punctuation.definition.template-expression.begin\",\"punctuation.definition.template-expression.end\",\"punctuation.section.embedded\"],\"settings\":{\"foreground\":\"#569cd6\"}},{\"name\":\"Reset JavaScript string interpolation expression\",\"scope\":[\"meta.template.expression\"],\"settings\":{\"foreground\":\"#ffffff\"}},{\"scope\":[\"support.type.vendored.property-name\",\"support.type.property-name\",\"variable.css\",\"variable.scss\",\"variable.other.less\",\"source.coffee.embedded\"],\"settings\":{\"foreground\":\"#d4d4d4\"}},{\"scope\":\"keyword\",\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":\"keyword.control\",\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":\"keyword.operator\",\"settings\":{\"foreground\":\"#d4d4d4\"}},{\"scope\":[\"keyword.operator.new\",\"keyword.operator.expression\",\"keyword.operator.cast\",\"keyword.operator.sizeof\",\"keyword.operator.logical.python\"],\"settings\":{\"foreground\":\"#569cd6\"}},{\"scope\":\"keyword.other.unit\",\"settings\":{\"foreground\":\"#b5cea8\"}},{\"scope\":\"support.function.git-rebase\",\"settings\":{\"foreground\":\"#d4d4d4\"}},{\"scope\":\"constant.sha.git-rebase\",\"settings\":{\"foreground\":\"#b5cea8\"}},{\"name\":\"coloring of the Java import and package identifiers\",\"scope\":[\"storage.modifier.import.java\",\"variable.language.wildcard.java\",\"storage.modifier.package.java\"],\"settings\":{\"foreground\":\"#d4d4d4\"}},{\"name\":\"coloring of the TS this\",\"scope\":\"variable.language.this\",\"settings\":{\"foreground\":\"#569cd6\"}}]}");
+
+/***/ }),
+
+/***/ "./node_modules/@theia/monaco/data/monaco-themes/vscode/hc_theia.json":
+/*!****************************************************************************!*\
+  !*** ./node_modules/@theia/monaco/data/monaco-themes/vscode/hc_theia.json ***!
+  \****************************************************************************/
+/*! exports provided: $schema, name, include, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"$schema\":\"vscode://schemas/color-theme\",\"name\":\"Dark High Contrast (Theia)\",\"include\":\"./hc_black.json\"}");
+
+/***/ }),
+
+/***/ "./node_modules/@theia/monaco/data/monaco-themes/vscode/light_defaults.json":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/@theia/monaco/data/monaco-themes/vscode/light_defaults.json ***!
+  \**********************************************************************************/
+/*! exports provided: $schema, name, colors, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"$schema\":\"vscode://schemas/color-theme\",\"name\":\"Light Default Colors\",\"colors\":{\"editor.background\":\"#FFFFFF\",\"editor.foreground\":\"#000000\",\"editor.inactiveSelectionBackground\":\"#E5EBF1\",\"editorIndentGuide.background\":\"#D3D3D3\",\"editorIndentGuide.activeBackground\":\"#939393\",\"editor.selectionHighlightBackground\":\"#ADD6FF80\",\"editorSuggestWidget.background\":\"#F3F3F3\",\"activityBarBadge.background\":\"#007ACC\",\"sideBarTitle.foreground\":\"#6F6F6F\",\"list.hoverBackground\":\"#E8E8E8\",\"input.placeholderForeground\":\"#767676\",\"settings.textInputBorder\":\"#CECECE\",\"settings.numberInputBorder\":\"#CECECE\",\"statusBarItem.remoteForeground\":\"#FFF\",\"statusBarItem.remoteBackground\":\"#16825D\"}}");
+
+/***/ }),
+
+/***/ "./node_modules/@theia/monaco/data/monaco-themes/vscode/light_plus.json":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@theia/monaco/data/monaco-themes/vscode/light_plus.json ***!
+  \******************************************************************************/
+/*! exports provided: $schema, name, include, tokenColors, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"$schema\":\"vscode://schemas/color-theme\",\"name\":\"Light+ (default light)\",\"include\":\"./light_vs.json\",\"tokenColors\":[{\"name\":\"Function declarations\",\"scope\":[\"entity.name.function\",\"support.function\",\"support.constant.handlebars\",\"source.powershell variable.other.member\",\"entity.name.operator.custom-literal\"],\"settings\":{\"foreground\":\"#795E26\"}},{\"name\":\"Types declaration and references\",\"scope\":[\"meta.return-type\",\"support.class\",\"support.type\",\"entity.name.type\",\"entity.name.namespace\",\"entity.other.attribute\",\"entity.name.scope-resolution\",\"entity.name.class\",\"storage.type.numeric.go\",\"storage.type.byte.go\",\"storage.type.boolean.go\",\"storage.type.string.go\",\"storage.type.uintptr.go\",\"storage.type.error.go\",\"storage.type.rune.go\",\"storage.type.cs\",\"storage.type.generic.cs\",\"storage.type.modifier.cs\",\"storage.type.variable.cs\",\"storage.type.annotation.java\",\"storage.type.generic.java\",\"storage.type.java\",\"storage.type.object.array.java\",\"storage.type.primitive.array.java\",\"storage.type.primitive.java\",\"storage.type.token.java\",\"storage.type.groovy\",\"storage.type.annotation.groovy\",\"storage.type.parameters.groovy\",\"storage.type.generic.groovy\",\"storage.type.object.array.groovy\",\"storage.type.primitive.array.groovy\",\"storage.type.primitive.groovy\"],\"settings\":{\"foreground\":\"#267f99\"}},{\"name\":\"Types declaration and references, TS grammar specific\",\"scope\":[\"meta.type.cast.expr\",\"meta.type.new.expr\",\"support.constant.math\",\"support.constant.dom\",\"support.constant.json\",\"entity.other.inherited-class\"],\"settings\":{\"foreground\":\"#267f99\"}},{\"name\":\"Control flow / Special keywords\",\"scope\":[\"keyword.control\",\"source.cpp keyword.operator.new\",\"source.cpp keyword.operator.delete\",\"keyword.other.using\",\"keyword.other.operator\",\"entity.name.operator\"],\"settings\":{\"foreground\":\"#AF00DB\"}},{\"name\":\"Variable and parameter name\",\"scope\":[\"variable\",\"meta.definition.variable.name\",\"support.variable\",\"entity.name.variable\"],\"settings\":{\"foreground\":\"#001080\"}},{\"name\":\"Object keys, TS grammar specific\",\"scope\":[\"meta.object-literal.key\"],\"settings\":{\"foreground\":\"#001080\"}},{\"name\":\"CSS property value\",\"scope\":[\"support.constant.property-value\",\"support.constant.font-name\",\"support.constant.media-type\",\"support.constant.media\",\"constant.other.color.rgb-value\",\"constant.other.rgb-value\",\"support.constant.color\"],\"settings\":{\"foreground\":\"#0451a5\"}},{\"name\":\"Regular expression groups\",\"scope\":[\"punctuation.definition.group.regexp\",\"punctuation.definition.group.assertion.regexp\",\"punctuation.definition.character-class.regexp\",\"punctuation.character.set.begin.regexp\",\"punctuation.character.set.end.regexp\",\"keyword.operator.negation.regexp\",\"support.other.parenthesis.regexp\"],\"settings\":{\"foreground\":\"#d16969\"}},{\"scope\":[\"constant.character.character-class.regexp\",\"constant.other.character-class.set.regexp\",\"constant.other.character-class.regexp\",\"constant.character.set.regexp\"],\"settings\":{\"foreground\":\"#811f3f\"}},{\"scope\":\"keyword.operator.quantifier.regexp\",\"settings\":{\"foreground\":\"#000000\"}},{\"scope\":[\"keyword.operator.or.regexp\",\"keyword.control.anchor.regexp\"],\"settings\":{\"foreground\":\"#ff0000\"}},{\"scope\":\"constant.character\",\"settings\":{\"foreground\":\"#0000ff\"}},{\"scope\":\"constant.character.escape\",\"settings\":{\"foreground\":\"#ff0000\"}},{\"scope\":\"entity.name.label\",\"settings\":{\"foreground\":\"#000000\"}}]}");
+
+/***/ }),
+
+/***/ "./node_modules/@theia/monaco/data/monaco-themes/vscode/light_theia.json":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/@theia/monaco/data/monaco-themes/vscode/light_theia.json ***!
+  \*******************************************************************************/
+/*! exports provided: $schema, name, include, colors, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"$schema\":\"vscode://schemas/color-theme\",\"name\":\"Light (Theia)\",\"include\":\"./light_plus.json\",\"colors\":{\"activityBar.background\":\"#ececec\",\"activityBar.activeBorder\":\"#000000\",\"activityBar.foreground\":\"#000000\"}}");
+
+/***/ }),
+
+/***/ "./node_modules/@theia/monaco/data/monaco-themes/vscode/light_vs.json":
+/*!****************************************************************************!*\
+  !*** ./node_modules/@theia/monaco/data/monaco-themes/vscode/light_vs.json ***!
+  \****************************************************************************/
+/*! exports provided: $schema, name, include, tokenColors, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"$schema\":\"vscode://schemas/color-theme\",\"name\":\"Light (Visual Studio)\",\"include\":\"./light_defaults.json\",\"tokenColors\":[{\"scope\":[\"meta.embedded\",\"source.groovy.embedded\"],\"settings\":{\"foreground\":\"#000000ff\"}},{\"scope\":\"emphasis\",\"settings\":{\"fontStyle\":\"italic\"}},{\"scope\":\"strong\",\"settings\":{\"fontStyle\":\"bold\"}},{\"scope\":\"meta.diff.header\",\"settings\":{\"foreground\":\"#000080\"}},{\"scope\":\"comment\",\"settings\":{\"foreground\":\"#008000\"}},{\"scope\":\"constant.language\",\"settings\":{\"foreground\":\"#0000ff\"}},{\"scope\":[\"constant.numeric\",\"entity.name.operator.custom-literal.number\",\"variable.other.enummember\",\"keyword.operator.plus.exponent\",\"keyword.operator.minus.exponent\"],\"settings\":{\"foreground\":\"#09885a\"}},{\"scope\":\"constant.regexp\",\"settings\":{\"foreground\":\"#811f3f\"}},{\"name\":\"css tags in selectors, xml tags\",\"scope\":\"entity.name.tag\",\"settings\":{\"foreground\":\"#800000\"}},{\"scope\":\"entity.name.selector\",\"settings\":{\"foreground\":\"#800000\"}},{\"scope\":\"entity.other.attribute-name\",\"settings\":{\"foreground\":\"#ff0000\"}},{\"scope\":[\"entity.other.attribute-name.class.css\",\"entity.other.attribute-name.class.mixin.css\",\"entity.other.attribute-name.id.css\",\"entity.other.attribute-name.parent-selector.css\",\"entity.other.attribute-name.pseudo-class.css\",\"entity.other.attribute-name.pseudo-element.css\",\"source.css.less entity.other.attribute-name.id\",\"entity.other.attribute-name.attribute.scss\",\"entity.other.attribute-name.scss\"],\"settings\":{\"foreground\":\"#800000\"}},{\"scope\":\"invalid\",\"settings\":{\"foreground\":\"#cd3131\"}},{\"scope\":\"markup.underline\",\"settings\":{\"fontStyle\":\"underline\"}},{\"scope\":\"markup.bold\",\"settings\":{\"fontStyle\":\"bold\",\"foreground\":\"#000080\"}},{\"scope\":\"markup.heading\",\"settings\":{\"fontStyle\":\"bold\",\"foreground\":\"#800000\"}},{\"scope\":\"markup.italic\",\"settings\":{\"fontStyle\":\"italic\"}},{\"scope\":\"markup.inserted\",\"settings\":{\"foreground\":\"#09885a\"}},{\"scope\":\"markup.deleted\",\"settings\":{\"foreground\":\"#a31515\"}},{\"scope\":\"markup.changed\",\"settings\":{\"foreground\":\"#0451a5\"}},{\"scope\":[\"punctuation.definition.quote.begin.markdown\",\"punctuation.definition.list.begin.markdown\"],\"settings\":{\"foreground\":\"#0451a5\"}},{\"scope\":\"markup.inline.raw\",\"settings\":{\"foreground\":\"#800000\"}},{\"name\":\"brackets of XML/HTML tags\",\"scope\":\"punctuation.definition.tag\",\"settings\":{\"foreground\":\"#800000\"}},{\"scope\":[\"meta.preprocessor\",\"entity.name.function.preprocessor\"],\"settings\":{\"foreground\":\"#0000ff\"}},{\"scope\":\"meta.preprocessor.string\",\"settings\":{\"foreground\":\"#a31515\"}},{\"scope\":\"meta.preprocessor.numeric\",\"settings\":{\"foreground\":\"#09885a\"}},{\"scope\":\"meta.structure.dictionary.key.python\",\"settings\":{\"foreground\":\"#0451a5\"}},{\"scope\":\"storage\",\"settings\":{\"foreground\":\"#0000ff\"}},{\"scope\":\"storage.type\",\"settings\":{\"foreground\":\"#0000ff\"}},{\"scope\":[\"storage.modifier\",\"keyword.operator.noexcept\"],\"settings\":{\"foreground\":\"#0000ff\"}},{\"scope\":[\"string\",\"entity.name.operator.custom-literal.string\",\"meta.embedded.assembly\"],\"settings\":{\"foreground\":\"#a31515\"}},{\"scope\":[\"string.comment.buffered.block.pug\",\"string.quoted.pug\",\"string.interpolated.pug\",\"string.unquoted.plain.in.yaml\",\"string.unquoted.plain.out.yaml\",\"string.unquoted.block.yaml\",\"string.quoted.single.yaml\",\"string.quoted.double.xml\",\"string.quoted.single.xml\",\"string.unquoted.cdata.xml\",\"string.quoted.double.html\",\"string.quoted.single.html\",\"string.unquoted.html\",\"string.quoted.single.handlebars\",\"string.quoted.double.handlebars\"],\"settings\":{\"foreground\":\"#0000ff\"}},{\"scope\":\"string.regexp\",\"settings\":{\"foreground\":\"#811f3f\"}},{\"name\":\"String interpolation\",\"scope\":[\"punctuation.definition.template-expression.begin\",\"punctuation.definition.template-expression.end\",\"punctuation.section.embedded\"],\"settings\":{\"foreground\":\"#0000ff\"}},{\"name\":\"Reset JavaScript string interpolation expression\",\"scope\":[\"meta.template.expression\"],\"settings\":{\"foreground\":\"#000000\"}},{\"scope\":[\"support.constant.property-value\",\"support.constant.font-name\",\"support.constant.media-type\",\"support.constant.media\",\"constant.other.color.rgb-value\",\"constant.other.rgb-value\",\"support.constant.color\"],\"settings\":{\"foreground\":\"#0451a5\"}},{\"scope\":[\"support.type.vendored.property-name\",\"support.type.property-name\",\"variable.css\",\"variable.scss\",\"variable.other.less\",\"source.coffee.embedded\"],\"settings\":{\"foreground\":\"#ff0000\"}},{\"scope\":[\"support.type.property-name.json\"],\"settings\":{\"foreground\":\"#0451a5\"}},{\"scope\":\"keyword\",\"settings\":{\"foreground\":\"#0000ff\"}},{\"scope\":\"keyword.control\",\"settings\":{\"foreground\":\"#0000ff\"}},{\"scope\":\"keyword.operator\",\"settings\":{\"foreground\":\"#000000\"}},{\"scope\":[\"keyword.operator.new\",\"keyword.operator.expression\",\"keyword.operator.cast\",\"keyword.operator.sizeof\",\"keyword.operator.alignof\",\"keyword.operator.typeid\",\"keyword.operator.alignas\",\"keyword.operator.instanceof\",\"keyword.operator.logical.python\",\"keyword.operator.wordlike\"],\"settings\":{\"foreground\":\"#0000ff\"}},{\"scope\":\"keyword.other.unit\",\"settings\":{\"foreground\":\"#09885a\"}},{\"scope\":[\"punctuation.section.embedded.begin.php\",\"punctuation.section.embedded.end.php\"],\"settings\":{\"foreground\":\"#800000\"}},{\"scope\":\"support.function.git-rebase\",\"settings\":{\"foreground\":\"#0451a5\"}},{\"scope\":\"constant.sha.git-rebase\",\"settings\":{\"foreground\":\"#09885a\"}},{\"name\":\"coloring of the Java import and package identifiers\",\"scope\":[\"storage.modifier.import.java\",\"variable.language.wildcard.java\",\"storage.modifier.package.java\"],\"settings\":{\"foreground\":\"#000000\"}},{\"name\":\"this.self\",\"scope\":\"variable.language\",\"settings\":{\"foreground\":\"#0000ff\"}}]}");
+
+/***/ }),
+
+/***/ "./node_modules/@theia/monaco/lib/browser/monaco-indexed-db.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/@theia/monaco/lib/browser/monaco-indexed-db.js ***!
+  \*********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 /********************************************************************************
- * Copyright (C) 2018 Red Hat, Inc. and others.
+ * Copyright (C) 2020 TypeFox and others.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0 which is available at
@@ -1699,15 +145,6 @@ exports.DocumentsMainImpl = DocumentsMainImpl;
  *
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -1744,228 +181,122 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-var __values = (this && this.__values) || function(o) {
-    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
-    if (m) return m.call(o);
-    if (o && typeof o.length === "number") return {
-        next: function () {
-            if (o && i >= o.length) o = void 0;
-            return { value: o && o[i++], done: !o };
-        }
-    };
-    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.createUntitledURI = exports.UntitledResource = exports.UntitledResourceResolver = void 0;
-var event_1 = __webpack_require__(/*! @theia/core/lib/common/event */ "./node_modules/@theia/core/lib/common/event.js");
-var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
-var uri_1 = __webpack_require__(/*! @theia/core/lib/common/uri */ "./node_modules/@theia/core/lib/common/uri.js");
-var uri_components_1 = __webpack_require__(/*! ../../../common/uri-components */ "./node_modules/@theia/plugin-ext/lib/common/uri-components.js");
-var browser_1 = __webpack_require__(/*! @theia/filesystem/lib/browser */ "./node_modules/@theia/filesystem/lib/browser/index.js");
-var index = 0;
-var UntitledResourceResolver = /** @class */ (function () {
-    function UntitledResourceResolver() {
-        this.resources = new Map();
-    }
-    UntitledResourceResolver.prototype.resolve = function (uri) {
-        return __awaiter(this, void 0, void 0, function () {
-            var untitledResource;
-            return __generator(this, function (_a) {
-                if (uri.scheme !== uri_components_1.Schemes.UNTITLED) {
-                    throw new Error('The given uri is not untitled file uri: ' + uri);
-                }
-                else {
-                    untitledResource = this.resources.get(uri.toString());
-                    if (!untitledResource) {
-                        return [2 /*return*/, this.createUntitledResource(this.fileResourceResolver, '', '', uri)];
-                    }
-                    else {
-                        return [2 /*return*/, untitledResource];
-                    }
-                }
-                return [2 /*return*/];
-            });
-        });
-    };
-    UntitledResourceResolver.prototype.createUntitledResource = function (fileResourceResolver, content, language, uri) {
-        return __awaiter(this, void 0, void 0, function () {
-            var extension, _a, _b, lang;
-            var e_1, _c;
-            return __generator(this, function (_d) {
-                if (language) {
-                    try {
-                        for (_a = __values(monaco.languages.getLanguages()), _b = _a.next(); !_b.done; _b = _a.next()) {
-                            lang = _b.value;
-                            if (lang.id === language) {
-                                if (lang.extensions) {
-                                    extension = lang.extensions[0];
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                    catch (e_1_1) { e_1 = { error: e_1_1 }; }
-                    finally {
-                        try {
-                            if (_b && !_b.done && (_c = _a.return)) _c.call(_a);
-                        }
-                        finally { if (e_1) throw e_1.error; }
-                    }
-                }
-                return [2 /*return*/, new UntitledResource(this.resources, uri ? uri : new uri_1.default().withScheme(uri_components_1.Schemes.UNTITLED).withPath("/Untitled-" + index++ + (extension ? extension : '')), fileResourceResolver, content)];
-            });
-        });
-    };
-    __decorate([
-        inversify_1.inject(browser_1.FileResourceResolver),
-        __metadata("design:type", browser_1.FileResourceResolver)
-    ], UntitledResourceResolver.prototype, "fileResourceResolver", void 0);
-    UntitledResourceResolver = __decorate([
-        inversify_1.injectable()
-    ], UntitledResourceResolver);
-    return UntitledResourceResolver;
-}());
-exports.UntitledResourceResolver = UntitledResourceResolver;
-var UntitledResource = /** @class */ (function () {
-    function UntitledResource(resources, uri, fileResourceResolver, content) {
-        this.resources = resources;
-        this.uri = uri;
-        this.fileResourceResolver = fileResourceResolver;
-        this.content = content;
-        this.onDidChangeContentsEmitter = new event_1.Emitter();
-        this.onDidChangeContents = this.onDidChangeContentsEmitter.event;
-        this.resources.set(this.uri.toString(), this);
-    }
-    UntitledResource.prototype.dispose = function () {
-        this.resources.delete(this.uri.toString());
-        this.onDidChangeContentsEmitter.dispose();
-        if (this.fileResource) {
-            this.fileResource.dispose();
-        }
-    };
-    UntitledResource.prototype.readContents = function (options) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                if (this.fileResource) {
-                    return [2 /*return*/, this.fileResource.readContents(options)];
-                }
-                else if (this.content) {
-                    return [2 /*return*/, this.content];
-                }
-                else {
-                    return [2 /*return*/, ''];
-                }
-                return [2 /*return*/];
-            });
-        });
-    };
-    UntitledResource.prototype.saveContents = function (content, options) {
-        return __awaiter(this, void 0, void 0, function () {
-            var _a;
-            var _this = this;
-            return __generator(this, function (_b) {
-                switch (_b.label) {
-                    case 0:
-                        if (!!this.fileResource) return [3 /*break*/, 2];
-                        _a = this;
-                        return [4 /*yield*/, this.fileResourceResolver.resolve(new uri_1.default(this.uri.path.toString()))];
-                    case 1:
-                        _a.fileResource = _b.sent();
-                        if (this.fileResource.onDidChangeContents) {
-                            this.fileResource.onDidChangeContents(function () { return _this.fireDidChangeContents(); });
-                        }
-                        _b.label = 2;
-                    case 2: return [4 /*yield*/, this.fileResource.saveContents(content, options)];
-                    case 3:
-                        _b.sent();
-                        return [2 /*return*/];
-                }
-            });
-        });
-    };
-    UntitledResource.prototype.saveContentChanges = function (changes, options) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        if (!this.fileResource) {
-                            throw new Error('FileResource is not available for: ' + this.uri.path.toString());
-                        }
-                        return [4 /*yield*/, this.fileResource.saveContentChanges(changes, options)];
-                    case 1:
-                        _a.sent();
-                        return [2 /*return*/];
-                }
-            });
-        });
-    };
-    UntitledResource.prototype.guessEncoding = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                if (this.fileResource) {
-                    return [2 /*return*/, this.fileResource.guessEncoding()];
-                }
-                return [2 /*return*/];
-            });
-        });
-    };
-    UntitledResource.prototype.fireDidChangeContents = function () {
-        this.onDidChangeContentsEmitter.fire(undefined);
-    };
-    Object.defineProperty(UntitledResource.prototype, "version", {
-        get: function () {
-            if (this.fileResource) {
-                return this.fileResource.version;
+exports.deleteTheme = exports.putTheme = exports.getThemes = exports.MonacoThemeState = exports.monacoDB = void 0;
+var idb = __webpack_require__(/*! idb */ "./node_modules/idb/build/esm/index.js");
+var disposable_1 = __webpack_require__(/*! @theia/core/lib/common/disposable */ "./node_modules/@theia/core/lib/common/disposable.js");
+var _monacoDB;
+if ('indexedDB' in window) {
+    _monacoDB = idb.openDB('theia-monaco', 1, {
+        upgrade: function (db) {
+            if (!db.objectStoreNames.contains('themes')) {
+                db.createObjectStore('themes', { keyPath: 'id' });
             }
-            return undefined;
-        },
-        enumerable: false,
-        configurable: true
+        }
     });
-    return UntitledResource;
-}());
-exports.UntitledResource = UntitledResource;
-function createUntitledURI(language) {
-    var e_2, _a;
-    var extension;
-    if (language) {
-        try {
-            for (var _b = __values(monaco.languages.getLanguages()), _c = _b.next(); !_c.done; _c = _b.next()) {
-                var lang = _c.value;
-                if (lang.id === language) {
-                    if (lang.extensions) {
-                        extension = lang.extensions[0];
-                        break;
-                    }
-                }
-            }
-        }
-        catch (e_2_1) { e_2 = { error: e_2_1 }; }
-        finally {
-            try {
-                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
-            }
-            finally { if (e_2) throw e_2.error; }
-        }
-    }
-    return new uri_1.default().withScheme(uri_components_1.Schemes.UNTITLED).withPath("/Untitled-" + index++ + (extension ? extension : ''));
 }
-exports.createUntitledURI = createUntitledURI;
+exports.monacoDB = _monacoDB;
+var MonacoThemeState;
+(function (MonacoThemeState) {
+    function is(state) {
+        return !!state && typeof state === 'object' && 'id' in state && 'label' in state && 'uiTheme' in state && 'data' in state;
+    }
+    MonacoThemeState.is = is;
+})(MonacoThemeState = exports.MonacoThemeState || (exports.MonacoThemeState = {}));
+function getThemes() {
+    return __awaiter(this, void 0, void 0, function () {
+        var db, result;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0:
+                    if (!exports.monacoDB) {
+                        return [2 /*return*/, []];
+                    }
+                    return [4 /*yield*/, exports.monacoDB];
+                case 1:
+                    db = _a.sent();
+                    return [4 /*yield*/, db.transaction('themes', 'readonly').objectStore('themes').getAll()];
+                case 2:
+                    result = _a.sent();
+                    return [2 /*return*/, result.filter(MonacoThemeState.is)];
+            }
+        });
+    });
+}
+exports.getThemes = getThemes;
+function putTheme(state) {
+    var toDispose = new disposable_1.DisposableCollection(disposable_1.Disposable.create(function () { }));
+    doPutTheme(state, toDispose);
+    return toDispose;
+}
+exports.putTheme = putTheme;
+function doPutTheme(state, toDispose) {
+    return __awaiter(this, void 0, void 0, function () {
+        var db, id;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0:
+                    if (!exports.monacoDB) {
+                        return [2 /*return*/];
+                    }
+                    return [4 /*yield*/, exports.monacoDB];
+                case 1:
+                    db = _a.sent();
+                    if (toDispose.disposed) {
+                        return [2 /*return*/];
+                    }
+                    id = state.id;
+                    return [4 /*yield*/, db.transaction('themes', 'readwrite').objectStore('themes').put(state)];
+                case 2:
+                    _a.sent();
+                    if (!toDispose.disposed) return [3 /*break*/, 4];
+                    return [4 /*yield*/, deleteTheme(id)];
+                case 3:
+                    _a.sent();
+                    return [2 /*return*/];
+                case 4:
+                    toDispose.push(disposable_1.Disposable.create(function () { return deleteTheme(id); }));
+                    return [2 /*return*/];
+            }
+        });
+    });
+}
+function deleteTheme(id) {
+    return __awaiter(this, void 0, void 0, function () {
+        var db;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0:
+                    if (!exports.monacoDB) {
+                        return [2 /*return*/];
+                    }
+                    return [4 /*yield*/, exports.monacoDB];
+                case 1:
+                    db = _a.sent();
+                    return [4 /*yield*/, db.transaction('themes', 'readwrite').objectStore('themes').delete(id)];
+                case 2:
+                    _a.sent();
+                    return [2 /*return*/];
+            }
+        });
+    });
+}
+exports.deleteTheme = deleteTheme;
 
 
 /***/ }),
 
-/***/ "./node_modules/@theia/plugin-ext/lib/main/browser/menus/menus-contribution-handler.js":
-/*!*********************************************************************************************!*\
-  !*** ./node_modules/@theia/plugin-ext/lib/main/browser/menus/menus-contribution-handler.js ***!
-  \*********************************************************************************************/
+/***/ "./node_modules/@theia/monaco/lib/browser/monaco-languages.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@theia/monaco/lib/browser/monaco-languages.js ***!
+  \********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 /********************************************************************************
- * Copyright (C) 2018 Red Hat, Inc. and others.
+ * Copyright (C) 2017 TypeFox and others.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0 which is available at
@@ -1979,17 +310,19 @@ exports.createUntitledURI = createUntitledURI;
  *
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
     };
-    return __assign.apply(this, arguments);
-};
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1998,6 +331,45 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
 };
 var __values = (this && this.__values) || function(o) {
     var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
@@ -2031,603 +403,792 @@ var __spread = (this && this.__spread) || function () {
     return ar;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.MenusContributionPointHandler = exports.CodeEditorWidget = void 0;
+exports.MonacoLanguages = void 0;
 var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
-var core_1 = __webpack_require__(/*! @theia/core */ "./node_modules/@theia/core/lib/common/index.js");
-var browser_1 = __webpack_require__(/*! @theia/editor/lib/browser */ "./node_modules/@theia/editor/lib/browser/index.js");
-var common_1 = __webpack_require__(/*! @theia/core/lib/common */ "./node_modules/@theia/core/lib/common/index.js");
-var event_1 = __webpack_require__(/*! @theia/core/lib/common/event */ "./node_modules/@theia/core/lib/common/event.js");
-var tab_bar_toolbar_1 = __webpack_require__(/*! @theia/core/lib/browser/shell/tab-bar-toolbar */ "./node_modules/@theia/core/lib/browser/shell/tab-bar-toolbar.js");
-var navigator_contribution_1 = __webpack_require__(/*! @theia/navigator/lib/browser/navigator-contribution */ "./node_modules/@theia/navigator/lib/browser/navigator-contribution.js");
-var quick_command_service_1 = __webpack_require__(/*! @theia/core/lib/browser/quick-open/quick-command-service */ "./node_modules/@theia/core/lib/browser/quick-open/quick-command-service.js");
-var tree_view_widget_1 = __webpack_require__(/*! ../view/tree-view-widget */ "./node_modules/@theia/plugin-ext/lib/main/browser/view/tree-view-widget.js");
-var common_2 = __webpack_require__(/*! ../../../common */ "./node_modules/@theia/plugin-ext/lib/common/index.js");
-var debug_stack_frames_widget_1 = __webpack_require__(/*! @theia/debug/lib/browser/view/debug-stack-frames-widget */ "./node_modules/@theia/debug/lib/browser/view/debug-stack-frames-widget.js");
-var debug_threads_widget_1 = __webpack_require__(/*! @theia/debug/lib/browser/view/debug-threads-widget */ "./node_modules/@theia/debug/lib/browser/view/debug-threads-widget.js");
-var tree_widget_selection_1 = __webpack_require__(/*! @theia/core/lib/browser/tree/tree-widget-selection */ "./node_modules/@theia/core/lib/browser/tree/tree-widget-selection.js");
-var scm_widget_1 = __webpack_require__(/*! @theia/scm/lib/browser/scm-widget */ "./node_modules/@theia/scm/lib/browser/scm-widget.js");
-var scm_tree_widget_1 = __webpack_require__(/*! @theia/scm/lib/browser/scm-tree-widget */ "./node_modules/@theia/scm/lib/browser/scm-tree-widget.js");
-var scm_service_1 = __webpack_require__(/*! @theia/scm/lib/browser/scm-service */ "./node_modules/@theia/scm/lib/browser/scm-service.js");
-var scm_repository_1 = __webpack_require__(/*! @theia/scm/lib/browser/scm-repository */ "./node_modules/@theia/scm/lib/browser/scm-repository.js");
-var scm_main_1 = __webpack_require__(/*! ../scm-main */ "./node_modules/@theia/plugin-ext/lib/main/browser/scm-main.js");
-var resource_context_key_1 = __webpack_require__(/*! @theia/core/lib/browser/resource-context-key */ "./node_modules/@theia/core/lib/browser/resource-context-key.js");
-var plugin_view_widget_1 = __webpack_require__(/*! ../view/plugin-view-widget */ "./node_modules/@theia/plugin-ext/lib/main/browser/view/plugin-view-widget.js");
-var view_context_key_service_1 = __webpack_require__(/*! ../view/view-context-key-service */ "./node_modules/@theia/plugin-ext/lib/main/browser/view/view-context-key-service.js");
-var webview_1 = __webpack_require__(/*! ../webview/webview */ "./node_modules/@theia/plugin-ext/lib/main/browser/webview/webview.js");
-var navigatable_1 = __webpack_require__(/*! @theia/core/lib/browser/navigatable */ "./node_modules/@theia/core/lib/browser/navigatable.js");
-var context_key_service_1 = __webpack_require__(/*! @theia/core/lib/browser/context-key-service */ "./node_modules/@theia/core/lib/browser/context-key-service.js");
-var CodeEditorWidget;
-(function (CodeEditorWidget) {
-    function is(arg) {
-        return arg instanceof browser_1.EditorWidget || arg instanceof webview_1.WebviewWidget;
-    }
-    CodeEditorWidget.is = is;
-    function getResourceUri(editor) {
-        var resourceUri = navigatable_1.Navigatable.is(editor) && editor.getResourceUri();
-        return resourceUri ? resourceUri['codeUri'] : undefined;
-    }
-    CodeEditorWidget.getResourceUri = getResourceUri;
-})(CodeEditorWidget = exports.CodeEditorWidget || (exports.CodeEditorWidget = {}));
-var MenusContributionPointHandler = /** @class */ (function () {
-    function MenusContributionPointHandler() {
-    }
-    MenusContributionPointHandler_1 = MenusContributionPointHandler;
-    MenusContributionPointHandler.prototype.handle = function (plugin) {
-        var _this = this;
-        var allMenus = plugin.contributes && plugin.contributes.menus;
-        if (!allMenus) {
-            return core_1.Disposable.NULL;
+var monaco_languageclient_1 = __webpack_require__(/*! monaco-languageclient */ "./node_modules/monaco-languageclient/lib/index.js");
+var problem_manager_1 = __webpack_require__(/*! @theia/markers/lib/browser/problem/problem-manager */ "./node_modules/@theia/markers/lib/browser/problem/problem-manager.js");
+var uri_1 = __webpack_require__(/*! @theia/core/lib/common/uri */ "./node_modules/@theia/core/lib/common/uri.js");
+var disposable_1 = __webpack_require__(/*! @theia/core/lib/common/disposable */ "./node_modules/@theia/core/lib/common/disposable.js");
+var monaco_diagnostic_collection_1 = __webpack_require__(/*! monaco-languageclient/lib/monaco-diagnostic-collection */ "./node_modules/monaco-languageclient/lib/monaco-diagnostic-collection.js");
+inversify_1.decorate(inversify_1.injectable(), monaco_languageclient_1.MonacoLanguages);
+inversify_1.decorate(inversify_1.inject(monaco_languageclient_1.ProtocolToMonacoConverter), monaco_languageclient_1.MonacoLanguages, 0);
+inversify_1.decorate(inversify_1.inject(monaco_languageclient_1.MonacoToProtocolConverter), monaco_languageclient_1.MonacoLanguages, 1);
+var MonacoLanguages = /** @class */ (function (_super) {
+    __extends(MonacoLanguages, _super);
+    function MonacoLanguages(// eslint-disable-next-line @typescript-eslint/indent
+    p2m, m2p, problemManager) {
+        var e_1, _a;
+        var _this = _super.call(this, p2m, m2p) || this;
+        _this.problemManager = problemManager;
+        _this.workspaceSymbolProviders = [];
+        _this.makers = new Map();
+        try {
+            for (var _b = __values(_this.problemManager.getUris()), _c = _b.next(); !_c.done; _c = _b.next()) {
+                var uri = _c.value;
+                _this.updateMarkers(new uri_1.default(uri));
+            }
         }
-        var toDispose = new core_1.DisposableCollection();
-        var _loop_1 = function (location_1) {
-            var e_1, _a, e_2, _b, e_3, _c, e_4, _d, e_5, _e, e_6, _f, e_7, _g, e_8, _h, e_9, _j, e_10, _k;
-            if (location_1 === 'commandPalette') {
-                try {
-                    for (var _l = (e_1 = void 0, __values(allMenus[location_1])), _m = _l.next(); !_m.done; _m = _l.next()) {
-                        var menu = _m.value;
-                        if (menu.when) {
-                            toDispose.push(this_1.quickCommandService.pushCommandContext(menu.command, menu.when));
-                        }
-                    }
-                }
-                catch (e_1_1) { e_1 = { error: e_1_1 }; }
-                finally {
-                    try {
-                        if (_m && !_m.done && (_a = _l.return)) _a.call(_l);
-                    }
-                    finally { if (e_1) throw e_1.error; }
+        catch (e_1_1) { e_1 = { error: e_1_1 }; }
+        finally {
+            try {
+                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+            }
+            finally { if (e_1) throw e_1.error; }
+        }
+        _this.problemManager.onDidChangeMarkers(function (uri) { return _this.updateMarkers(uri); });
+        return _this;
+    }
+    MonacoLanguages.prototype.updateMarkers = function (uri) {
+        var e_2, _a, e_3, _b, e_4, _c;
+        var uriString = uri.toString();
+        var owners = new Map();
+        try {
+            for (var _d = __values(this.problemManager.findMarkers({ uri: uri })), _e = _d.next(); !_e.done; _e = _d.next()) {
+                var marker = _e.value;
+                var diagnostics = owners.get(marker.owner) || [];
+                diagnostics.push(marker.data);
+                owners.set(marker.owner, diagnostics);
+            }
+        }
+        catch (e_2_1) { e_2 = { error: e_2_1 }; }
+        finally {
+            try {
+                if (_e && !_e.done && (_a = _d.return)) _a.call(_d);
+            }
+            finally { if (e_2) throw e_2.error; }
+        }
+        var toClean = new Set(this.makers.keys());
+        try {
+            for (var owners_1 = __values(owners), owners_1_1 = owners_1.next(); !owners_1_1.done; owners_1_1 = owners_1.next()) {
+                var _f = __read(owners_1_1.value, 2), owner = _f[0], diagnostics = _f[1];
+                toClean.delete(owner);
+                var collection = this.makers.get(owner) || new monaco_diagnostic_collection_1.MonacoDiagnosticCollection(owner, this.p2m);
+                collection.set(uriString, diagnostics);
+                this.makers.set(owner, collection);
+            }
+        }
+        catch (e_3_1) { e_3 = { error: e_3_1 }; }
+        finally {
+            try {
+                if (owners_1_1 && !owners_1_1.done && (_b = owners_1.return)) _b.call(owners_1);
+            }
+            finally { if (e_3) throw e_3.error; }
+        }
+        try {
+            for (var toClean_1 = __values(toClean), toClean_1_1 = toClean_1.next(); !toClean_1_1.done; toClean_1_1 = toClean_1.next()) {
+                var owner = toClean_1_1.value;
+                var collection = this.makers.get(owner);
+                if (collection) {
+                    collection.set(uriString, []);
                 }
             }
-            else if (location_1 === 'editor/title') {
-                var _loop_2 = function (action) {
-                    toDispose.push(this_1.registerTitleAction(location_1, action, {
-                        execute: function (widget) { return CodeEditorWidget.is(widget) && _this.commands.executeCommand(action.command, CodeEditorWidget.getResourceUri(widget)); },
-                        isEnabled: function (widget) { return CodeEditorWidget.is(widget) && _this.commands.isEnabled(action.command, CodeEditorWidget.getResourceUri(widget)); },
-                        isVisible: function (widget) { return CodeEditorWidget.is(widget) && _this.commands.isVisible(action.command, CodeEditorWidget.getResourceUri(widget)); }
-                    }));
-                };
-                try {
-                    for (var _o = (e_2 = void 0, __values(allMenus[location_1])), _p = _o.next(); !_p.done; _p = _o.next()) {
-                        var action = _p.value;
-                        _loop_2(action);
-                    }
-                }
-                catch (e_2_1) { e_2 = { error: e_2_1 }; }
-                finally {
-                    try {
-                        if (_p && !_p.done && (_b = _o.return)) _b.call(_o);
-                    }
-                    finally { if (e_2) throw e_2.error; }
-                }
+        }
+        catch (e_4_1) { e_4 = { error: e_4_1 }; }
+        finally {
+            try {
+                if (toClean_1_1 && !toClean_1_1.done && (_c = toClean_1.return)) _c.call(toClean_1);
             }
-            else if (location_1 === 'view/title') {
-                var _loop_3 = function (action) {
-                    toDispose.push(this_1.registerTitleAction(location_1, __assign(__assign({}, action), { when: undefined }), {
-                        execute: function (widget) { return widget instanceof plugin_view_widget_1.PluginViewWidget && _this.commands.executeCommand(action.command); },
-                        isEnabled: function (widget) { return widget instanceof plugin_view_widget_1.PluginViewWidget &&
-                            _this.viewContextKeys.with({ view: widget.options.viewId }, function () {
-                                return _this.commands.isEnabled(action.command) && _this.viewContextKeys.match(action.when);
-                            }); },
-                        isVisible: function (widget) { return widget instanceof plugin_view_widget_1.PluginViewWidget &&
-                            _this.viewContextKeys.with({ view: widget.options.viewId }, function () {
-                                return _this.commands.isVisible(action.command) && _this.viewContextKeys.match(action.when);
-                            }); }
-                    }));
-                };
+            finally { if (e_4) throw e_4.error; }
+        }
+    };
+    MonacoLanguages.prototype.createDiagnosticCollection = function (name) {
+        var _this = this;
+        var owner = name || 'default';
+        var uris = [];
+        return {
+            set: function (uri, diagnostics) {
+                _this.problemManager.setMarkers(new uri_1.default(uri), owner, diagnostics);
+                uris.push(uri);
+            },
+            dispose: function () {
+                var e_5, _a;
                 try {
-                    for (var _q = (e_3 = void 0, __values(allMenus[location_1])), _r = _q.next(); !_r.done; _r = _q.next()) {
-                        var action = _r.value;
-                        _loop_3(action);
-                    }
-                }
-                catch (e_3_1) { e_3 = { error: e_3_1 }; }
-                finally {
-                    try {
-                        if (_r && !_r.done && (_c = _q.return)) _c.call(_q);
-                    }
-                    finally { if (e_3) throw e_3.error; }
-                }
-            }
-            else if (location_1 === 'view/item/context') {
-                try {
-                    for (var _s = (e_4 = void 0, __values(allMenus[location_1])), _t = _s.next(); !_t.done; _t = _s.next()) {
-                        var menu = _t.value;
-                        var inline = menu.group && /^inline/.test(menu.group) || false;
-                        var menuPath = inline ? tree_view_widget_1.VIEW_ITEM_INLINE_MENU : tree_view_widget_1.VIEW_ITEM_CONTEXT_MENU;
-                        toDispose.push(this_1.registerTreeMenuAction(menuPath, menu));
-                    }
-                }
-                catch (e_4_1) { e_4 = { error: e_4_1 }; }
-                finally {
-                    try {
-                        if (_t && !_t.done && (_d = _s.return)) _d.call(_s);
-                    }
-                    finally { if (e_4) throw e_4.error; }
-                }
-            }
-            else if (location_1 === 'scm/title') {
-                try {
-                    for (var _u = (e_5 = void 0, __values(allMenus[location_1])), _v = _u.next(); !_v.done; _v = _u.next()) {
-                        var action = _v.value;
-                        toDispose.push(this_1.registerScmTitleAction(location_1, action));
+                    for (var uris_1 = __values(uris), uris_1_1 = uris_1.next(); !uris_1_1.done; uris_1_1 = uris_1.next()) {
+                        var uri = uris_1_1.value;
+                        _this.problemManager.setMarkers(new uri_1.default(uri), owner, []);
                     }
                 }
                 catch (e_5_1) { e_5 = { error: e_5_1 }; }
                 finally {
                     try {
-                        if (_v && !_v.done && (_e = _u.return)) _e.call(_u);
+                        if (uris_1_1 && !uris_1_1.done && (_a = uris_1.return)) _a.call(uris_1);
                     }
                     finally { if (e_5) throw e_5.error; }
                 }
             }
-            else if (location_1 === 'scm/resourceGroup/context') {
-                try {
-                    for (var _w = (e_6 = void 0, __values(allMenus[location_1])), _x = _w.next(); !_x.done; _x = _w.next()) {
-                        var menu = _x.value;
-                        var inline = menu.group && /^inline/.test(menu.group) || false;
-                        var menuPath = inline ? scm_tree_widget_1.ScmTreeWidget.RESOURCE_GROUP_INLINE_MENU : scm_tree_widget_1.ScmTreeWidget.RESOURCE_GROUP_CONTEXT_MENU;
-                        toDispose.push(this_1.registerScmMenuAction(menuPath, menu));
-                    }
-                }
-                catch (e_6_1) { e_6 = { error: e_6_1 }; }
-                finally {
-                    try {
-                        if (_x && !_x.done && (_f = _w.return)) _f.call(_w);
-                    }
-                    finally { if (e_6) throw e_6.error; }
-                }
-            }
-            else if (location_1 === 'scm/resourceFolder/context') {
-                try {
-                    for (var _y = (e_7 = void 0, __values(allMenus[location_1])), _z = _y.next(); !_z.done; _z = _y.next()) {
-                        var menu = _z.value;
-                        var inline = menu.group && /^inline/.test(menu.group) || false;
-                        var menuPath = inline ? scm_tree_widget_1.ScmTreeWidget.RESOURCE_FOLDER_INLINE_MENU : scm_tree_widget_1.ScmTreeWidget.RESOURCE_FOLDER_CONTEXT_MENU;
-                        toDispose.push(this_1.registerScmMenuAction(menuPath, menu));
-                    }
-                }
-                catch (e_7_1) { e_7 = { error: e_7_1 }; }
-                finally {
-                    try {
-                        if (_z && !_z.done && (_g = _y.return)) _g.call(_y);
-                    }
-                    finally { if (e_7) throw e_7.error; }
-                }
-            }
-            else if (location_1 === 'scm/resourceState/context') {
-                try {
-                    for (var _0 = (e_8 = void 0, __values(allMenus[location_1])), _1 = _0.next(); !_1.done; _1 = _0.next()) {
-                        var menu = _1.value;
-                        var inline = menu.group && /^inline/.test(menu.group) || false;
-                        var menuPath = inline ? scm_tree_widget_1.ScmTreeWidget.RESOURCE_INLINE_MENU : scm_tree_widget_1.ScmTreeWidget.RESOURCE_CONTEXT_MENU;
-                        toDispose.push(this_1.registerScmMenuAction(menuPath, menu));
-                    }
-                }
-                catch (e_8_1) { e_8 = { error: e_8_1 }; }
-                finally {
-                    try {
-                        if (_1 && !_1.done && (_h = _0.return)) _h.call(_0);
-                    }
-                    finally { if (e_8) throw e_8.error; }
-                }
-            }
-            else if (location_1 === 'debug/callstack/context') {
-                try {
-                    for (var _2 = (e_9 = void 0, __values(allMenus[location_1])), _3 = _2.next(); !_3.done; _3 = _2.next()) {
-                        var menu = _3.value;
-                        try {
-                            for (var _4 = (e_10 = void 0, __values([debug_stack_frames_widget_1.DebugStackFramesWidget.CONTEXT_MENU, debug_threads_widget_1.DebugThreadsWidget.CONTEXT_MENU])), _5 = _4.next(); !_5.done; _5 = _4.next()) {
-                                var menuPath = _5.value;
-                                toDispose.push(this_1.registerMenuAction(menuPath, menu, function (command) { return ({
-                                    execute: function () {
-                                        var args = [];
-                                        for (var _i = 0; _i < arguments.length; _i++) {
-                                            args[_i] = arguments[_i];
-                                        }
-                                        return _this.commands.executeCommand(command, args[0]);
-                                    },
-                                    isEnabled: function () {
-                                        var args = [];
-                                        for (var _i = 0; _i < arguments.length; _i++) {
-                                            args[_i] = arguments[_i];
-                                        }
-                                        return _this.commands.isEnabled(command, args[0]);
-                                    },
-                                    isVisible: function () {
-                                        var args = [];
-                                        for (var _i = 0; _i < arguments.length; _i++) {
-                                            args[_i] = arguments[_i];
-                                        }
-                                        return _this.commands.isVisible(command, args[0]);
-                                    }
-                                }); }));
-                            }
-                        }
-                        catch (e_10_1) { e_10 = { error: e_10_1 }; }
-                        finally {
-                            try {
-                                if (_5 && !_5.done && (_k = _4.return)) _k.call(_4);
-                            }
-                            finally { if (e_10) throw e_10.error; }
-                        }
-                    }
-                }
-                catch (e_9_1) { e_9 = { error: e_9_1 }; }
-                finally {
-                    try {
-                        if (_3 && !_3.done && (_j = _2.return)) _j.call(_2);
-                    }
-                    finally { if (e_9) throw e_9.error; }
-                }
-            }
-            else if (allMenus.hasOwnProperty(location_1)) {
-                var menuPaths_1 = MenusContributionPointHandler_1.parseMenuPaths(location_1);
-                if (!menuPaths_1.length) {
-                    this_1.logger.warn("'" + plugin.metadata.model.id + "' plugin contributes items to a menu with invalid identifier: " + location_1);
-                    return "continue";
-                }
-                var menus = allMenus[location_1];
-                menus.forEach(function (menu) {
-                    var e_11, _a;
-                    try {
-                        for (var menuPaths_2 = (e_11 = void 0, __values(menuPaths_1)), menuPaths_2_1 = menuPaths_2.next(); !menuPaths_2_1.done; menuPaths_2_1 = menuPaths_2.next()) {
-                            var menuPath = menuPaths_2_1.value;
-                            toDispose.push(_this.registerGlobalMenuAction(menuPath, menu));
-                        }
-                    }
-                    catch (e_11_1) { e_11 = { error: e_11_1 }; }
-                    finally {
-                        try {
-                            if (menuPaths_2_1 && !menuPaths_2_1.done && (_a = menuPaths_2.return)) _a.call(menuPaths_2);
-                        }
-                        finally { if (e_11) throw e_11.error; }
-                    }
-                });
-            }
         };
-        var this_1 = this;
-        for (var location_1 in allMenus) {
-            _loop_1(location_1);
-        }
-        return toDispose;
     };
-    MenusContributionPointHandler.parseMenuPaths = function (value) {
-        switch (value) {
-            case 'editor/context': return [browser_1.EDITOR_CONTEXT_MENU];
-            case 'explorer/context': return [navigator_contribution_1.NAVIGATOR_CONTEXT_MENU];
-        }
-        return [];
-    };
-    MenusContributionPointHandler.prototype.registerTreeMenuAction = function (menuPath, menu) {
+    MonacoLanguages.prototype.registerWorkspaceSymbolProvider = function (provider) {
         var _this = this;
-        return this.registerMenuAction(menuPath, menu, function (command) { return ({
-            execute: function () {
-                var _a;
-                var args = [];
-                for (var _i = 0; _i < arguments.length; _i++) {
-                    args[_i] = arguments[_i];
-                }
-                return (_a = _this.commands).executeCommand.apply(_a, __spread([command], _this.toTreeArgs.apply(_this, __spread(args))));
-            },
-            isEnabled: function () {
-                var _a;
-                var args = [];
-                for (var _i = 0; _i < arguments.length; _i++) {
-                    args[_i] = arguments[_i];
-                }
-                return (_a = _this.commands).isEnabled.apply(_a, __spread([command], _this.toTreeArgs.apply(_this, __spread(args))));
-            },
-            isVisible: function () {
-                var _a;
-                var args = [];
-                for (var _i = 0; _i < arguments.length; _i++) {
-                    args[_i] = arguments[_i];
-                }
-                return (_a = _this.commands).isVisible.apply(_a, __spread([command], _this.toTreeArgs.apply(_this, __spread(args))));
+        this.workspaceSymbolProviders.push(provider);
+        return disposable_1.Disposable.create(function () {
+            var index = _this.workspaceSymbolProviders.indexOf(provider);
+            if (index !== -1) {
+                _this.workspaceSymbolProviders.splice(index, 1);
             }
-        }); });
-    };
-    MenusContributionPointHandler.prototype.toTreeArgs = function () {
-        var e_12, _a;
-        var args = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            args[_i] = arguments[_i];
-        }
-        var treeArgs = [];
-        try {
-            for (var args_1 = __values(args), args_1_1 = args_1.next(); !args_1_1.done; args_1_1 = args_1.next()) {
-                var arg = args_1_1.value;
-                if (common_2.TreeViewSelection.is(arg)) {
-                    treeArgs.push(arg);
-                }
-            }
-        }
-        catch (e_12_1) { e_12 = { error: e_12_1 }; }
-        finally {
-            try {
-                if (args_1_1 && !args_1_1.done && (_a = args_1.return)) _a.call(args_1);
-            }
-            finally { if (e_12) throw e_12.error; }
-        }
-        return treeArgs;
-    };
-    MenusContributionPointHandler.prototype.registerTitleAction = function (location, action, handler) {
-        var _this = this;
-        var toDispose = new core_1.DisposableCollection();
-        var id = this.createSyntheticCommandId(action.command, { prefix: "__plugin." + location.replace('/', '.') + ".action." });
-        var command = { id: id };
-        toDispose.push(this.commands.registerCommand(command, handler));
-        var when = action.when;
-        var whenKeys = when && this.contextKeyService.parseKeys(when);
-        var onDidChange;
-        if (whenKeys && whenKeys.size) {
-            var onDidChangeEmitter_1 = new event_1.Emitter();
-            toDispose.push(onDidChangeEmitter_1);
-            onDidChange = onDidChangeEmitter_1.event;
-            this.contextKeyService.onDidChange.maxListeners = this.contextKeyService.onDidChange.maxListeners + 1;
-            toDispose.push(this.contextKeyService.onDidChange(function (event) {
-                if (event.affects(whenKeys)) {
-                    onDidChangeEmitter_1.fire(undefined);
-                }
-            }));
-            toDispose.push(core_1.Disposable.create(function () {
-                _this.contextKeyService.onDidChange.maxListeners = _this.contextKeyService.onDidChange.maxListeners - 1;
-            }));
-        }
-        // handle group and priority
-        // if group is empty or white space is will be set to navigation
-        // ' ' => ['navigation', 0]
-        // 'navigation@1' => ['navigation', 1]
-        // '1_rest-client@2' => ['1_rest-client', 2]
-        // if priority is not a number it will be set to 0
-        // navigation@test => ['navigation', 0]
-        var _a = __read((action.group || 'navigation').split('@'), 2), group = _a[0], sort = _a[1];
-        var item = { id: id, command: id, group: group.trim() || 'navigation', priority: ~~sort || undefined, when: when, onDidChange: onDidChange };
-        toDispose.push(this.tabBarToolbar.registerItem(item));
-        toDispose.push(this.onDidRegisterCommand(action.command, function (pluginCommand) {
-            command.category = pluginCommand.category;
-            item.tooltip = pluginCommand.label;
-            if (group === 'navigation') {
-                command.iconClass = pluginCommand.iconClass;
-            }
-        }));
-        return toDispose;
-    };
-    MenusContributionPointHandler.prototype.registerScmTitleAction = function (location, action) {
-        var _this = this;
-        var selectedRepository = function () { return _this.toScmArgs(_this.scmService.selectedRepository); };
-        return this.registerTitleAction(location, action, {
-            execute: function (widget) { return widget instanceof scm_widget_1.ScmWidget && _this.commands.executeCommand(action.command, selectedRepository()); },
-            isEnabled: function (widget) { return widget instanceof scm_widget_1.ScmWidget && _this.commands.isEnabled(action.command, selectedRepository()); },
-            isVisible: function (widget) { return widget instanceof scm_widget_1.ScmWidget && _this.commands.isVisible(action.command, selectedRepository()); }
         });
     };
-    MenusContributionPointHandler.prototype.registerScmMenuAction = function (menuPath, menu) {
-        var _this = this;
-        return this.registerMenuAction(menuPath, menu, function (command) { return ({
-            execute: function () {
-                var _a;
-                var args = [];
-                for (var _i = 0; _i < arguments.length; _i++) {
-                    args[_i] = arguments[_i];
-                }
-                return (_a = _this.commands).executeCommand.apply(_a, __spread([command], _this.toScmArgs.apply(_this, __spread(args))));
-            },
-            isEnabled: function () {
-                var _a;
-                var args = [];
-                for (var _i = 0; _i < arguments.length; _i++) {
-                    args[_i] = arguments[_i];
-                }
-                return (_a = _this.commands).isEnabled.apply(_a, __spread([command], _this.toScmArgs.apply(_this, __spread(args))));
-            },
-            isVisible: function () {
-                var _a;
-                var args = [];
-                for (var _i = 0; _i < arguments.length; _i++) {
-                    args[_i] = arguments[_i];
-                }
-                return (_a = _this.commands).isVisible.apply(_a, __spread([command], _this.toScmArgs.apply(_this, __spread(args))));
-            }
-        }); });
+    Object.defineProperty(MonacoLanguages.prototype, "languages", {
+        get: function () {
+            return __spread(this.mergeLanguages(monaco.languages.getLanguages()).values());
+        },
+        enumerable: false,
+        configurable: true
+    });
+    MonacoLanguages.prototype.getLanguage = function (languageId) {
+        return this.mergeLanguages(monaco.languages.getLanguages().filter(function (language) { return language.id === languageId; })).get(languageId);
     };
-    MenusContributionPointHandler.prototype.toScmArgs = function () {
-        var e_13, _a;
-        var args = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            args[_i] = arguments[_i];
-        }
-        var scmArgs = [];
+    MonacoLanguages.prototype.mergeLanguages = function (registered) {
+        var e_6, _a, e_7, _b, e_8, _c, e_9, _d;
+        var languages = new Map();
         try {
-            for (var args_2 = __values(args), args_2_1 = args_2.next(); !args_2_1.done; args_2_1 = args_2.next()) {
-                var arg = args_2_1.value;
-                var scmArg = this.toScmArg(arg);
-                if (scmArg) {
-                    scmArgs.push(scmArg);
+            for (var registered_1 = __values(registered), registered_1_1 = registered_1.next(); !registered_1_1.done; registered_1_1 = registered_1.next()) {
+                var _e = registered_1_1.value, id = _e.id, aliases = _e.aliases, extensions = _e.extensions, filenames = _e.filenames;
+                var merged = languages.get(id) || {
+                    id: id,
+                    name: '',
+                    extensions: new Set(),
+                    filenames: new Set()
+                };
+                if (!merged.name && aliases && aliases.length) {
+                    merged.name = aliases[0];
                 }
+                if (extensions && extensions.length) {
+                    try {
+                        for (var extensions_1 = (e_7 = void 0, __values(extensions)), extensions_1_1 = extensions_1.next(); !extensions_1_1.done; extensions_1_1 = extensions_1.next()) {
+                            var extension = extensions_1_1.value;
+                            merged.extensions.add(extension);
+                        }
+                    }
+                    catch (e_7_1) { e_7 = { error: e_7_1 }; }
+                    finally {
+                        try {
+                            if (extensions_1_1 && !extensions_1_1.done && (_b = extensions_1.return)) _b.call(extensions_1);
+                        }
+                        finally { if (e_7) throw e_7.error; }
+                    }
+                }
+                if (filenames && filenames.length) {
+                    try {
+                        for (var filenames_1 = (e_8 = void 0, __values(filenames)), filenames_1_1 = filenames_1.next(); !filenames_1_1.done; filenames_1_1 = filenames_1.next()) {
+                            var filename = filenames_1_1.value;
+                            merged.filenames.add(filename);
+                        }
+                    }
+                    catch (e_8_1) { e_8 = { error: e_8_1 }; }
+                    finally {
+                        try {
+                            if (filenames_1_1 && !filenames_1_1.done && (_c = filenames_1.return)) _c.call(filenames_1);
+                        }
+                        finally { if (e_8) throw e_8.error; }
+                    }
+                }
+                languages.set(id, merged);
             }
         }
-        catch (e_13_1) { e_13 = { error: e_13_1 }; }
+        catch (e_6_1) { e_6 = { error: e_6_1 }; }
         finally {
             try {
-                if (args_2_1 && !args_2_1.done && (_a = args_2.return)) _a.call(args_2);
+                if (registered_1_1 && !registered_1_1.done && (_a = registered_1.return)) _a.call(registered_1);
             }
-            finally { if (e_13) throw e_13.error; }
+            finally { if (e_6) throw e_6.error; }
         }
-        return scmArgs;
-    };
-    MenusContributionPointHandler.prototype.toScmArg = function (arg) {
-        if (arg instanceof scm_repository_1.ScmRepository && arg.provider instanceof scm_main_1.PluginScmProvider) {
-            return {
-                sourceControlHandle: arg.provider.handle
-            };
-        }
-        if (arg instanceof scm_main_1.PluginScmResourceGroup) {
-            return {
-                sourceControlHandle: arg.provider.handle,
-                resourceGroupHandle: arg.handle
-            };
-        }
-        if (arg instanceof scm_main_1.PluginScmResource) {
-            return {
-                sourceControlHandle: arg.group.provider.handle,
-                resourceGroupHandle: arg.group.handle,
-                resourceStateHandle: arg.handle
-            };
-        }
-    };
-    MenusContributionPointHandler.prototype.registerGlobalMenuAction = function (menuPath, menu) {
-        var _this = this;
-        var selectedResource = function () {
-            var selection = _this.selectionService.selection;
-            if (tree_widget_selection_1.TreeWidgetSelection.is(selection) && selection.source instanceof tree_view_widget_1.TreeViewWidget && selection[0]) {
-                return selection.source.toTreeViewSelection(selection[0]);
-            }
-            var uri = _this.resourceContextKey.get();
-            return uri ? uri['codeUri'] : undefined;
-        };
-        return this.registerMenuAction(menuPath, menu, function (command) { return ({
-            execute: function () { return _this.commands.executeCommand(command, selectedResource()); },
-            isEnabled: function () { return _this.commands.isEnabled(command, selectedResource()); },
-            isVisible: function () { return _this.commands.isVisible(command, selectedResource()); }
-        }); });
-    };
-    MenusContributionPointHandler.prototype.registerMenuAction = function (menuPath, menu, handler) {
-        var toDispose = new core_1.DisposableCollection();
-        var commandId = this.createSyntheticCommandId(menu.command, { prefix: '__plugin.menu.action.' });
-        var command = { id: commandId };
-        toDispose.push(this.commands.registerCommand(command, handler(menu.command)));
-        toDispose.push(this.quickCommandService.pushCommandContext(commandId, 'false'));
-        var altId;
-        if (menu.alt) {
-            altId = this.createSyntheticCommandId(menu.alt, { prefix: '__plugin.menu.action.' });
-            var alt_1 = { id: altId };
-            toDispose.push(this.commands.registerCommand(alt_1, handler(menu.alt)));
-            toDispose.push(this.quickCommandService.pushCommandContext(altId, 'false'));
-            toDispose.push(this.onDidRegisterCommand(menu.alt, function (pluginCommand) {
-                alt_1.category = pluginCommand.category;
-                alt_1.label = pluginCommand.label;
-                if (inline) {
-                    alt_1.iconClass = pluginCommand.iconClass;
+        try {
+            for (var languages_1 = __values(languages), languages_1_1 = languages_1.next(); !languages_1_1.done; languages_1_1 = languages_1.next()) {
+                var _f = __read(languages_1_1.value, 2), id = _f[0], language = _f[1];
+                if (!language.name) {
+                    language.name = id;
                 }
-            }));
-        }
-        var when = menu.when;
-        var _a = __read((menu.group || '').split('@'), 2), _b = _a[0], group = _b === void 0 ? '' : _b, _c = _a[1], order = _c === void 0 ? undefined : _c;
-        var action = { commandId: commandId, alt: altId, order: order, when: when };
-        var inline = /^inline/.test(group);
-        menuPath = inline ? menuPath : __spread(menuPath, [group]);
-        toDispose.push(this.menuRegistry.registerMenuAction(menuPath, action));
-        toDispose.push(this.onDidRegisterCommand(menu.command, function (pluginCommand) {
-            command.category = pluginCommand.category;
-            command.label = pluginCommand.label;
-            if (inline) {
-                command.iconClass = pluginCommand.iconClass;
             }
-        }));
-        return toDispose;
-    };
-    MenusContributionPointHandler.prototype.createSyntheticCommandId = function (command, _a) {
-        var prefix = _a.prefix;
-        var id = prefix + command;
-        var index = 0;
-        while (this.commands.getCommand(id)) {
-            id = prefix + command + ':' + index;
-            index++;
         }
-        return id;
+        catch (e_9_1) { e_9 = { error: e_9_1 }; }
+        finally {
+            try {
+                if (languages_1_1 && !languages_1_1.done && (_d = languages_1.return)) _d.call(languages_1);
+            }
+            finally { if (e_9) throw e_9.error; }
+        }
+        return languages;
     };
-    MenusContributionPointHandler.prototype.onDidRegisterCommand = function (id, cb) {
+    MonacoLanguages.prototype.createSignatureHelpProvider = function (selector, provider) {
         var _this = this;
-        var command = this.commands.getCommand(id);
-        if (command) {
-            cb(command);
-            return core_1.Disposable.NULL;
+        var triggerCharacters = [];
+        for (var _i = 2; _i < arguments.length; _i++) {
+            triggerCharacters[_i - 2] = arguments[_i];
         }
-        var toDispose = new core_1.DisposableCollection();
-        // Registering a menu action requires the related command to be already registered.
-        // But Theia plugin registers the commands dynamically via the Commands API.
-        // Let's wait for ~2 sec. It should be enough to finish registering all the contributed commands.
-        // FIXME: remove this workaround (timer) once the https://github.com/theia-ide/theia/issues/3344 is fixed
-        var handle = setTimeout(function () { return toDispose.push(_this.onDidRegisterCommand(id, cb)); }, 2000);
-        toDispose.push(core_1.Disposable.create(function () { return clearTimeout(handle); }));
-        return toDispose;
+        var signatureHelpTriggerCharacters = __spread((provider.triggerCharacters || triggerCharacters || []));
+        var signatureHelpRetriggerCharacters = __spread((provider.retriggerCharacters || []));
+        return {
+            signatureHelpTriggerCharacters: signatureHelpTriggerCharacters,
+            signatureHelpRetriggerCharacters: signatureHelpRetriggerCharacters,
+            provideSignatureHelp: function (model, position, token) { return __awaiter(_this, void 0, void 0, function () {
+                var params, help;
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0:
+                            if (!this.matchModel(selector, monaco_languageclient_1.MonacoModelIdentifier.fromModel(model))) {
+                                return [2 /*return*/, undefined];
+                            }
+                            params = this.m2p.asTextDocumentPositionParams(model, position);
+                            return [4 /*yield*/, provider.provideSignatureHelp(params, token, undefined /* not used by LC */)];
+                        case 1:
+                            help = _a.sent();
+                            if (!help) {
+                                return [2 /*return*/, undefined];
+                            }
+                            return [2 /*return*/, this.p2m.asSignatureHelpResult(help)];
+                    }
+                });
+            }); }
+        };
     };
-    var MenusContributionPointHandler_1;
-    __decorate([
-        inversify_1.inject(common_1.MenuModelRegistry),
-        __metadata("design:type", common_1.MenuModelRegistry)
-    ], MenusContributionPointHandler.prototype, "menuRegistry", void 0);
-    __decorate([
-        inversify_1.inject(core_1.CommandRegistry),
-        __metadata("design:type", core_1.CommandRegistry)
-    ], MenusContributionPointHandler.prototype, "commands", void 0);
-    __decorate([
-        inversify_1.inject(core_1.ILogger),
-        __metadata("design:type", Object)
-    ], MenusContributionPointHandler.prototype, "logger", void 0);
-    __decorate([
-        inversify_1.inject(scm_service_1.ScmService),
-        __metadata("design:type", scm_service_1.ScmService)
-    ], MenusContributionPointHandler.prototype, "scmService", void 0);
-    __decorate([
-        inversify_1.inject(quick_command_service_1.QuickCommandService),
-        __metadata("design:type", quick_command_service_1.QuickCommandService)
-    ], MenusContributionPointHandler.prototype, "quickCommandService", void 0);
-    __decorate([
-        inversify_1.inject(tab_bar_toolbar_1.TabBarToolbarRegistry),
-        __metadata("design:type", tab_bar_toolbar_1.TabBarToolbarRegistry)
-    ], MenusContributionPointHandler.prototype, "tabBarToolbar", void 0);
-    __decorate([
-        inversify_1.inject(core_1.SelectionService),
-        __metadata("design:type", core_1.SelectionService)
-    ], MenusContributionPointHandler.prototype, "selectionService", void 0);
-    __decorate([
-        inversify_1.inject(resource_context_key_1.ResourceContextKey),
-        __metadata("design:type", resource_context_key_1.ResourceContextKey)
-    ], MenusContributionPointHandler.prototype, "resourceContextKey", void 0);
-    __decorate([
-        inversify_1.inject(view_context_key_service_1.ViewContextKeyService),
-        __metadata("design:type", view_context_key_service_1.ViewContextKeyService)
-    ], MenusContributionPointHandler.prototype, "viewContextKeys", void 0);
-    __decorate([
-        inversify_1.inject(context_key_service_1.ContextKeyService),
-        __metadata("design:type", context_key_service_1.ContextKeyService)
-    ], MenusContributionPointHandler.prototype, "contextKeyService", void 0);
-    MenusContributionPointHandler = MenusContributionPointHandler_1 = __decorate([
-        inversify_1.injectable()
-    ], MenusContributionPointHandler);
-    return MenusContributionPointHandler;
-}());
-exports.MenusContributionPointHandler = MenusContributionPointHandler;
+    MonacoLanguages.prototype.createCodeActionProvider = function (selector, provider) {
+        var _this = this;
+        return {
+            provideCodeActions: function (model, range, context, token) { return __awaiter(_this, void 0, void 0, function () {
+                var params, actions;
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0:
+                            if (!this.matchModel(selector, monaco_languageclient_1.MonacoModelIdentifier.fromModel(model))) {
+                                return [2 /*return*/, undefined];
+                            }
+                            params = this.m2p.asCodeActionParams(model, range, context);
+                            return [4 /*yield*/, provider.provideCodeActions(params, token)];
+                        case 1:
+                            actions = _a.sent();
+                            if (!actions) {
+                                return [2 /*return*/, undefined];
+                            }
+                            return [2 /*return*/, this.p2m.asCodeActionList(actions)];
+                    }
+                });
+            }); }
+        };
+    };
+    MonacoLanguages.prototype.createCodeLensProvider = function (selector, provider) {
+        var _this = this;
+        return {
+            provideCodeLenses: function (model, token) { return __awaiter(_this, void 0, void 0, function () {
+                var params, lenses;
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0:
+                            if (!this.matchModel(selector, monaco_languageclient_1.MonacoModelIdentifier.fromModel(model))) {
+                                return [2 /*return*/, undefined];
+                            }
+                            params = this.m2p.asCodeLensParams(model);
+                            return [4 /*yield*/, provider.provideCodeLenses(params, token)];
+                        case 1:
+                            lenses = _a.sent();
+                            if (!lenses) {
+                                return [2 /*return*/, undefined];
+                            }
+                            return [2 /*return*/, this.p2m.asCodeLensList(lenses)];
+                    }
+                });
+            }); },
+            resolveCodeLens: provider.resolveCodeLens ? function (model, codeLens, token) { return __awaiter(_this, void 0, void 0, function () {
+                var protocolCodeLens, result, resolvedCodeLens;
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0:
+                            if (!this.matchModel(selector, monaco_languageclient_1.MonacoModelIdentifier.fromModel(model))) {
+                                return [2 /*return*/, codeLens];
+                            }
+                            protocolCodeLens = this.m2p.asCodeLens(codeLens);
+                            return [4 /*yield*/, provider.resolveCodeLens(protocolCodeLens, token)];
+                        case 1:
+                            result = _a.sent();
+                            if (result) {
+                                resolvedCodeLens = this.p2m.asCodeLens(result);
+                                Object.assign(codeLens, resolvedCodeLens);
+                            }
+                            return [2 /*return*/, codeLens];
+                    }
+                });
+            }); } : (function (_, codeLens, __) { return codeLens; })
+        };
+    };
+    MonacoLanguages = __decorate([
+        inversify_1.injectable(),
+        __param(0, inversify_1.inject(monaco_languageclient_1.ProtocolToMonacoConverter)),
+        __param(1, inversify_1.inject(monaco_languageclient_1.MonacoToProtocolConverter)),
+        __param(2, inversify_1.inject(problem_manager_1.ProblemManager)),
+        __metadata("design:paramtypes", [monaco_languageclient_1.ProtocolToMonacoConverter,
+            monaco_languageclient_1.MonacoToProtocolConverter,
+            problem_manager_1.ProblemManager])
+    ], MonacoLanguages);
+    return MonacoLanguages;
+}(monaco_languageclient_1.MonacoLanguages));
+exports.MonacoLanguages = MonacoLanguages;
 
 
 /***/ }),
 
-/***/ "./node_modules/@theia/plugin-ext/lib/main/browser/plugin-shared-style.js":
-/*!********************************************************************************!*\
-  !*** ./node_modules/@theia/plugin-ext/lib/main/browser/plugin-shared-style.js ***!
-  \********************************************************************************/
+/***/ "./node_modules/@theia/monaco/lib/browser/monaco-snippet-suggest-provider.js":
+/*!***********************************************************************************!*\
+  !*** ./node_modules/@theia/monaco/lib/browser/monaco-snippet-suggest-provider.js ***!
+  \***********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/********************************************************************************
+ * Copyright (C) 2019 TypeFox and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+var __values = (this && this.__values) || function(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+    if (m) return m.call(o);
+    if (o && typeof o.length === "number") return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+};
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+var __spread = (this && this.__spread) || function () {
+    for (var ar = [], i = 0; i < arguments.length; i++) ar = ar.concat(__read(arguments[i]));
+    return ar;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MonacoSnippetSuggestion = exports.JsonSerializedSnippet = exports.MonacoSnippetSuggestProvider = void 0;
+var jsoncparser = __webpack_require__(/*! jsonc-parser */ "./node_modules/jsonc-parser/lib/esm/main.js");
+var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
+var disposable_1 = __webpack_require__(/*! @theia/core/lib/common/disposable */ "./node_modules/@theia/core/lib/common/disposable.js");
+var common_1 = __webpack_require__(/*! @theia/filesystem/lib/common */ "./node_modules/@theia/filesystem/lib/common/index.js");
+var browser_1 = __webpack_require__(/*! @theia/languages/lib/browser */ "./node_modules/@theia/languages/lib/browser/index.js");
+var MonacoSnippetSuggestProvider = /** @class */ (function () {
+    function MonacoSnippetSuggestProvider() {
+        this.snippets = new Map();
+        this.pendingSnippets = new Map();
+    }
+    MonacoSnippetSuggestProvider_1 = MonacoSnippetSuggestProvider;
+    MonacoSnippetSuggestProvider.prototype.provideCompletionItems = function (model, position, context) {
+        return __awaiter(this, void 0, void 0, function () {
+            var languageId, snippetsForLanguage, pos, lineOffsets, linePrefixLow, endsInWhitespace, word, availableSnippets, suggestions, _loop_1, lineOffsets_1, lineOffsets_1_1, start;
+            var e_1, _a;
+            var _this = this;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        // copied and modified from https://github.com/microsoft/vscode/blob/master/src/vs/workbench/contrib/snippets/browser/snippetCompletionProvider.ts
+                        if (position.column >= MonacoSnippetSuggestProvider_1._maxPrefix) {
+                            return [2 /*return*/, undefined];
+                        }
+                        if (context.triggerKind === browser_1.CompletionTriggerKind.TriggerCharacter && context.triggerCharacter === ' ') {
+                            // no snippets when suggestions have been triggered by space
+                            return [2 /*return*/, undefined];
+                        }
+                        languageId = model.getModeId();
+                        return [4 /*yield*/, this.loadSnippets(languageId)];
+                    case 1:
+                        _b.sent();
+                        snippetsForLanguage = this.snippets.get(languageId) || [];
+                        pos = { lineNumber: position.lineNumber, column: 1 };
+                        lineOffsets = [];
+                        linePrefixLow = model.getLineContent(position.lineNumber).substr(0, position.column - 1).toLowerCase();
+                        endsInWhitespace = linePrefixLow.match(/\s$/);
+                        while (pos.column < position.column) {
+                            word = model.getWordAtPosition(pos);
+                            if (word) {
+                                // at a word
+                                lineOffsets.push(word.startColumn - 1);
+                                pos.column = word.endColumn + 1;
+                                if (word.endColumn - 1 < linePrefixLow.length && !/\s/.test(linePrefixLow[word.endColumn - 1])) {
+                                    lineOffsets.push(word.endColumn - 1);
+                                }
+                            }
+                            else if (!/\s/.test(linePrefixLow[pos.column - 1])) {
+                                // at a none-whitespace character
+                                lineOffsets.push(pos.column - 1);
+                                pos.column += 1;
+                            }
+                            else {
+                                // always advance!
+                                pos.column += 1;
+                            }
+                        }
+                        availableSnippets = new Set();
+                        snippetsForLanguage.forEach(availableSnippets.add, availableSnippets);
+                        suggestions = [];
+                        _loop_1 = function (start) {
+                            availableSnippets.forEach(function (snippet) {
+                                if (_this.isPatternInWord(linePrefixLow, start, linePrefixLow.length, snippet.prefix.toLowerCase(), 0, snippet.prefix.length)) {
+                                    suggestions.push(new MonacoSnippetSuggestion(snippet, monaco.Range.fromPositions(position.delta(0, -(linePrefixLow.length - start)), position)));
+                                    availableSnippets.delete(snippet);
+                                }
+                            });
+                        };
+                        try {
+                            for (lineOffsets_1 = __values(lineOffsets), lineOffsets_1_1 = lineOffsets_1.next(); !lineOffsets_1_1.done; lineOffsets_1_1 = lineOffsets_1.next()) {
+                                start = lineOffsets_1_1.value;
+                                _loop_1(start);
+                            }
+                        }
+                        catch (e_1_1) { e_1 = { error: e_1_1 }; }
+                        finally {
+                            try {
+                                if (lineOffsets_1_1 && !lineOffsets_1_1.done && (_a = lineOffsets_1.return)) _a.call(lineOffsets_1);
+                            }
+                            finally { if (e_1) throw e_1.error; }
+                        }
+                        if (endsInWhitespace || lineOffsets.length === 0) {
+                            // add remaining snippets when the current prefix ends in whitespace or when no
+                            // interesting positions have been found
+                            availableSnippets.forEach(function (snippet) {
+                                suggestions.push(new MonacoSnippetSuggestion(snippet, monaco.Range.fromPositions(position)));
+                            });
+                        }
+                        // disambiguate suggestions with same labels
+                        suggestions.sort(MonacoSnippetSuggestion.compareByLabel);
+                        return [2 /*return*/, { suggestions: suggestions }];
+                }
+            });
+        });
+    };
+    MonacoSnippetSuggestProvider.prototype.resolveCompletionItem = function (textModel, position, item) {
+        return item instanceof MonacoSnippetSuggestion ? item.resolve() : item;
+    };
+    MonacoSnippetSuggestProvider.prototype.loadSnippets = function (scope) {
+        return __awaiter(this, void 0, void 0, function () {
+            var pending;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        pending = [];
+                        pending.push.apply(pending, __spread((this.pendingSnippets.get(scope) || [])));
+                        pending.push.apply(pending, __spread((this.pendingSnippets.get('*') || [])));
+                        if (!pending.length) return [3 /*break*/, 2];
+                        return [4 /*yield*/, Promise.all(pending)];
+                    case 1:
+                        _a.sent();
+                        _a.label = 2;
+                    case 2: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    MonacoSnippetSuggestProvider.prototype.fromURI = function (uri, options) {
+        var e_2, _a;
+        var toDispose = new disposable_1.DisposableCollection(disposable_1.Disposable.create(function () { }));
+        var pending = this.loadURI(uri, options, toDispose);
+        var language = options.language;
+        var scopes = Array.isArray(language) ? language : !!language ? [language] : ['*'];
+        var _loop_2 = function (scope) {
+            var pendingSnippets = this_1.pendingSnippets.get(scope) || [];
+            pendingSnippets.push(pending);
+            this_1.pendingSnippets.set(scope, pendingSnippets);
+            toDispose.push(disposable_1.Disposable.create(function () {
+                var index = pendingSnippets.indexOf(pending);
+                if (index !== -1) {
+                    pendingSnippets.splice(index, 1);
+                }
+            }));
+        };
+        var this_1 = this;
+        try {
+            for (var scopes_1 = __values(scopes), scopes_1_1 = scopes_1.next(); !scopes_1_1.done; scopes_1_1 = scopes_1.next()) {
+                var scope = scopes_1_1.value;
+                _loop_2(scope);
+            }
+        }
+        catch (e_2_1) { e_2 = { error: e_2_1 }; }
+        finally {
+            try {
+                if (scopes_1_1 && !scopes_1_1.done && (_a = scopes_1.return)) _a.call(scopes_1);
+            }
+            finally { if (e_2) throw e_2.error; }
+        }
+        return toDispose;
+    };
+    /**
+     * should NOT throw to prevent load errors on suggest
+     */
+    MonacoSnippetSuggestProvider.prototype.loadURI = function (uri, options, toDispose) {
+        return __awaiter(this, void 0, void 0, function () {
+            var content, snippets, e_3;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        return [4 /*yield*/, this.filesystem.resolveContent(uri.toString(), { encoding: 'utf-8' })];
+                    case 1:
+                        content = (_a.sent()).content;
+                        if (toDispose.disposed) {
+                            return [2 /*return*/];
+                        }
+                        snippets = content && jsoncparser.parse(content, undefined, { disallowComments: false });
+                        toDispose.push(this.fromJSON(snippets, options));
+                        return [3 /*break*/, 3];
+                    case 2:
+                        e_3 = _a.sent();
+                        if (!common_1.FileSystemError.FileNotFound.is(e_3) && !common_1.FileSystemError.FileIsDirectory.is(e_3)) {
+                            console.error(e_3);
+                        }
+                        return [3 /*break*/, 3];
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    MonacoSnippetSuggestProvider.prototype.fromJSON = function (snippets, _a) {
+        var _this = this;
+        var language = _a.language, source = _a.source;
+        var toDispose = new disposable_1.DisposableCollection();
+        this.parseSnippets(snippets, function (name, snippet) {
+            var e_4, _a;
+            var prefix = snippet.prefix, body = snippet.body, description = snippet.description;
+            var parsedBody = Array.isArray(body) ? body.join('\n') : body;
+            var parsedPrefixes = Array.isArray(prefix) ? prefix : [prefix];
+            if (typeof parsedBody !== 'string') {
+                return;
+            }
+            var scopes = [];
+            if (language) {
+                if (Array.isArray(language)) {
+                    scopes.push.apply(scopes, __spread(language));
+                }
+                else {
+                    scopes.push(language);
+                }
+            }
+            else if (typeof snippet.scope === 'string') {
+                try {
+                    for (var _b = __values(snippet.scope.split(',')), _c = _b.next(); !_c.done; _c = _b.next()) {
+                        var rawScope = _c.value;
+                        var scope = rawScope.trim();
+                        if (scope) {
+                            scopes.push(scope);
+                        }
+                    }
+                }
+                catch (e_4_1) { e_4 = { error: e_4_1 }; }
+                finally {
+                    try {
+                        if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+                    }
+                    finally { if (e_4) throw e_4.error; }
+                }
+            }
+            parsedPrefixes.forEach(function (parsedPrefix) { return toDispose.push(_this.push({
+                scopes: scopes,
+                name: name,
+                prefix: parsedPrefix,
+                description: description,
+                body: parsedBody,
+                source: source
+            })); });
+        });
+        return toDispose;
+    };
+    MonacoSnippetSuggestProvider.prototype.parseSnippets = function (snippets, accept) {
+        if (typeof snippets === 'object') {
+            // eslint-disable-next-line guard-for-in
+            for (var name_1 in snippets) {
+                var scopeOrTemplate = snippets[name_1];
+                if (JsonSerializedSnippet.is(scopeOrTemplate)) {
+                    accept(name_1, scopeOrTemplate);
+                }
+                else {
+                    this.parseSnippets(scopeOrTemplate, accept);
+                }
+            }
+        }
+    };
+    MonacoSnippetSuggestProvider.prototype.push = function () {
+        var e_5, _a;
+        var snippets = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            snippets[_i] = arguments[_i];
+        }
+        var toDispose = new disposable_1.DisposableCollection();
+        var _loop_3 = function (snippet) {
+            var e_6, _a;
+            var _loop_4 = function (scope) {
+                var languageSnippets = this_2.snippets.get(scope) || [];
+                languageSnippets.push(snippet);
+                this_2.snippets.set(scope, languageSnippets);
+                toDispose.push(disposable_1.Disposable.create(function () {
+                    var index = languageSnippets.indexOf(snippet);
+                    if (index !== -1) {
+                        languageSnippets.splice(index, 1);
+                    }
+                }));
+            };
+            try {
+                for (var _b = (e_6 = void 0, __values(snippet.scopes)), _c = _b.next(); !_c.done; _c = _b.next()) {
+                    var scope = _c.value;
+                    _loop_4(scope);
+                }
+            }
+            catch (e_6_1) { e_6 = { error: e_6_1 }; }
+            finally {
+                try {
+                    if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+                }
+                finally { if (e_6) throw e_6.error; }
+            }
+        };
+        var this_2 = this;
+        try {
+            for (var snippets_1 = __values(snippets), snippets_1_1 = snippets_1.next(); !snippets_1_1.done; snippets_1_1 = snippets_1.next()) {
+                var snippet = snippets_1_1.value;
+                _loop_3(snippet);
+            }
+        }
+        catch (e_5_1) { e_5 = { error: e_5_1 }; }
+        finally {
+            try {
+                if (snippets_1_1 && !snippets_1_1.done && (_a = snippets_1.return)) _a.call(snippets_1);
+            }
+            finally { if (e_5) throw e_5.error; }
+        }
+        return toDispose;
+    };
+    MonacoSnippetSuggestProvider.prototype.isPatternInWord = function (patternLow, patternPos, patternLen, wordLow, wordPos, wordLen) {
+        while (patternPos < patternLen && wordPos < wordLen) {
+            if (patternLow[patternPos] === wordLow[wordPos]) {
+                patternPos += 1;
+            }
+            wordPos += 1;
+        }
+        return patternPos === patternLen; // pattern must be exhausted
+    };
+    var MonacoSnippetSuggestProvider_1;
+    MonacoSnippetSuggestProvider._maxPrefix = 10000;
+    __decorate([
+        inversify_1.inject(common_1.FileSystem),
+        __metadata("design:type", Object)
+    ], MonacoSnippetSuggestProvider.prototype, "filesystem", void 0);
+    MonacoSnippetSuggestProvider = MonacoSnippetSuggestProvider_1 = __decorate([
+        inversify_1.injectable()
+    ], MonacoSnippetSuggestProvider);
+    return MonacoSnippetSuggestProvider;
+}());
+exports.MonacoSnippetSuggestProvider = MonacoSnippetSuggestProvider;
+var JsonSerializedSnippet;
+(function (JsonSerializedSnippet) {
+    function is(obj) {
+        return typeof obj === 'object' && 'body' in obj && 'prefix' in obj;
+    }
+    JsonSerializedSnippet.is = is;
+})(JsonSerializedSnippet = exports.JsonSerializedSnippet || (exports.JsonSerializedSnippet = {}));
+var MonacoSnippetSuggestion = /** @class */ (function () {
+    function MonacoSnippetSuggestion(snippet, range) {
+        this.snippet = snippet;
+        this.range = range;
+        this.noAutoAccept = true;
+        this.kind = monaco.languages.CompletionItemKind.Snippet;
+        this.insertTextRules = monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet;
+        this.resolved = false;
+        this.label = snippet.prefix;
+        this.detail = (snippet.description || snippet.name) + " (" + snippet.source + ")";
+        this.insertText = snippet.body;
+        this.sortText = "z-" + snippet.prefix;
+        this.range = range;
+    }
+    MonacoSnippetSuggestion.prototype.resolve = function () {
+        if (!this.resolved) {
+            var codeSnippet = new monaco.snippetParser.SnippetParser().parse(this.snippet.body).toString();
+            this.documentation = { value: '```\n' + codeSnippet + '```' };
+            this.resolved = true;
+        }
+        return this;
+    };
+    MonacoSnippetSuggestion.compareByLabel = function (a, b) {
+        return a.label > b.label ? 1 : a.label < b.label ? -1 : 0;
+    };
+    return MonacoSnippetSuggestion;
+}());
+exports.MonacoSnippetSuggestion = MonacoSnippetSuggestion;
+
+
+/***/ }),
+
+/***/ "./node_modules/@theia/monaco/lib/browser/monaco-theming-service.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/@theia/monaco/lib/browser/monaco-theming-service.js ***!
+  \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2657,6 +1218,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
 var __values = (this && this.__values) || function(o) {
     var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
     if (m) return m.call(o);
@@ -2669,123 +1266,218 @@ var __values = (this && this.__values) || function(o) {
     throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.PluginSharedStyle = void 0;
+exports.MonacoThemingService = void 0;
+/* eslint-disable @typescript-eslint/no-explicit-any */
 var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
-var disposable_1 = __webpack_require__(/*! @theia/core/lib/common/disposable */ "./node_modules/@theia/core/lib/common/disposable.js");
+var jsoncparser = __webpack_require__(/*! jsonc-parser */ "./node_modules/jsonc-parser/lib/esm/main.js");
+var plistparser = __webpack_require__(/*! fast-plist */ "./node_modules/fast-plist/release/src/main.js");
 var theming_1 = __webpack_require__(/*! @theia/core/lib/browser/theming */ "./node_modules/@theia/core/lib/browser/theming.js");
-var reference_1 = __webpack_require__(/*! @theia/core/lib/common/reference */ "./node_modules/@theia/core/lib/common/reference.js");
-var endpoint_1 = __webpack_require__(/*! @theia/core/lib/browser/endpoint */ "./node_modules/@theia/core/lib/browser/endpoint.js");
-var PluginSharedStyle = /** @class */ (function () {
-    function PluginSharedStyle() {
-        var _this = this;
-        this.rules = [];
-        this.toUpdate = new disposable_1.DisposableCollection();
-        this.icons = new reference_1.SyncReferenceCollection(function (key) { return _this.createPluginIcon(key); });
-        this.iconSequence = 0;
-        this.update();
-        theming_1.ThemeService.get().onThemeChange(function () { return _this.update(); });
+var uri_1 = __webpack_require__(/*! @theia/core/lib/common/uri */ "./node_modules/@theia/core/lib/common/uri.js");
+var disposable_1 = __webpack_require__(/*! @theia/core/lib/common/disposable */ "./node_modules/@theia/core/lib/common/disposable.js");
+var filesystem_1 = __webpack_require__(/*! @theia/filesystem/lib/common/filesystem */ "./node_modules/@theia/filesystem/lib/common/filesystem.js");
+var monaco_theme_registry_1 = __webpack_require__(/*! ./textmate/monaco-theme-registry */ "./node_modules/@theia/monaco/lib/browser/textmate/monaco-theme-registry.js");
+var monaco_indexed_db_1 = __webpack_require__(/*! ./monaco-indexed-db */ "./node_modules/@theia/monaco/lib/browser/monaco-indexed-db.js");
+var MonacoThemingService = /** @class */ (function () {
+    function MonacoThemingService() {
     }
-    PluginSharedStyle_1 = PluginSharedStyle;
-    PluginSharedStyle.prototype.update = function () {
-        var e_1, _a;
-        this.toUpdate.dispose();
-        var style = this.style = document.createElement('style');
-        style.type = 'text/css';
-        style.media = 'screen';
-        document.getElementsByTagName('head')[0].appendChild(style);
-        this.toUpdate.push(disposable_1.Disposable.create(function () {
-            return document.getElementsByTagName('head')[0].removeChild(style);
-        }));
-        try {
-            for (var _b = __values(this.rules), _c = _b.next(); !_c.done; _c = _b.next()) {
-                var rule = _c.value;
-                this.doInsertRule(rule);
-            }
-        }
-        catch (e_1_1) { e_1 = { error: e_1_1 }; }
-        finally {
-            try {
-                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
-            }
-            finally { if (e_1) throw e_1.error; }
-        }
+    MonacoThemingService_1 = MonacoThemingService;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    MonacoThemingService.prototype.register = function (theme, pending) {
+        if (pending === void 0) { pending = {}; }
+        var toDispose = new disposable_1.DisposableCollection(disposable_1.Disposable.create(function () { }));
+        this.doRegister(theme, pending, toDispose);
+        return toDispose;
     };
-    PluginSharedStyle.prototype.insertRule = function (selector, body) {
-        var _this = this;
-        var rule = { selector: selector, body: body };
-        this.rules.push(rule);
-        this.doInsertRule(rule);
-        return disposable_1.Disposable.create(function () {
-            var index = _this.rules.indexOf(rule);
-            if (index !== -1) {
-                _this.rules.splice(index, 1);
-                _this.deleteRule(selector);
-            }
+    MonacoThemingService.prototype.doRegister = function (theme, pending, toDispose) {
+        return __awaiter(this, void 0, void 0, function () {
+            var includes, json, label, id, description, uiTheme, e_1;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        includes = {};
+                        return [4 /*yield*/, this.loadTheme(theme.uri, includes, pending, toDispose)];
+                    case 1:
+                        json = _a.sent();
+                        if (toDispose.disposed) {
+                            return [2 /*return*/];
+                        }
+                        label = theme.label || new uri_1.default(theme.uri).path.base;
+                        id = theme.id, description = theme.description, uiTheme = theme.uiTheme;
+                        toDispose.push(MonacoThemingService_1.register({ id: id, label: label, description: description, uiTheme: uiTheme, json: json, includes: includes }));
+                        return [3 /*break*/, 3];
+                    case 2:
+                        e_1 = _a.sent();
+                        console.error('Failed to load theme from ' + theme.uri, e_1);
+                        return [3 /*break*/, 3];
+                    case 3: return [2 /*return*/];
+                }
+            });
         });
     };
-    PluginSharedStyle.prototype.doInsertRule = function (_a) {
-        var selector = _a.selector, body = _a.body;
-        var sheet = this.style.sheet;
-        var cssBody = body(theming_1.ThemeService.get().getCurrentTheme());
-        sheet.insertRule(selector + ' {\n' + cssBody + '\n}', 0);
+    MonacoThemingService.prototype.loadTheme = function (uri, includes, pending, toDispose) {
+        return __awaiter(this, void 0, void 0, function () {
+            var content, themeUri, value, json, value, _a, _b;
+            return __generator(this, function (_c) {
+                switch (_c.label) {
+                    case 0: return [4 /*yield*/, this.fileSystem.resolveContent(uri)];
+                    case 1:
+                        content = (_c.sent()).content;
+                        if (toDispose.disposed) {
+                            return [2 /*return*/];
+                        }
+                        themeUri = new uri_1.default(uri);
+                        if (themeUri.path.ext !== '.json') {
+                            value = plistparser.parse(content);
+                            if (value && 'settings' in value && Array.isArray(value.settings)) {
+                                return [2 /*return*/, { tokenColors: value.settings }];
+                            }
+                            throw new Error("Problem parsing tmTheme file: " + uri + ". 'settings' is not array.");
+                        }
+                        json = jsoncparser.parse(content, undefined, { disallowComments: false });
+                        if (!('tokenColors' in json && typeof json.tokenColors === 'string')) return [3 /*break*/, 3];
+                        return [4 /*yield*/, this.doLoadTheme(themeUri, json.tokenColors, includes, pending, toDispose)];
+                    case 2:
+                        value = _c.sent();
+                        if (toDispose.disposed) {
+                            return [2 /*return*/];
+                        }
+                        json.tokenColors = value.tokenColors;
+                        _c.label = 3;
+                    case 3:
+                        if (!json.include) return [3 /*break*/, 5];
+                        _a = includes;
+                        _b = json.include;
+                        return [4 /*yield*/, this.doLoadTheme(themeUri, json.include, includes, pending, toDispose)];
+                    case 4:
+                        _a[_b] = _c.sent();
+                        if (toDispose.disposed) {
+                            return [2 /*return*/];
+                        }
+                        _c.label = 5;
+                    case 5: return [2 /*return*/, json];
+                }
+            });
+        });
     };
-    PluginSharedStyle.prototype.deleteRule = function (selector) {
-        var sheet = this.style.sheet;
-        var rules = sheet.rules || sheet.cssRules || [];
-        for (var i = rules.length - 1; i >= 0; i--) {
-            var rule = rules[i];
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            if (rule.selectorText.indexOf(selector) !== -1) {
-                sheet.deleteRule(i);
+    /* eslint-disable @typescript-eslint/no-explicit-any */
+    MonacoThemingService.prototype.doLoadTheme = function (themeUri, referencedPath, includes, pending, toDispose) {
+        var referencedUri = themeUri.parent.resolve(referencedPath).toString();
+        if (!pending[referencedUri]) {
+            pending[referencedUri] = this.loadTheme(referencedUri, includes, pending, toDispose);
+        }
+        return pending[referencedUri];
+    };
+    /* eslint-enable @typescript-eslint/no-explicit-any */
+    MonacoThemingService.init = function () {
+        var _this = this;
+        this.updateBodyUiTheme();
+        theming_1.ThemeService.get().onThemeChange(function () { return _this.updateBodyUiTheme(); });
+        this.restore();
+    };
+    MonacoThemingService.register = function (theme) {
+        var uiTheme = theme.uiTheme || 'vs-dark';
+        var label = theme.label, description = theme.description, json = theme.json, includes = theme.includes;
+        var id = theme.id || label;
+        var cssSelector = MonacoThemingService_1.toCssSelector(id);
+        var data = monaco_theme_registry_1.MonacoThemeRegistry.SINGLETON.register(json, includes, cssSelector, uiTheme);
+        return MonacoThemingService_1.doRegister({ id: id, label: label, description: description, uiTheme: uiTheme, data: data });
+    };
+    MonacoThemingService.updateBodyUiTheme = function () {
+        this.toUpdateUiTheme.dispose();
+        var type = theming_1.ThemeService.get().getCurrentTheme().type;
+        var uiTheme = type === 'hc' ? 'hc-black' : type === 'light' ? 'vs' : 'vs-dark';
+        document.body.classList.add(uiTheme);
+        this.toUpdateUiTheme.push(disposable_1.Disposable.create(function () { return document.body.classList.remove(uiTheme); }));
+    };
+    MonacoThemingService.doRegister = function (state) {
+        var id = state.id, label = state.label, description = state.description, uiTheme = state.uiTheme, data = state.data;
+        var type = uiTheme === 'vs' ? 'light' : uiTheme === 'vs-dark' ? 'dark' : 'hc';
+        var builtInTheme = uiTheme === 'vs' ? theming_1.BuiltinThemeProvider.lightCss : theming_1.BuiltinThemeProvider.darkCss;
+        return new disposable_1.DisposableCollection(theming_1.ThemeService.get().register({
+            type: type,
+            id: id,
+            label: label,
+            description: description,
+            editorTheme: data.name,
+            activate: function () {
+                builtInTheme.use();
+            },
+            deactivate: function () {
+                builtInTheme.unuse();
             }
+        }), monaco_indexed_db_1.putTheme(state));
+    };
+    MonacoThemingService.restore = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var themes, themes_1, themes_1_1, state, e_2;
+            var e_3, _a;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        _b.trys.push([0, 2, , 3]);
+                        return [4 /*yield*/, monaco_indexed_db_1.getThemes()];
+                    case 1:
+                        themes = _b.sent();
+                        try {
+                            for (themes_1 = __values(themes), themes_1_1 = themes_1.next(); !themes_1_1.done; themes_1_1 = themes_1.next()) {
+                                state = themes_1_1.value;
+                                monaco_theme_registry_1.MonacoThemeRegistry.SINGLETON.setTheme(state.data.name, state.data);
+                                MonacoThemingService_1.doRegister(state);
+                            }
+                        }
+                        catch (e_3_1) { e_3 = { error: e_3_1 }; }
+                        finally {
+                            try {
+                                if (themes_1_1 && !themes_1_1.done && (_a = themes_1.return)) _a.call(themes_1);
+                            }
+                            finally { if (e_3) throw e_3.error; }
+                        }
+                        return [3 /*break*/, 3];
+                    case 2:
+                        e_2 = _b.sent();
+                        console.error('Failed to restore monaco themes', e_2);
+                        return [3 /*break*/, 3];
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /* remove all characters that are not allowed in css */
+    MonacoThemingService.toCssSelector = function (str) {
+        str = str.replace(/[^\-a-zA-Z0-9]/g, '-');
+        if (str.charAt(0).match(/[0-9\-]/)) {
+            str = '-' + str;
         }
+        return str;
     };
-    PluginSharedStyle.prototype.toIconClass = function (url, _a) {
-        var size = (_a === void 0 ? { size: 16 } : _a).size;
-        return this.icons.acquire({ url: url, size: size });
-    };
-    PluginSharedStyle.prototype.createPluginIcon = function (key) {
-        var iconUrl = key.url;
-        var size = key.size;
-        var darkIconUrl = PluginSharedStyle_1.toExternalIconUrl("" + (typeof iconUrl === 'object' ? iconUrl.dark : iconUrl));
-        var lightIconUrl = PluginSharedStyle_1.toExternalIconUrl("" + (typeof iconUrl === 'object' ? iconUrl.light : iconUrl));
-        var iconClass = 'plugin-icon-' + this.iconSequence++;
-        var toDispose = new disposable_1.DisposableCollection();
-        toDispose.push(this.insertRule('.' + iconClass, function (theme) { return "\n                display: inline-block;\n                background-position: 2px;\n                width: " + size + "px;\n                height: " + size + "px;\n                background: no-repeat url(\"" + (theme.type === 'light' ? lightIconUrl : darkIconUrl) + "\");\n                background-size: " + size + "px;\n            "; }));
-        return {
-            iconClass: iconClass,
-            dispose: function () { return toDispose.dispose(); }
-        };
-    };
-    PluginSharedStyle.toExternalIconUrl = function (iconUrl) {
-        if (iconUrl.startsWith('hostedPlugin/')) {
-            return new endpoint_1.Endpoint({ path: iconUrl }).getRestUrl().toString();
-        }
-        return iconUrl;
-    };
-    var PluginSharedStyle_1;
-    PluginSharedStyle = PluginSharedStyle_1 = __decorate([
-        inversify_1.injectable(),
-        __metadata("design:paramtypes", [])
-    ], PluginSharedStyle);
-    return PluginSharedStyle;
+    var MonacoThemingService_1;
+    MonacoThemingService.toUpdateUiTheme = new disposable_1.DisposableCollection();
+    __decorate([
+        inversify_1.inject(filesystem_1.FileSystem),
+        __metadata("design:type", Object)
+    ], MonacoThemingService.prototype, "fileSystem", void 0);
+    MonacoThemingService = MonacoThemingService_1 = __decorate([
+        inversify_1.injectable()
+    ], MonacoThemingService);
+    return MonacoThemingService;
 }());
-exports.PluginSharedStyle = PluginSharedStyle;
+exports.MonacoThemingService = MonacoThemingService;
 
 
 /***/ }),
 
-/***/ "./node_modules/@theia/plugin-ext/lib/main/browser/scm-main.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/@theia/plugin-ext/lib/main/browser/scm-main.js ***!
-  \*********************************************************************/
+/***/ "./node_modules/@theia/monaco/lib/browser/textmate/monaco-textmate-frontend-bindings.js":
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/@theia/monaco/lib/browser/textmate/monaco-textmate-frontend-bindings.js ***!
+  \**********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 /********************************************************************************
- * Copyright (C) 2019 Red Hat, Inc. and others.
+ * Copyright (C) 2018 Ericsson and others.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0 which is available at
@@ -2836,439 +1528,71 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.PluginScmResource = exports.PluginScmResourceGroup = exports.PluginScmProvider = exports.ScmMainImpl = void 0;
-var plugin_api_rpc_1 = __webpack_require__(/*! ../../common/plugin-api-rpc */ "./node_modules/@theia/plugin-ext/lib/common/plugin-api-rpc.js");
-var scm_service_1 = __webpack_require__(/*! @theia/scm/lib/browser/scm-service */ "./node_modules/@theia/scm/lib/browser/scm-service.js");
-var event_1 = __webpack_require__(/*! @theia/core/lib/common/event */ "./node_modules/@theia/core/lib/common/event.js");
-var cancellation_1 = __webpack_require__(/*! @theia/core/lib/common/cancellation */ "./node_modules/@theia/core/lib/common/cancellation.js");
-var disposable_1 = __webpack_require__(/*! @theia/core/lib/common/disposable */ "./node_modules/@theia/core/lib/common/disposable.js");
-var uri_1 = __webpack_require__(/*! @theia/core/lib/common/uri */ "./node_modules/@theia/core/lib/common/uri.js");
-var color_registry_1 = __webpack_require__(/*! @theia/core/lib/browser/color-registry */ "./node_modules/@theia/core/lib/browser/color-registry.js");
-var ScmMainImpl = /** @class */ (function () {
-    function ScmMainImpl(rpc, container) {
-        var _this = this;
-        this.scmRepositoryMap = new Map();
-        this.toDispose = new disposable_1.DisposableCollection();
-        this.proxy = rpc.getProxy(plugin_api_rpc_1.MAIN_RPC_CONTEXT.SCM_EXT);
-        this.scmService = container.get(scm_service_1.ScmService);
-        this.colors = container.get(color_registry_1.ColorRegistry);
-        this.toDispose.push(this.scmService.onDidChangeSelectedRepository(function (repository) { return _this.updateSelectedRepository(repository); }));
-    }
-    ScmMainImpl.prototype.dispose = function () {
-        this.toDispose.dispose();
-    };
-    ScmMainImpl.prototype.updateSelectedRepository = function (repository) {
-        var sourceControlHandle = repository ? this.getSourceControlHandle(repository) : undefined;
-        if (sourceControlHandle !== undefined) {
-            this.proxy.$setSourceControlSelection(sourceControlHandle, true);
-        }
-        if (this.lastSelectedSourceControlHandle !== undefined && this.lastSelectedSourceControlHandle !== sourceControlHandle) {
-            this.proxy.$setSourceControlSelection(this.lastSelectedSourceControlHandle, false);
-        }
-        this.lastSelectedSourceControlHandle = sourceControlHandle;
-    };
-    ScmMainImpl.prototype.getSourceControlHandle = function (repository) {
-        var _this = this;
-        return Array.from(this.scmRepositoryMap.keys()).find(function (key) {
-            var scmRepository = _this.scmRepositoryMap.get(key);
-            return scmRepository !== undefined && scmRepository.provider.rootUri === repository.provider.rootUri;
-        });
-    };
-    ScmMainImpl.prototype.$registerSourceControl = function (sourceControlHandle, id, label, rootUri) {
-        return __awaiter(this, void 0, void 0, function () {
-            var provider, repository;
-            var _this = this;
-            return __generator(this, function (_a) {
-                provider = new PluginScmProvider(this.proxy, sourceControlHandle, id, label, rootUri, this.colors);
-                repository = this.scmService.registerScmProvider(provider);
-                repository.input.onDidChange(function () {
-                    return _this.proxy.$updateInputBox(sourceControlHandle, repository.input.value);
-                });
-                this.scmRepositoryMap.set(sourceControlHandle, repository);
-                if (this.scmService.repositories.length === 1) {
-                    this.updateSelectedRepository(repository);
+exports.OnigasmLib = exports.fetchOnigasm = void 0;
+var browser_1 = __webpack_require__(/*! @theia/core/lib/browser */ "./node_modules/@theia/core/lib/browser/index.js");
+var core_1 = __webpack_require__(/*! @theia/core */ "./node_modules/@theia/core/lib/common/index.js");
+var textmate_registry_1 = __webpack_require__(/*! ./textmate-registry */ "./node_modules/@theia/monaco/lib/browser/textmate/textmate-registry.js");
+var textmate_contribution_1 = __webpack_require__(/*! ./textmate-contribution */ "./node_modules/@theia/monaco/lib/browser/textmate/textmate-contribution.js");
+var monaco_textmate_service_1 = __webpack_require__(/*! ./monaco-textmate-service */ "./node_modules/@theia/monaco/lib/browser/textmate/monaco-textmate-service.js");
+var monaco_theme_registry_1 = __webpack_require__(/*! ./monaco-theme-registry */ "./node_modules/@theia/monaco/lib/browser/textmate/monaco-theme-registry.js");
+var onigasm_1 = __webpack_require__(/*! onigasm */ "./node_modules/onigasm/lib/index.js");
+function fetchOnigasm() {
+    return new Promise(function (resolve, reject) {
+        var onigasmPath = __webpack_require__(/*! onigasm/lib/onigasm.wasm */ "./node_modules/onigasm/lib/onigasm.wasm"); // webpack doing its magic here
+        var request = new XMLHttpRequest();
+        request.onreadystatechange = function () {
+            if (this.readyState === XMLHttpRequest.DONE) {
+                if (this.status === 200) {
+                    resolve(this.response);
                 }
-                this.toDispose.push(disposable_1.Disposable.create(function () { return _this.$unregisterSourceControl(sourceControlHandle); }));
-                return [2 /*return*/];
-            });
-        });
-    };
-    ScmMainImpl.prototype.$updateSourceControl = function (sourceControlHandle, features) {
-        return __awaiter(this, void 0, void 0, function () {
-            var repository, provider;
-            return __generator(this, function (_a) {
-                repository = this.scmRepositoryMap.get(sourceControlHandle);
-                if (repository) {
-                    provider = repository.provider;
-                    provider.updateSourceControl(features);
+                else {
+                    reject(new Error('Could not fetch onigasm'));
                 }
-                return [2 /*return*/];
-            });
-        });
-    };
-    ScmMainImpl.prototype.$unregisterSourceControl = function (sourceControlHandle) {
-        return __awaiter(this, void 0, void 0, function () {
-            var repository;
-            return __generator(this, function (_a) {
-                repository = this.scmRepositoryMap.get(sourceControlHandle);
-                if (repository) {
-                    repository.dispose();
-                    this.scmRepositoryMap.delete(sourceControlHandle);
-                }
-                return [2 /*return*/];
-            });
-        });
-    };
-    ScmMainImpl.prototype.$setInputBoxPlaceholder = function (sourceControlHandle, placeholder) {
-        return __awaiter(this, void 0, void 0, function () {
-            var repository;
-            return __generator(this, function (_a) {
-                repository = this.scmRepositoryMap.get(sourceControlHandle);
-                if (repository) {
-                    repository.input.placeholder = placeholder;
-                }
-                return [2 /*return*/];
-            });
-        });
-    };
-    ScmMainImpl.prototype.$setInputBoxValue = function (sourceControlHandle, value) {
-        return __awaiter(this, void 0, void 0, function () {
-            var repository;
-            return __generator(this, function (_a) {
-                repository = this.scmRepositoryMap.get(sourceControlHandle);
-                if (repository) {
-                    repository.input.value = value;
-                }
-                return [2 /*return*/];
-            });
-        });
-    };
-    ScmMainImpl.prototype.$registerGroup = function (sourceControlHandle, groupHandle, id, label) {
-        return __awaiter(this, void 0, void 0, function () {
-            var repository, provider;
-            return __generator(this, function (_a) {
-                repository = this.scmRepositoryMap.get(sourceControlHandle);
-                if (repository) {
-                    provider = repository.provider;
-                    provider.registerGroup(groupHandle, id, label);
-                }
-                return [2 /*return*/];
-            });
-        });
-    };
-    ScmMainImpl.prototype.$unregisterGroup = function (sourceControlHandle, groupHandle) {
-        return __awaiter(this, void 0, void 0, function () {
-            var repository, provider;
-            return __generator(this, function (_a) {
-                repository = this.scmRepositoryMap.get(sourceControlHandle);
-                if (repository) {
-                    provider = repository.provider;
-                    provider.unregisterGroup(groupHandle);
-                }
-                return [2 /*return*/];
-            });
-        });
-    };
-    ScmMainImpl.prototype.$updateGroup = function (sourceControlHandle, groupHandle, features) {
-        return __awaiter(this, void 0, void 0, function () {
-            var repository, provider;
-            return __generator(this, function (_a) {
-                repository = this.scmRepositoryMap.get(sourceControlHandle);
-                if (repository) {
-                    provider = repository.provider;
-                    provider.updateGroup(groupHandle, features);
-                }
-                return [2 /*return*/];
-            });
-        });
-    };
-    ScmMainImpl.prototype.$updateGroupLabel = function (sourceControlHandle, groupHandle, label) {
-        return __awaiter(this, void 0, void 0, function () {
-            var repository, provider;
-            return __generator(this, function (_a) {
-                repository = this.scmRepositoryMap.get(sourceControlHandle);
-                if (repository) {
-                    provider = repository.provider;
-                    provider.updateGroupLabel(groupHandle, label);
-                }
-                return [2 /*return*/];
-            });
-        });
-    };
-    ScmMainImpl.prototype.$updateResourceState = function (sourceControlHandle, groupHandle, resources) {
-        return __awaiter(this, void 0, void 0, function () {
-            var repository, provider;
-            return __generator(this, function (_a) {
-                repository = this.scmRepositoryMap.get(sourceControlHandle);
-                if (repository) {
-                    provider = repository.provider;
-                    provider.updateGroupResourceStates(sourceControlHandle, groupHandle, resources);
-                }
-                return [2 /*return*/];
-            });
-        });
-    };
-    return ScmMainImpl;
-}());
-exports.ScmMainImpl = ScmMainImpl;
-var PluginScmProvider = /** @class */ (function () {
-    function PluginScmProvider(proxy, handle, id, label, rootUri, colors) {
-        this.proxy = proxy;
-        this.handle = handle;
-        this.id = id;
-        this.label = label;
-        this.rootUri = rootUri;
-        this.colors = colors;
-        this.onDidChangeEmitter = new event_1.Emitter();
-        this.onDidChangeCommitTemplateEmitter = new event_1.Emitter();
-        this.onDidChangeStatusBarCommandsEmitter = new event_1.Emitter();
-        this.features = {};
-        this.groupsMap = new Map();
-        this.disposableCollection = new disposable_1.DisposableCollection();
-        this.disposableCollection.push(this.onDidChangeEmitter);
-        this.disposableCollection.push(this.onDidChangeCommitTemplateEmitter);
-        this.disposableCollection.push(this.onDidChangeStatusBarCommandsEmitter);
-    }
-    PluginScmProvider.prototype.fireDidChange = function () {
-        this.onDidChangeEmitter.fire(undefined);
-    };
-    Object.defineProperty(PluginScmProvider.prototype, "groups", {
-        get: function () {
-            return Array.from(this.groupsMap.values());
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(PluginScmProvider.prototype, "commitTemplate", {
-        get: function () {
-            return this.features.commitTemplate;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(PluginScmProvider.prototype, "acceptInputCommand", {
-        get: function () {
-            var command = this.features.acceptInputCommand;
-            if (command) {
-                var scmCommand = command;
-                scmCommand.command = command.id;
-                return command;
             }
-        },
-        enumerable: false,
-        configurable: true
+        };
+        request.open('GET', onigasmPath, true);
+        request.responseType = 'arraybuffer';
+        request.send();
     });
-    Object.defineProperty(PluginScmProvider.prototype, "statusBarCommands", {
-        get: function () {
-            var commands = this.features.statusBarCommands;
-            if (commands) {
-                return commands.map(function (command) {
-                    var scmCommand = command;
-                    scmCommand.command = command.id;
-                    return scmCommand;
-                });
+}
+exports.fetchOnigasm = fetchOnigasm;
+var OnigasmLib = /** @class */ (function () {
+    function OnigasmLib() {
+    }
+    OnigasmLib.prototype.createOnigScanner = function (sources) {
+        return new onigasm_1.OnigScanner(sources);
+    };
+    OnigasmLib.prototype.createOnigString = function (sources) {
+        return new onigasm_1.OnigString(sources);
+    };
+    return OnigasmLib;
+}());
+exports.OnigasmLib = OnigasmLib;
+exports.default = (function (bind, unbind, isBound, rebind) {
+    var onigasmPromise = browser_1.isBasicWasmSupported ? fetchOnigasm().then(function (buffer) { return __awaiter(void 0, void 0, void 0, function () {
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, onigasm_1.loadWASM(buffer)];
+                case 1:
+                    _a.sent();
+                    return [2 /*return*/, new OnigasmLib()];
             }
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(PluginScmProvider.prototype, "count", {
-        get: function () {
-            return this.features.count;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(PluginScmProvider.prototype, "onDidChangeCommitTemplate", {
-        get: function () {
-            return this.onDidChangeCommitTemplateEmitter.event;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(PluginScmProvider.prototype, "onDidChangeStatusBarCommands", {
-        get: function () {
-            return this.onDidChangeStatusBarCommandsEmitter.event;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(PluginScmProvider.prototype, "onDidChange", {
-        get: function () {
-            return this.onDidChangeEmitter.event;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    PluginScmProvider.prototype.dispose = function () {
-        this.disposableCollection.dispose();
-    };
-    PluginScmProvider.prototype.updateSourceControl = function (features) {
-        if (features.acceptInputCommand) {
-            this.features.acceptInputCommand = features.acceptInputCommand;
-        }
-        if (features.commitTemplate) {
-            this.features.commitTemplate = features.commitTemplate;
-        }
-        if (features.count) {
-            this.features.count = features.count;
-        }
-        if (features.hasQuickDiffProvider !== undefined) {
-            this.features.hasQuickDiffProvider = features.hasQuickDiffProvider;
-        }
-        if (features.statusBarCommands) {
-            this.features.statusBarCommands = features.statusBarCommands;
-        }
-        this.fireDidChange();
-        if (features.commitTemplate) {
-            this.onDidChangeCommitTemplateEmitter.fire(features.commitTemplate);
-        }
-        if (features.statusBarCommands) {
-            this.onDidChangeStatusBarCommandsEmitter.fire(features.statusBarCommands);
-        }
-    };
-    PluginScmProvider.prototype.getOriginalResource = function (uri) {
-        return __awaiter(this, void 0, void 0, function () {
-            var result;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        if (!this.features.hasQuickDiffProvider) return [3 /*break*/, 2];
-                        return [4 /*yield*/, this.proxy.$provideOriginalResource(this.handle, uri.toString(), cancellation_1.CancellationToken.None)];
-                    case 1:
-                        result = _a.sent();
-                        if (result) {
-                            return [2 /*return*/, new uri_1.default(result.path)];
-                        }
-                        _a.label = 2;
-                    case 2: return [2 /*return*/];
-                }
-            });
         });
-    };
-    PluginScmProvider.prototype.registerGroup = function (groupHandle, id, label) {
-        var group = new PluginScmResourceGroup(groupHandle, this, { hideWhenEmpty: undefined }, label, id);
-        this.groupsMap.set(groupHandle, group);
-        this.fireDidChange();
-    };
-    PluginScmProvider.prototype.unregisterGroup = function (groupHandle) {
-        var group = this.groupsMap.get(groupHandle);
-        if (group) {
-            group.dispose();
-            this.groupsMap.delete(groupHandle);
-            this.fireDidChange();
-        }
-    };
-    PluginScmProvider.prototype.updateGroup = function (groupHandle, features) {
-        var group = this.groupsMap.get(groupHandle);
-        if (group) {
-            group.updateGroup(features);
-            this.fireDidChange();
-        }
-    };
-    PluginScmProvider.prototype.updateGroupLabel = function (groupHandle, label) {
-        var group = this.groupsMap.get(groupHandle);
-        if (group) {
-            group.updateGroupLabel(label);
-            this.fireDidChange();
-        }
-    };
-    PluginScmProvider.prototype.updateGroupResourceStates = function (sourceControlHandle, groupHandle, resources) {
-        return __awaiter(this, void 0, void 0, function () {
-            var group, _a, _b;
-            var _this = this;
-            return __generator(this, function (_c) {
-                switch (_c.label) {
-                    case 0:
-                        group = this.groupsMap.get(groupHandle);
-                        if (!group) return [3 /*break*/, 2];
-                        _b = (_a = group).updateResources;
-                        return [4 /*yield*/, Promise.all(resources.map(function (resource) { return __awaiter(_this, void 0, void 0, function () {
-                                var resourceUri, scmDecorations, decorations, colorVariable;
-                                return __generator(this, function (_a) {
-                                    resourceUri = new uri_1.default(resource.resourceUri);
-                                    decorations = resource.decorations;
-                                    if (decorations) {
-                                        colorVariable = resource.colorId && this.colors.toCssVariableName(resource.colorId);
-                                        scmDecorations = {
-                                            tooltip: decorations.tooltip,
-                                            letter: resource.letter,
-                                            color: colorVariable && "var(" + colorVariable + ")"
-                                        };
-                                    }
-                                    return [2 /*return*/, new PluginScmResource(this.proxy, resource.handle, group, resourceUri, group, scmDecorations)];
-                                });
-                            }); }))];
-                    case 1:
-                        _b.apply(_a, [_c.sent()]);
-                        this.fireDidChange();
-                        _c.label = 2;
-                    case 2: return [2 /*return*/];
-                }
-            });
-        });
-    };
-    return PluginScmProvider;
-}());
-exports.PluginScmProvider = PluginScmProvider;
-var PluginScmResourceGroup = /** @class */ (function () {
-    function PluginScmResourceGroup(handle, provider, features, label, id) {
-        this.handle = handle;
-        this.provider = provider;
-        this.features = features;
-        this.label = label;
-        this.id = id;
-        this._resources = [];
-    }
-    Object.defineProperty(PluginScmResourceGroup.prototype, "resources", {
-        get: function () {
-            return this._resources;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(PluginScmResourceGroup.prototype, "hideWhenEmpty", {
-        get: function () {
-            return this.features.hideWhenEmpty;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    PluginScmResourceGroup.prototype.updateGroup = function (features) {
-        this.features = features;
-    };
-    PluginScmResourceGroup.prototype.updateGroupLabel = function (label) {
-        this.label = label;
-    };
-    PluginScmResourceGroup.prototype.updateResources = function (resources) {
-        this._resources = resources;
-    };
-    PluginScmResourceGroup.prototype.dispose = function () { };
-    return PluginScmResourceGroup;
-}());
-exports.PluginScmResourceGroup = PluginScmResourceGroup;
-var PluginScmResource = /** @class */ (function () {
-    function PluginScmResource(proxy, handle, group, sourceUri, resourceGroup, decorations) {
-        this.proxy = proxy;
-        this.handle = handle;
-        this.group = group;
-        this.sourceUri = sourceUri;
-        this.resourceGroup = resourceGroup;
-        this.decorations = decorations;
-    }
-    PluginScmResource.prototype.open = function () {
-        return this.proxy.$executeResourceCommand(this.group.provider.handle, this.group.handle, this.handle);
-    };
-    return PluginScmResource;
-}());
-exports.PluginScmResource = PluginScmResource;
+    }); }) : Promise.reject(new Error('wasm not supported'));
+    bind(monaco_textmate_service_1.OnigasmPromise).toConstantValue(onigasmPromise);
+    bind(monaco_textmate_service_1.MonacoTextmateService).toSelf().inSingletonScope();
+    bind(browser_1.FrontendApplicationContribution).toService(monaco_textmate_service_1.MonacoTextmateService);
+    core_1.bindContributionProvider(bind, textmate_contribution_1.LanguageGrammarDefinitionContribution);
+    bind(textmate_registry_1.TextmateRegistry).toSelf().inSingletonScope();
+    bind(monaco_theme_registry_1.MonacoThemeRegistry).toDynamicValue(function () { return monaco_theme_registry_1.MonacoThemeRegistry.SINGLETON; }).inSingletonScope();
+});
 
 
 /***/ }),
 
-/***/ "./node_modules/@theia/plugin-ext/lib/main/browser/view/plugin-view-widget.js":
+/***/ "./node_modules/@theia/monaco/lib/browser/textmate/monaco-textmate-service.js":
 /*!************************************************************************************!*\
-  !*** ./node_modules/@theia/plugin-ext/lib/main/browser/view/plugin-view-widget.js ***!
+  !*** ./node_modules/@theia/monaco/lib/browser/textmate/monaco-textmate-service.js ***!
   \************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -3276,7 +1600,7 @@ exports.PluginScmResource = PluginScmResource;
 "use strict";
 
 /********************************************************************************
- * Copyright (C) 2019 TypeFox and others.
+ * Copyright (C) 2018 Redhat, Ericsson and others.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0 which is available at
@@ -3290,232 +1614,6 @@ exports.PluginScmResource = PluginScmResource;
  *
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __values = (this && this.__values) || function(o) {
-    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
-    if (m) return m.call(o);
-    if (o && typeof o.length === "number") return {
-        next: function () {
-            if (o && i >= o.length) o = void 0;
-            return { value: o && o[i++], done: !o };
-        }
-    };
-    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.PluginViewWidget = exports.PluginViewWidgetIdentifier = void 0;
-var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
-var widgets_1 = __webpack_require__(/*! @phosphor/widgets */ "./node_modules/@phosphor/widgets/lib/index.js");
-var menu_1 = __webpack_require__(/*! @theia/core/lib/common/menu */ "./node_modules/@theia/core/lib/common/menu.js");
-var command_1 = __webpack_require__(/*! @theia/core/lib/common/command */ "./node_modules/@theia/core/lib/common/command.js");
-var view_context_key_service_1 = __webpack_require__(/*! ./view-context-key-service */ "./node_modules/@theia/plugin-ext/lib/main/browser/view/view-context-key-service.js");
-var tree_view_widget_1 = __webpack_require__(/*! ./tree-view-widget */ "./node_modules/@theia/plugin-ext/lib/main/browser/view/tree-view-widget.js");
-var PluginViewWidgetIdentifier = /** @class */ (function () {
-    function PluginViewWidgetIdentifier() {
-    }
-    PluginViewWidgetIdentifier = __decorate([
-        inversify_1.injectable()
-    ], PluginViewWidgetIdentifier);
-    return PluginViewWidgetIdentifier;
-}());
-exports.PluginViewWidgetIdentifier = PluginViewWidgetIdentifier;
-var PluginViewWidget = /** @class */ (function (_super) {
-    __extends(PluginViewWidget, _super);
-    function PluginViewWidget() {
-        var _this = _super.call(this) || this;
-        _this._suppressUpdateViewVisibility = false;
-        _this.updatingViewVisibility = false;
-        _this.node.tabIndex = -1;
-        _this.node.style.height = '100%';
-        return _this;
-    }
-    PluginViewWidget.prototype.init = function () {
-        this.id = this.options.id;
-    };
-    PluginViewWidget.prototype.onActivateRequest = function (msg) {
-        _super.prototype.onActivateRequest.call(this, msg);
-        var widget = this.widgets[0];
-        if (widget) {
-            widget.activate();
-            this.updateWidgetMessage();
-        }
-        else {
-            this.node.focus();
-        }
-    };
-    PluginViewWidget.prototype.storeState = function () {
-        return {
-            label: this.title.label,
-            message: this.message,
-            widgets: this.widgets
-        };
-    };
-    PluginViewWidget.prototype.restoreState = function (state) {
-        var e_1, _a;
-        this.title.label = state.label;
-        this.message = state.message;
-        try {
-            for (var _b = __values(state.widgets), _c = _b.next(); !_c.done; _c = _b.next()) {
-                var widget = _c.value;
-                this.addWidget(widget);
-            }
-        }
-        catch (e_1_1) { e_1 = { error: e_1_1 }; }
-        finally {
-            try {
-                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
-            }
-            finally { if (e_1) throw e_1.error; }
-        }
-    };
-    Object.defineProperty(PluginViewWidget.prototype, "suppressUpdateViewVisibility", {
-        set: function (suppressUpdateViewVisibility) {
-            this._suppressUpdateViewVisibility = !this.updatingViewVisibility && suppressUpdateViewVisibility;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    PluginViewWidget.prototype.updateViewVisibility = function (cb) {
-        if (this._suppressUpdateViewVisibility) {
-            return;
-        }
-        try {
-            this.updatingViewVisibility = true;
-            cb();
-        }
-        finally {
-            this.updatingViewVisibility = false;
-        }
-    };
-    Object.defineProperty(PluginViewWidget.prototype, "message", {
-        get: function () {
-            return this._message;
-        },
-        set: function (message) {
-            this._message = message;
-            this.updateWidgetMessage();
-        },
-        enumerable: false,
-        configurable: true
-    });
-    PluginViewWidget.prototype.updateWidgetMessage = function () {
-        var widget = this.widgets[0];
-        if (widget) {
-            if (widget instanceof tree_view_widget_1.TreeViewWidget) {
-                widget.message = this._message;
-            }
-        }
-    };
-    PluginViewWidget.prototype.addWidget = function (widget) {
-        _super.prototype.addWidget.call(this, widget);
-        this.updateWidgetMessage();
-    };
-    PluginViewWidget.prototype.insertWidget = function (index, widget) {
-        _super.prototype.insertWidget.call(this, index, widget);
-        this.updateWidgetMessage();
-    };
-    __decorate([
-        inversify_1.inject(menu_1.MenuModelRegistry),
-        __metadata("design:type", menu_1.MenuModelRegistry)
-    ], PluginViewWidget.prototype, "menus", void 0);
-    __decorate([
-        inversify_1.inject(command_1.CommandRegistry),
-        __metadata("design:type", command_1.CommandRegistry)
-    ], PluginViewWidget.prototype, "commands", void 0);
-    __decorate([
-        inversify_1.inject(view_context_key_service_1.ViewContextKeyService),
-        __metadata("design:type", view_context_key_service_1.ViewContextKeyService)
-    ], PluginViewWidget.prototype, "contextKeys", void 0);
-    __decorate([
-        inversify_1.inject(PluginViewWidgetIdentifier),
-        __metadata("design:type", PluginViewWidgetIdentifier)
-    ], PluginViewWidget.prototype, "options", void 0);
-    __decorate([
-        inversify_1.postConstruct(),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", []),
-        __metadata("design:returntype", void 0)
-    ], PluginViewWidget.prototype, "init", null);
-    PluginViewWidget = __decorate([
-        inversify_1.injectable(),
-        __metadata("design:paramtypes", [])
-    ], PluginViewWidget);
-    return PluginViewWidget;
-}(widgets_1.Panel));
-exports.PluginViewWidget = PluginViewWidget;
-
-
-/***/ }),
-
-/***/ "./node_modules/@theia/plugin-ext/lib/main/browser/view/tree-view-widget.js":
-/*!**********************************************************************************!*\
-  !*** ./node_modules/@theia/plugin-ext/lib/main/browser/view/tree-view-widget.js ***!
-  \**********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/********************************************************************************
- * Copyright (C) 2018-2019 Red Hat, Inc. and others.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Eclipse Public License v. 2.0 which is available at
- * http://www.eclipse.org/legal/epl-2.0.
- *
- * This Source Code may also be made available under the following Secondary
- * Licenses when the conditions for such availability set forth in the Eclipse
- * Public License v. 2.0 are satisfied: GNU General Public License, version 2
- * with the GNU Classpath Exception which is available at
- * https://www.gnu.org/software/classpath/license.html.
- *
- * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
- ********************************************************************************/
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3560,6 +1658,306 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
+};
+var __values = (this && this.__values) || function(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+    if (m) return m.call(o);
+    if (o && typeof o.length === "number") return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MonacoTextmateService = exports.OnigasmPromise = void 0;
+var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
+var vscode_textmate_1 = __webpack_require__(/*! vscode-textmate */ "./node_modules/vscode-textmate/release/main.js");
+var core_1 = __webpack_require__(/*! @theia/core */ "./node_modules/@theia/core/lib/common/index.js");
+var browser_1 = __webpack_require__(/*! @theia/core/lib/browser */ "./node_modules/@theia/core/lib/browser/index.js");
+var theming_1 = __webpack_require__(/*! @theia/core/lib/browser/theming */ "./node_modules/@theia/core/lib/browser/theming.js");
+var textmate_contribution_1 = __webpack_require__(/*! ./textmate-contribution */ "./node_modules/@theia/monaco/lib/browser/textmate/textmate-contribution.js");
+var textmate_tokenizer_1 = __webpack_require__(/*! ./textmate-tokenizer */ "./node_modules/@theia/monaco/lib/browser/textmate/textmate-tokenizer.js");
+var textmate_registry_1 = __webpack_require__(/*! ./textmate-registry */ "./node_modules/@theia/monaco/lib/browser/textmate/textmate-registry.js");
+var monaco_theme_registry_1 = __webpack_require__(/*! ./monaco-theme-registry */ "./node_modules/@theia/monaco/lib/browser/textmate/monaco-theme-registry.js");
+var editor_preferences_1 = __webpack_require__(/*! @theia/editor/lib/browser/editor-preferences */ "./node_modules/@theia/editor/lib/browser/editor-preferences.js");
+exports.OnigasmPromise = Symbol('OnigasmPromise');
+var MonacoTextmateService = /** @class */ (function () {
+    function MonacoTextmateService() {
+        this.tokenizerOption = {
+            lineLimit: 400
+        };
+        this._activatedLanguages = new Set();
+        this.toDisposeOnUpdateTheme = new core_1.DisposableCollection();
+    }
+    MonacoTextmateService.prototype.initialize = function () {
+        var e_1, _a, e_2, _b;
+        var _this = this;
+        if (!browser_1.isBasicWasmSupported) {
+            console.log('Textmate support deactivated because WebAssembly is not detected.');
+            return;
+        }
+        try {
+            for (var _c = __values(this.grammarProviders.getContributions()), _d = _c.next(); !_d.done; _d = _c.next()) {
+                var grammarProvider = _d.value;
+                try {
+                    grammarProvider.registerTextmateLanguage(this.textmateRegistry);
+                }
+                catch (err) {
+                    console.error(err);
+                }
+            }
+        }
+        catch (e_1_1) { e_1 = { error: e_1_1 }; }
+        finally {
+            try {
+                if (_d && !_d.done && (_a = _c.return)) _a.call(_c);
+            }
+            finally { if (e_1) throw e_1.error; }
+        }
+        this.grammarRegistry = new vscode_textmate_1.Registry({
+            getOnigLib: function () { return _this.onigasmPromise; },
+            theme: this.monacoThemeRegistry.getThemeData(this.currentEditorTheme),
+            loadGrammar: function (scopeName) { return __awaiter(_this, void 0, void 0, function () {
+                var provider, definition, rawGrammar;
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0:
+                            provider = this.textmateRegistry.getProvider(scopeName);
+                            if (!provider) return [3 /*break*/, 2];
+                            return [4 /*yield*/, provider.getGrammarDefinition()];
+                        case 1:
+                            definition = _a.sent();
+                            rawGrammar = void 0;
+                            if (typeof definition.content === 'string') {
+                                rawGrammar = vscode_textmate_1.parseRawGrammar(definition.content, definition.format === 'json' ? 'grammar.json' : 'grammar.plist');
+                            }
+                            else {
+                                rawGrammar = definition.content;
+                            }
+                            return [2 /*return*/, rawGrammar];
+                        case 2: return [2 /*return*/, undefined];
+                    }
+                });
+            }); },
+            getInjections: function (scopeName) {
+                var provider = _this.textmateRegistry.getProvider(scopeName);
+                if (provider && provider.getInjections) {
+                    return provider.getInjections(scopeName);
+                }
+                return [];
+            }
+        });
+        this.tokenizerOption.lineLimit = this.preferences['editor.maxTokenizationLineLength'];
+        this.preferences.onPreferenceChanged(function (e) {
+            if (e.preferenceName === 'editor.maxTokenizationLineLength') {
+                _this.tokenizerOption.lineLimit = _this.preferences['editor.maxTokenizationLineLength'];
+            }
+        });
+        this.updateTheme();
+        this.themeService.onThemeChange(function () { return _this.updateTheme(); });
+        try {
+            for (var _e = __values(this.textmateRegistry.languages), _f = _e.next(); !_f.done; _f = _e.next()) {
+                var id = _f.value;
+                this.activateLanguage(id);
+            }
+        }
+        catch (e_2_1) { e_2 = { error: e_2_1 }; }
+        finally {
+            try {
+                if (_f && !_f.done && (_b = _e.return)) _b.call(_e);
+            }
+            finally { if (e_2) throw e_2.error; }
+        }
+    };
+    MonacoTextmateService.prototype.updateTheme = function () {
+        this.toDisposeOnUpdateTheme.dispose();
+        var currentEditorTheme = this.currentEditorTheme;
+        document.body.classList.add(currentEditorTheme);
+        this.toDisposeOnUpdateTheme.push(core_1.Disposable.create(function () { return document.body.classList.remove(currentEditorTheme); }));
+        // first update registry to run tokenization with the proper theme
+        var theme = this.monacoThemeRegistry.getThemeData(currentEditorTheme);
+        if (theme) {
+            this.grammarRegistry.setTheme(theme);
+        }
+        // then trigger tokenization by setting monaco theme
+        monaco.editor.setTheme(currentEditorTheme);
+    };
+    Object.defineProperty(MonacoTextmateService.prototype, "currentEditorTheme", {
+        get: function () {
+            return this.themeService.getCurrentTheme().editorTheme || monaco_theme_registry_1.MonacoThemeRegistry.DARK_DEFAULT_THEME;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    MonacoTextmateService.prototype.activateLanguage = function (language) {
+        var _this = this;
+        var toDispose = new core_1.DisposableCollection(core_1.Disposable.create(function () { }));
+        toDispose.push(this.waitForLanguage(language, function () {
+            return _this.doActivateLanguage(language, toDispose);
+        }));
+        return toDispose;
+    };
+    MonacoTextmateService.prototype.doActivateLanguage = function (languageId, toDispose) {
+        return __awaiter(this, void 0, void 0, function () {
+            var scopeName, provider, configuration, initialLanguage, grammar, options, tokenizer, support, themeService, languageIdentifier, adapter, error_1;
+            var _this = this;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        if (this._activatedLanguages.has(languageId)) {
+                            return [2 /*return*/];
+                        }
+                        this._activatedLanguages.add(languageId);
+                        toDispose.push(core_1.Disposable.create(function () { return _this._activatedLanguages.delete(languageId); }));
+                        scopeName = this.textmateRegistry.getScope(languageId);
+                        if (!scopeName) {
+                            return [2 /*return*/];
+                        }
+                        provider = this.textmateRegistry.getProvider(scopeName);
+                        if (!provider) {
+                            return [2 /*return*/];
+                        }
+                        configuration = this.textmateRegistry.getGrammarConfiguration(languageId);
+                        initialLanguage = textmate_contribution_1.getEncodedLanguageId(languageId);
+                        return [4 /*yield*/, this.onigasmPromise];
+                    case 1:
+                        _a.sent();
+                        if (toDispose.disposed) {
+                            return [2 /*return*/];
+                        }
+                        _a.label = 2;
+                    case 2:
+                        _a.trys.push([2, 4, , 5]);
+                        return [4 /*yield*/, this.grammarRegistry.loadGrammarWithConfiguration(scopeName, initialLanguage, configuration)];
+                    case 3:
+                        grammar = _a.sent();
+                        if (toDispose.disposed) {
+                            return [2 /*return*/];
+                        }
+                        if (!grammar) {
+                            throw new Error("no grammar for " + scopeName + ", " + initialLanguage + ", " + JSON.stringify(configuration));
+                        }
+                        options = configuration.tokenizerOption ? configuration.tokenizerOption : this.tokenizerOption;
+                        tokenizer = textmate_tokenizer_1.createTextmateTokenizer(grammar, options);
+                        toDispose.push(monaco.languages.setTokensProvider(languageId, tokenizer));
+                        support = monaco.modes.TokenizationRegistry.get(languageId);
+                        themeService = monaco.services.StaticServices.standaloneThemeService.get();
+                        languageIdentifier = monaco.services.StaticServices.modeService.get().getLanguageIdentifier(languageId);
+                        adapter = new monaco.services.TokenizationSupport2Adapter(themeService, languageIdentifier, tokenizer);
+                        support.tokenize = adapter.tokenize.bind(adapter);
+                        return [3 /*break*/, 5];
+                    case 4:
+                        error_1 = _a.sent();
+                        this.logger.warn('No grammar for this language id', languageId, error_1);
+                        return [3 /*break*/, 5];
+                    case 5: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    MonacoTextmateService.prototype.waitForLanguage = function (language, cb) {
+        var e_3, _a;
+        var modeService = monaco.services.StaticServices.modeService.get();
+        try {
+            for (var _b = __values(Object.keys(modeService['_instantiatedModes'])), _c = _b.next(); !_c.done; _c = _b.next()) {
+                var modeId = _c.value;
+                var mode = modeService['_instantiatedModes'][modeId];
+                if (mode.getId() === language) {
+                    cb();
+                    return core_1.Disposable.NULL;
+                }
+            }
+        }
+        catch (e_3_1) { e_3 = { error: e_3_1 }; }
+        finally {
+            try {
+                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+            }
+            finally { if (e_3) throw e_3.error; }
+        }
+        return monaco.languages.onLanguage(language, cb);
+    };
+    __decorate([
+        inversify_1.inject(core_1.ContributionProvider),
+        inversify_1.named(textmate_contribution_1.LanguageGrammarDefinitionContribution),
+        __metadata("design:type", Object)
+    ], MonacoTextmateService.prototype, "grammarProviders", void 0);
+    __decorate([
+        inversify_1.inject(textmate_registry_1.TextmateRegistry),
+        __metadata("design:type", textmate_registry_1.TextmateRegistry)
+    ], MonacoTextmateService.prototype, "textmateRegistry", void 0);
+    __decorate([
+        inversify_1.inject(core_1.ILogger),
+        __metadata("design:type", Object)
+    ], MonacoTextmateService.prototype, "logger", void 0);
+    __decorate([
+        inversify_1.inject(exports.OnigasmPromise),
+        __metadata("design:type", Object)
+    ], MonacoTextmateService.prototype, "onigasmPromise", void 0);
+    __decorate([
+        inversify_1.inject(theming_1.ThemeService),
+        __metadata("design:type", theming_1.ThemeService)
+    ], MonacoTextmateService.prototype, "themeService", void 0);
+    __decorate([
+        inversify_1.inject(monaco_theme_registry_1.MonacoThemeRegistry),
+        __metadata("design:type", monaco_theme_registry_1.MonacoThemeRegistry)
+    ], MonacoTextmateService.prototype, "monacoThemeRegistry", void 0);
+    __decorate([
+        inversify_1.inject(editor_preferences_1.EditorPreferences),
+        __metadata("design:type", Object)
+    ], MonacoTextmateService.prototype, "preferences", void 0);
+    MonacoTextmateService = __decorate([
+        inversify_1.injectable()
+    ], MonacoTextmateService);
+    return MonacoTextmateService;
+}());
+exports.MonacoTextmateService = MonacoTextmateService;
+
+
+/***/ }),
+
+/***/ "./node_modules/@theia/monaco/lib/browser/textmate/monaco-theme-registry.js":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/@theia/monaco/lib/browser/textmate/monaco-theme-registry.js ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/********************************************************************************
+ * Copyright (C) 2018 TypeFox and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var __read = (this && this.__read) || function (o, n) {
     var m = typeof Symbol === "function" && o[Symbol.iterator];
@@ -3593,716 +1991,190 @@ var __values = (this && this.__values) || function(o) {
     throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TreeViewWidget = exports.PluginTreeModel = exports.PluginTree = exports.TreeViewWidgetIdentifier = exports.CompositeTreeViewNode = exports.TreeViewNode = exports.VIEW_ITEM_INLINE_MENU = exports.VIEW_ITEM_CONTEXT_MENU = exports.TREE_NODE_HYPERLINK = void 0;
-var vscode_uri_1 = __webpack_require__(/*! vscode-uri */ "./node_modules/vscode-uri/lib/esm/index.js");
+exports.MonacoThemeRegistry = void 0;
+/* eslint-disable @typescript-eslint/no-explicit-any */
 var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
-var browser_1 = __webpack_require__(/*! @theia/core/lib/browser */ "./node_modules/@theia/core/lib/browser/index.js");
-var plugin_api_rpc_1 = __webpack_require__(/*! ../../../common/plugin-api-rpc */ "./node_modules/@theia/plugin-ext/lib/common/plugin-api-rpc.js");
-var menu_1 = __webpack_require__(/*! @theia/core/lib/common/menu */ "./node_modules/@theia/core/lib/common/menu.js");
-var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-var plugin_shared_style_1 = __webpack_require__(/*! ../plugin-shared-style */ "./node_modules/@theia/plugin-ext/lib/main/browser/plugin-shared-style.js");
-var view_context_key_service_1 = __webpack_require__(/*! ./view-context-key-service */ "./node_modules/@theia/plugin-ext/lib/main/browser/view/view-context-key-service.js");
-var widget_1 = __webpack_require__(/*! @theia/core/lib/browser/widgets/widget */ "./node_modules/@theia/core/lib/browser/widgets/widget.js");
-var command_1 = __webpack_require__(/*! @theia/core/lib/common/command */ "./node_modules/@theia/core/lib/common/command.js");
-var event_1 = __webpack_require__(/*! @theia/core/lib/common/event */ "./node_modules/@theia/core/lib/common/event.js");
-var message_service_1 = __webpack_require__(/*! @theia/core/lib/common/message-service */ "./node_modules/@theia/core/lib/common/message-service.js");
-var uri_1 = __webpack_require__(/*! @theia/core/lib/common/uri */ "./node_modules/@theia/core/lib/common/uri.js");
-exports.TREE_NODE_HYPERLINK = 'theia-TreeNodeHyperlink';
-exports.VIEW_ITEM_CONTEXT_MENU = ['view-item-context-menu'];
-exports.VIEW_ITEM_INLINE_MENU = ['view-item-inline-menu'];
-var TreeViewNode;
-(function (TreeViewNode) {
-    function is(arg) {
-        return !!arg && browser_1.SelectableTreeNode.is(arg) && !browser_1.ExpandableTreeNode.is(arg) && !browser_1.CompositeTreeNode.is(arg);
+var vscode_textmate_1 = __webpack_require__(/*! vscode-textmate */ "./node_modules/vscode-textmate/release/main.js");
+var MonacoThemeRegistry = /** @class */ (function () {
+    function MonacoThemeRegistry() {
     }
-    TreeViewNode.is = is;
-})(TreeViewNode = exports.TreeViewNode || (exports.TreeViewNode = {}));
-var CompositeTreeViewNode;
-(function (CompositeTreeViewNode) {
-    function is(arg) {
-        return !!arg && browser_1.SelectableTreeNode.is(arg) && browser_1.ExpandableTreeNode.is(arg) && browser_1.CompositeTreeNode.is(arg);
-    }
-    CompositeTreeViewNode.is = is;
-})(CompositeTreeViewNode = exports.CompositeTreeViewNode || (exports.CompositeTreeViewNode = {}));
-var TreeViewWidgetIdentifier = /** @class */ (function () {
-    function TreeViewWidgetIdentifier() {
-    }
-    TreeViewWidgetIdentifier = __decorate([
-        inversify_1.injectable()
-    ], TreeViewWidgetIdentifier);
-    return TreeViewWidgetIdentifier;
-}());
-exports.TreeViewWidgetIdentifier = TreeViewWidgetIdentifier;
-var PluginTree = /** @class */ (function (_super) {
-    __extends(PluginTree, _super);
-    function PluginTree() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    Object.defineProperty(PluginTree.prototype, "proxy", {
-        set: function (proxy) {
-            this._proxy = proxy;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(PluginTree.prototype, "viewInfo", {
-        set: function (viewInfo) {
-            this._viewInfo = viewInfo;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    PluginTree.prototype.resolveChildren = function (parent) {
-        return __awaiter(this, void 0, void 0, function () {
-            var children;
-            var _this = this;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        if (!this._proxy) {
-                            return [2 /*return*/, _super.prototype.resolveChildren.call(this, parent)];
-                        }
-                        return [4 /*yield*/, this.fetchChildren(this._proxy, parent)];
-                    case 1:
-                        children = _a.sent();
-                        return [2 /*return*/, children.map(function (value) { return _this.createTreeNode(value, parent); })];
-                }
-            });
-        });
+    MonacoThemeRegistry.prototype.getThemeData = function (name) {
+        var theme = this.doGetTheme(name);
+        return theme && theme.themeData;
     };
-    PluginTree.prototype.fetchChildren = function (proxy, parent) {
-        return __awaiter(this, void 0, void 0, function () {
-            var children, e_1, label;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        _a.trys.push([0, 2, , 3]);
-                        return [4 /*yield*/, proxy.$getChildren(this.identifier.id, parent.id)];
-                    case 1:
-                        children = _a.sent();
-                        return [2 /*return*/, children || []];
-                    case 2:
-                        e_1 = _a.sent();
-                        if (e_1) {
-                            console.error("Failed to fetch children for '" + this.identifier.id + "'", e_1);
-                            label = this._viewInfo ? this._viewInfo.name : this.identifier.id;
-                            this.notification.error(label + ": " + e_1.message);
-                        }
-                        return [2 /*return*/, []];
-                    case 3: return [2 /*return*/];
-                }
-            });
-        });
+    MonacoThemeRegistry.prototype.getTheme = function (name) {
+        return this.doGetTheme(name);
     };
-    PluginTree.prototype.createTreeNode = function (item, parent) {
-        var icon = this.toIconClass(item);
-        var resourceUri = item.resourceUri && vscode_uri_1.URI.revive(item.resourceUri).toString();
-        var themeIconId = item.themeIconId ? item.themeIconId : item.collapsibleState !== plugin_api_rpc_1.TreeViewItemCollapsibleState.None ? 'folder' : 'file';
-        var update = {
-            name: item.label,
-            icon: icon,
-            description: item.description,
-            themeIconId: themeIconId,
-            resourceUri: resourceUri,
-            tooltip: item.tooltip,
-            contextValue: item.contextValue
+    MonacoThemeRegistry.prototype.doGetTheme = function (name) {
+        var standaloneThemeService = monaco.services.StaticServices.standaloneThemeService.get();
+        var theme = !name ? standaloneThemeService.getTheme() : standaloneThemeService._knownThemes.get(name);
+        return theme;
+    };
+    MonacoThemeRegistry.prototype.setTheme = function (name, data) {
+        // monaco auto refreshes a theme with new data
+        monaco.editor.defineTheme(name, data);
+    };
+    /**
+     * Register VS Code compatible themes
+     */
+    MonacoThemeRegistry.prototype.register = function (json, includes, givenName, monacoBase) {
+        var _a, _b, e_1, _c, e_2, _d;
+        var name = givenName || json.name;
+        var result = {
+            name: name,
+            base: monacoBase || 'vs',
+            inherit: true,
+            colors: {},
+            rules: [],
+            settings: []
         };
-        var node = this.getNode(item.id);
-        if (item.collapsibleState !== undefined && item.collapsibleState !== plugin_api_rpc_1.TreeViewItemCollapsibleState.None) {
-            if (CompositeTreeViewNode.is(node)) {
-                return Object.assign(node, update);
+        if (typeof json.include !== 'undefined') {
+            if (!includes || !includes[json.include]) {
+                console.error("Couldn't resolve includes theme " + json.include + ".");
             }
-            return Object.assign({
-                id: item.id,
-                parent: parent,
-                visible: true,
-                selected: false,
-                expanded: plugin_api_rpc_1.TreeViewItemCollapsibleState.Expanded === item.collapsibleState,
-                children: []
-            }, update);
+            else {
+                var parentTheme = this.register(includes[json.include], includes);
+                Object.assign(result.colors, parentTheme.colors);
+                (_a = result.rules).push.apply(_a, __spread(parentTheme.rules));
+                (_b = result.settings).push.apply(_b, __spread(parentTheme.settings));
+            }
         }
-        if (TreeViewNode.is(node)) {
-            return Object.assign(node, update, { command: item.command });
-        }
-        return Object.assign({
-            id: item.id,
-            parent: parent,
-            visible: true,
-            selected: false,
-            command: item.command
-        }, update);
-    };
-    PluginTree.prototype.toIconClass = function (item) {
-        if (item.icon) {
-            return 'fa ' + item.icon;
-        }
-        if (item.iconUrl) {
-            var reference = this.sharedStyle.toIconClass(item.iconUrl);
-            this.toDispose.push(reference);
-            return reference.object.iconClass;
-        }
-        return undefined;
-    };
-    __decorate([
-        inversify_1.inject(plugin_shared_style_1.PluginSharedStyle),
-        __metadata("design:type", plugin_shared_style_1.PluginSharedStyle)
-    ], PluginTree.prototype, "sharedStyle", void 0);
-    __decorate([
-        inversify_1.inject(TreeViewWidgetIdentifier),
-        __metadata("design:type", TreeViewWidgetIdentifier)
-    ], PluginTree.prototype, "identifier", void 0);
-    __decorate([
-        inversify_1.inject(message_service_1.MessageService),
-        __metadata("design:type", message_service_1.MessageService)
-    ], PluginTree.prototype, "notification", void 0);
-    PluginTree = __decorate([
-        inversify_1.injectable()
-    ], PluginTree);
-    return PluginTree;
-}(browser_1.TreeImpl));
-exports.PluginTree = PluginTree;
-var PluginTreeModel = /** @class */ (function (_super) {
-    __extends(PluginTreeModel, _super);
-    function PluginTreeModel() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    Object.defineProperty(PluginTreeModel.prototype, "proxy", {
-        set: function (proxy) {
-            this.tree.proxy = proxy;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(PluginTreeModel.prototype, "viewInfo", {
-        set: function (viewInfo) {
-            this.tree.viewInfo = viewInfo;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    __decorate([
-        inversify_1.inject(PluginTree),
-        __metadata("design:type", PluginTree)
-    ], PluginTreeModel.prototype, "tree", void 0);
-    PluginTreeModel = __decorate([
-        inversify_1.injectable()
-    ], PluginTreeModel);
-    return PluginTreeModel;
-}(browser_1.TreeModelImpl));
-exports.PluginTreeModel = PluginTreeModel;
-var TreeViewWidget = /** @class */ (function (_super) {
-    __extends(TreeViewWidget, _super);
-    function TreeViewWidget() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this._contextSelection = false;
-        _this.onDidChangeVisibilityEmitter = new event_1.Emitter();
-        _this.onDidChangeVisibility = _this.onDidChangeVisibilityEmitter.event;
-        return _this;
-    }
-    TreeViewWidget.prototype.init = function () {
-        _super.prototype.init.call(this);
-        this.id = this.identifier.id;
-        this.addClass('theia-tree-view');
-        this.node.style.height = '100%';
-        this.toDispose.push(this.onDidChangeVisibilityEmitter);
-    };
-    TreeViewWidget.prototype.renderIcon = function (node, props) {
-        var icon = this.toNodeIcon(node);
-        if (icon) {
-            return React.createElement("div", { className: icon + ' theia-tree-view-icon' });
-        }
-        return undefined;
-    };
-    TreeViewWidget.prototype.renderCaption = function (node, props) {
-        var classes = [browser_1.TREE_NODE_SEGMENT_CLASS];
-        if (!this.hasTrailingSuffixes(node)) {
-            classes.push(browser_1.TREE_NODE_SEGMENT_GROW_CLASS);
-        }
-        var className = classes.join(' ');
-        var title = node.tooltip ||
-            (node.resourceUri && this.labelProvider.getLongName(new uri_1.default(node.resourceUri)))
-            || this.toNodeName(node);
-        var attrs = this.decorateCaption(node, {
-            className: className,
-            id: node.id,
-            title: title
-        });
-        var children = this.getCaption(node);
-        return React.createElement.apply(React, __spread(['div', attrs], children));
-    };
-    TreeViewWidget.prototype.getCaption = function (node) {
-        var nodes = [];
-        var name = this.toNodeName(node) || '';
-        var description = this.toNodeDescription(node);
-        var work = name;
-        var regex = /\[([^\[]+)\]\(([^\)]+)\)/g;
-        var matchResult = work.match(regex);
-        if (matchResult) {
-            matchResult.forEach(function (match, index) {
-                nodes.push(React.createElement("span", { key: "m" + index }, work.substring(0, work.indexOf(match))));
-                var execResult = regex.exec(name);
-                nodes.push(React.createElement("a", { key: "l" + index, href: execResult[2], target: '_blank', className: exports.TREE_NODE_HYPERLINK, onClick: function (e) { return e.stopPropagation(); } }, execResult[1]));
-                work = work.substring(work.indexOf(match) + match.length);
-            });
-        }
-        return React.createElement("div", { className: 'noWrapInfo' },
-            nodes,
-            work && React.createElement("span", null, work),
-            description && React.createElement("span", { className: 'theia-tree-view-description' }, description));
-    };
-    TreeViewWidget.prototype.renderTailDecorations = function (node, props) {
-        var _this = this;
-        if (this.model.selectedNodes.every(function (selected) { return selected.id !== node.id; }) && node.id !== this.hoverNodeId) {
-            return false;
-        }
-        return this.contextKeys.with({ view: this.id, viewItem: node.contextValue }, function () {
-            var menu = _this.menus.getMenu(exports.VIEW_ITEM_INLINE_MENU);
-            var arg = _this.toTreeViewSelection(node);
-            return React.createElement(React.Fragment, null, menu.children.map(function (item, index) { return item instanceof menu_1.ActionMenuNode && _this.renderInlineCommand(item, index, arg); }));
-        });
-    };
-    TreeViewWidget.prototype.toTreeViewSelection = function (node) {
-        return { treeViewId: this.id, treeItemId: node.id };
-    };
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    TreeViewWidget.prototype.renderInlineCommand = function (node, index, arg) {
-        var _this = this;
-        var icon = node.icon;
-        if (!icon || !this.commands.isVisible(node.action.commandId, arg) || !this.contextKeys.match(node.action.when)) {
-            return false;
-        }
-        var className = [browser_1.TREE_NODE_SEGMENT_CLASS, browser_1.TREE_NODE_TAIL_CLASS, icon, 'theia-tree-view-inline-action'].join(' ');
-        return React.createElement("div", { key: index, className: className, title: node.label, onClick: function (e) {
-                e.stopPropagation();
-                _this.commands.executeCommand(node.action.commandId, arg);
-            } });
-    };
-    TreeViewWidget.prototype.setHoverNodeId = function (hoverNodeId) {
-        this.hoverNodeId = hoverNodeId;
-        this.update();
-    };
-    TreeViewWidget.prototype.createNodeAttributes = function (node, props) {
-        var _this = this;
-        return __assign(__assign({}, _super.prototype.createNodeAttributes.call(this, node, props)), { onMouseOver: function () { return _this.setHoverNodeId(node.id); }, onMouseOut: function () { return _this.setHoverNodeId(undefined); } });
-    };
-    TreeViewWidget.prototype.toContextMenuArgs = function (node) {
-        return [this.toTreeViewSelection(node)];
-    };
-    TreeViewWidget.prototype.setFlag = function (flag) {
-        _super.prototype.setFlag.call(this, flag);
-        if (flag === widget_1.Widget.Flag.IsVisible) {
-            this.onDidChangeVisibilityEmitter.fire(this.isVisible);
-        }
-    };
-    TreeViewWidget.prototype.clearFlag = function (flag) {
-        _super.prototype.clearFlag.call(this, flag);
-        if (flag === widget_1.Widget.Flag.IsVisible) {
-            this.onDidChangeVisibilityEmitter.fire(this.isVisible);
-        }
-    };
-    TreeViewWidget.prototype.handleEnter = function (event) {
-        _super.prototype.handleEnter.call(this, event);
-        this.tryExecuteCommand();
-    };
-    TreeViewWidget.prototype.handleClickEvent = function (node, event) {
-        _super.prototype.handleClickEvent.call(this, node, event);
-        this.tryExecuteCommand(node);
-    };
-    // execute TreeItem.command if present
-    TreeViewWidget.prototype.tryExecuteCommand = function (node) {
-        var e_2, _a, _b;
-        var treeNodes = (node ? [node] : this.model.selectedNodes);
-        try {
-            for (var treeNodes_1 = __values(treeNodes), treeNodes_1_1 = treeNodes_1.next(); !treeNodes_1_1.done; treeNodes_1_1 = treeNodes_1.next()) {
-                var treeNode = treeNodes_1_1.value;
-                if (treeNode && treeNode.command) {
-                    (_b = this.commands).executeCommand.apply(_b, __spread([treeNode.command.id], (treeNode.command.arguments || [])));
+        var tokenColors = json.tokenColors;
+        if (Array.isArray(tokenColors)) {
+            try {
+                for (var tokenColors_1 = __values(tokenColors), tokenColors_1_1 = tokenColors_1.next(); !tokenColors_1_1.done; tokenColors_1_1 = tokenColors_1.next()) {
+                    var tokenColor = tokenColors_1_1.value;
+                    if (tokenColor.scope && tokenColor.settings) {
+                        result.settings.push({
+                            scope: tokenColor.scope,
+                            settings: {
+                                foreground: this.normalizeColor(tokenColor.settings.foreground),
+                                background: this.normalizeColor(tokenColor.settings.background),
+                                fontStyle: tokenColor.settings.fontStyle
+                            }
+                        });
+                    }
                 }
             }
+            catch (e_1_1) { e_1 = { error: e_1_1 }; }
+            finally {
+                try {
+                    if (tokenColors_1_1 && !tokenColors_1_1.done && (_c = tokenColors_1.return)) _c.call(tokenColors_1);
+                }
+                finally { if (e_1) throw e_1.error; }
+            }
         }
-        catch (e_2_1) { e_2 = { error: e_2_1 }; }
+        if (json.colors) {
+            Object.assign(result.colors, json.colors);
+            result.encodedTokensColors = Object.keys(result.colors).map(function (key) { return result.colors[key]; });
+        }
+        if (monacoBase && givenName) {
+            try {
+                for (var _e = __values(result.settings), _f = _e.next(); !_f.done; _f = _e.next()) {
+                    var setting = _f.value;
+                    this.transform(setting, function (rule) { return result.rules.push(rule); });
+                }
+            }
+            catch (e_2_1) { e_2 = { error: e_2_1 }; }
+            finally {
+                try {
+                    if (_f && !_f.done && (_d = _e.return)) _d.call(_e);
+                }
+                finally { if (e_2) throw e_2.error; }
+            }
+            // the default rule (scope empty) is always the first rule. Ignore all other default rules.
+            var defaultTheme = monaco.services.StaticServices.standaloneThemeService.get()._knownThemes.get(result.base);
+            var foreground = result.colors['editor.foreground'] || defaultTheme.getColor('editor.foreground');
+            var background = result.colors['editor.background'] || defaultTheme.getColor('editor.background');
+            result.settings.unshift({
+                settings: {
+                    foreground: this.normalizeColor(foreground),
+                    background: this.normalizeColor(background)
+                }
+            });
+            var reg = new vscode_textmate_1.Registry();
+            reg.setTheme(result);
+            result.encodedTokensColors = reg.getColorMap();
+            // index 0 has to be set to null as it is 'undefined' by default, but monaco code expects it to be null
+            // eslint-disable-next-line no-null/no-null
+            result.encodedTokensColors[0] = null;
+            this.setTheme(givenName, result);
+        }
+        return result;
+    };
+    MonacoThemeRegistry.prototype.transform = function (tokenColor, acceptor) {
+        var e_3, _a;
+        if (typeof tokenColor.scope === 'undefined') {
+            tokenColor.scope = [''];
+        }
+        else if (typeof tokenColor.scope === 'string') {
+            tokenColor.scope = tokenColor.scope.split(',').map(function (scope) { return scope.trim(); });
+        }
+        try {
+            for (var _b = __values(tokenColor.scope), _c = _b.next(); !_c.done; _c = _b.next()) {
+                var scope = _c.value;
+                acceptor(__assign(__assign({}, tokenColor.settings), { token: scope }));
+            }
+        }
+        catch (e_3_1) { e_3 = { error: e_3_1 }; }
         finally {
             try {
-                if (treeNodes_1_1 && !treeNodes_1_1.done && (_a = treeNodes_1.return)) _a.call(treeNodes_1);
+                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
             }
-            finally { if (e_2) throw e_2.error; }
+            finally { if (e_3) throw e_3.error; }
         }
     };
-    Object.defineProperty(TreeViewWidget.prototype, "message", {
-        get: function () {
-            return this._message;
-        },
-        set: function (message) {
-            this._message = message;
-            this.update();
-        },
-        enumerable: false,
-        configurable: true
-    });
-    TreeViewWidget.prototype.render = function () {
-        return React.createElement('div', this.createContainerAttributes(), this.renderSearchInfo(), this.renderTree(this.model));
-    };
-    TreeViewWidget.prototype.renderSearchInfo = function () {
-        if (this._message) {
-            return React.createElement("div", { className: 'theia-TreeViewInfo' }, this._message);
+    MonacoThemeRegistry.prototype.normalizeColor = function (color) {
+        if (!color) {
+            return undefined;
         }
-        return undefined;
+        var normalized = String(color).replace(/^\#/, '').slice(0, 6);
+        if (normalized.length < 6) {
+            // ignoring not normalized colors to avoid breaking token color indexes between monaco and vscode-textmate
+            console.error("Color '" + normalized + "' is NOT normalized, it must have 6 positions.");
+            return undefined;
+        }
+        return '#' + normalized;
     };
-    __decorate([
-        inversify_1.inject(menu_1.MenuModelRegistry),
-        __metadata("design:type", menu_1.MenuModelRegistry)
-    ], TreeViewWidget.prototype, "menus", void 0);
-    __decorate([
-        inversify_1.inject(command_1.CommandRegistry),
-        __metadata("design:type", command_1.CommandRegistry)
-    ], TreeViewWidget.prototype, "commands", void 0);
-    __decorate([
-        inversify_1.inject(view_context_key_service_1.ViewContextKeyService),
-        __metadata("design:type", view_context_key_service_1.ViewContextKeyService)
-    ], TreeViewWidget.prototype, "contextKeys", void 0);
-    __decorate([
-        inversify_1.inject(TreeViewWidgetIdentifier),
-        __metadata("design:type", TreeViewWidgetIdentifier)
-    ], TreeViewWidget.prototype, "identifier", void 0);
-    __decorate([
-        inversify_1.inject(PluginTreeModel),
-        __metadata("design:type", PluginTreeModel)
-    ], TreeViewWidget.prototype, "model", void 0);
-    __decorate([
-        inversify_1.postConstruct(),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", []),
-        __metadata("design:returntype", void 0)
-    ], TreeViewWidget.prototype, "init", null);
-    TreeViewWidget = __decorate([
+    MonacoThemeRegistry = __decorate([
         inversify_1.injectable()
-    ], TreeViewWidget);
-    return TreeViewWidget;
-}(browser_1.TreeWidget));
-exports.TreeViewWidget = TreeViewWidget;
-
-
-/***/ }),
-
-/***/ "./node_modules/@theia/plugin-ext/lib/main/browser/view/view-context-key-service.js":
-/*!******************************************************************************************!*\
-  !*** ./node_modules/@theia/plugin-ext/lib/main/browser/view/view-context-key-service.js ***!
-  \******************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/********************************************************************************
- * Copyright (C) 2019 TypeFox and others.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Eclipse Public License v. 2.0 which is available at
- * http://www.eclipse.org/legal/epl-2.0.
- *
- * This Source Code may also be made available under the following Secondary
- * Licenses when the conditions for such availability set forth in the Eclipse
- * Public License v. 2.0 are satisfied: GNU General Public License, version 2
- * with the GNU Classpath Exception which is available at
- * https://www.gnu.org/software/classpath/license.html.
- *
- * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
- ********************************************************************************/
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ViewContextKeyService = void 0;
-var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
-var context_key_service_1 = __webpack_require__(/*! @theia/core/lib/browser/context-key-service */ "./node_modules/@theia/core/lib/browser/context-key-service.js");
-var ViewContextKeyService = /** @class */ (function () {
-    function ViewContextKeyService() {
-    }
-    Object.defineProperty(ViewContextKeyService.prototype, "view", {
-        get: function () {
-            return this._view;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(ViewContextKeyService.prototype, "viewItem", {
-        get: function () {
-            return this._viewItem;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(ViewContextKeyService.prototype, "activeViewlet", {
-        /**
-         * Viewlet is a tab in the left area in VS Code. Active means visible in this context.
-         *
-         * In VS Code there can be only one visible viewlet at any time.
-         * It is not true for Theia, since views can be layed-out again to different areas.
-         * So only last visible view will be an active viewlet.
-         */
-        get: function () {
-            return this._activeViewlet;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(ViewContextKeyService.prototype, "activePanel", {
-        /**
-         * Panel is a tab in the bottom area in VS Code. Active means visible in this context.
-         *
-         * In VS Code there can be only one visible panel at any time.
-         * It is not true for Theia, since views can be layed-out again to different areas.
-         * So only last visible view will be an active panel.
-         */
-        get: function () {
-            return this._activePanel;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(ViewContextKeyService.prototype, "focusedView", {
-        get: function () {
-            return this._focusedView;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    ViewContextKeyService.prototype.init = function () {
-        this._view = this.contextKeyService.createKey('view', '');
-        this._viewItem = this.contextKeyService.createKey('viewItem', '');
-        this._activeViewlet = this.contextKeyService.createKey('activeViewlet', '');
-        this._activePanel = this.contextKeyService.createKey('activePanel', '');
-        this._focusedView = this.contextKeyService.createKey('focusedView', '');
-    };
-    ViewContextKeyService.prototype.match = function (expression) {
-        return !expression || this.contextKeyService.match(expression);
-    };
-    ViewContextKeyService.prototype.with = function (input, cb) {
-        var view = this.view.get();
-        var viewItem = this.viewItem.get();
-        this.view.set(input.view);
-        this.viewItem.set(input.viewItem);
-        try {
-            return cb();
-        }
-        finally {
-            this.view.set(view);
-            this.viewItem.set(viewItem);
-        }
-    };
-    __decorate([
-        inversify_1.inject(context_key_service_1.ContextKeyService),
-        __metadata("design:type", context_key_service_1.ContextKeyService)
-    ], ViewContextKeyService.prototype, "contextKeyService", void 0);
-    __decorate([
-        inversify_1.postConstruct(),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", []),
-        __metadata("design:returntype", void 0)
-    ], ViewContextKeyService.prototype, "init", null);
-    ViewContextKeyService = __decorate([
-        inversify_1.injectable()
-    ], ViewContextKeyService);
-    return ViewContextKeyService;
+    ], MonacoThemeRegistry);
+    return MonacoThemeRegistry;
 }());
-exports.ViewContextKeyService = ViewContextKeyService;
+exports.MonacoThemeRegistry = MonacoThemeRegistry;
+(function (MonacoThemeRegistry) {
+    MonacoThemeRegistry.SINGLETON = new MonacoThemeRegistry();
+    MonacoThemeRegistry.DARK_DEFAULT_THEME = MonacoThemeRegistry.SINGLETON.register(__webpack_require__(/*! ../../../data/monaco-themes/vscode/dark_theia.json */ "./node_modules/@theia/monaco/data/monaco-themes/vscode/dark_theia.json"), {
+        './dark_defaults.json': __webpack_require__(/*! ../../../data/monaco-themes/vscode/dark_defaults.json */ "./node_modules/@theia/monaco/data/monaco-themes/vscode/dark_defaults.json"),
+        './dark_vs.json': __webpack_require__(/*! ../../../data/monaco-themes/vscode/dark_vs.json */ "./node_modules/@theia/monaco/data/monaco-themes/vscode/dark_vs.json"),
+        './dark_plus.json': __webpack_require__(/*! ../../../data/monaco-themes/vscode/dark_plus.json */ "./node_modules/@theia/monaco/data/monaco-themes/vscode/dark_plus.json")
+    }, 'dark-theia', 'vs-dark').name;
+    MonacoThemeRegistry.LIGHT_DEFAULT_THEME = MonacoThemeRegistry.SINGLETON.register(__webpack_require__(/*! ../../../data/monaco-themes/vscode/light_theia.json */ "./node_modules/@theia/monaco/data/monaco-themes/vscode/light_theia.json"), {
+        './light_defaults.json': __webpack_require__(/*! ../../../data/monaco-themes/vscode/light_defaults.json */ "./node_modules/@theia/monaco/data/monaco-themes/vscode/light_defaults.json"),
+        './light_vs.json': __webpack_require__(/*! ../../../data/monaco-themes/vscode/light_vs.json */ "./node_modules/@theia/monaco/data/monaco-themes/vscode/light_vs.json"),
+        './light_plus.json': __webpack_require__(/*! ../../../data/monaco-themes/vscode/light_plus.json */ "./node_modules/@theia/monaco/data/monaco-themes/vscode/light_plus.json"),
+    }, 'light-theia', 'vs').name;
+    MonacoThemeRegistry.HC_DEFAULT_THEME = MonacoThemeRegistry.SINGLETON.register(__webpack_require__(/*! ../../../data/monaco-themes/vscode/hc_theia.json */ "./node_modules/@theia/monaco/data/monaco-themes/vscode/hc_theia.json"), {
+        './hc_black_defaults.json': __webpack_require__(/*! ../../../data/monaco-themes/vscode/hc_black_defaults.json */ "./node_modules/@theia/monaco/data/monaco-themes/vscode/hc_black_defaults.json"),
+        './hc_black.json': __webpack_require__(/*! ../../../data/monaco-themes/vscode/hc_black.json */ "./node_modules/@theia/monaco/data/monaco-themes/vscode/hc_black.json")
+    }, 'hc-theia', 'hc-black').name;
+})(MonacoThemeRegistry = exports.MonacoThemeRegistry || (exports.MonacoThemeRegistry = {}));
+exports.MonacoThemeRegistry = MonacoThemeRegistry;
 
 
 /***/ }),
 
-/***/ "./node_modules/@theia/plugin-ext/lib/main/browser/webview/webview-environment.js":
-/*!****************************************************************************************!*\
-  !*** ./node_modules/@theia/plugin-ext/lib/main/browser/webview/webview-environment.js ***!
-  \****************************************************************************************/
+/***/ "./node_modules/@theia/monaco/lib/browser/textmate/textmate-contribution.js":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/@theia/monaco/lib/browser/textmate/textmate-contribution.js ***!
+  \**********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 /********************************************************************************
- * Copyright (C) 2019 TypeFox and others.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Eclipse Public License v. 2.0 which is available at
- * http://www.eclipse.org/legal/epl-2.0.
- *
- * This Source Code may also be made available under the following Secondary
- * Licenses when the conditions for such availability set forth in the Eclipse
- * Public License v. 2.0 are satisfied: GNU General Public License, version 2
- * with the GNU Classpath Exception which is available at
- * https://www.gnu.org/software/classpath/license.html.
- *
- * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
- ********************************************************************************/
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.WebviewEnvironment = void 0;
-var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
-var endpoint_1 = __webpack_require__(/*! @theia/core/lib/browser/endpoint */ "./node_modules/@theia/core/lib/browser/endpoint.js");
-var promise_util_1 = __webpack_require__(/*! @theia/core/lib/common/promise-util */ "./node_modules/@theia/core/lib/common/promise-util.js");
-var env_variables_1 = __webpack_require__(/*! @theia/core/lib/common/env-variables */ "./node_modules/@theia/core/lib/common/env-variables/index.js");
-var webview_protocol_1 = __webpack_require__(/*! ../../common/webview-protocol */ "./node_modules/@theia/plugin-ext/lib/main/common/webview-protocol.js");
-var environment_1 = __webpack_require__(/*! @theia/application-package/lib/environment */ "./node_modules/@theia/application-package/lib/environment.js");
-var WebviewEnvironment = /** @class */ (function () {
-    function WebviewEnvironment() {
-        this.externalEndpointHost = new promise_util_1.Deferred();
-    }
-    WebviewEnvironment.prototype.init = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            var endpointPattern, variable, host, e_1;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        _a.trys.push([0, 4, , 5]);
-                        endpointPattern = void 0;
-                        if (!environment_1.environment.electron.is()) return [3 /*break*/, 1];
-                        endpointPattern = webview_protocol_1.WebviewExternalEndpoint.defaultPattern;
-                        return [3 /*break*/, 3];
-                    case 1: return [4 /*yield*/, this.environments.getValue(webview_protocol_1.WebviewExternalEndpoint.pattern)];
-                    case 2:
-                        variable = _a.sent();
-                        endpointPattern = variable && variable.value || webview_protocol_1.WebviewExternalEndpoint.defaultPattern;
-                        _a.label = 3;
-                    case 3:
-                        host = new endpoint_1.Endpoint().host;
-                        this.externalEndpointHost.resolve(endpointPattern.replace('{{hostname}}', host));
-                        return [3 /*break*/, 5];
-                    case 4:
-                        e_1 = _a.sent();
-                        this.externalEndpointHost.reject(e_1);
-                        return [3 /*break*/, 5];
-                    case 5: return [2 /*return*/];
-                }
-            });
-        });
-    };
-    WebviewEnvironment.prototype.externalEndpointUrl = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            var host;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.externalEndpointHost.promise];
-                    case 1:
-                        host = _a.sent();
-                        return [2 /*return*/, new endpoint_1.Endpoint({
-                                host: host,
-                                path: '/webview'
-                            }).getRestUrl()];
-                }
-            });
-        });
-    };
-    WebviewEnvironment.prototype.externalEndpoint = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.externalEndpointUrl()];
-                    case 1: return [2 /*return*/, (_a.sent()).toString(true)];
-                }
-            });
-        });
-    };
-    WebviewEnvironment.prototype.resourceRoot = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.externalEndpointUrl()];
-                    case 1: return [2 /*return*/, (_a.sent()).resolve('theia-resource/{{resource}}').toString(true)];
-                }
-            });
-        });
-    };
-    WebviewEnvironment.prototype.cspSource = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.externalEndpointUrl()];
-                    case 1: return [2 /*return*/, (_a.sent()).withPath('').withQuery('').withFragment('').toString(true).replace('{{uuid}}', '*')];
-                }
-            });
-        });
-    };
-    __decorate([
-        inversify_1.inject(env_variables_1.EnvVariablesServer),
-        __metadata("design:type", Object)
-    ], WebviewEnvironment.prototype, "environments", void 0);
-    __decorate([
-        inversify_1.postConstruct(),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", []),
-        __metadata("design:returntype", Promise)
-    ], WebviewEnvironment.prototype, "init", null);
-    WebviewEnvironment = __decorate([
-        inversify_1.injectable()
-    ], WebviewEnvironment);
-    return WebviewEnvironment;
-}());
-exports.WebviewEnvironment = WebviewEnvironment;
-
-
-/***/ }),
-
-/***/ "./node_modules/@theia/plugin-ext/lib/main/browser/webview/webview-preferences.js":
-/*!****************************************************************************************!*\
-  !*** ./node_modules/@theia/plugin-ext/lib/main/browser/webview/webview-preferences.js ***!
-  \****************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/********************************************************************************
- * Copyright (C) 2019 TypeFox and others.
+ * Copyright (C) 2018 Ericsson and others.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0 which is available at
@@ -4317,242 +2189,30 @@ exports.WebviewEnvironment = WebviewEnvironment;
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.bindWebviewPreferences = exports.createWebviewPreferences = exports.WebviewPreferences = exports.WebviewConfigSchema = void 0;
-var preferences_1 = __webpack_require__(/*! @theia/core/lib/browser/preferences */ "./node_modules/@theia/core/lib/browser/preferences/index.js");
-exports.WebviewConfigSchema = {
-    'type': 'object',
-    'properties': {
-        'webview.trace': {
-            'type': 'string',
-            'enum': ['off', 'on', 'verbose'],
-            'description': 'Controls communication tracing with webviews.',
-            'default': 'off'
-        }
-    }
-};
-exports.WebviewPreferences = Symbol('WebviewPreferences');
-function createWebviewPreferences(preferences) {
-    return preferences_1.createPreferenceProxy(preferences, exports.WebviewConfigSchema);
-}
-exports.createWebviewPreferences = createWebviewPreferences;
-function bindWebviewPreferences(bind) {
-    bind(exports.WebviewPreferences).toDynamicValue(function (ctx) {
-        var preferences = ctx.container.get(preferences_1.PreferenceService);
-        return createWebviewPreferences(preferences);
-    });
-    bind(preferences_1.PreferenceContribution).toConstantValue({ schema: exports.WebviewConfigSchema });
-}
-exports.bindWebviewPreferences = bindWebviewPreferences;
-
-
-/***/ }),
-
-/***/ "./node_modules/@theia/plugin-ext/lib/main/browser/webview/webview-resource-cache.js":
-/*!*******************************************************************************************!*\
-  !*** ./node_modules/@theia/plugin-ext/lib/main/browser/webview/webview-resource-cache.js ***!
-  \*******************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/********************************************************************************
- * Copyright (C) 2019 TypeFox and others.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Eclipse Public License v. 2.0 which is available at
- * http://www.eclipse.org/legal/epl-2.0.
- *
- * This Source Code may also be made available under the following Secondary
- * Licenses when the conditions for such availability set forth in the Eclipse
- * Public License v. 2.0 are satisfied: GNU General Public License, version 2
- * with the GNU Classpath Exception which is available at
- * https://www.gnu.org/software/classpath/license.html.
- *
- * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
- ********************************************************************************/
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.WebviewResourceCache = void 0;
-var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
-var promise_util_1 = __webpack_require__(/*! @theia/core/lib/common/promise-util */ "./node_modules/@theia/core/lib/common/promise-util.js");
+exports.getEncodedLanguageId = exports.LanguageGrammarDefinitionContribution = void 0;
 /**
- * Browser based cache of webview resources across all instances.
+ * Callback for extensions to contribute language grammar definitions
  */
-var WebviewResourceCache = /** @class */ (function () {
-    function WebviewResourceCache() {
-        this.cache = new promise_util_1.Deferred();
-        this.resolveCache();
-    }
-    WebviewResourceCache.prototype.resolveCache = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            var _a, _b, e_1;
-            return __generator(this, function (_c) {
-                switch (_c.label) {
-                    case 0:
-                        _c.trys.push([0, 2, , 3]);
-                        _b = (_a = this.cache).resolve;
-                        return [4 /*yield*/, caches.open('webview:v1')];
-                    case 1:
-                        _b.apply(_a, [_c.sent()]);
-                        return [3 /*break*/, 3];
-                    case 2:
-                        e_1 = _c.sent();
-                        console.error('Failed to enable webview caching: ', e_1);
-                        this.cache.resolve(undefined);
-                        return [3 /*break*/, 3];
-                    case 3: return [2 /*return*/];
-                }
-            });
-        });
-    };
-    WebviewResourceCache.prototype.match = function (url) {
-        return __awaiter(this, void 0, void 0, function () {
-            var cache, response;
-            var _this = this;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.cache.promise];
-                    case 1:
-                        cache = _a.sent();
-                        if (!cache) {
-                            return [2 /*return*/, undefined];
-                        }
-                        return [4 /*yield*/, cache.match(url)];
-                    case 2:
-                        response = _a.sent();
-                        if (!response) {
-                            return [2 /*return*/, undefined];
-                        }
-                        return [2 /*return*/, {
-                                eTag: response.headers.get('ETag') || undefined,
-                                body: function () { return __awaiter(_this, void 0, void 0, function () {
-                                    var buffer;
-                                    return __generator(this, function (_a) {
-                                        switch (_a.label) {
-                                            case 0: return [4 /*yield*/, response.arrayBuffer()];
-                                            case 1:
-                                                buffer = _a.sent();
-                                                return [2 /*return*/, new Uint8Array(buffer)];
-                                        }
-                                    });
-                                }); }
-                            }];
-                }
-            });
-        });
-    };
-    WebviewResourceCache.prototype.delete = function (url) {
-        return __awaiter(this, void 0, void 0, function () {
-            var cache;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.cache.promise];
-                    case 1:
-                        cache = _a.sent();
-                        if (!cache) {
-                            return [2 /*return*/, false];
-                        }
-                        return [2 /*return*/, cache.delete(url)];
-                }
-            });
-        });
-    };
-    WebviewResourceCache.prototype.put = function (url, response) {
-        return __awaiter(this, void 0, void 0, function () {
-            var cache, body;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        if (!response.eTag) {
-                            return [2 /*return*/];
-                        }
-                        return [4 /*yield*/, this.cache.promise];
-                    case 1:
-                        cache = _a.sent();
-                        if (!cache) {
-                            return [2 /*return*/];
-                        }
-                        return [4 /*yield*/, response.body()];
-                    case 2:
-                        body = _a.sent();
-                        return [4 /*yield*/, cache.put(url, new Response(body, {
-                                status: 200,
-                                headers: { 'ETag': response.eTag }
-                            }))];
-                    case 3:
-                        _a.sent();
-                        return [2 /*return*/];
-                }
-            });
-        });
-    };
-    WebviewResourceCache = __decorate([
-        inversify_1.injectable(),
-        __metadata("design:paramtypes", [])
-    ], WebviewResourceCache);
-    return WebviewResourceCache;
-}());
-exports.WebviewResourceCache = WebviewResourceCache;
+exports.LanguageGrammarDefinitionContribution = Symbol('LanguageGrammarDefinitionContribution');
+function getEncodedLanguageId(languageId) {
+    return monaco.languages.getEncodedLanguageId(languageId);
+}
+exports.getEncodedLanguageId = getEncodedLanguageId;
 
 
 /***/ }),
 
-/***/ "./node_modules/@theia/plugin-ext/lib/main/browser/webview/webview-theme-data-provider.js":
-/*!************************************************************************************************!*\
-  !*** ./node_modules/@theia/plugin-ext/lib/main/browser/webview/webview-theme-data-provider.js ***!
-  \************************************************************************************************/
+/***/ "./node_modules/@theia/monaco/lib/browser/textmate/textmate-registry.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@theia/monaco/lib/browser/textmate/textmate-registry.js ***!
+  \******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 /********************************************************************************
- * Copyright (C) 2019 TypeFox and others.
+ * Copyright (C) 2018 Ericsson and others.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0 which is available at
@@ -4566,19 +2226,27 @@ exports.WebviewResourceCache = WebviewResourceCache;
  *
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-// copied and modified from https://github.com/microsoft/vscode/blob/ba40bd16433d5a817bfae15f3b4350e18f144af4/src/vs/workbench/contrib/webview/common/themeing.ts
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
 };
 var __values = (this && this.__values) || function(o) {
     var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
@@ -4592,66 +2260,72 @@ var __values = (this && this.__values) || function(o) {
     throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.WebviewThemeDataProvider = void 0;
+exports.TextmateRegistry = void 0;
 var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
-var event_1 = __webpack_require__(/*! @theia/core/lib/common/event */ "./node_modules/@theia/core/lib/common/event.js");
-var editor_preferences_1 = __webpack_require__(/*! @theia/editor/lib/browser/editor-preferences */ "./node_modules/@theia/editor/lib/browser/editor-preferences.js");
-var theming_1 = __webpack_require__(/*! @theia/core/lib/browser/theming */ "./node_modules/@theia/core/lib/browser/theming.js");
-var color_registry_1 = __webpack_require__(/*! @theia/core/lib/browser/color-registry */ "./node_modules/@theia/core/lib/browser/color-registry.js");
-var color_application_contribution_1 = __webpack_require__(/*! @theia/core/lib/browser/color-application-contribution */ "./node_modules/@theia/core/lib/browser/color-application-contribution.js");
-var WebviewThemeDataProvider = /** @class */ (function () {
-    function WebviewThemeDataProvider() {
-        this.onDidChangeThemeDataEmitter = new event_1.Emitter();
-        this.onDidChangeThemeData = this.onDidChangeThemeDataEmitter.event;
-        this.editorStyles = new Map([
-            ['editor.fontFamily', 'editor-font-family'],
-            ['editor.fontWeight', 'editor-font-weight'],
-            ['editor.fontSize', 'editor-font-size']
-        ]);
+var disposable_1 = __webpack_require__(/*! @theia/core/lib/common/disposable */ "./node_modules/@theia/core/lib/common/disposable.js");
+var TextmateRegistry = /** @class */ (function () {
+    function TextmateRegistry() {
+        this.scopeToProvider = new Map();
+        this.languageToConfig = new Map();
+        this.languageIdToScope = new Map();
     }
-    WebviewThemeDataProvider.prototype.init = function () {
-        var _this = this;
-        this.colorContribution.onDidChange(function () { return _this.reset(); });
-        this.editorPreferences.onPreferenceChanged(function (e) {
-            if (_this.editorStyles.has(e.preferenceName)) {
-                _this.reset();
+    Object.defineProperty(TextmateRegistry.prototype, "languages", {
+        get: function () {
+            return this.languageIdToScope.keys();
+        },
+        enumerable: false,
+        configurable: true
+    });
+    TextmateRegistry.prototype.registerTextmateGrammarScope = function (scope, provider) {
+        var providers = this.scopeToProvider.get(scope) || [];
+        var existingProvider = providers[0];
+        if (existingProvider) {
+            Promise.all([existingProvider.getGrammarDefinition(), provider.getGrammarDefinition()]).then(function (_a) {
+                var _b = __read(_a, 2), a = _b[0], b = _b[1];
+                if (a.location !== b.location || !a.location && !b.location) {
+                    console.warn(new Error("a registered grammar provider for '" + scope + "' scope is overridden"));
+                }
+            });
+        }
+        providers.unshift(provider);
+        this.scopeToProvider.set(scope, providers);
+        return disposable_1.Disposable.create(function () {
+            var index = providers.indexOf(provider);
+            if (index !== -1) {
+                providers.splice(index, 1);
             }
         });
     };
-    WebviewThemeDataProvider.prototype.reset = function () {
-        if (this.themeData) {
-            this.themeData = undefined;
-            this.onDidChangeThemeDataEmitter.fire(undefined);
-        }
+    TextmateRegistry.prototype.getProvider = function (scope) {
+        var providers = this.scopeToProvider.get(scope);
+        return providers && providers[0];
     };
-    WebviewThemeDataProvider.prototype.getThemeData = function () {
-        if (!this.themeData) {
-            this.themeData = this.computeThemeData();
+    TextmateRegistry.prototype.mapLanguageIdToTextmateGrammar = function (languageId, scope) {
+        var scopes = this.languageIdToScope.get(languageId) || [];
+        var existingScope = scopes[0];
+        if (typeof existingScope === 'string') {
+            console.warn(new Error("'" + languageId + "' language is remapped from '" + existingScope + "' to '" + scope + "' scope"));
         }
-        return this.themeData;
-    };
-    WebviewThemeDataProvider.prototype.computeThemeData = function () {
-        var e_1, _a;
-        var _this = this;
-        var styles = {};
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        var addStyle = function (id, rawValue) {
-            if (rawValue) {
-                var value = typeof rawValue === 'number' || typeof rawValue === 'string' ? rawValue : String(rawValue);
-                styles[_this.colors.toCssVariableName(id).substr(2)] = value;
-                styles[_this.colors.toCssVariableName(id, 'vscode').substr(2)] = value;
+        scopes.unshift(scope);
+        this.languageIdToScope.set(languageId, scopes);
+        return disposable_1.Disposable.create(function () {
+            var index = scopes.indexOf(scope);
+            if (index !== -1) {
+                scopes.splice(index, 1);
             }
-        };
-        addStyle('font-family', '-apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif');
-        addStyle('font-weight', 'normal');
-        addStyle('font-size', '13px');
-        this.editorStyles.forEach(function (value, key) { return addStyle(value, _this.editorPreferences[key]); });
+        });
+    };
+    TextmateRegistry.prototype.getScope = function (languageId) {
+        var scopes = this.languageIdToScope.get(languageId);
+        return scopes && scopes[0];
+    };
+    TextmateRegistry.prototype.getLanguageId = function (scope) {
+        var e_1, _a;
         try {
-            for (var _b = __values(this.colors.getColors()), _c = _b.next(); !_c.done; _c = _b.next()) {
-                var id = _c.value;
-                var color = this.colors.getCurrentColor(id);
-                if (color) {
-                    addStyle(id, color.toString());
+            for (var _b = __values(this.languageIdToScope.keys()), _c = _b.next(); !_c.done; _c = _b.next()) {
+                var languageId = _c.value;
+                if (this.getScope(languageId) === scope) {
+                    return languageId;
                 }
             }
         }
@@ -4662,56 +2336,48 @@ var WebviewThemeDataProvider = /** @class */ (function () {
             }
             finally { if (e_1) throw e_1.error; }
         }
-        var activeTheme = this.getActiveTheme();
-        return { styles: styles, activeTheme: activeTheme };
+        return undefined;
     };
-    WebviewThemeDataProvider.prototype.getActiveTheme = function () {
-        var theme = theming_1.ThemeService.get().getCurrentTheme();
-        switch (theme.type) {
-            case 'light': return 'vscode-light';
-            case 'dark': return 'vscode-dark';
-            default: return 'vscode-high-contrast';
+    TextmateRegistry.prototype.registerGrammarConfiguration = function (languageId, config) {
+        var configs = this.languageToConfig.get(languageId) || [];
+        var existingConfig = configs[0];
+        if (existingConfig) {
+            console.warn(new Error("a registered grammar configuration for '" + languageId + "' language is overridden"));
         }
+        configs.unshift(config);
+        this.languageToConfig.set(languageId, configs);
+        return disposable_1.Disposable.create(function () {
+            var index = configs.indexOf(config);
+            if (index !== -1) {
+                configs.splice(index, 1);
+            }
+        });
     };
-    __decorate([
-        inversify_1.inject(editor_preferences_1.EditorPreferences),
-        __metadata("design:type", Object)
-    ], WebviewThemeDataProvider.prototype, "editorPreferences", void 0);
-    __decorate([
-        inversify_1.inject(color_registry_1.ColorRegistry),
-        __metadata("design:type", color_registry_1.ColorRegistry)
-    ], WebviewThemeDataProvider.prototype, "colors", void 0);
-    __decorate([
-        inversify_1.inject(color_application_contribution_1.ColorApplicationContribution),
-        __metadata("design:type", color_application_contribution_1.ColorApplicationContribution)
-    ], WebviewThemeDataProvider.prototype, "colorContribution", void 0);
-    __decorate([
-        inversify_1.postConstruct(),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", []),
-        __metadata("design:returntype", void 0)
-    ], WebviewThemeDataProvider.prototype, "init", null);
-    WebviewThemeDataProvider = __decorate([
+    TextmateRegistry.prototype.getGrammarConfiguration = function (languageId) {
+        var configs = this.languageToConfig.get(languageId);
+        return configs && configs[0] || {};
+    };
+    TextmateRegistry = __decorate([
         inversify_1.injectable()
-    ], WebviewThemeDataProvider);
-    return WebviewThemeDataProvider;
+    ], TextmateRegistry);
+    return TextmateRegistry;
 }());
-exports.WebviewThemeDataProvider = WebviewThemeDataProvider;
+exports.TextmateRegistry = TextmateRegistry;
 
 
 /***/ }),
 
-/***/ "./node_modules/@theia/plugin-ext/lib/main/browser/webview/webview.js":
-/*!****************************************************************************!*\
-  !*** ./node_modules/@theia/plugin-ext/lib/main/browser/webview/webview.js ***!
-  \****************************************************************************/
+/***/ "./node_modules/@theia/monaco/lib/browser/textmate/textmate-tokenizer.js":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/@theia/monaco/lib/browser/textmate/textmate-tokenizer.js ***!
+  \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 /********************************************************************************
- * Copyright (C) 2018 Red Hat, Inc. and others.
+ * Copyright (C) 2018 Ericsson and others.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0 which is available at
@@ -4725,12 +2391,3463 @@ exports.WebviewThemeDataProvider = WebviewThemeDataProvider;
  *
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
-/*---------------------------------------------------------------------------------------------
-*  Copyright (c) Microsoft Corporation. All rights reserved.
-*  Licensed under the MIT License. See License.txt in the project root for license information.
-*--------------------------------------------------------------------------------------------*/
-// copied and modified from https://github.com/microsoft/vscode/blob/ba40bd16433d5a817bfae15f3b4350e18f144af4/src/vs/workbench/contrib/webview/browser/baseWebviewElement.ts
-// copied and modified from https://github.com/microsoft/vscode/blob/ba40bd16433d5a817bfae15f3b4350e18f144af4/src/vs/workbench/contrib/webview/browser/webviewElement.ts#
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.createTextmateTokenizer = exports.TokenizerOption = exports.TokenizerState = void 0;
+var vscode_textmate_1 = __webpack_require__(/*! vscode-textmate */ "./node_modules/vscode-textmate/release/main.js");
+var TokenizerState = /** @class */ (function () {
+    function TokenizerState(ruleStack) {
+        this.ruleStack = ruleStack;
+    }
+    TokenizerState.prototype.clone = function () {
+        return new TokenizerState(this.ruleStack);
+    };
+    TokenizerState.prototype.equals = function (other) {
+        return other instanceof TokenizerState && (other === this || other.ruleStack === this.ruleStack);
+    };
+    return TokenizerState;
+}());
+exports.TokenizerState = TokenizerState;
+var TokenizerOption;
+(function (TokenizerOption) {
+    /**
+     * The default TextMate tokenizer option.
+     *
+     * @deprecated Use the current value of `editor.maxTokenizationLineLength` preference instead.
+     */
+    TokenizerOption.DEFAULT = {
+        lineLimit: 400
+    };
+})(TokenizerOption = exports.TokenizerOption || (exports.TokenizerOption = {}));
+function createTextmateTokenizer(grammar, options) {
+    if (options.lineLimit !== undefined && (options.lineLimit <= 0 || !Number.isInteger(options.lineLimit))) {
+        throw new Error("The 'lineLimit' must be a positive integer. It was " + options.lineLimit + ".");
+    }
+    return {
+        getInitialState: function () { return new TokenizerState(vscode_textmate_1.INITIAL); },
+        tokenizeEncoded: function (line, state) {
+            var processedLine = line;
+            if (options.lineLimit !== undefined && line.length > options.lineLimit) {
+                // Line is too long to be tokenized
+                processedLine = line.substr(0, options.lineLimit);
+            }
+            var result = grammar.tokenizeLine2(processedLine, state.ruleStack);
+            return {
+                endState: new TokenizerState(result.ruleStack),
+                tokens: result.tokens
+            };
+        },
+        tokenize: function (line, state) {
+            var processedLine = line;
+            if (options.lineLimit !== undefined && line.length > options.lineLimit) {
+                // Line is too long to be tokenized
+                processedLine = line.substr(0, options.lineLimit);
+            }
+            var result = grammar.tokenizeLine(processedLine, state.ruleStack);
+            return {
+                endState: new TokenizerState(result.ruleStack),
+                tokens: result.tokens.map(function (t) { return ({
+                    startIndex: t.startIndex,
+                    scopes: t.scopes.reverse().join(' ')
+                }); })
+            };
+        }
+    };
+}
+exports.createTextmateTokenizer = createTextmateTokenizer;
+
+
+/***/ }),
+
+/***/ "./node_modules/fast-plist/release/src/main.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/fast-plist/release/src/main.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/*---------------------------------------------------------
+ * Copyright (C) Microsoft Corporation. All rights reserved.
+ *--------------------------------------------------------*/
+
+function parseWithLocation(content, filename, locationKeyName) {
+    return _parse(content, filename, locationKeyName);
+}
+exports.parseWithLocation = parseWithLocation;
+/**
+ * A very fast plist parser
+ */
+function parse(content) {
+    return _parse(content, null, null);
+}
+exports.parse = parse;
+function _parse(content, filename, locationKeyName) {
+    var len = content.length;
+    var pos = 0;
+    var line = 1;
+    var char = 0;
+    // Skip UTF8 BOM
+    if (len > 0 && content.charCodeAt(0) === 65279 /* BOM */) {
+        pos = 1;
+    }
+    function advancePosBy(by) {
+        if (locationKeyName === null) {
+            pos = pos + by;
+        }
+        else {
+            while (by > 0) {
+                var chCode = content.charCodeAt(pos);
+                if (chCode === 10 /* LINE_FEED */) {
+                    pos++;
+                    line++;
+                    char = 0;
+                }
+                else {
+                    pos++;
+                    char++;
+                }
+                by--;
+            }
+        }
+    }
+    function advancePosTo(to) {
+        if (locationKeyName === null) {
+            pos = to;
+        }
+        else {
+            advancePosBy(to - pos);
+        }
+    }
+    function skipWhitespace() {
+        while (pos < len) {
+            var chCode = content.charCodeAt(pos);
+            if (chCode !== 32 /* SPACE */ && chCode !== 9 /* TAB */ && chCode !== 13 /* CARRIAGE_RETURN */ && chCode !== 10 /* LINE_FEED */) {
+                break;
+            }
+            advancePosBy(1);
+        }
+    }
+    function advanceIfStartsWith(str) {
+        if (content.substr(pos, str.length) === str) {
+            advancePosBy(str.length);
+            return true;
+        }
+        return false;
+    }
+    function advanceUntil(str) {
+        var nextOccurence = content.indexOf(str, pos);
+        if (nextOccurence !== -1) {
+            advancePosTo(nextOccurence + str.length);
+        }
+        else {
+            // EOF
+            advancePosTo(len);
+        }
+    }
+    function captureUntil(str) {
+        var nextOccurence = content.indexOf(str, pos);
+        if (nextOccurence !== -1) {
+            var r = content.substring(pos, nextOccurence);
+            advancePosTo(nextOccurence + str.length);
+            return r;
+        }
+        else {
+            // EOF
+            var r = content.substr(pos);
+            advancePosTo(len);
+            return r;
+        }
+    }
+    var state = 0 /* ROOT_STATE */;
+    var cur = null;
+    var stateStack = [];
+    var objStack = [];
+    var curKey = null;
+    function pushState(newState, newCur) {
+        stateStack.push(state);
+        objStack.push(cur);
+        state = newState;
+        cur = newCur;
+    }
+    function popState() {
+        state = stateStack.pop();
+        cur = objStack.pop();
+    }
+    function fail(msg) {
+        throw new Error('Near offset ' + pos + ': ' + msg + ' ~~~' + content.substr(pos, 50) + '~~~');
+    }
+    var dictState = {
+        enterDict: function () {
+            if (curKey === null) {
+                fail('missing <key>');
+            }
+            var newDict = {};
+            if (locationKeyName !== null) {
+                newDict[locationKeyName] = {
+                    filename: filename,
+                    line: line,
+                    char: char
+                };
+            }
+            cur[curKey] = newDict;
+            curKey = null;
+            pushState(1 /* DICT_STATE */, newDict);
+        },
+        enterArray: function () {
+            if (curKey === null) {
+                fail('missing <key>');
+            }
+            var newArr = [];
+            cur[curKey] = newArr;
+            curKey = null;
+            pushState(2 /* ARR_STATE */, newArr);
+        }
+    };
+    var arrState = {
+        enterDict: function () {
+            var newDict = {};
+            if (locationKeyName !== null) {
+                newDict[locationKeyName] = {
+                    filename: filename,
+                    line: line,
+                    char: char
+                };
+            }
+            cur.push(newDict);
+            pushState(1 /* DICT_STATE */, newDict);
+        },
+        enterArray: function () {
+            var newArr = [];
+            cur.push(newArr);
+            pushState(2 /* ARR_STATE */, newArr);
+        }
+    };
+    function enterDict() {
+        if (state === 1 /* DICT_STATE */) {
+            dictState.enterDict();
+        }
+        else if (state === 2 /* ARR_STATE */) {
+            arrState.enterDict();
+        }
+        else {
+            cur = {};
+            if (locationKeyName !== null) {
+                cur[locationKeyName] = {
+                    filename: filename,
+                    line: line,
+                    char: char
+                };
+            }
+            pushState(1 /* DICT_STATE */, cur);
+        }
+    }
+    function leaveDict() {
+        if (state === 1 /* DICT_STATE */) {
+            popState();
+        }
+        else if (state === 2 /* ARR_STATE */) {
+            fail('unexpected </dict>');
+        }
+        else {
+            fail('unexpected </dict>');
+        }
+    }
+    function enterArray() {
+        if (state === 1 /* DICT_STATE */) {
+            dictState.enterArray();
+        }
+        else if (state === 2 /* ARR_STATE */) {
+            arrState.enterArray();
+        }
+        else {
+            cur = [];
+            pushState(2 /* ARR_STATE */, cur);
+        }
+    }
+    function leaveArray() {
+        if (state === 1 /* DICT_STATE */) {
+            fail('unexpected </array>');
+        }
+        else if (state === 2 /* ARR_STATE */) {
+            popState();
+        }
+        else {
+            fail('unexpected </array>');
+        }
+    }
+    function acceptKey(val) {
+        if (state === 1 /* DICT_STATE */) {
+            if (curKey !== null) {
+                fail('too many <key>');
+            }
+            curKey = val;
+        }
+        else if (state === 2 /* ARR_STATE */) {
+            fail('unexpected <key>');
+        }
+        else {
+            fail('unexpected <key>');
+        }
+    }
+    function acceptString(val) {
+        if (state === 1 /* DICT_STATE */) {
+            if (curKey === null) {
+                fail('missing <key>');
+            }
+            cur[curKey] = val;
+            curKey = null;
+        }
+        else if (state === 2 /* ARR_STATE */) {
+            cur.push(val);
+        }
+        else {
+            cur = val;
+        }
+    }
+    function acceptReal(val) {
+        if (isNaN(val)) {
+            fail('cannot parse float');
+        }
+        if (state === 1 /* DICT_STATE */) {
+            if (curKey === null) {
+                fail('missing <key>');
+            }
+            cur[curKey] = val;
+            curKey = null;
+        }
+        else if (state === 2 /* ARR_STATE */) {
+            cur.push(val);
+        }
+        else {
+            cur = val;
+        }
+    }
+    function acceptInteger(val) {
+        if (isNaN(val)) {
+            fail('cannot parse integer');
+        }
+        if (state === 1 /* DICT_STATE */) {
+            if (curKey === null) {
+                fail('missing <key>');
+            }
+            cur[curKey] = val;
+            curKey = null;
+        }
+        else if (state === 2 /* ARR_STATE */) {
+            cur.push(val);
+        }
+        else {
+            cur = val;
+        }
+    }
+    function acceptDate(val) {
+        if (state === 1 /* DICT_STATE */) {
+            if (curKey === null) {
+                fail('missing <key>');
+            }
+            cur[curKey] = val;
+            curKey = null;
+        }
+        else if (state === 2 /* ARR_STATE */) {
+            cur.push(val);
+        }
+        else {
+            cur = val;
+        }
+    }
+    function acceptData(val) {
+        if (state === 1 /* DICT_STATE */) {
+            if (curKey === null) {
+                fail('missing <key>');
+            }
+            cur[curKey] = val;
+            curKey = null;
+        }
+        else if (state === 2 /* ARR_STATE */) {
+            cur.push(val);
+        }
+        else {
+            cur = val;
+        }
+    }
+    function acceptBool(val) {
+        if (state === 1 /* DICT_STATE */) {
+            if (curKey === null) {
+                fail('missing <key>');
+            }
+            cur[curKey] = val;
+            curKey = null;
+        }
+        else if (state === 2 /* ARR_STATE */) {
+            cur.push(val);
+        }
+        else {
+            cur = val;
+        }
+    }
+    function escapeVal(str) {
+        return str.replace(/&#([0-9]+);/g, function (_, m0) {
+            return String.fromCodePoint(parseInt(m0, 10));
+        }).replace(/&#x([0-9a-f]+);/g, function (_, m0) {
+            return String.fromCodePoint(parseInt(m0, 16));
+        }).replace(/&amp;|&lt;|&gt;|&quot;|&apos;/g, function (_) {
+            switch (_) {
+                case '&amp;': return '&';
+                case '&lt;': return '<';
+                case '&gt;': return '>';
+                case '&quot;': return '"';
+                case '&apos;': return '\'';
+            }
+            return _;
+        });
+    }
+    function parseOpenTag() {
+        var r = captureUntil('>');
+        var isClosed = false;
+        if (r.charCodeAt(r.length - 1) === 47 /* SLASH */) {
+            isClosed = true;
+            r = r.substring(0, r.length - 1);
+        }
+        return {
+            name: r.trim(),
+            isClosed: isClosed
+        };
+    }
+    function parseTagValue(tag) {
+        if (tag.isClosed) {
+            return '';
+        }
+        var val = captureUntil('</');
+        advanceUntil('>');
+        return escapeVal(val);
+    }
+    while (pos < len) {
+        skipWhitespace();
+        if (pos >= len) {
+            break;
+        }
+        var chCode = content.charCodeAt(pos);
+        advancePosBy(1);
+        if (chCode !== 60 /* LESS_THAN */) {
+            fail('expected <');
+        }
+        if (pos >= len) {
+            fail('unexpected end of input');
+        }
+        var peekChCode = content.charCodeAt(pos);
+        if (peekChCode === 63 /* QUESTION_MARK */) {
+            advancePosBy(1);
+            advanceUntil('?>');
+            continue;
+        }
+        if (peekChCode === 33 /* EXCLAMATION_MARK */) {
+            advancePosBy(1);
+            if (advanceIfStartsWith('--')) {
+                advanceUntil('-->');
+                continue;
+            }
+            advanceUntil('>');
+            continue;
+        }
+        if (peekChCode === 47 /* SLASH */) {
+            advancePosBy(1);
+            skipWhitespace();
+            if (advanceIfStartsWith('plist')) {
+                advanceUntil('>');
+                continue;
+            }
+            if (advanceIfStartsWith('dict')) {
+                advanceUntil('>');
+                leaveDict();
+                continue;
+            }
+            if (advanceIfStartsWith('array')) {
+                advanceUntil('>');
+                leaveArray();
+                continue;
+            }
+            fail('unexpected closed tag');
+        }
+        var tag = parseOpenTag();
+        switch (tag.name) {
+            case 'dict':
+                enterDict();
+                if (tag.isClosed) {
+                    leaveDict();
+                }
+                continue;
+            case 'array':
+                enterArray();
+                if (tag.isClosed) {
+                    leaveArray();
+                }
+                continue;
+            case 'key':
+                acceptKey(parseTagValue(tag));
+                continue;
+            case 'string':
+                acceptString(parseTagValue(tag));
+                continue;
+            case 'real':
+                acceptReal(parseFloat(parseTagValue(tag)));
+                continue;
+            case 'integer':
+                acceptInteger(parseInt(parseTagValue(tag), 10));
+                continue;
+            case 'date':
+                acceptDate(new Date(parseTagValue(tag)));
+                continue;
+            case 'data':
+                acceptData(parseTagValue(tag));
+                continue;
+            case 'true':
+                parseTagValue(tag);
+                acceptBool(true);
+                continue;
+            case 'false':
+                parseTagValue(tag);
+                acceptBool(false);
+                continue;
+        }
+        if (/^plist/.test(tag.name)) {
+            continue;
+        }
+        fail('unexpected opened tag ' + tag.name);
+    }
+    return cur;
+}
+//# sourceMappingURL=main.js.map
+
+/***/ }),
+
+/***/ "./node_modules/idb/build/esm/chunk.js":
+/*!*********************************************!*\
+  !*** ./node_modules/idb/build/esm/chunk.js ***!
+  \*********************************************/
+/*! exports provided: a, b, c, d, e */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return wrap; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return addTraps; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return instanceOfAny; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return reverseTransformCache; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return unwrap; });
+const instanceOfAny = (object, constructors) => constructors.some(c => object instanceof c);
+
+let idbProxyableTypes;
+let cursorAdvanceMethods;
+// This is a function to prevent it throwing up in node environments.
+function getIdbProxyableTypes() {
+    return (idbProxyableTypes ||
+        (idbProxyableTypes = [
+            IDBDatabase,
+            IDBObjectStore,
+            IDBIndex,
+            IDBCursor,
+            IDBTransaction,
+        ]));
+}
+// This is a function to prevent it throwing up in node environments.
+function getCursorAdvanceMethods() {
+    return (cursorAdvanceMethods ||
+        (cursorAdvanceMethods = [
+            IDBCursor.prototype.advance,
+            IDBCursor.prototype.continue,
+            IDBCursor.prototype.continuePrimaryKey,
+        ]));
+}
+const cursorRequestMap = new WeakMap();
+const transactionDoneMap = new WeakMap();
+const transactionStoreNamesMap = new WeakMap();
+const transformCache = new WeakMap();
+const reverseTransformCache = new WeakMap();
+function promisifyRequest(request) {
+    const promise = new Promise((resolve, reject) => {
+        const unlisten = () => {
+            request.removeEventListener('success', success);
+            request.removeEventListener('error', error);
+        };
+        const success = () => {
+            resolve(wrap(request.result));
+            unlisten();
+        };
+        const error = () => {
+            reject(request.error);
+            unlisten();
+        };
+        request.addEventListener('success', success);
+        request.addEventListener('error', error);
+    });
+    promise
+        .then(value => {
+        // Since cursoring reuses the IDBRequest (*sigh*), we cache it for later retrieval
+        // (see wrapFunction).
+        if (value instanceof IDBCursor) {
+            cursorRequestMap.set(value, request);
+        }
+        // Catching to avoid "Uncaught Promise exceptions"
+    })
+        .catch(() => { });
+    // This mapping exists in reverseTransformCache but doesn't doesn't exist in transformCache. This
+    // is because we create many promises from a single IDBRequest.
+    reverseTransformCache.set(promise, request);
+    return promise;
+}
+function cacheDonePromiseForTransaction(tx) {
+    // Early bail if we've already created a done promise for this transaction.
+    if (transactionDoneMap.has(tx))
+        return;
+    const done = new Promise((resolve, reject) => {
+        const unlisten = () => {
+            tx.removeEventListener('complete', complete);
+            tx.removeEventListener('error', error);
+            tx.removeEventListener('abort', error);
+        };
+        const complete = () => {
+            resolve();
+            unlisten();
+        };
+        const error = () => {
+            reject(tx.error);
+            unlisten();
+        };
+        tx.addEventListener('complete', complete);
+        tx.addEventListener('error', error);
+        tx.addEventListener('abort', error);
+    });
+    // Cache it for later retrieval.
+    transactionDoneMap.set(tx, done);
+}
+let idbProxyTraps = {
+    get(target, prop, receiver) {
+        if (target instanceof IDBTransaction) {
+            // Special handling for transaction.done.
+            if (prop === 'done')
+                return transactionDoneMap.get(target);
+            // Polyfill for objectStoreNames because of Edge.
+            if (prop === 'objectStoreNames') {
+                return target.objectStoreNames || transactionStoreNamesMap.get(target);
+            }
+            // Make tx.store return the only store in the transaction, or undefined if there are many.
+            if (prop === 'store') {
+                return receiver.objectStoreNames[1]
+                    ? undefined
+                    : receiver.objectStore(receiver.objectStoreNames[0]);
+            }
+        }
+        // Else transform whatever we get back.
+        return wrap(target[prop]);
+    },
+    has(target, prop) {
+        if (target instanceof IDBTransaction &&
+            (prop === 'done' || prop === 'store')) {
+            return true;
+        }
+        return prop in target;
+    },
+};
+function addTraps(callback) {
+    idbProxyTraps = callback(idbProxyTraps);
+}
+function wrapFunction(func) {
+    // Due to expected object equality (which is enforced by the caching in `wrap`), we
+    // only create one new func per func.
+    // Edge doesn't support objectStoreNames (booo), so we polyfill it here.
+    if (func === IDBDatabase.prototype.transaction &&
+        !('objectStoreNames' in IDBTransaction.prototype)) {
+        return function (storeNames, ...args) {
+            const tx = func.call(unwrap(this), storeNames, ...args);
+            transactionStoreNamesMap.set(tx, storeNames.sort ? storeNames.sort() : [storeNames]);
+            return wrap(tx);
+        };
+    }
+    // Cursor methods are special, as the behaviour is a little more different to standard IDB. In
+    // IDB, you advance the cursor and wait for a new 'success' on the IDBRequest that gave you the
+    // cursor. It's kinda like a promise that can resolve with many values. That doesn't make sense
+    // with real promises, so each advance methods returns a new promise for the cursor object, or
+    // undefined if the end of the cursor has been reached.
+    if (getCursorAdvanceMethods().includes(func)) {
+        return function (...args) {
+            // Calling the original function with the proxy as 'this' causes ILLEGAL INVOCATION, so we use
+            // the original object.
+            func.apply(unwrap(this), args);
+            return wrap(cursorRequestMap.get(this));
+        };
+    }
+    return function (...args) {
+        // Calling the original function with the proxy as 'this' causes ILLEGAL INVOCATION, so we use
+        // the original object.
+        return wrap(func.apply(unwrap(this), args));
+    };
+}
+function transformCachableValue(value) {
+    if (typeof value === 'function')
+        return wrapFunction(value);
+    // This doesn't return, it just creates a 'done' promise for the transaction,
+    // which is later returned for transaction.done (see idbObjectHandler).
+    if (value instanceof IDBTransaction)
+        cacheDonePromiseForTransaction(value);
+    if (instanceOfAny(value, getIdbProxyableTypes()))
+        return new Proxy(value, idbProxyTraps);
+    // Return the same value back if we're not going to transform it.
+    return value;
+}
+function wrap(value) {
+    // We sometimes generate multiple promises from a single IDBRequest (eg when cursoring), because
+    // IDB is weird and a single IDBRequest can yield many responses, so these can't be cached.
+    if (value instanceof IDBRequest)
+        return promisifyRequest(value);
+    // If we've already transformed this value before, reuse the transformed value.
+    // This is faster, but it also provides object equality.
+    if (transformCache.has(value))
+        return transformCache.get(value);
+    const newValue = transformCachableValue(value);
+    // Not all types are transformed.
+    // These may be primitive types, so they can't be WeakMap keys.
+    if (newValue !== value) {
+        transformCache.set(value, newValue);
+        reverseTransformCache.set(newValue, value);
+    }
+    return newValue;
+}
+const unwrap = (value) => reverseTransformCache.get(value);
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/idb/build/esm/index.js":
+/*!*********************************************!*\
+  !*** ./node_modules/idb/build/esm/index.js ***!
+  \*********************************************/
+/*! exports provided: unwrap, wrap, openDB, deleteDB */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openDB", function() { return openDB; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteDB", function() { return deleteDB; });
+/* harmony import */ var _chunk_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./chunk.js */ "./node_modules/idb/build/esm/chunk.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "unwrap", function() { return _chunk_js__WEBPACK_IMPORTED_MODULE_0__["e"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "wrap", function() { return _chunk_js__WEBPACK_IMPORTED_MODULE_0__["a"]; });
+
+
+
+
+/**
+ * Open a database.
+ *
+ * @param name Name of the database.
+ * @param version Schema version.
+ * @param callbacks Additional callbacks.
+ */
+function openDB(name, version, { blocked, upgrade, blocking } = {}) {
+    const request = indexedDB.open(name, version);
+    const openPromise = Object(_chunk_js__WEBPACK_IMPORTED_MODULE_0__["a"])(request);
+    if (upgrade) {
+        request.addEventListener('upgradeneeded', event => {
+            upgrade(Object(_chunk_js__WEBPACK_IMPORTED_MODULE_0__["a"])(request.result), event.oldVersion, event.newVersion, Object(_chunk_js__WEBPACK_IMPORTED_MODULE_0__["a"])(request.transaction));
+        });
+    }
+    if (blocked)
+        request.addEventListener('blocked', () => blocked());
+    if (blocking) {
+        openPromise.then(db => db.addEventListener('versionchange', blocking)).catch(() => { });
+    }
+    return openPromise;
+}
+/**
+ * Delete a database.
+ *
+ * @param name Name of the database.
+ */
+function deleteDB(name, { blocked } = {}) {
+    const request = indexedDB.deleteDatabase(name);
+    if (blocked)
+        request.addEventListener('blocked', () => blocked());
+    return Object(_chunk_js__WEBPACK_IMPORTED_MODULE_0__["a"])(request).then(() => undefined);
+}
+
+const readMethods = ['get', 'getKey', 'getAll', 'getAllKeys', 'count'];
+const writeMethods = ['put', 'add', 'delete', 'clear'];
+const cachedMethods = new Map();
+function getMethod(target, prop) {
+    if (!(target instanceof IDBDatabase &&
+        !(prop in target) &&
+        typeof prop === 'string')) {
+        return;
+    }
+    if (cachedMethods.get(prop))
+        return cachedMethods.get(prop);
+    const targetFuncName = prop.replace(/FromIndex$/, '');
+    const useIndex = prop !== targetFuncName;
+    const isWrite = writeMethods.includes(targetFuncName);
+    if (
+    // Bail if the target doesn't exist on the target. Eg, getAll isn't in Edge.
+    !(targetFuncName in (useIndex ? IDBIndex : IDBObjectStore).prototype) ||
+        !(isWrite || readMethods.includes(targetFuncName))) {
+        return;
+    }
+    const method = async function (storeName, ...args) {
+        // isWrite ? 'readwrite' : undefined gzipps better, but fails in Edge :(
+        const tx = this.transaction(storeName, isWrite ? 'readwrite' : 'readonly');
+        let target = tx.store;
+        if (useIndex)
+            target = target.index(args.shift());
+        const returnVal = target[targetFuncName](...args);
+        if (isWrite)
+            await tx.done;
+        return returnVal;
+    };
+    cachedMethods.set(prop, method);
+    return method;
+}
+Object(_chunk_js__WEBPACK_IMPORTED_MODULE_0__["b"])(oldTraps => ({
+    get: (target, prop, receiver) => getMethod(target, prop) || oldTraps.get(target, prop, receiver),
+    has: (target, prop) => !!getMethod(target, prop) || oldTraps.has(target, prop),
+}));
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/lru-cache/index.js":
+/*!*****************************************!*\
+  !*** ./node_modules/lru-cache/index.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// A linked list to keep track of recently-used-ness
+const Yallist = __webpack_require__(/*! yallist */ "./node_modules/yallist/yallist.js")
+
+const MAX = Symbol('max')
+const LENGTH = Symbol('length')
+const LENGTH_CALCULATOR = Symbol('lengthCalculator')
+const ALLOW_STALE = Symbol('allowStale')
+const MAX_AGE = Symbol('maxAge')
+const DISPOSE = Symbol('dispose')
+const NO_DISPOSE_ON_SET = Symbol('noDisposeOnSet')
+const LRU_LIST = Symbol('lruList')
+const CACHE = Symbol('cache')
+const UPDATE_AGE_ON_GET = Symbol('updateAgeOnGet')
+
+const naiveLength = () => 1
+
+// lruList is a yallist where the head is the youngest
+// item, and the tail is the oldest.  the list contains the Hit
+// objects as the entries.
+// Each Hit object has a reference to its Yallist.Node.  This
+// never changes.
+//
+// cache is a Map (or PseudoMap) that matches the keys to
+// the Yallist.Node object.
+class LRUCache {
+  constructor (options) {
+    if (typeof options === 'number')
+      options = { max: options }
+
+    if (!options)
+      options = {}
+
+    if (options.max && (typeof options.max !== 'number' || options.max < 0))
+      throw new TypeError('max must be a non-negative number')
+    // Kind of weird to have a default max of Infinity, but oh well.
+    const max = this[MAX] = options.max || Infinity
+
+    const lc = options.length || naiveLength
+    this[LENGTH_CALCULATOR] = (typeof lc !== 'function') ? naiveLength : lc
+    this[ALLOW_STALE] = options.stale || false
+    if (options.maxAge && typeof options.maxAge !== 'number')
+      throw new TypeError('maxAge must be a number')
+    this[MAX_AGE] = options.maxAge || 0
+    this[DISPOSE] = options.dispose
+    this[NO_DISPOSE_ON_SET] = options.noDisposeOnSet || false
+    this[UPDATE_AGE_ON_GET] = options.updateAgeOnGet || false
+    this.reset()
+  }
+
+  // resize the cache when the max changes.
+  set max (mL) {
+    if (typeof mL !== 'number' || mL < 0)
+      throw new TypeError('max must be a non-negative number')
+
+    this[MAX] = mL || Infinity
+    trim(this)
+  }
+  get max () {
+    return this[MAX]
+  }
+
+  set allowStale (allowStale) {
+    this[ALLOW_STALE] = !!allowStale
+  }
+  get allowStale () {
+    return this[ALLOW_STALE]
+  }
+
+  set maxAge (mA) {
+    if (typeof mA !== 'number')
+      throw new TypeError('maxAge must be a non-negative number')
+
+    this[MAX_AGE] = mA
+    trim(this)
+  }
+  get maxAge () {
+    return this[MAX_AGE]
+  }
+
+  // resize the cache when the lengthCalculator changes.
+  set lengthCalculator (lC) {
+    if (typeof lC !== 'function')
+      lC = naiveLength
+
+    if (lC !== this[LENGTH_CALCULATOR]) {
+      this[LENGTH_CALCULATOR] = lC
+      this[LENGTH] = 0
+      this[LRU_LIST].forEach(hit => {
+        hit.length = this[LENGTH_CALCULATOR](hit.value, hit.key)
+        this[LENGTH] += hit.length
+      })
+    }
+    trim(this)
+  }
+  get lengthCalculator () { return this[LENGTH_CALCULATOR] }
+
+  get length () { return this[LENGTH] }
+  get itemCount () { return this[LRU_LIST].length }
+
+  rforEach (fn, thisp) {
+    thisp = thisp || this
+    for (let walker = this[LRU_LIST].tail; walker !== null;) {
+      const prev = walker.prev
+      forEachStep(this, fn, walker, thisp)
+      walker = prev
+    }
+  }
+
+  forEach (fn, thisp) {
+    thisp = thisp || this
+    for (let walker = this[LRU_LIST].head; walker !== null;) {
+      const next = walker.next
+      forEachStep(this, fn, walker, thisp)
+      walker = next
+    }
+  }
+
+  keys () {
+    return this[LRU_LIST].toArray().map(k => k.key)
+  }
+
+  values () {
+    return this[LRU_LIST].toArray().map(k => k.value)
+  }
+
+  reset () {
+    if (this[DISPOSE] &&
+        this[LRU_LIST] &&
+        this[LRU_LIST].length) {
+      this[LRU_LIST].forEach(hit => this[DISPOSE](hit.key, hit.value))
+    }
+
+    this[CACHE] = new Map() // hash of items by key
+    this[LRU_LIST] = new Yallist() // list of items in order of use recency
+    this[LENGTH] = 0 // length of items in the list
+  }
+
+  dump () {
+    return this[LRU_LIST].map(hit =>
+      isStale(this, hit) ? false : {
+        k: hit.key,
+        v: hit.value,
+        e: hit.now + (hit.maxAge || 0)
+      }).toArray().filter(h => h)
+  }
+
+  dumpLru () {
+    return this[LRU_LIST]
+  }
+
+  set (key, value, maxAge) {
+    maxAge = maxAge || this[MAX_AGE]
+
+    if (maxAge && typeof maxAge !== 'number')
+      throw new TypeError('maxAge must be a number')
+
+    const now = maxAge ? Date.now() : 0
+    const len = this[LENGTH_CALCULATOR](value, key)
+
+    if (this[CACHE].has(key)) {
+      if (len > this[MAX]) {
+        del(this, this[CACHE].get(key))
+        return false
+      }
+
+      const node = this[CACHE].get(key)
+      const item = node.value
+
+      // dispose of the old one before overwriting
+      // split out into 2 ifs for better coverage tracking
+      if (this[DISPOSE]) {
+        if (!this[NO_DISPOSE_ON_SET])
+          this[DISPOSE](key, item.value)
+      }
+
+      item.now = now
+      item.maxAge = maxAge
+      item.value = value
+      this[LENGTH] += len - item.length
+      item.length = len
+      this.get(key)
+      trim(this)
+      return true
+    }
+
+    const hit = new Entry(key, value, len, now, maxAge)
+
+    // oversized objects fall out of cache automatically.
+    if (hit.length > this[MAX]) {
+      if (this[DISPOSE])
+        this[DISPOSE](key, value)
+
+      return false
+    }
+
+    this[LENGTH] += hit.length
+    this[LRU_LIST].unshift(hit)
+    this[CACHE].set(key, this[LRU_LIST].head)
+    trim(this)
+    return true
+  }
+
+  has (key) {
+    if (!this[CACHE].has(key)) return false
+    const hit = this[CACHE].get(key).value
+    return !isStale(this, hit)
+  }
+
+  get (key) {
+    return get(this, key, true)
+  }
+
+  peek (key) {
+    return get(this, key, false)
+  }
+
+  pop () {
+    const node = this[LRU_LIST].tail
+    if (!node)
+      return null
+
+    del(this, node)
+    return node.value
+  }
+
+  del (key) {
+    del(this, this[CACHE].get(key))
+  }
+
+  load (arr) {
+    // reset the cache
+    this.reset()
+
+    const now = Date.now()
+    // A previous serialized cache has the most recent items first
+    for (let l = arr.length - 1; l >= 0; l--) {
+      const hit = arr[l]
+      const expiresAt = hit.e || 0
+      if (expiresAt === 0)
+        // the item was created without expiration in a non aged cache
+        this.set(hit.k, hit.v)
+      else {
+        const maxAge = expiresAt - now
+        // dont add already expired items
+        if (maxAge > 0) {
+          this.set(hit.k, hit.v, maxAge)
+        }
+      }
+    }
+  }
+
+  prune () {
+    this[CACHE].forEach((value, key) => get(this, key, false))
+  }
+}
+
+const get = (self, key, doUse) => {
+  const node = self[CACHE].get(key)
+  if (node) {
+    const hit = node.value
+    if (isStale(self, hit)) {
+      del(self, node)
+      if (!self[ALLOW_STALE])
+        return undefined
+    } else {
+      if (doUse) {
+        if (self[UPDATE_AGE_ON_GET])
+          node.value.now = Date.now()
+        self[LRU_LIST].unshiftNode(node)
+      }
+    }
+    return hit.value
+  }
+}
+
+const isStale = (self, hit) => {
+  if (!hit || (!hit.maxAge && !self[MAX_AGE]))
+    return false
+
+  const diff = Date.now() - hit.now
+  return hit.maxAge ? diff > hit.maxAge
+    : self[MAX_AGE] && (diff > self[MAX_AGE])
+}
+
+const trim = self => {
+  if (self[LENGTH] > self[MAX]) {
+    for (let walker = self[LRU_LIST].tail;
+      self[LENGTH] > self[MAX] && walker !== null;) {
+      // We know that we're about to delete this one, and also
+      // what the next least recently used key will be, so just
+      // go ahead and set it now.
+      const prev = walker.prev
+      del(self, walker)
+      walker = prev
+    }
+  }
+}
+
+const del = (self, node) => {
+  if (node) {
+    const hit = node.value
+    if (self[DISPOSE])
+      self[DISPOSE](hit.key, hit.value)
+
+    self[LENGTH] -= hit.length
+    self[CACHE].delete(hit.key)
+    self[LRU_LIST].removeNode(node)
+  }
+}
+
+class Entry {
+  constructor (key, value, length, now, maxAge) {
+    this.key = key
+    this.value = value
+    this.length = length
+    this.now = now
+    this.maxAge = maxAge || 0
+  }
+}
+
+const forEachStep = (self, fn, node, thisp) => {
+  let hit = node.value
+  if (isStale(self, hit)) {
+    del(self, node)
+    if (!self[ALLOW_STALE])
+      hit = undefined
+  }
+  if (hit)
+    fn.call(thisp, hit.value, hit.key, self)
+}
+
+module.exports = LRUCache
+
+
+/***/ }),
+
+/***/ "./node_modules/onigasm/lib/OnigRegExp.js":
+/*!************************************************!*\
+  !*** ./node_modules/onigasm/lib/OnigRegExp.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const OnigScanner_1 = __webpack_require__(/*! ./OnigScanner */ "./node_modules/onigasm/lib/OnigScanner.js");
+class OnigRegExp {
+    /**
+     * Create a new regex with the given pattern
+     * @param source A string pattern
+     */
+    constructor(source) {
+        this.source = source;
+        try {
+            this.scanner = new OnigScanner_1.default([this.source]);
+        }
+        catch (error) {
+            // doesn't make much sense, but this to pass atom/node-oniguruam tests
+        }
+    }
+    /**
+     * Synchronously search the string for a match starting at the given position
+     * @param string The string to search
+     * @param startPosition The optional position to start the search at, defaults to `0`
+     */
+    searchSync(string, startPosition) {
+        let match;
+        if (startPosition == null) {
+            startPosition = 0;
+        }
+        match = this.scanner.findNextMatchSync(string, startPosition);
+        return this.captureIndicesForMatch(string, match);
+    }
+    /**
+     * Search the string for a match starting at the given position
+     * @param string The string to search
+     * @param startPosition The optional position to start the search at, defaults to `0`
+     * @param callback The `(error, match)` function to call when done, match will be null if no matches were found. match will be an array of objects for each matched group on a successful search
+     */
+    search(string, startPosition, callback) {
+        if (startPosition == null) {
+            startPosition = 0;
+        }
+        if (typeof startPosition === 'function') {
+            callback = startPosition;
+            startPosition = 0;
+        }
+        try {
+            const ret = this.searchSync(string, startPosition);
+            callback(null, ret);
+        }
+        catch (error) {
+            callback(error);
+        }
+    }
+    /**
+     * Synchronously test if this regular expression matches the given string
+     * @param string The string to test against
+     */
+    testSync(string) {
+        if ((typeof this.source === 'boolean' || typeof string === 'boolean')) {
+            return this.source === string;
+        }
+        return this.searchSync(string) != null;
+    }
+    /**
+     * Test if this regular expression matches the given string
+     * @param string The string to test against
+     * @param callback The (error, matches) function to call when done, matches will be true if at least one match is found, false otherwise
+     */
+    test(string, callback) {
+        if (typeof callback !== 'function') {
+            callback = () => { };
+        }
+        try {
+            callback(null, this.testSync(string));
+        }
+        catch (error) {
+            callback(error);
+        }
+    }
+    captureIndicesForMatch(string, match) {
+        if (match != null) {
+            const { captureIndices } = match;
+            let capture;
+            string = this.scanner.convertToString(string);
+            for (let i = 0; i < captureIndices.length; i++) {
+                capture = captureIndices[i];
+                capture.match = string.slice(capture.start, capture.end);
+            }
+            return captureIndices;
+        }
+        else {
+            return null;
+        }
+    }
+}
+exports.default = OnigRegExp;
+//# sourceMappingURL=OnigRegExp.js.map
+
+/***/ }),
+
+/***/ "./node_modules/onigasm/lib/OnigScanner.js":
+/*!*************************************************!*\
+  !*** ./node_modules/onigasm/lib/OnigScanner.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const LRUCache = __webpack_require__(/*! lru-cache */ "./node_modules/lru-cache/index.js");
+const onigasmH_1 = __webpack_require__(/*! ./onigasmH */ "./node_modules/onigasm/lib/onigasmH.js");
+const OnigString_1 = __webpack_require__(/*! ./OnigString */ "./node_modules/onigasm/lib/OnigString.js");
+/**
+ * Allocates space on the heap and copies the string bytes on to it
+ * @param str
+ * @returns pointer to the first byte's address on heap
+ */
+function mallocAndWriteString(str) {
+    const ptr = onigasmH_1.onigasmH._malloc(str.utf8Bytes.length);
+    onigasmH_1.onigasmH.HEAPU8.set(str.utf8Bytes, ptr);
+    return ptr;
+}
+function convertUTF8BytesFromPtrToString(ptr) {
+    const chars = [];
+    let i = 0;
+    while (onigasmH_1.onigasmH.HEAPU8[ptr] !== 0x00) {
+        chars[i++] = onigasmH_1.onigasmH.HEAPU8[ptr++];
+    }
+    return chars.join();
+}
+const cache = new LRUCache({
+    dispose: (scanner, info) => {
+        const regexTPtrsPtr = onigasmH_1.onigasmH._malloc(info.regexTPtrs.length);
+        onigasmH_1.onigasmH.HEAPU8.set(info.regexTPtrs, regexTPtrsPtr);
+        const status = onigasmH_1.onigasmH._disposeCompiledPatterns(regexTPtrsPtr, scanner.patterns.length);
+        if (status !== 0) {
+            const errMessage = convertUTF8BytesFromPtrToString(onigasmH_1.onigasmH._getLastError());
+            throw new Error(errMessage);
+        }
+        onigasmH_1.onigasmH._free(regexTPtrsPtr);
+    },
+    max: 1000,
+});
+class OnigScanner {
+    /**
+     * Create a new scanner with the given patterns
+     * @param patterns  An array of string patterns
+     */
+    constructor(patterns) {
+        if (onigasmH_1.onigasmH === null) {
+            throw new Error(`Onigasm has not been initialized, call loadWASM from 'onigasm' exports before using any other API`);
+        }
+        for (let i = 0; i < patterns.length; i++) {
+            const pattern = patterns[i];
+            if (typeof pattern !== 'string') {
+                throw new TypeError(`First parameter to OnigScanner constructor must be array of (pattern) strings`);
+            }
+        }
+        this.sources = patterns.slice();
+    }
+    get patterns() {
+        return this.sources.slice();
+    }
+    /**
+     * Find the next match from a given position
+     * @param string The string to search
+     * @param startPosition The optional position to start at, defaults to 0
+     * @param callback The (error, match) function to call when done, match will null when there is no match
+     */
+    findNextMatch(string, startPosition, callback) {
+        if (startPosition == null) {
+            startPosition = 0;
+        }
+        if (typeof startPosition === 'function') {
+            callback = startPosition;
+            startPosition = 0;
+        }
+        try {
+            const match = this.findNextMatchSync(string, startPosition);
+            callback(null, match);
+        }
+        catch (error) {
+            callback(error);
+        }
+    }
+    /**
+     * Find the next match from a given position
+     * @param string The string to search
+     * @param startPosition The optional position to start at, defaults to 0
+     */
+    findNextMatchSync(string, startPosition) {
+        if (startPosition == null) {
+            startPosition = 0;
+        }
+        startPosition = this.convertToNumber(startPosition);
+        let onigNativeInfo = cache.get(this);
+        let status = 0;
+        if (!onigNativeInfo) {
+            const regexTAddrRecieverPtr = onigasmH_1.onigasmH._malloc(4);
+            const regexTPtrs = [];
+            for (let i = 0; i < this.sources.length; i++) {
+                const pattern = this.sources[i];
+                const patternStrPtr = mallocAndWriteString(new OnigString_1.default(pattern));
+                status = onigasmH_1.onigasmH._compilePattern(patternStrPtr, regexTAddrRecieverPtr);
+                if (status !== 0) {
+                    const errMessage = convertUTF8BytesFromPtrToString(onigasmH_1.onigasmH._getLastError());
+                    throw new Error(errMessage);
+                }
+                const regexTAddress = onigasmH_1.onigasmH.HEAP32[regexTAddrRecieverPtr / 4];
+                regexTPtrs.push(regexTAddress);
+                onigasmH_1.onigasmH._free(patternStrPtr);
+            }
+            onigNativeInfo = {
+                regexTPtrs: new Uint8Array(Uint32Array.from(regexTPtrs).buffer),
+            };
+            onigasmH_1.onigasmH._free(regexTAddrRecieverPtr);
+            cache.set(this, onigNativeInfo);
+        }
+        const onigString = string instanceof OnigString_1.default ? string : new OnigString_1.default(this.convertToString(string));
+        const strPtr = mallocAndWriteString(onigString);
+        const resultInfoReceiverPtr = onigasmH_1.onigasmH._malloc(8);
+        const regexTPtrsPtr = onigasmH_1.onigasmH._malloc(onigNativeInfo.regexTPtrs.length);
+        onigasmH_1.onigasmH.HEAPU8.set(onigNativeInfo.regexTPtrs, regexTPtrsPtr);
+        status = onigasmH_1.onigasmH._findBestMatch(
+        // regex_t **patterns
+        regexTPtrsPtr, 
+        // int patternCount
+        this.sources.length, 
+        // UChar *utf8String
+        strPtr, 
+        // int strLen
+        onigString.utf8Bytes.length - 1, 
+        // int startOffset
+        onigString.convertUtf16OffsetToUtf8(startPosition), 
+        // int *resultInfo
+        resultInfoReceiverPtr);
+        if (status !== 0) {
+            const errMessage = convertUTF8BytesFromPtrToString(onigasmH_1.onigasmH._getLastError());
+            throw new Error(errMessage);
+        }
+        const [
+        // The index of pattern which matched the string at least offset from 0 (start)
+        bestPatternIdx, 
+        // Begin address of capture info encoded as pairs
+        // like [start, end, start, end, start, end, ...]
+        //  - first start-end pair is entire match (index 0 and 1)
+        //  - subsequent pairs are capture groups (2, 3 = first capture group, 4, 5 = second capture group and so on)
+        encodedResultBeginAddress, 
+        // Length of the [start, end, ...] sequence so we know how much memory to read (will always be 0 or multiple of 2)
+        encodedResultLength,] = new Uint32Array(onigasmH_1.onigasmH.HEAPU32.buffer, resultInfoReceiverPtr, 3);
+        onigasmH_1.onigasmH._free(strPtr);
+        onigasmH_1.onigasmH._free(resultInfoReceiverPtr);
+        onigasmH_1.onigasmH._free(regexTPtrsPtr);
+        if (encodedResultLength > 0) {
+            const encodedResult = new Uint32Array(onigasmH_1.onigasmH.HEAPU32.buffer, encodedResultBeginAddress, encodedResultLength);
+            const captureIndices = [];
+            let i = 0;
+            let captureIdx = 0;
+            while (i < encodedResultLength) {
+                const index = captureIdx++;
+                let start = encodedResult[i++];
+                let end = encodedResult[i++];
+                if (onigString.hasMultiByteCharacters) {
+                    start = onigString.convertUtf8OffsetToUtf16(start);
+                    end = onigString.convertUtf8OffsetToUtf16(end);
+                }
+                captureIndices.push({
+                    end,
+                    index,
+                    length: end - start,
+                    start,
+                });
+            }
+            onigasmH_1.onigasmH._free(encodedResultBeginAddress);
+            return {
+                captureIndices,
+                index: bestPatternIdx,
+                scanner: this,
+            };
+        }
+        return null;
+    }
+    convertToString(value) {
+        if (value === undefined) {
+            return 'undefined';
+        }
+        if (value === null) {
+            return 'null';
+        }
+        if (value instanceof OnigString_1.default) {
+            return value.content;
+        }
+        return value.toString();
+    }
+    convertToNumber(value) {
+        value = parseInt(value, 10);
+        if (!isFinite(value)) {
+            value = 0;
+        }
+        value = Math.max(value, 0);
+        return value;
+    }
+}
+exports.OnigScanner = OnigScanner;
+exports.default = OnigScanner;
+//# sourceMappingURL=OnigScanner.js.map
+
+/***/ }),
+
+/***/ "./node_modules/onigasm/lib/OnigString.js":
+/*!************************************************!*\
+  !*** ./node_modules/onigasm/lib/OnigString.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+class OnigString {
+    constructor(content) {
+        this.substring = (start, end) => {
+            return this.source.substring(start, end);
+        };
+        this.toString = (start, end) => {
+            return this.source;
+        };
+        if (typeof content !== 'string') {
+            throw new TypeError('Argument must be a string');
+        }
+        this.source = content;
+        this._utf8Bytes = null;
+        this._utf8Indexes = null;
+    }
+    get utf8Bytes() {
+        if (!this._utf8Bytes) {
+            this.encode();
+        }
+        return this._utf8Bytes;
+    }
+    /**
+     * Returns `null` if all utf8 offsets match utf-16 offset (content has no multi byte characters)
+     */
+    get utf8Indexes() {
+        if (!this._utf8Bytes) {
+            this.encode();
+        }
+        return this._utf8Indexes;
+    }
+    get content() {
+        return this.source;
+    }
+    get length() {
+        return this.source.length;
+    }
+    get hasMultiByteCharacters() {
+        return this.utf8Indexes !== null;
+    }
+    convertUtf8OffsetToUtf16(utf8Offset) {
+        if (utf8Offset < 0) {
+            return 0;
+        }
+        const utf8Array = this._utf8Bytes;
+        if (utf8Offset >= utf8Array.length - 1) {
+            return this.source.length;
+        }
+        const utf8OffsetMap = this.utf8Indexes;
+        if (utf8OffsetMap && utf8Offset >= this._mappingTableStartOffset) {
+            return findFirstInSorted(utf8OffsetMap, utf8Offset - this._mappingTableStartOffset) + this._mappingTableStartOffset;
+        }
+        return utf8Offset;
+    }
+    convertUtf16OffsetToUtf8(utf16Offset) {
+        if (utf16Offset < 0) {
+            return 0;
+        }
+        const utf8Array = this._utf8Bytes;
+        if (utf16Offset >= this.source.length) {
+            return utf8Array.length - 1;
+        }
+        const utf8OffsetMap = this.utf8Indexes;
+        if (utf8OffsetMap && utf16Offset >= this._mappingTableStartOffset) {
+            return utf8OffsetMap[utf16Offset - this._mappingTableStartOffset] + this._mappingTableStartOffset;
+        }
+        return utf16Offset;
+    }
+    encode() {
+        const str = this.source;
+        const n = str.length;
+        let utf16OffsetToUtf8;
+        let utf8Offset = 0;
+        let mappingTableStartOffset = 0;
+        function createOffsetTable(startOffset) {
+            const maxUtf8Len = (n - startOffset) * 3;
+            if (maxUtf8Len <= 0xff) {
+                utf16OffsetToUtf8 = new Uint8Array(n - startOffset);
+            }
+            else if (maxUtf8Len <= 0xffff) {
+                utf16OffsetToUtf8 = new Uint16Array(n - startOffset);
+            }
+            else {
+                utf16OffsetToUtf8 = new Uint32Array(n - startOffset);
+            }
+            mappingTableStartOffset = startOffset;
+            utf16OffsetToUtf8[utf8Offset++] = 0;
+        }
+        const u8view = new Uint8Array((n * 3) /* alloc max now, trim later*/ + 1 /** null termination character */);
+        let ptrHead = 0;
+        let i = 0;
+        // for some reason, v8 is faster with str.length than using a variable (might be illusion)
+        while (i < str.length) {
+            let codepoint;
+            const c = str.charCodeAt(i);
+            if (utf16OffsetToUtf8) {
+                utf16OffsetToUtf8[utf8Offset++] = ptrHead - mappingTableStartOffset;
+            }
+            if (c < 0xD800 || c > 0xDFFF) {
+                codepoint = c;
+            }
+            else if (c >= 0xDC00) {
+                codepoint = 0xFFFD;
+            }
+            else {
+                if (i === n - 1) {
+                    codepoint = 0xFFFD;
+                }
+                else {
+                    const d = str.charCodeAt(i + 1);
+                    if (0xDC00 <= d && d <= 0xDFFF) {
+                        if (!utf16OffsetToUtf8) {
+                            createOffsetTable(i);
+                        }
+                        const a = c & 0x3FF;
+                        const b = d & 0x3FF;
+                        codepoint = 0x10000 + (a << 10) + b;
+                        i += 1;
+                        utf16OffsetToUtf8[utf8Offset++] = ptrHead - mappingTableStartOffset;
+                    }
+                    else {
+                        codepoint = 0xFFFD;
+                    }
+                }
+            }
+            let bytesRequiredToEncode;
+            let offset;
+            if (codepoint <= 0x7F) {
+                bytesRequiredToEncode = 1;
+                offset = 0;
+            }
+            else if (codepoint <= 0x07FF) {
+                bytesRequiredToEncode = 2;
+                offset = 0xC0;
+            }
+            else if (codepoint <= 0xFFFF) {
+                bytesRequiredToEncode = 3;
+                offset = 0xE0;
+            }
+            else {
+                bytesRequiredToEncode = 4;
+                offset = 0xF0;
+            }
+            if (bytesRequiredToEncode === 1) {
+                u8view[ptrHead++] = codepoint;
+            }
+            else {
+                if (!utf16OffsetToUtf8) {
+                    createOffsetTable(ptrHead);
+                }
+                u8view[ptrHead++] = (codepoint >> (6 * (--bytesRequiredToEncode))) + offset;
+                while (bytesRequiredToEncode > 0) {
+                    const temp = codepoint >> (6 * (bytesRequiredToEncode - 1));
+                    u8view[ptrHead++] = (0x80 | (temp & 0x3F));
+                    bytesRequiredToEncode -= 1;
+                }
+            }
+            i += 1;
+        }
+        const utf8 = u8view.slice(0, ptrHead + 1);
+        utf8[ptrHead] = 0x00;
+        this._utf8Bytes = utf8;
+        if (utf16OffsetToUtf8) { // set if UTF-16 surrogate chars or multi-byte characters found
+            this._utf8Indexes = utf16OffsetToUtf8;
+            this._mappingTableStartOffset = mappingTableStartOffset;
+        }
+    }
+}
+function findFirstInSorted(array, i) {
+    let low = 0;
+    let high = array.length;
+    if (high === 0) {
+        return 0; // no children
+    }
+    while (low < high) {
+        const mid = Math.floor((low + high) / 2);
+        if (array[mid] >= i) {
+            high = mid;
+        }
+        else {
+            low = mid + 1;
+        }
+    }
+    // low is on the index of the first value >= i or array.length. Decrement low until we find array[low] <= i
+    while (low > 0 && (low >= array.length || array[low] > i)) {
+        low--;
+    }
+    // check whether we are on the second index of a utf-16 surrogate char. If so, go to the first index.
+    if (low > 0 && array[low] === array[low - 1]) {
+        low--;
+    }
+    return low;
+}
+exports.default = OnigString;
+//# sourceMappingURL=OnigString.js.map
+
+/***/ }),
+
+/***/ "./node_modules/onigasm/lib/index.js":
+/*!*******************************************!*\
+  !*** ./node_modules/onigasm/lib/index.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const onigasmH_1 = __webpack_require__(/*! ./onigasmH */ "./node_modules/onigasm/lib/onigasmH.js");
+exports.loadWASM = onigasmH_1.loadWASM;
+const OnigRegExp_1 = __webpack_require__(/*! ./OnigRegExp */ "./node_modules/onigasm/lib/OnigRegExp.js");
+exports.OnigRegExp = OnigRegExp_1.default;
+const OnigScanner_1 = __webpack_require__(/*! ./OnigScanner */ "./node_modules/onigasm/lib/OnigScanner.js");
+exports.OnigScanner = OnigScanner_1.default;
+const OnigString_1 = __webpack_require__(/*! ./OnigString */ "./node_modules/onigasm/lib/OnigString.js");
+exports.OnigString = OnigString_1.default;
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "./node_modules/onigasm/lib/onigasm.js":
+/*!*********************************************!*\
+  !*** ./node_modules/onigasm/lib/onigasm.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var Onigasm = (function() {
+  var _scriptDir = typeof document !== 'undefined' && document.currentScript ? document.currentScript.src : undefined;
+  return (
+function(Onigasm) {
+  Onigasm = Onigasm || {};
+
+var Module=typeof Onigasm!=="undefined"?Onigasm:{};var moduleOverrides={};var key;for(key in Module){if(Module.hasOwnProperty(key)){moduleOverrides[key]=Module[key]}}var arguments_=[];var thisProgram="./this.program";var quit_=function(status,toThrow){throw toThrow};var ENVIRONMENT_IS_WEB=false;var ENVIRONMENT_IS_WORKER=false;var ENVIRONMENT_IS_NODE=false;var ENVIRONMENT_IS_SHELL=true;var scriptDirectory="";function locateFile(path){if(Module["locateFile"]){return Module["locateFile"](path,scriptDirectory)}return scriptDirectory+path}var read_,readBinary;if(ENVIRONMENT_IS_SHELL){if(typeof read!="undefined"){read_=function shell_read(f){return read(f)}}readBinary=function readBinary(f){var data;if(typeof readbuffer==="function"){return new Uint8Array(readbuffer(f))}data=read(f,"binary");assert(typeof data==="object");return data};if(typeof scriptArgs!="undefined"){arguments_=scriptArgs}else if(typeof arguments!="undefined"){arguments_=arguments}if(typeof quit==="function"){quit_=function(status){quit(status)}}if(typeof print!=="undefined"){if(typeof console==="undefined")console={};console.log=print;console.warn=console.error=typeof printErr!=="undefined"?printErr:print}}else{}var out=Module["print"]||console.log.bind(console);var err=Module["printErr"]||console.warn.bind(console);for(key in moduleOverrides){if(moduleOverrides.hasOwnProperty(key)){Module[key]=moduleOverrides[key]}}moduleOverrides=null;if(Module["arguments"])arguments_=Module["arguments"];if(Module["thisProgram"])thisProgram=Module["thisProgram"];if(Module["quit"])quit_=Module["quit"];var STACK_ALIGN=16;function dynamicAlloc(size){var ret=HEAP32[DYNAMICTOP_PTR>>2];var end=ret+size+15&-16;if(end>_emscripten_get_heap_size()){abort()}HEAP32[DYNAMICTOP_PTR>>2]=end;return ret}function getNativeTypeSize(type){switch(type){case"i1":case"i8":return 1;case"i16":return 2;case"i32":return 4;case"i64":return 8;case"float":return 4;case"double":return 8;default:{if(type[type.length-1]==="*"){return 4}else if(type[0]==="i"){var bits=parseInt(type.substr(1));assert(bits%8===0,"getNativeTypeSize invalid bits "+bits+", type "+type);return bits/8}else{return 0}}}}function warnOnce(text){if(!warnOnce.shown)warnOnce.shown={};if(!warnOnce.shown[text]){warnOnce.shown[text]=1;err(text)}}function convertJsFunctionToWasm(func,sig){var typeSection=[1,0,1,96];var sigRet=sig.slice(0,1);var sigParam=sig.slice(1);var typeCodes={"i":127,"j":126,"f":125,"d":124};typeSection.push(sigParam.length);for(var i=0;i<sigParam.length;++i){typeSection.push(typeCodes[sigParam[i]])}if(sigRet=="v"){typeSection.push(0)}else{typeSection=typeSection.concat([1,typeCodes[sigRet]])}typeSection[1]=typeSection.length-2;var bytes=new Uint8Array([0,97,115,109,1,0,0,0].concat(typeSection,[2,7,1,1,101,1,102,0,0,7,5,1,1,102,0,0]));var module=new WebAssembly.Module(bytes);var instance=new WebAssembly.Instance(module,{e:{f:func}});var wrappedFunc=instance.exports.f;return wrappedFunc}function addFunctionWasm(func,sig){var table=wasmTable;var ret=table.length;try{table.grow(1)}catch(err){if(!err instanceof RangeError){throw err}throw"Unable to grow wasm table. Use a higher value for RESERVED_FUNCTION_POINTERS or set ALLOW_TABLE_GROWTH."}try{table.set(ret,func)}catch(err){if(!err instanceof TypeError){throw err}assert(typeof sig!=="undefined","Missing signature argument to addFunction");var wrapped=convertJsFunctionToWasm(func,sig);table.set(ret,wrapped)}return ret}function removeFunctionWasm(index){}var funcWrappers={};function dynCall(sig,ptr,args){if(args&&args.length){return Module["dynCall_"+sig].apply(null,[ptr].concat(args))}else{return Module["dynCall_"+sig].call(null,ptr)}}var tempRet0=0;var setTempRet0=function(value){tempRet0=value};var wasmBinary;if(Module["wasmBinary"])wasmBinary=Module["wasmBinary"];var noExitRuntime;if(Module["noExitRuntime"])noExitRuntime=Module["noExitRuntime"];if(typeof WebAssembly!=="object"){err("no native wasm support detected")}function setValue(ptr,value,type,noSafe){type=type||"i8";if(type.charAt(type.length-1)==="*")type="i32";switch(type){case"i1":HEAP8[ptr>>0]=value;break;case"i8":HEAP8[ptr>>0]=value;break;case"i16":HEAP16[ptr>>1]=value;break;case"i32":HEAP32[ptr>>2]=value;break;case"i64":tempI64=[value>>>0,(tempDouble=value,+Math_abs(tempDouble)>=1?tempDouble>0?(Math_min(+Math_floor(tempDouble/4294967296),4294967295)|0)>>>0:~~+Math_ceil((tempDouble-+(~~tempDouble>>>0))/4294967296)>>>0:0)],HEAP32[ptr>>2]=tempI64[0],HEAP32[ptr+4>>2]=tempI64[1];break;case"float":HEAPF32[ptr>>2]=value;break;case"double":HEAPF64[ptr>>3]=value;break;default:abort("invalid type for setValue: "+type)}}var wasmMemory;var wasmTable=new WebAssembly.Table({"initial":244,"maximum":244+0,"element":"anyfunc"});var ABORT=false;var EXITSTATUS=0;function assert(condition,text){if(!condition){abort("Assertion failed: "+text)}}function getCFunc(ident){var func=Module["_"+ident];assert(func,"Cannot call unknown function "+ident+", make sure it is exported");return func}function ccall(ident,returnType,argTypes,args,opts){var toC={"string":function(str){var ret=0;if(str!==null&&str!==undefined&&str!==0){var len=(str.length<<2)+1;ret=stackAlloc(len);stringToUTF8(str,ret,len)}return ret},"array":function(arr){var ret=stackAlloc(arr.length);writeArrayToMemory(arr,ret);return ret}};function convertReturnValue(ret){if(returnType==="string")return UTF8ToString(ret);if(returnType==="boolean")return Boolean(ret);return ret}var func=getCFunc(ident);var cArgs=[];var stack=0;if(args){for(var i=0;i<args.length;i++){var converter=toC[argTypes[i]];if(converter){if(stack===0)stack=stackSave();cArgs[i]=converter(args[i])}else{cArgs[i]=args[i]}}}var ret=func.apply(null,cArgs);ret=convertReturnValue(ret);if(stack!==0)stackRestore(stack);return ret}var ALLOC_NONE=3;var UTF8Decoder=typeof TextDecoder!=="undefined"?new TextDecoder("utf8"):undefined;function UTF8ArrayToString(u8Array,idx,maxBytesToRead){var endIdx=idx+maxBytesToRead;var endPtr=idx;while(u8Array[endPtr]&&!(endPtr>=endIdx))++endPtr;if(endPtr-idx>16&&u8Array.subarray&&UTF8Decoder){return UTF8Decoder.decode(u8Array.subarray(idx,endPtr))}else{var str="";while(idx<endPtr){var u0=u8Array[idx++];if(!(u0&128)){str+=String.fromCharCode(u0);continue}var u1=u8Array[idx++]&63;if((u0&224)==192){str+=String.fromCharCode((u0&31)<<6|u1);continue}var u2=u8Array[idx++]&63;if((u0&240)==224){u0=(u0&15)<<12|u1<<6|u2}else{u0=(u0&7)<<18|u1<<12|u2<<6|u8Array[idx++]&63}if(u0<65536){str+=String.fromCharCode(u0)}else{var ch=u0-65536;str+=String.fromCharCode(55296|ch>>10,56320|ch&1023)}}}return str}function UTF8ToString(ptr,maxBytesToRead){return ptr?UTF8ArrayToString(HEAPU8,ptr,maxBytesToRead):""}function stringToUTF8Array(str,outU8Array,outIdx,maxBytesToWrite){if(!(maxBytesToWrite>0))return 0;var startIdx=outIdx;var endIdx=outIdx+maxBytesToWrite-1;for(var i=0;i<str.length;++i){var u=str.charCodeAt(i);if(u>=55296&&u<=57343){var u1=str.charCodeAt(++i);u=65536+((u&1023)<<10)|u1&1023}if(u<=127){if(outIdx>=endIdx)break;outU8Array[outIdx++]=u}else if(u<=2047){if(outIdx+1>=endIdx)break;outU8Array[outIdx++]=192|u>>6;outU8Array[outIdx++]=128|u&63}else if(u<=65535){if(outIdx+2>=endIdx)break;outU8Array[outIdx++]=224|u>>12;outU8Array[outIdx++]=128|u>>6&63;outU8Array[outIdx++]=128|u&63}else{if(outIdx+3>=endIdx)break;outU8Array[outIdx++]=240|u>>18;outU8Array[outIdx++]=128|u>>12&63;outU8Array[outIdx++]=128|u>>6&63;outU8Array[outIdx++]=128|u&63}}outU8Array[outIdx]=0;return outIdx-startIdx}function stringToUTF8(str,outPtr,maxBytesToWrite){return stringToUTF8Array(str,HEAPU8,outPtr,maxBytesToWrite)}function lengthBytesUTF8(str){var len=0;for(var i=0;i<str.length;++i){var u=str.charCodeAt(i);if(u>=55296&&u<=57343)u=65536+((u&1023)<<10)|str.charCodeAt(++i)&1023;if(u<=127)++len;else if(u<=2047)len+=2;else if(u<=65535)len+=3;else len+=4}return len}var UTF16Decoder=typeof TextDecoder!=="undefined"?new TextDecoder("utf-16le"):undefined;function writeArrayToMemory(array,buffer){HEAP8.set(array,buffer)}function writeAsciiToMemory(str,buffer,dontAddNull){for(var i=0;i<str.length;++i){HEAP8[buffer++>>0]=str.charCodeAt(i)}if(!dontAddNull)HEAP8[buffer>>0]=0}var WASM_PAGE_SIZE=65536;function alignUp(x,multiple){if(x%multiple>0){x+=multiple-x%multiple}return x}var buffer,HEAP8,HEAPU8,HEAP16,HEAPU16,HEAP32,HEAPU32,HEAPF32,HEAPF64;function updateGlobalBufferAndViews(buf){buffer=buf;Module["HEAP8"]=HEAP8=new Int8Array(buf);Module["HEAP16"]=HEAP16=new Int16Array(buf);Module["HEAP32"]=HEAP32=new Int32Array(buf);Module["HEAPU8"]=HEAPU8=new Uint8Array(buf);Module["HEAPU16"]=HEAPU16=new Uint16Array(buf);Module["HEAPU32"]=HEAPU32=new Uint32Array(buf);Module["HEAPF32"]=HEAPF32=new Float32Array(buf);Module["HEAPF64"]=HEAPF64=new Float64Array(buf)}var STACK_BASE=5507664,DYNAMIC_BASE=5507664,DYNAMICTOP_PTR=264624;var INITIAL_TOTAL_MEMORY=Module["TOTAL_MEMORY"]||157286400;if(Module["wasmMemory"]){wasmMemory=Module["wasmMemory"]}else{wasmMemory=new WebAssembly.Memory({"initial":INITIAL_TOTAL_MEMORY/WASM_PAGE_SIZE})}if(wasmMemory){buffer=wasmMemory.buffer}INITIAL_TOTAL_MEMORY=buffer.byteLength;updateGlobalBufferAndViews(buffer);HEAP32[DYNAMICTOP_PTR>>2]=DYNAMIC_BASE;function callRuntimeCallbacks(callbacks){while(callbacks.length>0){var callback=callbacks.shift();if(typeof callback=="function"){callback();continue}var func=callback.func;if(typeof func==="number"){if(callback.arg===undefined){Module["dynCall_v"](func)}else{Module["dynCall_vi"](func,callback.arg)}}else{func(callback.arg===undefined?null:callback.arg)}}}var __ATPRERUN__=[];var __ATINIT__=[];var __ATMAIN__=[];var __ATPOSTRUN__=[];var runtimeInitialized=false;var runtimeExited=false;function preRun(){if(Module["preRun"]){if(typeof Module["preRun"]=="function")Module["preRun"]=[Module["preRun"]];while(Module["preRun"].length){addOnPreRun(Module["preRun"].shift())}}callRuntimeCallbacks(__ATPRERUN__)}function initRuntime(){runtimeInitialized=true;callRuntimeCallbacks(__ATINIT__)}function preMain(){callRuntimeCallbacks(__ATMAIN__)}function exitRuntime(){runtimeExited=true}function postRun(){if(Module["postRun"]){if(typeof Module["postRun"]=="function")Module["postRun"]=[Module["postRun"]];while(Module["postRun"].length){addOnPostRun(Module["postRun"].shift())}}callRuntimeCallbacks(__ATPOSTRUN__)}function addOnPreRun(cb){__ATPRERUN__.unshift(cb)}function addOnPostRun(cb){__ATPOSTRUN__.unshift(cb)}var Math_abs=Math.abs;var Math_ceil=Math.ceil;var Math_floor=Math.floor;var Math_min=Math.min;var runDependencies=0;var runDependencyWatcher=null;var dependenciesFulfilled=null;function addRunDependency(id){runDependencies++;if(Module["monitorRunDependencies"]){Module["monitorRunDependencies"](runDependencies)}}function removeRunDependency(id){runDependencies--;if(Module["monitorRunDependencies"]){Module["monitorRunDependencies"](runDependencies)}if(runDependencies==0){if(runDependencyWatcher!==null){clearInterval(runDependencyWatcher);runDependencyWatcher=null}if(dependenciesFulfilled){var callback=dependenciesFulfilled;dependenciesFulfilled=null;callback()}}}Module["preloadedImages"]={};Module["preloadedAudios"]={};function abort(what){if(Module["onAbort"]){Module["onAbort"](what)}what+="";out(what);err(what);ABORT=true;EXITSTATUS=1;what="abort("+what+"). Build with -s ASSERTIONS=1 for more info.";throw new WebAssembly.RuntimeError(what)}var dataURIPrefix="data:application/octet-stream;base64,";function isDataURI(filename){return String.prototype.startsWith?filename.startsWith(dataURIPrefix):filename.indexOf(dataURIPrefix)===0}var wasmBinaryFile="onigasm.wasm";if(!isDataURI(wasmBinaryFile)){wasmBinaryFile=locateFile(wasmBinaryFile)}function getBinary(){try{if(wasmBinary){return new Uint8Array(wasmBinary)}if(readBinary){return readBinary(wasmBinaryFile)}else{throw"both async and sync fetching of the wasm failed"}}catch(err){abort(err)}}function getBinaryPromise(){if(!wasmBinary&&(ENVIRONMENT_IS_WEB||ENVIRONMENT_IS_WORKER)&&typeof fetch==="function"){return fetch(wasmBinaryFile,{credentials:"same-origin"}).then(function(response){if(!response["ok"]){throw"failed to load wasm binary file at '"+wasmBinaryFile+"'"}return response["arrayBuffer"]()}).catch(function(){return getBinary()})}return new Promise(function(resolve,reject){resolve(getBinary())})}function createWasm(){var info={"env":asmLibraryArg,"wasi_unstable":asmLibraryArg};function receiveInstance(instance,module){var exports=instance.exports;Module["asm"]=exports;removeRunDependency("wasm-instantiate")}addRunDependency("wasm-instantiate");function receiveInstantiatedSource(output){receiveInstance(output["instance"])}function instantiateArrayBuffer(receiver){return getBinaryPromise().then(function(binary){return WebAssembly.instantiate(binary,info)}).then(receiver,function(reason){err("failed to asynchronously prepare wasm: "+reason);abort(reason)})}function instantiateAsync(){if(!wasmBinary&&typeof WebAssembly.instantiateStreaming==="function"&&!isDataURI(wasmBinaryFile)&&typeof fetch==="function"){fetch(wasmBinaryFile,{credentials:"same-origin"}).then(function(response){var result=WebAssembly.instantiateStreaming(response,info);return result.then(receiveInstantiatedSource,function(reason){err("wasm streaming compile failed: "+reason);err("falling back to ArrayBuffer instantiation");instantiateArrayBuffer(receiveInstantiatedSource)})})}else{return instantiateArrayBuffer(receiveInstantiatedSource)}}if(Module["instantiateWasm"]){try{var exports=Module["instantiateWasm"](info,receiveInstance);return exports}catch(e){err("Module.instantiateWasm callback failed with error: "+e);return false}}instantiateAsync();return{}}var tempDouble;var tempI64;__ATINIT__.push({func:function(){___wasm_call_ctors()}});function demangle(func){var __cxa_demangle_func=Module["___cxa_demangle"]||Module["__cxa_demangle"];assert(__cxa_demangle_func);try{var s=func;if(s.startsWith("__Z"))s=s.substr(1);var len=lengthBytesUTF8(s)+1;var buf=_malloc(len);stringToUTF8(s,buf,len);var status=_malloc(4);var ret=__cxa_demangle_func(buf,0,0,status);if(HEAP32[status>>2]===0&&ret){return UTF8ToString(ret)}}catch(e){}finally{if(buf)_free(buf);if(status)_free(status);if(ret)_free(ret)}return func}function demangleAll(text){var regex=/\b_Z[\w\d_]+/g;return text.replace(regex,function(x){var y=demangle(x);return x===y?x:y+" ["+x+"]"})}function jsStackTrace(){var err=new Error;if(!err.stack){try{throw new Error(0)}catch(e){err=e}if(!err.stack){return"(no stack trace available)"}}return err.stack.toString()}function _abort(){abort()}function _emscripten_get_heap_size(){return HEAP8.length}function _emscripten_get_sbrk_ptr(){return 264624}function _emscripten_memcpy_big(dest,src,num){HEAPU8.set(HEAPU8.subarray(src,src+num),dest)}function emscripten_realloc_buffer(size){try{wasmMemory.grow(size-buffer.byteLength+65535>>16);updateGlobalBufferAndViews(wasmMemory.buffer);return 1}catch(e){}}function _emscripten_resize_heap(requestedSize){var oldSize=_emscripten_get_heap_size();var PAGE_MULTIPLE=65536;var LIMIT=2147483648-PAGE_MULTIPLE;if(requestedSize>LIMIT){return false}var MIN_TOTAL_MEMORY=16777216;var newSize=Math.max(oldSize,MIN_TOTAL_MEMORY);while(newSize<requestedSize){if(newSize<=536870912){newSize=alignUp(2*newSize,PAGE_MULTIPLE)}else{newSize=Math.min(alignUp((3*newSize+2147483648)/4,PAGE_MULTIPLE),LIMIT)}}var replacement=emscripten_realloc_buffer(newSize);if(!replacement){return false}return true}var PATH={splitPath:function(filename){var splitPathRe=/^(\/?|)([\s\S]*?)((?:\.{1,2}|[^\/]+?|)(\.[^.\/]*|))(?:[\/]*)$/;return splitPathRe.exec(filename).slice(1)},normalizeArray:function(parts,allowAboveRoot){var up=0;for(var i=parts.length-1;i>=0;i--){var last=parts[i];if(last==="."){parts.splice(i,1)}else if(last===".."){parts.splice(i,1);up++}else if(up){parts.splice(i,1);up--}}if(allowAboveRoot){for(;up;up--){parts.unshift("..")}}return parts},normalize:function(path){var isAbsolute=path.charAt(0)==="/",trailingSlash=path.substr(-1)==="/";path=PATH.normalizeArray(path.split("/").filter(function(p){return!!p}),!isAbsolute).join("/");if(!path&&!isAbsolute){path="."}if(path&&trailingSlash){path+="/"}return(isAbsolute?"/":"")+path},dirname:function(path){var result=PATH.splitPath(path),root=result[0],dir=result[1];if(!root&&!dir){return"."}if(dir){dir=dir.substr(0,dir.length-1)}return root+dir},basename:function(path){if(path==="/")return"/";var lastSlash=path.lastIndexOf("/");if(lastSlash===-1)return path;return path.substr(lastSlash+1)},extname:function(path){return PATH.splitPath(path)[3]},join:function(){var paths=Array.prototype.slice.call(arguments,0);return PATH.normalize(paths.join("/"))},join2:function(l,r){return PATH.normalize(l+"/"+r)}};var SYSCALLS={buffers:[null,[],[]],printChar:function(stream,curr){var buffer=SYSCALLS.buffers[stream];if(curr===0||curr===10){(stream===1?out:err)(UTF8ArrayToString(buffer,0));buffer.length=0}else{buffer.push(curr)}},varargs:0,get:function(varargs){SYSCALLS.varargs+=4;var ret=HEAP32[SYSCALLS.varargs-4>>2];return ret},getStr:function(){var ret=UTF8ToString(SYSCALLS.get());return ret},get64:function(){var low=SYSCALLS.get(),high=SYSCALLS.get();return low},getZero:function(){SYSCALLS.get()}};function _fd_close(fd){try{return 0}catch(e){if(typeof FS==="undefined"||!(e instanceof FS.ErrnoError))abort(e);return e.errno}}function _fd_seek(fd,offset_low,offset_high,whence,newOffset){try{return 0}catch(e){if(typeof FS==="undefined"||!(e instanceof FS.ErrnoError))abort(e);return e.errno}}function _fd_write(fd,iov,iovcnt,pnum){try{var num=0;for(var i=0;i<iovcnt;i++){var ptr=HEAP32[iov+i*8>>2];var len=HEAP32[iov+(i*8+4)>>2];for(var j=0;j<len;j++){SYSCALLS.printChar(fd,HEAPU8[ptr+j])}num+=len}HEAP32[pnum>>2]=num;return 0}catch(e){if(typeof FS==="undefined"||!(e instanceof FS.ErrnoError))abort(e);return e.errno}}function _setTempRet0($i){setTempRet0($i|0)}var ASSERTIONS=false;var asmLibraryArg={"abort":_abort,"emscripten_get_sbrk_ptr":_emscripten_get_sbrk_ptr,"emscripten_memcpy_big":_emscripten_memcpy_big,"emscripten_resize_heap":_emscripten_resize_heap,"fd_close":_fd_close,"fd_seek":_fd_seek,"fd_write":_fd_write,"memory":wasmMemory,"setTempRet0":_setTempRet0,"table":wasmTable};var asm=createWasm();Module["asm"]=asm;var ___wasm_call_ctors=Module["___wasm_call_ctors"]=function(){return Module["asm"]["__wasm_call_ctors"].apply(null,arguments)};var _malloc=Module["_malloc"]=function(){return Module["asm"]["malloc"].apply(null,arguments)};var _free=Module["_free"]=function(){return Module["asm"]["free"].apply(null,arguments)};var _getLastError=Module["_getLastError"]=function(){return Module["asm"]["getLastError"].apply(null,arguments)};var _compilePattern=Module["_compilePattern"]=function(){return Module["asm"]["compilePattern"].apply(null,arguments)};var _disposeCompiledPatterns=Module["_disposeCompiledPatterns"]=function(){return Module["asm"]["disposeCompiledPatterns"].apply(null,arguments)};var _findBestMatch=Module["_findBestMatch"]=function(){return Module["asm"]["findBestMatch"].apply(null,arguments)};var ___cxa_demangle=Module["___cxa_demangle"]=function(){return Module["asm"]["__cxa_demangle"].apply(null,arguments)};var _setThrew=Module["_setThrew"]=function(){return Module["asm"]["setThrew"].apply(null,arguments)};var stackSave=Module["stackSave"]=function(){return Module["asm"]["stackSave"].apply(null,arguments)};var stackAlloc=Module["stackAlloc"]=function(){return Module["asm"]["stackAlloc"].apply(null,arguments)};var stackRestore=Module["stackRestore"]=function(){return Module["asm"]["stackRestore"].apply(null,arguments)};var __growWasmMemory=Module["__growWasmMemory"]=function(){return Module["asm"]["__growWasmMemory"].apply(null,arguments)};var dynCall_vi=Module["dynCall_vi"]=function(){return Module["asm"]["dynCall_vi"].apply(null,arguments)};var dynCall_iiii=Module["dynCall_iiii"]=function(){return Module["asm"]["dynCall_iiii"].apply(null,arguments)};var dynCall_iiiii=Module["dynCall_iiiii"]=function(){return Module["asm"]["dynCall_iiiii"].apply(null,arguments)};var dynCall_iii=Module["dynCall_iii"]=function(){return Module["asm"]["dynCall_iii"].apply(null,arguments)};var dynCall_iidiiii=Module["dynCall_iidiiii"]=function(){return Module["asm"]["dynCall_iidiiii"].apply(null,arguments)};var dynCall_vii=Module["dynCall_vii"]=function(){return Module["asm"]["dynCall_vii"].apply(null,arguments)};var dynCall_ii=Module["dynCall_ii"]=function(){return Module["asm"]["dynCall_ii"].apply(null,arguments)};var dynCall_i=Module["dynCall_i"]=function(){return Module["asm"]["dynCall_i"].apply(null,arguments)};var dynCall_v=Module["dynCall_v"]=function(){return Module["asm"]["dynCall_v"].apply(null,arguments)};var dynCall_viiiiii=Module["dynCall_viiiiii"]=function(){return Module["asm"]["dynCall_viiiiii"].apply(null,arguments)};var dynCall_viiiii=Module["dynCall_viiiii"]=function(){return Module["asm"]["dynCall_viiiii"].apply(null,arguments)};var dynCall_viiii=Module["dynCall_viiii"]=function(){return Module["asm"]["dynCall_viiii"].apply(null,arguments)};var dynCall_jiji=Module["dynCall_jiji"]=function(){return Module["asm"]["dynCall_jiji"].apply(null,arguments)};Module["asm"]=asm;Module["ccall"]=ccall;var calledRun;Module["then"]=function(func){if(calledRun){func(Module)}else{var old=Module["onRuntimeInitialized"];Module["onRuntimeInitialized"]=function(){if(old)old();func(Module)}}return Module};function ExitStatus(status){this.name="ExitStatus";this.message="Program terminated with exit("+status+")";this.status=status}dependenciesFulfilled=function runCaller(){if(!calledRun)run();if(!calledRun)dependenciesFulfilled=runCaller};function run(args){args=args||arguments_;if(runDependencies>0){return}preRun();if(runDependencies>0)return;function doRun(){if(calledRun)return;calledRun=true;if(ABORT)return;initRuntime();preMain();if(Module["onRuntimeInitialized"])Module["onRuntimeInitialized"]();postRun()}if(Module["setStatus"]){Module["setStatus"]("Running...");setTimeout(function(){setTimeout(function(){Module["setStatus"]("")},1);doRun()},1)}else{doRun()}}Module["run"]=run;if(Module["preInit"]){if(typeof Module["preInit"]=="function")Module["preInit"]=[Module["preInit"]];while(Module["preInit"].length>0){Module["preInit"].pop()()}}noExitRuntime=true;run();
+
+
+  return Onigasm
+}
+);
+})();
+if (true)
+      module.exports = Onigasm;
+    else {}
+    
+
+/***/ }),
+
+/***/ "./node_modules/onigasm/lib/onigasm.wasm":
+/*!***********************************************!*\
+  !*** ./node_modules/onigasm/lib/onigasm.wasm ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "154ccd182313c345d3b9dd8571931eb5.wasm";
+
+/***/ }),
+
+/***/ "./node_modules/onigasm/lib/onigasmH.js":
+/*!**********************************************!*\
+  !*** ./node_modules/onigasm/lib/onigasmH.js ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const OnigasmModuleFactory = __webpack_require__(/*! ./onigasm.js */ "./node_modules/onigasm/lib/onigasm.js" /** when TS is compiled to JS, this will mean `lib/onigasm.js` (emitted by `emcc`) */);
+async function initModule(bytes) {
+    return new Promise((resolve, reject) => {
+        const { log, warn, error } = console;
+        OnigasmModuleFactory({
+            instantiateWasm(imports, successCallback) {
+                WebAssembly.instantiate(bytes, imports)
+                    .then((output) => {
+                    successCallback(output.instance);
+                })
+                    .catch((e) => {
+                    throw e;
+                });
+                return {};
+            },
+        })
+            .then(moduleH => {
+            exports.onigasmH = moduleH;
+            resolve();
+        });
+        if (typeof print !== 'undefined') {
+            // can be removed when https://github.com/emscripten-core/emscripten/issues/9829 is fixed.
+            // tslint:disable-next-line:no-console
+            console.log = log;
+            // tslint:disable-next-line:no-console
+            console.error = error;
+            // tslint:disable-next-line:no-console
+            console.warn = warn;
+        }
+    });
+}
+let isInitialized = false;
+/**
+ * Mount the .wasm file that will act as library's "backend"
+ * @param data Path to .wasm file or it's ArrayBuffer
+ */
+async function loadWASM(data) {
+    if (isInitialized) {
+        throw new Error(`Onigasm#init has been called and was succesful, subsequent calls are not allowed once initialized`);
+    }
+    if (typeof data === 'string') {
+        const arrayBuffer = await (await fetch(data)).arrayBuffer();
+        await initModule(arrayBuffer);
+    }
+    else if (data instanceof ArrayBuffer) {
+        await initModule(data);
+    }
+    else {
+        throw new TypeError(`Expected a string (URL of .wasm file) or ArrayBuffer (.wasm file itself) as first parameter`);
+    }
+    isInitialized = true;
+}
+exports.loadWASM = loadWASM;
+//# sourceMappingURL=onigasmH.js.map
+
+/***/ }),
+
+/***/ "./node_modules/vscode-textmate/release/main.js":
+/*!******************************************************!*\
+  !*** ./node_modules/vscode-textmate/release/main.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(__dirname, process) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+(function (factory) {
+    if (true) {
+        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+    } else {}
+})(function () {
+
+/*---------------------------------------------------------
+ * Copyright (C) Microsoft Corporation. All rights reserved.
+ *--------------------------------------------------------*/
+'use strict';
+var $map = {};
+function $load(name, factory) {
+    var mod = {
+        exports: {}
+    };
+    var requireFunc = function (mod) {
+        if ($map[mod]) {
+            return $map[mod].exports;
+        }
+        return __webpack_require__("./node_modules/vscode-textmate/release sync recursive")(mod);
+    };
+    factory.call(this, requireFunc, mod, mod.exports);
+    $map[name] = mod;
+}
+//# sourceMappingURL=_prefix.js.map
+$load('./onigLibs', function(require, module, exports) {
+/*---------------------------------------------------------
+ * Copyright (C) Microsoft Corporation. All rights reserved.
+ *--------------------------------------------------------*/
+'use strict';
+Object.defineProperty(exports, "__esModule", { value: true });
+var onigasmLib = null;
+var onigurumaLib = null;
+function getOnigasm() {
+    if (!onigasmLib) {
+        var onigasmModule_1 = require('onigasm');
+        var fs = require('fs');
+        var path = require('path');
+        var wasmBin = fs.readFileSync(path.join(__dirname, '../node_modules/onigasm/lib/onigasm.wasm')).buffer;
+        onigasmLib = onigasmModule_1.loadWASM(wasmBin).then(function (_) {
+            return {
+                createOnigScanner: function (patterns) { return new onigasmModule_1.OnigScanner(patterns); },
+                createOnigString: function (s) { return new onigasmModule_1.OnigString(s); }
+            };
+        });
+    }
+    return onigasmLib;
+}
+exports.getOnigasm = getOnigasm;
+function getOniguruma() {
+    if (!onigurumaLib) {
+        var getOnigModule_1 = (function () {
+            var onigurumaModule = null;
+            return function () {
+                if (!onigurumaModule) {
+                    onigurumaModule = require('oniguruma');
+                }
+                return onigurumaModule;
+            };
+        })();
+        onigurumaLib = Promise.resolve({
+            createOnigScanner: function (patterns) {
+                var onigurumaModule = getOnigModule_1();
+                return new onigurumaModule.OnigScanner(patterns);
+            },
+            createOnigString: function (s) {
+                var onigurumaModule = getOnigModule_1();
+                var string = new onigurumaModule.OnigString(s);
+                string.content = s;
+                return string;
+            }
+        });
+    }
+    return onigurumaLib;
+}
+exports.getOniguruma = getOniguruma;
+//# sourceMappingURL=onigLibs.js.map
+});
+$load('./utils', function(require, module, exports) {
+/*---------------------------------------------------------
+ * Copyright (C) Microsoft Corporation. All rights reserved.
+ *--------------------------------------------------------*/
+'use strict';
+Object.defineProperty(exports, "__esModule", { value: true });
+function clone(something) {
+    return doClone(something);
+}
+exports.clone = clone;
+function doClone(something) {
+    if (Array.isArray(something)) {
+        return cloneArray(something);
+    }
+    if (typeof something === 'object') {
+        return cloneObj(something);
+    }
+    return something;
+}
+function cloneArray(arr) {
+    var r = [];
+    for (var i = 0, len = arr.length; i < len; i++) {
+        r[i] = doClone(arr[i]);
+    }
+    return r;
+}
+function cloneObj(obj) {
+    var r = {};
+    for (var key in obj) {
+        r[key] = doClone(obj[key]);
+    }
+    return r;
+}
+function mergeObjects(target) {
+    var sources = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+        sources[_i - 1] = arguments[_i];
+    }
+    sources.forEach(function (source) {
+        for (var key in source) {
+            target[key] = source[key];
+        }
+    });
+    return target;
+}
+exports.mergeObjects = mergeObjects;
+function basename(path) {
+    var idx = ~path.lastIndexOf('/') || ~path.lastIndexOf('\\');
+    if (idx === 0) {
+        return path;
+    }
+    else if (~idx === path.length - 1) {
+        return basename(path.substring(0, path.length - 1));
+    }
+    else {
+        return path.substr(~idx + 1);
+    }
+}
+exports.basename = basename;
+var CAPTURING_REGEX_SOURCE = /\$(\d+)|\${(\d+):\/(downcase|upcase)}/;
+var RegexSource = /** @class */ (function () {
+    function RegexSource() {
+    }
+    RegexSource.hasCaptures = function (regexSource) {
+        if (regexSource === null) {
+            return false;
+        }
+        return CAPTURING_REGEX_SOURCE.test(regexSource);
+    };
+    RegexSource.replaceCaptures = function (regexSource, captureSource, captureIndices) {
+        return regexSource.replace(CAPTURING_REGEX_SOURCE, function (match, index, commandIndex, command) {
+            var capture = captureIndices[parseInt(index || commandIndex, 10)];
+            if (capture) {
+                var result = captureSource.substring(capture.start, capture.end);
+                // Remove leading dots that would make the selector invalid
+                while (result[0] === '.') {
+                    result = result.substring(1);
+                }
+                switch (command) {
+                    case 'downcase':
+                        return result.toLowerCase();
+                    case 'upcase':
+                        return result.toUpperCase();
+                    default:
+                        return result;
+                }
+            }
+            else {
+                return match;
+            }
+        });
+    };
+    return RegexSource;
+}());
+exports.RegexSource = RegexSource;
+//# sourceMappingURL=utils.js.map
+});
+$load('./theme', function(require, module, exports) {
+/*---------------------------------------------------------
+ * Copyright (C) Microsoft Corporation. All rights reserved.
+ *--------------------------------------------------------*/
+'use strict';
+Object.defineProperty(exports, "__esModule", { value: true });
+var ParsedThemeRule = /** @class */ (function () {
+    function ParsedThemeRule(scope, parentScopes, index, fontStyle, foreground, background) {
+        this.scope = scope;
+        this.parentScopes = parentScopes;
+        this.index = index;
+        this.fontStyle = fontStyle;
+        this.foreground = foreground;
+        this.background = background;
+    }
+    return ParsedThemeRule;
+}());
+exports.ParsedThemeRule = ParsedThemeRule;
+function isValidHexColor(hex) {
+    if (/^#[0-9a-f]{6}$/i.test(hex)) {
+        // #rrggbb
+        return true;
+    }
+    if (/^#[0-9a-f]{8}$/i.test(hex)) {
+        // #rrggbbaa
+        return true;
+    }
+    if (/^#[0-9a-f]{3}$/i.test(hex)) {
+        // #rgb
+        return true;
+    }
+    if (/^#[0-9a-f]{4}$/i.test(hex)) {
+        // #rgba
+        return true;
+    }
+    return false;
+}
+/**
+ * Parse a raw theme into rules.
+ */
+function parseTheme(source) {
+    if (!source) {
+        return [];
+    }
+    if (!source.settings || !Array.isArray(source.settings)) {
+        return [];
+    }
+    var settings = source.settings;
+    var result = [], resultLen = 0;
+    for (var i = 0, len = settings.length; i < len; i++) {
+        var entry = settings[i];
+        if (!entry.settings) {
+            continue;
+        }
+        var scopes = void 0;
+        if (typeof entry.scope === 'string') {
+            var _scope = entry.scope;
+            // remove leading commas
+            _scope = _scope.replace(/^[,]+/, '');
+            // remove trailing commans
+            _scope = _scope.replace(/[,]+$/, '');
+            scopes = _scope.split(',');
+        }
+        else if (Array.isArray(entry.scope)) {
+            scopes = entry.scope;
+        }
+        else {
+            scopes = [''];
+        }
+        var fontStyle = -1 /* NotSet */;
+        if (typeof entry.settings.fontStyle === 'string') {
+            fontStyle = 0 /* None */;
+            var segments = entry.settings.fontStyle.split(' ');
+            for (var j = 0, lenJ = segments.length; j < lenJ; j++) {
+                var segment = segments[j];
+                switch (segment) {
+                    case 'italic':
+                        fontStyle = fontStyle | 1 /* Italic */;
+                        break;
+                    case 'bold':
+                        fontStyle = fontStyle | 2 /* Bold */;
+                        break;
+                    case 'underline':
+                        fontStyle = fontStyle | 4 /* Underline */;
+                        break;
+                }
+            }
+        }
+        var foreground = null;
+        if (typeof entry.settings.foreground === 'string' && isValidHexColor(entry.settings.foreground)) {
+            foreground = entry.settings.foreground;
+        }
+        var background = null;
+        if (typeof entry.settings.background === 'string' && isValidHexColor(entry.settings.background)) {
+            background = entry.settings.background;
+        }
+        for (var j = 0, lenJ = scopes.length; j < lenJ; j++) {
+            var _scope = scopes[j].trim();
+            var segments = _scope.split(' ');
+            var scope = segments[segments.length - 1];
+            var parentScopes = null;
+            if (segments.length > 1) {
+                parentScopes = segments.slice(0, segments.length - 1);
+                parentScopes.reverse();
+            }
+            result[resultLen++] = new ParsedThemeRule(scope, parentScopes, i, fontStyle, foreground, background);
+        }
+    }
+    return result;
+}
+exports.parseTheme = parseTheme;
+/**
+ * Resolve rules (i.e. inheritance).
+ */
+function resolveParsedThemeRules(parsedThemeRules, _colorMap) {
+    // Sort rules lexicographically, and then by index if necessary
+    parsedThemeRules.sort(function (a, b) {
+        var r = strcmp(a.scope, b.scope);
+        if (r !== 0) {
+            return r;
+        }
+        r = strArrCmp(a.parentScopes, b.parentScopes);
+        if (r !== 0) {
+            return r;
+        }
+        return a.index - b.index;
+    });
+    // Determine defaults
+    var defaultFontStyle = 0 /* None */;
+    var defaultForeground = '#000000';
+    var defaultBackground = '#ffffff';
+    while (parsedThemeRules.length >= 1 && parsedThemeRules[0].scope === '') {
+        var incomingDefaults = parsedThemeRules.shift();
+        if (incomingDefaults.fontStyle !== -1 /* NotSet */) {
+            defaultFontStyle = incomingDefaults.fontStyle;
+        }
+        if (incomingDefaults.foreground !== null) {
+            defaultForeground = incomingDefaults.foreground;
+        }
+        if (incomingDefaults.background !== null) {
+            defaultBackground = incomingDefaults.background;
+        }
+    }
+    var colorMap = new ColorMap(_colorMap);
+    var defaults = new ThemeTrieElementRule(0, null, defaultFontStyle, colorMap.getId(defaultForeground), colorMap.getId(defaultBackground));
+    var root = new ThemeTrieElement(new ThemeTrieElementRule(0, null, -1 /* NotSet */, 0, 0), []);
+    for (var i = 0, len = parsedThemeRules.length; i < len; i++) {
+        var rule = parsedThemeRules[i];
+        root.insert(0, rule.scope, rule.parentScopes, rule.fontStyle, colorMap.getId(rule.foreground), colorMap.getId(rule.background));
+    }
+    return new Theme(colorMap, defaults, root);
+}
+var ColorMap = /** @class */ (function () {
+    function ColorMap(_colorMap) {
+        this._lastColorId = 0;
+        this._id2color = [];
+        this._color2id = Object.create(null);
+        if (Array.isArray(_colorMap)) {
+            this._isFrozen = true;
+            for (var i = 0, len = _colorMap.length; i < len; i++) {
+                this._color2id[_colorMap[i]] = i;
+                this._id2color[i] = _colorMap[i];
+            }
+        }
+        else {
+            this._isFrozen = false;
+        }
+    }
+    ColorMap.prototype.getId = function (color) {
+        if (color === null) {
+            return 0;
+        }
+        color = color.toUpperCase();
+        var value = this._color2id[color];
+        if (value) {
+            return value;
+        }
+        if (this._isFrozen) {
+            throw new Error("Missing color in color map - " + color);
+        }
+        value = ++this._lastColorId;
+        this._color2id[color] = value;
+        this._id2color[value] = color;
+        return value;
+    };
+    ColorMap.prototype.getColorMap = function () {
+        return this._id2color.slice(0);
+    };
+    return ColorMap;
+}());
+exports.ColorMap = ColorMap;
+var Theme = /** @class */ (function () {
+    function Theme(colorMap, defaults, root) {
+        this._colorMap = colorMap;
+        this._root = root;
+        this._defaults = defaults;
+        this._cache = {};
+    }
+    Theme.createFromRawTheme = function (source, colorMap) {
+        return this.createFromParsedTheme(parseTheme(source), colorMap);
+    };
+    Theme.createFromParsedTheme = function (source, colorMap) {
+        return resolveParsedThemeRules(source, colorMap);
+    };
+    Theme.prototype.getColorMap = function () {
+        return this._colorMap.getColorMap();
+    };
+    Theme.prototype.getDefaults = function () {
+        return this._defaults;
+    };
+    Theme.prototype.match = function (scopeName) {
+        if (!this._cache.hasOwnProperty(scopeName)) {
+            this._cache[scopeName] = this._root.match(scopeName);
+        }
+        return this._cache[scopeName];
+    };
+    return Theme;
+}());
+exports.Theme = Theme;
+function strcmp(a, b) {
+    if (a < b) {
+        return -1;
+    }
+    if (a > b) {
+        return 1;
+    }
+    return 0;
+}
+exports.strcmp = strcmp;
+function strArrCmp(a, b) {
+    if (a === null && b === null) {
+        return 0;
+    }
+    if (!a) {
+        return -1;
+    }
+    if (!b) {
+        return 1;
+    }
+    var len1 = a.length;
+    var len2 = b.length;
+    if (len1 === len2) {
+        for (var i = 0; i < len1; i++) {
+            var res = strcmp(a[i], b[i]);
+            if (res !== 0) {
+                return res;
+            }
+        }
+        return 0;
+    }
+    return len1 - len2;
+}
+exports.strArrCmp = strArrCmp;
+var ThemeTrieElementRule = /** @class */ (function () {
+    function ThemeTrieElementRule(scopeDepth, parentScopes, fontStyle, foreground, background) {
+        this.scopeDepth = scopeDepth;
+        this.parentScopes = parentScopes;
+        this.fontStyle = fontStyle;
+        this.foreground = foreground;
+        this.background = background;
+    }
+    ThemeTrieElementRule.prototype.clone = function () {
+        return new ThemeTrieElementRule(this.scopeDepth, this.parentScopes, this.fontStyle, this.foreground, this.background);
+    };
+    ThemeTrieElementRule.cloneArr = function (arr) {
+        var r = [];
+        for (var i = 0, len = arr.length; i < len; i++) {
+            r[i] = arr[i].clone();
+        }
+        return r;
+    };
+    ThemeTrieElementRule.prototype.acceptOverwrite = function (scopeDepth, fontStyle, foreground, background) {
+        if (this.scopeDepth > scopeDepth) {
+            console.log('how did this happen?');
+        }
+        else {
+            this.scopeDepth = scopeDepth;
+        }
+        // console.log('TODO -> my depth: ' + this.scopeDepth + ', overwriting depth: ' + scopeDepth);
+        if (fontStyle !== -1 /* NotSet */) {
+            this.fontStyle = fontStyle;
+        }
+        if (foreground !== 0) {
+            this.foreground = foreground;
+        }
+        if (background !== 0) {
+            this.background = background;
+        }
+    };
+    return ThemeTrieElementRule;
+}());
+exports.ThemeTrieElementRule = ThemeTrieElementRule;
+var ThemeTrieElement = /** @class */ (function () {
+    function ThemeTrieElement(mainRule, rulesWithParentScopes, children) {
+        if (rulesWithParentScopes === void 0) { rulesWithParentScopes = []; }
+        if (children === void 0) { children = {}; }
+        this._mainRule = mainRule;
+        this._rulesWithParentScopes = rulesWithParentScopes;
+        this._children = children;
+    }
+    ThemeTrieElement._sortBySpecificity = function (arr) {
+        if (arr.length === 1) {
+            return arr;
+        }
+        arr.sort(this._cmpBySpecificity);
+        return arr;
+    };
+    ThemeTrieElement._cmpBySpecificity = function (a, b) {
+        if (a.scopeDepth === b.scopeDepth) {
+            var aParentScopes = a.parentScopes;
+            var bParentScopes = b.parentScopes;
+            var aParentScopesLen = aParentScopes === null ? 0 : aParentScopes.length;
+            var bParentScopesLen = bParentScopes === null ? 0 : bParentScopes.length;
+            if (aParentScopesLen === bParentScopesLen) {
+                for (var i = 0; i < aParentScopesLen; i++) {
+                    var aLen = aParentScopes[i].length;
+                    var bLen = bParentScopes[i].length;
+                    if (aLen !== bLen) {
+                        return bLen - aLen;
+                    }
+                }
+            }
+            return bParentScopesLen - aParentScopesLen;
+        }
+        return b.scopeDepth - a.scopeDepth;
+    };
+    ThemeTrieElement.prototype.match = function (scope) {
+        if (scope === '') {
+            return ThemeTrieElement._sortBySpecificity([].concat(this._mainRule).concat(this._rulesWithParentScopes));
+        }
+        var dotIndex = scope.indexOf('.');
+        var head;
+        var tail;
+        if (dotIndex === -1) {
+            head = scope;
+            tail = '';
+        }
+        else {
+            head = scope.substring(0, dotIndex);
+            tail = scope.substring(dotIndex + 1);
+        }
+        if (this._children.hasOwnProperty(head)) {
+            return this._children[head].match(tail);
+        }
+        return ThemeTrieElement._sortBySpecificity([].concat(this._mainRule).concat(this._rulesWithParentScopes));
+    };
+    ThemeTrieElement.prototype.insert = function (scopeDepth, scope, parentScopes, fontStyle, foreground, background) {
+        if (scope === '') {
+            this._doInsertHere(scopeDepth, parentScopes, fontStyle, foreground, background);
+            return;
+        }
+        var dotIndex = scope.indexOf('.');
+        var head;
+        var tail;
+        if (dotIndex === -1) {
+            head = scope;
+            tail = '';
+        }
+        else {
+            head = scope.substring(0, dotIndex);
+            tail = scope.substring(dotIndex + 1);
+        }
+        var child;
+        if (this._children.hasOwnProperty(head)) {
+            child = this._children[head];
+        }
+        else {
+            child = new ThemeTrieElement(this._mainRule.clone(), ThemeTrieElementRule.cloneArr(this._rulesWithParentScopes));
+            this._children[head] = child;
+        }
+        child.insert(scopeDepth + 1, tail, parentScopes, fontStyle, foreground, background);
+    };
+    ThemeTrieElement.prototype._doInsertHere = function (scopeDepth, parentScopes, fontStyle, foreground, background) {
+        if (parentScopes === null) {
+            // Merge into the main rule
+            this._mainRule.acceptOverwrite(scopeDepth, fontStyle, foreground, background);
+            return;
+        }
+        // Try to merge into existing rule
+        for (var i = 0, len = this._rulesWithParentScopes.length; i < len; i++) {
+            var rule = this._rulesWithParentScopes[i];
+            if (strArrCmp(rule.parentScopes, parentScopes) === 0) {
+                // bingo! => we get to merge this into an existing one
+                rule.acceptOverwrite(scopeDepth, fontStyle, foreground, background);
+                return;
+            }
+        }
+        // Must add a new rule
+        // Inherit from main rule
+        if (fontStyle === -1 /* NotSet */) {
+            fontStyle = this._mainRule.fontStyle;
+        }
+        if (foreground === 0) {
+            foreground = this._mainRule.foreground;
+        }
+        if (background === 0) {
+            background = this._mainRule.background;
+        }
+        this._rulesWithParentScopes.push(new ThemeTrieElementRule(scopeDepth, parentScopes, fontStyle, foreground, background));
+    };
+    return ThemeTrieElement;
+}());
+exports.ThemeTrieElement = ThemeTrieElement;
+//# sourceMappingURL=theme.js.map
+});
+$load('./matcher', function(require, module, exports) {
+/*---------------------------------------------------------
+ * Copyright (C) Microsoft Corporation. All rights reserved.
+ *--------------------------------------------------------*/
+'use strict';
+Object.defineProperty(exports, "__esModule", { value: true });
+function createMatchers(selector, matchesName) {
+    var results = [];
+    var tokenizer = newTokenizer(selector);
+    var token = tokenizer.next();
+    while (token !== null) {
+        var priority = 0;
+        if (token.length === 2 && token.charAt(1) === ':') {
+            switch (token.charAt(0)) {
+                case 'R':
+                    priority = 1;
+                    break;
+                case 'L':
+                    priority = -1;
+                    break;
+                default:
+                    console.log("Unknown priority " + token + " in scope selector");
+            }
+            token = tokenizer.next();
+        }
+        var matcher = parseConjunction();
+        if (matcher) {
+            results.push({ matcher: matcher, priority: priority });
+        }
+        if (token !== ',') {
+            break;
+        }
+        token = tokenizer.next();
+    }
+    return results;
+    function parseOperand() {
+        if (token === '-') {
+            token = tokenizer.next();
+            var expressionToNegate_1 = parseOperand();
+            return function (matcherInput) { return !!expressionToNegate_1 && !expressionToNegate_1(matcherInput); };
+        }
+        if (token === '(') {
+            token = tokenizer.next();
+            var expressionInParents = parseInnerExpression();
+            if (token === ')') {
+                token = tokenizer.next();
+            }
+            return expressionInParents;
+        }
+        if (isIdentifier(token)) {
+            var identifiers_1 = [];
+            do {
+                identifiers_1.push(token);
+                token = tokenizer.next();
+            } while (isIdentifier(token));
+            return function (matcherInput) { return matchesName(identifiers_1, matcherInput); };
+        }
+        return null;
+    }
+    function parseConjunction() {
+        var matchers = [];
+        var matcher = parseOperand();
+        while (matcher) {
+            matchers.push(matcher);
+            matcher = parseOperand();
+        }
+        return function (matcherInput) { return matchers.every(function (matcher) { return matcher(matcherInput); }); }; // and
+    }
+    function parseInnerExpression() {
+        var matchers = [];
+        var matcher = parseConjunction();
+        while (matcher) {
+            matchers.push(matcher);
+            if (token === '|' || token === ',') {
+                do {
+                    token = tokenizer.next();
+                } while (token === '|' || token === ','); // ignore subsequent commas
+            }
+            else {
+                break;
+            }
+            matcher = parseConjunction();
+        }
+        return function (matcherInput) { return matchers.some(function (matcher) { return matcher(matcherInput); }); }; // or
+    }
+}
+exports.createMatchers = createMatchers;
+function isIdentifier(token) {
+    return !!token && !!token.match(/[\w\.:]+/);
+}
+function newTokenizer(input) {
+    var regex = /([LR]:|[\w\.:][\w\.:\-]*|[\,\|\-\(\)])/g;
+    var match = regex.exec(input);
+    return {
+        next: function () {
+            if (!match) {
+                return null;
+            }
+            var res = match[0];
+            match = regex.exec(input);
+            return res;
+        }
+    };
+}
+//# sourceMappingURL=matcher.js.map
+});
+$load('./debug', function(require, module, exports) {
+/*---------------------------------------------------------
+ * Copyright (C) Microsoft Corporation. All rights reserved.
+ *--------------------------------------------------------*/
+'use strict';
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DebugFlags = {
+    InDebugMode: (typeof process !== 'undefined' && !!process.env['VSCODE_TEXTMATE_DEBUG'])
+};
+//# sourceMappingURL=debug.js.map
+});
+$load('./json', function(require, module, exports) {
+/*---------------------------------------------------------
+ * Copyright (C) Microsoft Corporation. All rights reserved.
+ *--------------------------------------------------------*/
+'use strict';
+Object.defineProperty(exports, "__esModule", { value: true });
+function doFail(streamState, msg) {
+    // console.log('Near offset ' + streamState.pos + ': ' + msg + ' ~~~' + streamState.source.substr(streamState.pos, 50) + '~~~');
+    throw new Error('Near offset ' + streamState.pos + ': ' + msg + ' ~~~' + streamState.source.substr(streamState.pos, 50) + '~~~');
+}
+function parse(source, filename, withMetadata) {
+    var streamState = new JSONStreamState(source);
+    var token = new JSONToken();
+    var state = 0 /* ROOT_STATE */;
+    var cur = null;
+    var stateStack = [];
+    var objStack = [];
+    function pushState() {
+        stateStack.push(state);
+        objStack.push(cur);
+    }
+    function popState() {
+        state = stateStack.pop();
+        cur = objStack.pop();
+    }
+    function fail(msg) {
+        doFail(streamState, msg);
+    }
+    while (nextJSONToken(streamState, token)) {
+        if (state === 0 /* ROOT_STATE */) {
+            if (cur !== null) {
+                fail('too many constructs in root');
+            }
+            if (token.type === 3 /* LEFT_CURLY_BRACKET */) {
+                cur = {};
+                if (withMetadata) {
+                    cur.$vscodeTextmateLocation = token.toLocation(filename);
+                }
+                pushState();
+                state = 1 /* DICT_STATE */;
+                continue;
+            }
+            if (token.type === 2 /* LEFT_SQUARE_BRACKET */) {
+                cur = [];
+                pushState();
+                state = 4 /* ARR_STATE */;
+                continue;
+            }
+            fail('unexpected token in root');
+        }
+        if (state === 2 /* DICT_STATE_COMMA */) {
+            if (token.type === 5 /* RIGHT_CURLY_BRACKET */) {
+                popState();
+                continue;
+            }
+            if (token.type === 7 /* COMMA */) {
+                state = 3 /* DICT_STATE_NO_CLOSE */;
+                continue;
+            }
+            fail('expected , or }');
+        }
+        if (state === 1 /* DICT_STATE */ || state === 3 /* DICT_STATE_NO_CLOSE */) {
+            if (state === 1 /* DICT_STATE */ && token.type === 5 /* RIGHT_CURLY_BRACKET */) {
+                popState();
+                continue;
+            }
+            if (token.type === 1 /* STRING */) {
+                var keyValue = token.value;
+                if (!nextJSONToken(streamState, token) || token.type !== 6 /* COLON */) {
+                    fail('expected colon');
+                }
+                if (!nextJSONToken(streamState, token)) {
+                    fail('expected value');
+                }
+                state = 2 /* DICT_STATE_COMMA */;
+                if (token.type === 1 /* STRING */) {
+                    cur[keyValue] = token.value;
+                    continue;
+                }
+                if (token.type === 8 /* NULL */) {
+                    cur[keyValue] = null;
+                    continue;
+                }
+                if (token.type === 9 /* TRUE */) {
+                    cur[keyValue] = true;
+                    continue;
+                }
+                if (token.type === 10 /* FALSE */) {
+                    cur[keyValue] = false;
+                    continue;
+                }
+                if (token.type === 11 /* NUMBER */) {
+                    cur[keyValue] = parseFloat(token.value);
+                    continue;
+                }
+                if (token.type === 2 /* LEFT_SQUARE_BRACKET */) {
+                    var newArr = [];
+                    cur[keyValue] = newArr;
+                    pushState();
+                    state = 4 /* ARR_STATE */;
+                    cur = newArr;
+                    continue;
+                }
+                if (token.type === 3 /* LEFT_CURLY_BRACKET */) {
+                    var newDict = {};
+                    if (withMetadata) {
+                        newDict.$vscodeTextmateLocation = token.toLocation(filename);
+                    }
+                    cur[keyValue] = newDict;
+                    pushState();
+                    state = 1 /* DICT_STATE */;
+                    cur = newDict;
+                    continue;
+                }
+            }
+            fail('unexpected token in dict');
+        }
+        if (state === 5 /* ARR_STATE_COMMA */) {
+            if (token.type === 4 /* RIGHT_SQUARE_BRACKET */) {
+                popState();
+                continue;
+            }
+            if (token.type === 7 /* COMMA */) {
+                state = 6 /* ARR_STATE_NO_CLOSE */;
+                continue;
+            }
+            fail('expected , or ]');
+        }
+        if (state === 4 /* ARR_STATE */ || state === 6 /* ARR_STATE_NO_CLOSE */) {
+            if (state === 4 /* ARR_STATE */ && token.type === 4 /* RIGHT_SQUARE_BRACKET */) {
+                popState();
+                continue;
+            }
+            state = 5 /* ARR_STATE_COMMA */;
+            if (token.type === 1 /* STRING */) {
+                cur.push(token.value);
+                continue;
+            }
+            if (token.type === 8 /* NULL */) {
+                cur.push(null);
+                continue;
+            }
+            if (token.type === 9 /* TRUE */) {
+                cur.push(true);
+                continue;
+            }
+            if (token.type === 10 /* FALSE */) {
+                cur.push(false);
+                continue;
+            }
+            if (token.type === 11 /* NUMBER */) {
+                cur.push(parseFloat(token.value));
+                continue;
+            }
+            if (token.type === 2 /* LEFT_SQUARE_BRACKET */) {
+                var newArr = [];
+                cur.push(newArr);
+                pushState();
+                state = 4 /* ARR_STATE */;
+                cur = newArr;
+                continue;
+            }
+            if (token.type === 3 /* LEFT_CURLY_BRACKET */) {
+                var newDict = {};
+                if (withMetadata) {
+                    newDict.$vscodeTextmateLocation = token.toLocation(filename);
+                }
+                cur.push(newDict);
+                pushState();
+                state = 1 /* DICT_STATE */;
+                cur = newDict;
+                continue;
+            }
+            fail('unexpected token in array');
+        }
+        fail('unknown state');
+    }
+    if (objStack.length !== 0) {
+        fail('unclosed constructs');
+    }
+    return cur;
+}
+exports.parse = parse;
+var JSONStreamState = /** @class */ (function () {
+    function JSONStreamState(source) {
+        this.source = source;
+        this.pos = 0;
+        this.len = source.length;
+        this.line = 1;
+        this.char = 0;
+    }
+    return JSONStreamState;
+}());
+var JSONToken = /** @class */ (function () {
+    function JSONToken() {
+        this.value = null;
+        this.type = 0 /* UNKNOWN */;
+        this.offset = -1;
+        this.len = -1;
+        this.line = -1;
+        this.char = -1;
+    }
+    JSONToken.prototype.toLocation = function (filename) {
+        return {
+            filename: filename,
+            line: this.line,
+            char: this.char
+        };
+    };
+    return JSONToken;
+}());
+/**
+ * precondition: the string is known to be valid JSON (https://www.ietf.org/rfc/rfc4627.txt)
+ */
+function nextJSONToken(_state, _out) {
+    _out.value = null;
+    _out.type = 0 /* UNKNOWN */;
+    _out.offset = -1;
+    _out.len = -1;
+    _out.line = -1;
+    _out.char = -1;
+    var source = _state.source;
+    var pos = _state.pos;
+    var len = _state.len;
+    var line = _state.line;
+    var char = _state.char;
+    //------------------------ skip whitespace
+    var chCode;
+    do {
+        if (pos >= len) {
+            return false; /*EOS*/
+        }
+        chCode = source.charCodeAt(pos);
+        if (chCode === 32 /* SPACE */ || chCode === 9 /* HORIZONTAL_TAB */ || chCode === 13 /* CARRIAGE_RETURN */) {
+            // regular whitespace
+            pos++;
+            char++;
+            continue;
+        }
+        if (chCode === 10 /* LINE_FEED */) {
+            // newline
+            pos++;
+            line++;
+            char = 0;
+            continue;
+        }
+        // not whitespace
+        break;
+    } while (true);
+    _out.offset = pos;
+    _out.line = line;
+    _out.char = char;
+    if (chCode === 34 /* QUOTATION_MARK */) {
+        //------------------------ strings
+        _out.type = 1 /* STRING */;
+        pos++;
+        char++;
+        do {
+            if (pos >= len) {
+                return false; /*EOS*/
+            }
+            chCode = source.charCodeAt(pos);
+            pos++;
+            char++;
+            if (chCode === 92 /* BACKSLASH */) {
+                // skip next char
+                pos++;
+                char++;
+                continue;
+            }
+            if (chCode === 34 /* QUOTATION_MARK */) {
+                // end of the string
+                break;
+            }
+        } while (true);
+        _out.value = source.substring(_out.offset + 1, pos - 1).replace(/\\u([0-9A-Fa-f]{4})/g, function (_, m0) {
+            return String.fromCodePoint(parseInt(m0, 16));
+        }).replace(/\\(.)/g, function (_, m0) {
+            switch (m0) {
+                case '"': return '"';
+                case '\\': return '\\';
+                case '/': return '/';
+                case 'b': return '\b';
+                case 'f': return '\f';
+                case 'n': return '\n';
+                case 'r': return '\r';
+                case 't': return '\t';
+                default: doFail(_state, 'invalid escape sequence');
+            }
+            throw new Error('unreachable');
+        });
+    }
+    else if (chCode === 91 /* LEFT_SQUARE_BRACKET */) {
+        _out.type = 2 /* LEFT_SQUARE_BRACKET */;
+        pos++;
+        char++;
+    }
+    else if (chCode === 123 /* LEFT_CURLY_BRACKET */) {
+        _out.type = 3 /* LEFT_CURLY_BRACKET */;
+        pos++;
+        char++;
+    }
+    else if (chCode === 93 /* RIGHT_SQUARE_BRACKET */) {
+        _out.type = 4 /* RIGHT_SQUARE_BRACKET */;
+        pos++;
+        char++;
+    }
+    else if (chCode === 125 /* RIGHT_CURLY_BRACKET */) {
+        _out.type = 5 /* RIGHT_CURLY_BRACKET */;
+        pos++;
+        char++;
+    }
+    else if (chCode === 58 /* COLON */) {
+        _out.type = 6 /* COLON */;
+        pos++;
+        char++;
+    }
+    else if (chCode === 44 /* COMMA */) {
+        _out.type = 7 /* COMMA */;
+        pos++;
+        char++;
+    }
+    else if (chCode === 110 /* n */) {
+        //------------------------ null
+        _out.type = 8 /* NULL */;
+        pos++;
+        char++;
+        chCode = source.charCodeAt(pos);
+        if (chCode !== 117 /* u */) {
+            return false; /* INVALID */
+        }
+        pos++;
+        char++;
+        chCode = source.charCodeAt(pos);
+        if (chCode !== 108 /* l */) {
+            return false; /* INVALID */
+        }
+        pos++;
+        char++;
+        chCode = source.charCodeAt(pos);
+        if (chCode !== 108 /* l */) {
+            return false; /* INVALID */
+        }
+        pos++;
+        char++;
+    }
+    else if (chCode === 116 /* t */) {
+        //------------------------ true
+        _out.type = 9 /* TRUE */;
+        pos++;
+        char++;
+        chCode = source.charCodeAt(pos);
+        if (chCode !== 114 /* r */) {
+            return false; /* INVALID */
+        }
+        pos++;
+        char++;
+        chCode = source.charCodeAt(pos);
+        if (chCode !== 117 /* u */) {
+            return false; /* INVALID */
+        }
+        pos++;
+        char++;
+        chCode = source.charCodeAt(pos);
+        if (chCode !== 101 /* e */) {
+            return false; /* INVALID */
+        }
+        pos++;
+        char++;
+    }
+    else if (chCode === 102 /* f */) {
+        //------------------------ false
+        _out.type = 10 /* FALSE */;
+        pos++;
+        char++;
+        chCode = source.charCodeAt(pos);
+        if (chCode !== 97 /* a */) {
+            return false; /* INVALID */
+        }
+        pos++;
+        char++;
+        chCode = source.charCodeAt(pos);
+        if (chCode !== 108 /* l */) {
+            return false; /* INVALID */
+        }
+        pos++;
+        char++;
+        chCode = source.charCodeAt(pos);
+        if (chCode !== 115 /* s */) {
+            return false; /* INVALID */
+        }
+        pos++;
+        char++;
+        chCode = source.charCodeAt(pos);
+        if (chCode !== 101 /* e */) {
+            return false; /* INVALID */
+        }
+        pos++;
+        char++;
+    }
+    else {
+        //------------------------ numbers
+        _out.type = 11 /* NUMBER */;
+        do {
+            if (pos >= len) {
+                return false; /*EOS*/
+            }
+            chCode = source.charCodeAt(pos);
+            if (chCode === 46 /* DOT */
+                || (chCode >= 48 /* D0 */ && chCode <= 57 /* D9 */)
+                || (chCode === 101 /* e */ || chCode === 69 /* E */)
+                || (chCode === 45 /* MINUS */ || chCode === 43 /* PLUS */)) {
+                // looks like a piece of a number
+                pos++;
+                char++;
+                continue;
+            }
+            // pos--; char--;
+            break;
+        } while (true);
+    }
+    _out.len = pos - _out.offset;
+    if (_out.value === null) {
+        _out.value = source.substr(_out.offset, _out.len);
+    }
+    _state.pos = pos;
+    _state.line = line;
+    _state.char = char;
+    // console.log('PRODUCING TOKEN: ', _out.value, JSONTokenType[_out.type]);
+    return true;
+}
+//# sourceMappingURL=json.js.map
+});
+$load('./plist', function(require, module, exports) {
+/*---------------------------------------------------------
+ * Copyright (C) Microsoft Corporation. All rights reserved.
+ *--------------------------------------------------------*/
+'use strict';
+Object.defineProperty(exports, "__esModule", { value: true });
+function parseWithLocation(content, filename, locationKeyName) {
+    return _parse(content, filename, locationKeyName);
+}
+exports.parseWithLocation = parseWithLocation;
+/**
+ * A very fast plist parser
+ */
+function parse(content) {
+    return _parse(content, null, null);
+}
+exports.parse = parse;
+function _parse(content, filename, locationKeyName) {
+    var len = content.length;
+    var pos = 0;
+    var line = 1;
+    var char = 0;
+    // Skip UTF8 BOM
+    if (len > 0 && content.charCodeAt(0) === 65279 /* BOM */) {
+        pos = 1;
+    }
+    function advancePosBy(by) {
+        if (locationKeyName === null) {
+            pos = pos + by;
+        }
+        else {
+            while (by > 0) {
+                var chCode = content.charCodeAt(pos);
+                if (chCode === 10 /* LINE_FEED */) {
+                    pos++;
+                    line++;
+                    char = 0;
+                }
+                else {
+                    pos++;
+                    char++;
+                }
+                by--;
+            }
+        }
+    }
+    function advancePosTo(to) {
+        if (locationKeyName === null) {
+            pos = to;
+        }
+        else {
+            advancePosBy(to - pos);
+        }
+    }
+    function skipWhitespace() {
+        while (pos < len) {
+            var chCode = content.charCodeAt(pos);
+            if (chCode !== 32 /* SPACE */ && chCode !== 9 /* TAB */ && chCode !== 13 /* CARRIAGE_RETURN */ && chCode !== 10 /* LINE_FEED */) {
+                break;
+            }
+            advancePosBy(1);
+        }
+    }
+    function advanceIfStartsWith(str) {
+        if (content.substr(pos, str.length) === str) {
+            advancePosBy(str.length);
+            return true;
+        }
+        return false;
+    }
+    function advanceUntil(str) {
+        var nextOccurence = content.indexOf(str, pos);
+        if (nextOccurence !== -1) {
+            advancePosTo(nextOccurence + str.length);
+        }
+        else {
+            // EOF
+            advancePosTo(len);
+        }
+    }
+    function captureUntil(str) {
+        var nextOccurence = content.indexOf(str, pos);
+        if (nextOccurence !== -1) {
+            var r = content.substring(pos, nextOccurence);
+            advancePosTo(nextOccurence + str.length);
+            return r;
+        }
+        else {
+            // EOF
+            var r = content.substr(pos);
+            advancePosTo(len);
+            return r;
+        }
+    }
+    var state = 0 /* ROOT_STATE */;
+    var cur = null;
+    var stateStack = [];
+    var objStack = [];
+    var curKey = null;
+    function pushState(newState, newCur) {
+        stateStack.push(state);
+        objStack.push(cur);
+        state = newState;
+        cur = newCur;
+    }
+    function popState() {
+        if (stateStack.length === 0) {
+            return fail('illegal state stack');
+        }
+        state = stateStack.pop();
+        cur = objStack.pop();
+    }
+    function fail(msg) {
+        throw new Error('Near offset ' + pos + ': ' + msg + ' ~~~' + content.substr(pos, 50) + '~~~');
+    }
+    var dictState = {
+        enterDict: function () {
+            if (curKey === null) {
+                return fail('missing <key>');
+            }
+            var newDict = {};
+            if (locationKeyName !== null) {
+                newDict[locationKeyName] = {
+                    filename: filename,
+                    line: line,
+                    char: char
+                };
+            }
+            cur[curKey] = newDict;
+            curKey = null;
+            pushState(1 /* DICT_STATE */, newDict);
+        },
+        enterArray: function () {
+            if (curKey === null) {
+                return fail('missing <key>');
+            }
+            var newArr = [];
+            cur[curKey] = newArr;
+            curKey = null;
+            pushState(2 /* ARR_STATE */, newArr);
+        }
+    };
+    var arrState = {
+        enterDict: function () {
+            var newDict = {};
+            if (locationKeyName !== null) {
+                newDict[locationKeyName] = {
+                    filename: filename,
+                    line: line,
+                    char: char
+                };
+            }
+            cur.push(newDict);
+            pushState(1 /* DICT_STATE */, newDict);
+        },
+        enterArray: function () {
+            var newArr = [];
+            cur.push(newArr);
+            pushState(2 /* ARR_STATE */, newArr);
+        }
+    };
+    function enterDict() {
+        if (state === 1 /* DICT_STATE */) {
+            dictState.enterDict();
+        }
+        else if (state === 2 /* ARR_STATE */) {
+            arrState.enterDict();
+        }
+        else { // ROOT_STATE
+            cur = {};
+            if (locationKeyName !== null) {
+                cur[locationKeyName] = {
+                    filename: filename,
+                    line: line,
+                    char: char
+                };
+            }
+            pushState(1 /* DICT_STATE */, cur);
+        }
+    }
+    function leaveDict() {
+        if (state === 1 /* DICT_STATE */) {
+            popState();
+        }
+        else if (state === 2 /* ARR_STATE */) {
+            return fail('unexpected </dict>');
+        }
+        else { // ROOT_STATE
+            return fail('unexpected </dict>');
+        }
+    }
+    function enterArray() {
+        if (state === 1 /* DICT_STATE */) {
+            dictState.enterArray();
+        }
+        else if (state === 2 /* ARR_STATE */) {
+            arrState.enterArray();
+        }
+        else { // ROOT_STATE
+            cur = [];
+            pushState(2 /* ARR_STATE */, cur);
+        }
+    }
+    function leaveArray() {
+        if (state === 1 /* DICT_STATE */) {
+            return fail('unexpected </array>');
+        }
+        else if (state === 2 /* ARR_STATE */) {
+            popState();
+        }
+        else { // ROOT_STATE
+            return fail('unexpected </array>');
+        }
+    }
+    function acceptKey(val) {
+        if (state === 1 /* DICT_STATE */) {
+            if (curKey !== null) {
+                return fail('too many <key>');
+            }
+            curKey = val;
+        }
+        else if (state === 2 /* ARR_STATE */) {
+            return fail('unexpected <key>');
+        }
+        else { // ROOT_STATE
+            return fail('unexpected <key>');
+        }
+    }
+    function acceptString(val) {
+        if (state === 1 /* DICT_STATE */) {
+            if (curKey === null) {
+                return fail('missing <key>');
+            }
+            cur[curKey] = val;
+            curKey = null;
+        }
+        else if (state === 2 /* ARR_STATE */) {
+            cur.push(val);
+        }
+        else { // ROOT_STATE
+            cur = val;
+        }
+    }
+    function acceptReal(val) {
+        if (isNaN(val)) {
+            return fail('cannot parse float');
+        }
+        if (state === 1 /* DICT_STATE */) {
+            if (curKey === null) {
+                return fail('missing <key>');
+            }
+            cur[curKey] = val;
+            curKey = null;
+        }
+        else if (state === 2 /* ARR_STATE */) {
+            cur.push(val);
+        }
+        else { // ROOT_STATE
+            cur = val;
+        }
+    }
+    function acceptInteger(val) {
+        if (isNaN(val)) {
+            return fail('cannot parse integer');
+        }
+        if (state === 1 /* DICT_STATE */) {
+            if (curKey === null) {
+                return fail('missing <key>');
+            }
+            cur[curKey] = val;
+            curKey = null;
+        }
+        else if (state === 2 /* ARR_STATE */) {
+            cur.push(val);
+        }
+        else { // ROOT_STATE
+            cur = val;
+        }
+    }
+    function acceptDate(val) {
+        if (state === 1 /* DICT_STATE */) {
+            if (curKey === null) {
+                return fail('missing <key>');
+            }
+            cur[curKey] = val;
+            curKey = null;
+        }
+        else if (state === 2 /* ARR_STATE */) {
+            cur.push(val);
+        }
+        else { // ROOT_STATE
+            cur = val;
+        }
+    }
+    function acceptData(val) {
+        if (state === 1 /* DICT_STATE */) {
+            if (curKey === null) {
+                return fail('missing <key>');
+            }
+            cur[curKey] = val;
+            curKey = null;
+        }
+        else if (state === 2 /* ARR_STATE */) {
+            cur.push(val);
+        }
+        else { // ROOT_STATE
+            cur = val;
+        }
+    }
+    function acceptBool(val) {
+        if (state === 1 /* DICT_STATE */) {
+            if (curKey === null) {
+                return fail('missing <key>');
+            }
+            cur[curKey] = val;
+            curKey = null;
+        }
+        else if (state === 2 /* ARR_STATE */) {
+            cur.push(val);
+        }
+        else { // ROOT_STATE
+            cur = val;
+        }
+    }
+    function escapeVal(str) {
+        return str.replace(/&#([0-9]+);/g, function (_, m0) {
+            return String.fromCodePoint(parseInt(m0, 10));
+        }).replace(/&#x([0-9a-f]+);/g, function (_, m0) {
+            return String.fromCodePoint(parseInt(m0, 16));
+        }).replace(/&amp;|&lt;|&gt;|&quot;|&apos;/g, function (_) {
+            switch (_) {
+                case '&amp;': return '&';
+                case '&lt;': return '<';
+                case '&gt;': return '>';
+                case '&quot;': return '"';
+                case '&apos;': return '\'';
+            }
+            return _;
+        });
+    }
+    function parseOpenTag() {
+        var r = captureUntil('>');
+        var isClosed = false;
+        if (r.charCodeAt(r.length - 1) === 47 /* SLASH */) {
+            isClosed = true;
+            r = r.substring(0, r.length - 1);
+        }
+        return {
+            name: r.trim(),
+            isClosed: isClosed
+        };
+    }
+    function parseTagValue(tag) {
+        if (tag.isClosed) {
+            return '';
+        }
+        var val = captureUntil('</');
+        advanceUntil('>');
+        return escapeVal(val);
+    }
+    while (pos < len) {
+        skipWhitespace();
+        if (pos >= len) {
+            break;
+        }
+        var chCode = content.charCodeAt(pos);
+        advancePosBy(1);
+        if (chCode !== 60 /* LESS_THAN */) {
+            return fail('expected <');
+        }
+        if (pos >= len) {
+            return fail('unexpected end of input');
+        }
+        var peekChCode = content.charCodeAt(pos);
+        if (peekChCode === 63 /* QUESTION_MARK */) {
+            advancePosBy(1);
+            advanceUntil('?>');
+            continue;
+        }
+        if (peekChCode === 33 /* EXCLAMATION_MARK */) {
+            advancePosBy(1);
+            if (advanceIfStartsWith('--')) {
+                advanceUntil('-->');
+                continue;
+            }
+            advanceUntil('>');
+            continue;
+        }
+        if (peekChCode === 47 /* SLASH */) {
+            advancePosBy(1);
+            skipWhitespace();
+            if (advanceIfStartsWith('plist')) {
+                advanceUntil('>');
+                continue;
+            }
+            if (advanceIfStartsWith('dict')) {
+                advanceUntil('>');
+                leaveDict();
+                continue;
+            }
+            if (advanceIfStartsWith('array')) {
+                advanceUntil('>');
+                leaveArray();
+                continue;
+            }
+            return fail('unexpected closed tag');
+        }
+        var tag = parseOpenTag();
+        switch (tag.name) {
+            case 'dict':
+                enterDict();
+                if (tag.isClosed) {
+                    leaveDict();
+                }
+                continue;
+            case 'array':
+                enterArray();
+                if (tag.isClosed) {
+                    leaveArray();
+                }
+                continue;
+            case 'key':
+                acceptKey(parseTagValue(tag));
+                continue;
+            case 'string':
+                acceptString(parseTagValue(tag));
+                continue;
+            case 'real':
+                acceptReal(parseFloat(parseTagValue(tag)));
+                continue;
+            case 'integer':
+                acceptInteger(parseInt(parseTagValue(tag), 10));
+                continue;
+            case 'date':
+                acceptDate(new Date(parseTagValue(tag)));
+                continue;
+            case 'data':
+                acceptData(parseTagValue(tag));
+                continue;
+            case 'true':
+                parseTagValue(tag);
+                acceptBool(true);
+                continue;
+            case 'false':
+                parseTagValue(tag);
+                acceptBool(false);
+                continue;
+        }
+        if (/^plist/.test(tag.name)) {
+            continue;
+        }
+        return fail('unexpected opened tag ' + tag.name);
+    }
+    return cur;
+}
+//# sourceMappingURL=plist.js.map
+});
+$load('./grammarReader', function(require, module, exports) {
+/*---------------------------------------------------------
+ * Copyright (C) Microsoft Corporation. All rights reserved.
+ *--------------------------------------------------------*/
+'use strict';
+Object.defineProperty(exports, "__esModule", { value: true });
+var plist = require("./plist");
+var debug_1 = require("./debug");
+var json_1 = require("./json");
+function parseRawGrammar(content, filePath) {
+    if (filePath === void 0) { filePath = null; }
+    if (filePath !== null && /\.json$/.test(filePath)) {
+        return parseJSONGrammar(content, filePath);
+    }
+    return parsePLISTGrammar(content, filePath);
+}
+exports.parseRawGrammar = parseRawGrammar;
+function parseJSONGrammar(contents, filename) {
+    if (debug_1.DebugFlags.InDebugMode) {
+        return json_1.parse(contents, filename, true);
+    }
+    return JSON.parse(contents);
+}
+function parsePLISTGrammar(contents, filename) {
+    if (debug_1.DebugFlags.InDebugMode) {
+        return plist.parseWithLocation(contents, filename, '$vscodeTextmateLocation');
+    }
+    return plist.parse(contents);
+}
+//# sourceMappingURL=grammarReader.js.map
+});
+$load('./rule', function(require, module, exports) {
+/*---------------------------------------------------------
+ * Copyright (C) Microsoft Corporation. All rights reserved.
+ *--------------------------------------------------------*/
+'use strict';
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -4744,21 +5861,1850 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
+Object.defineProperty(exports, "__esModule", { value: true });
+var utils_1 = require("./utils");
+var HAS_BACK_REFERENCES = /\\(\d+)/;
+var BACK_REFERENCING_END = /\\(\d+)/g;
+var Rule = /** @class */ (function () {
+    function Rule($location, id, name, contentName) {
+        this.$location = $location;
+        this.id = id;
+        this._name = name || null;
+        this._nameIsCapturing = utils_1.RegexSource.hasCaptures(this._name);
+        this._contentName = contentName || null;
+        this._contentNameIsCapturing = utils_1.RegexSource.hasCaptures(this._contentName);
+    }
+    Object.defineProperty(Rule.prototype, "debugName", {
+        get: function () {
+            var location = this.$location ? utils_1.basename(this.$location.filename) + ":" + this.$location.line : 'unknown';
+            return this.constructor.name + "#" + this.id + " @ " + location;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Rule.prototype.getName = function (lineText, captureIndices) {
+        if (!this._nameIsCapturing || this._name === null || lineText === null || captureIndices === null) {
+            return this._name;
+        }
+        return utils_1.RegexSource.replaceCaptures(this._name, lineText, captureIndices);
+    };
+    Rule.prototype.getContentName = function (lineText, captureIndices) {
+        if (!this._contentNameIsCapturing || this._contentName === null) {
+            return this._contentName;
+        }
+        return utils_1.RegexSource.replaceCaptures(this._contentName, lineText, captureIndices);
+    };
+    return Rule;
+}());
+exports.Rule = Rule;
+var CaptureRule = /** @class */ (function (_super) {
+    __extends(CaptureRule, _super);
+    function CaptureRule($location, id, name, contentName, retokenizeCapturedWithRuleId) {
+        var _this = _super.call(this, $location, id, name, contentName) || this;
+        _this.retokenizeCapturedWithRuleId = retokenizeCapturedWithRuleId;
+        return _this;
+    }
+    CaptureRule.prototype.collectPatternsRecursive = function (grammar, out, isFirst) {
+        throw new Error('Not supported!');
+    };
+    CaptureRule.prototype.compile = function (grammar, endRegexSource, allowA, allowG) {
+        throw new Error('Not supported!');
+    };
+    return CaptureRule;
+}(Rule));
+exports.CaptureRule = CaptureRule;
+var RegExpSource = /** @class */ (function () {
+    function RegExpSource(regExpSource, ruleId, handleAnchors) {
+        if (handleAnchors === void 0) { handleAnchors = true; }
+        if (handleAnchors) {
+            if (regExpSource) {
+                var len = regExpSource.length;
+                var lastPushedPos = 0;
+                var output = [];
+                var hasAnchor = false;
+                for (var pos = 0; pos < len; pos++) {
+                    var ch = regExpSource.charAt(pos);
+                    if (ch === '\\') {
+                        if (pos + 1 < len) {
+                            var nextCh = regExpSource.charAt(pos + 1);
+                            if (nextCh === 'z') {
+                                output.push(regExpSource.substring(lastPushedPos, pos));
+                                output.push('$(?!\\n)(?<!\\n)');
+                                lastPushedPos = pos + 2;
+                            }
+                            else if (nextCh === 'A' || nextCh === 'G') {
+                                hasAnchor = true;
+                            }
+                            pos++;
+                        }
+                    }
+                }
+                this.hasAnchor = hasAnchor;
+                if (lastPushedPos === 0) {
+                    // No \z hit
+                    this.source = regExpSource;
+                }
+                else {
+                    output.push(regExpSource.substring(lastPushedPos, len));
+                    this.source = output.join('');
+                }
+            }
+            else {
+                this.hasAnchor = false;
+                this.source = regExpSource;
+            }
+        }
+        else {
+            this.hasAnchor = false;
+            this.source = regExpSource;
+        }
+        if (this.hasAnchor) {
+            this._anchorCache = this._buildAnchorCache();
+        }
+        else {
+            this._anchorCache = null;
+        }
+        this.ruleId = ruleId;
+        this.hasBackReferences = HAS_BACK_REFERENCES.test(this.source);
+        // console.log('input: ' + regExpSource + ' => ' + this.source + ', ' + this.hasAnchor);
+    }
+    RegExpSource.prototype.clone = function () {
+        return new RegExpSource(this.source, this.ruleId, true);
+    };
+    RegExpSource.prototype.setSource = function (newSource) {
+        if (this.source === newSource) {
+            return;
+        }
+        this.source = newSource;
+        if (this.hasAnchor) {
+            this._anchorCache = this._buildAnchorCache();
+        }
+    };
+    RegExpSource.prototype.resolveBackReferences = function (lineText, captureIndices) {
+        var capturedValues = captureIndices.map(function (capture) {
+            return lineText.substring(capture.start, capture.end);
+        });
+        BACK_REFERENCING_END.lastIndex = 0;
+        return this.source.replace(BACK_REFERENCING_END, function (match, g1) {
+            return escapeRegExpCharacters(capturedValues[parseInt(g1, 10)] || '');
+        });
+    };
+    RegExpSource.prototype._buildAnchorCache = function () {
+        var A0_G0_result = [];
+        var A0_G1_result = [];
+        var A1_G0_result = [];
+        var A1_G1_result = [];
+        var pos, len, ch, nextCh;
+        for (pos = 0, len = this.source.length; pos < len; pos++) {
+            ch = this.source.charAt(pos);
+            A0_G0_result[pos] = ch;
+            A0_G1_result[pos] = ch;
+            A1_G0_result[pos] = ch;
+            A1_G1_result[pos] = ch;
+            if (ch === '\\') {
+                if (pos + 1 < len) {
+                    nextCh = this.source.charAt(pos + 1);
+                    if (nextCh === 'A') {
+                        A0_G0_result[pos + 1] = '\uFFFF';
+                        A0_G1_result[pos + 1] = '\uFFFF';
+                        A1_G0_result[pos + 1] = 'A';
+                        A1_G1_result[pos + 1] = 'A';
+                    }
+                    else if (nextCh === 'G') {
+                        A0_G0_result[pos + 1] = '\uFFFF';
+                        A0_G1_result[pos + 1] = 'G';
+                        A1_G0_result[pos + 1] = '\uFFFF';
+                        A1_G1_result[pos + 1] = 'G';
+                    }
+                    else {
+                        A0_G0_result[pos + 1] = nextCh;
+                        A0_G1_result[pos + 1] = nextCh;
+                        A1_G0_result[pos + 1] = nextCh;
+                        A1_G1_result[pos + 1] = nextCh;
+                    }
+                    pos++;
+                }
+            }
+        }
+        return {
+            A0_G0: A0_G0_result.join(''),
+            A0_G1: A0_G1_result.join(''),
+            A1_G0: A1_G0_result.join(''),
+            A1_G1: A1_G1_result.join('')
+        };
+    };
+    RegExpSource.prototype.resolveAnchors = function (allowA, allowG) {
+        if (!this.hasAnchor || !this._anchorCache) {
+            return this.source;
+        }
+        if (allowA) {
+            if (allowG) {
+                return this._anchorCache.A1_G1;
+            }
+            else {
+                return this._anchorCache.A1_G0;
+            }
+        }
+        else {
+            if (allowG) {
+                return this._anchorCache.A0_G1;
+            }
+            else {
+                return this._anchorCache.A0_G0;
+            }
+        }
+    };
+    return RegExpSource;
+}());
+exports.RegExpSource = RegExpSource;
+var RegExpSourceList = /** @class */ (function () {
+    function RegExpSourceList() {
+        this._items = [];
+        this._hasAnchors = false;
+        this._cached = null;
+        this._anchorCache = {
+            A0_G0: null,
+            A0_G1: null,
+            A1_G0: null,
+            A1_G1: null
+        };
+    }
+    RegExpSourceList.prototype.push = function (item) {
+        this._items.push(item);
+        this._hasAnchors = this._hasAnchors || item.hasAnchor;
+    };
+    RegExpSourceList.prototype.unshift = function (item) {
+        this._items.unshift(item);
+        this._hasAnchors = this._hasAnchors || item.hasAnchor;
+    };
+    RegExpSourceList.prototype.length = function () {
+        return this._items.length;
+    };
+    RegExpSourceList.prototype.setSource = function (index, newSource) {
+        if (this._items[index].source !== newSource) {
+            // bust the cache
+            this._cached = null;
+            this._anchorCache.A0_G0 = null;
+            this._anchorCache.A0_G1 = null;
+            this._anchorCache.A1_G0 = null;
+            this._anchorCache.A1_G1 = null;
+            this._items[index].setSource(newSource);
+        }
+    };
+    RegExpSourceList.prototype.compile = function (onigLib, allowA, allowG) {
+        if (!this._hasAnchors) {
+            if (!this._cached) {
+                var regExps = this._items.map(function (e) { return e.source; });
+                this._cached = {
+                    scanner: onigLib.createOnigScanner(regExps),
+                    rules: this._items.map(function (e) { return e.ruleId; }),
+                    debugRegExps: regExps
+                };
+            }
+            return this._cached;
+        }
+        else {
+            if (allowA) {
+                if (allowG) {
+                    if (!this._anchorCache.A1_G1) {
+                        this._anchorCache.A1_G1 = this._resolveAnchors(onigLib, allowA, allowG);
+                    }
+                    return this._anchorCache.A1_G1;
+                }
+                else {
+                    if (!this._anchorCache.A1_G0) {
+                        this._anchorCache.A1_G0 = this._resolveAnchors(onigLib, allowA, allowG);
+                    }
+                    return this._anchorCache.A1_G0;
+                }
+            }
+            else {
+                if (allowG) {
+                    if (!this._anchorCache.A0_G1) {
+                        this._anchorCache.A0_G1 = this._resolveAnchors(onigLib, allowA, allowG);
+                    }
+                    return this._anchorCache.A0_G1;
+                }
+                else {
+                    if (!this._anchorCache.A0_G0) {
+                        this._anchorCache.A0_G0 = this._resolveAnchors(onigLib, allowA, allowG);
+                    }
+                    return this._anchorCache.A0_G0;
+                }
+            }
+        }
+    };
+    RegExpSourceList.prototype._resolveAnchors = function (onigLib, allowA, allowG) {
+        var regExps = this._items.map(function (e) { return e.resolveAnchors(allowA, allowG); });
+        return {
+            scanner: onigLib.createOnigScanner(regExps),
+            rules: this._items.map(function (e) { return e.ruleId; }),
+            debugRegExps: regExps
+        };
+    };
+    return RegExpSourceList;
+}());
+exports.RegExpSourceList = RegExpSourceList;
+var MatchRule = /** @class */ (function (_super) {
+    __extends(MatchRule, _super);
+    function MatchRule($location, id, name, match, captures) {
+        var _this = _super.call(this, $location, id, name, null) || this;
+        _this._match = new RegExpSource(match, _this.id);
+        _this.captures = captures;
+        _this._cachedCompiledPatterns = null;
+        return _this;
+    }
+    Object.defineProperty(MatchRule.prototype, "debugMatchRegExp", {
+        get: function () {
+            return "" + this._match.source;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    MatchRule.prototype.collectPatternsRecursive = function (grammar, out, isFirst) {
+        out.push(this._match);
+    };
+    MatchRule.prototype.compile = function (grammar, endRegexSource, allowA, allowG) {
+        if (!this._cachedCompiledPatterns) {
+            this._cachedCompiledPatterns = new RegExpSourceList();
+            this.collectPatternsRecursive(grammar, this._cachedCompiledPatterns, true);
+        }
+        return this._cachedCompiledPatterns.compile(grammar, allowA, allowG);
+    };
+    return MatchRule;
+}(Rule));
+exports.MatchRule = MatchRule;
+var IncludeOnlyRule = /** @class */ (function (_super) {
+    __extends(IncludeOnlyRule, _super);
+    function IncludeOnlyRule($location, id, name, contentName, patterns) {
+        var _this = _super.call(this, $location, id, name, contentName) || this;
+        _this.patterns = patterns.patterns;
+        _this.hasMissingPatterns = patterns.hasMissingPatterns;
+        _this._cachedCompiledPatterns = null;
+        return _this;
+    }
+    IncludeOnlyRule.prototype.collectPatternsRecursive = function (grammar, out, isFirst) {
+        var i, len, rule;
+        for (i = 0, len = this.patterns.length; i < len; i++) {
+            rule = grammar.getRule(this.patterns[i]);
+            rule.collectPatternsRecursive(grammar, out, false);
+        }
+    };
+    IncludeOnlyRule.prototype.compile = function (grammar, endRegexSource, allowA, allowG) {
+        if (!this._cachedCompiledPatterns) {
+            this._cachedCompiledPatterns = new RegExpSourceList();
+            this.collectPatternsRecursive(grammar, this._cachedCompiledPatterns, true);
+        }
+        return this._cachedCompiledPatterns.compile(grammar, allowA, allowG);
+    };
+    return IncludeOnlyRule;
+}(Rule));
+exports.IncludeOnlyRule = IncludeOnlyRule;
+function escapeRegExpCharacters(value) {
+    return value.replace(/[\-\\\{\}\*\+\?\|\^\$\.\,\[\]\(\)\#\s]/g, '\\$&');
+}
+var BeginEndRule = /** @class */ (function (_super) {
+    __extends(BeginEndRule, _super);
+    function BeginEndRule($location, id, name, contentName, begin, beginCaptures, end, endCaptures, applyEndPatternLast, patterns) {
+        var _this = _super.call(this, $location, id, name, contentName) || this;
+        _this._begin = new RegExpSource(begin, _this.id);
+        _this.beginCaptures = beginCaptures;
+        _this._end = new RegExpSource(end ? end : '\uFFFF', -1);
+        _this.endHasBackReferences = _this._end.hasBackReferences;
+        _this.endCaptures = endCaptures;
+        _this.applyEndPatternLast = applyEndPatternLast || false;
+        _this.patterns = patterns.patterns;
+        _this.hasMissingPatterns = patterns.hasMissingPatterns;
+        _this._cachedCompiledPatterns = null;
+        return _this;
+    }
+    Object.defineProperty(BeginEndRule.prototype, "debugBeginRegExp", {
+        get: function () {
+            return "" + this._begin.source;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(BeginEndRule.prototype, "debugEndRegExp", {
+        get: function () {
+            return "" + this._end.source;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    BeginEndRule.prototype.getEndWithResolvedBackReferences = function (lineText, captureIndices) {
+        return this._end.resolveBackReferences(lineText, captureIndices);
+    };
+    BeginEndRule.prototype.collectPatternsRecursive = function (grammar, out, isFirst) {
+        if (isFirst) {
+            var i = void 0, len = void 0, rule = void 0;
+            for (i = 0, len = this.patterns.length; i < len; i++) {
+                rule = grammar.getRule(this.patterns[i]);
+                rule.collectPatternsRecursive(grammar, out, false);
+            }
+        }
+        else {
+            out.push(this._begin);
+        }
+    };
+    BeginEndRule.prototype.compile = function (grammar, endRegexSource, allowA, allowG) {
+        if (!this._cachedCompiledPatterns) {
+            this._cachedCompiledPatterns = new RegExpSourceList();
+            this.collectPatternsRecursive(grammar, this._cachedCompiledPatterns, true);
+            if (this.applyEndPatternLast) {
+                this._cachedCompiledPatterns.push(this._end.hasBackReferences ? this._end.clone() : this._end);
+            }
+            else {
+                this._cachedCompiledPatterns.unshift(this._end.hasBackReferences ? this._end.clone() : this._end);
+            }
+        }
+        if (this._end.hasBackReferences) {
+            if (this.applyEndPatternLast) {
+                this._cachedCompiledPatterns.setSource(this._cachedCompiledPatterns.length() - 1, endRegexSource);
+            }
+            else {
+                this._cachedCompiledPatterns.setSource(0, endRegexSource);
+            }
+        }
+        return this._cachedCompiledPatterns.compile(grammar, allowA, allowG);
+    };
+    return BeginEndRule;
+}(Rule));
+exports.BeginEndRule = BeginEndRule;
+var BeginWhileRule = /** @class */ (function (_super) {
+    __extends(BeginWhileRule, _super);
+    function BeginWhileRule($location, id, name, contentName, begin, beginCaptures, _while, whileCaptures, patterns) {
+        var _this = _super.call(this, $location, id, name, contentName) || this;
+        _this._begin = new RegExpSource(begin, _this.id);
+        _this.beginCaptures = beginCaptures;
+        _this.whileCaptures = whileCaptures;
+        _this._while = new RegExpSource(_while, -2);
+        _this.whileHasBackReferences = _this._while.hasBackReferences;
+        _this.patterns = patterns.patterns;
+        _this.hasMissingPatterns = patterns.hasMissingPatterns;
+        _this._cachedCompiledPatterns = null;
+        _this._cachedCompiledWhilePatterns = null;
+        return _this;
+    }
+    Object.defineProperty(BeginWhileRule.prototype, "debugBeginRegExp", {
+        get: function () {
+            return "" + this._begin.source;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(BeginWhileRule.prototype, "debugWhileRegExp", {
+        get: function () {
+            return "" + this._while.source;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    BeginWhileRule.prototype.getWhileWithResolvedBackReferences = function (lineText, captureIndices) {
+        return this._while.resolveBackReferences(lineText, captureIndices);
+    };
+    BeginWhileRule.prototype.collectPatternsRecursive = function (grammar, out, isFirst) {
+        if (isFirst) {
+            var i = void 0, len = void 0, rule = void 0;
+            for (i = 0, len = this.patterns.length; i < len; i++) {
+                rule = grammar.getRule(this.patterns[i]);
+                rule.collectPatternsRecursive(grammar, out, false);
+            }
+        }
+        else {
+            out.push(this._begin);
+        }
+    };
+    BeginWhileRule.prototype.compile = function (grammar, endRegexSource, allowA, allowG) {
+        if (!this._cachedCompiledPatterns) {
+            this._cachedCompiledPatterns = new RegExpSourceList();
+            this.collectPatternsRecursive(grammar, this._cachedCompiledPatterns, true);
+        }
+        return this._cachedCompiledPatterns.compile(grammar, allowA, allowG);
+    };
+    BeginWhileRule.prototype.compileWhile = function (grammar, endRegexSource, allowA, allowG) {
+        if (!this._cachedCompiledWhilePatterns) {
+            this._cachedCompiledWhilePatterns = new RegExpSourceList();
+            this._cachedCompiledWhilePatterns.push(this._while.hasBackReferences ? this._while.clone() : this._while);
+        }
+        if (this._while.hasBackReferences) {
+            this._cachedCompiledWhilePatterns.setSource(0, endRegexSource ? endRegexSource : '\uFFFF');
+        }
+        return this._cachedCompiledWhilePatterns.compile(grammar, allowA, allowG);
+    };
+    return BeginWhileRule;
+}(Rule));
+exports.BeginWhileRule = BeginWhileRule;
+var RuleFactory = /** @class */ (function () {
+    function RuleFactory() {
+    }
+    RuleFactory.createCaptureRule = function (helper, $location, name, contentName, retokenizeCapturedWithRuleId) {
+        return helper.registerRule(function (id) {
+            return new CaptureRule($location, id, name, contentName, retokenizeCapturedWithRuleId);
+        });
+    };
+    RuleFactory.getCompiledRuleId = function (desc, helper, repository) {
+        if (!desc.id) {
+            helper.registerRule(function (id) {
+                desc.id = id;
+                if (desc.match) {
+                    return new MatchRule(desc.$vscodeTextmateLocation, desc.id, desc.name, desc.match, RuleFactory._compileCaptures(desc.captures, helper, repository));
+                }
+                if (typeof desc.begin === 'undefined') {
+                    if (desc.repository) {
+                        repository = utils_1.mergeObjects({}, repository, desc.repository);
+                    }
+                    var patterns = desc.patterns;
+                    if (typeof patterns === 'undefined' && desc.include) {
+                        patterns = [{ include: desc.include }];
+                    }
+                    return new IncludeOnlyRule(desc.$vscodeTextmateLocation, desc.id, desc.name, desc.contentName, RuleFactory._compilePatterns(patterns, helper, repository));
+                }
+                if (desc.while) {
+                    return new BeginWhileRule(desc.$vscodeTextmateLocation, desc.id, desc.name, desc.contentName, desc.begin, RuleFactory._compileCaptures(desc.beginCaptures || desc.captures, helper, repository), desc.while, RuleFactory._compileCaptures(desc.whileCaptures || desc.captures, helper, repository), RuleFactory._compilePatterns(desc.patterns, helper, repository));
+                }
+                return new BeginEndRule(desc.$vscodeTextmateLocation, desc.id, desc.name, desc.contentName, desc.begin, RuleFactory._compileCaptures(desc.beginCaptures || desc.captures, helper, repository), desc.end, RuleFactory._compileCaptures(desc.endCaptures || desc.captures, helper, repository), desc.applyEndPatternLast, RuleFactory._compilePatterns(desc.patterns, helper, repository));
+            });
+        }
+        return desc.id;
+    };
+    RuleFactory._compileCaptures = function (captures, helper, repository) {
+        var r = [];
+        if (captures) {
+            // Find the maximum capture id
+            var maximumCaptureId = 0;
+            for (var captureId in captures) {
+                if (captureId === '$vscodeTextmateLocation') {
+                    continue;
+                }
+                var numericCaptureId = parseInt(captureId, 10);
+                if (numericCaptureId > maximumCaptureId) {
+                    maximumCaptureId = numericCaptureId;
+                }
+            }
+            // Initialize result
+            for (var i = 0; i <= maximumCaptureId; i++) {
+                r[i] = null;
+            }
+            // Fill out result
+            for (var captureId in captures) {
+                if (captureId === '$vscodeTextmateLocation') {
+                    continue;
+                }
+                var numericCaptureId = parseInt(captureId, 10);
+                var retokenizeCapturedWithRuleId = 0;
+                if (captures[captureId].patterns) {
+                    retokenizeCapturedWithRuleId = RuleFactory.getCompiledRuleId(captures[captureId], helper, repository);
+                }
+                r[numericCaptureId] = RuleFactory.createCaptureRule(helper, captures[captureId].$vscodeTextmateLocation, captures[captureId].name, captures[captureId].contentName, retokenizeCapturedWithRuleId);
+            }
+        }
+        return r;
+    };
+    RuleFactory._compilePatterns = function (patterns, helper, repository) {
+        var r = [];
+        if (patterns) {
+            for (var i = 0, len = patterns.length; i < len; i++) {
+                var pattern = patterns[i];
+                var patternId = -1;
+                if (pattern.include) {
+                    if (pattern.include.charAt(0) === '#') {
+                        // Local include found in `repository`
+                        var localIncludedRule = repository[pattern.include.substr(1)];
+                        if (localIncludedRule) {
+                            patternId = RuleFactory.getCompiledRuleId(localIncludedRule, helper, repository);
+                        }
+                        else {
+                            // console.warn('CANNOT find rule for scopeName: ' + pattern.include + ', I am: ', repository['$base'].name);
+                        }
+                    }
+                    else if (pattern.include === '$base' || pattern.include === '$self') {
+                        // Special include also found in `repository`
+                        patternId = RuleFactory.getCompiledRuleId(repository[pattern.include], helper, repository);
+                    }
+                    else {
+                        var externalGrammarName = null;
+                        var externalGrammarInclude = null;
+                        var sharpIndex = pattern.include.indexOf('#');
+                        if (sharpIndex >= 0) {
+                            externalGrammarName = pattern.include.substring(0, sharpIndex);
+                            externalGrammarInclude = pattern.include.substring(sharpIndex + 1);
+                        }
+                        else {
+                            externalGrammarName = pattern.include;
+                        }
+                        // External include
+                        var externalGrammar = helper.getExternalGrammar(externalGrammarName, repository);
+                        if (externalGrammar) {
+                            if (externalGrammarInclude) {
+                                var externalIncludedRule = externalGrammar.repository[externalGrammarInclude];
+                                if (externalIncludedRule) {
+                                    patternId = RuleFactory.getCompiledRuleId(externalIncludedRule, helper, externalGrammar.repository);
+                                }
+                                else {
+                                    // console.warn('CANNOT find rule for scopeName: ' + pattern.include + ', I am: ', repository['$base'].name);
+                                }
+                            }
+                            else {
+                                patternId = RuleFactory.getCompiledRuleId(externalGrammar.repository.$self, helper, externalGrammar.repository);
+                            }
+                        }
+                        else {
+                            // console.warn('CANNOT find grammar for scopeName: ' + pattern.include + ', I am: ', repository['$base'].name);
+                        }
+                    }
+                }
+                else {
+                    patternId = RuleFactory.getCompiledRuleId(pattern, helper, repository);
+                }
+                if (patternId !== -1) {
+                    var rule = helper.getRule(patternId);
+                    var skipRule = false;
+                    if (rule instanceof IncludeOnlyRule || rule instanceof BeginEndRule || rule instanceof BeginWhileRule) {
+                        if (rule.hasMissingPatterns && rule.patterns.length === 0) {
+                            skipRule = true;
+                        }
+                    }
+                    if (skipRule) {
+                        // console.log('REMOVING RULE ENTIRELY DUE TO EMPTY PATTERNS THAT ARE MISSING');
+                        continue;
+                    }
+                    r.push(patternId);
+                }
+            }
+        }
+        return {
+            patterns: r,
+            hasMissingPatterns: ((patterns ? patterns.length : 0) !== r.length)
+        };
+    };
+    return RuleFactory;
+}());
+exports.RuleFactory = RuleFactory;
+//# sourceMappingURL=rule.js.map
+});
+$load('./grammar', function(require, module, exports) {
+/*---------------------------------------------------------
+ * Copyright (C) Microsoft Corporation. All rights reserved.
+ *--------------------------------------------------------*/
+'use strict';
+Object.defineProperty(exports, "__esModule", { value: true });
+var utils_1 = require("./utils");
+var rule_1 = require("./rule");
+var matcher_1 = require("./matcher");
+var debug_1 = require("./debug");
+function createGrammar(grammar, initialLanguage, embeddedLanguages, tokenTypes, grammarRepository, onigLib) {
+    return new Grammar(grammar, initialLanguage, embeddedLanguages, tokenTypes, grammarRepository, onigLib);
+}
+exports.createGrammar = createGrammar;
+var FullScopeDependency = /** @class */ (function () {
+    function FullScopeDependency(scopeName) {
+        this.scopeName = scopeName;
+    }
+    return FullScopeDependency;
+}());
+exports.FullScopeDependency = FullScopeDependency;
+var PartialScopeDependency = /** @class */ (function () {
+    function PartialScopeDependency(scopeName, include) {
+        this.scopeName = scopeName;
+        this.include = include;
+    }
+    PartialScopeDependency.prototype.toKey = function () {
+        return this.scopeName + "#" + this.include;
+    };
+    return PartialScopeDependency;
+}());
+exports.PartialScopeDependency = PartialScopeDependency;
+var ScopeDependencyCollector = /** @class */ (function () {
+    function ScopeDependencyCollector() {
+        this.full = [];
+        this.partial = [];
+        this.visitedRule = new Set();
+        this._seenFull = new Set();
+        this._seenPartial = new Set();
+    }
+    ScopeDependencyCollector.prototype.add = function (dep) {
+        if (dep instanceof FullScopeDependency) {
+            if (!this._seenFull.has(dep.scopeName)) {
+                this._seenFull.add(dep.scopeName);
+                this.full.push(dep);
+            }
+        }
+        else {
+            if (!this._seenPartial.has(dep.toKey())) {
+                this._seenPartial.add(dep.toKey());
+                this.partial.push(dep);
+            }
+        }
+    };
+    return ScopeDependencyCollector;
+}());
+exports.ScopeDependencyCollector = ScopeDependencyCollector;
+/**
+ * Fill in `result` all external included scopes in `patterns`
+ */
+function _extractIncludedScopesInPatterns(result, baseGrammar, selfGrammar, patterns, repository) {
+    for (var _i = 0, patterns_1 = patterns; _i < patterns_1.length; _i++) {
+        var pattern = patterns_1[_i];
+        if (result.visitedRule.has(pattern)) {
+            continue;
+        }
+        result.visitedRule.add(pattern);
+        var patternRepository = (pattern.repository ? utils_1.mergeObjects({}, repository, pattern.repository) : repository);
+        if (Array.isArray(pattern.patterns)) {
+            _extractIncludedScopesInPatterns(result, baseGrammar, selfGrammar, pattern.patterns, patternRepository);
+        }
+        var include = pattern.include;
+        if (!include) {
+            continue;
+        }
+        if (include === '$base' || include === baseGrammar.scopeName) {
+            collectDependencies(result, baseGrammar, baseGrammar);
+        }
+        else if (include === '$self' || include === selfGrammar.scopeName) {
+            collectDependencies(result, baseGrammar, selfGrammar);
+        }
+        else if (include.charAt(0) === '#') {
+            collectSpecificDependencies(result, baseGrammar, selfGrammar, include.substring(1), patternRepository);
+        }
+        else {
+            var sharpIndex = include.indexOf('#');
+            if (sharpIndex >= 0) {
+                var scopeName = include.substring(0, sharpIndex);
+                var includedName = include.substring(sharpIndex + 1);
+                if (scopeName === baseGrammar.scopeName) {
+                    collectSpecificDependencies(result, baseGrammar, baseGrammar, includedName, patternRepository);
+                }
+                else if (scopeName === selfGrammar.scopeName) {
+                    collectSpecificDependencies(result, baseGrammar, selfGrammar, includedName, patternRepository);
+                }
+                else {
+                    result.add(new PartialScopeDependency(scopeName, include.substring(sharpIndex + 1)));
+                }
+            }
+            else {
+                result.add(new FullScopeDependency(include));
+            }
+        }
+    }
+}
+/**
+ * Collect a specific dependency from the grammar's repository
+ */
+function collectSpecificDependencies(result, baseGrammar, selfGrammar, include, repository) {
+    if (repository === void 0) { repository = selfGrammar.repository; }
+    if (repository && repository[include]) {
+        var rule = repository[include];
+        _extractIncludedScopesInPatterns(result, baseGrammar, selfGrammar, [rule], repository);
+    }
+}
+exports.collectSpecificDependencies = collectSpecificDependencies;
+/**
+ * Collects the list of all external included scopes in `grammar`.
+ */
+function collectDependencies(result, baseGrammar, selfGrammar) {
+    if (selfGrammar.patterns && Array.isArray(selfGrammar.patterns)) {
+        _extractIncludedScopesInPatterns(result, baseGrammar, selfGrammar, selfGrammar.patterns, selfGrammar.repository);
+    }
+    if (selfGrammar.injections) {
+        var injections = [];
+        for (var injection in selfGrammar.injections) {
+            injections.push(selfGrammar.injections[injection]);
+        }
+        _extractIncludedScopesInPatterns(result, baseGrammar, selfGrammar, injections, selfGrammar.repository);
+    }
+}
+exports.collectDependencies = collectDependencies;
+function scopesAreMatching(thisScopeName, scopeName) {
+    if (!thisScopeName) {
+        return false;
+    }
+    if (thisScopeName === scopeName) {
+        return true;
+    }
+    var len = scopeName.length;
+    return thisScopeName.length > len && thisScopeName.substr(0, len) === scopeName && thisScopeName[len] === '.';
+}
+function nameMatcher(identifers, scopes) {
+    if (scopes.length < identifers.length) {
+        return false;
+    }
+    var lastIndex = 0;
+    return identifers.every(function (identifier) {
+        for (var i = lastIndex; i < scopes.length; i++) {
+            if (scopesAreMatching(scopes[i], identifier)) {
+                lastIndex = i + 1;
+                return true;
+            }
+        }
+        return false;
+    });
+}
+function collectInjections(result, selector, rule, ruleFactoryHelper, grammar) {
+    var matchers = matcher_1.createMatchers(selector, nameMatcher);
+    var ruleId = rule_1.RuleFactory.getCompiledRuleId(rule, ruleFactoryHelper, grammar.repository);
+    for (var _i = 0, matchers_1 = matchers; _i < matchers_1.length; _i++) {
+        var matcher = matchers_1[_i];
+        result.push({
+            matcher: matcher.matcher,
+            ruleId: ruleId,
+            grammar: grammar,
+            priority: matcher.priority
+        });
+    }
+}
+var ScopeMetadata = /** @class */ (function () {
+    function ScopeMetadata(scopeName, languageId, tokenType, themeData) {
+        this.scopeName = scopeName;
+        this.languageId = languageId;
+        this.tokenType = tokenType;
+        this.themeData = themeData;
+    }
+    return ScopeMetadata;
+}());
+exports.ScopeMetadata = ScopeMetadata;
+var ScopeMetadataProvider = /** @class */ (function () {
+    function ScopeMetadataProvider(initialLanguage, themeProvider, embeddedLanguages) {
+        this._initialLanguage = initialLanguage;
+        this._themeProvider = themeProvider;
+        this._cache = new Map();
+        this._defaultMetaData = new ScopeMetadata('', this._initialLanguage, 0 /* Other */, [this._themeProvider.getDefaults()]);
+        // embeddedLanguages handling
+        this._embeddedLanguages = Object.create(null);
+        if (embeddedLanguages) {
+            // If embeddedLanguages are configured, fill in `this._embeddedLanguages`
+            var scopes = Object.keys(embeddedLanguages);
+            for (var i = 0, len = scopes.length; i < len; i++) {
+                var scope = scopes[i];
+                var language = embeddedLanguages[scope];
+                if (typeof language !== 'number' || language === 0) {
+                    console.warn('Invalid embedded language found at scope ' + scope + ': <<' + language + '>>');
+                    // never hurts to be too careful
+                    continue;
+                }
+                this._embeddedLanguages[scope] = language;
+            }
+        }
+        // create the regex
+        var escapedScopes = Object.keys(this._embeddedLanguages).map(function (scopeName) { return ScopeMetadataProvider._escapeRegExpCharacters(scopeName); });
+        if (escapedScopes.length === 0) {
+            // no scopes registered
+            this._embeddedLanguagesRegex = null;
+        }
+        else {
+            escapedScopes.sort();
+            escapedScopes.reverse();
+            this._embeddedLanguagesRegex = new RegExp("^((" + escapedScopes.join(')|(') + "))($|\\.)", '');
+        }
+    }
+    ScopeMetadataProvider.prototype.onDidChangeTheme = function () {
+        this._cache = new Map();
+        this._defaultMetaData = new ScopeMetadata('', this._initialLanguage, 0 /* Other */, [this._themeProvider.getDefaults()]);
+    };
+    ScopeMetadataProvider.prototype.getDefaultMetadata = function () {
+        return this._defaultMetaData;
+    };
+    /**
+     * Escapes regular expression characters in a given string
+     */
+    ScopeMetadataProvider._escapeRegExpCharacters = function (value) {
+        return value.replace(/[\-\\\{\}\*\+\?\|\^\$\.\,\[\]\(\)\#\s]/g, '\\$&');
+    };
+    ScopeMetadataProvider.prototype.getMetadataForScope = function (scopeName) {
+        if (scopeName === null) {
+            return ScopeMetadataProvider._NULL_SCOPE_METADATA;
+        }
+        var value = this._cache.get(scopeName);
+        if (value) {
+            return value;
+        }
+        value = this._doGetMetadataForScope(scopeName);
+        this._cache.set(scopeName, value);
+        return value;
+    };
+    ScopeMetadataProvider.prototype._doGetMetadataForScope = function (scopeName) {
+        var languageId = this._scopeToLanguage(scopeName);
+        var standardTokenType = this._toStandardTokenType(scopeName);
+        var themeData = this._themeProvider.themeMatch(scopeName);
+        return new ScopeMetadata(scopeName, languageId, standardTokenType, themeData);
+    };
+    /**
+     * Given a produced TM scope, return the language that token describes or null if unknown.
+     * e.g. source.html => html, source.css.embedded.html => css, punctuation.definition.tag.html => null
+     */
+    ScopeMetadataProvider.prototype._scopeToLanguage = function (scope) {
+        if (!scope) {
+            return 0;
+        }
+        if (!this._embeddedLanguagesRegex) {
+            // no scopes registered
+            return 0;
+        }
+        var m = scope.match(this._embeddedLanguagesRegex);
+        if (!m) {
+            // no scopes matched
+            return 0;
+        }
+        var language = this._embeddedLanguages[m[1]] || 0;
+        if (!language) {
+            return 0;
+        }
+        return language;
+    };
+    ScopeMetadataProvider.prototype._toStandardTokenType = function (tokenType) {
+        var m = tokenType.match(ScopeMetadataProvider.STANDARD_TOKEN_TYPE_REGEXP);
+        if (!m) {
+            return 0 /* Other */;
+        }
+        switch (m[1]) {
+            case 'comment':
+                return 1 /* Comment */;
+            case 'string':
+                return 2 /* String */;
+            case 'regex':
+                return 4 /* RegEx */;
+            case 'meta.embedded':
+                return 8 /* MetaEmbedded */;
+        }
+        throw new Error('Unexpected match for standard token type!');
+    };
+    ScopeMetadataProvider._NULL_SCOPE_METADATA = new ScopeMetadata('', 0, 0, null);
+    ScopeMetadataProvider.STANDARD_TOKEN_TYPE_REGEXP = /\b(comment|string|regex|meta\.embedded)\b/;
+    return ScopeMetadataProvider;
+}());
+var Grammar = /** @class */ (function () {
+    function Grammar(grammar, initialLanguage, embeddedLanguages, tokenTypes, grammarRepository, onigLib) {
+        this._scopeMetadataProvider = new ScopeMetadataProvider(initialLanguage, grammarRepository, embeddedLanguages);
+        this._onigLib = onigLib;
+        this._rootId = -1;
+        this._lastRuleId = 0;
+        this._ruleId2desc = [];
+        this._includedGrammars = {};
+        this._grammarRepository = grammarRepository;
+        this._grammar = initGrammar(grammar, null);
+        this._injections = null;
+        this._tokenTypeMatchers = [];
+        if (tokenTypes) {
+            for (var _i = 0, _a = Object.keys(tokenTypes); _i < _a.length; _i++) {
+                var selector = _a[_i];
+                var matchers = matcher_1.createMatchers(selector, nameMatcher);
+                for (var _b = 0, matchers_2 = matchers; _b < matchers_2.length; _b++) {
+                    var matcher = matchers_2[_b];
+                    this._tokenTypeMatchers.push({
+                        matcher: matcher.matcher,
+                        type: tokenTypes[selector]
+                    });
+                }
+            }
+        }
+    }
+    Grammar.prototype.createOnigScanner = function (sources) {
+        return this._onigLib.createOnigScanner(sources);
+    };
+    Grammar.prototype.createOnigString = function (sources) {
+        return this._onigLib.createOnigString(sources);
+    };
+    Grammar.prototype.onDidChangeTheme = function () {
+        this._scopeMetadataProvider.onDidChangeTheme();
+    };
+    Grammar.prototype.getMetadataForScope = function (scope) {
+        return this._scopeMetadataProvider.getMetadataForScope(scope);
+    };
+    Grammar.prototype.getInjections = function () {
+        var _this = this;
+        if (this._injections === null) {
+            this._injections = [];
+            // add injections from the current grammar
+            var rawInjections = this._grammar.injections;
+            if (rawInjections) {
+                for (var expression in rawInjections) {
+                    collectInjections(this._injections, expression, rawInjections[expression], this, this._grammar);
+                }
+            }
+            // add injection grammars contributed for the current scope
+            if (this._grammarRepository) {
+                var injectionScopeNames = this._grammarRepository.injections(this._grammar.scopeName);
+                if (injectionScopeNames) {
+                    injectionScopeNames.forEach(function (injectionScopeName) {
+                        var injectionGrammar = _this.getExternalGrammar(injectionScopeName);
+                        if (injectionGrammar) {
+                            var selector = injectionGrammar.injectionSelector;
+                            if (selector) {
+                                collectInjections(_this._injections, selector, injectionGrammar, _this, injectionGrammar);
+                            }
+                        }
+                    });
+                }
+            }
+            this._injections.sort(function (i1, i2) { return i1.priority - i2.priority; }); // sort by priority
+        }
+        return this._injections;
+    };
+    Grammar.prototype.registerRule = function (factory) {
+        var id = (++this._lastRuleId);
+        var result = factory(id);
+        this._ruleId2desc[id] = result;
+        return result;
+    };
+    Grammar.prototype.getRule = function (patternId) {
+        return this._ruleId2desc[patternId];
+    };
+    Grammar.prototype.getExternalGrammar = function (scopeName, repository) {
+        if (this._includedGrammars[scopeName]) {
+            return this._includedGrammars[scopeName];
+        }
+        else if (this._grammarRepository) {
+            var rawIncludedGrammar = this._grammarRepository.lookup(scopeName);
+            if (rawIncludedGrammar) {
+                // console.log('LOADED GRAMMAR ' + pattern.include);
+                this._includedGrammars[scopeName] = initGrammar(rawIncludedGrammar, repository && repository.$base);
+                return this._includedGrammars[scopeName];
+            }
+        }
+        return null;
+    };
+    Grammar.prototype.tokenizeLine = function (lineText, prevState) {
+        var r = this._tokenize(lineText, prevState, false);
+        return {
+            tokens: r.lineTokens.getResult(r.ruleStack, r.lineLength),
+            ruleStack: r.ruleStack
+        };
+    };
+    Grammar.prototype.tokenizeLine2 = function (lineText, prevState) {
+        var r = this._tokenize(lineText, prevState, true);
+        return {
+            tokens: r.lineTokens.getBinaryResult(r.ruleStack, r.lineLength),
+            ruleStack: r.ruleStack
+        };
+    };
+    Grammar.prototype._tokenize = function (lineText, prevState, emitBinaryTokens) {
+        if (this._rootId === -1) {
+            this._rootId = rule_1.RuleFactory.getCompiledRuleId(this._grammar.repository.$self, this, this._grammar.repository);
+        }
+        var isFirstLine;
+        if (!prevState || prevState === StackElement.NULL) {
+            isFirstLine = true;
+            var rawDefaultMetadata = this._scopeMetadataProvider.getDefaultMetadata();
+            var defaultTheme = rawDefaultMetadata.themeData[0];
+            var defaultMetadata = StackElementMetadata.set(0, rawDefaultMetadata.languageId, rawDefaultMetadata.tokenType, defaultTheme.fontStyle, defaultTheme.foreground, defaultTheme.background);
+            var rootScopeName = this.getRule(this._rootId).getName(null, null);
+            var rawRootMetadata = this._scopeMetadataProvider.getMetadataForScope(rootScopeName);
+            var rootMetadata = ScopeListElement.mergeMetadata(defaultMetadata, null, rawRootMetadata);
+            var scopeList = new ScopeListElement(null, rootScopeName === null ? 'unknown' : rootScopeName, rootMetadata);
+            prevState = new StackElement(null, this._rootId, -1, -1, false, null, scopeList, scopeList);
+        }
+        else {
+            isFirstLine = false;
+            prevState.reset();
+        }
+        lineText = lineText + '\n';
+        var onigLineText = this.createOnigString(lineText);
+        var lineLength = onigLineText.content.length;
+        var lineTokens = new LineTokens(emitBinaryTokens, lineText, this._tokenTypeMatchers);
+        var nextState = _tokenizeString(this, onigLineText, isFirstLine, 0, prevState, lineTokens, true);
+        disposeOnigString(onigLineText);
+        return {
+            lineLength: lineLength,
+            lineTokens: lineTokens,
+            ruleStack: nextState
+        };
+    };
+    return Grammar;
+}());
+exports.Grammar = Grammar;
+function disposeOnigString(str) {
+    if (typeof str.dispose === 'function') {
+        str.dispose();
+    }
+}
+function initGrammar(grammar, base) {
+    grammar = utils_1.clone(grammar);
+    grammar.repository = grammar.repository || {};
+    grammar.repository.$self = {
+        $vscodeTextmateLocation: grammar.$vscodeTextmateLocation,
+        patterns: grammar.patterns,
+        name: grammar.scopeName
+    };
+    grammar.repository.$base = base || grammar.repository.$self;
+    return grammar;
+}
+function handleCaptures(grammar, lineText, isFirstLine, stack, lineTokens, captures, captureIndices) {
+    if (captures.length === 0) {
+        return;
+    }
+    var lineTextContent = lineText.content;
+    var len = Math.min(captures.length, captureIndices.length);
+    var localStack = [];
+    var maxEnd = captureIndices[0].end;
+    for (var i = 0; i < len; i++) {
+        var captureRule = captures[i];
+        if (captureRule === null) {
+            // Not interested
+            continue;
+        }
+        var captureIndex = captureIndices[i];
+        if (captureIndex.length === 0) {
+            // Nothing really captured
+            continue;
+        }
+        if (captureIndex.start > maxEnd) {
+            // Capture going beyond consumed string
+            break;
+        }
+        // pop captures while needed
+        while (localStack.length > 0 && localStack[localStack.length - 1].endPos <= captureIndex.start) {
+            // pop!
+            lineTokens.produceFromScopes(localStack[localStack.length - 1].scopes, localStack[localStack.length - 1].endPos);
+            localStack.pop();
+        }
+        if (localStack.length > 0) {
+            lineTokens.produceFromScopes(localStack[localStack.length - 1].scopes, captureIndex.start);
+        }
+        else {
+            lineTokens.produce(stack, captureIndex.start);
+        }
+        if (captureRule.retokenizeCapturedWithRuleId) {
+            // the capture requires additional matching
+            var scopeName = captureRule.getName(lineTextContent, captureIndices);
+            var nameScopesList = stack.contentNameScopesList.push(grammar, scopeName);
+            var contentName = captureRule.getContentName(lineTextContent, captureIndices);
+            var contentNameScopesList = nameScopesList.push(grammar, contentName);
+            var stackClone = stack.push(captureRule.retokenizeCapturedWithRuleId, captureIndex.start, -1, false, null, nameScopesList, contentNameScopesList);
+            var onigSubStr = grammar.createOnigString(lineTextContent.substring(0, captureIndex.end));
+            _tokenizeString(grammar, onigSubStr, (isFirstLine && captureIndex.start === 0), captureIndex.start, stackClone, lineTokens, false);
+            disposeOnigString(onigSubStr);
+            continue;
+        }
+        var captureRuleScopeName = captureRule.getName(lineTextContent, captureIndices);
+        if (captureRuleScopeName !== null) {
+            // push
+            var base = localStack.length > 0 ? localStack[localStack.length - 1].scopes : stack.contentNameScopesList;
+            var captureRuleScopesList = base.push(grammar, captureRuleScopeName);
+            localStack.push(new LocalStackElement(captureRuleScopesList, captureIndex.end));
+        }
+    }
+    while (localStack.length > 0) {
+        // pop!
+        lineTokens.produceFromScopes(localStack[localStack.length - 1].scopes, localStack[localStack.length - 1].endPos);
+        localStack.pop();
+    }
+}
+function debugCompiledRuleToString(ruleScanner) {
+    var r = [];
+    for (var i = 0, len = ruleScanner.rules.length; i < len; i++) {
+        r.push('   - ' + ruleScanner.rules[i] + ': ' + ruleScanner.debugRegExps[i]);
+    }
+    return r.join('\n');
+}
+function matchInjections(injections, grammar, lineText, isFirstLine, linePos, stack, anchorPosition) {
+    // The lower the better
+    var bestMatchRating = Number.MAX_VALUE;
+    var bestMatchCaptureIndices = null;
+    var bestMatchRuleId;
+    var bestMatchResultPriority = 0;
+    var scopes = stack.contentNameScopesList.generateScopes();
+    for (var i = 0, len = injections.length; i < len; i++) {
+        var injection = injections[i];
+        if (!injection.matcher(scopes)) {
+            // injection selector doesn't match stack
+            continue;
+        }
+        var ruleScanner = grammar.getRule(injection.ruleId).compile(grammar, null, isFirstLine, linePos === anchorPosition);
+        var matchResult = ruleScanner.scanner.findNextMatchSync(lineText, linePos);
+        if (debug_1.DebugFlags.InDebugMode) {
+            console.log('  scanning for injections');
+            console.log(debugCompiledRuleToString(ruleScanner));
+        }
+        if (!matchResult) {
+            continue;
+        }
+        var matchRating = matchResult.captureIndices[0].start;
+        if (matchRating >= bestMatchRating) {
+            // Injections are sorted by priority, so the previous injection had a better or equal priority
+            continue;
+        }
+        bestMatchRating = matchRating;
+        bestMatchCaptureIndices = matchResult.captureIndices;
+        bestMatchRuleId = ruleScanner.rules[matchResult.index];
+        bestMatchResultPriority = injection.priority;
+        if (bestMatchRating === linePos) {
+            // No more need to look at the rest of the injections.
+            break;
+        }
+    }
+    if (bestMatchCaptureIndices) {
+        return {
+            priorityMatch: bestMatchResultPriority === -1,
+            captureIndices: bestMatchCaptureIndices,
+            matchedRuleId: bestMatchRuleId
+        };
+    }
+    return null;
+}
+function matchRule(grammar, lineText, isFirstLine, linePos, stack, anchorPosition) {
+    var rule = stack.getRule(grammar);
+    var ruleScanner = rule.compile(grammar, stack.endRule, isFirstLine, linePos === anchorPosition);
+    var r = ruleScanner.scanner.findNextMatchSync(lineText, linePos);
+    if (debug_1.DebugFlags.InDebugMode) {
+        // console.log(`  scanning for (linePos: ${linePos}, anchorPosition: ${anchorPosition})`);
+        // console.log(debugCompiledRuleToString(ruleScanner));
+        if (r) {
+            console.log("matched rule id: " + ruleScanner.rules[r.index] + " from " + r.captureIndices[0].start + " to " + r.captureIndices[0].end);
+        }
+    }
+    if (r) {
+        return {
+            captureIndices: r.captureIndices,
+            matchedRuleId: ruleScanner.rules[r.index]
+        };
+    }
+    return null;
+}
+function matchRuleOrInjections(grammar, lineText, isFirstLine, linePos, stack, anchorPosition) {
+    // Look for normal grammar rule
+    var matchResult = matchRule(grammar, lineText, isFirstLine, linePos, stack, anchorPosition);
+    // Look for injected rules
+    var injections = grammar.getInjections();
+    if (injections.length === 0) {
+        // No injections whatsoever => early return
+        return matchResult;
+    }
+    var injectionResult = matchInjections(injections, grammar, lineText, isFirstLine, linePos, stack, anchorPosition);
+    if (!injectionResult) {
+        // No injections matched => early return
+        return matchResult;
+    }
+    if (!matchResult) {
+        // Only injections matched => early return
+        return injectionResult;
+    }
+    // Decide if `matchResult` or `injectionResult` should win
+    var matchResultScore = matchResult.captureIndices[0].start;
+    var injectionResultScore = injectionResult.captureIndices[0].start;
+    if (injectionResultScore < matchResultScore || (injectionResult.priorityMatch && injectionResultScore === matchResultScore)) {
+        // injection won!
+        return injectionResult;
+    }
+    return matchResult;
+}
+/**
+ * Walk the stack from bottom to top, and check each while condition in this order.
+ * If any fails, cut off the entire stack above the failed while condition. While conditions
+ * may also advance the linePosition.
+ */
+function _checkWhileConditions(grammar, lineText, isFirstLine, linePos, stack, lineTokens) {
+    var anchorPosition = (stack.beginRuleCapturedEOL ? 0 : -1);
+    var whileRules = [];
+    for (var node = stack; node; node = node.pop()) {
+        var nodeRule = node.getRule(grammar);
+        if (nodeRule instanceof rule_1.BeginWhileRule) {
+            whileRules.push({
+                rule: nodeRule,
+                stack: node
+            });
+        }
+    }
+    for (var whileRule = whileRules.pop(); whileRule; whileRule = whileRules.pop()) {
+        var ruleScanner = whileRule.rule.compileWhile(grammar, whileRule.stack.endRule, isFirstLine, anchorPosition === linePos);
+        var r = ruleScanner.scanner.findNextMatchSync(lineText, linePos);
+        if (debug_1.DebugFlags.InDebugMode) {
+            console.log('  scanning for while rule');
+            console.log(debugCompiledRuleToString(ruleScanner));
+        }
+        if (r) {
+            var matchedRuleId = ruleScanner.rules[r.index];
+            if (matchedRuleId !== -2) {
+                // we shouldn't end up here
+                stack = whileRule.stack.pop();
+                break;
+            }
+            if (r.captureIndices && r.captureIndices.length) {
+                lineTokens.produce(whileRule.stack, r.captureIndices[0].start);
+                handleCaptures(grammar, lineText, isFirstLine, whileRule.stack, lineTokens, whileRule.rule.whileCaptures, r.captureIndices);
+                lineTokens.produce(whileRule.stack, r.captureIndices[0].end);
+                anchorPosition = r.captureIndices[0].end;
+                if (r.captureIndices[0].end > linePos) {
+                    linePos = r.captureIndices[0].end;
+                    isFirstLine = false;
+                }
+            }
+        }
+        else {
+            if (debug_1.DebugFlags.InDebugMode) {
+                console.log('  popping ' + whileRule.rule.debugName + ' - ' + whileRule.rule.debugWhileRegExp);
+            }
+            stack = whileRule.stack.pop();
+            break;
+        }
+    }
+    return { stack: stack, linePos: linePos, anchorPosition: anchorPosition, isFirstLine: isFirstLine };
+}
+function _tokenizeString(grammar, lineText, isFirstLine, linePos, stack, lineTokens, checkWhileConditions) {
+    var lineLength = lineText.content.length;
+    var STOP = false;
+    var anchorPosition = -1;
+    if (checkWhileConditions) {
+        var whileCheckResult = _checkWhileConditions(grammar, lineText, isFirstLine, linePos, stack, lineTokens);
+        stack = whileCheckResult.stack;
+        linePos = whileCheckResult.linePos;
+        isFirstLine = whileCheckResult.isFirstLine;
+        anchorPosition = whileCheckResult.anchorPosition;
+    }
+    while (!STOP) {
+        scanNext(); // potentially modifies linePos && anchorPosition
+    }
+    function scanNext() {
+        if (debug_1.DebugFlags.InDebugMode) {
+            console.log('');
+            console.log("@@scanNext " + linePos + ": |" + lineText.content.substr(linePos).replace(/\n$/, '\\n') + "|");
+        }
+        var r = matchRuleOrInjections(grammar, lineText, isFirstLine, linePos, stack, anchorPosition);
+        if (!r) {
+            if (debug_1.DebugFlags.InDebugMode) {
+                console.log('  no more matches.');
+            }
+            // No match
+            lineTokens.produce(stack, lineLength);
+            STOP = true;
+            return;
+        }
+        var captureIndices = r.captureIndices;
+        var matchedRuleId = r.matchedRuleId;
+        var hasAdvanced = (captureIndices && captureIndices.length > 0) ? (captureIndices[0].end > linePos) : false;
+        if (matchedRuleId === -1) {
+            // We matched the `end` for this rule => pop it
+            var poppedRule = stack.getRule(grammar);
+            if (debug_1.DebugFlags.InDebugMode) {
+                console.log('  popping ' + poppedRule.debugName + ' - ' + poppedRule.debugEndRegExp);
+            }
+            lineTokens.produce(stack, captureIndices[0].start);
+            stack = stack.setContentNameScopesList(stack.nameScopesList);
+            handleCaptures(grammar, lineText, isFirstLine, stack, lineTokens, poppedRule.endCaptures, captureIndices);
+            lineTokens.produce(stack, captureIndices[0].end);
+            // pop
+            var popped = stack;
+            stack = stack.pop();
+            anchorPosition = popped.getAnchorPos();
+            if (!hasAdvanced && popped.getEnterPos() === linePos) {
+                // Grammar pushed & popped a rule without advancing
+                if (debug_1.DebugFlags.InDebugMode) {
+                    console.error('[1] - Grammar is in an endless loop - Grammar pushed & popped a rule without advancing');
+                }
+                // See https://github.com/Microsoft/vscode-textmate/issues/12
+                // Let's assume this was a mistake by the grammar author and the intent was to continue in this state
+                stack = popped;
+                lineTokens.produce(stack, lineLength);
+                STOP = true;
+                return;
+            }
+        }
+        else {
+            // We matched a rule!
+            var _rule = grammar.getRule(matchedRuleId);
+            lineTokens.produce(stack, captureIndices[0].start);
+            var beforePush = stack;
+            // push it on the stack rule
+            var scopeName = _rule.getName(lineText.content, captureIndices);
+            var nameScopesList = stack.contentNameScopesList.push(grammar, scopeName);
+            stack = stack.push(matchedRuleId, linePos, anchorPosition, captureIndices[0].end === lineLength, null, nameScopesList, nameScopesList);
+            if (_rule instanceof rule_1.BeginEndRule) {
+                var pushedRule = _rule;
+                if (debug_1.DebugFlags.InDebugMode) {
+                    console.log('  pushing ' + pushedRule.debugName + ' - ' + pushedRule.debugBeginRegExp);
+                }
+                handleCaptures(grammar, lineText, isFirstLine, stack, lineTokens, pushedRule.beginCaptures, captureIndices);
+                lineTokens.produce(stack, captureIndices[0].end);
+                anchorPosition = captureIndices[0].end;
+                var contentName = pushedRule.getContentName(lineText.content, captureIndices);
+                var contentNameScopesList = nameScopesList.push(grammar, contentName);
+                stack = stack.setContentNameScopesList(contentNameScopesList);
+                if (pushedRule.endHasBackReferences) {
+                    stack = stack.setEndRule(pushedRule.getEndWithResolvedBackReferences(lineText.content, captureIndices));
+                }
+                if (!hasAdvanced && beforePush.hasSameRuleAs(stack)) {
+                    // Grammar pushed the same rule without advancing
+                    if (debug_1.DebugFlags.InDebugMode) {
+                        console.error('[2] - Grammar is in an endless loop - Grammar pushed the same rule without advancing');
+                    }
+                    stack = stack.pop();
+                    lineTokens.produce(stack, lineLength);
+                    STOP = true;
+                    return;
+                }
+            }
+            else if (_rule instanceof rule_1.BeginWhileRule) {
+                var pushedRule = _rule;
+                if (debug_1.DebugFlags.InDebugMode) {
+                    console.log('  pushing ' + pushedRule.debugName);
+                }
+                handleCaptures(grammar, lineText, isFirstLine, stack, lineTokens, pushedRule.beginCaptures, captureIndices);
+                lineTokens.produce(stack, captureIndices[0].end);
+                anchorPosition = captureIndices[0].end;
+                var contentName = pushedRule.getContentName(lineText.content, captureIndices);
+                var contentNameScopesList = nameScopesList.push(grammar, contentName);
+                stack = stack.setContentNameScopesList(contentNameScopesList);
+                if (pushedRule.whileHasBackReferences) {
+                    stack = stack.setEndRule(pushedRule.getWhileWithResolvedBackReferences(lineText.content, captureIndices));
+                }
+                if (!hasAdvanced && beforePush.hasSameRuleAs(stack)) {
+                    // Grammar pushed the same rule without advancing
+                    if (debug_1.DebugFlags.InDebugMode) {
+                        console.error('[3] - Grammar is in an endless loop - Grammar pushed the same rule without advancing');
+                    }
+                    stack = stack.pop();
+                    lineTokens.produce(stack, lineLength);
+                    STOP = true;
+                    return;
+                }
+            }
+            else {
+                var matchingRule = _rule;
+                if (debug_1.DebugFlags.InDebugMode) {
+                    console.log('  matched ' + matchingRule.debugName + ' - ' + matchingRule.debugMatchRegExp);
+                }
+                handleCaptures(grammar, lineText, isFirstLine, stack, lineTokens, matchingRule.captures, captureIndices);
+                lineTokens.produce(stack, captureIndices[0].end);
+                // pop rule immediately since it is a MatchRule
+                stack = stack.pop();
+                if (!hasAdvanced) {
+                    // Grammar is not advancing, nor is it pushing/popping
+                    if (debug_1.DebugFlags.InDebugMode) {
+                        console.error('[4] - Grammar is in an endless loop - Grammar is not advancing, nor is it pushing/popping');
+                    }
+                    stack = stack.safePop();
+                    lineTokens.produce(stack, lineLength);
+                    STOP = true;
+                    return;
+                }
+            }
+        }
+        if (captureIndices[0].end > linePos) {
+            // Advance stream
+            linePos = captureIndices[0].end;
+            isFirstLine = false;
+        }
+    }
+    return stack;
+}
+var StackElementMetadata = /** @class */ (function () {
+    function StackElementMetadata() {
+    }
+    StackElementMetadata.toBinaryStr = function (metadata) {
+        var r = metadata.toString(2);
+        while (r.length < 32) {
+            r = '0' + r;
+        }
+        return r;
+    };
+    StackElementMetadata.printMetadata = function (metadata) {
+        var languageId = StackElementMetadata.getLanguageId(metadata);
+        var tokenType = StackElementMetadata.getTokenType(metadata);
+        var fontStyle = StackElementMetadata.getFontStyle(metadata);
+        var foreground = StackElementMetadata.getForeground(metadata);
+        var background = StackElementMetadata.getBackground(metadata);
+        console.log({
+            languageId: languageId,
+            tokenType: tokenType,
+            fontStyle: fontStyle,
+            foreground: foreground,
+            background: background,
+        });
+    };
+    StackElementMetadata.getLanguageId = function (metadata) {
+        return (metadata & 255 /* LANGUAGEID_MASK */) >>> 0 /* LANGUAGEID_OFFSET */;
+    };
+    StackElementMetadata.getTokenType = function (metadata) {
+        return (metadata & 1792 /* TOKEN_TYPE_MASK */) >>> 8 /* TOKEN_TYPE_OFFSET */;
+    };
+    StackElementMetadata.getFontStyle = function (metadata) {
+        return (metadata & 14336 /* FONT_STYLE_MASK */) >>> 11 /* FONT_STYLE_OFFSET */;
+    };
+    StackElementMetadata.getForeground = function (metadata) {
+        return (metadata & 8372224 /* FOREGROUND_MASK */) >>> 14 /* FOREGROUND_OFFSET */;
+    };
+    StackElementMetadata.getBackground = function (metadata) {
+        return (metadata & 4286578688 /* BACKGROUND_MASK */) >>> 23 /* BACKGROUND_OFFSET */;
+    };
+    StackElementMetadata.set = function (metadata, languageId, tokenType, fontStyle, foreground, background) {
+        var _languageId = StackElementMetadata.getLanguageId(metadata);
+        var _tokenType = StackElementMetadata.getTokenType(metadata);
+        var _fontStyle = StackElementMetadata.getFontStyle(metadata);
+        var _foreground = StackElementMetadata.getForeground(metadata);
+        var _background = StackElementMetadata.getBackground(metadata);
+        if (languageId !== 0) {
+            _languageId = languageId;
+        }
+        if (tokenType !== 0 /* Other */) {
+            _tokenType = tokenType === 8 /* MetaEmbedded */ ? 0 /* Other */ : tokenType;
+        }
+        if (fontStyle !== -1 /* NotSet */) {
+            _fontStyle = fontStyle;
+        }
+        if (foreground !== 0) {
+            _foreground = foreground;
+        }
+        if (background !== 0) {
+            _background = background;
+        }
+        return ((_languageId << 0 /* LANGUAGEID_OFFSET */)
+            | (_tokenType << 8 /* TOKEN_TYPE_OFFSET */)
+            | (_fontStyle << 11 /* FONT_STYLE_OFFSET */)
+            | (_foreground << 14 /* FOREGROUND_OFFSET */)
+            | (_background << 23 /* BACKGROUND_OFFSET */)) >>> 0;
+    };
+    return StackElementMetadata;
+}());
+exports.StackElementMetadata = StackElementMetadata;
+var ScopeListElement = /** @class */ (function () {
+    function ScopeListElement(parent, scope, metadata) {
+        this.parent = parent;
+        this.scope = scope;
+        this.metadata = metadata;
+    }
+    ScopeListElement._equals = function (a, b) {
+        do {
+            if (a === b) {
+                return true;
+            }
+            if (!a && !b) {
+                // End of list reached for both
+                return true;
+            }
+            if (!a || !b) {
+                // End of list reached only for one
+                return false;
+            }
+            if (a.scope !== b.scope || a.metadata !== b.metadata) {
+                return false;
+            }
+            // Go to previous pair
+            a = a.parent;
+            b = b.parent;
+        } while (true);
+    };
+    ScopeListElement.prototype.equals = function (other) {
+        return ScopeListElement._equals(this, other);
+    };
+    ScopeListElement._matchesScope = function (scope, selector, selectorWithDot) {
+        return (selector === scope || scope.substring(0, selectorWithDot.length) === selectorWithDot);
+    };
+    ScopeListElement._matches = function (target, parentScopes) {
+        if (parentScopes === null) {
+            return true;
+        }
+        var len = parentScopes.length;
+        var index = 0;
+        var selector = parentScopes[index];
+        var selectorWithDot = selector + '.';
+        while (target) {
+            if (this._matchesScope(target.scope, selector, selectorWithDot)) {
+                index++;
+                if (index === len) {
+                    return true;
+                }
+                selector = parentScopes[index];
+                selectorWithDot = selector + '.';
+            }
+            target = target.parent;
+        }
+        return false;
+    };
+    ScopeListElement.mergeMetadata = function (metadata, scopesList, source) {
+        if (source === null) {
+            return metadata;
+        }
+        var fontStyle = -1 /* NotSet */;
+        var foreground = 0;
+        var background = 0;
+        if (source.themeData !== null) {
+            // Find the first themeData that matches
+            for (var i = 0, len = source.themeData.length; i < len; i++) {
+                var themeData = source.themeData[i];
+                if (this._matches(scopesList, themeData.parentScopes)) {
+                    fontStyle = themeData.fontStyle;
+                    foreground = themeData.foreground;
+                    background = themeData.background;
+                    break;
+                }
+            }
+        }
+        return StackElementMetadata.set(metadata, source.languageId, source.tokenType, fontStyle, foreground, background);
+    };
+    ScopeListElement._push = function (target, grammar, scopes) {
+        for (var i = 0, len = scopes.length; i < len; i++) {
+            var scope = scopes[i];
+            var rawMetadata = grammar.getMetadataForScope(scope);
+            var metadata = ScopeListElement.mergeMetadata(target.metadata, target, rawMetadata);
+            target = new ScopeListElement(target, scope, metadata);
+        }
+        return target;
+    };
+    ScopeListElement.prototype.push = function (grammar, scope) {
+        if (scope === null) {
+            return this;
+        }
+        if (scope.indexOf(' ') >= 0) {
+            // there are multiple scopes to push
+            return ScopeListElement._push(this, grammar, scope.split(/ /g));
+        }
+        // there is a single scope to push
+        return ScopeListElement._push(this, grammar, [scope]);
+    };
+    ScopeListElement._generateScopes = function (scopesList) {
+        var result = [];
+        var resultLen = 0;
+        while (scopesList) {
+            result[resultLen++] = scopesList.scope;
+            scopesList = scopesList.parent;
+        }
+        result.reverse();
+        return result;
+    };
+    ScopeListElement.prototype.generateScopes = function () {
+        return ScopeListElement._generateScopes(this);
+    };
+    return ScopeListElement;
+}());
+exports.ScopeListElement = ScopeListElement;
+/**
+ * Represents a "pushed" state on the stack (as a linked list element).
+ */
+var StackElement = /** @class */ (function () {
+    function StackElement(parent, ruleId, enterPos, anchorPos, beginRuleCapturedEOL, endRule, nameScopesList, contentNameScopesList) {
+        this.parent = parent;
+        this.depth = (this.parent ? this.parent.depth + 1 : 1);
+        this.ruleId = ruleId;
+        this._enterPos = enterPos;
+        this._anchorPos = anchorPos;
+        this.beginRuleCapturedEOL = beginRuleCapturedEOL;
+        this.endRule = endRule;
+        this.nameScopesList = nameScopesList;
+        this.contentNameScopesList = contentNameScopesList;
+    }
+    /**
+     * A structural equals check. Does not take into account `scopes`.
+     */
+    StackElement._structuralEquals = function (a, b) {
+        do {
+            if (a === b) {
+                return true;
+            }
+            if (!a && !b) {
+                // End of list reached for both
+                return true;
+            }
+            if (!a || !b) {
+                // End of list reached only for one
+                return false;
+            }
+            if (a.depth !== b.depth || a.ruleId !== b.ruleId || a.endRule !== b.endRule) {
+                return false;
+            }
+            // Go to previous pair
+            a = a.parent;
+            b = b.parent;
+        } while (true);
+    };
+    StackElement._equals = function (a, b) {
+        if (a === b) {
+            return true;
+        }
+        if (!this._structuralEquals(a, b)) {
+            return false;
+        }
+        return a.contentNameScopesList.equals(b.contentNameScopesList);
+    };
+    StackElement.prototype.clone = function () {
+        return this;
+    };
+    StackElement.prototype.equals = function (other) {
+        if (other === null) {
+            return false;
+        }
+        return StackElement._equals(this, other);
+    };
+    StackElement._reset = function (el) {
+        while (el) {
+            el._enterPos = -1;
+            el._anchorPos = -1;
+            el = el.parent;
+        }
+    };
+    StackElement.prototype.reset = function () {
+        StackElement._reset(this);
+    };
+    StackElement.prototype.pop = function () {
+        return this.parent;
+    };
+    StackElement.prototype.safePop = function () {
+        if (this.parent) {
+            return this.parent;
+        }
+        return this;
+    };
+    StackElement.prototype.push = function (ruleId, enterPos, anchorPos, beginRuleCapturedEOL, endRule, nameScopesList, contentNameScopesList) {
+        return new StackElement(this, ruleId, enterPos, anchorPos, beginRuleCapturedEOL, endRule, nameScopesList, contentNameScopesList);
+    };
+    StackElement.prototype.getEnterPos = function () {
+        return this._enterPos;
+    };
+    StackElement.prototype.getAnchorPos = function () {
+        return this._anchorPos;
+    };
+    StackElement.prototype.getRule = function (grammar) {
+        return grammar.getRule(this.ruleId);
+    };
+    StackElement.prototype._writeString = function (res, outIndex) {
+        if (this.parent) {
+            outIndex = this.parent._writeString(res, outIndex);
+        }
+        res[outIndex++] = "(" + this.ruleId + ", TODO-" + this.nameScopesList + ", TODO-" + this.contentNameScopesList + ")";
+        return outIndex;
+    };
+    StackElement.prototype.toString = function () {
+        var r = [];
+        this._writeString(r, 0);
+        return '[' + r.join(',') + ']';
+    };
+    StackElement.prototype.setContentNameScopesList = function (contentNameScopesList) {
+        if (this.contentNameScopesList === contentNameScopesList) {
+            return this;
+        }
+        return this.parent.push(this.ruleId, this._enterPos, this._anchorPos, this.beginRuleCapturedEOL, this.endRule, this.nameScopesList, contentNameScopesList);
+    };
+    StackElement.prototype.setEndRule = function (endRule) {
+        if (this.endRule === endRule) {
+            return this;
+        }
+        return new StackElement(this.parent, this.ruleId, this._enterPos, this._anchorPos, this.beginRuleCapturedEOL, endRule, this.nameScopesList, this.contentNameScopesList);
+    };
+    StackElement.prototype.hasSameRuleAs = function (other) {
+        return this.ruleId === other.ruleId;
+    };
+    StackElement.NULL = new StackElement(null, 0, 0, 0, false, null, null, null);
+    return StackElement;
+}());
+exports.StackElement = StackElement;
+var LocalStackElement = /** @class */ (function () {
+    function LocalStackElement(scopes, endPos) {
+        this.scopes = scopes;
+        this.endPos = endPos;
+    }
+    return LocalStackElement;
+}());
+exports.LocalStackElement = LocalStackElement;
+var LineTokens = /** @class */ (function () {
+    function LineTokens(emitBinaryTokens, lineText, tokenTypeOverrides) {
+        this._emitBinaryTokens = emitBinaryTokens;
+        this._tokenTypeOverrides = tokenTypeOverrides;
+        if (debug_1.DebugFlags.InDebugMode) {
+            this._lineText = lineText;
+        }
+        else {
+            this._lineText = null;
+        }
+        this._tokens = [];
+        this._binaryTokens = [];
+        this._lastTokenEndIndex = 0;
+    }
+    LineTokens.prototype.produce = function (stack, endIndex) {
+        this.produceFromScopes(stack.contentNameScopesList, endIndex);
+    };
+    LineTokens.prototype.produceFromScopes = function (scopesList, endIndex) {
+        if (this._lastTokenEndIndex >= endIndex) {
+            return;
+        }
+        if (this._emitBinaryTokens) {
+            var metadata = scopesList.metadata;
+            for (var _i = 0, _a = this._tokenTypeOverrides; _i < _a.length; _i++) {
+                var tokenType = _a[_i];
+                if (tokenType.matcher(scopesList.generateScopes())) {
+                    metadata = StackElementMetadata.set(metadata, 0, toTemporaryType(tokenType.type), -1 /* NotSet */, 0, 0);
+                }
+            }
+            if (this._binaryTokens.length > 0 && this._binaryTokens[this._binaryTokens.length - 1] === metadata) {
+                // no need to push a token with the same metadata
+                this._lastTokenEndIndex = endIndex;
+                return;
+            }
+            this._binaryTokens.push(this._lastTokenEndIndex);
+            this._binaryTokens.push(metadata);
+            this._lastTokenEndIndex = endIndex;
+            return;
+        }
+        var scopes = scopesList.generateScopes();
+        if (debug_1.DebugFlags.InDebugMode) {
+            console.log('  token: |' + this._lineText.substring(this._lastTokenEndIndex, endIndex).replace(/\n$/, '\\n') + '|');
+            for (var k = 0; k < scopes.length; k++) {
+                console.log('      * ' + scopes[k]);
+            }
+        }
+        this._tokens.push({
+            startIndex: this._lastTokenEndIndex,
+            endIndex: endIndex,
+            // value: lineText.substring(lastTokenEndIndex, endIndex),
+            scopes: scopes
+        });
+        this._lastTokenEndIndex = endIndex;
+    };
+    LineTokens.prototype.getResult = function (stack, lineLength) {
+        if (this._tokens.length > 0 && this._tokens[this._tokens.length - 1].startIndex === lineLength - 1) {
+            // pop produced token for newline
+            this._tokens.pop();
+        }
+        if (this._tokens.length === 0) {
+            this._lastTokenEndIndex = -1;
+            this.produce(stack, lineLength);
+            this._tokens[this._tokens.length - 1].startIndex = 0;
+        }
+        return this._tokens;
+    };
+    LineTokens.prototype.getBinaryResult = function (stack, lineLength) {
+        if (this._binaryTokens.length > 0 && this._binaryTokens[this._binaryTokens.length - 2] === lineLength - 1) {
+            // pop produced token for newline
+            this._binaryTokens.pop();
+            this._binaryTokens.pop();
+        }
+        if (this._binaryTokens.length === 0) {
+            this._lastTokenEndIndex = -1;
+            this.produce(stack, lineLength);
+            this._binaryTokens[this._binaryTokens.length - 2] = 0;
+        }
+        var result = new Uint32Array(this._binaryTokens.length);
+        for (var i = 0, len = this._binaryTokens.length; i < len; i++) {
+            result[i] = this._binaryTokens[i];
+        }
+        return result;
+    };
+    return LineTokens;
+}());
+function toTemporaryType(standardType) {
+    switch (standardType) {
+        case 4 /* RegEx */:
+            return 4 /* RegEx */;
+        case 2 /* String */:
+            return 2 /* String */;
+        case 1 /* Comment */:
+            return 1 /* Comment */;
+        case 0 /* Other */:
+        default:
+            // `MetaEmbedded` is the same scope as `Other`
+            // but it overwrites existing token types in the stack.
+            return 8 /* MetaEmbedded */;
+    }
+}
+//# sourceMappingURL=grammar.js.map
+});
+$load('./registry', function(require, module, exports) {
+/*---------------------------------------------------------
+ * Copyright (C) Microsoft Corporation. All rights reserved.
+ *--------------------------------------------------------*/
+'use strict';
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
         function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
@@ -4789,4079 +7735,780 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-var __values = (this && this.__values) || function(o) {
-    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
-    if (m) return m.call(o);
-    if (o && typeof o.length === "number") return {
-        next: function () {
-            if (o && i >= o.length) o = void 0;
-            return { value: o && o[i++], done: !o };
-        }
-    };
-    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.WebviewWidget = exports.WebviewWidgetExternalEndpoint = exports.WebviewWidgetIdentifier = void 0;
-var mime = __webpack_require__(/*! mime */ "./node_modules/mime/index.js");
-var json_1 = __webpack_require__(/*! @phosphor/coreutils/lib/json */ "./node_modules/@phosphor/coreutils/lib/json.js");
-var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
-var widget_1 = __webpack_require__(/*! @theia/core/lib/browser/widgets/widget */ "./node_modules/@theia/core/lib/browser/widgets/widget.js");
-var disposable_1 = __webpack_require__(/*! @theia/core/lib/common/disposable */ "./node_modules/@theia/core/lib/common/disposable.js");
-var application_shell_mouse_tracker_1 = __webpack_require__(/*! @theia/core/lib/browser/shell/application-shell-mouse-tracker */ "./node_modules/@theia/core/lib/browser/shell/application-shell-mouse-tracker.js");
-var promise_util_1 = __webpack_require__(/*! @theia/core/lib/common/promise-util */ "./node_modules/@theia/core/lib/common/promise-util.js");
-var webview_environment_1 = __webpack_require__(/*! ./webview-environment */ "./node_modules/@theia/plugin-ext/lib/main/browser/webview/webview-environment.js");
-var uri_1 = __webpack_require__(/*! @theia/core/lib/common/uri */ "./node_modules/@theia/core/lib/common/uri.js");
-var event_1 = __webpack_require__(/*! @theia/core/lib/common/event */ "./node_modules/@theia/core/lib/common/event.js");
-var opener_service_1 = __webpack_require__(/*! @theia/core/lib/browser/opener-service */ "./node_modules/@theia/core/lib/browser/opener-service.js");
-var keybinding_1 = __webpack_require__(/*! @theia/core/lib/browser/keybinding */ "./node_modules/@theia/core/lib/browser/keybinding.js");
-var uri_components_1 = __webpack_require__(/*! ../../../common/uri-components */ "./node_modules/@theia/plugin-ext/lib/common/uri-components.js");
-var plugin_shared_style_1 = __webpack_require__(/*! ../plugin-shared-style */ "./node_modules/@theia/plugin-ext/lib/main/browser/plugin-shared-style.js");
-var webview_theme_data_provider_1 = __webpack_require__(/*! ./webview-theme-data-provider */ "./node_modules/@theia/plugin-ext/lib/main/browser/webview/webview-theme-data-provider.js");
-var external_uri_service_1 = __webpack_require__(/*! @theia/core/lib/browser/external-uri-service */ "./node_modules/@theia/core/lib/browser/external-uri-service.js");
-var output_channel_1 = __webpack_require__(/*! @theia/output/lib/common/output-channel */ "./node_modules/@theia/output/lib/common/output-channel.js");
-var webview_preferences_1 = __webpack_require__(/*! ./webview-preferences */ "./node_modules/@theia/plugin-ext/lib/main/browser/webview/webview-preferences.js");
-var webview_protocol_1 = __webpack_require__(/*! ../../common/webview-protocol */ "./node_modules/@theia/plugin-ext/lib/main/common/webview-protocol.js");
-var webview_resource_cache_1 = __webpack_require__(/*! ./webview-resource-cache */ "./node_modules/@theia/plugin-ext/lib/main/browser/webview/webview-resource-cache.js");
-var endpoint_1 = __webpack_require__(/*! @theia/core/lib/browser/endpoint */ "./node_modules/@theia/core/lib/browser/endpoint.js");
-// Style from core
-var TRANSPARENT_OVERLAY_STYLE = 'theia-transparent-overlay';
-var WebviewWidgetIdentifier = /** @class */ (function () {
-    function WebviewWidgetIdentifier() {
+var grammar_1 = require("./grammar");
+var onigLibs_1 = require("./onigLibs");
+var SyncRegistry = /** @class */ (function () {
+    function SyncRegistry(theme, onigLibPromise) {
+        this._theme = theme;
+        this._grammars = {};
+        this._rawGrammars = {};
+        this._injectionGrammars = {};
+        this._onigLibPromise = onigLibPromise || onigLibs_1.getOniguruma();
     }
-    WebviewWidgetIdentifier = __decorate([
-        inversify_1.injectable()
-    ], WebviewWidgetIdentifier);
-    return WebviewWidgetIdentifier;
-}());
-exports.WebviewWidgetIdentifier = WebviewWidgetIdentifier;
-exports.WebviewWidgetExternalEndpoint = Symbol('WebviewWidgetExternalEndpoint');
-var WebviewWidget = /** @class */ (function (_super) {
-    __extends(WebviewWidget, _super);
-    function WebviewWidget() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.viewState = {
-            visible: false,
-            active: false,
-            position: 0
-        };
-        _this.html = '';
-        _this._contentOptions = {};
-        _this.options = {};
-        _this.ready = new promise_util_1.Deferred();
-        _this.onMessageEmitter = new event_1.Emitter();
-        _this.onMessage = _this.onMessageEmitter.event;
-        _this.pendingMessages = [];
-        _this.toHide = new disposable_1.DisposableCollection();
-        _this.toDisposeOnIcon = new disposable_1.DisposableCollection();
-        return _this;
-    }
-    WebviewWidget_1 = WebviewWidget;
-    Object.defineProperty(WebviewWidget.prototype, "contentOptions", {
-        get: function () {
-            return this._contentOptions;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(WebviewWidget.prototype, "state", {
-        get: function () {
-            return this._state;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    WebviewWidget.prototype.init = function () {
+    SyncRegistry.prototype.setTheme = function (theme) {
         var _this = this;
-        this.node.tabIndex = 0;
-        this.id = WebviewWidget_1.FACTORY_ID + ':' + this.identifier.id;
-        this.title.closable = true;
-        this.addClass(WebviewWidget_1.Styles.WEBVIEW);
-        this.toDispose.push(this.onMessageEmitter);
-        this.transparentOverlay = document.createElement('div');
-        this.transparentOverlay.classList.add(TRANSPARENT_OVERLAY_STYLE);
-        this.transparentOverlay.style.display = 'none';
-        this.node.appendChild(this.transparentOverlay);
-        this.toDispose.push(this.mouseTracker.onMousedown(function () {
-            if (_this.element && _this.element.style.display !== 'none') {
-                _this.transparentOverlay.style.display = 'block';
-            }
-        }));
-        this.toDispose.push(this.mouseTracker.onMouseup(function () {
-            if (_this.element && _this.element.style.display !== 'none') {
-                _this.transparentOverlay.style.display = 'none';
-            }
-        }));
-    };
-    WebviewWidget.prototype.onBeforeAttach = function (msg) {
-        var _this = this;
-        _super.prototype.onBeforeAttach.call(this, msg);
-        this.doShow();
-        // iframe has to be reloaded when moved to another DOM element
-        this.toDisposeOnDetach.push(disposable_1.Disposable.create(function () { return _this.forceHide(); }));
-    };
-    WebviewWidget.prototype.onBeforeShow = function (msg) {
-        _super.prototype.onBeforeShow.call(this, msg);
-        this.doShow();
-    };
-    WebviewWidget.prototype.onAfterHide = function (msg) {
-        _super.prototype.onAfterHide.call(this, msg);
-        this.doHide();
-    };
-    WebviewWidget.prototype.doHide = function () {
-        var _this = this;
-        if (this.options.retainContextWhenHidden !== true) {
-            if (this.hideTimeout === undefined) {
-                // avoid removing iframe if a widget moved quickly
-                this.hideTimeout = setTimeout(function () { return _this.forceHide(); }, 50);
-            }
-        }
-    };
-    WebviewWidget.prototype.forceHide = function () {
-        clearTimeout(this.hideTimeout);
-        this.hideTimeout = undefined;
-        this.toHide.dispose();
-    };
-    WebviewWidget.prototype.doShow = function () {
-        var _this = this;
-        clearTimeout(this.hideTimeout);
-        this.hideTimeout = undefined;
-        if (!this.toHide.disposed) {
-            return;
-        }
-        this.toDispose.push(this.toHide);
-        var element = document.createElement('iframe');
-        element.className = 'webview';
-        element.sandbox.add('allow-scripts', 'allow-forms', 'allow-same-origin');
-        element.setAttribute('src', this.externalEndpoint + "/index.html?id=" + this.identifier.id);
-        element.style.border = 'none';
-        element.style.width = '100%';
-        element.style.height = '100%';
-        this.element = element;
-        this.node.appendChild(this.element);
-        this.toHide.push(disposable_1.Disposable.create(function () {
-            if (_this.element) {
-                _this.element.remove();
-                _this.element = undefined;
-            }
-        }));
-        var oldReady = this.ready;
-        var ready = new promise_util_1.Deferred();
-        ready.promise.then(function () { return oldReady.resolve(); });
-        this.ready = ready;
-        this.toHide.push(disposable_1.Disposable.create(function () { return _this.ready = new promise_util_1.Deferred(); }));
-        var subscription = this.on("webview-ready" /* webviewReady */, function () {
-            subscription.dispose();
-            ready.resolve();
+        this._theme = theme;
+        Object.keys(this._grammars).forEach(function (scopeName) {
+            var grammar = _this._grammars[scopeName];
+            grammar.onDidChangeTheme();
         });
-        this.toHide.push(subscription);
-        this.toHide.push(this.on("onmessage" /* onmessage */, function (data) { return _this.onMessageEmitter.fire(data); }));
-        this.toHide.push(this.on("did-click-link" /* didClickLink */, function (uri) { return _this.openLink(new uri_1.default(uri)); }));
-        this.toHide.push(this.on("do-update-state" /* doUpdateState */, function (state) {
-            _this._state = state;
-        }));
-        this.toHide.push(this.on("did-focus" /* didFocus */, function () {
-            // emulate the webview focus without actually changing focus
-            return _this.node.dispatchEvent(new FocusEvent('focus'));
-        }));
-        this.toHide.push(this.on("did-blur" /* didBlur */, function () {
-            /* no-op: webview loses focus only if another element gains focus in the main window */
-        }));
-        this.toHide.push(this.on("do-reload" /* doReload */, function () { return _this.reload(); }));
-        this.toHide.push(this.on("load-resource" /* loadResource */, function (entry) { return _this.loadResource(entry.path); }));
-        this.toHide.push(this.on("load-localhost" /* loadLocalhost */, function (entry) {
-            return _this.loadLocalhost(entry.origin);
-        }));
-        this.toHide.push(this.on("did-keydown" /* didKeydown */, function (data) {
-            // Electron: workaround for https://github.com/electron/electron/issues/14258
-            // We have to detect keyboard events in the <webview> and dispatch them to our
-            // keybinding service because these events do not bubble to the parent window anymore.
-            _this.keybindings.dispatchKeyDown(data, _this.element);
-        }));
-        this.style();
-        this.toHide.push(this.themeDataProvider.onDidChangeThemeData(function () { return _this.style(); }));
-        this.doUpdateContent();
-        while (this.pendingMessages.length) {
-            this.sendMessage(this.pendingMessages.shift());
+    };
+    SyncRegistry.prototype.getColorMap = function () {
+        return this._theme.getColorMap();
+    };
+    /**
+     * Add `grammar` to registry and return a list of referenced scope names
+     */
+    SyncRegistry.prototype.addGrammar = function (grammar, injectionScopeNames) {
+        this._rawGrammars[grammar.scopeName] = grammar;
+        if (injectionScopeNames) {
+            this._injectionGrammars[grammar.scopeName] = injectionScopeNames;
         }
     };
-    WebviewWidget.prototype.loadLocalhost = function (origin) {
+    /**
+     * Lookup a raw grammar.
+     */
+    SyncRegistry.prototype.lookup = function (scopeName) {
+        return this._rawGrammars[scopeName];
+    };
+    /**
+     * Returns the injections for the given grammar
+     */
+    SyncRegistry.prototype.injections = function (targetScope) {
+        return this._injectionGrammars[targetScope];
+    };
+    /**
+     * Get the default theme settings
+     */
+    SyncRegistry.prototype.getDefaults = function () {
+        return this._theme.getDefaults();
+    };
+    /**
+     * Match a scope in the theme.
+     */
+    SyncRegistry.prototype.themeMatch = function (scopeName) {
+        return this._theme.match(scopeName);
+    };
+    /**
+     * Lookup a grammar.
+     */
+    SyncRegistry.prototype.grammarForScopeName = function (scopeName, initialLanguage, embeddedLanguages, tokenTypes) {
         return __awaiter(this, void 0, void 0, function () {
-            var redirect;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.getRedirect(origin)];
-                    case 1:
-                        redirect = _a.sent();
-                        return [2 /*return*/, this.doSend('did-load-localhost', { origin: origin, location: redirect })];
-                }
-            });
-        });
-    };
-    WebviewWidget.prototype.getRedirect = function (url) {
-        return __awaiter(this, void 0, void 0, function () {
-            var uri, localhost, _a, _b, mapping;
-            var e_1, _c;
-            return __generator(this, function (_d) {
-                uri = new uri_1.default(url);
-                localhost = this.externalUriService.parseLocalhost(uri);
-                if (!localhost) {
-                    return [2 /*return*/, undefined];
-                }
-                if (this._contentOptions.portMapping) {
-                    try {
-                        for (_a = __values(this._contentOptions.portMapping), _b = _a.next(); !_b.done; _b = _a.next()) {
-                            mapping = _b.value;
-                            if (mapping.webviewPort === localhost.port) {
-                                if (mapping.webviewPort !== mapping.extensionHostPort) {
-                                    return [2 /*return*/, this.toRemoteUrl(uri.withAuthority(localhost.address + ":" + mapping.extensionHostPort))];
-                                }
-                            }
-                        }
-                    }
-                    catch (e_1_1) { e_1 = { error: e_1_1 }; }
-                    finally {
-                        try {
-                            if (_b && !_b.done && (_c = _a.return)) _c.call(_a);
-                        }
-                        finally { if (e_1) throw e_1.error; }
-                    }
-                }
-                return [2 /*return*/, this.toRemoteUrl(uri)];
-            });
-        });
-    };
-    WebviewWidget.prototype.toRemoteUrl = function (localUri) {
-        return __awaiter(this, void 0, void 0, function () {
-            var remoteUri, remoteUrl;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.externalUriService.resolve(localUri)];
-                    case 1:
-                        remoteUri = _a.sent();
-                        remoteUrl = remoteUri.toString();
-                        if (remoteUrl[remoteUrl.length - 1] === '/') {
-                            return [2 /*return*/, remoteUrl.slice(0, remoteUrl.length - 1)];
-                        }
-                        return [2 /*return*/, remoteUrl];
-                }
-            });
-        });
-    };
-    WebviewWidget.prototype.setContentOptions = function (contentOptions) {
-        if (json_1.JSONExt.deepEqual(this.contentOptions, contentOptions)) {
-            return;
-        }
-        this._contentOptions = contentOptions;
-        this.doUpdateContent();
-    };
-    WebviewWidget.prototype.setIconUrl = function (iconUrl) {
-        if ((this.iconUrl && iconUrl && json_1.JSONExt.deepEqual(this.iconUrl, iconUrl)) || (this.iconUrl === iconUrl)) {
-            return;
-        }
-        this.toDisposeOnIcon.dispose();
-        this.toDispose.push(this.toDisposeOnIcon);
-        this.iconUrl = iconUrl;
-        if (iconUrl) {
-            var darkIconUrl_1 = typeof iconUrl === 'object' ? iconUrl.dark : iconUrl;
-            var lightIconUrl_1 = typeof iconUrl === 'object' ? iconUrl.light : iconUrl;
-            var iconClass = "webview-" + this.identifier.id + "-file-icon";
-            this.toDisposeOnIcon.push(this.sharedStyle.insertRule(".theia-webview-icon." + iconClass + "::before", function (theme) { return "background-image: url(" + (theme.type === 'light' ? lightIconUrl_1 : darkIconUrl_1) + ");"; }));
-            this.title.iconClass = "theia-webview-icon " + iconClass;
-        }
-        else {
-            this.title.iconClass = '';
-        }
-    };
-    WebviewWidget.prototype.setHTML = function (value) {
-        this.html = this.preprocessHtml(value);
-        this.doUpdateContent();
-    };
-    WebviewWidget.prototype.preprocessHtml = function (value) {
-        var _this = this;
-        return value
-            .replace(/(["'])(?:vscode|theia)-resource:(\/\/([^\s\/'"]+?)(?=\/))?([^\s'"]+?)(["'])/gi, function (_, startQuote, _1, scheme, path, endQuote) {
-            if (scheme) {
-                return "" + startQuote + _this.externalEndpoint + "/theia-resource/" + scheme + path + endQuote;
-            }
-            return "" + startQuote + _this.externalEndpoint + "/theia-resource/file" + path + endQuote;
-        });
-    };
-    WebviewWidget.prototype.onActivateRequest = function (msg) {
-        _super.prototype.onActivateRequest.call(this, msg);
-        this.focus();
-    };
-    WebviewWidget.prototype.focus = function () {
-        this.node.focus();
-        if (this.element) {
-            this.doSend('focus');
-        }
-    };
-    WebviewWidget.prototype.reload = function () {
-        this.doUpdateContent();
-    };
-    WebviewWidget.prototype.style = function () {
-        var _a = this.themeDataProvider.getThemeData(), styles = _a.styles, activeTheme = _a.activeTheme;
-        this.doSend('styles', { styles: styles, activeTheme: activeTheme });
-    };
-    WebviewWidget.prototype.openLink = function (link) {
-        var supported = this.toSupportedLink(link);
-        if (supported) {
-            opener_service_1.open(this.openerService, supported);
-        }
-    };
-    WebviewWidget.prototype.toSupportedLink = function (link) {
-        var e_2, _a;
-        if (WebviewWidget_1.standardSupportedLinkSchemes.has(link.scheme)) {
-            var linkAsString = link.toString();
-            try {
-                for (var _b = __values([this.externalEndpoint + '/theia-resource', this.externalEndpoint + '/vscode-resource']), _c = _b.next(); !_c.done; _c = _b.next()) {
-                    var resourceRoot = _c.value;
-                    if (linkAsString.startsWith(resourceRoot + '/')) {
-                        return this.normalizeRequestUri(linkAsString.substr(resourceRoot.length));
-                    }
-                }
-            }
-            catch (e_2_1) { e_2 = { error: e_2_1 }; }
-            finally {
-                try {
-                    if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
-                }
-                finally { if (e_2) throw e_2.error; }
-            }
-            return link;
-        }
-        if (!!this.contentOptions.enableCommandUris && link.scheme === uri_components_1.Schemes.COMMAND) {
-            return link;
-        }
-        return undefined;
-    };
-    WebviewWidget.prototype.loadResource = function (requestPath) {
-        return __awaiter(this, void 0, void 0, function () {
-            var normalizedUri, cacheUrl, _loop_1, this_1, _a, _b, root, state_1, e_3_1, _c;
-            var e_3, _d;
+            var rawGrammar, _a, _b, _c, _d;
             return __generator(this, function (_e) {
                 switch (_e.label) {
                     case 0:
-                        normalizedUri = this.normalizeRequestUri(requestPath);
-                        cacheUrl = new endpoint_1.Endpoint({ path: normalizedUri.path.toString() }).getRestUrl().toString();
-                        _e.label = 1;
-                    case 1:
-                        _e.trys.push([1, 10, , 11]);
-                        if (!this.contentOptions.localResourceRoots) return [3 /*break*/, 9];
-                        _loop_1 = function (root) {
-                            var cached, response, buffer_1, eTag, data;
-                            return __generator(this, function (_a) {
-                                switch (_a.label) {
-                                    case 0:
-                                        if (!new uri_1.default(root).path.isEqualOrParent(normalizedUri.path)) {
-                                            return [2 /*return*/, "continue"];
-                                        }
-                                        return [4 /*yield*/, this_1.resourceCache.match(cacheUrl)];
-                                    case 1:
-                                        cached = _a.sent();
-                                        return [4 /*yield*/, this_1.resourceLoader.load({ uri: normalizedUri.toString(), eTag: cached && cached.eTag })];
-                                    case 2:
-                                        response = _a.sent();
-                                        if (response) {
-                                            buffer_1 = response.buffer, eTag = response.eTag;
-                                            cached = { body: function () { return new Uint8Array(buffer_1); }, eTag: eTag };
-                                            this_1.resourceCache.put(cacheUrl, cached);
-                                        }
-                                        if (!cached) return [3 /*break*/, 4];
-                                        return [4 /*yield*/, cached.body()];
-                                    case 3:
-                                        data = _a.sent();
-                                        return [2 /*return*/, { value: this_1.doSend('did-load-resource', {
-                                                    status: 200,
-                                                    path: requestPath,
-                                                    mime: mime.getType(normalizedUri.path.toString()) || 'application/octet-stream',
-                                                    data: data
-                                                }) }];
-                                    case 4: return [2 /*return*/];
-                                }
-                            });
-                        };
-                        this_1 = this;
-                        _e.label = 2;
-                    case 2:
-                        _e.trys.push([2, 7, 8, 9]);
-                        _a = __values(this.contentOptions.localResourceRoots), _b = _a.next();
-                        _e.label = 3;
-                    case 3:
-                        if (!!_b.done) return [3 /*break*/, 6];
-                        root = _b.value;
-                        return [5 /*yield**/, _loop_1(root)];
-                    case 4:
-                        state_1 = _e.sent();
-                        if (typeof state_1 === "object")
-                            return [2 /*return*/, state_1.value];
-                        _e.label = 5;
-                    case 5:
-                        _b = _a.next();
-                        return [3 /*break*/, 3];
-                    case 6: return [3 /*break*/, 9];
-                    case 7:
-                        e_3_1 = _e.sent();
-                        e_3 = { error: e_3_1 };
-                        return [3 /*break*/, 9];
-                    case 8:
-                        try {
-                            if (_b && !_b.done && (_d = _a.return)) _d.call(_a);
+                        if (!!this._grammars[scopeName]) return [3 /*break*/, 2];
+                        rawGrammar = this._rawGrammars[scopeName];
+                        if (!rawGrammar) {
+                            return [2 /*return*/, null];
                         }
-                        finally { if (e_3) throw e_3.error; }
-                        return [7 /*endfinally*/];
-                    case 9: return [3 /*break*/, 11];
-                    case 10:
-                        _c = _e.sent();
-                        return [3 /*break*/, 11];
-                    case 11:
-                        this.resourceCache.delete(cacheUrl);
-                        return [2 /*return*/, this.doSend('did-load-resource', {
-                                status: 404,
-                                path: requestPath
-                            })];
+                        _a = this._grammars;
+                        _b = scopeName;
+                        _c = grammar_1.createGrammar;
+                        _d = [rawGrammar, initialLanguage, embeddedLanguages, tokenTypes, this];
+                        return [4 /*yield*/, this._onigLibPromise];
+                    case 1:
+                        _a[_b] = _c.apply(void 0, _d.concat([_e.sent()]));
+                        _e.label = 2;
+                    case 2: return [2 /*return*/, this._grammars[scopeName]];
                 }
             });
         });
     };
-    WebviewWidget.prototype.normalizeRequestUri = function (requestPath) {
-        var normalizedPath = decodeURIComponent(requestPath);
-        var requestUri = new uri_1.default(normalizedPath.replace(/^\/(\w+)\/(.+)$/, function (_, scheme, path) { return scheme + ':/' + path; }));
-        if (requestUri.scheme !== 'theia-resource' && requestUri.scheme !== 'vscode-resource') {
-            return requestUri;
-        }
-        // Modern vscode-resources uris put the scheme of the requested resource as the authority
-        if (requestUri.authority) {
-            return new uri_1.default(requestUri.authority + ':' + requestUri.path);
-        }
-        // Old style vscode-resource uris lose the scheme of the resource which means they are unable to
-        // load a mix of local and remote content properly.
-        return requestUri.withScheme('file');
+    return SyncRegistry;
+}());
+exports.SyncRegistry = SyncRegistry;
+//# sourceMappingURL=registry.js.map
+});
+$load('./main', function(require, module, exports) {
+/*---------------------------------------------------------
+ * Copyright (C) Microsoft Corporation. All rights reserved.
+ *--------------------------------------------------------*/
+'use strict';
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var registry_1 = require("./registry");
+var grammarReader = require("./grammarReader");
+var theme_1 = require("./theme");
+var grammar_1 = require("./grammar");
+/**
+ * The registry that will hold all grammars.
+ */
+var Registry = /** @class */ (function () {
+    function Registry(locator) {
+        var _this = this;
+        if (locator === void 0) { locator = { loadGrammar: function () { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                return [2 /*return*/, null];
+            }); }); } }; }
+        this._locator = locator;
+        this._syncRegistry = new registry_1.SyncRegistry(theme_1.Theme.createFromRawTheme(locator.theme, locator.colorMap), locator.getOnigLib && locator.getOnigLib());
+        this._ensureGrammarCache = new Map();
+    }
+    /**
+     * Change the theme. Once called, no previous `ruleStack` should be used anymore.
+     */
+    Registry.prototype.setTheme = function (theme, colorMap) {
+        this._syncRegistry.setTheme(theme_1.Theme.createFromRawTheme(theme, colorMap));
     };
-    WebviewWidget.prototype.sendMessage = function (data) {
-        if (this.element) {
-            this.doSend('message', data);
-        }
-        else {
-            this.pendingMessages.push(data);
-        }
+    /**
+     * Returns a lookup array for color ids.
+     */
+    Registry.prototype.getColorMap = function () {
+        return this._syncRegistry.getColorMap();
     };
-    WebviewWidget.prototype.doUpdateContent = function () {
-        this.doSend('content', {
-            contents: this.html,
-            options: this.contentOptions,
-            state: this.state
+    /**
+     * Load the grammar for `scopeName` and all referenced included grammars asynchronously.
+     * Please do not use language id 0.
+     */
+    Registry.prototype.loadGrammarWithEmbeddedLanguages = function (initialScopeName, initialLanguage, embeddedLanguages) {
+        return this.loadGrammarWithConfiguration(initialScopeName, initialLanguage, { embeddedLanguages: embeddedLanguages });
+    };
+    /**
+     * Load the grammar for `scopeName` and all referenced included grammars asynchronously.
+     * Please do not use language id 0.
+     */
+    Registry.prototype.loadGrammarWithConfiguration = function (initialScopeName, initialLanguage, configuration) {
+        return this._loadGrammar(initialScopeName, initialLanguage, configuration.embeddedLanguages, configuration.tokenTypes);
+    };
+    /**
+     * Load the grammar for `scopeName` and all referenced included grammars asynchronously.
+     */
+    Registry.prototype.loadGrammar = function (initialScopeName) {
+        return this._loadGrammar(initialScopeName, 0, null, null);
+    };
+    Registry.prototype._doLoadSingleGrammar = function (scopeName) {
+        return __awaiter(this, void 0, void 0, function () {
+            var grammar, injections;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this._locator.loadGrammar(scopeName)];
+                    case 1:
+                        grammar = _a.sent();
+                        if (grammar) {
+                            injections = (typeof this._locator.getInjections === 'function' ? this._locator.getInjections(scopeName) : undefined);
+                            this._syncRegistry.addGrammar(grammar, injections);
+                        }
+                        return [2 /*return*/];
+                }
+            });
         });
     };
-    WebviewWidget.prototype.storeState = function () {
-        return {
-            viewType: this.viewType,
-            title: this.title.label,
-            iconUrl: this.iconUrl,
-            options: this.options,
-            contentOptions: this.contentOptions,
-            state: this.state
-        };
-    };
-    WebviewWidget.prototype.restoreState = function (oldState) {
-        var viewType = oldState.viewType, title = oldState.title, iconUrl = oldState.iconUrl, options = oldState.options, contentOptions = oldState.contentOptions, state = oldState.state;
-        this.viewType = viewType;
-        this.title.label = title;
-        this.setIconUrl(iconUrl);
-        this.options = options;
-        this._contentOptions = contentOptions;
-        this._state = state;
-    };
-    WebviewWidget.prototype.doSend = function (channel, data) {
+    Registry.prototype._loadSingleGrammar = function (scopeName) {
         return __awaiter(this, void 0, void 0, function () {
-            var e_4;
+            return __generator(this, function (_a) {
+                if (!this._ensureGrammarCache.has(scopeName)) {
+                    this._ensureGrammarCache.set(scopeName, this._doLoadSingleGrammar(scopeName));
+                }
+                return [2 /*return*/, this._ensureGrammarCache.get(scopeName)];
+            });
+        });
+    };
+    Registry.prototype._collectDependenciesForDep = function (initialScopeName, result, dep) {
+        var grammar = this._syncRegistry.lookup(dep.scopeName);
+        if (!grammar) {
+            if (dep.scopeName === initialScopeName) {
+                throw new Error("No grammar provided for <" + initialScopeName + ">");
+            }
+            return;
+        }
+        if (dep instanceof grammar_1.FullScopeDependency) {
+            grammar_1.collectDependencies(result, this._syncRegistry.lookup(initialScopeName), grammar);
+        }
+        else {
+            grammar_1.collectSpecificDependencies(result, this._syncRegistry.lookup(initialScopeName), grammar, dep.include);
+        }
+        var injections = this._syncRegistry.injections(dep.scopeName);
+        if (injections) {
+            for (var _i = 0, injections_1 = injections; _i < injections_1.length; _i++) {
+                var injection = injections_1[_i];
+                result.add(new grammar_1.FullScopeDependency(injection));
+            }
+        }
+    };
+    Registry.prototype._loadGrammar = function (initialScopeName, initialLanguage, embeddedLanguages, tokenTypes) {
+        return __awaiter(this, void 0, void 0, function () {
+            var seenFullScopeRequests, seenPartialScopeRequests, Q, q, deps, _i, q_1, dep, _a, _b, dep, _c, _d, dep;
+            var _this = this;
+            return __generator(this, function (_e) {
+                switch (_e.label) {
+                    case 0:
+                        seenFullScopeRequests = new Set();
+                        seenPartialScopeRequests = new Set();
+                        seenFullScopeRequests.add(initialScopeName);
+                        Q = [new grammar_1.FullScopeDependency(initialScopeName)];
+                        _e.label = 1;
+                    case 1:
+                        if (!(Q.length > 0)) return [3 /*break*/, 3];
+                        q = Q;
+                        Q = [];
+                        return [4 /*yield*/, Promise.all(q.map(function (request) { return _this._loadSingleGrammar(request.scopeName); }))];
+                    case 2:
+                        _e.sent();
+                        deps = new grammar_1.ScopeDependencyCollector();
+                        for (_i = 0, q_1 = q; _i < q_1.length; _i++) {
+                            dep = q_1[_i];
+                            this._collectDependenciesForDep(initialScopeName, deps, dep);
+                        }
+                        for (_a = 0, _b = deps.full; _a < _b.length; _a++) {
+                            dep = _b[_a];
+                            if (seenFullScopeRequests.has(dep.scopeName)) {
+                                // already processed
+                                continue;
+                            }
+                            seenFullScopeRequests.add(dep.scopeName);
+                            Q.push(dep);
+                        }
+                        for (_c = 0, _d = deps.partial; _c < _d.length; _c++) {
+                            dep = _d[_c];
+                            if (seenFullScopeRequests.has(dep.scopeName)) {
+                                // already processed in full
+                                continue;
+                            }
+                            if (seenPartialScopeRequests.has(dep.toKey())) {
+                                // already processed
+                                continue;
+                            }
+                            seenPartialScopeRequests.add(dep.toKey());
+                            Q.push(dep);
+                        }
+                        return [3 /*break*/, 1];
+                    case 3: return [2 /*return*/, this.grammarForScopeName(initialScopeName, initialLanguage, embeddedLanguages, tokenTypes)];
+                }
+            });
+        });
+    };
+    /**
+     * Adds a rawGrammar.
+     */
+    Registry.prototype.addGrammar = function (rawGrammar, injections, initialLanguage, embeddedLanguages) {
+        if (injections === void 0) { injections = []; }
+        if (initialLanguage === void 0) { initialLanguage = 0; }
+        if (embeddedLanguages === void 0) { embeddedLanguages = null; }
+        return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        if (!this.element) {
-                            return [2 /*return*/];
-                        }
-                        _a.label = 1;
-                    case 1:
-                        _a.trys.push([1, 3, , 4]);
-                        return [4 /*yield*/, this.ready.promise];
-                    case 2:
-                        _a.sent();
-                        this.postMessage(channel, data);
-                        return [3 /*break*/, 4];
-                    case 3:
-                        e_4 = _a.sent();
-                        console.error(e_4);
-                        return [3 /*break*/, 4];
-                    case 4: return [2 /*return*/];
+                        this._syncRegistry.addGrammar(rawGrammar, injections);
+                        return [4 /*yield*/, this.grammarForScopeName(rawGrammar.scopeName, initialLanguage, embeddedLanguages)];
+                    case 1: return [2 /*return*/, (_a.sent())];
                 }
             });
         });
     };
-    WebviewWidget.prototype.postMessage = function (channel, data) {
-        if (this.element) {
-            this.trace('out', channel, data);
-            this.element.contentWindow.postMessage({ channel: channel, args: data }, '*');
-        }
+    /**
+     * Get the grammar for `scopeName`. The grammar must first be created via `loadGrammar` or `addGrammar`.
+     */
+    Registry.prototype.grammarForScopeName = function (scopeName, initialLanguage, embeddedLanguages, tokenTypes) {
+        if (initialLanguage === void 0) { initialLanguage = 0; }
+        if (embeddedLanguages === void 0) { embeddedLanguages = null; }
+        if (tokenTypes === void 0) { tokenTypes = null; }
+        return this._syncRegistry.grammarForScopeName(scopeName, initialLanguage, embeddedLanguages, tokenTypes);
     };
-    WebviewWidget.prototype.on = function (channel, handler) {
-        var _this = this;
-        var listener = function (e) {
-            if (!e || !e.data || e.data.target !== _this.identifier.id) {
-                return;
-            }
-            if (e.data.channel === channel) {
-                _this.trace('in', e.data.channel, e.data.data);
-                handler(e.data.data);
-            }
-        };
-        window.addEventListener('message', listener);
-        return disposable_1.Disposable.create(function () {
-            return window.removeEventListener('message', listener);
-        });
-    };
-    WebviewWidget.prototype.trace = function (kind, channel, data) {
-        var value = this.preferences['webview.trace'];
-        if (value === 'off') {
-            return;
-        }
-        var output = this.outputManager.getChannel('webviews');
-        output.append('\n' + this.identifier.id);
-        output.append(kind === 'out' ? ' => ' : ' <= ');
-        output.append(channel);
-        if (value === 'verbose') {
-            if (data) {
-                output.append('\n' + JSON.stringify(data, undefined, 2));
-            }
-        }
-    };
-    var WebviewWidget_1;
-    WebviewWidget.standardSupportedLinkSchemes = new Set([
-        uri_components_1.Schemes.HTTP,
-        uri_components_1.Schemes.HTTPS,
-        uri_components_1.Schemes.MAILTO,
-        uri_components_1.Schemes.VSCODE
-    ]);
-    WebviewWidget.FACTORY_ID = 'plugin-webview';
-    __decorate([
-        inversify_1.inject(WebviewWidgetIdentifier),
-        __metadata("design:type", WebviewWidgetIdentifier)
-    ], WebviewWidget.prototype, "identifier", void 0);
-    __decorate([
-        inversify_1.inject(exports.WebviewWidgetExternalEndpoint),
-        __metadata("design:type", String)
-    ], WebviewWidget.prototype, "externalEndpoint", void 0);
-    __decorate([
-        inversify_1.inject(application_shell_mouse_tracker_1.ApplicationShellMouseTracker),
-        __metadata("design:type", application_shell_mouse_tracker_1.ApplicationShellMouseTracker)
-    ], WebviewWidget.prototype, "mouseTracker", void 0);
-    __decorate([
-        inversify_1.inject(webview_environment_1.WebviewEnvironment),
-        __metadata("design:type", webview_environment_1.WebviewEnvironment)
-    ], WebviewWidget.prototype, "environment", void 0);
-    __decorate([
-        inversify_1.inject(opener_service_1.OpenerService),
-        __metadata("design:type", Object)
-    ], WebviewWidget.prototype, "openerService", void 0);
-    __decorate([
-        inversify_1.inject(keybinding_1.KeybindingRegistry),
-        __metadata("design:type", keybinding_1.KeybindingRegistry)
-    ], WebviewWidget.prototype, "keybindings", void 0);
-    __decorate([
-        inversify_1.inject(plugin_shared_style_1.PluginSharedStyle),
-        __metadata("design:type", plugin_shared_style_1.PluginSharedStyle)
-    ], WebviewWidget.prototype, "sharedStyle", void 0);
-    __decorate([
-        inversify_1.inject(webview_theme_data_provider_1.WebviewThemeDataProvider),
-        __metadata("design:type", webview_theme_data_provider_1.WebviewThemeDataProvider)
-    ], WebviewWidget.prototype, "themeDataProvider", void 0);
-    __decorate([
-        inversify_1.inject(external_uri_service_1.ExternalUriService),
-        __metadata("design:type", external_uri_service_1.ExternalUriService)
-    ], WebviewWidget.prototype, "externalUriService", void 0);
-    __decorate([
-        inversify_1.inject(output_channel_1.OutputChannelManager),
-        __metadata("design:type", output_channel_1.OutputChannelManager)
-    ], WebviewWidget.prototype, "outputManager", void 0);
-    __decorate([
-        inversify_1.inject(webview_preferences_1.WebviewPreferences),
-        __metadata("design:type", Object)
-    ], WebviewWidget.prototype, "preferences", void 0);
-    __decorate([
-        inversify_1.inject(webview_protocol_1.WebviewResourceLoader),
-        __metadata("design:type", Object)
-    ], WebviewWidget.prototype, "resourceLoader", void 0);
-    __decorate([
-        inversify_1.inject(webview_resource_cache_1.WebviewResourceCache),
-        __metadata("design:type", webview_resource_cache_1.WebviewResourceCache)
-    ], WebviewWidget.prototype, "resourceCache", void 0);
-    __decorate([
-        inversify_1.postConstruct(),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", []),
-        __metadata("design:returntype", void 0)
-    ], WebviewWidget.prototype, "init", null);
-    WebviewWidget = WebviewWidget_1 = __decorate([
-        inversify_1.injectable()
-    ], WebviewWidget);
-    return WebviewWidget;
-}(widget_1.BaseWidget));
-exports.WebviewWidget = WebviewWidget;
-(function (WebviewWidget) {
-    var Styles;
-    (function (Styles) {
-        Styles.WEBVIEW = 'theia-webview';
-    })(Styles = WebviewWidget.Styles || (WebviewWidget.Styles = {}));
-})(WebviewWidget = exports.WebviewWidget || (exports.WebviewWidget = {}));
-exports.WebviewWidget = WebviewWidget;
+    return Registry;
+}());
+exports.Registry = Registry;
+exports.INITIAL = grammar_1.StackElement.NULL;
+exports.parseRawGrammar = grammarReader.parseRawGrammar;
+//# sourceMappingURL=main.js.map
+});
 
+return $map['./main'].exports;;
+});
+/* WEBPACK VAR INJECTION */}.call(this, "/", __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 
-/***/ "./node_modules/@theia/plugin-ext/lib/main/common/webview-protocol.js":
-/*!****************************************************************************!*\
-  !*** ./node_modules/@theia/plugin-ext/lib/main/common/webview-protocol.js ***!
-  \****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/********************************************************************************
- * Copyright (C) 2019 TypeFox and others.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Eclipse Public License v. 2.0 which is available at
- * http://www.eclipse.org/legal/epl-2.0.
- *
- * This Source Code may also be made available under the following Secondary
- * Licenses when the conditions for such availability set forth in the Eclipse
- * Public License v. 2.0 are satisfied: GNU General Public License, version 2
- * with the GNU Classpath Exception which is available at
- * https://www.gnu.org/software/classpath/license.html.
- *
- * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
- ********************************************************************************/
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.WebviewResourceLoaderPath = exports.WebviewResourceLoader = exports.WebviewExternalEndpoint = void 0;
-/**
- * Each webview should be deployed on a unique origin (https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy)
- * to ensure isolation from browser shared state as cookies, local storage and so on.
- *
- * Default hostname pattern of a origin is `{{uuid}}.webview.{{hostname}}`. Where `{{uuid}}` is a placeholder for a webview global id.
- * For electron target the default pattern is always used.
- * For the browser target use `THEIA_WEBVIEW_EXTERNAL_ENDPOINT` env variable to customize it.
- */
-var WebviewExternalEndpoint;
-(function (WebviewExternalEndpoint) {
-    WebviewExternalEndpoint.pattern = 'THEIA_WEBVIEW_EXTERNAL_ENDPOINT';
-    WebviewExternalEndpoint.defaultPattern = '{{uuid}}.webview.{{hostname}}';
-})(WebviewExternalEndpoint = exports.WebviewExternalEndpoint || (exports.WebviewExternalEndpoint = {}));
-exports.WebviewResourceLoader = Symbol('WebviewResourceLoader');
-exports.WebviewResourceLoaderPath = '/services/webview-resource-loader';
-
-
-/***/ }),
-
-/***/ "./node_modules/@theia/plugin-ext/lib/plugin/markdown-string.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/@theia/plugin-ext/lib/plugin/markdown-string.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/********************************************************************************
- * Copyright (C) 2018 Red Hat, Inc. and others.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Eclipse Public License v. 2.0 which is available at
- * http://www.eclipse.org/legal/epl-2.0.
- *
- * This Source Code may also be made available under the following Secondary
- * Licenses when the conditions for such availability set forth in the Eclipse
- * Public License v. 2.0 are satisfied: GNU General Public License, version 2
- * with the GNU Classpath Exception which is available at
- * https://www.gnu.org/software/classpath/license.html.
- *
- * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
- ********************************************************************************/
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.isMarkdownString = exports.MarkdownString = void 0;
-var MarkdownString = /** @class */ (function () {
-    function MarkdownString(value) {
-        this.value = value || '';
-    }
-    MarkdownString.prototype.appendText = function (value) {
-        // escape markdown syntax tokens: http://daringfireball.net/projects/markdown/syntax#backslash
-        this.value += value.replace(/[\\`*_{}[\]()#+\-.!]/g, '\\$&');
-        return this;
-    };
-    MarkdownString.prototype.appendMarkdown = function (value) {
-        this.value += value;
-        return this;
-    };
-    MarkdownString.prototype.appendCodeblock = function (code, language) {
-        if (language === void 0) { language = ''; }
-        this.value += '\n```';
-        this.value += language;
-        this.value += '\n';
-        this.value += code;
-        this.value += '\n```\n';
-        return this;
-    };
-    return MarkdownString;
-}());
-exports.MarkdownString = MarkdownString;
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function isMarkdownString(thing) {
-    if (thing instanceof MarkdownString) {
-        return true;
-    }
-    else if (thing && typeof thing === 'object') {
-        return typeof thing.value === 'string'
-            && (typeof thing.isTrusted === 'boolean' || thing.isTrusted === undefined);
-    }
-    return false;
-}
-exports.isMarkdownString = isMarkdownString;
-
-
-/***/ }),
-
-/***/ "./node_modules/@theia/plugin-ext/lib/plugin/type-converters.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/@theia/plugin-ext/lib/plugin/type-converters.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/********************************************************************************
- * Copyright (C) 2018 Red Hat, Inc. and others.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Eclipse Public License v. 2.0 which is available at
- * http://www.eclipse.org/legal/epl-2.0.
- *
- * This Source Code may also be made available under the following Secondary
- * Licenses when the conditions for such availability set forth in the Eclipse
- * Public License v. 2.0 are satisfied: GNU General Public License, version 2
- * with the GNU Classpath Exception which is available at
- * https://www.gnu.org/software/classpath/license.html.
- *
- * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
- ********************************************************************************/
-var __rest = (this && this.__rest) || function (s, e) {
-    var t = {};
-    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-        t[p] = s[p];
-    if (s != null && typeof Object.getOwnPropertySymbols === "function")
-        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
-                t[p[i]] = s[p[i]];
-        }
-    return t;
-};
-var __values = (this && this.__values) || function(o) {
-    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
-    if (m) return m.call(o);
-    if (o && typeof o.length === "number") return {
-        next: function () {
-            if (o && i >= o.length) o = void 0;
-            return { value: o && o[i++], done: !o };
-        }
-    };
-    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
-};
-var __read = (this && this.__read) || function (o, n) {
-    var m = typeof Symbol === "function" && o[Symbol.iterator];
-    if (!m) return o;
-    var i = m.call(o), r, ar = [], e;
-    try {
-        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
-    }
-    catch (error) { e = { error: error }; }
-    finally {
-        try {
-            if (r && !r.done && (m = i["return"])) m.call(i);
-        }
-        finally { if (e) throw e.error; }
-    }
-    return ar;
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.pluginToPluginInfo = exports.pathOrURIToURI = exports.ThemableDecorationAttachmentRenderOptions = exports.ThemableDecorationRenderOptions = exports.DecorationRangeBehavior = exports.DecorationRenderOptions = exports.quickPickItemToPickOpenItem = exports.fromColorPresentation = exports.toColor = exports.fromColor = exports.fromFoldingRangeKind = exports.fromFoldingRange = exports.fromSelectionRange = exports.toSymbolInformation = exports.fromSymbolInformation = exports.getShellExecutionOptions = exports.getShellArgs = exports.getShellExecution = exports.getProcessExecution = exports.fromShellExecution = exports.fromProcessExecution = exports.toTask = exports.fromTask = exports.toWorkspaceFolder = exports.toCallHierarchyOutgoingCall = exports.toCallHierarchyIncomingCall = exports.toCallHierarchyItem = exports.fromCallHierarchyItem = exports.toLocation = exports.isModelCallHierarchyOutgoingCall = exports.isModelCallHierarchyIncomingCall = exports.isModelCallHierarchyItem = exports.isUriComponents = exports.isModelRange = exports.isModelLocation = exports.toSymbolTag = exports.fromSymbolTag = exports.toDocumentSymbol = exports.fromDocumentSymbol = exports.SymbolKind = exports.fromWorkspaceEdit = exports.SignatureHelp = exports.SignatureInformation = exports.ParameterInformation = exports.fromDocumentHighlight = exports.fromDocumentHighlightKind = exports.fromDocumentLink = exports.fromDefinitionLink = exports.fromLocation = exports.fromHover = exports.convertDiagnosticToMarkerData = exports.fromLanguageSelector = exports.fromTextEdit = exports.toCompletionItemKind = exports.fromCompletionItemKind = exports.fromGlobPattern = exports.fromDocumentSelector = exports.toMarkdown = exports.fromMarkdown = exports.fromManyMarkdown = exports.fromRangeOrRangeWithMessage = exports.isDecorationOptionsArr = exports.toPosition = exports.fromPosition = exports.fromRange = exports.toRange = exports.fromSelection = exports.toSelection = exports.toWebviewPanelShowOptions = exports.fromViewColumn = exports.toViewColumn = void 0;
-var vscode_languageserver_types_1 = __webpack_require__(/*! vscode-languageserver-types */ "./node_modules/vscode-languageserver-types/lib/esm/main.js");
-var vscode_uri_1 = __webpack_require__(/*! vscode-uri */ "./node_modules/vscode-uri/lib/esm/index.js");
-var rpc = __webpack_require__(/*! ../common/plugin-api-rpc */ "./node_modules/@theia/plugin-ext/lib/common/plugin-api-rpc.js");
-var plugin_api_rpc_1 = __webpack_require__(/*! ../common/plugin-api-rpc */ "./node_modules/@theia/plugin-ext/lib/common/plugin-api-rpc.js");
-var model = __webpack_require__(/*! ../common/plugin-api-rpc-model */ "./node_modules/@theia/plugin-ext/lib/common/plugin-api-rpc-model.js");
-var markdown_string_1 = __webpack_require__(/*! ./markdown-string */ "./node_modules/@theia/plugin-ext/lib/plugin/markdown-string.js");
-var types = __webpack_require__(/*! ./types-impl */ "./node_modules/@theia/plugin-ext/lib/plugin/types-impl.js");
-var SIDE_GROUP = -2;
-var ACTIVE_GROUP = -1;
-function toViewColumn(ep) {
-    if (typeof ep !== 'number') {
-        return undefined;
-    }
-    if (ep === plugin_api_rpc_1.EditorPosition.ONE) {
-        return types.ViewColumn.One;
-    }
-    else if (ep === plugin_api_rpc_1.EditorPosition.TWO) {
-        return types.ViewColumn.Two;
-    }
-    else if (ep === plugin_api_rpc_1.EditorPosition.THREE) {
-        return types.ViewColumn.Three;
-    }
-    else if (ep === plugin_api_rpc_1.EditorPosition.FOUR) {
-        return types.ViewColumn.Four;
-    }
-    else if (ep === plugin_api_rpc_1.EditorPosition.FIVE) {
-        return types.ViewColumn.Five;
-    }
-    else if (ep === plugin_api_rpc_1.EditorPosition.SIX) {
-        return types.ViewColumn.Six;
-    }
-    else if (ep === plugin_api_rpc_1.EditorPosition.SEVEN) {
-        return types.ViewColumn.Seven;
-    }
-    else if (ep === plugin_api_rpc_1.EditorPosition.EIGHT) {
-        return types.ViewColumn.Eight;
-    }
-    else if (ep === plugin_api_rpc_1.EditorPosition.NINE) {
-        return types.ViewColumn.Nine;
-    }
-    return undefined;
-}
-exports.toViewColumn = toViewColumn;
-function fromViewColumn(column) {
-    if (typeof column === 'number' && column >= types.ViewColumn.One) {
-        return column - 1;
-    }
-    if (column === types.ViewColumn.Beside) {
-        return SIDE_GROUP;
-    }
-    return ACTIVE_GROUP;
-}
-exports.fromViewColumn = fromViewColumn;
-function toWebviewPanelShowOptions(options) {
-    if (typeof options === 'object') {
-        var showOptions = options;
-        return {
-            area: showOptions.area ? showOptions.area : types.WebviewPanelTargetArea.Main,
-            viewColumn: showOptions.viewColumn ? fromViewColumn(showOptions.viewColumn) : undefined,
-            preserveFocus: showOptions.preserveFocus ? showOptions.preserveFocus : false
-        };
-    }
-    return {
-        area: types.WebviewPanelTargetArea.Main,
-        viewColumn: fromViewColumn(options),
-        preserveFocus: false
-    };
-}
-exports.toWebviewPanelShowOptions = toWebviewPanelShowOptions;
-function toSelection(selection) {
-    var selectionStartLineNumber = selection.selectionStartLineNumber, selectionStartColumn = selection.selectionStartColumn, positionLineNumber = selection.positionLineNumber, positionColumn = selection.positionColumn;
-    var start = new types.Position(selectionStartLineNumber - 1, selectionStartColumn - 1);
-    var end = new types.Position(positionLineNumber - 1, positionColumn - 1);
-    return new types.Selection(start, end);
-}
-exports.toSelection = toSelection;
-function fromSelection(selection) {
-    var active = selection.active, anchor = selection.anchor;
-    return {
-        selectionStartLineNumber: anchor.line + 1,
-        selectionStartColumn: anchor.character + 1,
-        positionLineNumber: active.line + 1,
-        positionColumn: active.character + 1
-    };
-}
-exports.fromSelection = fromSelection;
-function toRange(range) {
-    // if (!range) {
-    //     return undefined;
-    // }
-    var startLineNumber = range.startLineNumber, startColumn = range.startColumn, endLineNumber = range.endLineNumber, endColumn = range.endColumn;
-    return new types.Range(startLineNumber - 1, startColumn - 1, endLineNumber - 1, endColumn - 1);
-}
-exports.toRange = toRange;
-function fromRange(range) {
-    if (!range) {
-        return undefined;
-    }
-    var start = range.start, end = range.end;
-    return {
-        startLineNumber: start.line + 1,
-        startColumn: start.character + 1,
-        endLineNumber: end.line + 1,
-        endColumn: end.character + 1
-    };
-}
-exports.fromRange = fromRange;
-function fromPosition(position) {
-    return { lineNumber: position.line + 1, column: position.character + 1 };
-}
-exports.fromPosition = fromPosition;
-function toPosition(position) {
-    return new types.Position(position.lineNumber - 1, position.column - 1);
-}
-exports.toPosition = toPosition;
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function isDecorationOptions(something) {
-    return (typeof something.range !== 'undefined');
-}
-function isDecorationOptionsArr(something) {
-    if (something.length === 0) {
-        return true;
-    }
-    return isDecorationOptions(something[0]) ? true : false;
-}
-exports.isDecorationOptionsArr = isDecorationOptionsArr;
-function fromRangeOrRangeWithMessage(ranges) {
-    if (isDecorationOptionsArr(ranges)) {
-        return ranges.map(function (r) {
-            var hoverMessage;
-            if (Array.isArray(r.hoverMessage)) {
-                hoverMessage = fromManyMarkdown(r.hoverMessage);
-            }
-            else if (r.hoverMessage) {
-                hoverMessage = fromMarkdown(r.hoverMessage);
-            }
-            else {
-                hoverMessage = undefined;
-            }
-            return {
-                range: fromRange(r.range),
-                hoverMessage: hoverMessage,
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                renderOptions: r.renderOptions
-            };
-        });
-    }
-    else {
-        return ranges.map(function (r) {
-            return ({
-                range: fromRange(r)
-            });
-        });
-    }
-}
-exports.fromRangeOrRangeWithMessage = fromRangeOrRangeWithMessage;
-function fromManyMarkdown(markup) {
-    return markup.map(fromMarkdown);
-}
-exports.fromManyMarkdown = fromManyMarkdown;
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function isCodeblock(thing) {
-    return thing && typeof thing === 'object'
-        && typeof thing.language === 'string'
-        && typeof thing.value === 'string';
-}
-function fromMarkdown(markup) {
-    if (isCodeblock(markup)) {
-        var language = markup.language, value = markup.value;
-        return { value: '```' + language + '\n' + value + '\n```\n' };
-    }
-    else if (markdown_string_1.isMarkdownString(markup)) {
-        return markup;
-    }
-    else if (typeof markup === 'string') {
-        return { value: markup };
-    }
-    else {
-        return { value: '' };
-    }
-}
-exports.fromMarkdown = fromMarkdown;
-function toMarkdown(value) {
-    var ret = new markdown_string_1.MarkdownString(value.value);
-    ret.isTrusted = value.isTrusted;
-    return ret;
-}
-exports.toMarkdown = toMarkdown;
-function fromDocumentSelector(selector) {
-    if (!selector) {
-        return undefined;
-    }
-    else if (Array.isArray(selector)) {
-        return selector.map(fromDocumentSelector);
-    }
-    else if (typeof selector === 'string') {
-        return selector;
-    }
-    else {
-        return {
-            language: selector.language,
-            scheme: selector.scheme,
-            pattern: fromGlobPattern(selector.pattern)
-        };
-    }
-}
-exports.fromDocumentSelector = fromDocumentSelector;
-function fromGlobPattern(pattern) {
-    if (typeof pattern === 'string') {
-        return pattern;
-    }
-    if (isRelativePattern(pattern)) {
-        return new types.RelativePattern(pattern.base, pattern.pattern);
-    }
-    return pattern;
-}
-exports.fromGlobPattern = fromGlobPattern;
-function isRelativePattern(obj) {
-    var rp = obj;
-    return rp && typeof rp.base === 'string' && typeof rp.pattern === 'string';
-}
-function fromCompletionItemKind(kind) {
-    switch (kind) {
-        case types.CompletionItemKind.Method: return model.CompletionItemKind.Method;
-        case types.CompletionItemKind.Function: return model.CompletionItemKind.Function;
-        case types.CompletionItemKind.Constructor: return model.CompletionItemKind.Constructor;
-        case types.CompletionItemKind.Field: return model.CompletionItemKind.Field;
-        case types.CompletionItemKind.Variable: return model.CompletionItemKind.Variable;
-        case types.CompletionItemKind.Class: return model.CompletionItemKind.Class;
-        case types.CompletionItemKind.Interface: return model.CompletionItemKind.Interface;
-        case types.CompletionItemKind.Struct: return model.CompletionItemKind.Struct;
-        case types.CompletionItemKind.Module: return model.CompletionItemKind.Module;
-        case types.CompletionItemKind.Property: return model.CompletionItemKind.Property;
-        case types.CompletionItemKind.Unit: return model.CompletionItemKind.Unit;
-        case types.CompletionItemKind.Value: return model.CompletionItemKind.Value;
-        case types.CompletionItemKind.Constant: return model.CompletionItemKind.Constant;
-        case types.CompletionItemKind.Enum: return model.CompletionItemKind.Enum;
-        case types.CompletionItemKind.EnumMember: return model.CompletionItemKind.EnumMember;
-        case types.CompletionItemKind.Keyword: return model.CompletionItemKind.Keyword;
-        case types.CompletionItemKind.Snippet: return model.CompletionItemKind.Snippet;
-        case types.CompletionItemKind.Text: return model.CompletionItemKind.Text;
-        case types.CompletionItemKind.Color: return model.CompletionItemKind.Color;
-        case types.CompletionItemKind.File: return model.CompletionItemKind.File;
-        case types.CompletionItemKind.Reference: return model.CompletionItemKind.Reference;
-        case types.CompletionItemKind.Folder: return model.CompletionItemKind.Folder;
-        case types.CompletionItemKind.Event: return model.CompletionItemKind.Event;
-        case types.CompletionItemKind.Operator: return model.CompletionItemKind.Operator;
-        case types.CompletionItemKind.TypeParameter: return model.CompletionItemKind.TypeParameter;
-    }
-    return model.CompletionItemKind.Property;
-}
-exports.fromCompletionItemKind = fromCompletionItemKind;
-function toCompletionItemKind(kind) {
-    switch (kind) {
-        case model.CompletionItemKind.Method: return types.CompletionItemKind.Method;
-        case model.CompletionItemKind.Function: return types.CompletionItemKind.Function;
-        case model.CompletionItemKind.Constructor: return types.CompletionItemKind.Constructor;
-        case model.CompletionItemKind.Field: return types.CompletionItemKind.Field;
-        case model.CompletionItemKind.Variable: return types.CompletionItemKind.Variable;
-        case model.CompletionItemKind.Class: return types.CompletionItemKind.Class;
-        case model.CompletionItemKind.Interface: return types.CompletionItemKind.Interface;
-        case model.CompletionItemKind.Struct: return types.CompletionItemKind.Struct;
-        case model.CompletionItemKind.Module: return types.CompletionItemKind.Module;
-        case model.CompletionItemKind.Property: return types.CompletionItemKind.Property;
-        case model.CompletionItemKind.Unit: return types.CompletionItemKind.Unit;
-        case model.CompletionItemKind.Value: return types.CompletionItemKind.Value;
-        case model.CompletionItemKind.Constant: return types.CompletionItemKind.Constant;
-        case model.CompletionItemKind.Enum: return types.CompletionItemKind.Enum;
-        case model.CompletionItemKind.EnumMember: return types.CompletionItemKind.EnumMember;
-        case model.CompletionItemKind.Keyword: return types.CompletionItemKind.Keyword;
-        case model.CompletionItemKind.Snippet: return types.CompletionItemKind.Snippet;
-        case model.CompletionItemKind.Text: return types.CompletionItemKind.Text;
-        case model.CompletionItemKind.Color: return types.CompletionItemKind.Color;
-        case model.CompletionItemKind.File: return types.CompletionItemKind.File;
-        case model.CompletionItemKind.Reference: return types.CompletionItemKind.Reference;
-        case model.CompletionItemKind.Folder: return types.CompletionItemKind.Folder;
-        case model.CompletionItemKind.Event: return types.CompletionItemKind.Event;
-        case model.CompletionItemKind.Operator: return types.CompletionItemKind.Operator;
-        case model.CompletionItemKind.TypeParameter: return types.CompletionItemKind.TypeParameter;
-    }
-    return types.CompletionItemKind.Property;
-}
-exports.toCompletionItemKind = toCompletionItemKind;
-function fromTextEdit(edit) {
-    return {
-        text: edit.newText,
-        range: fromRange(edit.range)
-    };
-}
-exports.fromTextEdit = fromTextEdit;
-function fromLanguageSelector(selector) {
-    if (!selector) {
-        return undefined;
-    }
-    else if (Array.isArray(selector)) {
-        return selector.map(fromLanguageSelector);
-    }
-    else if (typeof selector === 'string') {
-        return selector;
-    }
-    else {
-        return {
-            language: selector.language,
-            scheme: selector.scheme,
-            pattern: fromGlobPattern(selector.pattern)
-        };
-    }
-}
-exports.fromLanguageSelector = fromLanguageSelector;
-function convertDiagnosticToMarkerData(diagnostic) {
-    return {
-        code: convertCode(diagnostic.code),
-        severity: convertSeverity(diagnostic.severity),
-        message: diagnostic.message,
-        source: diagnostic.source,
-        startLineNumber: diagnostic.range.start.line + 1,
-        startColumn: diagnostic.range.start.character + 1,
-        endLineNumber: diagnostic.range.end.line + 1,
-        endColumn: diagnostic.range.end.character + 1,
-        relatedInformation: convertRelatedInformation(diagnostic.relatedInformation),
-        tags: convertTags(diagnostic.tags)
-    };
-}
-exports.convertDiagnosticToMarkerData = convertDiagnosticToMarkerData;
-function convertCode(code) {
-    if (typeof code === 'number') {
-        return String(code);
-    }
-    else {
-        return code;
-    }
-}
-function convertSeverity(severity) {
-    switch (severity) {
-        case types.DiagnosticSeverity.Error: return types.MarkerSeverity.Error;
-        case types.DiagnosticSeverity.Warning: return types.MarkerSeverity.Warning;
-        case types.DiagnosticSeverity.Information: return types.MarkerSeverity.Info;
-        case types.DiagnosticSeverity.Hint: return types.MarkerSeverity.Hint;
-    }
-}
-function convertRelatedInformation(diagnosticsRelatedInformation) {
-    var e_1, _a;
-    if (!diagnosticsRelatedInformation) {
-        return undefined;
-    }
-    var relatedInformation = [];
-    try {
-        for (var diagnosticsRelatedInformation_1 = __values(diagnosticsRelatedInformation), diagnosticsRelatedInformation_1_1 = diagnosticsRelatedInformation_1.next(); !diagnosticsRelatedInformation_1_1.done; diagnosticsRelatedInformation_1_1 = diagnosticsRelatedInformation_1.next()) {
-            var item = diagnosticsRelatedInformation_1_1.value;
-            relatedInformation.push({
-                resource: item.location.uri.toString(),
-                message: item.message,
-                startLineNumber: item.location.range.start.line + 1,
-                startColumn: item.location.range.start.character + 1,
-                endLineNumber: item.location.range.end.line + 1,
-                endColumn: item.location.range.end.character + 1
-            });
-        }
-    }
-    catch (e_1_1) { e_1 = { error: e_1_1 }; }
-    finally {
-        try {
-            if (diagnosticsRelatedInformation_1_1 && !diagnosticsRelatedInformation_1_1.done && (_a = diagnosticsRelatedInformation_1.return)) _a.call(diagnosticsRelatedInformation_1);
-        }
-        finally { if (e_1) throw e_1.error; }
-    }
-    return relatedInformation;
-}
-function convertTags(tags) {
-    var e_2, _a;
-    if (!tags) {
-        return undefined;
-    }
-    var markerTags = [];
-    try {
-        for (var tags_1 = __values(tags), tags_1_1 = tags_1.next(); !tags_1_1.done; tags_1_1 = tags_1.next()) {
-            var tag = tags_1_1.value;
-            switch (tag) {
-                case types.DiagnosticTag.Unnecessary: markerTags.push(types.MarkerTag.Unnecessary);
-            }
-        }
-    }
-    catch (e_2_1) { e_2 = { error: e_2_1 }; }
-    finally {
-        try {
-            if (tags_1_1 && !tags_1_1.done && (_a = tags_1.return)) _a.call(tags_1);
-        }
-        finally { if (e_2) throw e_2.error; }
-    }
-    return markerTags;
-}
-function fromHover(hover) {
-    return {
-        range: fromRange(hover.range),
-        contents: fromManyMarkdown(hover.contents)
-    };
-}
-exports.fromHover = fromHover;
-function fromLocation(location) {
-    return {
-        uri: location.uri,
-        range: fromRange(location.range)
-    };
-}
-exports.fromLocation = fromLocation;
-function fromDefinitionLink(definitionLink) {
-    return {
-        uri: definitionLink.targetUri,
-        range: fromRange(definitionLink.targetRange),
-        originSelectionRange: definitionLink.originSelectionRange ? fromRange(definitionLink.originSelectionRange) : undefined,
-        targetSelectionRange: definitionLink.targetSelectionRange ? fromRange(definitionLink.targetSelectionRange) : undefined
-    };
-}
-exports.fromDefinitionLink = fromDefinitionLink;
-function fromDocumentLink(definitionLink) {
-    return {
-        range: fromRange(definitionLink.range),
-        url: definitionLink.target && definitionLink.target.toString()
-    };
-}
-exports.fromDocumentLink = fromDocumentLink;
-function fromDocumentHighlightKind(kind) {
-    switch (kind) {
-        case types.DocumentHighlightKind.Text: return model.DocumentHighlightKind.Text;
-        case types.DocumentHighlightKind.Read: return model.DocumentHighlightKind.Read;
-        case types.DocumentHighlightKind.Write: return model.DocumentHighlightKind.Write;
-    }
-    return model.DocumentHighlightKind.Text;
-}
-exports.fromDocumentHighlightKind = fromDocumentHighlightKind;
-function fromDocumentHighlight(documentHighlight) {
-    return {
-        range: fromRange(documentHighlight.range),
-        kind: fromDocumentHighlightKind(documentHighlight.kind)
-    };
-}
-exports.fromDocumentHighlight = fromDocumentHighlight;
-var ParameterInformation;
-(function (ParameterInformation) {
-    function from(info) {
-        return {
-            label: info.label,
-            documentation: info.documentation ? fromMarkdown(info.documentation) : undefined
-        };
-    }
-    ParameterInformation.from = from;
-    function to(info) {
-        return {
-            label: info.label,
-            documentation: markdown_string_1.isMarkdownString(info.documentation) ? toMarkdown(info.documentation) : info.documentation
-        };
-    }
-    ParameterInformation.to = to;
-})(ParameterInformation = exports.ParameterInformation || (exports.ParameterInformation = {}));
-var SignatureInformation;
-(function (SignatureInformation) {
-    function from(info) {
-        return {
-            label: info.label,
-            documentation: info.documentation ? fromMarkdown(info.documentation) : undefined,
-            parameters: info.parameters && info.parameters.map(ParameterInformation.from)
-        };
-    }
-    SignatureInformation.from = from;
-    function to(info) {
-        return {
-            label: info.label,
-            documentation: markdown_string_1.isMarkdownString(info.documentation) ? toMarkdown(info.documentation) : info.documentation,
-            parameters: info.parameters && info.parameters.map(ParameterInformation.to)
-        };
-    }
-    SignatureInformation.to = to;
-})(SignatureInformation = exports.SignatureInformation || (exports.SignatureInformation = {}));
-var SignatureHelp;
-(function (SignatureHelp) {
-    function from(id, help) {
-        return {
-            id: id,
-            activeSignature: help.activeSignature,
-            activeParameter: help.activeParameter,
-            signatures: help.signatures && help.signatures.map(SignatureInformation.from)
-        };
-    }
-    SignatureHelp.from = from;
-    function to(help) {
-        return {
-            activeSignature: help.activeSignature,
-            activeParameter: help.activeParameter,
-            signatures: help.signatures && help.signatures.map(SignatureInformation.to)
-        };
-    }
-    SignatureHelp.to = to;
-})(SignatureHelp = exports.SignatureHelp || (exports.SignatureHelp = {}));
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function fromWorkspaceEdit(value, documents) {
-    var e_3, _a;
-    var result = {
-        edits: []
-    };
-    try {
-        for (var _b = __values(value._allEntries()), _c = _b.next(); !_c.done; _c = _b.next()) {
-            var entry = _c.value;
-            var _d = __read(entry, 2), uri = _d[0], uriOrEdits = _d[1];
-            if (Array.isArray(uriOrEdits)) {
-                // text edits
-                var doc = documents ? documents.getDocument(uri.toString()) : undefined;
-                result.edits.push({ resource: uri, modelVersionId: doc && doc.version, edits: uriOrEdits.map(fromTextEdit) });
-            }
-            else {
-                // resource edits
-                result.edits.push({ oldUri: uri, newUri: uriOrEdits, options: entry[2] });
-            }
-        }
-    }
-    catch (e_3_1) { e_3 = { error: e_3_1 }; }
-    finally {
-        try {
-            if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
-        }
-        finally { if (e_3) throw e_3.error; }
-    }
-    return result;
-}
-exports.fromWorkspaceEdit = fromWorkspaceEdit;
-var SymbolKind;
-(function (SymbolKind) {
-    var fromMapping = Object.create(null);
-    fromMapping[model.SymbolKind.File] = model.SymbolKind.File;
-    fromMapping[model.SymbolKind.Module] = model.SymbolKind.Module;
-    fromMapping[model.SymbolKind.Namespace] = model.SymbolKind.Namespace;
-    fromMapping[model.SymbolKind.Package] = model.SymbolKind.Package;
-    fromMapping[model.SymbolKind.Class] = model.SymbolKind.Class;
-    fromMapping[model.SymbolKind.Method] = model.SymbolKind.Method;
-    fromMapping[model.SymbolKind.Property] = model.SymbolKind.Property;
-    fromMapping[model.SymbolKind.Field] = model.SymbolKind.Field;
-    fromMapping[model.SymbolKind.Constructor] = model.SymbolKind.Constructor;
-    fromMapping[model.SymbolKind.Enum] = model.SymbolKind.Enum;
-    fromMapping[model.SymbolKind.Interface] = model.SymbolKind.Interface;
-    fromMapping[model.SymbolKind.Function] = model.SymbolKind.Function;
-    fromMapping[model.SymbolKind.Variable] = model.SymbolKind.Variable;
-    fromMapping[model.SymbolKind.Constant] = model.SymbolKind.Constant;
-    fromMapping[model.SymbolKind.String] = model.SymbolKind.String;
-    fromMapping[model.SymbolKind.Number] = model.SymbolKind.Number;
-    fromMapping[model.SymbolKind.Boolean] = model.SymbolKind.Boolean;
-    fromMapping[model.SymbolKind.Array] = model.SymbolKind.Array;
-    fromMapping[model.SymbolKind.Object] = model.SymbolKind.Object;
-    fromMapping[model.SymbolKind.Key] = model.SymbolKind.Key;
-    fromMapping[model.SymbolKind.Null] = model.SymbolKind.Null;
-    fromMapping[model.SymbolKind.EnumMember] = model.SymbolKind.EnumMember;
-    fromMapping[model.SymbolKind.Struct] = model.SymbolKind.Struct;
-    fromMapping[model.SymbolKind.Event] = model.SymbolKind.Event;
-    fromMapping[model.SymbolKind.Operator] = model.SymbolKind.Operator;
-    fromMapping[model.SymbolKind.TypeParameter] = model.SymbolKind.TypeParameter;
-    function fromSymbolKind(kind) {
-        return fromMapping[kind] || model.SymbolKind.Property;
-    }
-    SymbolKind.fromSymbolKind = fromSymbolKind;
-    function toSymbolKind(kind) {
-        for (var k in fromMapping) {
-            if (fromMapping[k] === kind) {
-                return Number(k);
-            }
-        }
-        return model.SymbolKind.Property;
-    }
-    SymbolKind.toSymbolKind = toSymbolKind;
-})(SymbolKind = exports.SymbolKind || (exports.SymbolKind = {}));
-function fromDocumentSymbol(info) {
-    var result = {
-        name: info.name,
-        detail: info.detail,
-        range: fromRange(info.range),
-        tags: info.tags ? info.tags.map(fromSymbolTag) : [],
-        selectionRange: fromRange(info.selectionRange),
-        kind: SymbolKind.fromSymbolKind(info.kind)
-    };
-    if (info.children) {
-        result.children = info.children.map(fromDocumentSymbol);
-    }
-    return result;
-}
-exports.fromDocumentSymbol = fromDocumentSymbol;
-function toDocumentSymbol(symbol) {
-    return {
-        name: symbol.name,
-        detail: symbol.detail,
-        range: toRange(symbol.range),
-        tags: symbol.tags && symbol.tags.length > 0 ? symbol.tags.map(toSymbolTag) : [],
-        selectionRange: toRange(symbol.selectionRange),
-        children: symbol.children ? symbol.children.map(toDocumentSymbol) : [],
-        kind: SymbolKind.toSymbolKind(symbol.kind)
-    };
-}
-exports.toDocumentSymbol = toDocumentSymbol;
-function fromSymbolTag(kind) {
-    switch (kind) {
-        case types.SymbolTag.Deprecated: return model.SymbolTag.Deprecated;
-    }
-}
-exports.fromSymbolTag = fromSymbolTag;
-function toSymbolTag(kind) {
-    switch (kind) {
-        case model.SymbolTag.Deprecated: return types.SymbolTag.Deprecated;
-    }
-}
-exports.toSymbolTag = toSymbolTag;
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function isModelLocation(thing) {
-    if (!thing) {
-        return false;
-    }
-    return isModelRange(thing.range) &&
-        isUriComponents(thing.uri);
-}
-exports.isModelLocation = isModelLocation;
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function isModelRange(thing) {
-    if (!thing) {
-        return false;
-    }
-    return (('startLineNumber' in thing) && typeof thing.startLineNumber === 'number') &&
-        (('startColumn' in thing) && typeof thing.startColumn === 'number') &&
-        (('endLineNumber' in thing) && typeof thing.endLineNumber === 'number') &&
-        (('endColumn' in thing) && typeof thing.endColumn === 'number');
-}
-exports.isModelRange = isModelRange;
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function isUriComponents(thing) {
-    if (!thing) {
-        return false;
-    }
-    return (('scheme' in thing) && typeof thing.scheme === 'string') &&
-        (('path' in thing) && typeof thing.path === 'string') &&
-        (('query' in thing) && typeof thing.query === 'string') &&
-        (('fragment' in thing) && typeof thing.fragment === 'string');
-}
-exports.isUriComponents = isUriComponents;
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function isModelCallHierarchyItem(thing) {
-    if (!thing) {
-        return false;
-    }
-    return false;
-}
-exports.isModelCallHierarchyItem = isModelCallHierarchyItem;
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function isModelCallHierarchyIncomingCall(thing) {
-    if (!thing) {
-        return false;
-    }
-    return false;
-}
-exports.isModelCallHierarchyIncomingCall = isModelCallHierarchyIncomingCall;
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function isModelCallHierarchyOutgoingCall(thing) {
-    if (!thing) {
-        return false;
-    }
-    return false;
-}
-exports.isModelCallHierarchyOutgoingCall = isModelCallHierarchyOutgoingCall;
-function toLocation(value) {
-    return new types.Location(vscode_uri_1.URI.revive(value.uri), toRange(value.range));
-}
-exports.toLocation = toLocation;
-function fromCallHierarchyItem(item) {
-    return {
-        kind: SymbolKind.fromSymbolKind(item.kind),
-        name: item.name,
-        detail: item.detail,
-        uri: item.uri,
-        range: fromRange(item.range),
-        selectionRange: fromRange(item.selectionRange)
-    };
-}
-exports.fromCallHierarchyItem = fromCallHierarchyItem;
-function toCallHierarchyItem(value) {
-    return new types.CallHierarchyItem(SymbolKind.toSymbolKind(value.kind), value.name, value.detail ? value.detail : '', vscode_uri_1.URI.revive(value.uri), toRange(value.range), toRange(value.selectionRange));
-}
-exports.toCallHierarchyItem = toCallHierarchyItem;
-function toCallHierarchyIncomingCall(value) {
-    return new types.CallHierarchyIncomingCall(toCallHierarchyItem(value.from), value.fromRanges && value.fromRanges.map(toRange));
-}
-exports.toCallHierarchyIncomingCall = toCallHierarchyIncomingCall;
-function toCallHierarchyOutgoingCall(value) {
-    return new types.CallHierarchyOutgoingCall(toCallHierarchyItem(value.to), value.fromRanges && value.fromRanges.map(toRange));
-}
-exports.toCallHierarchyOutgoingCall = toCallHierarchyOutgoingCall;
-function toWorkspaceFolder(folder) {
-    return {
-        uri: vscode_uri_1.URI.revive(folder.uri),
-        name: folder.name,
-        index: folder.index
-    };
-}
-exports.toWorkspaceFolder = toWorkspaceFolder;
-function fromTask(task) {
-    if (!task) {
-        return undefined;
-    }
-    var taskDto = {};
-    taskDto.label = task.name;
-    taskDto.source = task.source;
-    if (typeof task.scope === 'object') {
-        taskDto.scope = task.scope.uri.toString();
-    }
-    else if (typeof task.scope === 'number') {
-        taskDto.scope = task.scope;
-    }
-    var taskDefinition = task.definition;
-    if (!taskDefinition) {
-        return taskDto;
-    }
-    taskDto.type = taskDefinition.type;
-    var type = taskDefinition.type, properties = __rest(taskDefinition, ["type"]);
-    for (var key in properties) {
-        if (properties.hasOwnProperty(key)) {
-            taskDto[key] = properties[key];
-        }
-    }
-    var execution = task.execution;
-    if (!execution) {
-        return taskDto;
-    }
-    if (taskDefinition.type === 'shell' || types.ShellExecution.is(execution)) {
-        return fromShellExecution(execution, taskDto);
-    }
-    if (taskDefinition.type === 'process' || types.ProcessExecution.is(execution)) {
-        return fromProcessExecution(execution, taskDto);
-    }
-    return taskDto;
-}
-exports.fromTask = fromTask;
-function toTask(taskDto) {
-    if (!taskDto) {
-        throw new Error('Task should be provided for converting');
-    }
-    var type = taskDto.type, label = taskDto.label, source = taskDto.source, scope = taskDto.scope, command = taskDto.command, args = taskDto.args, options = taskDto.options, windows = taskDto.windows, properties = __rest(taskDto, ["type", "label", "source", "scope", "command", "args", "options", "windows"]);
-    var result = {};
-    result.name = label;
-    result.source = source;
-    if (typeof scope === 'string') {
-        var uri = vscode_uri_1.URI.parse(scope);
-        result.scope = {
-            uri: uri,
-            name: uri.toString(),
-            index: 0
-        };
-    }
-    else {
-        result.scope = scope;
-    }
-    var taskType = type;
-    var taskDefinition = {
-        type: taskType
-    };
-    result.definition = taskDefinition;
-    if (taskType === 'process') {
-        result.execution = getProcessExecution(taskDto);
-    }
-    var execution = { command: command, args: args, options: options };
-    if (taskType === 'shell' || types.ShellExecution.is(execution)) {
-        result.execution = getShellExecution(taskDto);
-    }
-    if (!properties) {
-        return result;
-    }
-    for (var key in properties) {
-        if (properties.hasOwnProperty(key)) {
-            taskDefinition[key] = properties[key];
-        }
-    }
-    return result;
-}
-exports.toTask = toTask;
-function fromProcessExecution(execution, taskDto) {
-    taskDto.command = execution.process;
-    taskDto.args = execution.args;
-    var options = execution.options;
-    if (options) {
-        taskDto.options = options;
-    }
-    return taskDto;
-}
-exports.fromProcessExecution = fromProcessExecution;
-function fromShellExecution(execution, taskDto) {
-    var options = execution.options;
-    if (options) {
-        taskDto.options = getShellExecutionOptions(options);
-    }
-    var commandLine = execution.commandLine;
-    if (commandLine) {
-        taskDto.command = commandLine;
-        return taskDto;
-    }
-    var command = execution.command;
-    if (typeof command === 'string') {
-        taskDto.command = command;
-        taskDto.args = getShellArgs(execution.args);
-        return taskDto;
-    }
-    else {
-        throw new Error('Converting ShellQuotedString command is not implemented');
-    }
-}
-exports.fromShellExecution = fromShellExecution;
-function getProcessExecution(taskDto) {
-    return new types.ProcessExecution(taskDto.command, taskDto.args || [], taskDto.options || {});
-}
-exports.getProcessExecution = getProcessExecution;
-function getShellExecution(taskDto) {
-    if (taskDto.command && Array.isArray(taskDto.args) && taskDto.args.length !== 0) {
-        return new types.ShellExecution(taskDto.command, taskDto.args, taskDto.options || {});
-    }
-    return new types.ShellExecution(taskDto.command || taskDto.commandLine, taskDto.options || {});
-}
-exports.getShellExecution = getShellExecution;
-function getShellArgs(args) {
-    if (!args || args.length === 0) {
-        return [];
-    }
-    var element = args[0];
-    if (typeof element === 'string') {
-        return args;
-    }
-    var result = [];
-    var shellQuotedArgs = args;
-    shellQuotedArgs.forEach(function (arg) {
-        result.push(arg.value);
-    });
-    return result;
-}
-exports.getShellArgs = getShellArgs;
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function getShellExecutionOptions(options) {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    var result = {};
-    var env = options.env;
-    if (env) {
-        result['env'] = env;
-    }
-    var executable = options.executable;
-    if (executable) {
-        result['executable'] = executable;
-    }
-    var shellQuoting = options.shellQuoting;
-    if (shellQuoting) {
-        result['shellQuoting'] = shellQuoting;
-    }
-    var shellArgs = options.shellArgs;
-    if (shellArgs) {
-        result['shellArgs'] = shellArgs;
-    }
-    var cwd = options.cwd;
-    if (cwd) {
-        Object.assign(result, { cwd: cwd });
-    }
-    return result;
-}
-exports.getShellExecutionOptions = getShellExecutionOptions;
-function fromSymbolInformation(symbolInformation) {
-    if (!symbolInformation) {
-        return undefined;
-    }
-    if (symbolInformation.location && symbolInformation.location.range) {
-        var p1 = vscode_languageserver_types_1.Position.create(symbolInformation.location.range.start.line, symbolInformation.location.range.start.character);
-        var p2 = vscode_languageserver_types_1.Position.create(symbolInformation.location.range.end.line, symbolInformation.location.range.end.character);
-        return vscode_languageserver_types_1.SymbolInformation.create(symbolInformation.name, symbolInformation.kind++, vscode_languageserver_types_1.Range.create(p1, p2), symbolInformation.location.uri.toString(), symbolInformation.containerName);
-    }
-    return {
-        name: symbolInformation.name,
-        containerName: symbolInformation.containerName,
-        kind: symbolInformation.kind++,
-        location: {
-            uri: symbolInformation.location.uri.toString()
-        }
-    };
-}
-exports.fromSymbolInformation = fromSymbolInformation;
-function toSymbolInformation(symbolInformation) {
-    if (!symbolInformation) {
-        return undefined;
-    }
-    return {
-        name: symbolInformation.name,
-        containerName: symbolInformation.containerName,
-        kind: symbolInformation.kind,
-        location: {
-            uri: vscode_uri_1.URI.parse(symbolInformation.location.uri),
-            range: symbolInformation.location.range
-        }
-    };
-}
-exports.toSymbolInformation = toSymbolInformation;
-function fromSelectionRange(selectionRange) {
-    return { range: fromRange(selectionRange.range) };
-}
-exports.fromSelectionRange = fromSelectionRange;
-function fromFoldingRange(foldingRange) {
-    var range = {
-        start: foldingRange.start + 1,
-        end: foldingRange.end + 1
-    };
-    if (foldingRange.kind) {
-        range.kind = fromFoldingRangeKind(foldingRange.kind);
-    }
-    return range;
-}
-exports.fromFoldingRange = fromFoldingRange;
-function fromFoldingRangeKind(kind) {
-    if (kind) {
-        switch (kind) {
-            case types.FoldingRangeKind.Comment:
-                return model.FoldingRangeKind.Comment;
-            case types.FoldingRangeKind.Imports:
-                return model.FoldingRangeKind.Imports;
-            case types.FoldingRangeKind.Region:
-                return model.FoldingRangeKind.Region;
-        }
-    }
-    return undefined;
-}
-exports.fromFoldingRangeKind = fromFoldingRangeKind;
-function fromColor(color) {
-    return [color.red, color.green, color.blue, color.alpha];
-}
-exports.fromColor = fromColor;
-function toColor(color) {
-    return new types.Color(color[0], color[1], color[2], color[3]);
-}
-exports.toColor = toColor;
-function fromColorPresentation(colorPresentation) {
-    return {
-        label: colorPresentation.label,
-        textEdit: colorPresentation.textEdit ? fromTextEdit(colorPresentation.textEdit) : undefined,
-        additionalTextEdits: colorPresentation.additionalTextEdits ? colorPresentation.additionalTextEdits.map(function (value) { return fromTextEdit(value); }) : undefined
-    };
-}
-exports.fromColorPresentation = fromColorPresentation;
-function quickPickItemToPickOpenItem(items) {
-    var pickItems = [];
-    for (var handle = 0; handle < items.length; handle++) {
-        var item = items[handle];
-        var label = void 0;
-        var description = void 0;
-        var detail = void 0;
-        var picked = void 0;
-        var groupLabel = void 0;
-        var showBorder = void 0;
-        if (typeof item === 'string') {
-            label = item;
-        }
-        else {
-            (label = item.label, description = item.description, detail = item.detail, picked = item.picked, groupLabel = item.groupLabel, showBorder = item.showBorder);
-        }
-        pickItems.push({
-            label: label,
-            description: description,
-            handle: handle,
-            detail: detail,
-            picked: picked,
-            groupLabel: groupLabel,
-            showBorder: showBorder
-        });
-    }
-    return pickItems;
-}
-exports.quickPickItemToPickOpenItem = quickPickItemToPickOpenItem;
-var DecorationRenderOptions;
-(function (DecorationRenderOptions) {
-    function from(options) {
-        return {
-            isWholeLine: options.isWholeLine,
-            rangeBehavior: options.rangeBehavior ? DecorationRangeBehavior.from(options.rangeBehavior) : undefined,
-            overviewRulerLane: options.overviewRulerLane,
-            light: options.light ? ThemableDecorationRenderOptions.from(options.light) : undefined,
-            dark: options.dark ? ThemableDecorationRenderOptions.from(options.dark) : undefined,
-            backgroundColor: options.backgroundColor,
-            outline: options.outline,
-            outlineColor: options.outlineColor,
-            outlineStyle: options.outlineStyle,
-            outlineWidth: options.outlineWidth,
-            border: options.border,
-            borderColor: options.borderColor,
-            borderRadius: options.borderRadius,
-            borderSpacing: options.borderSpacing,
-            borderStyle: options.borderStyle,
-            borderWidth: options.borderWidth,
-            fontStyle: options.fontStyle,
-            fontWeight: options.fontWeight,
-            textDecoration: options.textDecoration,
-            cursor: options.cursor,
-            color: options.color,
-            opacity: options.opacity,
-            letterSpacing: options.letterSpacing,
-            gutterIconPath: options.gutterIconPath ? pathOrURIToURI(options.gutterIconPath) : undefined,
-            gutterIconSize: options.gutterIconSize,
-            overviewRulerColor: options.overviewRulerColor,
-            before: options.before ? ThemableDecorationAttachmentRenderOptions.from(options.before) : undefined,
-            after: options.after ? ThemableDecorationAttachmentRenderOptions.from(options.after) : undefined,
-        };
-    }
-    DecorationRenderOptions.from = from;
-})(DecorationRenderOptions = exports.DecorationRenderOptions || (exports.DecorationRenderOptions = {}));
-var DecorationRangeBehavior;
-(function (DecorationRangeBehavior) {
-    function from(value) {
-        if (typeof value === 'undefined') {
-            return value;
-        }
-        switch (value) {
-            case types.DecorationRangeBehavior.OpenOpen:
-                return rpc.TrackedRangeStickiness.AlwaysGrowsWhenTypingAtEdges;
-            case types.DecorationRangeBehavior.ClosedClosed:
-                return rpc.TrackedRangeStickiness.NeverGrowsWhenTypingAtEdges;
-            case types.DecorationRangeBehavior.OpenClosed:
-                return rpc.TrackedRangeStickiness.GrowsOnlyWhenTypingBefore;
-            case types.DecorationRangeBehavior.ClosedOpen:
-                return rpc.TrackedRangeStickiness.GrowsOnlyWhenTypingAfter;
-        }
-    }
-    DecorationRangeBehavior.from = from;
-})(DecorationRangeBehavior = exports.DecorationRangeBehavior || (exports.DecorationRangeBehavior = {}));
-var ThemableDecorationRenderOptions;
-(function (ThemableDecorationRenderOptions) {
-    function from(options) {
-        if (typeof options === 'undefined') {
-            return options;
-        }
-        return {
-            backgroundColor: options.backgroundColor,
-            outline: options.outline,
-            outlineColor: options.outlineColor,
-            outlineStyle: options.outlineStyle,
-            outlineWidth: options.outlineWidth,
-            border: options.border,
-            borderColor: options.borderColor,
-            borderRadius: options.borderRadius,
-            borderSpacing: options.borderSpacing,
-            borderStyle: options.borderStyle,
-            borderWidth: options.borderWidth,
-            fontStyle: options.fontStyle,
-            fontWeight: options.fontWeight,
-            textDecoration: options.textDecoration,
-            cursor: options.cursor,
-            color: options.color,
-            opacity: options.opacity,
-            letterSpacing: options.letterSpacing,
-            gutterIconPath: options.gutterIconPath ? pathOrURIToURI(options.gutterIconPath) : undefined,
-            gutterIconSize: options.gutterIconSize,
-            overviewRulerColor: options.overviewRulerColor,
-            before: options.before ? ThemableDecorationAttachmentRenderOptions.from(options.before) : undefined,
-            after: options.after ? ThemableDecorationAttachmentRenderOptions.from(options.after) : undefined,
-        };
-    }
-    ThemableDecorationRenderOptions.from = from;
-})(ThemableDecorationRenderOptions = exports.ThemableDecorationRenderOptions || (exports.ThemableDecorationRenderOptions = {}));
-var ThemableDecorationAttachmentRenderOptions;
-(function (ThemableDecorationAttachmentRenderOptions) {
-    function from(options) {
-        if (typeof options === 'undefined') {
-            return options;
-        }
-        return {
-            contentText: options.contentText,
-            contentIconPath: options.contentIconPath ? pathOrURIToURI(options.contentIconPath) : undefined,
-            border: options.border,
-            borderColor: options.borderColor,
-            fontStyle: options.fontStyle,
-            fontWeight: options.fontWeight,
-            textDecoration: options.textDecoration,
-            color: options.color,
-            backgroundColor: options.backgroundColor,
-            margin: options.margin,
-            width: options.width,
-            height: options.height,
-        };
-    }
-    ThemableDecorationAttachmentRenderOptions.from = from;
-})(ThemableDecorationAttachmentRenderOptions = exports.ThemableDecorationAttachmentRenderOptions || (exports.ThemableDecorationAttachmentRenderOptions = {}));
-function pathOrURIToURI(value) {
-    if (typeof value === 'undefined') {
-        return value;
-    }
-    if (typeof value === 'string') {
-        return vscode_uri_1.URI.file(value);
-    }
-    else {
-        return value;
-    }
-}
-exports.pathOrURIToURI = pathOrURIToURI;
-function pluginToPluginInfo(plugin) {
-    return {
-        id: plugin.model.id,
-        name: plugin.model.name
-    };
-}
-exports.pluginToPluginInfo = pluginToPluginInfo;
-
-
-/***/ }),
-
-/***/ "./node_modules/@theia/plugin-ext/lib/plugin/types-impl.js":
-/*!*****************************************************************!*\
-  !*** ./node_modules/@theia/plugin-ext/lib/plugin/types-impl.js ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/********************************************************************************
- * Copyright (C) 2018 Red Hat, Inc. and others.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Eclipse Public License v. 2.0 which is available at
- * http://www.eclipse.org/legal/epl-2.0.
- *
- * This Source Code may also be made available under the following Secondary
- * Licenses when the conditions for such availability set forth in the Eclipse
- * Public License v. 2.0 are satisfied: GNU General Public License, version 2
- * with the GNU Classpath Exception which is available at
- * https://www.gnu.org/software/classpath/license.html.
- *
- * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
- ********************************************************************************/
-// copied from https://github.com/microsoft/vscode/blob/1.37.0/src/vs/workbench/api/common/extHostTypes.ts
-/*---------------------------------------------------------------------------------------------
-*  Copyright (c) Microsoft Corporation. All rights reserved.
-*  Licensed under the MIT License. See License.txt in the project root for license information.
-*--------------------------------------------------------------------------------------------*/
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __values = (this && this.__values) || function(o) {
-    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
-    if (m) return m.call(o);
-    if (o && typeof o.length === "number") return {
-        next: function () {
-            if (o && i >= o.length) o = void 0;
-            return { value: o && o[i++], done: !o };
-        }
-    };
-    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
-};
-var __read = (this && this.__read) || function (o, n) {
-    var m = typeof Symbol === "function" && o[Symbol.iterator];
-    if (!m) return o;
-    var i = m.call(o), r, ar = [], e;
-    try {
-        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
-    }
-    catch (error) { e = { error: error }; }
-    finally {
-        try {
-            if (r && !r.done && (m = i["return"])) m.call(i);
-        }
-        finally { if (e) throw e.error; }
-    }
-    return ar;
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CallHierarchyOutgoingCall = exports.CallHierarchyIncomingCall = exports.CallHierarchyItem = exports.WebviewPanelTargetArea = exports.OperatingSystem = exports.SelectionRange = exports.FoldingRangeKind = exports.FoldingRange = exports.ColorFormat = exports.ColorPresentation = exports.ColorInformation = exports.Color = exports.FunctionBreakpoint = exports.SourceBreakpoint = exports.Breakpoint = exports.LogLevel = exports.DebugAdapterServer = exports.DebugAdapterExecutable = exports.Task = exports.TaskScope = exports.TaskGroup = exports.ShellExecution = exports.TaskRevealKind = exports.TaskPanelKind = exports.ShellQuoting = exports.ProcessExecution = exports.ProgressLocation = exports.Progress = exports.ProgressOptions = exports.FileType = exports.FileSystemError = exports.CommentMode = exports.QuickInputButtons = exports.CommentThreadCollapsibleState = exports.FileChangeType = exports.DocumentSymbol = exports.SymbolInformation = exports.SymbolTag = exports.TreeItemCollapsibleState = exports.TreeItem = exports.WorkspaceEdit = exports.CodeAction = exports.TextDocumentSaveReason = exports.CodeActionKind = exports.CodeActionTrigger = exports.CodeLens = exports.DocumentLink = exports.DocumentHighlight = exports.DocumentHighlightKind = exports.Hover = exports.SignatureHelp = exports.SignatureHelpTriggerKind = exports.SignatureInformation = exports.ParameterInformation = exports.MarkerTag = exports.MarkerSeverity = exports.Diagnostic = exports.DiagnosticTag = exports.Location = exports.DiagnosticRelatedInformation = exports.DiagnosticSeverity = exports.CompletionList = exports.CompletionItem = exports.CompletionItemKind = exports.CompletionTriggerKind = exports.TextEdit = exports.IndentAction = exports.RelativePattern = exports.ConfigurationTarget = exports.OverviewRulerLane = exports.DecorationRangeBehavior = exports.TextEditorRevealType = exports.ThemeIcon = exports.ThemeColor = exports.SnippetString = exports.EndOfLine = exports.Selection = exports.Range = exports.Position = exports.TextEditorSelectionChangeKind = exports.ViewColumn = exports.TextEditorLineNumbersStyle = exports.StatusBarAlignment = exports.Disposable = void 0;
-/* eslint-disable no-null/no-null */
-var uuid_1 = __webpack_require__(/*! @phosphor/coreutils/lib/uuid */ "./node_modules/@phosphor/coreutils/lib/uuid.js");
-var errors_1 = __webpack_require__(/*! ../common/errors */ "./node_modules/@theia/plugin-ext/lib/common/errors.js");
-var crypto = __webpack_require__(/*! crypto */ "./node_modules/node-libs-browser/mock/empty.js");
-var vscode_uri_1 = __webpack_require__(/*! vscode-uri */ "./node_modules/vscode-uri/lib/esm/index.js");
-var paths_util_1 = __webpack_require__(/*! ../common/paths-util */ "./node_modules/@theia/plugin-ext/lib/common/paths-util.js");
-var strings_1 = __webpack_require__(/*! @theia/languages/lib/common/language-selector/strings */ "./node_modules/@theia/languages/lib/common/language-selector/strings.js");
-var markdown_string_1 = __webpack_require__(/*! ./markdown-string */ "./node_modules/@theia/plugin-ext/lib/plugin/markdown-string.js");
-var plugin_api_rpc_model_1 = __webpack_require__(/*! ../common/plugin-api-rpc-model */ "./node_modules/@theia/plugin-ext/lib/common/plugin-api-rpc-model.js");
-var Disposable = /** @class */ (function () {
-    function Disposable(func) {
-        this.disposable = func;
-    }
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    Disposable.from = function () {
-        var disposables = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            disposables[_i] = arguments[_i];
-        }
-        return new Disposable(function () {
-            var e_1, _a;
-            if (disposables) {
-                try {
-                    for (var disposables_1 = __values(disposables), disposables_1_1 = disposables_1.next(); !disposables_1_1.done; disposables_1_1 = disposables_1.next()) {
-                        var disposable = disposables_1_1.value;
-                        if (disposable && typeof disposable.dispose === 'function') {
-                            disposable.dispose();
-                        }
-                    }
-                }
-                catch (e_1_1) { e_1 = { error: e_1_1 }; }
-                finally {
-                    try {
-                        if (disposables_1_1 && !disposables_1_1.done && (_a = disposables_1.return)) _a.call(disposables_1);
-                    }
-                    finally { if (e_1) throw e_1.error; }
-                }
-            }
-        });
-    };
-    /**
-     * Dispose this object.
-     */
-    Disposable.prototype.dispose = function () {
-        if (this.disposable) {
-            this.disposable();
-            this.disposable = undefined;
-        }
-    };
-    Disposable.create = function (func) {
-        return new Disposable(func);
-    };
-    return Disposable;
-}());
-exports.Disposable = Disposable;
-var StatusBarAlignment;
-(function (StatusBarAlignment) {
-    StatusBarAlignment[StatusBarAlignment["Left"] = 1] = "Left";
-    StatusBarAlignment[StatusBarAlignment["Right"] = 2] = "Right";
-})(StatusBarAlignment = exports.StatusBarAlignment || (exports.StatusBarAlignment = {}));
-var TextEditorLineNumbersStyle;
-(function (TextEditorLineNumbersStyle) {
-    TextEditorLineNumbersStyle[TextEditorLineNumbersStyle["Off"] = 0] = "Off";
-    TextEditorLineNumbersStyle[TextEditorLineNumbersStyle["On"] = 1] = "On";
-    TextEditorLineNumbersStyle[TextEditorLineNumbersStyle["Relative"] = 2] = "Relative";
-})(TextEditorLineNumbersStyle = exports.TextEditorLineNumbersStyle || (exports.TextEditorLineNumbersStyle = {}));
-/**
- * Denotes a column in the editor window.
- * Columns are used to show editors side by side.
- */
-var ViewColumn;
-(function (ViewColumn) {
-    ViewColumn[ViewColumn["Active"] = -1] = "Active";
-    ViewColumn[ViewColumn["Beside"] = -2] = "Beside";
-    ViewColumn[ViewColumn["One"] = 1] = "One";
-    ViewColumn[ViewColumn["Two"] = 2] = "Two";
-    ViewColumn[ViewColumn["Three"] = 3] = "Three";
-    ViewColumn[ViewColumn["Four"] = 4] = "Four";
-    ViewColumn[ViewColumn["Five"] = 5] = "Five";
-    ViewColumn[ViewColumn["Six"] = 6] = "Six";
-    ViewColumn[ViewColumn["Seven"] = 7] = "Seven";
-    ViewColumn[ViewColumn["Eight"] = 8] = "Eight";
-    ViewColumn[ViewColumn["Nine"] = 9] = "Nine";
-})(ViewColumn = exports.ViewColumn || (exports.ViewColumn = {}));
-/**
- * Represents sources that can cause `window.onDidChangeEditorSelection`
- */
-var TextEditorSelectionChangeKind;
-(function (TextEditorSelectionChangeKind) {
-    TextEditorSelectionChangeKind[TextEditorSelectionChangeKind["Keyboard"] = 1] = "Keyboard";
-    TextEditorSelectionChangeKind[TextEditorSelectionChangeKind["Mouse"] = 2] = "Mouse";
-    TextEditorSelectionChangeKind[TextEditorSelectionChangeKind["Command"] = 3] = "Command";
-})(TextEditorSelectionChangeKind = exports.TextEditorSelectionChangeKind || (exports.TextEditorSelectionChangeKind = {}));
-(function (TextEditorSelectionChangeKind) {
-    function fromValue(s) {
-        switch (s) {
-            case 'keyboard': return TextEditorSelectionChangeKind.Keyboard;
-            case 'mouse': return TextEditorSelectionChangeKind.Mouse;
-            case 'api': return TextEditorSelectionChangeKind.Command;
-        }
-        return undefined;
-    }
-    TextEditorSelectionChangeKind.fromValue = fromValue;
-})(TextEditorSelectionChangeKind = exports.TextEditorSelectionChangeKind || (exports.TextEditorSelectionChangeKind = {}));
-var Position = /** @class */ (function () {
-    function Position(line, char) {
-        if (line < 0) {
-            throw new Error('line number cannot be negative');
-        }
-        if (char < 0) {
-            throw new Error('char number cannot be negative');
-        }
-        this._line = line;
-        this._character = char;
-    }
-    Object.defineProperty(Position.prototype, "line", {
-        get: function () {
-            return this._line;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Position.prototype, "character", {
-        get: function () {
-            return this._character;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Position.prototype.isBefore = function (other) {
-        if (this._line < other._line) {
-            return true;
-        }
-        if (other._line < this._line) {
-            return false;
-        }
-        return this._character < other._character;
-    };
-    Position.prototype.isBeforeOrEqual = function (other) {
-        if (this._line < other._line) {
-            return true;
-        }
-        if (other._line < this._line) {
-            return false;
-        }
-        return this._character <= other._character;
-    };
-    Position.prototype.isAfter = function (other) {
-        return !this.isBeforeOrEqual(other);
-    };
-    Position.prototype.isAfterOrEqual = function (other) {
-        return !this.isBefore(other);
-    };
-    Position.prototype.isEqual = function (other) {
-        return this._line === other._line && this._character === other._character;
-    };
-    Position.prototype.compareTo = function (other) {
-        if (this._line < other._line) {
-            return -1;
-        }
-        else if (this._line > other.line) {
-            return 1;
-        }
-        else {
-            // equal line
-            if (this._character < other._character) {
-                return -1;
-            }
-            else if (this._character > other._character) {
-                return 1;
-            }
-            else {
-                // equal line and character
-                return 0;
-            }
-        }
-    };
-    Position.prototype.translate = function (lineDeltaOrChange, characterDelta) {
-        if (characterDelta === void 0) { characterDelta = 0; }
-        if (lineDeltaOrChange === null || characterDelta === null) {
-            throw errors_1.illegalArgument();
-        }
-        var lineDelta;
-        if (typeof lineDeltaOrChange === 'undefined') {
-            lineDelta = 0;
-        }
-        else if (typeof lineDeltaOrChange === 'number') {
-            lineDelta = lineDeltaOrChange;
-        }
-        else {
-            lineDelta = typeof lineDeltaOrChange.lineDelta === 'number' ? lineDeltaOrChange.lineDelta : 0;
-            characterDelta = typeof lineDeltaOrChange.characterDelta === 'number' ? lineDeltaOrChange.characterDelta : 0;
-        }
-        if (lineDelta === 0 && characterDelta === 0) {
-            return this;
-        }
-        return new Position(this.line + lineDelta, this.character + characterDelta);
-    };
-    Position.prototype.with = function (lineOrChange, character) {
-        if (character === void 0) { character = this.character; }
-        if (lineOrChange === null || character === null) {
-            throw errors_1.illegalArgument();
-        }
-        var line;
-        if (typeof lineOrChange === 'undefined') {
-            line = this.line;
-        }
-        else if (typeof lineOrChange === 'number') {
-            line = lineOrChange;
-        }
-        else {
-            line = typeof lineOrChange.line === 'number' ? lineOrChange.line : this.line;
-            character = typeof lineOrChange.character === 'number' ? lineOrChange.character : this.character;
-        }
-        if (line === this.line && character === this.character) {
-            return this;
-        }
-        return new Position(line, character);
-    };
-    Position.Min = function () {
-        var e_2, _a;
-        var positions = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            positions[_i] = arguments[_i];
-        }
-        var result = positions.pop();
-        try {
-            for (var positions_1 = __values(positions), positions_1_1 = positions_1.next(); !positions_1_1.done; positions_1_1 = positions_1.next()) {
-                var p = positions_1_1.value;
-                if (p.isBefore(result)) {
-                    result = p;
-                }
-            }
-        }
-        catch (e_2_1) { e_2 = { error: e_2_1 }; }
-        finally {
-            try {
-                if (positions_1_1 && !positions_1_1.done && (_a = positions_1.return)) _a.call(positions_1);
-            }
-            finally { if (e_2) throw e_2.error; }
-        }
-        return result;
-    };
-    Position.Max = function () {
-        var e_3, _a;
-        var positions = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            positions[_i] = arguments[_i];
-        }
-        var result = positions.pop();
-        try {
-            for (var positions_2 = __values(positions), positions_2_1 = positions_2.next(); !positions_2_1.done; positions_2_1 = positions_2.next()) {
-                var p = positions_2_1.value;
-                if (p.isAfter(result)) {
-                    result = p;
-                }
-            }
-        }
-        catch (e_3_1) { e_3 = { error: e_3_1 }; }
-        finally {
-            try {
-                if (positions_2_1 && !positions_2_1.done && (_a = positions_2.return)) _a.call(positions_2);
-            }
-            finally { if (e_3) throw e_3.error; }
-        }
-        return result;
-    };
-    Position.isPosition = function (other) {
-        if (!other) {
-            return false;
-        }
-        if (other instanceof Position) {
-            return true;
-        }
-        var _a = other, line = _a.line, character = _a.character;
-        if (typeof line === 'number' && typeof character === 'number') {
-            return true;
-        }
-        return false;
-    };
-    return Position;
-}());
-exports.Position = Position;
-var Range = /** @class */ (function () {
-    function Range(startLineOrStart, startColumnOrEnd, endLine, endColumn) {
-        var start = undefined;
-        var end = undefined;
-        if (typeof startLineOrStart === 'number' && typeof startColumnOrEnd === 'number' && typeof endLine === 'number' && typeof endColumn === 'number') {
-            start = new Position(startLineOrStart, startColumnOrEnd);
-            end = new Position(endLine, endColumn);
-        }
-        else if (startLineOrStart instanceof Position && startColumnOrEnd instanceof Position) {
-            start = startLineOrStart;
-            end = startColumnOrEnd;
-        }
-        if (!start || !end) {
-            throw new Error('Invalid arguments');
-        }
-        if (start.isBefore(end)) {
-            this._start = start;
-            this._end = end;
-        }
-        else {
-            this._start = end;
-            this._end = start;
-        }
-    }
-    Object.defineProperty(Range.prototype, "start", {
-        get: function () {
-            return this._start;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Range.prototype, "end", {
-        get: function () {
-            return this._end;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Range.prototype.contains = function (positionOrRange) {
-        if (positionOrRange instanceof Range) {
-            return this.contains(positionOrRange._start)
-                && this.contains(positionOrRange._end);
-        }
-        else if (positionOrRange instanceof Position) {
-            if (positionOrRange.isBefore(this._start)) {
-                return false;
-            }
-            if (this._end.isBefore(positionOrRange)) {
-                return false;
-            }
-            return true;
-        }
-        return false;
-    };
-    Range.prototype.isEqual = function (other) {
-        return this._start.isEqual(other._start) && this._end.isEqual(other._end);
-    };
-    Range.prototype.intersection = function (other) {
-        var start = Position.Max(other.start, this._start);
-        var end = Position.Min(other.end, this._end);
-        if (start.isAfter(end)) {
-            // this happens when there is no overlap:
-            // |-----|
-            //          |----|
-            return undefined;
-        }
-        return new Range(start, end);
-    };
-    Range.prototype.union = function (other) {
-        if (this.contains(other)) {
-            return this;
-        }
-        else if (other.contains(this)) {
-            return other;
-        }
-        var start = Position.Min(other.start, this._start);
-        var end = Position.Max(other.end, this.end);
-        return new Range(start, end);
-    };
-    Object.defineProperty(Range.prototype, "isEmpty", {
-        get: function () {
-            return this._start.isEqual(this._end);
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Range.prototype, "isSingleLine", {
-        get: function () {
-            return this._start.line === this._end.line;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Range.prototype.with = function (startOrChange, end) {
-        if (end === void 0) { end = this.end; }
-        if (startOrChange === null || end === null) {
-            throw errors_1.illegalArgument();
-        }
-        var start;
-        if (!startOrChange) {
-            start = this.start;
-        }
-        else if (Position.isPosition(startOrChange)) {
-            start = startOrChange;
-        }
-        else {
-            start = startOrChange.start || this.start;
-            end = startOrChange.end || this.end;
-        }
-        if (start.isEqual(this._start) && end.isEqual(this.end)) {
-            return this;
-        }
-        return new Range(start, end);
-    };
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    Range.isRange = function (thing) {
-        if (thing instanceof Range) {
-            return true;
-        }
-        if (!thing) {
-            return false;
-        }
-        return Position.isPosition(thing.start)
-            && Position.isPosition(thing.end);
-    };
-    return Range;
-}());
-exports.Range = Range;
-var Selection = /** @class */ (function (_super) {
-    __extends(Selection, _super);
-    function Selection(anchorLineOrAnchor, anchorColumnOrActive, activeLine, activeColumn) {
-        var _this = this;
-        var anchor = undefined;
-        var active = undefined;
-        if (typeof anchorLineOrAnchor === 'number' && typeof anchorColumnOrActive === 'number' && typeof activeLine === 'number' && typeof activeColumn === 'number') {
-            anchor = new Position(anchorLineOrAnchor, anchorColumnOrActive);
-            active = new Position(activeLine, activeColumn);
-        }
-        else if (anchorLineOrAnchor instanceof Position && anchorColumnOrActive instanceof Position) {
-            anchor = anchorLineOrAnchor;
-            active = anchorColumnOrActive;
-        }
-        if (!anchor || !active) {
-            throw new Error('Invalid arguments');
-        }
-        _this = _super.call(this, anchor, active) || this;
-        _this._anchor = anchor;
-        _this._active = active;
-        return _this;
-    }
-    Object.defineProperty(Selection.prototype, "active", {
-        get: function () {
-            return this._active;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Selection.prototype, "anchor", {
-        get: function () {
-            return this._anchor;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Selection.prototype, "isReversed", {
-        get: function () {
-            return this._anchor === this._end;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    return Selection;
-}(Range));
-exports.Selection = Selection;
-var EndOfLine;
-(function (EndOfLine) {
-    EndOfLine[EndOfLine["LF"] = 1] = "LF";
-    EndOfLine[EndOfLine["CRLF"] = 2] = "CRLF";
-})(EndOfLine = exports.EndOfLine || (exports.EndOfLine = {}));
-var SnippetString = /** @class */ (function () {
-    function SnippetString(value) {
-        this._tabstop = 1;
-        this.value = value || '';
-    }
-    SnippetString.isSnippetString = function (thing) {
-        if (thing instanceof SnippetString) {
-            return true;
-        }
-        if (!thing) {
-            return false;
-        }
-        return typeof thing.value === 'string';
-    };
-    SnippetString._escape = function (value) {
-        return value.replace(/\$|}|\\/g, '\\$&');
-    };
-    SnippetString.prototype.appendText = function (string) {
-        this.value += SnippetString._escape(string);
-        return this;
-    };
-    SnippetString.prototype.appendTabstop = function (number) {
-        if (number === void 0) { number = this._tabstop++; }
-        this.value += '$';
-        this.value += number;
-        return this;
-    };
-    SnippetString.prototype.appendPlaceholder = function (value, number) {
-        if (number === void 0) { number = this._tabstop++; }
-        if (typeof value === 'function') {
-            var nested = new SnippetString();
-            nested._tabstop = this._tabstop;
-            value(nested);
-            this._tabstop = nested._tabstop;
-            value = nested.value;
-        }
-        else {
-            value = SnippetString._escape(value);
-        }
-        this.value += '${';
-        this.value += number;
-        this.value += ':';
-        this.value += value;
-        this.value += '}';
-        return this;
-    };
-    SnippetString.prototype.appendVariable = function (name, defaultValue) {
-        if (typeof defaultValue === 'function') {
-            var nested = new SnippetString();
-            nested._tabstop = this._tabstop;
-            defaultValue(nested);
-            this._tabstop = nested._tabstop;
-            defaultValue = nested.value;
-        }
-        else if (typeof defaultValue === 'string') {
-            defaultValue = defaultValue.replace(/\$|}/g, '\\$&');
-        }
-        this.value += '${';
-        this.value += name;
-        if (defaultValue) {
-            this.value += ':';
-            this.value += defaultValue;
-        }
-        this.value += '}';
-        return this;
-    };
-    return SnippetString;
-}());
-exports.SnippetString = SnippetString;
-var ThemeColor = /** @class */ (function () {
-    function ThemeColor(id) {
-        this.id = id;
-    }
-    return ThemeColor;
-}());
-exports.ThemeColor = ThemeColor;
-var ThemeIcon = /** @class */ (function () {
-    function ThemeIcon(id) {
-        this.id = id;
-    }
-    ThemeIcon.File = new ThemeIcon('file');
-    ThemeIcon.Folder = new ThemeIcon('folder');
-    return ThemeIcon;
-}());
-exports.ThemeIcon = ThemeIcon;
-var TextEditorRevealType;
-(function (TextEditorRevealType) {
-    TextEditorRevealType[TextEditorRevealType["Default"] = 0] = "Default";
-    TextEditorRevealType[TextEditorRevealType["InCenter"] = 1] = "InCenter";
-    TextEditorRevealType[TextEditorRevealType["InCenterIfOutsideViewport"] = 2] = "InCenterIfOutsideViewport";
-    TextEditorRevealType[TextEditorRevealType["AtTop"] = 3] = "AtTop";
-})(TextEditorRevealType = exports.TextEditorRevealType || (exports.TextEditorRevealType = {}));
-/**
- * These values match very carefully the values of `TrackedRangeStickiness`
- */
-var DecorationRangeBehavior;
-(function (DecorationRangeBehavior) {
-    /**
-     * TrackedRangeStickiness.AlwaysGrowsWhenTypingAtEdges
-     */
-    DecorationRangeBehavior[DecorationRangeBehavior["OpenOpen"] = 0] = "OpenOpen";
-    /**
-     * TrackedRangeStickiness.NeverGrowsWhenTypingAtEdges
-     */
-    DecorationRangeBehavior[DecorationRangeBehavior["ClosedClosed"] = 1] = "ClosedClosed";
-    /**
-     * TrackedRangeStickiness.GrowsOnlyWhenTypingBefore
-     */
-    DecorationRangeBehavior[DecorationRangeBehavior["OpenClosed"] = 2] = "OpenClosed";
-    /**
-     * TrackedRangeStickiness.GrowsOnlyWhenTypingAfter
-     */
-    DecorationRangeBehavior[DecorationRangeBehavior["ClosedOpen"] = 3] = "ClosedOpen";
-})(DecorationRangeBehavior = exports.DecorationRangeBehavior || (exports.DecorationRangeBehavior = {}));
-/**
- * Vertical Lane in the overview ruler of the editor.
- */
-var OverviewRulerLane;
-(function (OverviewRulerLane) {
-    OverviewRulerLane[OverviewRulerLane["Left"] = 1] = "Left";
-    OverviewRulerLane[OverviewRulerLane["Center"] = 2] = "Center";
-    OverviewRulerLane[OverviewRulerLane["Right"] = 4] = "Right";
-    OverviewRulerLane[OverviewRulerLane["Full"] = 7] = "Full";
-})(OverviewRulerLane = exports.OverviewRulerLane || (exports.OverviewRulerLane = {}));
-var ConfigurationTarget;
-(function (ConfigurationTarget) {
-    ConfigurationTarget[ConfigurationTarget["Global"] = 1] = "Global";
-    ConfigurationTarget[ConfigurationTarget["Workspace"] = 2] = "Workspace";
-    ConfigurationTarget[ConfigurationTarget["WorkspaceFolder"] = 3] = "WorkspaceFolder";
-    ConfigurationTarget[ConfigurationTarget["Default"] = 4] = "Default";
-    ConfigurationTarget[ConfigurationTarget["Memory"] = 5] = "Memory";
-})(ConfigurationTarget = exports.ConfigurationTarget || (exports.ConfigurationTarget = {}));
-var RelativePattern = /** @class */ (function () {
-    function RelativePattern(base, pattern) {
-        this.pattern = pattern;
-        if (typeof base !== 'string') {
-            if (!base || !vscode_uri_1.URI.isUri(base.uri)) {
-                throw errors_1.illegalArgument('base');
-            }
-        }
-        if (typeof pattern !== 'string') {
-            throw errors_1.illegalArgument('pattern');
-        }
-        this.base = typeof base === 'string' ? base : base.uri.fsPath;
-    }
-    RelativePattern.prototype.pathToRelative = function (from, to) {
-        return paths_util_1.relative(from, to);
-    };
-    return RelativePattern;
-}());
-exports.RelativePattern = RelativePattern;
-var IndentAction;
-(function (IndentAction) {
-    IndentAction[IndentAction["None"] = 0] = "None";
-    IndentAction[IndentAction["Indent"] = 1] = "Indent";
-    IndentAction[IndentAction["IndentOutdent"] = 2] = "IndentOutdent";
-    IndentAction[IndentAction["Outdent"] = 3] = "Outdent";
-})(IndentAction = exports.IndentAction || (exports.IndentAction = {}));
-var TextEdit = /** @class */ (function () {
-    function TextEdit(range, newText) {
-        this.range = range;
-        this.newText = newText;
-    }
-    Object.defineProperty(TextEdit.prototype, "range", {
-        get: function () {
-            return this._range;
-        },
-        set: function (value) {
-            if (value && !Range.isRange(value)) {
-                throw errors_1.illegalArgument('range');
-            }
-            this._range = value;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(TextEdit.prototype, "newText", {
-        get: function () {
-            return this._newText || '';
-        },
-        set: function (value) {
-            if (value && typeof value !== 'string') {
-                throw errors_1.illegalArgument('newText');
-            }
-            this._newText = value;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(TextEdit.prototype, "newEol", {
-        get: function () {
-            return this._newEol;
-        },
-        set: function (value) {
-            if (value && typeof value !== 'number') {
-                throw errors_1.illegalArgument('newEol');
-            }
-            this._newEol = value;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    TextEdit.isTextEdit = function (thing) {
-        if (thing instanceof TextEdit) {
-            return true;
-        }
-        if (!thing) {
-            return false;
-        }
-        return Range.isRange(thing.range)
-            && typeof thing.newText === 'string';
-    };
-    TextEdit.replace = function (range, newText) {
-        return new TextEdit(range, newText);
-    };
-    TextEdit.insert = function (position, newText) {
-        return TextEdit.replace(new Range(position, position), newText);
-    };
-    TextEdit.delete = function (range) {
-        return TextEdit.replace(range, '');
-    };
-    TextEdit.setEndOfLine = function (eol) {
-        var ret = new TextEdit(undefined, undefined);
-        ret.newEol = eol;
-        return ret;
-    };
-    return TextEdit;
-}());
-exports.TextEdit = TextEdit;
-var CompletionTriggerKind;
-(function (CompletionTriggerKind) {
-    CompletionTriggerKind[CompletionTriggerKind["Invoke"] = 0] = "Invoke";
-    CompletionTriggerKind[CompletionTriggerKind["TriggerCharacter"] = 1] = "TriggerCharacter";
-    CompletionTriggerKind[CompletionTriggerKind["TriggerForIncompleteCompletions"] = 2] = "TriggerForIncompleteCompletions";
-})(CompletionTriggerKind = exports.CompletionTriggerKind || (exports.CompletionTriggerKind = {}));
-var CompletionItemKind;
-(function (CompletionItemKind) {
-    CompletionItemKind[CompletionItemKind["Text"] = 0] = "Text";
-    CompletionItemKind[CompletionItemKind["Method"] = 1] = "Method";
-    CompletionItemKind[CompletionItemKind["Function"] = 2] = "Function";
-    CompletionItemKind[CompletionItemKind["Constructor"] = 3] = "Constructor";
-    CompletionItemKind[CompletionItemKind["Field"] = 4] = "Field";
-    CompletionItemKind[CompletionItemKind["Variable"] = 5] = "Variable";
-    CompletionItemKind[CompletionItemKind["Class"] = 6] = "Class";
-    CompletionItemKind[CompletionItemKind["Interface"] = 7] = "Interface";
-    CompletionItemKind[CompletionItemKind["Module"] = 8] = "Module";
-    CompletionItemKind[CompletionItemKind["Property"] = 9] = "Property";
-    CompletionItemKind[CompletionItemKind["Unit"] = 10] = "Unit";
-    CompletionItemKind[CompletionItemKind["Value"] = 11] = "Value";
-    CompletionItemKind[CompletionItemKind["Enum"] = 12] = "Enum";
-    CompletionItemKind[CompletionItemKind["Keyword"] = 13] = "Keyword";
-    CompletionItemKind[CompletionItemKind["Snippet"] = 14] = "Snippet";
-    CompletionItemKind[CompletionItemKind["Color"] = 15] = "Color";
-    CompletionItemKind[CompletionItemKind["File"] = 16] = "File";
-    CompletionItemKind[CompletionItemKind["Reference"] = 17] = "Reference";
-    CompletionItemKind[CompletionItemKind["Folder"] = 18] = "Folder";
-    CompletionItemKind[CompletionItemKind["EnumMember"] = 19] = "EnumMember";
-    CompletionItemKind[CompletionItemKind["Constant"] = 20] = "Constant";
-    CompletionItemKind[CompletionItemKind["Struct"] = 21] = "Struct";
-    CompletionItemKind[CompletionItemKind["Event"] = 22] = "Event";
-    CompletionItemKind[CompletionItemKind["Operator"] = 23] = "Operator";
-    CompletionItemKind[CompletionItemKind["TypeParameter"] = 24] = "TypeParameter";
-})(CompletionItemKind = exports.CompletionItemKind || (exports.CompletionItemKind = {}));
-var CompletionItem = /** @class */ (function () {
-    function CompletionItem(label, kind) {
-        this.label = label;
-        this.kind = kind;
-    }
-    return CompletionItem;
-}());
-exports.CompletionItem = CompletionItem;
-var CompletionList = /** @class */ (function () {
-    function CompletionList(items, isIncomplete) {
-        if (items === void 0) { items = []; }
-        if (isIncomplete === void 0) { isIncomplete = false; }
-        this.items = items;
-        this.isIncomplete = isIncomplete;
-    }
-    return CompletionList;
-}());
-exports.CompletionList = CompletionList;
-var DiagnosticSeverity;
-(function (DiagnosticSeverity) {
-    DiagnosticSeverity[DiagnosticSeverity["Error"] = 0] = "Error";
-    DiagnosticSeverity[DiagnosticSeverity["Warning"] = 1] = "Warning";
-    DiagnosticSeverity[DiagnosticSeverity["Information"] = 2] = "Information";
-    DiagnosticSeverity[DiagnosticSeverity["Hint"] = 3] = "Hint";
-})(DiagnosticSeverity = exports.DiagnosticSeverity || (exports.DiagnosticSeverity = {}));
-var DiagnosticRelatedInformation = /** @class */ (function () {
-    function DiagnosticRelatedInformation(location, message) {
-        this.location = location;
-        this.message = message;
-    }
-    return DiagnosticRelatedInformation;
-}());
-exports.DiagnosticRelatedInformation = DiagnosticRelatedInformation;
-var Location = /** @class */ (function () {
-    function Location(uri, rangeOrPosition) {
-        this.uri = uri;
-        if (rangeOrPosition instanceof Range) {
-            this.range = rangeOrPosition;
-        }
-        else if (rangeOrPosition instanceof Position) {
-            this.range = new Range(rangeOrPosition, rangeOrPosition);
-        }
-    }
-    Location.isLocation = function (thing) {
-        if (thing instanceof Location) {
-            return true;
-        }
-        if (!thing) {
-            return false;
-        }
-        return Range.isRange(thing.range)
-            && vscode_uri_1.URI.isUri(thing.uri);
-    };
-    return Location;
-}());
-exports.Location = Location;
-var DiagnosticTag;
-(function (DiagnosticTag) {
-    DiagnosticTag[DiagnosticTag["Unnecessary"] = 1] = "Unnecessary";
-})(DiagnosticTag = exports.DiagnosticTag || (exports.DiagnosticTag = {}));
-var Diagnostic = /** @class */ (function () {
-    function Diagnostic(range, message, severity) {
-        if (severity === void 0) { severity = DiagnosticSeverity.Error; }
-        this.range = range;
-        this.message = message;
-        this.severity = severity;
-    }
-    return Diagnostic;
-}());
-exports.Diagnostic = Diagnostic;
-var MarkerSeverity;
-(function (MarkerSeverity) {
-    MarkerSeverity[MarkerSeverity["Hint"] = 1] = "Hint";
-    MarkerSeverity[MarkerSeverity["Info"] = 2] = "Info";
-    MarkerSeverity[MarkerSeverity["Warning"] = 4] = "Warning";
-    MarkerSeverity[MarkerSeverity["Error"] = 8] = "Error";
-})(MarkerSeverity = exports.MarkerSeverity || (exports.MarkerSeverity = {}));
-var MarkerTag;
-(function (MarkerTag) {
-    MarkerTag[MarkerTag["Unnecessary"] = 1] = "Unnecessary";
-})(MarkerTag = exports.MarkerTag || (exports.MarkerTag = {}));
-var ParameterInformation = /** @class */ (function () {
-    function ParameterInformation(label, documentation) {
-        this.label = label;
-        this.documentation = documentation;
-    }
-    return ParameterInformation;
-}());
-exports.ParameterInformation = ParameterInformation;
-var SignatureInformation = /** @class */ (function () {
-    function SignatureInformation(label, documentation) {
-        this.label = label;
-        this.documentation = documentation;
-        this.parameters = [];
-    }
-    return SignatureInformation;
-}());
-exports.SignatureInformation = SignatureInformation;
-var SignatureHelpTriggerKind;
-(function (SignatureHelpTriggerKind) {
-    SignatureHelpTriggerKind[SignatureHelpTriggerKind["Invoke"] = 1] = "Invoke";
-    SignatureHelpTriggerKind[SignatureHelpTriggerKind["TriggerCharacter"] = 2] = "TriggerCharacter";
-    SignatureHelpTriggerKind[SignatureHelpTriggerKind["ContentChange"] = 3] = "ContentChange";
-})(SignatureHelpTriggerKind = exports.SignatureHelpTriggerKind || (exports.SignatureHelpTriggerKind = {}));
-var SignatureHelp = /** @class */ (function () {
-    function SignatureHelp() {
-        this.signatures = [];
-    }
-    return SignatureHelp;
-}());
-exports.SignatureHelp = SignatureHelp;
-var Hover = /** @class */ (function () {
-    function Hover(contents, range) {
-        if (!contents) {
-            errors_1.illegalArgument('contents must be defined');
-        }
-        if (Array.isArray(contents)) {
-            this.contents = contents;
-        }
-        else if (markdown_string_1.isMarkdownString(contents)) {
-            this.contents = [contents];
-        }
-        else {
-            this.contents = [contents];
-        }
-        this.range = range;
-    }
-    return Hover;
-}());
-exports.Hover = Hover;
-var DocumentHighlightKind;
-(function (DocumentHighlightKind) {
-    DocumentHighlightKind[DocumentHighlightKind["Text"] = 0] = "Text";
-    DocumentHighlightKind[DocumentHighlightKind["Read"] = 1] = "Read";
-    DocumentHighlightKind[DocumentHighlightKind["Write"] = 2] = "Write";
-})(DocumentHighlightKind = exports.DocumentHighlightKind || (exports.DocumentHighlightKind = {}));
-var DocumentHighlight = /** @class */ (function () {
-    function DocumentHighlight(range, kind) {
-        this.range = range;
-        this.kind = kind;
-    }
-    return DocumentHighlight;
-}());
-exports.DocumentHighlight = DocumentHighlight;
-var DocumentLink = /** @class */ (function () {
-    function DocumentLink(range, target) {
-        if (target && !(target instanceof vscode_uri_1.URI)) {
-            throw errors_1.illegalArgument('target');
-        }
-        if (!Range.isRange(range) || range.isEmpty) {
-            throw errors_1.illegalArgument('range');
-        }
-        this.range = range;
-        this.target = target;
-    }
-    return DocumentLink;
-}());
-exports.DocumentLink = DocumentLink;
-var CodeLens = /** @class */ (function () {
-    function CodeLens(range, command) {
-        this.range = range;
-        this.command = command;
-    }
-    Object.defineProperty(CodeLens.prototype, "isResolved", {
-        get: function () {
-            return !!this.command;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    return CodeLens;
-}());
-exports.CodeLens = CodeLens;
-var CodeActionTrigger;
-(function (CodeActionTrigger) {
-    CodeActionTrigger[CodeActionTrigger["Automatic"] = 1] = "Automatic";
-    CodeActionTrigger[CodeActionTrigger["Manual"] = 2] = "Manual";
-})(CodeActionTrigger = exports.CodeActionTrigger || (exports.CodeActionTrigger = {}));
-var CodeActionKind = /** @class */ (function () {
-    function CodeActionKind(value) {
-        this.value = value;
-    }
-    CodeActionKind.prototype.append = function (parts) {
-        return new CodeActionKind(this.value ? this.value + CodeActionKind.sep + parts : parts);
-    };
-    CodeActionKind.prototype.contains = function (other) {
-        return this.value === other.value || strings_1.startsWithIgnoreCase(other.value, this.value + CodeActionKind.sep);
-    };
-    CodeActionKind.prototype.intersects = function (other) {
-        return this.contains(other) || other.contains(this);
-    };
-    CodeActionKind.sep = '.';
-    CodeActionKind.Empty = new CodeActionKind('');
-    CodeActionKind.QuickFix = CodeActionKind.Empty.append('quickfix');
-    CodeActionKind.Refactor = CodeActionKind.Empty.append('refactor');
-    CodeActionKind.RefactorExtract = CodeActionKind.Refactor.append('extract');
-    CodeActionKind.RefactorInline = CodeActionKind.Refactor.append('inline');
-    CodeActionKind.RefactorRewrite = CodeActionKind.Refactor.append('rewrite');
-    CodeActionKind.Source = CodeActionKind.Empty.append('source');
-    CodeActionKind.SourceOrganizeImports = CodeActionKind.Source.append('organizeImports');
-    CodeActionKind.SourceFixAll = CodeActionKind.Source.append('fixAll');
-    return CodeActionKind;
-}());
-exports.CodeActionKind = CodeActionKind;
-var TextDocumentSaveReason;
-(function (TextDocumentSaveReason) {
-    TextDocumentSaveReason[TextDocumentSaveReason["Manual"] = 1] = "Manual";
-    TextDocumentSaveReason[TextDocumentSaveReason["AfterDelay"] = 2] = "AfterDelay";
-    TextDocumentSaveReason[TextDocumentSaveReason["FocusOut"] = 3] = "FocusOut";
-})(TextDocumentSaveReason = exports.TextDocumentSaveReason || (exports.TextDocumentSaveReason = {}));
-var CodeAction = /** @class */ (function () {
-    function CodeAction(title, kind) {
-        this.title = title;
-        this.kind = kind;
-    }
-    return CodeAction;
-}());
-exports.CodeAction = CodeAction;
-var WorkspaceEdit = /** @class */ (function () {
-    function WorkspaceEdit() {
-        this._edits = new Array();
-    }
-    WorkspaceEdit.prototype.renameFile = function (from, to, options) {
-        this._edits.push({ _type: 1, from: from, to: to, options: options });
-    };
-    WorkspaceEdit.prototype.createFile = function (uri, options) {
-        this._edits.push({ _type: 1, from: undefined, to: uri, options: options });
-    };
-    WorkspaceEdit.prototype.deleteFile = function (uri, options) {
-        this._edits.push({ _type: 1, from: uri, to: undefined, options: options });
-    };
-    WorkspaceEdit.prototype.replace = function (uri, range, newText) {
-        this._edits.push({ _type: 2, uri: uri, edit: new TextEdit(range, newText) });
-    };
-    WorkspaceEdit.prototype.insert = function (resource, position, newText) {
-        this.replace(resource, new Range(position, position), newText);
-    };
-    WorkspaceEdit.prototype.delete = function (resource, range) {
-        this.replace(resource, range, '');
-    };
-    WorkspaceEdit.prototype.has = function (uri) {
-        var e_4, _a;
-        try {
-            for (var _b = __values(this._edits), _c = _b.next(); !_c.done; _c = _b.next()) {
-                var edit = _c.value;
-                if (edit && edit._type === 2 && edit.uri.toString() === uri.toString()) {
-                    return true;
-                }
-            }
-        }
-        catch (e_4_1) { e_4 = { error: e_4_1 }; }
-        finally {
-            try {
-                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
-            }
-            finally { if (e_4) throw e_4.error; }
-        }
-        return false;
-    };
-    WorkspaceEdit.prototype.set = function (uri, edits) {
-        var e_5, _a;
-        if (!edits) {
-            // remove all text edits for `uri`
-            for (var i = 0; i < this._edits.length; i++) {
-                var element = this._edits[i];
-                if (element && element._type === 2 && element.uri.toString() === uri.toString()) {
-                    this._edits[i] = undefined;
-                }
-            }
-            this._edits = this._edits.filter(function (e) { return !!e; });
-        }
-        else {
-            try {
-                // append edit to the end
-                for (var edits_1 = __values(edits), edits_1_1 = edits_1.next(); !edits_1_1.done; edits_1_1 = edits_1.next()) {
-                    var edit = edits_1_1.value;
-                    if (edit) {
-                        this._edits.push({ _type: 2, uri: uri, edit: edit });
-                    }
-                }
-            }
-            catch (e_5_1) { e_5 = { error: e_5_1 }; }
-            finally {
-                try {
-                    if (edits_1_1 && !edits_1_1.done && (_a = edits_1.return)) _a.call(edits_1);
-                }
-                finally { if (e_5) throw e_5.error; }
-            }
-        }
-    };
-    WorkspaceEdit.prototype.get = function (uri) {
-        var e_6, _a;
-        var res = [];
-        try {
-            for (var _b = __values(this._edits), _c = _b.next(); !_c.done; _c = _b.next()) {
-                var candidate = _c.value;
-                if (candidate && candidate._type === 2 && candidate.uri.toString() === uri.toString()) {
-                    res.push(candidate.edit);
-                }
-            }
-        }
-        catch (e_6_1) { e_6 = { error: e_6_1 }; }
-        finally {
-            try {
-                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
-            }
-            finally { if (e_6) throw e_6.error; }
-        }
-        if (res.length === 0) {
-            return undefined;
-        }
-        return res;
-    };
-    WorkspaceEdit.prototype.entries = function () {
-        var e_7, _a;
-        var textEdits = new Map();
-        try {
-            for (var _b = __values(this._edits), _c = _b.next(); !_c.done; _c = _b.next()) {
-                var candidate = _c.value;
-                if (candidate && candidate._type === 2) {
-                    var textEdit = textEdits.get(candidate.uri.toString());
-                    if (!textEdit) {
-                        textEdit = [candidate.uri, []];
-                        textEdits.set(candidate.uri.toString(), textEdit);
-                    }
-                    textEdit[1].push(candidate.edit);
-                }
-            }
-        }
-        catch (e_7_1) { e_7 = { error: e_7_1 }; }
-        finally {
-            try {
-                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
-            }
-            finally { if (e_7) throw e_7.error; }
-        }
-        var result = [];
-        textEdits.forEach(function (v) { return result.push(v); });
-        return result;
-    };
-    WorkspaceEdit.prototype._allEntries = function () {
-        var e_8, _a;
-        var res = [];
-        try {
-            for (var _b = __values(this._edits), _c = _b.next(); !_c.done; _c = _b.next()) {
-                var edit = _c.value;
-                if (!edit) {
-                    continue;
-                }
-                if (edit._type === 1) {
-                    res.push([edit.from, edit.to, edit.options]);
-                }
-                else {
-                    res.push([edit.uri, [edit.edit]]);
-                }
-            }
-        }
-        catch (e_8_1) { e_8 = { error: e_8_1 }; }
-        finally {
-            try {
-                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
-            }
-            finally { if (e_8) throw e_8.error; }
-        }
-        return res;
-    };
-    Object.defineProperty(WorkspaceEdit.prototype, "size", {
-        get: function () {
-            return this.entries().length;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    WorkspaceEdit.prototype.toJSON = function () {
-        return this.entries();
-    };
-    return WorkspaceEdit;
-}());
-exports.WorkspaceEdit = WorkspaceEdit;
-var TreeItem = /** @class */ (function () {
-    function TreeItem(arg1, collapsibleState) {
-        if (collapsibleState === void 0) { collapsibleState = TreeItemCollapsibleState.None; }
-        this.collapsibleState = collapsibleState;
-        if (arg1 instanceof vscode_uri_1.URI) {
-            this.resourceUri = arg1;
-        }
-        else {
-            this.label = arg1;
-        }
-    }
-    return TreeItem;
-}());
-exports.TreeItem = TreeItem;
-var TreeItemCollapsibleState;
-(function (TreeItemCollapsibleState) {
-    TreeItemCollapsibleState[TreeItemCollapsibleState["None"] = 0] = "None";
-    TreeItemCollapsibleState[TreeItemCollapsibleState["Collapsed"] = 1] = "Collapsed";
-    TreeItemCollapsibleState[TreeItemCollapsibleState["Expanded"] = 2] = "Expanded";
-})(TreeItemCollapsibleState = exports.TreeItemCollapsibleState || (exports.TreeItemCollapsibleState = {}));
-var SymbolTag;
-(function (SymbolTag) {
-    SymbolTag[SymbolTag["Deprecated"] = 1] = "Deprecated";
-})(SymbolTag = exports.SymbolTag || (exports.SymbolTag = {}));
-var SymbolInformation = /** @class */ (function () {
-    function SymbolInformation(name, kind, rangeOrContainer, locationOrUri, containerName) {
-        this.name = name;
-        this.kind = kind;
-        this.containerName = containerName;
-        if (typeof rangeOrContainer === 'string') {
-            this.containerName = rangeOrContainer;
-        }
-        if (locationOrUri instanceof Location) {
-            this.location = locationOrUri;
-        }
-        else if (rangeOrContainer instanceof Range) {
-            this.location = new Location(locationOrUri, rangeOrContainer);
-        }
-        SymbolInformation.validate(this);
-    }
-    SymbolInformation.validate = function (candidate) {
-        if (!candidate.name) {
-            throw new Error('Should provide a name inside candidate field');
-        }
-    };
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    SymbolInformation.prototype.toJSON = function () {
-        return {
-            name: this.name,
-            kind: plugin_api_rpc_model_1.SymbolKind[this.kind],
-            location: this.location,
-            containerName: this.containerName
-        };
-    };
-    return SymbolInformation;
-}());
-exports.SymbolInformation = SymbolInformation;
-var DocumentSymbol = /** @class */ (function () {
-    function DocumentSymbol(name, detail, kind, range, selectionRange) {
-        this.name = name;
-        this.detail = detail;
-        this.kind = kind;
-        this.range = range;
-        this.selectionRange = selectionRange;
-        this.children = [];
-        DocumentSymbol.validate(this);
-    }
-    DocumentSymbol.validate = function (candidate) {
-        if (!candidate.name) {
-            throw new Error('Should provide a name inside candidate field');
-        }
-        if (!candidate.range.contains(candidate.selectionRange)) {
-            throw new Error('selectionRange must be contained in fullRange');
-        }
-        if (candidate.children) {
-            candidate.children.forEach(DocumentSymbol.validate);
-        }
-    };
-    return DocumentSymbol;
-}());
-exports.DocumentSymbol = DocumentSymbol;
-var FileChangeType;
-(function (FileChangeType) {
-    FileChangeType[FileChangeType["Changed"] = 1] = "Changed";
-    FileChangeType[FileChangeType["Created"] = 2] = "Created";
-    FileChangeType[FileChangeType["Deleted"] = 3] = "Deleted";
-})(FileChangeType = exports.FileChangeType || (exports.FileChangeType = {}));
-var CommentThreadCollapsibleState;
-(function (CommentThreadCollapsibleState) {
-    CommentThreadCollapsibleState[CommentThreadCollapsibleState["Collapsed"] = 0] = "Collapsed";
-    CommentThreadCollapsibleState[CommentThreadCollapsibleState["Expanded"] = 1] = "Expanded";
-})(CommentThreadCollapsibleState = exports.CommentThreadCollapsibleState || (exports.CommentThreadCollapsibleState = {}));
-var QuickInputButtons = /** @class */ (function () {
-    function QuickInputButtons() {
-    }
-    QuickInputButtons.Back = {
-        iconPath: {
-            id: 'Back'
-        },
-        tooltip: 'Back'
-    };
-    return QuickInputButtons;
-}());
-exports.QuickInputButtons = QuickInputButtons;
-var CommentMode;
-(function (CommentMode) {
-    CommentMode[CommentMode["Editing"] = 0] = "Editing";
-    CommentMode[CommentMode["Preview"] = 1] = "Preview";
-})(CommentMode = exports.CommentMode || (exports.CommentMode = {}));
-var FileSystemError = /** @class */ (function (_super) {
-    __extends(FileSystemError, _super);
-    function FileSystemError(uriOrMessage, code, terminator) {
-        var _this = _super.call(this, vscode_uri_1.URI.isUri(uriOrMessage) ? uriOrMessage.toString(true) : uriOrMessage) || this;
-        _this.name = code ? code + " (FileSystemError)" : 'FileSystemError';
-        if (typeof Object.setPrototypeOf === 'function') {
-            Object.setPrototypeOf(_this, FileSystemError.prototype);
-        }
-        if (typeof Error.captureStackTrace === 'function' && typeof terminator === 'function') {
-            Error.captureStackTrace(_this, terminator);
-        }
-        return _this;
-    }
-    FileSystemError.FileExists = function (messageOrUri) {
-        return new FileSystemError(messageOrUri, 'EntryExists', FileSystemError.FileExists);
-    };
-    FileSystemError.FileNotFound = function (messageOrUri) {
-        return new FileSystemError(messageOrUri, 'EntryNotFound', FileSystemError.FileNotFound);
-    };
-    FileSystemError.FileNotADirectory = function (messageOrUri) {
-        return new FileSystemError(messageOrUri, 'EntryNotADirectory', FileSystemError.FileNotADirectory);
-    };
-    FileSystemError.FileIsADirectory = function (messageOrUri) {
-        return new FileSystemError(messageOrUri, 'EntryIsADirectory', FileSystemError.FileIsADirectory);
-    };
-    FileSystemError.NoPermissions = function (messageOrUri) {
-        return new FileSystemError(messageOrUri, 'NoPermissions', FileSystemError.NoPermissions);
-    };
-    FileSystemError.Unavailable = function (messageOrUri) {
-        return new FileSystemError(messageOrUri, 'Unavailable', FileSystemError.Unavailable);
-    };
-    return FileSystemError;
-}(Error));
-exports.FileSystemError = FileSystemError;
-var FileType;
-(function (FileType) {
-    FileType[FileType["Unknown"] = 0] = "Unknown";
-    FileType[FileType["File"] = 1] = "File";
-    FileType[FileType["Directory"] = 2] = "Directory";
-    FileType[FileType["SymbolicLink"] = 64] = "SymbolicLink";
-})(FileType = exports.FileType || (exports.FileType = {}));
-var ProgressOptions = /** @class */ (function () {
-    function ProgressOptions(location, title, cancellable) {
-        this.location = location;
-    }
-    return ProgressOptions;
-}());
-exports.ProgressOptions = ProgressOptions;
-var Progress = /** @class */ (function () {
-    function Progress() {
-    }
-    /**
-     * Report a progress update.
-     * @param value A progress item, like a message and/or an
-     * report on how much work finished
-     */
-    Progress.prototype.report = function (value) {
-    };
-    return Progress;
-}());
-exports.Progress = Progress;
-var ProgressLocation;
-(function (ProgressLocation) {
-    /**
-     * Show progress for the source control viewlet, as overlay for the icon and as progress bar
-     * inside the viewlet (when visible). Neither supports cancellation nor discrete progress.
-     */
-    ProgressLocation[ProgressLocation["SourceControl"] = 1] = "SourceControl";
-    /**
-     * Show progress in the status bar of the editor. Neither supports cancellation nor discrete progress.
-     */
-    ProgressLocation[ProgressLocation["Window"] = 10] = "Window";
-    /**
-     * Show progress as notification with an optional cancel button. Supports to show infinite and discrete progress.
-     */
-    ProgressLocation[ProgressLocation["Notification"] = 15] = "Notification";
-})(ProgressLocation = exports.ProgressLocation || (exports.ProgressLocation = {}));
-var ProcessExecution = /** @class */ (function () {
-    function ProcessExecution(process, varg1, varg2) {
-        if (typeof process !== 'string') {
-            throw errors_1.illegalArgument('process');
-        }
-        this.executionProcess = process;
-        if (varg1 !== undefined) {
-            if (Array.isArray(varg1)) {
-                this.arguments = varg1;
-                this.executionOptions = varg2;
-            }
-            else {
-                this.executionOptions = varg1;
-            }
-        }
-        if (this.arguments === undefined) {
-            this.arguments = [];
-        }
-    }
-    Object.defineProperty(ProcessExecution.prototype, "process", {
-        get: function () {
-            return this.executionProcess;
-        },
-        set: function (value) {
-            if (typeof value !== 'string') {
-                throw errors_1.illegalArgument('process');
-            }
-            this.executionProcess = value;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(ProcessExecution.prototype, "args", {
-        get: function () {
-            return this.arguments;
-        },
-        set: function (value) {
-            if (!Array.isArray(value)) {
-                value = [];
-            }
-            this.arguments = value;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(ProcessExecution.prototype, "options", {
-        get: function () {
-            return this.executionOptions;
-        },
-        set: function (value) {
-            this.executionOptions = value;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    ProcessExecution.prototype.computeId = function () {
-        var e_9, _a;
-        var hash = crypto.createHash('md5');
-        hash.update('process');
-        if (this.executionProcess !== undefined) {
-            hash.update(this.executionProcess);
-        }
-        if (this.arguments && this.arguments.length > 0) {
-            try {
-                for (var _b = __values(this.arguments), _c = _b.next(); !_c.done; _c = _b.next()) {
-                    var arg = _c.value;
-                    hash.update(arg);
-                }
-            }
-            catch (e_9_1) { e_9 = { error: e_9_1 }; }
-            finally {
-                try {
-                    if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
-                }
-                finally { if (e_9) throw e_9.error; }
-            }
-        }
-        return hash.digest('hex');
-    };
-    ProcessExecution.is = function (value) {
-        var candidate = value;
-        return candidate && !!candidate.process;
-    };
-    return ProcessExecution;
-}());
-exports.ProcessExecution = ProcessExecution;
-var ShellQuoting;
-(function (ShellQuoting) {
-    ShellQuoting[ShellQuoting["Escape"] = 1] = "Escape";
-    ShellQuoting[ShellQuoting["Strong"] = 2] = "Strong";
-    ShellQuoting[ShellQuoting["Weak"] = 3] = "Weak";
-})(ShellQuoting = exports.ShellQuoting || (exports.ShellQuoting = {}));
-var TaskPanelKind;
-(function (TaskPanelKind) {
-    TaskPanelKind[TaskPanelKind["Shared"] = 1] = "Shared";
-    TaskPanelKind[TaskPanelKind["Dedicated"] = 2] = "Dedicated";
-    TaskPanelKind[TaskPanelKind["New"] = 3] = "New";
-})(TaskPanelKind = exports.TaskPanelKind || (exports.TaskPanelKind = {}));
-var TaskRevealKind;
-(function (TaskRevealKind) {
-    TaskRevealKind[TaskRevealKind["Always"] = 1] = "Always";
-    TaskRevealKind[TaskRevealKind["Silent"] = 2] = "Silent";
-    TaskRevealKind[TaskRevealKind["Never"] = 3] = "Never";
-})(TaskRevealKind = exports.TaskRevealKind || (exports.TaskRevealKind = {}));
-var ShellExecution = /** @class */ (function () {
-    function ShellExecution(arg0, arg1, arg2) {
-        if (Array.isArray(arg1) || typeof arg1 === 'string') {
-            if (!arg0) {
-                throw errors_1.illegalArgument('command can\'t be undefined or null');
-            }
-            if (typeof arg0 !== 'string' && typeof arg0.value !== 'string') {
-                throw errors_1.illegalArgument('command');
-            }
-            this.shellCommand = arg0;
-            this.arguments = arg1;
-            this.shellOptions = arg2;
-        }
-        else {
-            if (typeof arg0 !== 'string') {
-                throw errors_1.illegalArgument('commandLine');
-            }
-            this.shellCommandLine = arg0;
-            this.shellOptions = arg1;
-        }
-    }
-    Object.defineProperty(ShellExecution.prototype, "commandLine", {
-        get: function () {
-            return this.shellCommandLine;
-        },
-        set: function (value) {
-            if (typeof value !== 'string') {
-                throw errors_1.illegalArgument('commandLine');
-            }
-            this.shellCommandLine = value;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(ShellExecution.prototype, "command", {
-        get: function () {
-            return this.shellCommand;
-        },
-        set: function (value) {
-            if (typeof value !== 'string' && typeof value.value !== 'string') {
-                throw errors_1.illegalArgument('command');
-            }
-            this.shellCommand = value;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(ShellExecution.prototype, "args", {
-        get: function () {
-            return this.arguments;
-        },
-        set: function (value) {
-            this.arguments = value || [];
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(ShellExecution.prototype, "options", {
-        get: function () {
-            return this.shellOptions;
-        },
-        set: function (value) {
-            this.shellOptions = value;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    ShellExecution.prototype.computeId = function () {
-        var e_10, _a;
-        var hash = crypto.createHash('md5');
-        hash.update('shell');
-        if (this.shellCommandLine !== undefined) {
-            hash.update(this.shellCommandLine);
-        }
-        if (this.shellCommand !== undefined) {
-            hash.update(typeof this.shellCommand === 'string' ? this.shellCommand : this.shellCommand.value);
-        }
-        if (this.arguments && this.arguments.length > 0) {
-            try {
-                for (var _b = __values(this.arguments), _c = _b.next(); !_c.done; _c = _b.next()) {
-                    var arg = _c.value;
-                    hash.update(typeof arg === 'string' ? arg : arg.value);
-                }
-            }
-            catch (e_10_1) { e_10 = { error: e_10_1 }; }
-            finally {
-                try {
-                    if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
-                }
-                finally { if (e_10) throw e_10.error; }
-            }
-        }
-        return hash.digest('hex');
-    };
-    ShellExecution.is = function (value) {
-        var candidate = value;
-        return candidate && (!!candidate.commandLine || !!candidate.command);
-    };
-    return ShellExecution;
-}());
-exports.ShellExecution = ShellExecution;
-var TaskGroup = /** @class */ (function () {
-    function TaskGroup(id, label) {
-        if (typeof id !== 'string') {
-            throw errors_1.illegalArgument('id');
-        }
-        if (typeof label !== 'string') {
-            throw errors_1.illegalArgument('name');
-        }
-        this.groupId = id;
-    }
-    TaskGroup.from = function (value) {
-        switch (value) {
-            case 'clean':
-                return TaskGroup.Clean;
-            case 'build':
-                return TaskGroup.Build;
-            case 'rebuild':
-                return TaskGroup.Rebuild;
-            case 'test':
-                return TaskGroup.Test;
-            default:
-                return undefined;
-        }
-    };
-    Object.defineProperty(TaskGroup.prototype, "id", {
-        get: function () {
-            return this.groupId;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    TaskGroup.Clean = new TaskGroup('clean', 'Clean');
-    TaskGroup.Build = new TaskGroup('build', 'Build');
-    TaskGroup.Rebuild = new TaskGroup('rebuild', 'Rebuild');
-    TaskGroup.Test = new TaskGroup('test', 'Test');
-    return TaskGroup;
-}());
-exports.TaskGroup = TaskGroup;
-var TaskScope;
-(function (TaskScope) {
-    TaskScope[TaskScope["Global"] = 1] = "Global";
-    TaskScope[TaskScope["Workspace"] = 2] = "Workspace";
-})(TaskScope = exports.TaskScope || (exports.TaskScope = {}));
-var Task = /** @class */ (function () {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    function Task() {
-        var _a, _b;
-        var args = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            args[_i] = arguments[_i];
-        }
-        var taskDefinition;
-        var scope;
-        var name;
-        var source;
-        var execution;
-        var problemMatchers;
-        if (typeof args[1] === 'string') {
-            _a = __read(args, 5), taskDefinition = _a[0], name = _a[1], source = _a[2], execution = _a[3], problemMatchers = _a[4];
-        }
-        else {
-            _b = __read(args, 6), taskDefinition = _b[0], scope = _b[1], name = _b[2], source = _b[3], execution = _b[4], problemMatchers = _b[5];
-        }
-        this.definition = taskDefinition;
-        this.scope = scope;
-        this.name = name;
-        this.source = source;
-        this.execution = execution;
-        if (typeof problemMatchers === 'string') {
-            this.taskProblemMatchers = [problemMatchers];
-            this.hasTaskProblemMatchers = true;
-        }
-        else if (Array.isArray(problemMatchers)) {
-            this.taskProblemMatchers = problemMatchers;
-            this.hasTaskProblemMatchers = true;
-        }
-        else {
-            this.taskProblemMatchers = [];
-            this.hasTaskProblemMatchers = false;
-        }
-        this.isTaskBackground = false;
-    }
-    Object.defineProperty(Task.prototype, "definition", {
-        get: function () {
-            return this.taskDefinition;
-        },
-        set: function (value) {
-            if (value === undefined || value === null) {
-                throw errors_1.illegalArgument('Kind can\'t be undefined or null');
-            }
-            this.taskDefinition = value;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Task.prototype, "scope", {
-        get: function () {
-            return this.taskScope;
-        },
-        set: function (value) {
-            if (value === null) {
-                value = undefined;
-            }
-            this.taskScope = value;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Task.prototype, "name", {
-        get: function () {
-            return this.taskName;
-        },
-        set: function (value) {
-            if (typeof value !== 'string') {
-                throw errors_1.illegalArgument('name');
-            }
-            this.taskName = value;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Task.prototype, "execution", {
-        get: function () {
-            return this.taskExecution;
-        },
-        set: function (value) {
-            if (value === null) {
-                value = undefined;
-            }
-            this.taskExecution = value;
-            this.updateDefinitionBasedOnExecution();
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Task.prototype, "problemMatchers", {
-        get: function () {
-            return this.taskProblemMatchers;
-        },
-        set: function (value) {
-            if (!Array.isArray(value)) {
-                this.taskProblemMatchers = [];
-                this.hasTaskProblemMatchers = false;
-                return;
-            }
-            this.taskProblemMatchers = value;
-            this.hasTaskProblemMatchers = true;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Task.prototype, "hasProblemMatchers", {
-        get: function () {
-            return this.hasTaskProblemMatchers;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Task.prototype, "isBackground", {
-        get: function () {
-            return this.isTaskBackground;
-        },
-        set: function (value) {
-            if (value !== true && value !== false) {
-                value = false;
-            }
-            this.isTaskBackground = value;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Task.prototype, "source", {
-        get: function () {
-            return this.taskSource;
-        },
-        set: function (value) {
-            if (typeof value !== 'string' || value.length === 0) {
-                throw errors_1.illegalArgument('source must be a string of length > 0');
-            }
-            this.taskSource = value;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Task.prototype, "group", {
-        get: function () {
-            return this.taskGroup;
-        },
-        set: function (value) {
-            if (value === undefined || value === null) {
-                this.taskGroup = undefined;
-                return;
-            }
-            this.taskGroup = value;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Task.prototype, "presentationOptions", {
-        get: function () {
-            return this.taskPresentationOptions;
-        },
-        set: function (value) {
-            if (value === null) {
-                value = undefined;
-            }
-            this.taskPresentationOptions = value;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Task.prototype.updateDefinitionBasedOnExecution = function () {
-        if (this.taskExecution instanceof ProcessExecution) {
-            Object.assign(this.taskDefinition, {
-                type: 'process',
-                id: this.taskExecution.computeId(),
-                taskType: this.taskDefinition.type
-            });
-        }
-        else if (this.taskExecution instanceof ShellExecution) {
-            Object.assign(this.taskDefinition, {
-                type: 'shell',
-                id: this.taskExecution.computeId(),
-                taskType: this.taskDefinition.type
-            });
-        }
-    };
-    return Task;
-}());
-exports.Task = Task;
-var DebugAdapterExecutable = /** @class */ (function () {
-    /**
-     * Creates a description for a debug adapter based on an executable program.
-     *
-     * @param command The command or executable path that implements the debug adapter.
-     * @param args Optional arguments to be passed to the command or executable.
-     * @param options Optional options to be used when starting the command or executable.
-     */
-    function DebugAdapterExecutable(command, args, options) {
-        this.command = command;
-        this.args = args;
-        this.options = options;
-    }
-    return DebugAdapterExecutable;
-}());
-exports.DebugAdapterExecutable = DebugAdapterExecutable;
-/**
- * Represents a debug adapter running as a socket based server.
- */
-var DebugAdapterServer = /** @class */ (function () {
-    /**
-     * Create a description for a debug adapter running as a socket based server.
-     */
-    function DebugAdapterServer(port, host) {
-        this.port = port;
-        this.host = host;
-    }
-    return DebugAdapterServer;
-}());
-exports.DebugAdapterServer = DebugAdapterServer;
-var LogLevel;
-(function (LogLevel) {
-    LogLevel[LogLevel["Trace"] = 1] = "Trace";
-    LogLevel[LogLevel["Debug"] = 2] = "Debug";
-    LogLevel[LogLevel["Info"] = 3] = "Info";
-    LogLevel[LogLevel["Warning"] = 4] = "Warning";
-    LogLevel[LogLevel["Error"] = 5] = "Error";
-    LogLevel[LogLevel["Critical"] = 6] = "Critical";
-    LogLevel[LogLevel["Off"] = 7] = "Off";
-})(LogLevel = exports.LogLevel || (exports.LogLevel = {}));
-/**
- * The base class of all breakpoint types.
- */
-var Breakpoint = /** @class */ (function () {
-    function Breakpoint(enabled, condition, hitCondition, logMessage) {
-        this.enabled = enabled || false;
-        this.condition = condition;
-        this.hitCondition = hitCondition;
-        this.logMessage = logMessage;
-    }
-    Object.defineProperty(Breakpoint.prototype, "id", {
-        /**
-         * The unique ID of the breakpoint.
-         */
-        get: function () {
-            if (!this._id) {
-                this._id = uuid_1.UUID.uuid4();
-            }
-            return this._id;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    return Breakpoint;
-}());
-exports.Breakpoint = Breakpoint;
-/**
- * A breakpoint specified by a source location.
- */
-var SourceBreakpoint = /** @class */ (function (_super) {
-    __extends(SourceBreakpoint, _super);
-    /**
-     * Create a new breakpoint for a source location.
-     */
-    function SourceBreakpoint(location, enabled, condition, hitCondition, logMessage) {
-        var _this = _super.call(this, enabled, condition, hitCondition, logMessage) || this;
-        _this.location = location;
-        return _this;
-    }
-    return SourceBreakpoint;
-}(Breakpoint));
-exports.SourceBreakpoint = SourceBreakpoint;
-/**
- * A breakpoint specified by a function name.
- */
-var FunctionBreakpoint = /** @class */ (function (_super) {
-    __extends(FunctionBreakpoint, _super);
-    /**
-     * Create a new function breakpoint.
-     */
-    function FunctionBreakpoint(functionName, enabled, condition, hitCondition, logMessage) {
-        var _this = _super.call(this, enabled, condition, hitCondition, logMessage) || this;
-        _this.functionName = functionName;
-        return _this;
-    }
-    return FunctionBreakpoint;
-}(Breakpoint));
-exports.FunctionBreakpoint = FunctionBreakpoint;
-var Color = /** @class */ (function () {
-    function Color(red, green, blue, alpha) {
-        this.red = red;
-        this.green = green;
-        this.blue = blue;
-        this.alpha = alpha;
-    }
-    return Color;
-}());
-exports.Color = Color;
-var ColorInformation = /** @class */ (function () {
-    function ColorInformation(range, color) {
-        if (color && !(color instanceof Color)) {
-            throw errors_1.illegalArgument('color');
-        }
-        if (!Range.isRange(range)) {
-            throw errors_1.illegalArgument('range');
-        }
-        this.range = range;
-        this.color = color;
-    }
-    return ColorInformation;
-}());
-exports.ColorInformation = ColorInformation;
-var ColorPresentation = /** @class */ (function () {
-    function ColorPresentation(label) {
-        if (!label || typeof label !== 'string') {
-            throw errors_1.illegalArgument('label');
-        }
-        this.label = label;
-    }
-    return ColorPresentation;
-}());
-exports.ColorPresentation = ColorPresentation;
-var ColorFormat;
-(function (ColorFormat) {
-    ColorFormat[ColorFormat["RGB"] = 0] = "RGB";
-    ColorFormat[ColorFormat["HEX"] = 1] = "HEX";
-    ColorFormat[ColorFormat["HSL"] = 2] = "HSL";
-})(ColorFormat = exports.ColorFormat || (exports.ColorFormat = {}));
-var FoldingRange = /** @class */ (function () {
-    function FoldingRange(start, end, kind) {
-        this.start = start;
-        this.end = end;
-        this.kind = kind;
-    }
-    return FoldingRange;
-}());
-exports.FoldingRange = FoldingRange;
-var FoldingRangeKind;
-(function (FoldingRangeKind) {
-    FoldingRangeKind[FoldingRangeKind["Comment"] = 1] = "Comment";
-    FoldingRangeKind[FoldingRangeKind["Imports"] = 2] = "Imports";
-    FoldingRangeKind[FoldingRangeKind["Region"] = 3] = "Region";
-})(FoldingRangeKind = exports.FoldingRangeKind || (exports.FoldingRangeKind = {}));
-var SelectionRange = /** @class */ (function () {
-    function SelectionRange(range, parent) {
-        this.range = range;
-        this.parent = parent;
-        if (parent && !parent.range.contains(this.range)) {
-            throw new Error('Invalid argument: parent must contain this range');
-        }
-    }
-    return SelectionRange;
-}());
-exports.SelectionRange = SelectionRange;
-/**
- * Enumeration of the supported operating systems.
- */
-var OperatingSystem;
-(function (OperatingSystem) {
-    OperatingSystem["Windows"] = "Windows";
-    OperatingSystem["Linux"] = "Linux";
-    OperatingSystem["OSX"] = "OSX";
-})(OperatingSystem = exports.OperatingSystem || (exports.OperatingSystem = {}));
-/** The areas of the application shell where webview panel can reside. */
-var WebviewPanelTargetArea;
-(function (WebviewPanelTargetArea) {
-    WebviewPanelTargetArea["Main"] = "main";
-    WebviewPanelTargetArea["Left"] = "left";
-    WebviewPanelTargetArea["Right"] = "right";
-    WebviewPanelTargetArea["Bottom"] = "bottom";
-})(WebviewPanelTargetArea = exports.WebviewPanelTargetArea || (exports.WebviewPanelTargetArea = {}));
-var CallHierarchyItem = /** @class */ (function () {
-    function CallHierarchyItem(kind, name, detail, uri, range, selectionRange) {
-        this.kind = kind;
-        this.name = name;
-        this.detail = detail;
-        this.uri = uri;
-        this.range = range;
-        this.selectionRange = selectionRange;
-    }
-    CallHierarchyItem.isCallHierarchyItem = function (thing) {
-        if (thing instanceof CallHierarchyItem) {
-            return true;
-        }
-        if (!thing) {
-            return false;
-        }
-        return typeof thing.kind === 'number' &&
-            typeof thing.name === 'string' &&
-            vscode_uri_1.URI.isUri(thing.uri) &&
-            Range.isRange(thing.range) &&
-            Range.isRange(thing.selectionRange);
-    };
-    return CallHierarchyItem;
-}());
-exports.CallHierarchyItem = CallHierarchyItem;
-var CallHierarchyIncomingCall = /** @class */ (function () {
-    function CallHierarchyIncomingCall(item, fromRanges) {
-        this.fromRanges = fromRanges;
-        this.from = item;
-    }
-    return CallHierarchyIncomingCall;
-}());
-exports.CallHierarchyIncomingCall = CallHierarchyIncomingCall;
-var CallHierarchyOutgoingCall = /** @class */ (function () {
-    function CallHierarchyOutgoingCall(item, fromRanges) {
-        this.fromRanges = fromRanges;
-        this.to = item;
-    }
-    return CallHierarchyOutgoingCall;
-}());
-exports.CallHierarchyOutgoingCall = CallHierarchyOutgoingCall;
-
-
-/***/ }),
-
-/***/ "./node_modules/mime/Mime.js":
-/*!***********************************!*\
-  !*** ./node_modules/mime/Mime.js ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/**
- * @param typeMap [Object] Map of MIME type -> Array[extensions]
- * @param ...
- */
-function Mime() {
-  this._types = Object.create(null);
-  this._extensions = Object.create(null);
-
-  for (var i = 0; i < arguments.length; i++) {
-    this.define(arguments[i]);
-  }
-
-  this.define = this.define.bind(this);
-  this.getType = this.getType.bind(this);
-  this.getExtension = this.getExtension.bind(this);
-}
-
-/**
- * Define mimetype -> extension mappings.  Each key is a mime-type that maps
- * to an array of extensions associated with the type.  The first extension is
- * used as the default extension for the type.
- *
- * e.g. mime.define({'audio/ogg', ['oga', 'ogg', 'spx']});
- *
- * If a type declares an extension that has already been defined, an error will
- * be thrown.  To suppress this error and force the extension to be associated
- * with the new type, pass `force`=true.  Alternatively, you may prefix the
- * extension with "*" to map the type to extension, without mapping the
- * extension to the type.
- *
- * e.g. mime.define({'audio/wav', ['wav']}, {'audio/x-wav', ['*wav']});
- *
- *
- * @param map (Object) type definitions
- * @param force (Boolean) if true, force overriding of existing definitions
- */
-Mime.prototype.define = function(typeMap, force) {
-  for (var type in typeMap) {
-    var extensions = typeMap[type].map(function(t) {return t.toLowerCase()});
-    type = type.toLowerCase();
-
-    for (var i = 0; i < extensions.length; i++) {
-      var ext = extensions[i];
-
-      // '*' prefix = not the preferred type for this extension.  So fixup the
-      // extension, and skip it.
-      if (ext[0] == '*') {
-        continue;
-      }
-
-      if (!force && (ext in this._types)) {
-        throw new Error(
-          'Attempt to change mapping for "' + ext +
-          '" extension from "' + this._types[ext] + '" to "' + type +
-          '". Pass `force=true` to allow this, otherwise remove "' + ext +
-          '" from the list of extensions for "' + type + '".'
-        );
-      }
-
-      this._types[ext] = type;
-    }
-
-    // Use first extension as default
-    if (force || !this._extensions[type]) {
-      var ext = extensions[0];
-      this._extensions[type] = (ext[0] != '*') ? ext : ext.substr(1)
-    }
-  }
-};
-
-/**
- * Lookup a mime type based on extension
- */
-Mime.prototype.getType = function(path) {
-  path = String(path);
-  var last = path.replace(/^.*[/\\]/, '').toLowerCase();
-  var ext = last.replace(/^.*\./, '').toLowerCase();
-
-  var hasPath = last.length < path.length;
-  var hasDot = ext.length < last.length - 1;
-
-  return (hasDot || !hasPath) && this._types[ext] || null;
-};
-
-/**
- * Return file extension associated with a mime type
- */
-Mime.prototype.getExtension = function(type) {
-  type = /^\s*([^;\s]*)/.test(type) && RegExp.$1;
-  return type && this._extensions[type.toLowerCase()] || null;
-};
-
-module.exports = Mime;
-
-
-/***/ }),
-
-/***/ "./node_modules/mime/index.js":
-/*!************************************!*\
-  !*** ./node_modules/mime/index.js ***!
-  \************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var Mime = __webpack_require__(/*! ./Mime */ "./node_modules/mime/Mime.js");
-module.exports = new Mime(__webpack_require__(/*! ./types/standard */ "./node_modules/mime/types/standard.js"), __webpack_require__(/*! ./types/other */ "./node_modules/mime/types/other.js"));
-
-
-/***/ }),
-
-/***/ "./node_modules/mime/types/other.js":
+/***/ "./node_modules/yallist/iterator.js":
 /*!******************************************!*\
-  !*** ./node_modules/mime/types/other.js ***!
+  !*** ./node_modules/yallist/iterator.js ***!
   \******************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = {"application/prs.cww":["cww"],"application/vnd.1000minds.decision-model+xml":["1km"],"application/vnd.3gpp.pic-bw-large":["plb"],"application/vnd.3gpp.pic-bw-small":["psb"],"application/vnd.3gpp.pic-bw-var":["pvb"],"application/vnd.3gpp2.tcap":["tcap"],"application/vnd.3m.post-it-notes":["pwn"],"application/vnd.accpac.simply.aso":["aso"],"application/vnd.accpac.simply.imp":["imp"],"application/vnd.acucobol":["acu"],"application/vnd.acucorp":["atc","acutc"],"application/vnd.adobe.air-application-installer-package+zip":["air"],"application/vnd.adobe.formscentral.fcdt":["fcdt"],"application/vnd.adobe.fxp":["fxp","fxpl"],"application/vnd.adobe.xdp+xml":["xdp"],"application/vnd.adobe.xfdf":["xfdf"],"application/vnd.ahead.space":["ahead"],"application/vnd.airzip.filesecure.azf":["azf"],"application/vnd.airzip.filesecure.azs":["azs"],"application/vnd.amazon.ebook":["azw"],"application/vnd.americandynamics.acc":["acc"],"application/vnd.amiga.ami":["ami"],"application/vnd.android.package-archive":["apk"],"application/vnd.anser-web-certificate-issue-initiation":["cii"],"application/vnd.anser-web-funds-transfer-initiation":["fti"],"application/vnd.antix.game-component":["atx"],"application/vnd.apple.installer+xml":["mpkg"],"application/vnd.apple.keynote":["keynote"],"application/vnd.apple.mpegurl":["m3u8"],"application/vnd.apple.numbers":["numbers"],"application/vnd.apple.pages":["pages"],"application/vnd.apple.pkpass":["pkpass"],"application/vnd.aristanetworks.swi":["swi"],"application/vnd.astraea-software.iota":["iota"],"application/vnd.audiograph":["aep"],"application/vnd.balsamiq.bmml+xml":["bmml"],"application/vnd.blueice.multipass":["mpm"],"application/vnd.bmi":["bmi"],"application/vnd.businessobjects":["rep"],"application/vnd.chemdraw+xml":["cdxml"],"application/vnd.chipnuts.karaoke-mmd":["mmd"],"application/vnd.cinderella":["cdy"],"application/vnd.citationstyles.style+xml":["csl"],"application/vnd.claymore":["cla"],"application/vnd.cloanto.rp9":["rp9"],"application/vnd.clonk.c4group":["c4g","c4d","c4f","c4p","c4u"],"application/vnd.cluetrust.cartomobile-config":["c11amc"],"application/vnd.cluetrust.cartomobile-config-pkg":["c11amz"],"application/vnd.commonspace":["csp"],"application/vnd.contact.cmsg":["cdbcmsg"],"application/vnd.cosmocaller":["cmc"],"application/vnd.crick.clicker":["clkx"],"application/vnd.crick.clicker.keyboard":["clkk"],"application/vnd.crick.clicker.palette":["clkp"],"application/vnd.crick.clicker.template":["clkt"],"application/vnd.crick.clicker.wordbank":["clkw"],"application/vnd.criticaltools.wbs+xml":["wbs"],"application/vnd.ctc-posml":["pml"],"application/vnd.cups-ppd":["ppd"],"application/vnd.curl.car":["car"],"application/vnd.curl.pcurl":["pcurl"],"application/vnd.dart":["dart"],"application/vnd.data-vision.rdz":["rdz"],"application/vnd.dece.data":["uvf","uvvf","uvd","uvvd"],"application/vnd.dece.ttml+xml":["uvt","uvvt"],"application/vnd.dece.unspecified":["uvx","uvvx"],"application/vnd.dece.zip":["uvz","uvvz"],"application/vnd.denovo.fcselayout-link":["fe_launch"],"application/vnd.dna":["dna"],"application/vnd.dolby.mlp":["mlp"],"application/vnd.dpgraph":["dpg"],"application/vnd.dreamfactory":["dfac"],"application/vnd.ds-keypoint":["kpxx"],"application/vnd.dvb.ait":["ait"],"application/vnd.dvb.service":["svc"],"application/vnd.dynageo":["geo"],"application/vnd.ecowin.chart":["mag"],"application/vnd.enliven":["nml"],"application/vnd.epson.esf":["esf"],"application/vnd.epson.msf":["msf"],"application/vnd.epson.quickanime":["qam"],"application/vnd.epson.salt":["slt"],"application/vnd.epson.ssf":["ssf"],"application/vnd.eszigno3+xml":["es3","et3"],"application/vnd.ezpix-album":["ez2"],"application/vnd.ezpix-package":["ez3"],"application/vnd.fdf":["fdf"],"application/vnd.fdsn.mseed":["mseed"],"application/vnd.fdsn.seed":["seed","dataless"],"application/vnd.flographit":["gph"],"application/vnd.fluxtime.clip":["ftc"],"application/vnd.framemaker":["fm","frame","maker","book"],"application/vnd.frogans.fnc":["fnc"],"application/vnd.frogans.ltf":["ltf"],"application/vnd.fsc.weblaunch":["fsc"],"application/vnd.fujitsu.oasys":["oas"],"application/vnd.fujitsu.oasys2":["oa2"],"application/vnd.fujitsu.oasys3":["oa3"],"application/vnd.fujitsu.oasysgp":["fg5"],"application/vnd.fujitsu.oasysprs":["bh2"],"application/vnd.fujixerox.ddd":["ddd"],"application/vnd.fujixerox.docuworks":["xdw"],"application/vnd.fujixerox.docuworks.binder":["xbd"],"application/vnd.fuzzysheet":["fzs"],"application/vnd.genomatix.tuxedo":["txd"],"application/vnd.geogebra.file":["ggb"],"application/vnd.geogebra.tool":["ggt"],"application/vnd.geometry-explorer":["gex","gre"],"application/vnd.geonext":["gxt"],"application/vnd.geoplan":["g2w"],"application/vnd.geospace":["g3w"],"application/vnd.gmx":["gmx"],"application/vnd.google-apps.document":["gdoc"],"application/vnd.google-apps.presentation":["gslides"],"application/vnd.google-apps.spreadsheet":["gsheet"],"application/vnd.google-earth.kml+xml":["kml"],"application/vnd.google-earth.kmz":["kmz"],"application/vnd.grafeq":["gqf","gqs"],"application/vnd.groove-account":["gac"],"application/vnd.groove-help":["ghf"],"application/vnd.groove-identity-message":["gim"],"application/vnd.groove-injector":["grv"],"application/vnd.groove-tool-message":["gtm"],"application/vnd.groove-tool-template":["tpl"],"application/vnd.groove-vcard":["vcg"],"application/vnd.hal+xml":["hal"],"application/vnd.handheld-entertainment+xml":["zmm"],"application/vnd.hbci":["hbci"],"application/vnd.hhe.lesson-player":["les"],"application/vnd.hp-hpgl":["hpgl"],"application/vnd.hp-hpid":["hpid"],"application/vnd.hp-hps":["hps"],"application/vnd.hp-jlyt":["jlt"],"application/vnd.hp-pcl":["pcl"],"application/vnd.hp-pclxl":["pclxl"],"application/vnd.hydrostatix.sof-data":["sfd-hdstx"],"application/vnd.ibm.minipay":["mpy"],"application/vnd.ibm.modcap":["afp","listafp","list3820"],"application/vnd.ibm.rights-management":["irm"],"application/vnd.ibm.secure-container":["sc"],"application/vnd.iccprofile":["icc","icm"],"application/vnd.igloader":["igl"],"application/vnd.immervision-ivp":["ivp"],"application/vnd.immervision-ivu":["ivu"],"application/vnd.insors.igm":["igm"],"application/vnd.intercon.formnet":["xpw","xpx"],"application/vnd.intergeo":["i2g"],"application/vnd.intu.qbo":["qbo"],"application/vnd.intu.qfx":["qfx"],"application/vnd.ipunplugged.rcprofile":["rcprofile"],"application/vnd.irepository.package+xml":["irp"],"application/vnd.is-xpr":["xpr"],"application/vnd.isac.fcs":["fcs"],"application/vnd.jam":["jam"],"application/vnd.jcp.javame.midlet-rms":["rms"],"application/vnd.jisp":["jisp"],"application/vnd.joost.joda-archive":["joda"],"application/vnd.kahootz":["ktz","ktr"],"application/vnd.kde.karbon":["karbon"],"application/vnd.kde.kchart":["chrt"],"application/vnd.kde.kformula":["kfo"],"application/vnd.kde.kivio":["flw"],"application/vnd.kde.kontour":["kon"],"application/vnd.kde.kpresenter":["kpr","kpt"],"application/vnd.kde.kspread":["ksp"],"application/vnd.kde.kword":["kwd","kwt"],"application/vnd.kenameaapp":["htke"],"application/vnd.kidspiration":["kia"],"application/vnd.kinar":["kne","knp"],"application/vnd.koan":["skp","skd","skt","skm"],"application/vnd.kodak-descriptor":["sse"],"application/vnd.las.las+xml":["lasxml"],"application/vnd.llamagraphics.life-balance.desktop":["lbd"],"application/vnd.llamagraphics.life-balance.exchange+xml":["lbe"],"application/vnd.lotus-1-2-3":["123"],"application/vnd.lotus-approach":["apr"],"application/vnd.lotus-freelance":["pre"],"application/vnd.lotus-notes":["nsf"],"application/vnd.lotus-organizer":["org"],"application/vnd.lotus-screencam":["scm"],"application/vnd.lotus-wordpro":["lwp"],"application/vnd.macports.portpkg":["portpkg"],"application/vnd.mcd":["mcd"],"application/vnd.medcalcdata":["mc1"],"application/vnd.mediastation.cdkey":["cdkey"],"application/vnd.mfer":["mwf"],"application/vnd.mfmp":["mfm"],"application/vnd.micrografx.flo":["flo"],"application/vnd.micrografx.igx":["igx"],"application/vnd.mif":["mif"],"application/vnd.mobius.daf":["daf"],"application/vnd.mobius.dis":["dis"],"application/vnd.mobius.mbk":["mbk"],"application/vnd.mobius.mqy":["mqy"],"application/vnd.mobius.msl":["msl"],"application/vnd.mobius.plc":["plc"],"application/vnd.mobius.txf":["txf"],"application/vnd.mophun.application":["mpn"],"application/vnd.mophun.certificate":["mpc"],"application/vnd.mozilla.xul+xml":["xul"],"application/vnd.ms-artgalry":["cil"],"application/vnd.ms-cab-compressed":["cab"],"application/vnd.ms-excel":["xls","xlm","xla","xlc","xlt","xlw"],"application/vnd.ms-excel.addin.macroenabled.12":["xlam"],"application/vnd.ms-excel.sheet.binary.macroenabled.12":["xlsb"],"application/vnd.ms-excel.sheet.macroenabled.12":["xlsm"],"application/vnd.ms-excel.template.macroenabled.12":["xltm"],"application/vnd.ms-fontobject":["eot"],"application/vnd.ms-htmlhelp":["chm"],"application/vnd.ms-ims":["ims"],"application/vnd.ms-lrm":["lrm"],"application/vnd.ms-officetheme":["thmx"],"application/vnd.ms-outlook":["msg"],"application/vnd.ms-pki.seccat":["cat"],"application/vnd.ms-pki.stl":["*stl"],"application/vnd.ms-powerpoint":["ppt","pps","pot"],"application/vnd.ms-powerpoint.addin.macroenabled.12":["ppam"],"application/vnd.ms-powerpoint.presentation.macroenabled.12":["pptm"],"application/vnd.ms-powerpoint.slide.macroenabled.12":["sldm"],"application/vnd.ms-powerpoint.slideshow.macroenabled.12":["ppsm"],"application/vnd.ms-powerpoint.template.macroenabled.12":["potm"],"application/vnd.ms-project":["mpp","mpt"],"application/vnd.ms-word.document.macroenabled.12":["docm"],"application/vnd.ms-word.template.macroenabled.12":["dotm"],"application/vnd.ms-works":["wps","wks","wcm","wdb"],"application/vnd.ms-wpl":["wpl"],"application/vnd.ms-xpsdocument":["xps"],"application/vnd.mseq":["mseq"],"application/vnd.musician":["mus"],"application/vnd.muvee.style":["msty"],"application/vnd.mynfc":["taglet"],"application/vnd.neurolanguage.nlu":["nlu"],"application/vnd.nitf":["ntf","nitf"],"application/vnd.noblenet-directory":["nnd"],"application/vnd.noblenet-sealer":["nns"],"application/vnd.noblenet-web":["nnw"],"application/vnd.nokia.n-gage.ac+xml":["*ac"],"application/vnd.nokia.n-gage.data":["ngdat"],"application/vnd.nokia.n-gage.symbian.install":["n-gage"],"application/vnd.nokia.radio-preset":["rpst"],"application/vnd.nokia.radio-presets":["rpss"],"application/vnd.novadigm.edm":["edm"],"application/vnd.novadigm.edx":["edx"],"application/vnd.novadigm.ext":["ext"],"application/vnd.oasis.opendocument.chart":["odc"],"application/vnd.oasis.opendocument.chart-template":["otc"],"application/vnd.oasis.opendocument.database":["odb"],"application/vnd.oasis.opendocument.formula":["odf"],"application/vnd.oasis.opendocument.formula-template":["odft"],"application/vnd.oasis.opendocument.graphics":["odg"],"application/vnd.oasis.opendocument.graphics-template":["otg"],"application/vnd.oasis.opendocument.image":["odi"],"application/vnd.oasis.opendocument.image-template":["oti"],"application/vnd.oasis.opendocument.presentation":["odp"],"application/vnd.oasis.opendocument.presentation-template":["otp"],"application/vnd.oasis.opendocument.spreadsheet":["ods"],"application/vnd.oasis.opendocument.spreadsheet-template":["ots"],"application/vnd.oasis.opendocument.text":["odt"],"application/vnd.oasis.opendocument.text-master":["odm"],"application/vnd.oasis.opendocument.text-template":["ott"],"application/vnd.oasis.opendocument.text-web":["oth"],"application/vnd.olpc-sugar":["xo"],"application/vnd.oma.dd2+xml":["dd2"],"application/vnd.openblox.game+xml":["obgx"],"application/vnd.openofficeorg.extension":["oxt"],"application/vnd.openstreetmap.data+xml":["osm"],"application/vnd.openxmlformats-officedocument.presentationml.presentation":["pptx"],"application/vnd.openxmlformats-officedocument.presentationml.slide":["sldx"],"application/vnd.openxmlformats-officedocument.presentationml.slideshow":["ppsx"],"application/vnd.openxmlformats-officedocument.presentationml.template":["potx"],"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet":["xlsx"],"application/vnd.openxmlformats-officedocument.spreadsheetml.template":["xltx"],"application/vnd.openxmlformats-officedocument.wordprocessingml.document":["docx"],"application/vnd.openxmlformats-officedocument.wordprocessingml.template":["dotx"],"application/vnd.osgeo.mapguide.package":["mgp"],"application/vnd.osgi.dp":["dp"],"application/vnd.osgi.subsystem":["esa"],"application/vnd.palm":["pdb","pqa","oprc"],"application/vnd.pawaafile":["paw"],"application/vnd.pg.format":["str"],"application/vnd.pg.osasli":["ei6"],"application/vnd.picsel":["efif"],"application/vnd.pmi.widget":["wg"],"application/vnd.pocketlearn":["plf"],"application/vnd.powerbuilder6":["pbd"],"application/vnd.previewsystems.box":["box"],"application/vnd.proteus.magazine":["mgz"],"application/vnd.publishare-delta-tree":["qps"],"application/vnd.pvi.ptid1":["ptid"],"application/vnd.quark.quarkxpress":["qxd","qxt","qwd","qwt","qxl","qxb"],"application/vnd.realvnc.bed":["bed"],"application/vnd.recordare.musicxml":["mxl"],"application/vnd.recordare.musicxml+xml":["musicxml"],"application/vnd.rig.cryptonote":["cryptonote"],"application/vnd.rim.cod":["cod"],"application/vnd.rn-realmedia":["rm"],"application/vnd.rn-realmedia-vbr":["rmvb"],"application/vnd.route66.link66+xml":["link66"],"application/vnd.sailingtracker.track":["st"],"application/vnd.seemail":["see"],"application/vnd.sema":["sema"],"application/vnd.semd":["semd"],"application/vnd.semf":["semf"],"application/vnd.shana.informed.formdata":["ifm"],"application/vnd.shana.informed.formtemplate":["itp"],"application/vnd.shana.informed.interchange":["iif"],"application/vnd.shana.informed.package":["ipk"],"application/vnd.simtech-mindmapper":["twd","twds"],"application/vnd.smaf":["mmf"],"application/vnd.smart.teacher":["teacher"],"application/vnd.software602.filler.form+xml":["fo"],"application/vnd.solent.sdkm+xml":["sdkm","sdkd"],"application/vnd.spotfire.dxp":["dxp"],"application/vnd.spotfire.sfs":["sfs"],"application/vnd.stardivision.calc":["sdc"],"application/vnd.stardivision.draw":["sda"],"application/vnd.stardivision.impress":["sdd"],"application/vnd.stardivision.math":["smf"],"application/vnd.stardivision.writer":["sdw","vor"],"application/vnd.stardivision.writer-global":["sgl"],"application/vnd.stepmania.package":["smzip"],"application/vnd.stepmania.stepchart":["sm"],"application/vnd.sun.wadl+xml":["wadl"],"application/vnd.sun.xml.calc":["sxc"],"application/vnd.sun.xml.calc.template":["stc"],"application/vnd.sun.xml.draw":["sxd"],"application/vnd.sun.xml.draw.template":["std"],"application/vnd.sun.xml.impress":["sxi"],"application/vnd.sun.xml.impress.template":["sti"],"application/vnd.sun.xml.math":["sxm"],"application/vnd.sun.xml.writer":["sxw"],"application/vnd.sun.xml.writer.global":["sxg"],"application/vnd.sun.xml.writer.template":["stw"],"application/vnd.sus-calendar":["sus","susp"],"application/vnd.svd":["svd"],"application/vnd.symbian.install":["sis","sisx"],"application/vnd.syncml+xml":["xsm"],"application/vnd.syncml.dm+wbxml":["bdm"],"application/vnd.syncml.dm+xml":["xdm"],"application/vnd.syncml.dmddf+xml":["ddf"],"application/vnd.tao.intent-module-archive":["tao"],"application/vnd.tcpdump.pcap":["pcap","cap","dmp"],"application/vnd.tmobile-livetv":["tmo"],"application/vnd.trid.tpt":["tpt"],"application/vnd.triscape.mxs":["mxs"],"application/vnd.trueapp":["tra"],"application/vnd.ufdl":["ufd","ufdl"],"application/vnd.uiq.theme":["utz"],"application/vnd.umajin":["umj"],"application/vnd.unity":["unityweb"],"application/vnd.uoml+xml":["uoml"],"application/vnd.vcx":["vcx"],"application/vnd.visio":["vsd","vst","vss","vsw"],"application/vnd.visionary":["vis"],"application/vnd.vsf":["vsf"],"application/vnd.wap.wbxml":["wbxml"],"application/vnd.wap.wmlc":["wmlc"],"application/vnd.wap.wmlscriptc":["wmlsc"],"application/vnd.webturbo":["wtb"],"application/vnd.wolfram.player":["nbp"],"application/vnd.wordperfect":["wpd"],"application/vnd.wqd":["wqd"],"application/vnd.wt.stf":["stf"],"application/vnd.xara":["xar"],"application/vnd.xfdl":["xfdl"],"application/vnd.yamaha.hv-dic":["hvd"],"application/vnd.yamaha.hv-script":["hvs"],"application/vnd.yamaha.hv-voice":["hvp"],"application/vnd.yamaha.openscoreformat":["osf"],"application/vnd.yamaha.openscoreformat.osfpvg+xml":["osfpvg"],"application/vnd.yamaha.smaf-audio":["saf"],"application/vnd.yamaha.smaf-phrase":["spf"],"application/vnd.yellowriver-custom-menu":["cmp"],"application/vnd.zul":["zir","zirz"],"application/vnd.zzazz.deck+xml":["zaz"],"application/x-7z-compressed":["7z"],"application/x-abiword":["abw"],"application/x-ace-compressed":["ace"],"application/x-apple-diskimage":["*dmg"],"application/x-arj":["arj"],"application/x-authorware-bin":["aab","x32","u32","vox"],"application/x-authorware-map":["aam"],"application/x-authorware-seg":["aas"],"application/x-bcpio":["bcpio"],"application/x-bdoc":["*bdoc"],"application/x-bittorrent":["torrent"],"application/x-blorb":["blb","blorb"],"application/x-bzip":["bz"],"application/x-bzip2":["bz2","boz"],"application/x-cbr":["cbr","cba","cbt","cbz","cb7"],"application/x-cdlink":["vcd"],"application/x-cfs-compressed":["cfs"],"application/x-chat":["chat"],"application/x-chess-pgn":["pgn"],"application/x-chrome-extension":["crx"],"application/x-cocoa":["cco"],"application/x-conference":["nsc"],"application/x-cpio":["cpio"],"application/x-csh":["csh"],"application/x-debian-package":["*deb","udeb"],"application/x-dgc-compressed":["dgc"],"application/x-director":["dir","dcr","dxr","cst","cct","cxt","w3d","fgd","swa"],"application/x-doom":["wad"],"application/x-dtbncx+xml":["ncx"],"application/x-dtbook+xml":["dtb"],"application/x-dtbresource+xml":["res"],"application/x-dvi":["dvi"],"application/x-envoy":["evy"],"application/x-eva":["eva"],"application/x-font-bdf":["bdf"],"application/x-font-ghostscript":["gsf"],"application/x-font-linux-psf":["psf"],"application/x-font-pcf":["pcf"],"application/x-font-snf":["snf"],"application/x-font-type1":["pfa","pfb","pfm","afm"],"application/x-freearc":["arc"],"application/x-futuresplash":["spl"],"application/x-gca-compressed":["gca"],"application/x-glulx":["ulx"],"application/x-gnumeric":["gnumeric"],"application/x-gramps-xml":["gramps"],"application/x-gtar":["gtar"],"application/x-hdf":["hdf"],"application/x-httpd-php":["php"],"application/x-install-instructions":["install"],"application/x-iso9660-image":["*iso"],"application/x-java-archive-diff":["jardiff"],"application/x-java-jnlp-file":["jnlp"],"application/x-keepass2":["kdbx"],"application/x-latex":["latex"],"application/x-lua-bytecode":["luac"],"application/x-lzh-compressed":["lzh","lha"],"application/x-makeself":["run"],"application/x-mie":["mie"],"application/x-mobipocket-ebook":["prc","mobi"],"application/x-ms-application":["application"],"application/x-ms-shortcut":["lnk"],"application/x-ms-wmd":["wmd"],"application/x-ms-wmz":["wmz"],"application/x-ms-xbap":["xbap"],"application/x-msaccess":["mdb"],"application/x-msbinder":["obd"],"application/x-mscardfile":["crd"],"application/x-msclip":["clp"],"application/x-msdos-program":["*exe"],"application/x-msdownload":["*exe","*dll","com","bat","*msi"],"application/x-msmediaview":["mvb","m13","m14"],"application/x-msmetafile":["*wmf","*wmz","*emf","emz"],"application/x-msmoney":["mny"],"application/x-mspublisher":["pub"],"application/x-msschedule":["scd"],"application/x-msterminal":["trm"],"application/x-mswrite":["wri"],"application/x-netcdf":["nc","cdf"],"application/x-ns-proxy-autoconfig":["pac"],"application/x-nzb":["nzb"],"application/x-perl":["pl","pm"],"application/x-pilot":["*prc","*pdb"],"application/x-pkcs12":["p12","pfx"],"application/x-pkcs7-certificates":["p7b","spc"],"application/x-pkcs7-certreqresp":["p7r"],"application/x-rar-compressed":["rar"],"application/x-redhat-package-manager":["rpm"],"application/x-research-info-systems":["ris"],"application/x-sea":["sea"],"application/x-sh":["sh"],"application/x-shar":["shar"],"application/x-shockwave-flash":["swf"],"application/x-silverlight-app":["xap"],"application/x-sql":["sql"],"application/x-stuffit":["sit"],"application/x-stuffitx":["sitx"],"application/x-subrip":["srt"],"application/x-sv4cpio":["sv4cpio"],"application/x-sv4crc":["sv4crc"],"application/x-t3vm-image":["t3"],"application/x-tads":["gam"],"application/x-tar":["tar"],"application/x-tcl":["tcl","tk"],"application/x-tex":["tex"],"application/x-tex-tfm":["tfm"],"application/x-texinfo":["texinfo","texi"],"application/x-tgif":["*obj"],"application/x-ustar":["ustar"],"application/x-virtualbox-hdd":["hdd"],"application/x-virtualbox-ova":["ova"],"application/x-virtualbox-ovf":["ovf"],"application/x-virtualbox-vbox":["vbox"],"application/x-virtualbox-vbox-extpack":["vbox-extpack"],"application/x-virtualbox-vdi":["vdi"],"application/x-virtualbox-vhd":["vhd"],"application/x-virtualbox-vmdk":["vmdk"],"application/x-wais-source":["src"],"application/x-web-app-manifest+json":["webapp"],"application/x-x509-ca-cert":["der","crt","pem"],"application/x-xfig":["fig"],"application/x-xliff+xml":["*xlf"],"application/x-xpinstall":["xpi"],"application/x-xz":["xz"],"application/x-zmachine":["z1","z2","z3","z4","z5","z6","z7","z8"],"audio/vnd.dece.audio":["uva","uvva"],"audio/vnd.digital-winds":["eol"],"audio/vnd.dra":["dra"],"audio/vnd.dts":["dts"],"audio/vnd.dts.hd":["dtshd"],"audio/vnd.lucent.voice":["lvp"],"audio/vnd.ms-playready.media.pya":["pya"],"audio/vnd.nuera.ecelp4800":["ecelp4800"],"audio/vnd.nuera.ecelp7470":["ecelp7470"],"audio/vnd.nuera.ecelp9600":["ecelp9600"],"audio/vnd.rip":["rip"],"audio/x-aac":["aac"],"audio/x-aiff":["aif","aiff","aifc"],"audio/x-caf":["caf"],"audio/x-flac":["flac"],"audio/x-m4a":["*m4a"],"audio/x-matroska":["mka"],"audio/x-mpegurl":["m3u"],"audio/x-ms-wax":["wax"],"audio/x-ms-wma":["wma"],"audio/x-pn-realaudio":["ram","ra"],"audio/x-pn-realaudio-plugin":["rmp"],"audio/x-realaudio":["*ra"],"audio/x-wav":["*wav"],"chemical/x-cdx":["cdx"],"chemical/x-cif":["cif"],"chemical/x-cmdf":["cmdf"],"chemical/x-cml":["cml"],"chemical/x-csml":["csml"],"chemical/x-xyz":["xyz"],"image/prs.btif":["btif"],"image/prs.pti":["pti"],"image/vnd.adobe.photoshop":["psd"],"image/vnd.airzip.accelerator.azv":["azv"],"image/vnd.dece.graphic":["uvi","uvvi","uvg","uvvg"],"image/vnd.djvu":["djvu","djv"],"image/vnd.dvb.subtitle":["*sub"],"image/vnd.dwg":["dwg"],"image/vnd.dxf":["dxf"],"image/vnd.fastbidsheet":["fbs"],"image/vnd.fpx":["fpx"],"image/vnd.fst":["fst"],"image/vnd.fujixerox.edmics-mmr":["mmr"],"image/vnd.fujixerox.edmics-rlc":["rlc"],"image/vnd.microsoft.icon":["ico"],"image/vnd.ms-dds":["dds"],"image/vnd.ms-modi":["mdi"],"image/vnd.ms-photo":["wdp"],"image/vnd.net-fpx":["npx"],"image/vnd.tencent.tap":["tap"],"image/vnd.valve.source.texture":["vtf"],"image/vnd.wap.wbmp":["wbmp"],"image/vnd.xiff":["xif"],"image/vnd.zbrush.pcx":["pcx"],"image/x-3ds":["3ds"],"image/x-cmu-raster":["ras"],"image/x-cmx":["cmx"],"image/x-freehand":["fh","fhc","fh4","fh5","fh7"],"image/x-icon":["*ico"],"image/x-jng":["jng"],"image/x-mrsid-image":["sid"],"image/x-ms-bmp":["*bmp"],"image/x-pcx":["*pcx"],"image/x-pict":["pic","pct"],"image/x-portable-anymap":["pnm"],"image/x-portable-bitmap":["pbm"],"image/x-portable-graymap":["pgm"],"image/x-portable-pixmap":["ppm"],"image/x-rgb":["rgb"],"image/x-tga":["tga"],"image/x-xbitmap":["xbm"],"image/x-xpixmap":["xpm"],"image/x-xwindowdump":["xwd"],"message/vnd.wfa.wsc":["wsc"],"model/vnd.collada+xml":["dae"],"model/vnd.dwf":["dwf"],"model/vnd.gdl":["gdl"],"model/vnd.gtw":["gtw"],"model/vnd.mts":["mts"],"model/vnd.opengex":["ogex"],"model/vnd.parasolid.transmit.binary":["x_b"],"model/vnd.parasolid.transmit.text":["x_t"],"model/vnd.usdz+zip":["usdz"],"model/vnd.valve.source.compiled-map":["bsp"],"model/vnd.vtu":["vtu"],"text/prs.lines.tag":["dsc"],"text/vnd.curl":["curl"],"text/vnd.curl.dcurl":["dcurl"],"text/vnd.curl.mcurl":["mcurl"],"text/vnd.curl.scurl":["scurl"],"text/vnd.dvb.subtitle":["sub"],"text/vnd.fly":["fly"],"text/vnd.fmi.flexstor":["flx"],"text/vnd.graphviz":["gv"],"text/vnd.in3d.3dml":["3dml"],"text/vnd.in3d.spot":["spot"],"text/vnd.sun.j2me.app-descriptor":["jad"],"text/vnd.wap.wml":["wml"],"text/vnd.wap.wmlscript":["wmls"],"text/x-asm":["s","asm"],"text/x-c":["c","cc","cxx","cpp","h","hh","dic"],"text/x-component":["htc"],"text/x-fortran":["f","for","f77","f90"],"text/x-handlebars-template":["hbs"],"text/x-java-source":["java"],"text/x-lua":["lua"],"text/x-markdown":["mkd"],"text/x-nfo":["nfo"],"text/x-opml":["opml"],"text/x-org":["*org"],"text/x-pascal":["p","pas"],"text/x-processing":["pde"],"text/x-sass":["sass"],"text/x-scss":["scss"],"text/x-setext":["etx"],"text/x-sfv":["sfv"],"text/x-suse-ymp":["ymp"],"text/x-uuencode":["uu"],"text/x-vcalendar":["vcs"],"text/x-vcard":["vcf"],"video/vnd.dece.hd":["uvh","uvvh"],"video/vnd.dece.mobile":["uvm","uvvm"],"video/vnd.dece.pd":["uvp","uvvp"],"video/vnd.dece.sd":["uvs","uvvs"],"video/vnd.dece.video":["uvv","uvvv"],"video/vnd.dvb.file":["dvb"],"video/vnd.fvt":["fvt"],"video/vnd.mpegurl":["mxu","m4u"],"video/vnd.ms-playready.media.pyv":["pyv"],"video/vnd.uvvu.mp4":["uvu","uvvu"],"video/vnd.vivo":["viv"],"video/x-f4v":["f4v"],"video/x-fli":["fli"],"video/x-flv":["flv"],"video/x-m4v":["m4v"],"video/x-matroska":["mkv","mk3d","mks"],"video/x-mng":["mng"],"video/x-ms-asf":["asf","asx"],"video/x-ms-vob":["vob"],"video/x-ms-wm":["wm"],"video/x-ms-wmv":["wmv"],"video/x-ms-wmx":["wmx"],"video/x-ms-wvx":["wvx"],"video/x-msvideo":["avi"],"video/x-sgi-movie":["movie"],"video/x-smv":["smv"],"x-conference/x-cooltalk":["ice"]};
+"use strict";
+
+module.exports = function (Yallist) {
+  Yallist.prototype[Symbol.iterator] = function* () {
+    for (let walker = this.head; walker; walker = walker.next) {
+      yield walker.value
+    }
+  }
+}
+
 
 /***/ }),
 
-/***/ "./node_modules/mime/types/standard.js":
-/*!*********************************************!*\
-  !*** ./node_modules/mime/types/standard.js ***!
-  \*********************************************/
+/***/ "./node_modules/yallist/yallist.js":
+/*!*****************************************!*\
+  !*** ./node_modules/yallist/yallist.js ***!
+  \*****************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = {"application/andrew-inset":["ez"],"application/applixware":["aw"],"application/atom+xml":["atom"],"application/atomcat+xml":["atomcat"],"application/atomdeleted+xml":["atomdeleted"],"application/atomsvc+xml":["atomsvc"],"application/atsc-dwd+xml":["dwd"],"application/atsc-held+xml":["held"],"application/atsc-rsat+xml":["rsat"],"application/bdoc":["bdoc"],"application/calendar+xml":["xcs"],"application/ccxml+xml":["ccxml"],"application/cdfx+xml":["cdfx"],"application/cdmi-capability":["cdmia"],"application/cdmi-container":["cdmic"],"application/cdmi-domain":["cdmid"],"application/cdmi-object":["cdmio"],"application/cdmi-queue":["cdmiq"],"application/cu-seeme":["cu"],"application/dash+xml":["mpd"],"application/davmount+xml":["davmount"],"application/docbook+xml":["dbk"],"application/dssc+der":["dssc"],"application/dssc+xml":["xdssc"],"application/ecmascript":["ecma","es"],"application/emma+xml":["emma"],"application/emotionml+xml":["emotionml"],"application/epub+zip":["epub"],"application/exi":["exi"],"application/fdt+xml":["fdt"],"application/font-tdpfr":["pfr"],"application/geo+json":["geojson"],"application/gml+xml":["gml"],"application/gpx+xml":["gpx"],"application/gxf":["gxf"],"application/gzip":["gz"],"application/hjson":["hjson"],"application/hyperstudio":["stk"],"application/inkml+xml":["ink","inkml"],"application/ipfix":["ipfix"],"application/its+xml":["its"],"application/java-archive":["jar","war","ear"],"application/java-serialized-object":["ser"],"application/java-vm":["class"],"application/javascript":["js","mjs"],"application/json":["json","map"],"application/json5":["json5"],"application/jsonml+json":["jsonml"],"application/ld+json":["jsonld"],"application/lgr+xml":["lgr"],"application/lost+xml":["lostxml"],"application/mac-binhex40":["hqx"],"application/mac-compactpro":["cpt"],"application/mads+xml":["mads"],"application/manifest+json":["webmanifest"],"application/marc":["mrc"],"application/marcxml+xml":["mrcx"],"application/mathematica":["ma","nb","mb"],"application/mathml+xml":["mathml"],"application/mbox":["mbox"],"application/mediaservercontrol+xml":["mscml"],"application/metalink+xml":["metalink"],"application/metalink4+xml":["meta4"],"application/mets+xml":["mets"],"application/mmt-aei+xml":["maei"],"application/mmt-usd+xml":["musd"],"application/mods+xml":["mods"],"application/mp21":["m21","mp21"],"application/mp4":["mp4s","m4p"],"application/mrb-consumer+xml":["*xdf"],"application/mrb-publish+xml":["*xdf"],"application/msword":["doc","dot"],"application/mxf":["mxf"],"application/n-quads":["nq"],"application/n-triples":["nt"],"application/node":["cjs"],"application/octet-stream":["bin","dms","lrf","mar","so","dist","distz","pkg","bpk","dump","elc","deploy","exe","dll","deb","dmg","iso","img","msi","msp","msm","buffer"],"application/oda":["oda"],"application/oebps-package+xml":["opf"],"application/ogg":["ogx"],"application/omdoc+xml":["omdoc"],"application/onenote":["onetoc","onetoc2","onetmp","onepkg"],"application/oxps":["oxps"],"application/p2p-overlay+xml":["relo"],"application/patch-ops-error+xml":["*xer"],"application/pdf":["pdf"],"application/pgp-encrypted":["pgp"],"application/pgp-signature":["asc","sig"],"application/pics-rules":["prf"],"application/pkcs10":["p10"],"application/pkcs7-mime":["p7m","p7c"],"application/pkcs7-signature":["p7s"],"application/pkcs8":["p8"],"application/pkix-attr-cert":["ac"],"application/pkix-cert":["cer"],"application/pkix-crl":["crl"],"application/pkix-pkipath":["pkipath"],"application/pkixcmp":["pki"],"application/pls+xml":["pls"],"application/postscript":["ai","eps","ps"],"application/provenance+xml":["provx"],"application/pskc+xml":["pskcxml"],"application/raml+yaml":["raml"],"application/rdf+xml":["rdf","owl"],"application/reginfo+xml":["rif"],"application/relax-ng-compact-syntax":["rnc"],"application/resource-lists+xml":["rl"],"application/resource-lists-diff+xml":["rld"],"application/rls-services+xml":["rs"],"application/route-apd+xml":["rapd"],"application/route-s-tsid+xml":["sls"],"application/route-usd+xml":["rusd"],"application/rpki-ghostbusters":["gbr"],"application/rpki-manifest":["mft"],"application/rpki-roa":["roa"],"application/rsd+xml":["rsd"],"application/rss+xml":["rss"],"application/rtf":["rtf"],"application/sbml+xml":["sbml"],"application/scvp-cv-request":["scq"],"application/scvp-cv-response":["scs"],"application/scvp-vp-request":["spq"],"application/scvp-vp-response":["spp"],"application/sdp":["sdp"],"application/senml+xml":["senmlx"],"application/sensml+xml":["sensmlx"],"application/set-payment-initiation":["setpay"],"application/set-registration-initiation":["setreg"],"application/shf+xml":["shf"],"application/sieve":["siv","sieve"],"application/smil+xml":["smi","smil"],"application/sparql-query":["rq"],"application/sparql-results+xml":["srx"],"application/srgs":["gram"],"application/srgs+xml":["grxml"],"application/sru+xml":["sru"],"application/ssdl+xml":["ssdl"],"application/ssml+xml":["ssml"],"application/swid+xml":["swidtag"],"application/tei+xml":["tei","teicorpus"],"application/thraud+xml":["tfi"],"application/timestamped-data":["tsd"],"application/toml":["toml"],"application/ttml+xml":["ttml"],"application/urc-ressheet+xml":["rsheet"],"application/voicexml+xml":["vxml"],"application/wasm":["wasm"],"application/widget":["wgt"],"application/winhlp":["hlp"],"application/wsdl+xml":["wsdl"],"application/wspolicy+xml":["wspolicy"],"application/xaml+xml":["xaml"],"application/xcap-att+xml":["xav"],"application/xcap-caps+xml":["xca"],"application/xcap-diff+xml":["xdf"],"application/xcap-el+xml":["xel"],"application/xcap-error+xml":["xer"],"application/xcap-ns+xml":["xns"],"application/xenc+xml":["xenc"],"application/xhtml+xml":["xhtml","xht"],"application/xliff+xml":["xlf"],"application/xml":["xml","xsl","xsd","rng"],"application/xml-dtd":["dtd"],"application/xop+xml":["xop"],"application/xproc+xml":["xpl"],"application/xslt+xml":["xslt"],"application/xspf+xml":["xspf"],"application/xv+xml":["mxml","xhvml","xvml","xvm"],"application/yang":["yang"],"application/yin+xml":["yin"],"application/zip":["zip"],"audio/3gpp":["*3gpp"],"audio/adpcm":["adp"],"audio/basic":["au","snd"],"audio/midi":["mid","midi","kar","rmi"],"audio/mobile-xmf":["mxmf"],"audio/mp3":["*mp3"],"audio/mp4":["m4a","mp4a"],"audio/mpeg":["mpga","mp2","mp2a","mp3","m2a","m3a"],"audio/ogg":["oga","ogg","spx"],"audio/s3m":["s3m"],"audio/silk":["sil"],"audio/wav":["wav"],"audio/wave":["*wav"],"audio/webm":["weba"],"audio/xm":["xm"],"font/collection":["ttc"],"font/otf":["otf"],"font/ttf":["ttf"],"font/woff":["woff"],"font/woff2":["woff2"],"image/aces":["exr"],"image/apng":["apng"],"image/bmp":["bmp"],"image/cgm":["cgm"],"image/dicom-rle":["drle"],"image/emf":["emf"],"image/fits":["fits"],"image/g3fax":["g3"],"image/gif":["gif"],"image/heic":["heic"],"image/heic-sequence":["heics"],"image/heif":["heif"],"image/heif-sequence":["heifs"],"image/hej2k":["hej2"],"image/hsj2":["hsj2"],"image/ief":["ief"],"image/jls":["jls"],"image/jp2":["jp2","jpg2"],"image/jpeg":["jpeg","jpg","jpe"],"image/jph":["jph"],"image/jphc":["jhc"],"image/jpm":["jpm"],"image/jpx":["jpx","jpf"],"image/jxr":["jxr"],"image/jxra":["jxra"],"image/jxrs":["jxrs"],"image/jxs":["jxs"],"image/jxsc":["jxsc"],"image/jxsi":["jxsi"],"image/jxss":["jxss"],"image/ktx":["ktx"],"image/png":["png"],"image/sgi":["sgi"],"image/svg+xml":["svg","svgz"],"image/t38":["t38"],"image/tiff":["tif","tiff"],"image/tiff-fx":["tfx"],"image/webp":["webp"],"image/wmf":["wmf"],"message/disposition-notification":["disposition-notification"],"message/global":["u8msg"],"message/global-delivery-status":["u8dsn"],"message/global-disposition-notification":["u8mdn"],"message/global-headers":["u8hdr"],"message/rfc822":["eml","mime"],"model/3mf":["3mf"],"model/gltf+json":["gltf"],"model/gltf-binary":["glb"],"model/iges":["igs","iges"],"model/mesh":["msh","mesh","silo"],"model/mtl":["mtl"],"model/obj":["obj"],"model/stl":["stl"],"model/vrml":["wrl","vrml"],"model/x3d+binary":["*x3db","x3dbz"],"model/x3d+fastinfoset":["x3db"],"model/x3d+vrml":["*x3dv","x3dvz"],"model/x3d+xml":["x3d","x3dz"],"model/x3d-vrml":["x3dv"],"text/cache-manifest":["appcache","manifest"],"text/calendar":["ics","ifb"],"text/coffeescript":["coffee","litcoffee"],"text/css":["css"],"text/csv":["csv"],"text/html":["html","htm","shtml"],"text/jade":["jade"],"text/jsx":["jsx"],"text/less":["less"],"text/markdown":["markdown","md"],"text/mathml":["mml"],"text/mdx":["mdx"],"text/n3":["n3"],"text/plain":["txt","text","conf","def","list","log","in","ini"],"text/richtext":["rtx"],"text/rtf":["*rtf"],"text/sgml":["sgml","sgm"],"text/shex":["shex"],"text/slim":["slim","slm"],"text/stylus":["stylus","styl"],"text/tab-separated-values":["tsv"],"text/troff":["t","tr","roff","man","me","ms"],"text/turtle":["ttl"],"text/uri-list":["uri","uris","urls"],"text/vcard":["vcard"],"text/vtt":["vtt"],"text/xml":["*xml"],"text/yaml":["yaml","yml"],"video/3gpp":["3gp","3gpp"],"video/3gpp2":["3g2"],"video/h261":["h261"],"video/h263":["h263"],"video/h264":["h264"],"video/jpeg":["jpgv"],"video/jpm":["*jpm","jpgm"],"video/mj2":["mj2","mjp2"],"video/mp2t":["ts"],"video/mp4":["mp4","mp4v","mpg4"],"video/mpeg":["mpeg","mpg","mpe","m1v","m2v"],"video/ogg":["ogv"],"video/quicktime":["qt","mov"],"video/webm":["webm"]};
+"use strict";
+
+module.exports = Yallist
+
+Yallist.Node = Node
+Yallist.create = Yallist
+
+function Yallist (list) {
+  var self = this
+  if (!(self instanceof Yallist)) {
+    self = new Yallist()
+  }
+
+  self.tail = null
+  self.head = null
+  self.length = 0
+
+  if (list && typeof list.forEach === 'function') {
+    list.forEach(function (item) {
+      self.push(item)
+    })
+  } else if (arguments.length > 0) {
+    for (var i = 0, l = arguments.length; i < l; i++) {
+      self.push(arguments[i])
+    }
+  }
+
+  return self
+}
+
+Yallist.prototype.removeNode = function (node) {
+  if (node.list !== this) {
+    throw new Error('removing node which does not belong to this list')
+  }
+
+  var next = node.next
+  var prev = node.prev
+
+  if (next) {
+    next.prev = prev
+  }
+
+  if (prev) {
+    prev.next = next
+  }
+
+  if (node === this.head) {
+    this.head = next
+  }
+  if (node === this.tail) {
+    this.tail = prev
+  }
+
+  node.list.length--
+  node.next = null
+  node.prev = null
+  node.list = null
+
+  return next
+}
+
+Yallist.prototype.unshiftNode = function (node) {
+  if (node === this.head) {
+    return
+  }
+
+  if (node.list) {
+    node.list.removeNode(node)
+  }
+
+  var head = this.head
+  node.list = this
+  node.next = head
+  if (head) {
+    head.prev = node
+  }
+
+  this.head = node
+  if (!this.tail) {
+    this.tail = node
+  }
+  this.length++
+}
+
+Yallist.prototype.pushNode = function (node) {
+  if (node === this.tail) {
+    return
+  }
+
+  if (node.list) {
+    node.list.removeNode(node)
+  }
+
+  var tail = this.tail
+  node.list = this
+  node.prev = tail
+  if (tail) {
+    tail.next = node
+  }
+
+  this.tail = node
+  if (!this.head) {
+    this.head = node
+  }
+  this.length++
+}
+
+Yallist.prototype.push = function () {
+  for (var i = 0, l = arguments.length; i < l; i++) {
+    push(this, arguments[i])
+  }
+  return this.length
+}
+
+Yallist.prototype.unshift = function () {
+  for (var i = 0, l = arguments.length; i < l; i++) {
+    unshift(this, arguments[i])
+  }
+  return this.length
+}
+
+Yallist.prototype.pop = function () {
+  if (!this.tail) {
+    return undefined
+  }
+
+  var res = this.tail.value
+  this.tail = this.tail.prev
+  if (this.tail) {
+    this.tail.next = null
+  } else {
+    this.head = null
+  }
+  this.length--
+  return res
+}
+
+Yallist.prototype.shift = function () {
+  if (!this.head) {
+    return undefined
+  }
+
+  var res = this.head.value
+  this.head = this.head.next
+  if (this.head) {
+    this.head.prev = null
+  } else {
+    this.tail = null
+  }
+  this.length--
+  return res
+}
+
+Yallist.prototype.forEach = function (fn, thisp) {
+  thisp = thisp || this
+  for (var walker = this.head, i = 0; walker !== null; i++) {
+    fn.call(thisp, walker.value, i, this)
+    walker = walker.next
+  }
+}
+
+Yallist.prototype.forEachReverse = function (fn, thisp) {
+  thisp = thisp || this
+  for (var walker = this.tail, i = this.length - 1; walker !== null; i--) {
+    fn.call(thisp, walker.value, i, this)
+    walker = walker.prev
+  }
+}
+
+Yallist.prototype.get = function (n) {
+  for (var i = 0, walker = this.head; walker !== null && i < n; i++) {
+    // abort out of the list early if we hit a cycle
+    walker = walker.next
+  }
+  if (i === n && walker !== null) {
+    return walker.value
+  }
+}
+
+Yallist.prototype.getReverse = function (n) {
+  for (var i = 0, walker = this.tail; walker !== null && i < n; i++) {
+    // abort out of the list early if we hit a cycle
+    walker = walker.prev
+  }
+  if (i === n && walker !== null) {
+    return walker.value
+  }
+}
+
+Yallist.prototype.map = function (fn, thisp) {
+  thisp = thisp || this
+  var res = new Yallist()
+  for (var walker = this.head; walker !== null;) {
+    res.push(fn.call(thisp, walker.value, this))
+    walker = walker.next
+  }
+  return res
+}
+
+Yallist.prototype.mapReverse = function (fn, thisp) {
+  thisp = thisp || this
+  var res = new Yallist()
+  for (var walker = this.tail; walker !== null;) {
+    res.push(fn.call(thisp, walker.value, this))
+    walker = walker.prev
+  }
+  return res
+}
+
+Yallist.prototype.reduce = function (fn, initial) {
+  var acc
+  var walker = this.head
+  if (arguments.length > 1) {
+    acc = initial
+  } else if (this.head) {
+    walker = this.head.next
+    acc = this.head.value
+  } else {
+    throw new TypeError('Reduce of empty list with no initial value')
+  }
+
+  for (var i = 0; walker !== null; i++) {
+    acc = fn(acc, walker.value, i)
+    walker = walker.next
+  }
+
+  return acc
+}
+
+Yallist.prototype.reduceReverse = function (fn, initial) {
+  var acc
+  var walker = this.tail
+  if (arguments.length > 1) {
+    acc = initial
+  } else if (this.tail) {
+    walker = this.tail.prev
+    acc = this.tail.value
+  } else {
+    throw new TypeError('Reduce of empty list with no initial value')
+  }
+
+  for (var i = this.length - 1; walker !== null; i--) {
+    acc = fn(acc, walker.value, i)
+    walker = walker.prev
+  }
+
+  return acc
+}
+
+Yallist.prototype.toArray = function () {
+  var arr = new Array(this.length)
+  for (var i = 0, walker = this.head; walker !== null; i++) {
+    arr[i] = walker.value
+    walker = walker.next
+  }
+  return arr
+}
+
+Yallist.prototype.toArrayReverse = function () {
+  var arr = new Array(this.length)
+  for (var i = 0, walker = this.tail; walker !== null; i++) {
+    arr[i] = walker.value
+    walker = walker.prev
+  }
+  return arr
+}
+
+Yallist.prototype.slice = function (from, to) {
+  to = to || this.length
+  if (to < 0) {
+    to += this.length
+  }
+  from = from || 0
+  if (from < 0) {
+    from += this.length
+  }
+  var ret = new Yallist()
+  if (to < from || to < 0) {
+    return ret
+  }
+  if (from < 0) {
+    from = 0
+  }
+  if (to > this.length) {
+    to = this.length
+  }
+  for (var i = 0, walker = this.head; walker !== null && i < from; i++) {
+    walker = walker.next
+  }
+  for (; walker !== null && i < to; i++, walker = walker.next) {
+    ret.push(walker.value)
+  }
+  return ret
+}
+
+Yallist.prototype.sliceReverse = function (from, to) {
+  to = to || this.length
+  if (to < 0) {
+    to += this.length
+  }
+  from = from || 0
+  if (from < 0) {
+    from += this.length
+  }
+  var ret = new Yallist()
+  if (to < from || to < 0) {
+    return ret
+  }
+  if (from < 0) {
+    from = 0
+  }
+  if (to > this.length) {
+    to = this.length
+  }
+  for (var i = this.length, walker = this.tail; walker !== null && i > to; i--) {
+    walker = walker.prev
+  }
+  for (; walker !== null && i > from; i--, walker = walker.prev) {
+    ret.push(walker.value)
+  }
+  return ret
+}
+
+Yallist.prototype.splice = function (start, deleteCount /*, ...nodes */) {
+  if (start > this.length) {
+    start = this.length - 1
+  }
+  if (start < 0) {
+    start = this.length + start;
+  }
+
+  for (var i = 0, walker = this.head; walker !== null && i < start; i++) {
+    walker = walker.next
+  }
+
+  var ret = []
+  for (var i = 0; walker && i < deleteCount; i++) {
+    ret.push(walker.value)
+    walker = this.removeNode(walker)
+  }
+  if (walker === null) {
+    walker = this.tail
+  }
+
+  if (walker !== this.head && walker !== this.tail) {
+    walker = walker.prev
+  }
+
+  for (var i = 2; i < arguments.length; i++) {
+    walker = insert(this, walker, arguments[i])
+  }
+  return ret;
+}
+
+Yallist.prototype.reverse = function () {
+  var head = this.head
+  var tail = this.tail
+  for (var walker = head; walker !== null; walker = walker.prev) {
+    var p = walker.prev
+    walker.prev = walker.next
+    walker.next = p
+  }
+  this.head = tail
+  this.tail = head
+  return this
+}
+
+function insert (self, node, value) {
+  var inserted = node === self.head ?
+    new Node(value, null, node, self) :
+    new Node(value, node, node.next, self)
+
+  if (inserted.next === null) {
+    self.tail = inserted
+  }
+  if (inserted.prev === null) {
+    self.head = inserted
+  }
+
+  self.length++
+
+  return inserted
+}
+
+function push (self, item) {
+  self.tail = new Node(item, self.tail, null, self)
+  if (!self.head) {
+    self.head = self.tail
+  }
+  self.length++
+}
+
+function unshift (self, item) {
+  self.head = new Node(item, null, self.head, self)
+  if (!self.tail) {
+    self.tail = self.head
+  }
+  self.length++
+}
+
+function Node (value, prev, next, list) {
+  if (!(this instanceof Node)) {
+    return new Node(value, prev, next, list)
+  }
+
+  this.list = list
+  this.value = value
+
+  if (prev) {
+    prev.next = this
+    this.prev = prev
+  } else {
+    this.prev = null
+  }
+
+  if (next) {
+    next.prev = this
+    this.next = next
+  } else {
+    this.next = null
+  }
+}
+
+try {
+  // add if support for Symbol.iterator is present
+  __webpack_require__(/*! ./iterator.js */ "./node_modules/yallist/iterator.js")(Yallist)
+} catch (er) {}
+
 
 /***/ })
 
