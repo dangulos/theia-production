@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>TradingView Charting Library example</title>
+    <script type="text/javascript" src="charting_library_clonned_data/charting_library/charting_library.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.2/socket.io.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Custom datafeed module. -->
+    <script type="module" src="src/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container-fluid" style="height: 75%; max-height: 80%">
+        <div class="row">
+            <div class="col nopadding">
+                <div id="tv_chart_container">
+                    <!-- This div will contain the Charting Library widget. -->
+                </div>
+            </div>
+            <div class="col-0 nopadding">
+                <div class="btn-group-vertical">
+                    <button type="button" class="btn btn-link btn-lg"><i class="fa fa-home"></i></button>
+                    <button type="button" class="btn btn-link btn-lg"><i class="fa fa-bell"></i></button>
+                    <button type="button" class="btn btn-link btn-lg"><i class="fa fa-angle-down"></i></button>
+                    <button type="button" class="btn btn-link btn-lg"><i class="fa fa-address-card"></i></button>
+                    <button type="button" class="btn btn-link btn-lg"><i class="fa fa-btc"></i></button>
+                    <button type="button" class="btn btn-link btn-lg"><i class="fa fa-dollar"></i></button>
+                    <button type="button" class="btn btn-link btn-lg"><i class="fa fa-calendar"></i></button>
+                    <button type="button" class="btn btn-link btn-lg"><i class="fa fa-calculator"></i></button>
+                  </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card" style="width: 100vw;">
+                <h5 class="card-header">LOGS</h5>
+                <div class="card-body">
+                  <p class="card-text">$ Lorem ipsum dolor sit amet, consectetur adipiscing elit. CMorbi ascelerisque sanunc ased saex scelerisque aliquet. Vestibulum elementum consequat enim, quis euismod nisi vulputate et. Suspendisse </p>
+                </div>
+              </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
