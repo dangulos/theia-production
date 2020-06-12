@@ -1,0 +1,33 @@
+<ion-card>
+  <ion-card-header style="display: flex; align-items: center; justify-content: center;">
+    <ion-card-title>Detailed Strategy</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <canvas #lineCanvas></canvas>
+  </ion-card-content>
+  <ion-card-content>
+    <ion-row style="border-bottom: groove;">
+      <ion-col size="4">
+      <ion-label >Version</ion-label>
+    </ion-col>
+    <ion-col size="4">
+      <ion-label >Total Profits</ion-label>
+    </ion-col>
+      <ion-col size="4">
+      <ion-label >Last Update</ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row style="border-bottom: groove;" *ngFor="let info of strategysInfo">
+    <ion-col size="4">
+    <ion-label >{{info.name}}</ion-label>
+  </ion-col>
+  <ion-col size="4">
+    <ion-label >${{info.profits}}</ion-label>
+  </ion-col>
+    <ion-col size="4">
+    <ion-label >{{info.lastUpdate}}</ion-label>
+  </ion-col>
+</ion-row>
+<ion-button color="default" fill="outline" expand="block" (click)="presentAlertReport()">Get Report</ion-button>
+  </ion-card-content>
+  </ion-card>

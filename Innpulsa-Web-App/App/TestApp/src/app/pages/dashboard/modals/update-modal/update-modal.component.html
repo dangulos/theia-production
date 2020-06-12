@@ -1,0 +1,38 @@
+<ion-card>
+  <ion-card-header style="display: flex; align-items: center; justify-content: center;">
+    <ion-card-title>Update Strategy</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <form #loginForm="ngForm" novalidate>
+      <ion-list>
+        <ion-item>
+          <ion-label position="stacked" color="primary">Name</ion-label>
+          <ion-input  name="name" type="text" spellcheck="false" autocapitalize="off"
+            required>
+          </ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked" color="primary">Description</ion-label>
+          <ion-textarea  name="description" type="text"  required>
+          </ion-textarea>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked" color="primary">Repository</ion-label>
+          <ion-input  name="repo" type="url"  required>
+            <ion-icon name="logo-github"></ion-icon>
+          </ion-input>
+        </ion-item>
+      </ion-list>
+
+      <ion-row>
+        <ion-col>
+          <ion-button  type="submit" expand="block" (click)="presentAlertUpdate()">Update</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button  color="danger" expand="block" (click)="presentAlertUnlink()">Unlink</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-card-content>
+  </ion-card>
