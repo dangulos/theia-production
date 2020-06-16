@@ -1,0 +1,20 @@
+{
+  "name": "node-version",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ailib.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "node ailib.js",
+    "build": "tsc ailib.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "latest"
+  },
+  "dependencies": {
+    "@types/node": "^13.13.1"
+  }
+}
