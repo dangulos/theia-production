@@ -6888,7 +6888,7 @@ isurl@^1.0.0-alpha5:
     is-object "^1.0.1"
 
 "itrmext@file:.yalc/itrmext":
-  version "0.0.0-945cf2c6"
+  version "0.0.0-e200a828"
   dependencies:
     "@theia/core" latest
     "@theia/editor" latest
@@ -6896,6 +6896,7 @@ isurl@^1.0.0-alpha5:
     "@theia/languages" latest
     "@theia/markers" latest
     "@theia/messages" latest
+    "@theia/mini-browser" latest
     "@theia/monaco" latest
     "@theia/navigator" latest
     "@theia/preferences" latest
@@ -10719,9 +10720,9 @@ tar-stream@^1.1.2, tar-stream@^1.5.2:
     xtend "^4.0.0"
 
 tar@^4.0.0, tar@^4.0.2, tar@^4.4.12:
-  version "4.4.13"
-  resolved "https://registry.yarnpkg.com/tar/-/tar-4.4.13.tgz#43b364bc52888d555298637b10d60790254ab525"
-  integrity sha512-w2VwSrBoHa5BsSyH+KxEqeQBAllHhccyMFVHtGtdMpF4W7IRWfZjFiQceJPChOeTsSDVUpER2T8FA93pr0L+QA==
+  version "4.4.15"
+  resolved "https://registry.yarnpkg.com/tar/-/tar-4.4.15.tgz#3caced4f39ebd46ddda4d6203d48493a919697f8"
+  integrity sha512-ItbufpujXkry7bHH9NpQyTXPbJ72iTlXgkBAYsAjDXk3Ds8t/3NfO5P4xZGy7u+sYuQUbimgzswX4uQIEeNVOA==
   dependencies:
     chownr "^1.1.1"
     fs-minipass "^1.2.5"
