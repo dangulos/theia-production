@@ -20,7 +20,7 @@
     "itrmext": "file:.yalc/itrmext"
   },
   "devDependencies": {
-    "@theia/cli": "^1.2.0"
+    "@theia/cli": "^1.33.0"
   },
   "scripts": {
     "prepare": "yarn run clean && yarn build && yarn run download:plugins",
